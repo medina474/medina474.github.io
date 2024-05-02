@@ -1,7 +1,4 @@
 
-- [Applications natives](mobile/native)
-- [Application hybrides](mobile/hybride)
-- [PWA](mobile/pwa)
-- [Flutter](mobile/flutter)
+[R4.A.11 Développement pour applications mobiles](mobile)
 
 - [SVG](svg)
