@@ -1,6 +1,5 @@
 ---
 title: "Configuration Raspberry Pi OS"
-draft: false
 ---
 
 ## Régler le fuseau horaire

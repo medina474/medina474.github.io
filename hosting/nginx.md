@@ -1,7 +1,5 @@
 ---
-title: "Nginx"
-date: 2023-01-18T21:59:26+01:00
-draft: false
+title: Nginx
 ---
 
 
@@ -94,3 +92,6 @@ rewrite ^ https://client.cinema.org$request_uri? permanent;
 |application|commande|version|
 |-|-|-|
 |nginx|nginx -v|1.14.2
+
+
+https://www.nginx.com/blog/deploying-nginx-plus-as-an-api-gateway-part-1/

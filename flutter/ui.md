@@ -1,7 +1,5 @@
 ---
 title: "Ui"
-date: 2023-01-18T21:50:14+01:00
-draft: false
 ---
 
 ## Commencez par penser de manière déclarative

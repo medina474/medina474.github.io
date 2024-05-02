@@ -1,7 +1,5 @@
 ---
 title: Applications natives
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 > **Objectif :** Concevoir une application pour une plateforme spécifique afin de bénéficier des **meilleures performances**.

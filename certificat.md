@@ -1,7 +1,5 @@
 ---
-title: "Certificat"
-date: 2023-01-18T21:55:30+01:00
-draft: false
+title: Certificat
 ---
 
 Voir en préambule le chapitre sur la [Cryptographie](../cryptography/)

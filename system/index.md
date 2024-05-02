@@ -1,6 +1,5 @@
 ---
-title: "Raspberry Pi OS"
-draft: false
+title: Raspberry Pi OS
 ---
 
 ## Protéger l'accès

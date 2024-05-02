@@ -1,7 +1,5 @@
 ---
 title: "Introduction"
-date: 2023-01-18T22:00:41+01:00
-draft: false
 ---
 
 

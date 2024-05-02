@@ -1,6 +1,5 @@
 ---
-title: "Linux"
-draft: false
+title: Linux
 ---
 
 ## Utiliser le [système de fichiers](fs)

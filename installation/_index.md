@@ -1,6 +1,5 @@
 ---
 title: "Installer Raspberry Pi OS"
-draft: false
 ---
 
 > ***Objectif :***  Installer et utiliser un système d'exploitation pour Raspberry Pi.

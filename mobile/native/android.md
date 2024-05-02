@@ -1,7 +1,5 @@
 ---
 title: Android
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 Les applications Android sont prévues pour fonctionner sur une machine virtuelle Java qui est le cœur du système. L'IDE conseillé mais pas obligatoire est **Android Studio** qui fonctionne aussi bien sous Windows, Linux et Mac OS.

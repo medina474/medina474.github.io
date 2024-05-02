@@ -1,7 +1,5 @@
 ---
 title: iOS
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 Les applications natives pour **iPhone** et **iPad** sont développées exclusivement sur un ordinateur **Mac** avec l'IDE **XCode**.
