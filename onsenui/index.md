@@ -1,7 +1,5 @@
 ---
-title: "Onsenui"
-date: 2023-01-18T21:49:32+01:00
-draft: false
+title: Onsenui
 ---
 
 
