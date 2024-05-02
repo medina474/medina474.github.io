@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Largeurs - Media Queries - Atelier Neotech</title>
+    <meta name="viewport" content="height=device-height, initial-scale=1, viewport-fit=cover">
+    <style>
+    body { background-color:#fffbbe; }
+
+    @media only screen and (width: 1024px) and (height: 748px) and (orientation : landscape)
+    {
+      body { background-color:#befff4; }
+    }
+
+  #largeur:after { content: "inconnue" }
+  
+	@media screen and (height: 320px) { #largeur:after { content: "320" } }
+	@media screen and (height: 346px) { #largeur:after { content: "346" } }
+	@media screen and (height: 360px) { #largeur:after { content: "360" } }
+	@media screen and (height: 375px) { #largeur:after { content: "375" } }
+	@media screen and (height: 384px) { #largeur:after { content: "384" } }
+	@media screen and (height: 390px) { #largeur:after { content: "390" } }
+	@media screen and (height: 400px) { #largeur:after { content: "400" } }
+	@media screen and (height: 412px) { #largeur:after { content: "412" } }
+	@media screen and (height: 414px) { #largeur:after { content: "414" } }
+	@media screen and (height: 432px) { #largeur:after { content: "432" } }
+	@media screen and (height: 480px) { #largeur:after { content: "480" } }
+	@media screen and (height: 504px) { #largeur:after { content: "504" } }
+
+	@media screen and (height: 600px) { #largeur:after { content: "768" } }
+	@media screen and (height: 604px) { #largeur:after { content: "604" } }
+	@media screen and (height: 720px) { #largeur:after { content: "720" } }
+	@media screen and (height: 768px) { #largeur:after { content: "768" } }
+	@media screen and (height: 800px) { #largeur:after { content: "800" } }
+
+	@media screen and (height: 427px) { #largeur:after { content: "427" } }
+
+  /* iPad avec ou sans barre d'adresse - portrait et paysage */
+	@media screen and (height: 698px) { #largeur:after { content: "698" } }
+  @media screen and (height: 769px) { #largeur:after { content: "769" } }
+  @media screen and (height: 954px) { #largeur:after { content: "954" } }
+  @media screen and (height: 985px) { #largeur:after { content: "985" } }
+  
+  @media screen and (height: 1020px) { #largeur:after { content: "1020" } }
+	@media screen and (height: 1021px) { #largeur:after { content: "1021" } }
+	@media screen and (height: 1022px) { #largeur:after { content: "1022" } }
+	@media screen and (height: 1023px) { #largeur:after { content: "1023" } }
+	@media screen and (height: 1024px) { #largeur:after { content: "1024" } }
+	@media screen and (height: 1025px) { #largeur:after { content: "1025" } }
+
+	@media screen and (height: 352px) { #largeur:after { content: "352" } }
+	
+  @media screen and (height: 738px) { #largeur:after { content: "738" } }
+  @media screen and (height: 748px) { #largeur:after { content: "748" } }
+  @media screen and (height: 758px) { #largeur:after { content: "758" } }
+  @media screen and (height: 768px) { #largeur:after { content: "768" } }
+  @media screen and (height: 778px) { #largeur:after { content: "778" } }
+
+  @media screen and (height: 854px) { #largeur:after { content: "854" } }
+	@media screen and (height: 1152px) { #largeur:after { content: "1152" } }
+	@media screen and (height: 1280px) { #largeur:after { content: "1280" } }
+	@media screen and (height: 1366px) { #largeur:after { content: "1366" } }
+	@media screen and (height: 1440px) { #largeur:after { content: "1440" } }
+	@media screen and (height: 1600px) { #largeur:after { content: "1600" } }
+	@media screen and (height: 1920px) { #largeur:after { content: "1920" } }
+	@media screen and (height: 2048px) { #largeur:after { content: "2048" } }
+	@media screen and (height: 2560px) { #largeur:after { content: "2560" } }
+	@media screen and (height: 3440px) { #largeur:after { content: "3440" } }
+	@media screen and (height: 3840px) { #largeur:after { content: "3840" } }
+	@media screen and (height: 4096px) { #largeur:after { content: "4096" } }
+
+	@media screen and (height: 320) and (height: 240) { #format:after { content: "QVGA" } }
+	@media screen and (height: 640px) and (height: 480px) { #format:after { content: "VGA" } }
+	@media screen and (height: 800px) and (height: 600px) { #format:after { content: "SVGA" } }
+	@media screen and (height: 1024px) and (height: 768px) { #format:after { content: "XGA" } }
+	@media screen and (height: 1152px) and (height: 864px) { #format:after { content: "XGA+" } }
+	@media screen and (height: 1400px) and (height: 1050px) { #format:after { content: "SXGA+" } }
+	@media screen and (height: 1600px) and (height: 1200px) { #format:after { content: "UXGA" } }
+	@media screen and (height: 2048px) and (height: 1536px) { #format:after { content: "QXGA" } }
+
+	@media screen and (height: 1920px) and (height: 1200px) { #format:after { content: "WUXGA" } }
+	@media screen and (height: 2560px) and (height: 1600px) { #format:after { content: "WQXGA" } }
+
+	@media screen and (height: 1280px) and (height: 720px) { #format:after { content: "HD 720 (1280 x 720)" } }
+	@media screen and (height: 1920px) and (height: 1080px) { #format:after { content: "HD 1080 (1920 x 1080)" } }
+	@media screen and (height: 2560px) and (height: 1440px) { #format:after { content: "WQHD" } }
+	@media screen and (height: 3440px) and (height: 1440px) { #format:after { content: "UWQHD (3440 x 1440)" } }
+	@media screen and (height: 3840px) and (height: 2160px) { #format:after { content: "UHD-1 (3840 x 2160)" } }
+</style>
+</head>
+<body>
+<p>
+	<span id="largeur">Hauteur = </span> px<br>
+	<span id="format">Format = </span><br>
+	<span id="ratio">Ratio = </span>
+</p>
+
+<a href="orientation.html">Orientation</a>
+https://fr.wikipedia.org/wiki/D%C3%A9finition_d%27%C3%A9cran
+</body>

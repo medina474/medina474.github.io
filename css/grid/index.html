@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Grid Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/atelier.css">
+	<link rel="stylesheet" href="/js/vendor/highlight.js/styles/default.css">
+	<script src="/js/vendor/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        .bloc {  width:50px; height:50px; line-height:50px; text-align:center; }
+    </style>
+</head>
+<body>
+
+<h1>Grid Layout</h1>
+
+<h2></h2>
+
+<div style="display:grid;grid-template:1fr / repeat(4, 1fr); height:300px; justify-items: center; align-items:center">
+    <div class="bloc" style="background-color:#36c7ff;">A</div>
+    <div class="bloc" style="background-color:#bf74ff;">B</div>
+    <div class="bloc" style="background-color:#ff78f9;">C</div>
+    <div class="bloc" style="background-color:#663e90;">D</div>
+</div>
+
+<p>Ce comportement peut être fixé individuellement avec la propriété justify-self sur chaque élément de la grille.</p>
+
+<div style="display:grid;grid-template:1fr / repeat(4, 1fr); height:300px;">
+    <div class="bloc" style="background-color:#36c7ff; justify-self:start;">A</div>
+    <div class="bloc" style="background-color:#bf74ff; justify-self:center;">B</div>
+    <div class="bloc" style="background-color:#ff78f9; justify-self:end;">C</div>
+    <div class="bloc" style="background-color:#663e90; justify-self:stretch;">D</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Full screen</title>
+    <meta name="viewport" content="height=device-height, initial-scale=1, user-scalable=0, minimal-ui, viewport-fit=cover">
+    <style>
+    
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    div {
+        height: 100%;
+        background-color: #3ed12a;
+    }
+
+    @media only screen and (width: 1024px) and (height: 748px) and (orientation : landscape)
+    {
+        div {
+            background-color: #ff73e8;
+        }
+
+        #viewport:after { content: "@media only screen and (width: 1024px) and (height: 748px) and (orientation : landscape)" }
+    }
+
+    @media only screen and (width: 1024px) and (height: 768px) and (orientation : landscape)
+    {
+        div {
+            background-color: #6ce0fd;
+        }
+
+        #viewport:after { content: "@media only screen and (width: 1024px) and (height: 768px) and (orientation : landscape)" }
+    }
+
+    #safe_area_inset_top:after { content: env(safe-area-inset-top) }
+    #safe_area_inset_right:after { content: env(safe-area-inset-right) }
+    #safe_area_inset_bottom:after { content: env(safe-area-inset-bottom) }
+    #safe_area_inset_left:after { content: env(safe-area-inset-left) }
+
+</style>
+</head>
+
+<body>
+    <div id="div">
+        safe-area-inset-top = <span id="safe_area_inset_top"></span><br>
+        safe-area-inset-top = <span id="safe_area_inset_right"></span><br>
+        safe-area-inset-top = <span id="safe_area_inset_bottom"></span><br>
+        safe-area-inset-top = <span id="safe_area_inset_left"></span><br>
+        viewport = <span id="viewport"></span><br>
+        window.innerWidth = <span id="innerWidth"></span> px<br>
+        window.innerHeight = <span id="innerHeight"></span> px<br>
+
+        rect.width = <span id="rectWidth"></span> px<br>
+        rect.height = <span id="rectHeight"></span> px<br>
+
+    </div>
+    <!-- https://css-tricks.com/the-notch-and-css/ -->
+    <!--https://benfrain.com/css-environment-variables-iphonex/-->
+
+    <script>
+        document.getElementById("innerWidth").innerText = window.innerWidth;
+        document.getElementById("innerHeight").innerText = window.innerHeight;
+
+        var rect = document.getElementById("div").getBoundingClientRect();
+        console.log(rect);
+
+        document.getElementById("rectWidth").innerText = rect.width;
+        document.getElementById("rectHeight").innerText = rect.height
+
+    </script>
+
+</body>
+</html>

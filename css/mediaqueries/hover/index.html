@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <title>Largeurs - Media Queries - Atelier Neotech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+   .box {
+    padding: 1rem;
+    border-width: 1px;
+    border-style:  solid;
+  }
+
+  .red {
+    border-color: #c7254e;
+    background-color: #f9f2f4;
+    color:#c7254e;
+  }
+
+  .green {
+    border-color: #25c63b;
+    background-color: #f2f9f3;
+    color: #25c63b;
+    display: none;
+  }
+
+  .blue {
+    border-color: #2542c6;
+    background-color: #f2f4f9;
+    color: #2542c6;
+    display: none;
+  }
+
+  .orange {
+    border-color: #ffc400;
+    background-color: #f9f6f2;
+    color: #ffc400;
+    display: none;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>Fonctionnalités d'interaction du média</h1>
+
+  <nav>
+    <p>
+      <a href="/">Atelier Neotech</a> >
+      <a href="/stylesheet/">Feuilles de style</a> >
+      <a href="/stylesheet/mediaqueries/">Media Queries</a> >
+      <a>Fonctionnalités d'interaction du média</a>
+    </p>
+  </nav>
+
+  <h3>hover</h3>
+  <p>La capacité du mécanisme de saisie principal à survoler les éléments.
+    <br>Ajoutée avec le niveau 4 du module de spécification Media Queries.
+  </p>
+  <dl>
+    <dt>none</dt>
+    <dd>aucun : Le mécanisme d'entrée principal du média n'inclut pas de périphérique de survol.</dd>
+    <dt>hover</dt>
+    <dd>Indique que le périphérique de pointage principal peut facilement survoler certaines parties de la page. Les exemples incluent les souris et les appareils qui pointent physiquement vers l’écran, comme la manette Nintendo Wii.</dd>
+  </dl>
+  <style>
+  @media (hover: hover) {
+    .hover { display: none; }
+    .hover_yes { display: block; }
+  }
+
+  @media (hover: none) {
+    .hover { display: none; }
+    .hover_none { display: block; }
+  }
+  </style>
+  <pre><code>@media (hover: hover) {  }</code></pre>
+  <div class="box hover red">Votre navigateur ne prend pas en charge le query hover</div>
+  <div class="box hover_yes green">Ce média supporte le survol</div>
+  <div class="box hover_none orange">
+    Ce média ne supporte pas le survol
+    <pre><code>@media (hover: none) {  }</code></pre>
+  </div>
+
+  https://www.quirksmode.org/css/tests/mediaqueries/hover.html
+
+  <h3>any-hover</h3>
+  <p>La présence d'un appareil de poinage parmi les mécanismes de saisie et sa précision.
+    Ajoutée avec le niveau 4 du module de spécification Media Queries.
+  </p>
+  <style>
+    @media (any-hover: hover) {
+      .any_hover { display: none; }
+      .any_hover_yes { display: block; }
+    }
+    @media (any-hover: none) {
+      .any_hover { display: none; }
+      .any_hover_none { display: block; }
+    }
+  </style>
+  <div class="box any_hover red">Votre navigateur ne prend pas en charge le query any-hover</div>
+  <div class="box any_hover_yes green">Ce média possède au moins un périphérique supportant le survol</div>
+  <div class="box any_hover_none orange">Ce média ne possède aucun périphérique supportant le survol</div>
+
+  <h3>pointer</h3>
+
+  </p>
+  <dl>
+    <dt>none</dt>
+    <dd>aucun : Le mécanisme d'entrée principal du média n'inclut pas de périphérique de pointage.</dd>
+    <dt>coarse</dt>
+    <dd>grossier : Le mécanisme d'entrée principal du périphérique comprend un périphérique de pointage d'une précision limitée.
+      Les exemples incluent les écrans tactiles et les capteurs de détection de mouvement (Télécommande Wii, Kinect, ...).</dd>
+    <dt>fine</dt>
+    <dd>fin : Le mécanisme d'entrée principal du périphérique comprend un périphérique de pointage précis.
+      Les exemples incluent les souris, les pavés tactiles (trackpad) et les tablettes tactiles avec stylets de dessin.</dd>
+  </dl>
+
+  <style>
+  @media (pointer: coarse) {
+    .pointer { display: none; }
+    .pointer_coarse { display: block; }
+  }
+  @media (pointer: fine) {
+    .pointer { display: none; }
+    .pointer_fine { display: block; }
+  }
+  @media (pointer: none) {
+    .pointer { display: none; }
+    .pointer_none { display: block; }
+  }
+  </style>
+  <div class="box pointer red">Votre navigateur ne prend pas en charge le query pointer</div>
+  <div class="box pointer_fine green">Ce média supporte le pointage fin</div>
+  <div class="box pointer_coarse blue">Ce média supporte le pointage grossier</div>
+  <div class="box pointer_none orange">Ce média ne supporte pas le pointage</div>
+
+  https://www.quirksmode.org/css/tests/mediaqueries/pointer.html
+
+  <h3>any-pointer</h3>
+  <p>La capacité d'un des mécanismes de saisie à survoler les éléments<br>
+    Ajoutée avec le niveau 4 du module de spécification Media Queries.
+  </p>
+  <style>
+  @media (any_pointer: coarse) {
+    .any_pointer { display: none; }
+    .any_pointer_coarse { display: block; }
+  }
+  @media (any_pointer: fine) {
+    .any_pointer { display: none; }
+    .any_pointer_fine { display: block; }
+  }
+  @media (any_pointer: none) {
+    .any_pointer { display: none; }
+    .any_pointer_none { display: block; }
+  }
+  </style>
+  <div class="box any_pointer red">Votre navigateur ne prend pas en charge le query any-pointer</div>
+  <div class="box any_pointer_fine green">Ce média possède au moins un périphérique supportant le pointage fin</div>
+  <div class="box any_pointer_coarse blue">Ce média possède au moins un périphérique supportant le pointage grossier</div>
+  <div class="box any_pointer_none orange">Ce média ne possède aucun périphérique supportant le pointage</div>
+  dernière mise à jour : 22 mai 2019
+</body>

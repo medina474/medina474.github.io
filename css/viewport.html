@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Animation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<style>
+table { border-collapse: collapse }
+td { border:1px solid gray; }
+
+@media screen and (max-width: 640px) { .small:after { content: "\2713" } }
+@media screen and (min-width: 800px) { .medium:after { content: "\2713" } }
+@media screen and (min-width: 1024px) and (max-width: 1280px) { .wide:after { content: "\2713" } }
+@media screen and (max-device-width: 480px) { .maxdevice:after { content: "\2713" } }
+
+@media screen and (min-aspect-ratio: 16/9) { .aspect169:after { content: "\2713" } }
+@media screen and (min-aspect-ratio: 3/4) { .aspect34:after { content: "\2713" } }
+
+@media screen and (min-resolution: 2dppx) { .resolution2:after { content: "\2713" } }
+
+@media print and (max-width: 14.8cm) { .printA5:after { content: "\2713" } }
+@media print and (min-width: 19cm) { .printA4:after { content: "\2713" } }
+
+</style>
+
+<p id="viewport"></p>
+<script>
+window.addEventListener("resize", function() { document.getElementById('viewport').innerHTML = "Taille de la surface d'affichage " + window.innerWidth + "px de largeur sur " + window.innerHeight +"px de hauteur (ratio de " + (window.innerWidth/window.innerHeight).toFixed(2) + ")"; });
+
+var ev = document.createEvent('Event');
+ev.initEvent('resize', true, true);
+window.dispatchEvent(ev);
+
+</script>
+
+<table border="1">
+<tr><td class="small"></td><td>La page fait 640px de largeur au maximum</td><td><code>@media screen and (max-width: 640px)</code></td></tr>
+<tr><td class="medium"></td><td>La page fait 800px de largeur au minimum</td><td><code>@media screen and (min-width: 800px)</code></td></tr>
+<tr><td class="wide"></td><td>La page fait entre 1024 et 1280px de largeur</td><td><code>@media screen and (min-width: 1024px) and (max-width: 1280px)</code></td></tr>
+<tr><td class="maxdevice"></td><td>L'appareil fait 480px de largeur au maximum</td><td><code>@media screen and (max-device-width: 480px)</code></td></tr>
+<tr><td class="aspect169"></td><td>La page a un ratio minimum de 16/9 (1.78)</td><td><code>@media screen and (min-aspect-ratio: 16/9)</code></td></tr>
+<tr><td class="aspect34"></td><td>La page a un ratio minimum de 3/4 (0.75)</td><td><code>@media screen and (aspect-ratio: 3/4)</code></td></tr>
+<tr><td class="resolution2"></td><td>La résolution de au minimum de 2</td><td><code>@media screen and (min-resolution: 2dppx)</code></td></tr>
+<tr><th colspan="3">Print</th></tr>
+<tr><td class="printA5"></td><td>La page est A5</td><td><code>@media print and (max-width: 14.8cm)</code></td></tr>
+<tr><td class="printA4"></td><td>La page est A4</td><td><code>@media screen and (orientation:landscape)</code></td></tr>
+</table>
+
+<h2>Device ratio</h2>
+<style>
+@media screen and (device-aspect-ratio: 1) { .device1:after { content: "\2713" } }
+
+@media screen and (device-aspect-ratio: 5/4) { .device54:after { content: "\2713" } }
+@media screen and (device-aspect-ratio: 4/5) { .device45:after { content: "\2713" } }
+
+@media screen and (device-aspect-ratio: 3/4) { .device34:after { content: "\2713" } }
+@media screen and (device-aspect-ratio: 4/3) { .device43:after { content: "\2713" } }
+
+@media screen and (device-aspect-ratio: 2/3) { .device23:after { content: "\2713" } }
+@media screen and (device-aspect-ratio: 3/2) { .device32:after { content: "\2713" } }
+
+@media screen and (device-aspect-ratio: 16/10) { .device1610:after { content: "\2713" } }
+@media screen and (device-aspect-ratio: 10/16) { .device1016:after { content: "\2713" } }
+
+@media screen and (device-aspect-ratio: 16/9) { .device169:after { content: "\2713" } }
+@media screen and (device-aspect-ratio: 9/16) { .device916:after { content: "\2713" } }
+
+@media screen and (device-aspect-ratio: 40/71) { .device4071:after { content: "\2713" } } /* iPhone 5 */
+</style>
+<table>
+<tr><td class="device4071"></td><td>40/71</td><td>0,563</td><td><code>@media screen and (device-aspect-ratio: 40/71)</code></td></tr>
+<tr><td class="device34"></td><td>3/4</td><td>0,75</td><td><code>@media screen and (device-aspect-ratio: 3/4)</code></td></tr>
+<tr><td class="device43"></td><td>4/3</td><td>1,333</td><td><code>@media screen and (device-aspect-ratio: 4/3)</code></td></tr>
+<tr><td class="device32"></td><td>2/3</td><td>0,667</td><td><code>@media screen and (device-aspect-ratio: 2/3)</code></td></tr>
+<tr><td class="device32"></td><td>3/2</td><td>1,5</td><td><code>@media screen and (device-aspect-ratio: 3/2)</code></td></tr>
+<tr><td class="device1610"></td><td>16/10</td><td>1,6</td><td><code>@media screen and (device-aspect-ratio: 16/10)</code></td></tr>
+<tr><td class="device169"></td><td>16/9</td><td>1,778</td><td><code>@media screen and (device-aspect-ratio: 16/9)</code></td></tr>
+</table>
+
+<style>
+@media screen and (orientation:portrait) { .portrait{ background-color:#009911; color:#fff; } .portrait:after { content: "\2713" } }
+@media screen and (orientation:landscape) { .landscape{ background-color:#009911; color:#fff; } .landscape:after { content: "\2713" } }
+</style>
+
+<h2>Orientation</h2>
+<table>
+<tr><td class="portrait"></td><td>La page est orientée en portrait</td><td><pre><code>@media screen and (orientation:portrait)</code><pre></td></tr>
+<tr><td class="landscape"></td><td>La page est orientée en paysage</td><td><pre><code>@media screen and (orientation:landscape)</code><pre></td></tr>
+</table>
+
+<style>
+@media screen and (min-resolution: 72dpi) { .r72:after { content: "\2713" } }
+@media screen and (min-resolution: 96dpi) { .r96:after { content: "\2713" } }
+@media screen and (min-resolution: 120dpi) { .r120:after { content: "\2713" } }
+@media screen and (min-resolution: 150dpi) { .r150:after { content: "\2713" } }
+@media screen and (min-resolution: 200dpi) { .r200:after { content: "\2713" } }
+@media screen and (min-resolution: 300dpi) { .r300:after { content: "\2713" } }
+@media screen and (min-resolution: 600dpi) { .r600:after { content: "\2713" } }
+</style>
+
+<h2>Resolution</h2>
+http://pieroxy.net/blog/2012/10/18/media_features_of_the_most_common_devices.html
+<table>
+<tr><td class="r72"></td><td>72 dpi</td><td><pre><code>@media screen and (min-resolution: 72dpi)</code><pre></td></tr>
+<tr><td class="r96"></td><td>96 dpi</td><td><pre><code>@media screen and (min-resolution: 96dpi)</code><pre></td></tr>
+<tr><td class="r120"></td><td>120 dpi</td><td><pre><code>@media screen and (min-resolution: 120dpi)</code><pre></td></tr>
+<tr><td class="r150"></td><td>150 dpi</td><td><pre><code>@media screen and (min-resolution: 150dpi)</code><pre></td></tr>
+<tr><td class="r200"></td><td>200 dpi</td><td><pre><code>@media screen and (min-resolution: 200dpi)</code><pre></td></tr>
+<tr><td class="r300"></td><td>300 dpi</td><td><pre><code>@media screen and (min-resolution: 300dpi)</code><pre></td></tr>
+<tr><td class="r600"></td><td>600 dpi</td><td><pre><code>@media screen and (min-resolution: 600dpi)</code><pre></td></tr>
+</table>
+
+<h2>Resolution</h2>
+<table>
+<tr><td class="r72"></td><td>1 dppx</td><td><pre><code>@media screen and (min-resolution: dppx)</code><pre></td></tr>
+<tr><td class="r96"></td><td>1.3 dppx</td><td><pre><code>@media screen and (min-resolution: dppx)</code><pre></td></tr>
+<tr><td class="r96"></td><td>1.5 dppx</td><td><pre><code>@media screen and (min-resolution: dppx)</code><pre></td></tr>
+<tr><td class="r120"></td><td>2 dppx</td><td><pre><code>@media screen and (min-resolution: dppx)</code><pre></td></tr>
+<tr><td class="r150"></td><td>3 dppx</td><td><pre><code>@media screen and (min-resolution: dppx)</code><pre></td></tr>
+</table>
+
+https://bjango.com/articles/min-device-pixel-ratio/
+
+media_query_list: <media_query> [, <media_query> ]*
+media_query: [[only | not]? <media_type> [ and <expression> ]*]
+  | <expression> [ and <expression> ]*
+expression: ( <media_feature> [: <value>]? )
+media_type: all | aural | braille | handheld | print |
+  projection | screen | tty | tv | embossed
+media_feature: width | min-width | max-width
+  | height | min-height | max-height
+  | device-width | min-device-width | max-device-width
+  | device-height | min-device-height | max-device-height
+  | aspect-ratio | min-aspect-ratio | max-aspect-ratio
+  | device-aspect-ratio | min-device-aspect-ratio | max-device-aspect-ratio
+  | color | min-color | max-color
+  | color-index | min-color-index | max-color-index
+  | monochrome | min-monochrome | max-monochrome
+  | resolution | min-resolution | max-resolution
+  | scan | grid
+
+Bootstrap
+
+	<div class="clearfix visible-xs">XS</div>
+	<div class="clearfix visible-sm">SM > 768px container = 750px</div>
+	<div class="clearfix visible-md">MD  viewport > 992px container = 970px</div>
+	<div class="clearfix visible-lg">LG viewport > 1200px container = 1170px</div>
+
+</body>
+</html>
