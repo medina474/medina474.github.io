@@ -1,6 +1,5 @@
 ---
 title: Animation
-date: Last Modified
 ---
 
 Il exite plusieurs méthodes pour animer des éléments SVG.

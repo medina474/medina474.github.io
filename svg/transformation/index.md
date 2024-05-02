@@ -1,14 +1,5 @@
 ---
-layout: layouts/math.njk
 title: Transformation
-
-type: post
-eleventyComputed:
-  meta:
-    author:
-      name: "{{ metadata.author.name }}"
-    published: "{{ date | iso8601 }}"
-    modified: "{% if updateDate %}{{ updateDate | iso8601 }}{% endif %}"
 ---
 
 ## Matrice
