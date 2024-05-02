@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+    <title>Typographie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../vendor/highlight.js/styles/default.css">
+	<script src="../../vendor/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+	<style>
+	em {
+		text-emphasis: dot blue;
+	}
+	
+	.paragraphe { width: 304px }
+	.center { text-align:center; }
+	.left { text-align:left; }
+	.right { text-align:right; }
+	.justify { text-align:justify; }
+	
+	.first-letter::first-letter { font-size: 3.75em; 
+								  margin-right: 0.1em;
+								  float: left;
+								  color: #333;
+								  border: 1px solid #BBB;
+								  padding: 0.1em;
+	}
+	
+	</style>
+</head>
+<body>
+
+<h2>text decoration</h2>
+
+<pre><code class="css">{ text-decoration-line: underline; }</span></pre></code>
+<p style="text-decoration-line: underline;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">{ text-decoration-line: overline; }</pre></code>
+<p style="text-decoration-line: overline;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">{ text-decoration-line: line-through</span>; }</pre></code>
+<p style="text-decoration-line: line-through">Jérôme est un pharmacien</p>
+
+<pre><code class="css">{ text-decoration-line: blink; }</pre></code>
+<p style="text-decoration-line: blink;">Jérôme est un pharmacien</p>
+
+
+<pre><code class="css">{ text-decoration-line: underline overline; }</pre></code>
+<p style="text-decoration-line: underline overline;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">{ text-decoration-line: underline overline line-through; }</pre></code>
+<p style="text-decoration-line: underline overline line-through;">Jérôme est un pharmacien</p>
+
+
+
+
+
+
+
+<pre><code class="css">text-decoration-style: solid;</pre></code>
+<p style="text-decoration-line: underline; text-decoration-style: solid; ">Jérôme est un pharmacien</p>
+
+<pre><code class="css">text-decoration-style: wavy;</pre></code>
+<p style="text-decoration-line: underline; text-decoration-style: wavy;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">text-decoration-style: double;</pre></code>
+<p style="text-decoration-line: underline; text-decoration-style: double;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">text-decoration-style: dotted;</pre></code>
+<p style="text-decoration-line: underline; text-decoration-style: dotted;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">text-decoration-style: dashed;</pre></code>
+<p style="text-decoration-line: underline; text-decoration-style: dashed;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">text-decoration-color: red;</pre></code>
+<p style="text-decoration-line: underline; text-decoration-color: red">Jérôme est un pharmacien</p>
+
+
+<pre><code class="css">text-decoration: underline overline wavy green;</pre></code>
+<p style="text-decoration: underline overline wavy green">Jérôme est un pharmacien</p>
+
+
+
+<h2>text transform</h2>
+
+<pre><code class="css">{ text-transform: capitalize; }</span>;</pre></code>
+<p style="text-transform:capitalize;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">{ text-transform: lowercase; }</span>;</pre></code>
+<p style="text-transform:lowercase;">Jérôme est un pharmacien</p>
+
+<pre><code class="css">{ text-transform: uppercase; }</span>;</pre></code>
+<p style="text-transform:uppercase;">Jérôme est un pharmacien</p>
+
+
+<h2>text-align</h2>
+
+<pre><code class="css">{ text-align: left; }</span></pre></code>
+<p class="paragraphe left">Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ.</p>
+
+<pre><code class="css">{ text-align:center; }</span></pre></code>
+<p class="paragraphe center">Il me semble, bercé par ce choc monotone,<br>Qu'on cloue en grande hâte<br>un cercueil quelque part.<br>Pour qui ?<br>C'était hier l'été ; voici l'automne !<br>Ce bruit mystérieux sonne comme un départ</p>
+
+<pre><code class="css">{ text-align:right; }</span></pre></code>
+<p class="paragraphe right">Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ</p>
+
+<pre><code class="css">{ text-align:justify; }</span></pre></code>
+<p class="paragraphe justify">Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ.</p>
+
+<h2>text-indent</h2>
+
+<pre><code class="css">{ text-align:justify; }</span></pre></code>
+<p style="width:304px; text-align:justify; text-indent:30px">Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ</p>
+
+<h2>Pseudo element first-letter</h2>
+
+<pre><code class="css">::first-letter { ... }</span></pre></code>
+
+<p class="paragraphe justify first-letter">Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ</p>
+
+
+<p><em>Coucou</em>, je suis <em>là</em></p>
+
+</body>
+</html>

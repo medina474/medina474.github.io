@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Unités</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/vendor/highlight.js/styles/default.css">
+	<script src="/vendor/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<style>
+	h2 { clear: both}
+	.absolute { border:1px solid #333; margin:2px; text-align:center; font:80% sans-serif }
+	.relative { border:1px solid #333; }
+	.vertical {border-bottom:1px solid #333; display:inline-block;width:1ch}
+	.verticalp {font-size:40%}
+    
+    .font-relative { font-size: 96px; border:1px solid #333; margin:2px; }
+</style>
+</head>
+<body>
+<h1>Unités</h1>
+
+<h2>Unités absolues</h2>
+
+<p>L'unité par défaut est le pixel css. 
+
+1 pouce contient 96px quelque soit le support.
+Sur les imprimantes une image de 96 pixels ferra exactement 2,54 cm (1 pouce). Sur les support basse résolution  1 pouce css ne correspondra pas à 1 pouce réel.
+Le pixel css ne peut pas être inférieur au pixel réel ce qui devrait être le cas. Par contre 1 pixel css peut correspondre à plusieurs pixels réels appelé points. Sur une imprimante de 288 pp 1 pixel css = 288 / 96 = 3 points. Les écrans retina aussi. Un écran de 196 dpi 1 pixel = 192 / 96 = 2 points</p>
+
+<pre><code class="css">{ width: 96px; height: 96px }</code></pre>
+<div class="absolute" style="width: 96px; height: 96px">96 px</div>
+
+<pre><code class="css">{ width: 1in; height: 1in }</code></pre>
+<div class="absolute" style="width: 1in; height: 1in">1 pouce<br>1 pouce = 96 px</div>
+
+<pre><code class="css">{ width: 25.4mm; height: 25.4mm }</code></pre>
+<div class="absolute" style="width: 25.4mm; height: 25.4mm">25,4 mm<br>1 pouce = 25,4 mm</div>
+
+<pre><code class="css">{ width:2.54cm; height: 2.54cm }</code></pre>
+<div class="absolute" style="width:2.54cm; height:2.54cm">2,54 cm<br>1 pouce = 2,54 cm</div>
+
+<pre><code class="css">{ width: 72pt; height: 72pt }</code></pre>
+<div class="absolute" style="width:72pt;height:72pt">72 points<br>1 pouce = 72 points</div>
+
+<pre><code class="css">{ width: 6pc; height: 6pc }</code></pre>
+<div class="absolute" style="width:6pc;height:6pc">6 picas<br>1 pica = 12 points<br>6 picas = 72 pixels</div>
+
+<div style="width:1cm;height:1cm;border:0.5 solid black"></div>
+
+<h2>Viewport-percentage</h2>
+
+<pre><code class="css">{ width: 100% }</code></pre>
+<div class="relative" style="width:10%; height: 48px">10 %</div>
+
+1vw = 1% of viewport width
+1vh = 1% of viewport height
+
+<pre><code class="css">{ width:10vw }</code></pre>
+<div class="relative" style="width:10vw; height: 48px">10 vw</div>
+
+1vmin = 1vw or 1vh, whichever is smaller
+1vmax = 1vw or 1vh, whichever is larger
+
+<pre><code class="css">{ width:10vmin }</code></pre>
+<div class="relative" style="width:10vmin; height:10vmin">10 vmin</div>
+
+<pre><code class="css">{ width:10vmax }</code></pre>
+<div class="relative" style="width:10vmax; height:10vmax">10 vmax</div>
+
+<h2>Font relative</h2>
+
+<p>Font-relative lengths: the ‘em’, ‘ex’, ‘ch’, ‘rem’ units</p>
+
+<div class="font-relative" style="line-height:1">M</div>
+
+<pre><code class="css">{ width: 1em; }</code></pre>
+<div class="font-relative" style="width:1em; height:1em;"></div>
+
+<pre><code class="css">{ width: 1rem; }</code></pre>
+<div class="font-relative" style="width:1rem; height:1rem;"></div>
+
+<pre><code class="css">{ width:1ex; }</code></pre>
+<div class="font-relative" style="width:1ex; height:1ex"></div>
+
+<pre><code class="css">{ width:1ch; }</code></pre>
+<div class="font-relative" style="width:1ch; height:1ch"></div>
+
+<pre><code class="css">M</code></pre>
+<div class="font-relative" style="width:1em; height:1em; text-align:center; line-height:1">M</div>
+
+<pre><code class="css">&amp;mdash;</code></pre>
+<div class="font-relative" style="width:1em; height:1em;">&mdash;</div>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen</title>
+  <style>
+    html { font-family: sans-serif; }
+    table { border-collapse: collapse; }
+    thead tr { text-align: center; }
+    thead tr:nth-child(1) { font-size: 20px; }
+    thead tr:nth-child(2) { font-size: 18px; }
+    td { border:1px solid #333; padding: 3px 5px; width:70px;}
+    th { border:1px solid #333; padding: 3px 5px; width:70px;}
+    .prix, .age, .children, .age_mean, .children_count { text-align: right; }
+    .name { width: 170px }
+  </style>
+
+</head>
+<body>
+  <table>
+    <caption>Tarifs 2021</caption>
+    <colgroup>
+      <col />
+      <col span="2"></col>
+      <col span="3"></col>
+      <col span="2"></col>
+    </colgroup>
+    <thead>
+      <!-- 1ère ligne d'entête-->
+      <tr>
+        <td></td>
+        <th colspan="2">Active Pack</th>
+        <th colspan="3">Allure</th>
+        <th colspan="2">GT</th>
+      </tr>
+      <!-- 2e ligne d'entête-->
+      <tr>
+        <td></td>
+        <th>Berline</th>
+        <th>Coupé</th>
+        <th>Berline</th>
+        <th>Coupé</th>
+        <th>SW</th>
+        <th>Coupé</th>
+        <th>SW</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td class="rouge">Essence</td>
+        <td class="prix" data-prix="29000" data-multimedia="900" data-securite="800"></td>
+        <td class="prix" data-prix="30000" data-multimedia="900" data-securite="1100"></td>
+        <td class="prix" data-prix="31000" data-multimedia="900" data-securite="800"  data-automatique="2000"></td>
+        <td class="prix" data-prix="31500" data-multimedia="900" data-securite="1100" data-automatique="2000"></td>
+        <td class="prix" data-prix="32000" data-multimedia="900"                      data-automatique="2000"></td>
+        <td class="prix" data-prix="33000" data-multimedia="900" data-securite="1100" data-automatique="2000"></td>
+        <td class="prix" data-prix="35000" data-multimedia="900"                      data-automatique="2000"></td>
+      </tr>
+      <tr>
+        <td class="vert">Diesel</td>
+        <td class="prix" data-prix="31000" data-multimedia="900" data-securite="800"></td>
+        <td class="prix" data-prix="32000" data-multimedia="900" data-securite="1100"></td>
+        <td class="prix" data-prix="35000" data-multimedia="900" data-securite="800"  data-automatique="2500"></td>
+        <td class="prix" data-prix="36000" data-multimedia="900" data-securite="1100" data-automatique="2500"></td>
+        <td class="prix" data-prix="36500" data-multimedia="900"                      data-automatique="2500"></td>
+        <td class="prix" data-prix="37000" data-multimedia="900" data-securite="1100" data-automatique="2500"></td>
+        <td class="prix" data-prix="38000" data-multimedia="900"                      data-automatique="2500"></td>
+      </tr>
+      <tr>
+        <td class="violet">THDI</td>
+        <td class="prix" data-prix="30000" data-multimedia="900" data-securite="800"></td>
+        <td class="prix" data-prix="31700" data-multimedia="900" data-securite="1100"></td>
+        <td class="prix" data-prix="32250" data-multimedia="900" data-securite="800"  data-automatique="2500"></td>
+        <td class="prix" data-prix="33000" data-multimedia="900" data-securite="1100" data-automatique="2500"></td>
+        <td class="prix" data-prix="35000" data-multimedia="900"                      data-automatique="2500"></td>
+        <td class="prix" data-prix="36000" data-multimedia="900" data-securite="1100" data-automatique="2500"></td>
+        <td class="prix" data-prix="37500" data-multimedia="900"                      data-automatique="2500"></td>
+      </tr>
+      <tr>
+        <td class="orange">Hybride</td>
+        <td class="prix"></td>
+        <td class="prix"></td>
+        <td class="prix" data-prix="41000" data-multimedia="900" data-securite="800"  data-automatique="0"></td>
+        <td class="prix" data-prix="42000" data-multimedia="900" data-securite="1100" data-automatique="0"></td>
+        <td class="prix" data-prix="44000" data-multimedia="900"                      data-automatique="0"></td>
+        <td class="prix" data-prix="45000" data-multimedia="900" data-securite="1100" data-automatique="0"></td>
+        <td class="prix" data-prix="47000" data-multimedia="900"                      data-automatique="0"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form name="ex1">
+    <fieldset>
+      <legend>Options</legend>
+  
+      <input type="checkbox" name="multimedia" id="multimedia" value="multimedia">
+      <label for="multimedia">Multimédia</label> (900 € sur tous les modèles)<br/>
+  
+      <input type="checkbox" name="automatique" id="automatique" value="automatique">
+      <label for="automatique">Boite automatique</label> (l'option est incluse pour les modèles hybrides, coûte 2&nbsp;000 € pour les modèles Essence, 2&nbsp;500 € pour les modèles Diesel et THDI et n'est pas disponible pour les modèles Active Pack<br/>
+  
+      <input type="checkbox" name="securite" id="securite" value="securite">
+      <label for="securite">Pack sécurité</label> (l'option n'est pas disponible pour les modèles SW, coûte 800 € pour les berlines et 1&nbsp;100 pour les coupés)
+    </fieldset>
+  </form>
+  
+
+  <script>
+    function Calcul()
+    { 
+      let cellules = document.querySelectorAll("td[data-prix]")
+      
+      cellules.forEach(cell => cell.dataset.calcul = cell.dataset.prix);
+
+      document.querySelectorAll("form[name='ex1'] input[type='checkbox']:checked").forEach(check => 
+      {
+        document.querySelectorAll(`td.prix:not([data-${check.name}])`).forEach(cell => cell.dataset.calcul = -1);
+        document.querySelectorAll(`td.prix[data-${check.name}]:not([data-calcul='-1'])`)
+          .forEach(td => td.dataset.calcul = Number(td.dataset.calcul) + Number(td.dataset[check.name]) );
+      });
+
+      cellules.forEach(cell => cell.innerHTML = cell.dataset.calcul == -1 ? "" : Number(cell.dataset.calcul).toLocaleString('fr-FR'));
+    }
+
+    document.querySelectorAll("form[name='ex1'] input[type='checkbox']").forEach(elt => elt.addEventListener("click", Calcul));
+
+    Calcul();
+  </script>
+
+
+</body>
+</html>

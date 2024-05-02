@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typographie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='10' height='200' id="test">
+	<line x1='0' y1='50.5'  x2='10' y2='50.5'  style='stroke:#1260ba; stroke-width:1'/>
+	<line x1='0' y1='100.5' x2='10' y2='100.5' style='stroke:#1260ba; stroke-width:1'/>
+	<line x1='0' y1='150.5' x2='10' y2='150.5' style='stroke:#1260ba; stroke-width:1'/>
+</svg>
+
+<style>
+.compare { font-size:100px;border:1px solid red; background-position:0 -30px; background-image:url(#test);}
+.compare2 { font-size:100px; border:1px solid red; float:left; }
+</style>
+
+<div class="compare" style="font-family:'Times New Roman'">JÀhyx<br>Àyx</div>
+<div class="compare" style="font-family:'Verdana'"><span>JÀhyx<br>Àyx</span></div>
+<div class="compare" style="font-family:'Georgia'"><span>JÀhyx<br>Àyx</span></div>
+<div class="compare" style="font-family:'Arial'"><span>JÀyx<br>Àhyx</span></div>
+<div class="compare" style="font-family:'Trebuchet MS'"><span>JÀhyx<br>Àyx</span></div>
+<div class="compare" style="font-family:'Impact'"><span>JÀyx<br>Àhyx</span></div>
+<div class="compare" style="font-family:'Calibri'"><span>JÀyx<br>Àhyx</span></div>
+<div class="compare" style="font-family:'Courier'"><span>JÀyx<br>Àhyx</span></div>
+    
+<br clear="all">
+
+<div class="compare2" style="font-size:12pt"><span>Àyx</span></div>
+
+<style>
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-Thin.ttf);       font-weight:100; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-ExtraLight.ttf); font-weight:200; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-Light.ttf);      font-weight:300; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-Regular.ttf);    font-weight:400; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-Medium.ttf);     font-weight:500; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-SemiBold.ttf);   font-weight:600; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-Bold.ttf);       font-weight:700; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-ExtraBold.ttf);  font-weight:800; }
+@font-face { font-family: Raleway; src: url(font-weight/Raleway-Heavy.ttf);      font-weight:900; }
+table { border:1px solid #AAA; border-collapse: collapse}
+td { border:1px solid #AAA; padding:5px; }
+</style>
+
+
+
+
+<h2>font-weight</h2>
+<p>Nous connaissons principalement deux graisses de police : normal et gras. Mais une police de caractères peut en posséder bien plus. Comme par exemple ultra-léger, extra-léger, léger, normal, demi-gras, gras (bold), extra-gras, noir (black), extra-noir (extra-black). Ces notations ne sont pas normalisée on peut trouver aussi livre (book), medium, roman, régulier (regular), lourd (heavy), extra-lourd (extra-heavy) ou extra-mega-super-ultra-lourd.</p>
+<p>Dans la norme CSS, il est possible de définir 9 graisses différentes : 100, 200, 300, 400, 500, 600, 700, 800, 900. Mais toutes les polices n'en possèdent pas neuf, c'est même plutôt rare.</p>
+<table style="border:1px solid #333">
+<tr><td><code>font-weight: 100</code></td><td style="font-family: Raleway;font-weight: 100">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 200</code></td><td style="font-family: Raleway;font-weight: 200">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 300</code></td><td style="font-family: Raleway;font-weight: 300">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 400</code></td><td style="font-family: Raleway;font-weight: 400">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 500</code></td><td style="font-family: Raleway;font-weight: 500">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 600</code></td><td style="font-family: Raleway;font-weight: 600">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 700</code></td><td style="font-family: Raleway;font-weight: 700">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 800</code></td><td style="font-family: Raleway;font-weight: 800">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 900</code></td><td style="font-family: Raleway;font-weight: 900">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+</table>
+
+<p>On peut aussi utiliser des mots clés</p>
+
+<table style="border:1px solid #333">
+<tr><td><code>font-weight: lighter</code></td><td style="font-family: Raleway;font-weight: lighter">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: bold</code></td><td style="font-family: Raleway;font-weight: bold">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: normal</code></td><td style="font-family: Raleway;font-weight: normal">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr style="font-weight: 600"><td><code>font-weight: bolder</code></td><td style="font-family: Raleway;font-weight: bolder">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+</table>
+
+<p>Sur Windows, rare sont les polices par défaut avec plus de deux graisses (normal et gras). C'est le cas de Segoe UI qui existe en léger, normal, semi gras et gras.
+
+<table style="border:1px solid #333">
+<tr><td><code>font-weight: 100</code></td><td style="font-family: 'Segoe UI';font-weight: 100">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 200</code></td><td style="font-family: 'Segoe UI';font-weight: 200">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 300</code></td><td style="font-family: 'Segoe UI';font-weight: 300">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 400</code></td><td style="font-family: 'Segoe UI';font-weight: 400">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 500</code></td><td style="font-family: 'Segoe UI';font-weight: 500">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 600</code></td><td style="font-family: 'Segoe UI';font-weight: 600">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 700</code></td><td style="font-family: 'Segoe UI';font-weight: 700">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 800</code></td><td style="font-family: 'Segoe UI';font-weight: 800">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+<tr><td><code>font-weight: 900</code></td><td style="font-family: 'Segoe UI';font-weight: 900">Jérôme est un électromécanicien qui aime la thermodynamique.</td></tr>
+</table>
+
+<h2>font-style</h2>
+<p style="font-style: normal;">Électromécaniciens</p>
+<p style="font-style: oblique;">Électromécaniciens</p>
+<p style="font-style: italic;">Électromécaniciens</p>
+Bell MT
+<p style="font-family:'Garamond'; font-size:30px; font-style: normal;">Jérôme f est un électromécanicien qui aime la thermodynamique</p>
+<p style="font-family:'Garamond'; font-size:30px; font-style: oblique;">Jérôme f est un électromécanicien qui aime la thermodynamique</p>
+<p style="font-family:'Garamond'; font-size:30px; font-style: italic;">Jérôme f est un électromécanicien qui aime la thermodynamique</p>
+
+<h2>font-variant</h2>
+<p style="font-variant: small-caps;">Électromécaniciens</p>
+
+
+
+<h2>text-justify</h2>
+<div style="width:200px;text-align:justify;text-justify: distribute">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque metus velit.</div>
+<div style="width:200px;text-align:justify;text-justify: distribute-all-lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque metus velit.</div>
+<div style="width:200px;text-align:justify;text-justify: newspaper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque metus velit.</div>
+<div style="width:200px;text-align:justify;text-justify: inter-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque metus velit.</div>
+
+<div style="width:200px;text-align:justify;text-justify: inter-cluster">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque metus velit.</div>
+<div style="width:200px;text-align:justify;text-justify: inter-ideograph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque metus velit.</div>
+
+
+<table>
+<tr><td>smcp Substitutes lower-case letters with small caps versions</td><td style="font-family: Gabriola; font-size:30px;">Aa</td><td style="font-family: Gabriola; font-size:30px; font-feature-settings: 'smcp';">Aa</td></tr>
+
+<tr><td>c2sc Substitutes capital letters with small caps</td><td style="font-family: Gabriola; font-size:30px;">Aa</td><td style="font-family: Gabriola; font-size:30px; font-feature-settings: 'c2sc';">Aa</td></tr>
+
+<tr><td>c2pc Substitutes capital letters with petite caps</td><td style="font-family: Gabriola; font-size:30px;">Aa</td><td style="font-family: Gabriola; font-size:30px; font-feature-settings: 'c2pc';">Aa</td></tr>
+</table>
+
+<a href="font/stretch.html">stretch</a>
+<a href="font/decoration.html">decoration</a>
+<a href="font/ligatures.html">ligatures</a>
+<a href="font/font-feature.html">features</a>
+
+
+
+<h2>text-shadow</h2>
+<p style="text-shadow:1px 1px 1px #666">lorem ipsum</p>
+
+<h2>white-space</h2>
+<p style="white-space:normal">Sequences             of whitespace will collapse into a single whitespace. 
+Text will wrap when necessary. </p>
+<p style="white-space:nowrap">Sequences of whitespace will collapse into a single whitespace. 
+Text will never wrap to the next line. The text continues on the same line until a <br /> tag is encountered</p>
+<p style="white-space:nowrap">pre	Whitespace is preserved by the browser. Text will only wrap on line breaks Acts like the pre tag in HTML	</p>
+<p>
+<p style="white-space:pre-line">pre-line	Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary, and on line breaks</p>
+<p style="white-space:pre-wrap">pre-wrap	Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks</p>
+http://typofonderie.com/font-support/opentype-features/
+</body>
+</html>

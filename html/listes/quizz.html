@@ -1,0 +1,251 @@
+<script>
+	function Ctrl($scope) 
+	{
+		$scope.test = function(q, r) {
+			if (q==r) $scope.score++;
+		}
+
+		$scope.q = 0;
+		$scope.score = 0;
+		$scope.questions = [
+    	{
+        	'id'          : 'q1',
+        	'question'    : 'Quel est le code html correct ?',
+        	'correct'     : 'q1.3',
+        	'commentaire' : 'Ça commence mal ! Êtes-vous sûr de vouloir continuer ?',
+        	'reponses': [ 	{id:'q1.1', intitule: '[a href:"http://www.univ-lorraine.fr"]Université de Lorraine[a]'},
+        					{id:'q1.2', intitule: '{link, "http://www.univ-lorraine.fr", "Université de Lorraine"}' },
+        					{id:'q1.3', intitule: '<a href="http://www.univ-lorraine.fr">Université de Lorraine</a>' },
+        					{id:'q1.4', intitule: 'link("http://www.univ-lorraine.fr", "Université de Lorraine")' },
+        					{id:'q1.5', intitule: '#Université de Lorraine = @http://www.univ-lorraine.fr' }
+        				]
+    	},
+    	{
+	        'id':   'q2',
+    	    'question': 'Comment mettre du code html en commentaire et le rendre inopérant ?',
+    	    'correct' : 'q2.2',
+    	    'commentaire' : '',
+    	    'reponses': [ 	{id:'q2.1', intitule: '/* code html */'},
+        					{id:'q2.2', intitule: '<!-- code html -->' },
+        					{id:'q2.3', intitule: '// code html' },
+        					{id:'q2.4', intitule: '<rem>code html</rem>' },
+        					{id:'q2.5', intitule: '<comment>code html</comment>' }
+        				]
+    	    
+    	},
+    	{
+        	'id':   'q3',
+        	'correct' : 'q3.1',
+        	'question': 'Quel est l’élément HTML correct pour désigner un titre de niveau le plus élevé ?',
+        	'commentaire' : 'h1 pour level 1 heading',
+        	'reponses':[	{id:'q3.1', intitule: 'h1'},
+        					{id:'q3.2', intitule: 'head'},
+        					{id:'q3.2', intitule: 'heading'},
+        					{id:'q3.4', intitule: 'h6'},
+        					{id:'q3.5', intitule: 'title'},
+        					{id:'q3.6', intitule: 'header'},
+        		]
+    	},
+    	{
+        	'id':   'q4',
+        	'correct' : 'q4.4',
+        	'question': 'Quel est l’élément HTML correct pour insérer un retour à la ligne dans un paragraphe ?',
+        	'commentaire' : 'br pour break',
+        	'reponses':[	{id:'q4.1', intitule: 'rl'},
+        					{id:'q4.2', intitule: 'lb'},
+        					{id:'q4.3', intitule: 'break'},
+        					{id:'q4.4', intitule: 'br'},
+        					{id:'q4.5', intitule: 'return'}
+        		]
+    	},
+        {
+            'id':   'q5',
+            'correct' : 'q5.5',
+            'question': 'Quelle est la meilleure façon de mettre une couleur (jaune) en arrière-plan d’une page html ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q5.1', intitule: '<background>yellow</background>'},
+                            {id:'q5.2', intitule: '<body background="yellow">'},
+                            {id:'q5.3', intitule: '<page style="background-color:yellow">'},
+                            {id:'q5.4', intitule: '<page background="yellow">'},
+                            {id:'q5.5', intitule: '<body style="background-color:yellow">'}
+                    ]
+        },
+    	{
+        	'id':   'q6',
+        	'correct' : 'q6.1',
+        	'question': 'Quel est l’élément HTML correct pour mettre en texte en police grasse ?',
+        	'commentaire' : 'b pour bold',
+        	'reponses':[	{id:'q6.1', intitule: 'b'},
+        					{id:'q6.2', intitule: 'gras'},
+        					{id:'q6.3', intitule: 'g'},
+        					{id:'q6.4', intitule: 'bold'}
+        		]
+    	},
+        {
+            'id':   'q7',
+            'correct' : 'q7.1',
+            'question': 'Quel est l’élément HTML correct pour mettre en texte en police italique ?',
+            'commentaire' : 'i pour italic',
+            'reponses':[    {id:'q7.1', intitule: 'i'},
+                            {id:'q7.2', intitule: 'italic'},
+                ]
+        },
+        {
+            'id':   'q8',
+            'correct' : 'q8.2',
+            'question': 'Quelle est la manière correcte pour créer un lien hypertext ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q8.1', intitule: '<a>http://www.univ-lorraine.fr </a>'},
+                            {id:'q8.2', intitule: '<a href=" http://www.univ-lorraine.fr">Université de Lorraine</a>'},
+                            {id:'q8.3', intitule: '<a link=" http://www.univ-lorraine.fr">Université de Lorraine</a>'},
+                            {id:'q8.4', intitule: '<link url=" http://www.univ-lorraine.fr">Université de Lorraine</link>'},
+                            {id:'q8.5', intitule: '<link src=" http://www.univ-lorraine.fr">Université de Lorraine</link>'}
+                ]
+        },
+        {
+            'id':   'q9',
+            'correct' : 'q9.3',
+            'question': 'Comment créer un lien vers une adresse email ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q9.1', intitule: '<a href="adresse@univ-lorraine.fr">'},
+                            {id:'q9.2', intitule: '<mailto>adresse@univ-lorraine.fr</mailto>'},
+                            {id:'q9.3', intitule: '<a href="mailto:adresse@univ-lorraine.fr">'},
+                            {id:'q9.4', intitule: '<mail href="adresse@univ-lorraine.fr">'}
+                ]
+        },
+        {
+            'id':   'q10',
+            'correct' : 'q10.1',
+            'question': 'Comment ouvrir un lien dans un nouvel onglet ou dans une nouvelle fenêtre ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q10.1', intitule: '<a href="url" target="_blank">'},
+                            {id:'q10.2', intitule: '<a href="url" new>'},
+                            {id:'q10.3', intitule: '<a href="url" target="new">'},
+                            {id:'q10.14', intitule: '<a href="url" onclick="window.open">'}
+                ]
+        },
+        {
+            'id':   'q11',
+            'correct' : 'q11.3',
+            'question': 'Parmis ces éléments lesquels sont utilisé par les tableaux ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q11.1', intitule: '<table><tr><tt>'},
+                            {id:'q11.2', intitule: '<table><head><tfoot>'},
+                            {id:'q11.3', intitule: '<table><tr><td>'},
+                            {id:'q11.4', intitule: '<thead><body><tr>'},
+                ]
+        },
+        {
+            'id':   'q12',
+            'correct' : 'q12.1',
+            'question': 'En HTMLS les éléments "inline" sont affichés sans passer à la ligne.',
+            'commentaire' : '',
+            'reponses':[    {id:'q12.1', intitule: 'Vrai'},
+                            {id:'q12.2', intitule: 'Faux'}
+                ]
+        },
+        {
+            'id':   'q13',
+            'correct' : 'q13.2',
+            'question': 'Comment définir une liste numérotée ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q13.1', intitule: 'list'},
+                            {id:'q13.2', intitule: 'ol'},
+                            {id:'q13.3', intitule: 'dl'},
+                            {id:'q13.4', intitule: 'ul'},
+                            {id:'q13.5', intitule: 'num'}
+                ]
+        },
+        {
+            'id':   'q14',
+            'correct' : 'q14.3',
+            'question': 'Comment définir une liste à puce ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q14.1', intitule: 'ol'},
+                            {id:'q14.2', intitule: 'list'},
+                            {id:'q14.3', intitule: 'ul'},
+                            {id:'q14.4', intitule: 'dl'},
+                            {id:'q14.5', intitule: 'bl'},
+                            {id:'q14.6', intitule: 'bullet'},
+                ]
+        },
+        {
+            'id':   'q15',
+            'correct' : 'q15.4',
+            'question': 'Quel est l’élément HTML correct pour faire une case à cocher ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q15.1', intitule: '<input type="check">'},
+                            {id:'q15.2', intitule: '<checkbox>'},
+                            {id:'q15.3', intitule: '<check>'},
+                            {id:'q15.4', intitule: '<input type="checkbox">'}
+                ]
+        },
+        {
+            'id':   'q16',
+            'correct' : 'q16.3',
+            'question': 'Quel est l’élément HTML correct pour faire un champ de saisie texte sur une ligne ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q16.1', intitule: '<textfield>'},
+                            {id:'q16.2', intitule: '<input type="textfield">'},
+                            {id:'q16.3', intitule: '<input type="text">'},
+                            {id:'q16.4', intitule: '<textinput type="text">'}
+                ]
+        },
+        {
+            'id':   'q17',
+            'correct' : 'q17.1',
+            'question': 'Quel est le code html correct pour faire une liste déroulante ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q17.1', intitule: '<select>'},
+                            {id:'q17.2', intitule: '<input type="list">'},
+                            {id:'q17.3', intitule: '<list>'},
+                            {id:'q17.4', intitule: '<input type="dropdown">'}
+                ]
+        },
+        {
+            'id':   'q18',
+            'correct' : 'q18.2',
+            'question': 'Quel est le code html correct pour faire une zone de texte sur plusieurs lignes',
+            'commentaire' : '',
+            'reponses':[    {id:'q18.1', intitule: '<input type="textarea">'},
+                            {id:'q18.2', intitule: '<textarea>'},
+                            {id:'q18.3', intitule: '<input type="textbox">'},
+                ]
+        },
+        {
+            'id':   'q19',
+            'correct' : 'q19.',
+            'question': 'Quel est le code html correct pour insérer une image ?',
+            'commentaire' : '',
+            'reponses':[    {id:'q19.1', intitule: '<img src="image.gif" alt="chat">'},
+                            {id:'q19.2', intitule: '<image src="image.gif" alt="chat">'},
+                            {id:'q19.3', intitule: '<img alt="chat">image.gif</img>'},
+                            {id:'q19.4', intitule: '<img href="image.gif" alt="chat">'}
+                ]
+        },
+        {
+            'id':   'q20',
+            'correct' : 'q20.3',
+            'question': 'Quel est le code html correct pour insérer une image de fond',
+            'commentaire' : '',
+            'reponses':[    {id:'q20.1', intitule: '<img src="background.png" background>'},
+                            {id:'q20.2', intitule: '<background img="background.png">'},
+                            {id:'q20.3', intitule: '<body background="background.png">'}
+                ]
+        }
+		];
+	}
+	</script>
+<div ng-repeat="question in questions" ng-show="q==$index">
+<p>{{$index+1}} / {{questions.length}} {{question.question}}</p>
+	<div ng-repeat="reponse in question.reponses">
+		<input type="radio" name="q{{$parent.$index}}" ng-model="question.id" ng-value="reponse.id" ng-disabled="question.id!='{{question.id}}'" ng-click="test(question.correct, reponse.id)"><label><pre><code>{{reponse.intitule}}</code></pre></label>
+	</div>
+	<div class="commentaire error" ng-show="question.id!='{{question.id}}' && question.id==question.correct">Correct</div>
+	<div class="commentaire success" ng-show="question.id!='{{question.id}}' && question.id!=question.correct">Faux : {{question.commentaire}}</div>
+	<div ng-show="question.id!='{{question.id}}'" style="float:right">
+		score : {{score}} / {{$index + 1}}
+		<a href="javascript:void()" class="btn" ng-click="$parent.q=$index+1">Suivant</a>
+	</div>
+</div>
+

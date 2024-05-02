@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mesures</title>
+	<style>
+	.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+	.flottant { float:left; height:100px; }
+	</style>
+</head>
+
+<body>
+<div id="cont" class="clearfix" style="width:830px; background-color:yellow;border:1px solid red">
+<div id="c1" class="flottant" style="width:25%;background-color:#ccc"></div>
+<div id="c2" class="flottant" style="width:25%;background-color:#ddd"></div>
+<div id="c3" class="flottant" style="width:25%;background-color:#ccc"></div>
+<div id="c4" class="flottant" style="width:25%;background-color:#ddd"></div>
+</div>
+<div id="dd" class="clearfix"></div>
+<script>
+document.getElementById('c1').innerHTML = document.getElementById('c1').offsetWidth;
+document.getElementById('c2').innerHTML = document.getElementById('c2').offsetWidth;
+document.getElementById('c3').innerHTML = document.getElementById('c3').offsetWidth;
+document.getElementById('c4').innerHTML = document.getElementById('c4').offsetWidth;
+document.getElementById('dd').innerHTML = document.getElementById('cont').offsetWidth;
+</script>
+http://ejohn.org/blog/sub-pixel-problems-in-css/
+</body>
+</html>

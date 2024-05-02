@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen</title>
+  <style>
+    html { font-family: sans-serif; }
+    table { border-collapse: collapse; }
+    thead tr { text-align: center; }
+    thead tr:nth-child(1) { font-size: 20px; }
+    thead tr:nth-child(2) { font-size: 18px; }
+    td { border:1px solid #333; padding: 3px 5px; width:70px;}
+    th { border:1px solid #333; padding: 3px 5px; width:70px;}
+    .prix { text-align: right; }
+  </style>
+  <script src="person.js"></script>
+</head>
+<body>
+  <h1>Examen Intégration et documents Web</h1>
+ 
+  <h2>Exercice 2</h2>
+
+  <form name="ex2">
+    <fieldset>
+      <legend>Pays</legend>
+  
+      <input type="checkbox" name="France" id="France" value="France">
+      <label for="France">France</label><br/>
+  
+      <input type="checkbox" name="Germany" id="Germany" value="Germany">
+      <label for="Germany">Allemagne</label><br/>
+  
+      <input type="checkbox" name="Spain" id="Spain" value="Spain">
+      <label for="Spain">Espagne</label><br/>
+  
+      <input type="checkbox" name="Italy" id="Italy" value="Italy">
+      <label for="Spain">Italie</label><br/>
+  
+      <input type="checkbox" name="Belgium" id="Belgium" value="Belgium">
+      <label for="Belgium">Belgique</label><br/>
+  
+      <input type="checkbox" name="UnitedKingdom" id="UnitedKingdom" value="United Kingdom">
+      <label for="Spain">Royaume Uni</label><br/>
+      
+    </fieldset>
+  </form>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Age</th>
+        <th>Pays</th>
+        <th>Enfants</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td class="age_mean"></td>
+        <td></td>
+        <td class="children_count"></td>
+      </tr>
+    </tfoot>
+    <tbody id="body">
+  
+    </tbody>
+
+  </table>
+
+  <p>
+    1. Attacher des événements <i>click</i> sur les éléments html <i>input</i> de type <i>checkbox</i> du deuxième fomulaire pour effectuer l'affichage du tableau.
+  </p>
+
+  <p>
+    2. Vider le corps du tableau.
+  </p>
+  
+  <p>
+    3. Lire les pays qui ont été sélectionnés (checked)
+  </p>
+
+  <p>
+    4. Filtrer le le tableau <i>persons</i> en fonction du pays<br>
+    <a href="person.js" download>person.js</a>
+  </p>
+
+  <p>
+    5. Transformer le tableau <i>persons</i> pour calculer l'age des individus. Le calcul de l'age s'effectue en créant 
+    une nouvelle date avec la différence de la date du jour et de la date de naissance, extraire l'année et retirer 1970 pour avoir l'age.<br>
+    https://javascript.plainenglish.io/how-to-calculate-the-age-given-the-birth-date-in-yyyy-mm-dd-format-with-javascript-78c256e770e2
+  </p>
+
+  <p>
+    5. Insérer les données du tableau filtré et transformé dans la table html
+  </p>
+
+  <p>
+    6. Calculer le nombre total d'enfants et l'age moyen des personnes. Stocker ces informations dans un structure.<br>
+    Afficher les resultats dans le pied du tableau html.<br>
+    Le calcul de la moyenne ligne par ligne est effectué par la formule itérative :<br>
+    moyenne(n) = moyenne(n-1) + ( age(n) - moyenne(n-1)) / n
+  </p>
+
+  <p>Moins de 40 lignes de codes sont suffisantes avec les fonctions de traitements des tableaux.</p>
+  
+  <p><a href="reponse">Démonstration</a></p>
+  <p>Voir la <a href="solution">solution</a></p>
+
+</body>
+</html>
