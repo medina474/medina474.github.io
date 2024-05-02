@@ -2,4 +2,4 @@
 title: Future
 ---
 
-Le widget Fuiture
+Le widget Future

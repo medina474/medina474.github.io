@@ -26,8 +26,8 @@ Programmation mobile, PWA
 
 ### Volumes horaires
 
-- TD : 8h : 6 + 2 (saé)\
-- TP : 21h : 18 + 3 (saé)
+TD : 8h : 6 + 2 (saé)  
+TP : 21h : 18 + 3 (saé)
 
 
 ## Cours
