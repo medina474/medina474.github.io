@@ -1,7 +1,5 @@
 ---
-layout: layouts/page.njk
 title: Projection isométrique
-date: Last Modified
 ---
 
 La perspective isométrique est une méthode de représentation en perspective (3D) dans laquelle les trois directions de l'espace sont représentées avec la même importance, d'où le terme. Les lignes parallèles le restent il n'y a pas de point de fuite comme dans la perspective cavalière.

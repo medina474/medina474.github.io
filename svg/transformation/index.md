@@ -1,7 +1,6 @@
 ---
 layout: layouts/math.njk
 title: Transformation
-date: Last Modified
 
 type: post
 eleventyComputed:

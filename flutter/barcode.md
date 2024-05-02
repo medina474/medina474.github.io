@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Lecteur de code barre
 ---
 

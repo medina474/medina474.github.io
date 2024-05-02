@@ -1,2 +1,6 @@
 title: Emmanuel Medina
+lang: fr
 description: Cours
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme

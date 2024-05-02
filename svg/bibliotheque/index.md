@@ -1,7 +1,5 @@
 ---
-layout: layouts/page.njk
 title: Bibliothèque
-date: Last Modified
 ---
 
 ## Réutilisation des éléments

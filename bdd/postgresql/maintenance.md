@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Maintenance d'un serveur PostgreSQL
 ---
 

@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Atelier
 ---
 
@@ -8,4 +7,3 @@ Supprimer le calque
 
 
 ### Panneau d'informations
-

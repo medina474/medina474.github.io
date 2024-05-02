@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Interaction en javascript - Solution
 ---
 

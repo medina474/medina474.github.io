@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Horloge
 ---
 
@@ -99,5 +98,3 @@ inputh.oninput = Show;
 ```
 
 Télécharger le fichier <a href="../solution/index.html" download>html</a>
-
-

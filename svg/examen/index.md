@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Évaluation 1
 ---
 
@@ -45,4 +44,3 @@ Pour vous aider voici un tutoriel qui offre une solution approchante [https://cs
 9. Ajouter un **graphique** en barre pour chaque jour de la semaien (7 barres). Les barres sont aligné à 390 px du haut du panneau. Les barres ont une largeur de 15px elles sont espacées de 24 px et la première commence à 25.5px du bord gauche. Les hauteurs sont variables comprise en 35px et 60px;
 
 10. Ajouter dans chaque barre **l'initiale du jour** de la semaine (L M M J V S D) centré au milieu de la barre. La taille du texte est de 8px.
-

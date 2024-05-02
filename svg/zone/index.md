@@ -1,7 +1,5 @@
 ---
-layout: layouts/page.njk
 title: Zone d'affichage et zone de travail
-date: Last Modified
 ---
 
 ## Zone d'affichage

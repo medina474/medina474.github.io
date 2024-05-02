@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Solution de l'évaluation SVG n° 3
 ---
 

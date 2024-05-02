@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: SVG - Évaluation 3
 ---
 

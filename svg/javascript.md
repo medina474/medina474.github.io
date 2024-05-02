@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Interaction en javascript
 ---
 
@@ -12,5 +11,3 @@ Cibler un élément contenant un symbole.
 
 Utiliser currentColor pour appliquer la bonne couleur,  Cela fonctionne à condition d'utiliser un nombre restreint de couleur.
 Les variables css
-
-

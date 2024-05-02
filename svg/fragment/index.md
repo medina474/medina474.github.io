@@ -1,7 +1,5 @@
 ---
-layout: layouts/page.njk
 title: Fragments SVG
-date: Last Modified
 ---
 
 Les fichiers svg peuvent être utilisé comme source pour les balises images `<img>`. Il sont considérés comme des fichiers classiques jpg ou png.

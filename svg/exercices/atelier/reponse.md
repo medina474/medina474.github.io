@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Atelier
 ---
 
@@ -195,4 +194,3 @@ document.getElementById("grille").addEventListener("click", async function (evt)
 ```
 
 télécharger le fichier <a href="../demo/index.html" download>html</a>
-
