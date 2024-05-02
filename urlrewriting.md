@@ -10,10 +10,10 @@ La réécriture d'URL récupère des éléments et/ou des parties de l'adresse U
 Elle est utilisée intensément avec les applications Web.
 
 Exemple :
-http://www.domaine.com/change/2014/09/25/MXN
+http://www.domaine.com/change/2024/09/25/MXN
 
 Devient après réécriture
-http://www.domaine.com/service.php?action=change&devise=MXN&date=2014-09-25
+http://www.domaine.com/service.php?action=change&devise=MXN&date=2024-09-25
 
 Activer le module Apache
 
@@ -162,7 +162,7 @@ RewriteRule voiture(s*) redirection.php?v0=$0&v1=$1
 
 ### Zéro ou plus non gourmand : *?
 
-Non gourmand (ungreedy) signifie que la capture va prendre le moins de caractères possibles pour satisfaire la règle.
+Non gourmand (ungreedy) signifie que la capture va prendre le **moins de caractères possibles** pour satisfaire la règle.
 RewriteRule voiture(s*?) redirection.php?v0=$0&v1=$1
 
 :heavy_check_mark: http://hostname/voiture
