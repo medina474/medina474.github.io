@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <title>SVG Image</title>
+  <style>
+    body { margin: 0}
+  </style>
+
+</head>
+
+<body>
+<svg height="100%" width="100%">
+  <defs>
+    <filter id="flou">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="flou"/>
+      <feColorMatrix  type="matrix" values="0.8 0.1 0.1 0 0
+      0.1 0.8 0.1 0 0
+      0.1 0.1 0.8 0 0
+      0 0 0  0.8 0" in="flou"">
+      </feColorMatrix>
+    </filter>
+
+    <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="white"/>
+      <stop offset="100%" stop-color="black"/>
+    </radialGradient>
+
+    <mask id="masque">
+      <circle id="centre" cx="512" cy="342" r="40%" fill="url(#Gradient)" />
+    </mask>
+    
+  </defs>
+  <image href="../street2.jpg" x="0" y="0" height="100%" width="100%" filter="url(#flou)" />
+  <image href="../street2.jpg" x="0" y="0" height="100%" width="100%" mask="url(#masque)" />
+
+</svg>
+<script>
+document.body.onmousemove = event => 
+{
+  document.getElementById("centre").setAttribute("cx", event.clientX );
+  document.getElementById("centre").setAttribute("cy", event.clientY );
+}
+</script>
+</body>
+</html>

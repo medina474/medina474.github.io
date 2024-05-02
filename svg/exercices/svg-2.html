@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <title>SVG Bibliothèque</title>
+  <style>
+    .rouge { fill: red; stroke:yellow; color:green;
+      --super-color: cyan;
+    }
+    .vert { fill : green; stroke:pink; color:red;
+      --super-color: violet;
+    }
+  </style>
+</head>
+
+<body>
+
+<svg>
+  <use href="#cercle" x="200" y="30" class="rouge"></use>
+  <use href="#cercle" x="10" y="30" class="vert"></use>
+</svg>
+
+<svg width="0" height="0">
+  <defs>
+    <symbol id="cercle" viewbox="0 0 300 150">
+      <circle cx="30" cy="30" r="30"  />
+      <rect x="50" y="15" width="30" height="30" fill="currentColor" />
+      <polygon points="5 60 30 100 55 60" style="fill: var(--super-color)"></polygon>
+    </symbol>
+    <symbol id="carre" viewbox="0 0 300 150">
+      <rect x="0" y="0" width="60" height="60"  />
+    </symbol>
+  </defs>
+</svg>
+
+</html>

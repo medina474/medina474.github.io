@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <title>SVG Image</title>
+</head>
+
+<body>
+
+  <svg height="800" width="800">
+    <defs>
+      <clipPath id="chemin">
+          <path
+          style="fill:none;stroke:#000000;stroke-width:2.79410458px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+          d="M 57.223313,54.404016 127.71967,16.818001 c 0,0 32.53678,-13.0105415 17.17219,39.031631 -15.3646,52.042178 -24.40259,1.445616 -41.57478,60.715868 -17.172186,59.27025 20.78739,11.56492 40.67098,57.82464 19.88359,46.2597 -28.92158,98.30187 -28.92158,98.30187 0,0 -71.400157,43.36847 -66.881161,-31.80355 C 52.704317,165.71644 11.129543,118.01111 11.129543,118.01111 Z"
+           />
+      </clipPath>
+
+      <radialGradient id="Gradient2" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="50%" stop-color="white"/>
+          <stop offset="100%" stop-color="black"/>
+      </radialGradient>
+
+      <mask id="masque">
+        <circle cx="500" cy="150" r=100 fill="url(#Gradient2)" />
+      </mask>
+
+    </defs>
+
+    <image xlink:href="lion.jfif" x="0" y="0"
+      height="320" width="200" clip-path="url(#chemin)"/>
+
+      <image xlink:href="lion.jfif" x="400" y="0"
+      height="320" width="200" mask="url(#masque)"/>
+
+      <!--<circle cx="500" cy="150" r=100 fill="url(#Gradient2)" />-->
+  </svg>
+
+</html>

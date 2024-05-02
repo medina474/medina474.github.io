@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { margin: 0}
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" preserveAspectRatio="xMinYMin" 
+  width="1500" height="840">
+    <defs>
+        <pattern id="tenthGrid" width="25" height="25" x="5" y="5"
+          patternUnits="userSpaceOnUse">
+          <path d="M 25 0 L 0 0 0 25" fill="none" stroke="black" stroke-width="1"/>
+        </pattern>
+    </defs>
+    
+    <g id="grille" fill="none" stroke="#000" transform="translate(360 0) rotate(30) skewX(-30)">
+      <rect x="5" y="5" stroke="#000" stroke-width="1" width="400" height="400" fill="url(#tenthGrid)" id="grille" transform="scale(1 0.86603)"/>
+      <rect x="5" y="5" width="25" height="25" stroke="#000" stroke-width="1" fill="red" stroke="none" id="rect" transform="scale(1 0.86603)"/>
+    </g>
+    
+    <g transform="matrix(.86603 .5 -.93301 .46132 198.205 56.699)">
+      <circle cx="365" cy="410" r="0.5" fill="red" /></g>
+    <g id="atelier"></g>
+       <!--
+
+    <circle cx="256.75" cy="222.5" r="3" fill="red" />
+    -->
+    <!-- x = 360 + 25 x sin(60) x (h - v)
+    y = 410 - 25 x v + (v-h) * 25 /2
+    -->
+  </svg>
+  <script>
+    'use strict'; 
+
+    let coord = document.getElementsByTagName("svg")[0].getBoundingClientRect();
+    var zoom = Math.min(750.0 / coord.width, 420.0 / coord.height);
+    var angle = - Math.PI / 6;
+    const rect = document.getElementById("rect");
+
+    document.getElementById("grille").addEventListener("mousemove", function (evt) {
+            
+      let {x, y} = planToIsometric(evt.offsetX, evt.offsetY)
+      
+      rect.setAttribute("x", Math.floor(x * zoom / 25) * 25 + 5);
+      rect.setAttribute("y", Math.floor(y * zoom / 25) * 25 + 5);
+
+    });
+
+    function planToIsometric(x , y) {
+      x = x - 360 / zoom;
+      y = y;
+
+      let X = x * Math.cos(angle) - y * Math.sin(angle); 
+      let Y = x * Math.sin(angle) + y * Math.cos(angle);
+
+      x = X + Y * Math.tan(Math.PI / 6); 
+      y = Y / Math.cos(angle);
+
+      return { x, y };
+    }
+
+    function gridToPlan(h , v) {
+      var x = 360 + 25 * Math.sin(60) * (h - v);
+      var y = 410 - 25 * v + (v-h) * 25 / 2;
+      return { x, y };
+    }
+
+    function isometricToPlan(h , v) {
+      
+      let Y = v * 0.86603;
+      let X = h - Y * Math.tan(Math.PI / 6);
+
+      let x = (X + Y * Math.tan(angle)) * Math.cos(angle); 
+      let y = (Y - x * Math.sin(angle)) / Math.cos(angle);
+
+      x = x + 360;
+
+      return { x, y };
+    }
+
+    document.getElementById("grille").addEventListener("click", async function (evt) {
+      
+      const m = document.getElementsByTagName("select")[0].value;
+      
+      const data = await fetch(`machine-${m}-o.svg`)
+      const str = await data.text(); 
+      const xml = new window.DOMParser().parseFromString(str, "image/svg+xml");
+      const svg = xml.children[0];
+      
+      const option = document.querySelector(`option[value='${m}']`)
+      let scale = option.dataset["scale"];
+      let width = option.dataset["width"];
+      let height = option.dataset["height"];
+      let originx = option.dataset["originx"];
+      let originy = option.dataset["originy"];
+
+      svg.setAttribute("width", width * scale);
+      svg.setAttribute("height", height * scale);
+     
+      let {x, y} = planToIsometric(evt.clientX , evt.clientY);
+      
+      x = Math.ceil(x * zoom / 25) * 25 + 5;
+      y = Math.ceil(y * zoom / 25) * 25 + 5;
+      
+      ({x, y} = isometricToPlan(x , y));
+      
+      svg.setAttribute("x", x - originx * scale);
+      svg.setAttribute("y", y - originy * scale);
+    
+      document.getElementById("atelier").appendChild(svg);
+      
+      /*
+      var ligne = Math.ceil((evt.clientY - 5) / 25)
+      var x = Math.ceil((evt.clientX - 20 )/ 43) * 43 + 20;
+      var y =  ligne * 25 + 5;
+      */ 
+/*
+      let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", x);
+      circle.setAttribute("cy", y);
+      circle.setAttribute("r", "2");
+      circle.setAttribute("fill", "red");
+*/
+      
+    });
+  </script>
+  <select name="machine">
+    <option value="1" data-width="66.860" data-height="69.700" data-scale="1.7" data-originx="14.20" data-originy="69.70">inspection</option>
+    <option value="2" data-width="63.140" data-height="82.689" data-scale="1.2" data-originx="17.79" data-originy="82.689">cn</option>
+    <option value="3" data-width="40.580" data-height="79.180" data-scale="1.6" data-originx="13.99" data-originy="79.180">perceuse</option>
+    <option value="4" data-width="89.020" data-height="94.630" data-scale="1.2" data-originx="17.78" data-originy="94.630">tour</option>
+    <option value="5" data-width="63.250" data-height="97.190" data-scale="1.35" data-originx="14.25" data-originy="97.190">foreuse</option>
+    <option value="6" data-width="78.780" data-height="85.510" data-scale="1.6" data-originx="29.76" data-originy="85.510">robot</option>
+    <option value="7" data-width="80.130" data-height="98.880" data-scale="1.33" data-originx="15.44" data-originy="98.880">fraiseuse</option>
+  </select>
+</body>
+</html>

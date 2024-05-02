@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>SVG</title>
+<style>
+	.rose { fill: pink; }
+</style>
+</head>
+<body>
+	<h1>Mon dessin</h1>
+	<svg>
+	<g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       id="rect10"
+	   class="rose"
+       width="103.16604"
+       height="70.02462"
+       x="16.570711"
+       y="21.177847"
+       style="stroke-width:0.26458332" />
+    <ellipse
+       id="path12"
+       cx="119.20221"
+       cy="102.69505"
+       rx="41.694046"
+       ry="33.94323"
+       style="stroke-width:0.26458332;fill:#d35f5f" />
+  </g>
+  </svg>
+<script>
+setInterval(function() { 
+document.getElementById("path12").setAttribute("cx", 
+parseInt(document.getElementById("path12").getAttribute("cx")) + 10)
+}, 500);
+</script>
+  </body>
+</html>
