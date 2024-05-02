@@ -1,0 +1,390 @@
+[
+    {
+        "id": "ab46e86bdf865594",
+        "type": "tab",
+        "label": "Exercice 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "31dfa92311302ca9",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "b08d1fe9e663a82a"
+            ]
+        ]
+    },
+    {
+        "id": "0a55d8bd1b2bd273",
+        "type": "http response",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 430,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b08d1fe9e663a82a",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "func": "msg.payload= \n[\n    { \"article\":\"guidon\", \"quantite\":10, \"etat\":\"neuf\", \"stock\":[ {\"nom\":\"magasin\", \"quantite\":6}, {\"nom\":\"entrepot\", \"quantite\":4} ] },\n    { \"article\":\"cadre\", \"quantite\":5, \"etat\":\"occasion\", \"couleur\": \"rouge\" },\n    { \"article\":\"pedalier\", \"quantite\":8, \"etat\":\"excellent\", \"tailles\":[28,40,50] },\n]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 40,
+        "wires": [
+            [
+                "0a55d8bd1b2bd273"
+            ]
+        ]
+    },
+    {
+        "id": "ea65ead821883fb8",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/:collection",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "2d4020251cfe56fb"
+            ]
+        ]
+    },
+    {
+        "id": "dcd3dead7c91fcb4",
+        "type": "http response",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1010,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0556c8935d96040c",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/:collection",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "916b12e2f01d85fe"
+            ]
+        ]
+    },
+    {
+        "id": "0b48e5e839937e07",
+        "type": "mongodb4",
+        "z": "ab46e86bdf865594",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "name": "",
+        "x": 810,
+        "y": 220,
+        "wires": [
+            [
+                "dcd3dead7c91fcb4"
+            ]
+        ]
+    },
+    {
+        "id": "916b12e2f01d85fe",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "find",
+        "func": "msg.operation = \"find\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [{}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "badcb0687b394e7d",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/:collection/:identifiant",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "b4e914da4fa32de3"
+            ]
+        ]
+    },
+    {
+        "id": "b4e914da4fa32de3",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "find",
+        "func": "msg.operation = \"find\";\nmsg.collection = msg.req.params.collection;\n\n//msg.payload = [{\"numero\": parseInt(msg.req.params.identifiant)}]\n\nvar ObjectId = global.get('ObjectId');\n\nmsg.payload=[{\n  \"_id\": ObjectId(msg.req.params.identifiant)\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "e8ab753a7ddd7ba7",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/fabrication/article/:nom",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 420,
+        "wires": [
+            [
+                "37bf973f291c7c10"
+            ]
+        ]
+    },
+    {
+        "id": "37bf973f291c7c10",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "find",
+        "func": "msg.operation = \"find\";\nmsg.collection = \"fabrication\";\nmsg.payload = [{\"article\": msg.req.params.nom}]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "c187cc4d0f1cc7df",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/:collection/:identifiant",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "f1067baf7edbc6bd"
+            ]
+        ]
+    },
+    {
+        "id": "f1067baf7edbc6bd",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "deleteOne",
+        "func": "msg.operation = \"deleteOne\";\nmsg.collection = msg.req.params.collection;\n\n//msg.payload = [{\"numero\": parseInt(msg.req.params.identifiant)}]\n\nvar ObjectId = global.get('ObjectId');\n\nmsg.payload=[{\n  \"_id\": ObjectId(msg.req.params.identifiant)\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "e0522c9d37c62e2a",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/fabrication/vente/:identifiant",
+        "method": "patch",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 340,
+        "wires": [
+            [
+                "b1bc4a4cac06173e"
+            ]
+        ]
+    },
+    {
+        "id": "b1bc4a4cac06173e",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "updateOne",
+        "func": "msg.operation = \"updateOne\";\nmsg.collection = \"fabrication\";\nmsg.payload = [{ \"numero\": parseInt(msg.req.params.identifiant)},\n               { \"$inc\": { \"stock\": -1 }  } ];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "375aecf102955583",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/:collection",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "1057959d465ba289"
+            ]
+        ]
+    },
+    {
+        "id": "1057959d465ba289",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "deleteMany",
+        "func": "msg.operation = \"deleteMany\";\nmsg.collection = msg.req.params.collection;\nmsg.payload=[{}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "3cab79abb3e3b909",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/fabrication/stat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "5f4584126ef02787"
+            ]
+        ]
+    },
+    {
+        "id": "5f4584126ef02787",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "aggregate",
+        "func": "msg.operation = \"aggregate\";\nmsg.collection = \"fabrication\";\nmsg.payload= [\n  [\n    { $group:\n        { _id: \"$article\", total: { $sum: \"$stock\" } }\n    },\n    { $sort: \n        { total: 1 } \n    }\n  ]\n];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "2d4020251cfe56fb",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "insertOne",
+        "func": "msg.operation = \"insertOne\";\nmsg.collection = msg.req.params.collection;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 100,
+        "wires": [
+            [
+                "0b48e5e839937e07"
+            ]
+        ]
+    },
+    {
+        "id": "ca34f39cae9568b4",
+        "type": "mongodb4-client",
+        "name": "MongoDB",
+        "protocol": "mongodb",
+        "hostname": "localhost",
+        "port": "",
+        "dbName": "iutsd",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsInsecure": false,
+        "uri": "",
+        "advanced": "",
+        "uriTabActive": "tab-uri-simple"
+    }
+]

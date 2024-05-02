@@ -1,0 +1,10 @@
+[Unit]
+Description=Sauvegarde journalière
+
+[Timer]
+# Define a calendar event (see `man systemd.time`)
+OnCalendar=Mon..Fri 12:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

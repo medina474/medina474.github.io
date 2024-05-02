@@ -1,0 +1,11 @@
+POST http://127.0.0.1:9011/api/login
+content-type: application/json
+Authorization: ZGuJT8Cny40hFw2EimvOyjomM0QJ-yiUTVooKMq6rIPnrFSQCQDT8cPk
+
+{
+  "loginId": "bmarx@neotechweb.net",
+  "password": "supermotdepasse",
+  "applicationId": "be3ece6b-d87f-4ebf-9c18-2d88fe02b7bf",
+  "noJWT" : false,
+  "ipAddress": "192.168.1.23"
+}

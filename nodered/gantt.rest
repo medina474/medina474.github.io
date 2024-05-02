@@ -1,0 +1,21 @@
+POST http://100.64.98.52:1880/gantt
+Content-Type: application/json
+Authorization: Basic superviseur:motdepasse
+
+[
+  {
+	"id": "Task 1",
+	"name": "Redesign website",
+	"start": "2022-12-28",
+	"end": "2022-12-31",
+	"progress": 20,
+	"dependencies": ""
+  }
+]
+
+### 
+GET http://100.64.98.52:1880/gantt
+
+###
+
+DELETE http://100.64.98.52:1880/gantt/numero/Peinture

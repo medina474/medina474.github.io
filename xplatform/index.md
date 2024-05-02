@@ -21,12 +21,18 @@ Xamarin est le fruit du portage de la plateforme .Net sur la plateforme Linux. C
 
 <img src="xamarin.png" height="64">
 
-### .Net MAUI
+### .Net MAUI (ex Xamarin)
 
-.Net MAUI (Multi-platform App UI) est le successeur de Xamarin. Ce langage est basé sur C# et des fichiers de description d'interface responsive en XML.
-Encore peur rependu Microsoft espère que son utilisation progressera.
+.Net Multi-platform App UI est un framework de développement mobile multiplateforme utilisant le langage C# et le framework .NET core.
+Il ea étét fondé en 2011 (à la base appelé « Mono for Android » et « MonoTouch » pour iOS) et fût racheté en 2016 par Microsoft. Bien qu’il soit une alternative forte au développement d’applications natives, il reste tout de même nécessaire d’écrire des parties de code spécifiques à chaque plateforme. Aujourd’hui, les applications natives sont plutôt développées en Kotlin et Swift profitant des dernières optimisations alors que Xamarin base sa partie native sur les langages Java et Objective-C. (Paragraphe à revoir)
 
+L'interface responsive en XML utilise XAML
+
+Flutter est plus accessible pour les développeurs et propose un tronc commun pour toute l’application, ce qui apporte un gain de temps substantiel.
+
+https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0
 [https://dotnet.microsoft.com/en-us/](https://dotnet.microsoft.com/en-us/)
+
 
 ### ReactNative
 

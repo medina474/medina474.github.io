@@ -1,0 +1,290 @@
+[
+    {
+        "id": "abdd6d4ae72bec7f",
+        "type": "tab",
+        "label": "Exercice 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "36af51f790105136",
+        "type": "mongodb4",
+        "z": "abdd6d4ae72bec7f",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "gantt",
+        "operation": "insertOne",
+        "output": "toArray",
+        "name": "",
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "19d5defdd2e76dea"
+            ]
+        ]
+    },
+    {
+        "id": "f17805bcbab2c79f",
+        "type": "http in",
+        "z": "abdd6d4ae72bec7f",
+        "name": "",
+        "url": "/gantt",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "76e0a999eb57a61f"
+            ]
+        ]
+    },
+    {
+        "id": "19d5defdd2e76dea",
+        "type": "http response",
+        "z": "abdd6d4ae72bec7f",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 950,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "06147cd702d5dabf",
+        "type": "http in",
+        "z": "abdd6d4ae72bec7f",
+        "name": "",
+        "url": "/gantt",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "218974a7ca2cc55c"
+            ]
+        ]
+    },
+    {
+        "id": "c06499850ca8d76a",
+        "type": "mongodb4",
+        "z": "abdd6d4ae72bec7f",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "find",
+        "output": "toArray",
+        "name": "",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "19d5defdd2e76dea"
+            ]
+        ]
+    },
+    {
+        "id": "218974a7ca2cc55c",
+        "type": "function",
+        "z": "abdd6d4ae72bec7f",
+        "name": "find",
+        "func": "msg.collection=\"gantt\"\nmsg.payload=[{}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "c06499850ca8d76a"
+            ]
+        ]
+    },
+    {
+        "id": "fd34bf3146faab28",
+        "type": "function",
+        "z": "abdd6d4ae72bec7f",
+        "name": "deleteOne",
+        "func": "msg.collection=\"gantt\"\nmsg.payload = [{\"id\": msg.req.params.id}]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "03e7bceb68c16f09"
+            ]
+        ]
+    },
+    {
+        "id": "03e7bceb68c16f09",
+        "type": "mongodb4",
+        "z": "abdd6d4ae72bec7f",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "deleteOne",
+        "output": "toArray",
+        "name": "",
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "19d5defdd2e76dea"
+            ]
+        ]
+    },
+    {
+        "id": "097505fa9698d310",
+        "type": "http in",
+        "z": "abdd6d4ae72bec7f",
+        "name": "",
+        "url": "/gantt/numero/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "fd34bf3146faab28"
+            ]
+        ]
+    },
+    {
+        "id": "a8fd9e6a2a4ab153",
+        "type": "http in",
+        "z": "abdd6d4ae72bec7f",
+        "name": "",
+        "url": "/gantt/:id",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 560,
+        "wires": [
+            [
+                "2f3d0b3c807c425d"
+            ]
+        ]
+    },
+    {
+        "id": "2f3d0b3c807c425d",
+        "type": "function",
+        "z": "abdd6d4ae72bec7f",
+        "name": "updateOne",
+        "func": "msg.collection=\"gantt\"\nmsg.payload = [{ \"id\": msg.req.params.id},\n               { \"$set\": { \"start\": msg.payload[0].start, \n                           \"end\": msg.payload[0].end }  \n               } ];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "84bf393e1e2c0883"
+            ]
+        ]
+    },
+    {
+        "id": "84bf393e1e2c0883",
+        "type": "mongodb4",
+        "z": "abdd6d4ae72bec7f",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "updateOne",
+        "output": "toArray",
+        "name": "",
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "19d5defdd2e76dea"
+            ]
+        ]
+    },
+    {
+        "id": "76e0a999eb57a61f",
+        "type": "node-red-contrib-basicauth",
+        "z": "abdd6d4ae72bec7f",
+        "name": "Administration",
+        "realm": "",
+        "username": "superviseur",
+        "password": "motdepasse",
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "36af51f790105136"
+            ],
+            [
+                "19d5defdd2e76dea"
+            ]
+        ]
+    },
+    {
+        "id": "9c37f549d0fb4e36",
+        "type": "comment",
+        "z": "abdd6d4ae72bec7f",
+        "name": "Liste",
+        "info": "",
+        "x": 110,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cc97a885dbe9f9d5",
+        "type": "comment",
+        "z": "abdd6d4ae72bec7f",
+        "name": "Ajouter",
+        "info": "",
+        "x": 150,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7bb18f1eb1eed892",
+        "type": "comment",
+        "z": "abdd6d4ae72bec7f",
+        "name": "Supprimer",
+        "info": "",
+        "x": 100,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "42ae5c9bc0469cdb",
+        "type": "comment",
+        "z": "abdd6d4ae72bec7f",
+        "name": "Modifier",
+        "info": "",
+        "x": 90,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ca34f39cae9568b4",
+        "type": "mongodb4-client",
+        "name": "MongoDB",
+        "protocol": "mongodb",
+        "hostname": "localhost",
+        "port": "",
+        "dbName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsInsecure": false,
+        "uri": "",
+        "advanced": "",
+        "uriTabActive": "tab-uri-simple"
+    }
+]

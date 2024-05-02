@@ -1,0 +1,208 @@
+[
+    {
+        "id": "d9b0bae19fc4ef19",
+        "type": "tab",
+        "label": "Examen",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "64dcc42fd6b728ae",
+        "type": "mongodb4",
+        "z": "d9b0bae19fc4ef19",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "velo",
+        "operation": "insertOne",
+        "output": "toArray",
+        "name": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "f50d3f7ed3e3c4d2"
+            ]
+        ]
+    },
+    {
+        "id": "758704c51c4bcf9e",
+        "type": "http in",
+        "z": "d9b0bae19fc4ef19",
+        "name": "",
+        "url": "/velo",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "64dcc42fd6b728ae"
+            ]
+        ]
+    },
+    {
+        "id": "f50d3f7ed3e3c4d2",
+        "type": "http response",
+        "z": "d9b0bae19fc4ef19",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f10fe444251818ab",
+        "type": "http in",
+        "z": "d9b0bae19fc4ef19",
+        "name": "",
+        "url": "/velo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "7c38976389c12725"
+            ]
+        ]
+    },
+    {
+        "id": "38ec20cce3afd062",
+        "type": "mongodb4",
+        "z": "d9b0bae19fc4ef19",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "find",
+        "output": "toArray",
+        "name": "",
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "f50d3f7ed3e3c4d2"
+            ]
+        ]
+    },
+    {
+        "id": "7c38976389c12725",
+        "type": "function",
+        "z": "d9b0bae19fc4ef19",
+        "name": "find",
+        "func": "msg.collection=\"velo\"\nmsg.payload=[{}];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "38ec20cce3afd062"
+            ]
+        ]
+    },
+    {
+        "id": "37ebd384836e37d2",
+        "type": "function",
+        "z": "d9b0bae19fc4ef19",
+        "name": "deleteOne",
+        "func": "msg.collection=\"velo\"\nmsg.payload = [{\"id\": msg.req.params.id}]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "19bda70c80435240"
+            ]
+        ]
+    },
+    {
+        "id": "19bda70c80435240",
+        "type": "mongodb4",
+        "z": "d9b0bae19fc4ef19",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "deleteOne",
+        "output": "toArray",
+        "name": "",
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "f50d3f7ed3e3c4d2"
+            ]
+        ]
+    },
+    {
+        "id": "a951dff0373b6e04",
+        "type": "http in",
+        "z": "d9b0bae19fc4ef19",
+        "name": "",
+        "url": "/velo/id/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "37ebd384836e37d2"
+            ]
+        ]
+    },
+    {
+        "id": "e37a6ccddc2c6679",
+        "type": "comment",
+        "z": "d9b0bae19fc4ef19",
+        "name": "Liste",
+        "info": "",
+        "x": 150,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8d12b7c7c4579e59",
+        "type": "comment",
+        "z": "d9b0bae19fc4ef19",
+        "name": "Ajouter",
+        "info": "",
+        "x": 190,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "30318c175b86d1cb",
+        "type": "comment",
+        "z": "d9b0bae19fc4ef19",
+        "name": "Supprimer",
+        "info": "",
+        "x": 140,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ca34f39cae9568b4",
+        "type": "mongodb4-client",
+        "name": "MongoDB",
+        "protocol": "mongodb",
+        "hostname": "localhost",
+        "port": "",
+        "dbName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsInsecure": false,
+        "uri": "",
+        "advanced": "",
+        "uriTabActive": "tab-uri-simple"
+    }
+]

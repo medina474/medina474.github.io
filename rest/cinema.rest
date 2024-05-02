@@ -1,0 +1,20 @@
+### Toutes les personnes
+GET http://192.168.1.121:3000/person HTTP/1.1
+
+### Détail d'une personne
+GET http://192.168.1.121:3000/person/e6031812-c358-47d0-9f3f-cd93a78796c1 HTTP/1.1
+
+###
+POST http://192.168.1.121:3000/person HTTP/1.1
+content-type: application/json
+
+{ "nom": "Durand" }
+
+###
+PUT http://192.168.1.121:3000/person/e6031812-c358-47d0-9f3f-cd93a78796c1 HTTP/1.1
+content-type: application/json
+
+{ "nom": "Dupond" }
+
+### Suppression
+DELETE http://192.168.1.121:3000/person/65cb2be3-2ba8-4009-9658-e76a7833b947 HTTP/1.1
