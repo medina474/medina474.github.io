@@ -1,45 +1,158 @@
 ---
-layout: page
 title: Flutter
 ---
 
-Flutter est un **framework**, un ensemble d'outil pour développer des applications Web, Windows, Android et iOS à partir d'un socle commun.
-
-Flutter est développé par Google c'est donc une alternative sérieuse et crédible aux développements d'applications natives.
-
-Le langage utilisé est **Dart**, une évolution de javascript qui utilise un **typage fort**.
-
-Flutter reprend des concepts de React tout en les améliorant. Toute l'application est pensée en forme de Widget qui vont vivre et se rafraîchir de manière indépendante.
-
-Les **widgets** : ils permettent de décrire simplement le rendu final. Chaque objet est défini indépendamment des contraintes parentes. C’est son emplacement dans le code qui permettra de définir ses contraintes extérieures. Cela permet de construire facilement son interface ; le code est alors plus facilement lisible et maintenable.
-
-Les **composants** : ils ont été recréés par Google. Les développeurs disposent d’une galerie de composants s’adaptant à IOS comme Android, et aux différentes versions d’OS. Cependant une pléthore de composants hétéroclites quelque fois pas maintenu et conçus pour le même objectif ne rendent pas la tâche du développeur facile.
+Flutter est un SDK (Kit de Développement Logiciel) open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le web à partir d'une seule base de code. Le langage utilisé est le **Dart** qui peut être compilé en langage natif ou en Javascript.
 
 
-## Les concurrents
 
-### React Native
+**Flutter Packages :** Utilisez des packages Flutter tiers provenant de pub.dev pour ajouter des fonctionnalités à votre application. Assurez-vous de vérifier la qualité et la popularité des packages avant de les intégrer dans votre projet.
 
-React Native est une solution multiplateforme lancée par Facebook en 2015, utilisant le Javascript et ayant vite fait ses preuves au sein de la communauté des développeurs. Aujourd’hui, son principal avantage face à Flutter est son ancienneté (facilité pour le développeur de trouver des bibliothèques ou du support). Néanmoins, Flutter rattrape bien son retard grâce à sa possibilité de personnaliser les éléments d’interface, et ses performances supérieures à son concurrent direct.
 
-https://reactnative.dev/
 
-### .Net MAUI (ex Xamarin)
+<img src="flutter.png" height="64">
 
-.Net Multi-platform App UI est un framework de développement mobile multiplateforme utilisant le langage C# et le framework .NET core.
-Il ea étét fondé en 2011 (à la base appelé « Mono for Android » et « MonoTouch » pour iOS) et fût racheté en 2016 par Microsoft. Bien qu’il soit une alternative forte au développement d’applications natives, il reste tout de même nécessaire d’écrire des parties de code spécifiques à chaque plateforme. Aujourd’hui, les applications natives sont plutôt développées en Kotlin et Swift profitant des dernières optimisations alors que Xamarin base sa partie native sur les langages Java et Objective-C. (Paragraphe à revoir)
+[https://flutter.dev/](https://flutter.dev/)
 
-Flutter est plus accessible pour les développeurs et propose un tronc commun pour toute l’application, ce qui apporte un gain de temps substantiel.
+Installer l'extension Flutter pour VS Code
 
-https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0
+Flutter: New Project
 
-## Installation
+choisir Empty Application, puis le dossier, puis le nom de l'application (cinema_flutter)
 
-[Télécharger](https://flutter.dev/docs/get-started/install/windows) Flutter pour votre OS.
+Anatomie d'un projet Flutter
 
-Installer le, comme indiqué dans la documentation (mettre à jour le path)
 
-Utiliser Visual Studio Code, et installer les plugins [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) et [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
+.dart_tool
+.idea
+android
+ios
+lib
+linux
+macos
+web
+windows
+.gitignore
+.metadata
+analysis_options.yaml
+cinema_flutter.iml
+pubspec.lock
+pubspec.yaml
+README.md
 
-Avec Visual Studio Code lancer l'outil de diagnostic **flutter doctor** à partir du menu View, Command
-Palette (Ctrl Maj P)
+lib/main.dart
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+
+## le langage Dart
+
+Langage objet
+
+super
+
+### Widget
+
+Les **Widgets** sont les éléments de base de toute interface utilisateur Flutter. Il est recommandé d'utiliser les widgets fournis par Flutter autant que possible pour créer une interface utilisateur efficace et réactive.
+
+#### Stateless
+
+#### Statefull
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked "final".
+
+### Widget MaterialApp
+
+### Widget Scaffold
+
+### Widget Center
+
+### Widget Text
+
+
+Créer un Widget pour la liste des acteurs
+nouveau fichier lib/acteurs.dart
+
+Déclarer la classe
+
+```dart
+import 'package:flutter/material.dart';
+
+class ActeursWidget extends StatefulWidget {
+}
+```
+
+Il manque le constructeur
+
+```dart
+const ActeursWidget({super.key});
+```
+
+Ajoutons un titre
+
+```dart
+class ActeursWidget extends StatefulWidget {
+  const ActeursWidget({super.key, required this.title});
+
+  final String title;
+}
+```
+
+C'est un Widget statefull il manque donc la méthode createState
+
+
+```dart
+@override
+  State<ActeursWidget> createState() => _ActeursWidgetState();
+```
+
+Maintenant il faut écire la classe _ActeursWidgetState
+
+```dart
+class _ActeursWidgetState extends State<ActeursWidget> {}
+```
+
+il manque la méthode build
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Scaffold()
+  }
+```
+
+Ajoutons un widget FutureBuilder
+
+Que faut-il
+
+future
+
+builder qui est un widget

@@ -1,0 +1,8 @@
+[Unit]
+Description=Service de sauvegarde des bases de données PostgreSQL
+
+[Service]
+Type=simple
+User=postgres
+ExecStart=/usr/local/sbin/pgbackup.sh
+StandardError=journal

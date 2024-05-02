@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt</title>
+    <link rel="stylesheet" href="frappe-gantt.css">
+</head>
+<body>
+    <button onclick="Charger()">Charger</button>
+    <svg id="gantt"></svg>
+    <div><label>Id</label> : <input id="GanttId" type="text"></div>
+    <div><label>Nom</label> : <input id="GanttNom" type="text"></div>
+    <div><label>Date début</label> : <input id="GanttDebut" type="date"></div>
+    <div><label>Date fin</label> : <input id="GanttFin" type="date"></div>
+    <div><label>Dépendances</label> : <input id="GanttDependances" type="text"></div>
+    <button onclick="Ajouter()">Ajouter</button>
+
+    <script src="frappe-gantt.min.js"></script>
+    <script>
+        async function Charger()
+        {
+            let data = await fetch("http://100.64.98.52:1880/gantt");
+            let donnees = await data.json();
+            var gantt = new Gantt("#gantt", donnees, {
+                on_date_change: async function(task, start, end) {
+                    var objet = { };
+                    objet.start = start;
+                    objet.end = end;
+
+                    await window.fetch("http://100.64.98.52:1880/gantt/" + task.id, {
+                        "method": "PUT",
+                        "headers": { 'content-type': 'application/json' },
+                        "body": JSON.stringify([objet])
+            });
+	            },
+            });
+        }
+        
+        async function Ajouter()
+        {
+            var objet = {}; /* nouvel objet vide */
+            objet.id = document.getElementById("GanttId").value;
+            objet.name = document.getElementById("GanttNom").value;
+            objet.start = document.getElementById("GanttDebut").value;
+            objet.end =  document.getElementById("GanttFin").value;
+            objet.progress = 10;
+            objet.dependencies = document.getElementById("GanttDependances").value;
+
+            var user = "superviseur";
+            var password = "motdepasse";
+            var encoded = btoa(user + ":" + password);
+
+
+            await window.fetch("http://100.64.98.52:1880/gantt", {
+                "method": "POST",
+                "headers": { 'content-type': 'application/json', 
+                            'Authorization': 'Basic ' + encoded },
+                "body": JSON.stringify([objet])
+            });
+
+            Charger();
+        }
+
+    </script>
+</body>
+</html>

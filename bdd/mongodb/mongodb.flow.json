@@ -1,0 +1,448 @@
+[
+    {
+        "id": "ec59e922.dbf308",
+        "type": "tab",
+        "label": "MongoDB",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2566b437.1950c4",
+        "type": "http response",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "de7c435c.ebb978",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "15c00d7f.dd3e9b"
+            ]
+        ]
+    },
+    {
+        "id": "15c00d7f.dd3e9b",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "insertMany",
+        "func": "msg.payload = [msg.payload];\nmsg.operation = \"insertMany\";\nmsg.collection = msg.req.params.collection;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "e2548e88.275ed8",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "5ce1ad9.cdf21d4"
+            ]
+        ]
+    },
+    {
+        "id": "5ce1ad9.cdf21d4",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "findAll",
+        "func": "msg.operation = \"find\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "88fd38bb.b64e7",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/all",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "5097a17f.68d968"
+            ]
+        ]
+    },
+    {
+        "id": "5097a17f.68d968",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "deleteMany",
+        "func": "msg.operation = \"deleteMany\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "ddaf40f0.7705e8",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/id/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "ef81c69f.515d3"
+            ]
+        ]
+    },
+    {
+        "id": "ef81c69f.515d3",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "findOne",
+        "func": "msg.operation = \"findOne\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [{ \"_id\": msg.req.params.id }];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 320,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "ce53e566.377bb8",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/id/:id",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "c526d6f1.92fe08"
+            ]
+        ]
+    },
+    {
+        "id": "c526d6f1.92fe08",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "deleteOne",
+        "func": "msg.operation = \"deleteOne\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [{ \"_id\": msg.req.params.id }];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "c29252d1.c7e17",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/count",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "65dd5b85.dbbd94"
+            ]
+        ]
+    },
+    {
+        "id": "65dd5b85.dbbd94",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "count",
+        "func": "msg.operation = \"count\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "48c4d82f.811648",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/find/:critere",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 720,
+        "wires": [
+            [
+                "5a61132e.46ac8c"
+            ]
+        ]
+    },
+    {
+        "id": "5a61132e.46ac8c",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "find",
+        "func": "msg.operation = \"find\";\nmsg.collection = msg.req.params.collection;\n\nvar re = new RegExp(msg.req.params.critere,\"i\");\n//i = case insensitive / non sensible aux majuscules\nmsg.payload = [{ \"prenom\": re }];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 720,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "90d193509785ad51",
+        "type": "mongodb4",
+        "z": "ec59e922.dbf308",
+        "clientNode": "57320a17fd85071f",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "name": "",
+        "x": 710,
+        "y": 360,
+        "wires": [
+            [
+                "2566b437.1950c4"
+            ]
+        ]
+    },
+    {
+        "id": "b7e131bdd77bf039",
+        "type": "catch",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "1aa3c60ed5259aef"
+            ]
+        ]
+    },
+    {
+        "id": "1aa3c60ed5259aef",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "function 1",
+        "func": "msg.payload = msg.error.message;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "2566b437.1950c4"
+            ]
+        ]
+    },
+    {
+        "id": "e4e6b65fda9b12e4",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/id/:id",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 560,
+        "wires": [
+            [
+                "3ab53ee48e019f55"
+            ]
+        ]
+    },
+    {
+        "id": "3ab53ee48e019f55",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "updateOne",
+        "func": "msg.operation = \"updateOne\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [{ \"_id\": msg.req.params.id}, { \"$set\": msg.payload }];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 560,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "ea3802549d34a273",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/date/:id",
+        "method": "patch",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            [
+                "71e97deb93f0c341"
+            ]
+        ]
+    },
+    {
+        "id": "71e97deb93f0c341",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "updateOne",
+        "func": "msg.operation = \"updateOne\";\nmsg.collection = msg.req.params.collection;\n\nvar values = {};\nObject.entries(msg.payload).forEach(entry => {\n    const [key, value] = entry;\n    values[key] = new Date(value);\n});\n\nmsg.payload = [{ \"_id\": msg.req.params.id }, \n{ \"$set\": values }];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 600,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "e14a056d44f6fe4a",
+        "type": "http in",
+        "z": "ec59e922.dbf308",
+        "name": "",
+        "url": "/:collection/naissance/:date",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 760,
+        "wires": [
+            [
+                "fbaf6c5ad9948dd4"
+            ]
+        ]
+    },
+    {
+        "id": "fbaf6c5ad9948dd4",
+        "type": "function",
+        "z": "ec59e922.dbf308",
+        "name": "find",
+        "func": "msg.operation = \"find\";\nmsg.collection = msg.req.params.collection;\nmsg.payload = [{ \"naissance\": { $gt: new Date(msg.req.params.date) } }];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 760,
+        "wires": [
+            [
+                "90d193509785ad51"
+            ]
+        ]
+    },
+    {
+        "id": "57320a17fd85071f",
+        "type": "mongodb4-client",
+        "name": "Raspberry",
+        "protocol": "mongodb",
+        "hostname": "localhost",
+        "port": "",
+        "dbName": "iutsd",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsInsecure": false,
+        "uri": "",
+        "advanced": "",
+        "uriTabActive": "tab-uri-simple"
+    }
+]

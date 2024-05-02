@@ -1,0 +1,18 @@
+POST http://100.64.98.52:1880/velo
+Content-Type: application/json
+
+[
+  {
+	"id": "9400501",
+	"modele": "eZesty",
+	"taille": "XL",
+	"dérailleur": "sreagle",
+    "electrique": true
+  }
+]
+
+### 
+GET http://100.64.98.52:1880/velo
+
+###
+DELETE http://100.64.98.52:1880/velo/id/9400500

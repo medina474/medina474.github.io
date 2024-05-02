@@ -1,0 +1,338 @@
+[
+    {
+        "id": "ab46e86bdf865594",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6f4a9b3df612541a",
+        "type": "mongodb4",
+        "z": "ab46e86bdf865594",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "test",
+        "operation": "",
+        "output": "toArray",
+        "name": "",
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "56518c3f2384c71a"
+            ]
+        ]
+    },
+    {
+        "id": "56518c3f2384c71a",
+        "type": "debug",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cb43cc07fb856d8e",
+        "type": "inject",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "operation",
+                "v": "insertOne",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name\": \"Albert\", \"age\": 88}]",
+        "payloadType": "json",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "6f4a9b3df612541a"
+            ]
+        ]
+    },
+    {
+        "id": "c0844c155098ebe3",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "629def8d748f167d"
+            ]
+        ]
+    },
+    {
+        "id": "94eb77fb41562cdb",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "86aa6f457c619ab3"
+            ]
+        ]
+    },
+    {
+        "id": "ca8531f0ea51a270",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production/:ordre",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            [
+                "e08e1560c51ad753"
+            ]
+        ]
+    },
+    {
+        "id": "b1caf3782ca88f9d",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production/:ordre",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 540,
+        "wires": [
+            [
+                "6c3b8969c9f61c24"
+            ]
+        ]
+    },
+    {
+        "id": "629def8d748f167d",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "insertOne",
+        "func": "msg.collection = \"production\"\nmsg.operation = \"insertMany\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "18775f787959c01f"
+            ]
+        ]
+    },
+    {
+        "id": "e954b641e9f14c15",
+        "type": "http response",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 990,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "18775f787959c01f",
+        "type": "mongodb4",
+        "z": "ab46e86bdf865594",
+        "clientNode": "ca34f39cae9568b4",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "name": "",
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "e954b641e9f14c15"
+            ]
+        ]
+    },
+    {
+        "id": "86aa6f457c619ab3",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "find",
+        "func": "msg.collection = \"production\"\nmsg.operation = \"find\"\nmsg.payload=[]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "18775f787959c01f"
+            ]
+        ]
+    },
+    {
+        "id": "e08e1560c51ad753",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "func": "msg.collection = \"production\"\nmsg.operation = \"deleteOne\"\nmsg.payload=[{ \"ordre\": msg.req.params.ordre }]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "18775f787959c01f"
+            ]
+        ]
+    },
+    {
+        "id": "6c3b8969c9f61c24",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "find",
+        "func": "msg.collection = \"production\"\nmsg.operation = \"find\"\nmsg.payload=[{ \"ordre\": msg.req.params.ordre }]\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "18775f787959c01f"
+            ]
+        ]
+    },
+    {
+        "id": "e571c1c91cbb99bd",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production/statut/:statut",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "3a4d190dfe677c20"
+            ]
+        ]
+    },
+    {
+        "id": "3a4d190dfe677c20",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "func": "msg.collection = \"production\"\nmsg.operation = \"find\"\nmsg.payload=[{\"statut\":parseInt(msg.req.params.statut)}]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "18775f787959c01f"
+            ]
+        ]
+    },
+    {
+        "id": "0dc22960f58a16f1",
+        "type": "function",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "func": "\nmsg.collection = \"production\"\nmsg.operation = \"update\"\nmsg.payload=[{ \"ordre\": msg.req.params.ordre },\n{\n  $set: {\n    statut: parseInt(msg.req.params.statut)\n    }\n}];\n     \nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 680,
+        "wires": [
+            [
+                "18775f787959c01f"
+            ]
+        ]
+    },
+    {
+        "id": "8d8141b862bb4811",
+        "type": "http in",
+        "z": "ab46e86bdf865594",
+        "name": "",
+        "url": "/production/change/:ordre/:statut",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 680,
+        "wires": [
+            [
+                "0dc22960f58a16f1"
+            ]
+        ]
+    },
+    {
+        "id": "ca34f39cae9568b4",
+        "type": "mongodb4-client",
+        "name": "MongoDB",
+        "protocol": "mongodb",
+        "hostname": "localhost",
+        "port": "",
+        "dbName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": false,
+        "tlsCAFile": "",
+        "tlsInsecure": false,
+        "uri": "",
+        "advanced": "",
+        "uriTabActive": "tab-uri-simple"
+    }
+]

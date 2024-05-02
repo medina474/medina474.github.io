@@ -1,0 +1,23 @@
+@hostname = 100.64.98.52
+@port = 1880
+@host = {{hostname}}:{{port}}
+
+### Ajouter 1 enregistrement
+POST http://{{host}}/fabrication
+content-type: application/json
+
+[
+{ "ordre": "OR1903", "article":	"62662-16-F", "qte":	2500, "statut":	3 }
+]
+
+### Lire tous les enregistrements
+GET http://{{host}}/fabrication
+
+### Lire un enregistrement
+GET http://{{host}}/fabrication/62514076c98a9e21adf2d499
+
+### Supprimer tous les enregistrements
+DELETE http://{{host}}/fabrication
+
+### Supprimer un enregistrement
+DELETE http://{{host}}/fabrication/625137bac98a9e21adf2d492

@@ -1,0 +1,66 @@
+### InsertMany
+POST http://100.64.98.43:1880/acteur
+Content-Type: application/json
+
+[{"prenom": "Sylvester"}]
+
+### InsertMany
+POST http://100.64.98.43:1880/acteur
+Content-Type: application/json
+
+[{"prenom": "Arnold"}, {"prenom": "Jean-Claude"}, {"prenom": "Patrick"}]
+
+
+### InsertMany
+POST http://100.64.98.43:1880/film
+Content-Type: application/json
+
+[{"titre": "Rambo", "annee": 1979, "duree": "1h50"}]
+
+### FindAll
+GET http://100.64.98.43:1880/acteur
+
+### FindAll
+GET http://100.64.98.43:1880/film
+
+### FindOne
+GET http://100.64.98.43:1880/acteur/id/6332a39d9133bb888f54d13a
+
+
+### Count
+GET http://100.64.98.43:1880/film/count
+
+
+### DeleteMany
+DELETE http://100.64.98.43:1880/film/all
+
+### Delete
+DELETE http://100.64.98.43:1880/acteur/id/6332a3ab9133bb888f54d13c
+
+
+### Find
+GET http://100.64.98.43:1880/acteur/find/patr
+
+
+
+### Put
+PUT http://100.64.98.43:1880/acteur/id/6332a39d9133bb888f54d13a
+Content-Type: application/json
+
+{ "nom": "Stallone", "naissance": "2022-07-13" }
+
+### Patch Date
+PATCH http://100.64.98.43:1880/acteur/date/6332a39d9133bb888f54d13a
+Content-Type: application/json
+
+{ "naissance": "1947-07-13" }
+
+### Patch Date
+PATCH http://100.64.98.43:1880/acteur/date/6332a3ab9133bb888f54d13d
+Content-Type: application/json
+
+{ "naissance": "1952-08-18", "décès": "2009-09-14" }
+
+
+### Find
+GET http://100.64.98.43:1880/acteur/naissance/1946-01-01
