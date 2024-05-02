@@ -1,7 +1,6 @@
 ---
-title: "Lecteur de code barre"
-date: 2023-01-18T21:47:24+01:00
-draft: false
+layout: page
+title: Lecteur de code barre
 ---
 
 Plusieurs (trop) librairies existent pour lire des codes barres

@@ -1,7 +1,5 @@
 ---
 title: "Autority"
-date: 2023-01-18T22:03:22+01:00
-draft: false
 ---
 
 

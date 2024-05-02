@@ -1,7 +1,5 @@
 ---
 title: "Webworker"
-date: 2023-01-18T21:49:59+01:00
-draft: false
 ---
 
 

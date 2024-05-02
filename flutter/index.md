@@ -1,7 +1,6 @@
 ---
-title: "Flutter"
-date: 2023-01-18T21:47:24+01:00
-draft: false
+layout: page
+title: Flutter
 ---
 
 Flutter est un **framework**, un ensemble d'outil pour développer des applications Web, Windows, Android et iOS à partir d'un socle commun.

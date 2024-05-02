@@ -1,7 +1,5 @@
 ---
 title: "Urlrewriting"
-date: 2023-01-18T21:55:04+01:00
-draft: false
 ---
 
 
