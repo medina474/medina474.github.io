@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <select id="Pays">
+    <option value="fr">France</option>
+    <option value="it">Italie</option>
+    <option value="be">Belgique</option>
+    <option value="lu">Luxembourg</option>
+    <option value="zz">Allemagne</option>
+    <option value="cccc">Suisse</option>
+  </select>
+  <button onclick="Charger2()">Charger</button>
+<div id="drapeau"></div>
+
+<p>
+<input type="text" id="quantite"><button onclick="Verifier()">Vérifier</button>
+<div id="reponse"></div>
+</p>
+
+<table>
+  <thead><th>Nom</th><th>Altitude</th><th>Longitude</th><th>Latitude</th></thead>
+  <tbody>
+    
+  </tbody>
+  <template id="ligne">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </template>
+</table>
+
+<script>
+  async function Charger3()
+  {
+    let data = await fetch("https://workshop.neotechweb.net/ws/skimap/1.0.0/stations.php?massif=2");
+    let datajson = await data.json();
+
+    datajson.forEach(elt => {
+      let ligne = document.getElementById("ligne");
+      var clone = document.importNode(ligne.content, true);
+      let colonnes = clone.querySelectorAll("td");
+      colonnes[0].innerText = elt.nom;
+      colonnes[1].innerText = elt.altitude_maxi;
+      colonnes[2].innerText = elt.lat;
+      colonnes[3].innerText = elt.lng;
+      document.querySelector("tbody").appendChild(clone);
+    });
+  }
+</script>
+
+
+<script>
+  /* fonction CheckImage va controller la présence d'une image */
+  /* Elle retourne une promesse (Promise) */
+  /* La Promesse prend 2 parètres : resolve et reject */
+  /* Ces les 2 paramètres sont des fonctions utilisées avec then (resolve) et catch(reject) */
+  
+  function checkImage (path) {
+    return new Promise((resolve, reject) => {
+        const img = new Image(); /* Objet Image Javascript */
+
+        /* Appel de la fonction dans le then à l'aide du param resolve() */
+        img.onload = () => resolve({path, status: 'ok'});
+        
+        /* Appel de la fonction dans le catch à l'aide du param reject() */
+        img.onerror = () => reject({path, status: 'error'});
+
+        img.src = path;
+    });
+  }
+
+
+
+
+
+
+
+  function Charger()
+  {
+    var code_pays = document.getElementById("Pays").value;
+    
+    checkImage(`https://workshop.neotechweb.net/ws/flags/64/${code_pays}.png`)
+    .then((reponse) => {   /* appel de resolve({path, status: 'ok'})*/
+      let image = document.createElement("img"); /* Objet image HTML */
+      image.src = reponse.path;
+      document.getElementById("drapeau").appendChild(image);
+    })
+    .catch((error) => { /* appel de reject({path, status: 'ok'})*/
+      document.getElementById("drapeau").innerText = "Erreur code inconnu";
+    })
+  }
+
+  async function  Charger2()
+  {
+    var code_pays = document.getElementById("Pays").value;
+    
+    try {
+      reponse = await checkImage(`https://workshop.neotechweb.net/ws/flags/64/${code_pays}.png`)
+      let image = document.createElement("img"); 
+      image.src = reponse.path;
+      document.getElementById("drapeau").appendChild(image);
+    }
+    catch(error) { /* <- reject */
+      document.getElementById("drapeau").innerText = "Erreur code inconnu";
+    }
+  }
+
+  /* Retourne une promesse */
+  function EstNombrePaire(nombre)
+  {
+     return new Promise((resolve, reject) => {
+         if (nombre%2 == 0) resolve(); else reject();
+     });
+  }
+
+  function EstMultiple10(nombre)
+  {
+     return new Promise((resolve, reject) => {
+         if (nombre%10 == 0) resolve(); else reject();
+     });
+  }
+
+  function Verifier()
+  {
+      let quantite = document.getElementById("quantite").value;
+
+      EstNombrePaire(quantite)
+        .then(() => EstMultiple10(quantite)) /* Je continue sur une nouvelle promesse */
+        .then(() => document.getElementById("reponse").innerText = "x10")
+        .catch(() => document.getElementById("reponse").innerText = "Faux")
+      /* Les promesses les une à la suite des autres */  
+      /* then fonction anonyme qui sera appelée QUAND resolve() sera executé */
+      /* catch fonction anonyme qui sera appelée QUAND reject() sera executé */ 
+      
+
+      /* Les promesses sont lancées en même temps si toutes sont résolues -> then
+         Si une est fausse -> catch
+      */ 
+      Promise.all([EstNombrePaire(quantite), EstMultiple10(quantite)])
+        .then(() => document.getElementById("reponse").innerText = "vrai")
+        .catch(() => document.getElementById("reponse").innerText = "Faux")
+      
+      /* Les promesses sont lancées en même temps si UNE est résolue -> then
+         Si toutes sont fausses -> catch
+      */ 
+      Promise.any([EstNombrePaire(quantite), EstMultiple10(quantite)])
+        .then(() => document.getElementById("reponse").innerText = "vrai")
+        .catch(() => document.getElementById("reponse").innerText = "Faux")
+  }
+
+  async function Verifier2()
+  {
+    let quantite = document.getElementById("quantite").value;
+    try {
+      resultat = await EstNombrePaire(quantite);
+      document.getElementById("reponse").innerText = "Vrai"
+    }
+    catch(error) { /* <- reject */
+      document.getElementById("reponse").innerText = "Faux"
+    }
+  }
+</script>
+
+
+</body>
+
+</html>

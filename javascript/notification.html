@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+	<title>Notification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/vendor/highlight.js/styles/default.css">
+	<script src="../js/vendor/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<script>
+
+function notifyMe() {
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+
+  // Let's check whether notification permissions have already been granted
+  else if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+    var notification = new Notification("Avertissement" ,{ 
+			body: "Au <strong>revoir</strong>",
+			icon: "Bell.png",
+			renotify: true,
+			vibrate: [200, 100, 200],
+			silent: false,
+			sound: "Bell.wav"
+		} );
+		
+	Notification.onclose = function() { console.log('e'); };
+	Notification.onshow = function() { console.log('e'); };
+  }
+
+  // Otherwise, we need to ask the user for permission
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        var notification = new Notification("Hi there!");
+      }
+    });
+  }
+
+  // At last, if the user has denied notifications, and you 
+  // want to be respectful there is no need to bother them any more.
+}
+
+</script>
+
+<button  onclick="notifyMe()">Ouvrir Fenêtre</button><br>
+<button onclick="notification.close()">Envoyer Message</button><br>
+<button onclick="fragment()">Fragment</button>
+
+</body>
+</html>

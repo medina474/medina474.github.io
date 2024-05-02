@@ -1,0 +1,65 @@
+.materiel {
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.materiel:not(.support) {
+  border: 1px solid #c7254e;
+  background-color: #f9f2f4;
+  color:#c7254e;
+}
+
+.materiel.support {
+  border-color: #25c63b;
+  color: #25c63b;
+  background-color: #f2f9f3;
+}
+
+.materiel:not(.support) .support {
+  display: none;
+}
+
+.materiel.support .support {
+  display: block;
+}
+
+.materiel.support>div:first-child::before {
+  content: 'API présente';
+}
+
+.materiel:not(.support)>div:first-child::before {
+  content: 'API absente';
+}
+
+a.button {
+  background-color: #5cb85c;
+  background-image: none;
+  border-radius: 0.33rem;
+  border: 1px solid #4cae4c;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-size:14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.42857143;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow:1px 1px 3px #00000070;
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
+}
+
+a.button:hover {
+  background-color: #449d44;
+  border-color: #398439;
+}

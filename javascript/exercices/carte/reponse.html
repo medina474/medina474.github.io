@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ski</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 12px;
+      box-sizing: border-box;
+      height: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <div id="macarte" style="width:100%; height:100%"></div>
+
+  <script>
+    var map = L.map('macarte').setView([47.0, 6.8], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    
+
+
+    async function getStations() {
+      
+      var markers = Array(); /* Tableau de marqueurs */
+
+      let data = await fetch("https://workshop.neotechweb.net/ws/skimap/1.0.0/stations.php?massif=2");
+      let datajson = await data.json();
+
+      datajson.filter(station => station.lng != null && station.lat != null)
+        .forEach(station => {
+          var marqueur = L.marker([station.lat, station.lng])
+                        .addTo(map)
+                        .bindPopup(station.nom)
+          markers.push(marqueur); /* Ajout du marqueur dans un tableau */
+        })
+
+      // limites des marqueurs
+      var limites = L.featureGroup(markers).getBounds();
+      // Recentrer la carte sur ces limites
+      map.fitBounds(limites);
+    }
+
+    getStations();
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/lib/highlight.js/default.css">
+    <script src="/assets/lib/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<h3>Location</h3>
+
+<pre><code class="javascript">window.location.href = <script>document.write(window.location.href);</script>
+window.location.host = <script>document.write(window.location.host);</script>
+window.location.hostname = <script>document.write(window.location.hostname);</script>
+window.location.origin = <script>document.write(window.location.origin);</script>
+window.location.pathname = <script>document.write(window.location.pathname);</script>
+window.location.port = <script>document.write(window.location.port);</script>
+window.location.protocol = <script>document.write(window.location.protocol);</script>
+window.location.hash = <script>document.write(window.location.hash);</script>
+window.location.search = <script>document.write(window.location.search);</script>
+</pre></code>
+
+<script>
+var url = new URL('javascript/location.html', 'https://workshop.neotechweb.net');
+
+document.write(url)
+
+</script>
+
+<h2>URLSearchParams</h2>
+<pre><code class="javascript">
+<script>
+
+    var searchParams = new URLSearchParams("");
+    searchParams.set("topic", "More webdev");
+    document.write(searchParams.toString())
+
+    url.searchParams = searchParams;
+    document.write(url.toString())
+
+
+    searchParams.has("topic") === true; // true
+    searchParams.get("topic") === "api"; // true
+    searchParams.getAll("topic"); // ["api"]
+    searchParams.get("foo") === null; // true
+    searchParams.append("topic", "webdev");
+    searchParams.toString(); // "q=URLUtils.searchParams&topic=api&topic=webdev"
+    searchParams.set("topic", "More webdev");
+    searchParams.toString(); // "q=URLUtils.searchParams&topic=More+webdev"
+    searchParams.delete("topic");
+    searchParams.toString(); // "q=URLUtils.searchParams"
+</script>
+</code></pre>
+</body>
+</html>

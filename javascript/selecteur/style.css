@@ -1,0 +1,9 @@
+rect { fill:none; stroke-width:1; stroke:black }
+circle { fill:none; stroke-width:1; stroke:black }
+polygon { fill:none; stroke-width:1; stroke:black }
+use { fill:none; stroke-width:1; stroke:black; }
+.occupe { fill:red; }
+.libre { fill: green; }
+.reglage { fill: blue; }
+.occupe.reglage { fill:violet; }
+.selection { stroke-width:3; stroke:orange; }

@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+	<title>Date</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/assets/lib/vendor/highlight.js/styles/default.css">
+	<script src="/assets/lib/highlight.js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+	body { 
+		margin: 0 6px 32px; 
+		font-family:sans-serif 
+	}
+	.materiel { 
+		padding: 1rem; 
+		border: 1px solid #c7254e;
+		background-color: #f9f2f4;
+		color:#c7254e;
+	}
+	.materiel.support {
+		border-color: #25c63b;
+		color: #25c63b;
+		background-color: #f2f9f3;
+	}
+    .materiel .non_support {
+		margin-top:9px;
+        margin-bottom:0;
+	}
+	.materiel .support {
+		display: none;
+	}
+	.materiel.support .support {
+		display: block;
+	}
+	.materiel.support .non_support {
+		display: none;
+	}
+	
+	a.button {
+		color: #fff;
+		background-color: #5cb85c;
+		font-size:14px;
+		display: block;
+		float: right;
+		padding: 0.5em 1em;
+		font-weight: 400;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		touch-action: manipulation;
+		cursor: pointer;
+		user-select: none;
+		background-image: none;
+		border: 1px solid #4cae4c;
+		border-radius: 0.33rem;
+		text-decoration: none;
+	}
+	
+	a.button:hover {
+		background-color: #449d44;
+		border-color: #398439;
+	}
+	</style>
+</head>
+<body>
+
+<h1>Date</h1>
+
+<script>
+    var date = new Date(Date.UTC(2018, 9-1, 27, 5, 9, 6));
+    var options = { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" };
+</script>
+
+
+<pre><code class="javascript">date.toLocaleDateString();</pre></code>
+<script>document.write(date.toLocaleDateString());</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" }));</script><br>
+
+
+Les propriétés suivantes décrivent les composants date-heure à utiliser pour le formattage de la sortie.  
+Les implémentations ont pour obligation de supporter au minimum les ensembles suivants :
+
+    weekday, year, month, day, hour, minute, second
+    weekday, year, month, day
+    year, month, day
+    year, month
+    month, day
+    hour, minute, second
+    hour, minute
+
+
+
+<hr>
+
+<h3>Jour de la semaine</h3>	
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ weekday: "long" });</pre></code>
+<div class="materiel" id="weekday_long">
+    <div>
+        { weekday: "long" } -> 
+        "<strong><script>document.write(date.toLocaleDateString("fr-FR", { weekday: "long" }));</script></strong>"<br>
+        <p class="non_support">non conforme, attendu <strong>jeudi</strong></p>
+    </div>
+</div>  
+
+   
+<pre><code class="javascript">date.toLocaleDateString(undefined, { weekday: "short" });</pre></code>
+<div class="materiel" id="weekday_short">
+    <div>
+        { weekday: "short" } -> 
+        "<strong><script>document.write(date.toLocaleDateString("fr-FR", { weekday: "short" }));</script></strong>"<br>
+        <p class="non_support">non conforme, attendu <strong>mer.</strong></p>
+    </div>
+</div>  
+    
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ weekday: "narrow" });</pre></code>
+<div class="materiel" id="weekday_narrow">
+    <div>
+        { weekday: "narrow" } -> 
+        "<strong><script>document.write(date.toLocaleDateString("fr-FR", { weekday: "narrow" }));</script></strong>"<br>
+        <p class="non_support">non conforme, attendu <strong>M</strong></p>
+    </div>
+</div>  
+
+<script>
+    if (date.toLocaleDateString("fr-FR", { weekday: "long" }) == "jeudi") 
+		document.getElementById("weekday_long").className += " support";
+
+    if (date.toLocaleDateString("fr-FR", { weekday: "short" }) == "jeu.") 
+		document.getElementById("weekday_short").className += " support";
+
+    if (date.toLocaleDateString("fr-FR", { weekday: "narrow" }) == "J") 
+		document.getElementById("weekday_narrow").className += " support";
+
+</script>   	
+  
+    
+    
+<hr>
+
+<h3>Jour</h3>
+
+<pre><code class="javascript">date.toLocaleDateString("fr-FR",{ day: "2-digit" });</pre></code>
+<script>document.write(date.toLocaleDateString("fr-FR",{ day: "2-digit" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString("fr-FR", { day: "numeric" });</pre></code>
+<script>document.write(date.toLocaleDateString("fr-FR", { day: "numeric" }));</script><br>
+
+<hr>
+
+<h3>Mois</h3>
+ 
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "narrow" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ month: "narrow" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined, { month: "short" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined, { month: "short" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "long" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ month: "long" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "2-digit" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ month: "2-digit" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined, { month: "numeric" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined, { month: "numeric" }));</script><br>
+
+<hr>
+
+<h3>Année</h3>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ year: "2-digit" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ year: "2-digit" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined, { year: "numeric" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined, { year: "numeric" }));</script><br>
+
+<hr>
+
+<h3>Ère</h3>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ era: "narrow" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ era: "narrow" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined, { era: "short" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined, { era: "short" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ era: "long" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ era: "long" }));</script><br>
+
+<hr>
+
+<h3>Heure</h3>
+
+
+<pre><code class="javascript">date.toLocaleTimeString("fr",{ hour: "2-digit" });</pre></code>
+<script>document.write(date.toLocaleTimeString("fr-FR", {hour: '2-digit' }));</script><br>
+
+<pre><code class="javascript">date.toLocaleTimeString("fr", { hour: "numeric" });</pre></code>
+<script>document.write(date.toLocaleTimeString("fr-FR", { hour: "numeric" }));</script><br>
+
+<hr>
+
+<h3>Minute</h3>
+
+<pre><code class="javascript">date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "2-digit" });</pre></code>
+<script>document.write(date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "2-digit" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric" });</pre></code>
+<script>document.write(date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric" }));</script><br>
+
+<hr>
+
+<h3>Seconde</h3>
+
+<pre><code class="javascript">date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "numeric", second: "2-digit" });</pre></code>
+<script>document.write(date.toLocaleTimeString(undefined,{ second: "2-digit" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric", second: "numeric" });</pre></code>
+<script>document.write(date.toLocaleTimeString(undefined, { second: "numeric" }));</script><br>
+
+<hr>
+
+<h3>timeZoneName</h3>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ timeZoneName: "short" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined,{ timeZoneName: "short" }));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString(undefined, { timeZoneName: "long" });</pre></code>
+<script>document.write(date.toLocaleDateString(undefined, { timeZoneName: "long" }));</script><br>
+
+<hr> 
+
+
+<pre><code class="javascript">date.toLocaleDateString("en-US");</pre></code>
+<script>document.write(date.toLocaleDateString("en-US", options));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString("en-GB");</pre></code>
+<script>document.write(date.toLocaleDateString("en-GB", options));</script><br>
+
+<pre><code class="javascript">date.toLocaleDateString("en-AU");</pre></code>
+<script>document.write(date.toLocaleDateString("en-AU", options));</script><br>
+
+<hr>
+
+<pre><code class="javascript">date.toLocaleDateString("ja-JP");</pre></code>
+<script>document.write(date.toLocaleDateString("ja-JP", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
+
+<script>document.write(date.toLocaleDateString("ar-SA", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
+
+<script>document.write(date.toLocaleDateString("hi-IN", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
+
+
+<h2>Calendrier</h2>
+
+<pre><code class="javascript">date.toLocaleDateString("ja-JP-u-ca-japanese");</pre></code>
+<script>document.write(date.toLocaleDateString("ja-JP-u-ca-japanese", { era: "long", weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
+Année (年) 28 de l'ère Heisei (平成), mois 9 (月), jour 7 (日), mercredi (水曜日)
+
+ 
+<h3>Calendriers</h3>
+
+ca-
+    Calendrier. Les valeurs possibles incluent :
+
+   <p>
+buddhist <script>document.write(date.toLocaleDateString("fr-FR-u-ca-buddhist", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+chinese <script>document.write(date.toLocaleDateString("fr-FR-u-ca-chinese", { year: "numeric", month: "long", day: "numeric" }));</script><br>
+coptic <script>document.write(date.toLocaleDateString("fr-FR-u-ca-coptic", { year: "numeric", month: "long", day: "numeric" }));</script><br>
+ethioaa <script>document.write(date.toLocaleDateString("fr-FR-u-ca-ethioaa", { year: "numeric", month: "long", day: "numeric" }));</script><br>
+ethiopic <script>document.write(date.toLocaleDateString("fr-FR-u-ca-ethiopic", { year: "numeric", month: "long", day: "numeric" }));</script><br>
+gregory <script>document.write(date.toLocaleDateString("fr-FR-u-ca-gregory", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+hebrew <script>document.write(date.toLocaleDateString("fr-FR-u-ca-hebrew", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+indian <script>document.write(date.toLocaleDateString("fr-FR-u-ca-indian", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+islamic <script>document.write(date.toLocaleDateString("fr-FR-u-ca-islamic", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+islamicc <script>document.write(date.toLocaleDateString("fr-FR-u-ca-islamicc", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+iso8601 <script>document.write(date.toLocaleDateString("fr-FR-u-ca-iso8601", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+japanese <script>document.write(date.toLocaleDateString("fr-FR-u-ca-japanese", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+persian <script>document.write(date.toLocaleDateString("fr-FR-u-ca-persian", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+roc <script>document.write(date.toLocaleDateString("fr-FR-u-ca-roc", { era: "long", year: "numeric", month: "long", day: "numeric" }));</script><br>
+</p>
+
+<hr>
+
+<h3>Système de numérotation</h3>
+nu
+    . Les valeurs possibles incluent : 
+	
+<p>
+arab <script>document.write(date.toLocaleDateString("fr-FR-u-nu-arab", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+arabext <script>document.write(date.toLocaleDateString("fr-FR-u-nu-arabext", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+bali <script>document.write(date.toLocaleDateString("fr-FR-u-nu-bali", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+beng <script>document.write(date.toLocaleDateString("fr-FR-u-nu-beng", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+deva <script>document.write(date.toLocaleDateString("fr-FR-u-nu-deva", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+fullwide <script>document.write(date.toLocaleDateString("fr-FR-u-nu-fullwide", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+gujr <script>document.write(date.toLocaleDateString("fr-FR-u-nu-gujr", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+guru <script>document.write(date.toLocaleDateString("fr-FR-u-nu-guru", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+hanidec <script>document.write(date.toLocaleDateString("fr-FR-u-nu-hanidec", {  year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+khmr <script>document.write(date.toLocaleDateString("fr-FR-u-nu-khmr", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+knda <script>document.write(date.toLocaleDateString("fr-FR-u-nu-knda", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+laoo <script>document.write(date.toLocaleDateString("fr-FR-u-nu-laoo", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+latn <script>document.write(date.toLocaleDateString("fr-FR-u-nu-latn", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+limb <script>document.write(date.toLocaleDateString("fr-FR-u-nu-limb", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+mlym <script>document.write(date.toLocaleDateString("fr-FR-u-nu-mlym", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+mong <script>document.write(date.toLocaleDateString("fr-FR-u-nu-mong", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+mymr <script>document.write(date.toLocaleDateString("fr-FR-u-nu-mymr", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+orya <script>document.write(date.toLocaleDateString("fr-FR-u-nu-orya", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+tamldec <script>document.write(date.toLocaleDateString("fr-FR-u-nu-tamldec", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+telu <script>document.write(date.toLocaleDateString("fr-FR-u-nu-telu", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+thai <script>document.write(date.toLocaleDateString("fr-FR-u-nu-thai", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+tibt <script>document.write(date.toLocaleDateString("fr-FR-u-nu-tibt", { year: "numeric", month: "numeric", day: "numeric" }));</script><br>
+</p>
+
+<hr>
+
+<h3>Système horaire</h3>
+Le type de cycle horaire à utiliser. Les valeurs possibles sont "h11", "h12", "h23", "h24".
+
+<script>document.write(date.toLocaleDateString("de-CG-u-co-phonebk", { weekday: 'long', year: "numeric", month: "long", day: "numeric" }));</script><br>
+
+<script>document.write(date.toLocaleDateString("ja-JP-u-ca-japanese-nu-hanidec", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
+
+<script>document.write(date.toLocaleDateString("th-u-ca-buddhist-nu-thai", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
+
+
+
+de-DE-u-co-phonebk" : On utilise la variante allemande pour l'annuaire qui décompose les lettres accentuées par un umlaut en une paire de caractères : ä → ae, ö → oe, ü → ue.
+"th-TH-u-nu-thai" : On utilise les chiffres Thai (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) pour le formatage des nombres.
+"ja-JP-u-ca-japanese" : On utilise le calendrier japonais pour représenter les dates et les heures, 2013 est donc exp
+
+
+
+ 
+
+
+ 
+ 
+ var bucks = 12,
+    props = {
+        style: "currency", 
+        currency: "USD"
+    };
+
+bucks.toLocaleString("en", props);
+//returns "$12.00"
+
+//Represented as Australian dollars 
+props.currency = "AUD";
+bucks.toLocaleString("en", props);
+//"AU$12.00"
+
+//Represented as Great British Pounds
+props.currency = "GBP";
+bucks.toLocaleString("en", props);
+
+https://marcoscaceres.github.io/jsi18n/#advanced-langtags
+ 
+http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry 
+ 
+<a href="relative-time.html">Relative Time Format</a>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <style>
+    .event {
+      width: 1in;
+      height: 1in;
+      border: 1px solid dimgray;
+      margin: 10px 0;
+      user-select: none;
+    }
+
+    .click,
+    .dblclick {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="event click">click</div>
+  <div class="event dblclick">dblclick</div>
+  <div class="event click dblclick">click<br>dblclick</div>
+  <script>
+    (function () {
+      document.querySelectorAll(".event.click").forEach(elt => elt.addEventListener("click", function (evt) {
+        console.log(evt.type);
+        evt.preventDefault();
+      }));
+
+      document.querySelectorAll(".event.dblclick").forEach(elt => elt.addEventListener("dblclick", function (evt) {
+        console.log(evt.type);
+        evt.preventDefault();
+      }));
+    })();
+  </script>
+</body>
+
+</html>

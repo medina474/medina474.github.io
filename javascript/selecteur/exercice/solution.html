@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+
+    rect {
+      fill: none;
+      stroke-width: 1;
+      stroke: black
+    }
+
+    circle {
+      fill: none;
+      stroke-width: 1;
+      stroke: black
+    }
+
+
+    text {
+      text-anchor: middle;
+      font-size: 10px;
+    }
+
+    .reglage {
+      fill: blue;
+    }
+
+    .occupe.reglage {
+      fill: violet;
+    }
+
+    .selection {
+      stroke-width: 3;
+      stroke: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 340 220">
+    <defs>
+      <style>
+        :root { --primary-color: none; }
+        use { fill: none; }
+        .occupe { fill: red; }
+        .libre { fill: green; }
+        text { font-size: 6px; text-anchor: middle; font-family: 'Arial' }
+      </style>
+
+      <symbol id="hexagone" width="30" height="30" viewBox="0 0 30 30">
+        <polygon points="30,15 22.5,2 7.5,2 0,15 7.5,28 22.5,28 " stroke-width="1" stroke="black"/>
+      </symbol>
+    </defs>
+
+    <g class="IlotA" transform="translate(0 0)">
+      <use href="#hexagone" id="machine34324" class="machine injection" data-fabricant="Soma" />
+      <use href="#hexagone" id="machine65415" class="machine injection" data-fabricant="Soma"   x="22.5" y="13" />
+      <use href="#hexagone" id="machine46541" class="machine moulage"   data-fabricant="Soma"   x="45" y="0" />
+      <use href="#hexagone" id="machine16167" class="machine moulage"   data-fabricant="Billon" x="67.5" y="13" />
+      <use href="#hexagone" id="machine41664" class="machine moulage"   data-fabricant="Billon" x="90" y="0" />
+      <use href="#hexagone"  id="machine95844" class="machine moulage"        data-fabricant="Soma" x="112.5" y="13" />
+      <use href="#hexagone"  id="machine32157" class="machine injection"        data-fabricant="Billon" x="0" y="26" />
+      <use href="#hexagone"  id="machine85413" class="machine injection"        data-fabricant="Billon" x="22.5" y="39" />
+      <use href="#hexagone"  id="machine20125" class="machine injection indisponible" data-fabricant="Soma" x="45" y="26" />
+      <use href="#hexagone"  id="machine98514" class="machine injection"        data-fabricant="Billon" x="67.5" y="39" />
+      <use href="#hexagone"  id="machine98437" class="machine moulage"        data-fabricant="Billon" x="90" y="26" />
+      <use href="#hexagone"  id="machine83347"        class="machine moulage indisponible" data-fabricant="Billon" x="112.5" y="39" />
+      <use href="#hexagone"  id="machine40640" class="machine injection"        data-fabricant="Soma" x="0" y="52" />
+      <use href="#hexagone"  id="machine95455"        class="machine injection indisponible" data-fabricant="Soma" x="22.5" y="65" />
+      <use href="#hexagone"  id="machine91546" class="machine injection"        data-fabricant="Soma" x="45" y="52" />
+      <use href="#hexagone"  id="machine98215" class="machine injection"        data-fabricant="Soma" x="67.5" y="65" />
+      <use href="#hexagone"  id="machine12456" class="machine injection"        data-fabricant="Soma" x="90" y="52" />
+      <use href="#hexagone"  id="machine65144" class="machine injection"        data-fabricant="Soma" x="112.5" y="65" />
+      
+      <text x="15" y="18">0</text>
+      <text x="60" y="18">0</text>
+      <text x="105" y="18">2, 3</text>
+      <text x="37.5" y="31">0</text>
+      <text x="82.5" y="31">0</text>
+      <text x="127.5" y="31">0</text>
+      <text x="15" y="44">0</text>
+      <text x="60" y="44">0</text>
+      <text x="105" y="44">0</text>
+      <text x="37.5" y="57">0</text>
+      <text x="82.5" y="57">0</text>
+      <text x="127.5" y="57">0</text>
+      <text x="15" y="70">0</text>
+      <text x="60" y="70">0</text>
+      <text x="105" y="70">0</text>
+      <text x="37.5" y="83">0</text>
+      <text x="82.5" y="83">0</text>
+      <text x="127.5" y="83">0</text>
+    </g>
+
+    <g class="IlotB" transform="translate(139 0)">
+      <use href="#hexagone" class="machine injection" data-fabricant="Soma" />
+      <use href="#hexagone" class="machine injection" data-fabricant="Soma"    transform="translate(22.5 13)" />
+      <use href="#hexagone" class="machine moulage" data-fabricant="Soma"      transform="translate(45 0)" />
+      <use href="#hexagone" class="machine finition" data-fabricant="Billon"   transform="translate(67.5 13)" />
+      <use href="#hexagone" class="machine controle" data-fabricant="Soma"     transform="translate(90 0)" />
+      <use href="#hexagone" class="machine assemblage" data-fabricant="Billon" transform="translate(112.5 13)" />
+      <use href="#hexagone" class="machine injection" data-fabricant="Billon"  transform="translate(0 26)" />
+      <use href="#hexagone" class="stock" data-quantite="50"       transform="translate(22.5 39)" />
+      <use href="#hexagone" class="stock indisponible" data-quantite="42"   transform="translate(45 26)" />
+      <use href="#hexagone" class="stock" data-quantite="30"  data-articles="marteau vis tournevis" transform="translate(67.5 39)" />
+      <use href="#hexagone" class="stock" data-quantite="24"  data-articles="marteau ecrou tournevis" transform="translate(90 26)" />
+      <use href="#hexagone" class="stock" data-quantite="18"  data-articles="marteau vis tournevis" transform="translate(112.5 39)" />
+      <use href="#hexagone" class="stock" data-quantite="27"  data-articles="visere vis tournevis" transform="translate(0 52)" />
+      <use href="#hexagone" class="stock indisponible"        data-articles="visiere tournevis" data-quantite="25" transform="translate(22.5 65)" />
+      <use href="#hexagone" class="stock" data-quantite="11"  data-articles="marteau cle" transform="translate(45 52)" />
+      <use href="#hexagone" class="stock" data-quantite="30"  data-articles="vis"       transform="translate(67.5 65)" />
+      <use href="#hexagone" class="stock" data-quantite="12"  data-articles="tournevis" transform="translate(90 52)" />
+      <use href="#hexagone" class="stock" data-quantite="38"  data-articles="marteau"   transform="translate(112.5 65)" />
+
+      <text x="15" y="18">0</text>
+      <text x="60" y="18">0</text>
+      <text x="105" y="18">0</text>
+      <text x="37.5" y="31">0</text>
+      <text x="82.5" y="31">0</text>
+      <text x="127.5" y="31">0</text>
+      <text x="15" y="44">0</text>
+      <text x="60" y="44">0</text>
+      <text x="105" y="44">0</text>
+      <text x="37.5" y="57">0</text>
+      <text x="82.5" y="57">0</text>
+      <text x="127.5" y="57">0</text>
+      <text x="15" y="70">0</text>
+      <text x="60" y="70">0</text>
+      <text x="105" y="70">0</text>
+      <text x="37.5" y="83">0</text>
+      <text x="82.5" y="83">0</text>
+      <text x="127.5" y="83">0</text>
+    </g>
+
+    <g class="IlotC" transform="translate(0 82)">
+      <use href="#hexagone" class="machine injection"        transform="translate(22.5 13)" />
+      <use href="#hexagone" class="machine moulage"          transform="translate(45 0)" />
+      <use href="#hexagone" class="machine finition"         transform="translate(67.5 13)" />
+      <g>
+        <use href="#hexagone" class="machine assemblage"     transform="translate(112.5 13)" />
+        <use href="#hexagone" class="machine moulage" />
+        <g>
+          <use href="#hexagone" class="machine controle"
+            transform="translate(90 0)" />
+        </g>
+        <use href="#hexagone" class="machine injection indisponible"
+          transform="translate(0 26)" />
+        <use href="#hexagone" class="stock" data-quantite="24"       transform="translate(90 26)" />
+        <g>
+          <use href="#hexagone" class="stock" data-quantite="18"     transform="translate(112.5 39)" />
+          <use href="#hexagone" class="stock" data-quantite="27"     transform="translate(0 52)" />
+          <g>
+            <use href="#hexagone" class="stock" data-quantite="30"   transform="translate(67.5 65)" />
+            <use href="#hexagone" class="stock" data-quantite="12"   transform="translate(90 52)" />
+          </g>
+          <use href="#hexagone" class="stock" data-quantite="38"     transform="translate(112.5 65)" />
+        </g>
+        <!-- <g/> -->
+      </g>
+      <use href="#hexagone" class="stock" data-quantite="50"        transform="translate(22.5 39)" />
+      <use href="#hexagone" class="stock" data-quantite="30"        transform="translate(67.5 39)" />
+      <use href="#hexagone" class="stock indisponible" data-quantite="25"        transform="translate(22.5 65)" />
+      <use href="#hexagone" class="stock" data-quantite="11"        transform="translate(45 52)" />
+      <g transform="translate(0 78)" /><!-- vide -->
+      <text x="15" y="18">0</text>
+      <text x="60" y="18">0</text>
+      <text x="105" y="18">0</text>
+      <text x="37.5" y="31">0</text>
+      <text x="82.5" y="31">0</text>
+      <text x="127.5" y="31">0</text>
+      <text x="15" y="44">0</text>
+      <text x="60" y="44">0</text>
+      <text x="105" y="44">0</text>
+      <text x="37.5" y="57">0</text>
+      <text x="82.5" y="57">0</text>
+      <text x="127.5" y="57">0</text>
+      <text x="15" y="70">0</text>
+      <text x="60" y="70">0</text>
+      <text x="105" y="70">0</text>
+      <text x="37.5" y="83">0</text>
+      <text x="82.5" y="83">0</text>
+      <text x="127.5" y="83">0</text>
+      <!-- dernier -->
+      <use href="#hexagone" class="stock indisponible" data-quantite="42"        transform="translate(45 26)" />
+    </g>
+
+    <g class="IlotD" transform="translate(139 82)">
+      <g class="ZoneA">
+        <use href="#hexagone" class="stock injection" data-quantite="50" />
+        
+        <use href="#hexagone" class="stock injection" data-quantite="42"   x="22.5" y="13" />
+        
+        <use href="#hexagone" class="stock moulage" data-quantite="35"     x="45" y="0" />
+        <use href="#hexagone" class="stock moulage indisponible"           data-quantite="24" x="22.5" y="39" />
+        <use href="#hexagone" class="stock finition indisponible"          data-quantite="41" x="67.5" y="13" />
+        <use href="#hexagone" class="stock finition" data-quantite="35"    x="0" y="26" />
+      </g>
+      <g class="ZoneB">
+        <use href="#hexagone" class="stock injection" data-quantite="37"   data-inventaire="2020-08-11" x="112.5" y="13" />
+        <use href="#hexagone" class="stock injection" data-quantite="42"   data-inventaire="2020-08-10" x="90" y="0" />
+        <use href="#hexagone" class="stock moulage indisponible"           data-inventaire="2019-08-13" data-quantite="42" x="45" y="26" />
+        <use href="#hexagone" class="stock moulage" data-quantite="31"     data-inventaire="2020-07-13" x="67.5" y="39" />
+        <use href="#hexagone" class="stock finition indisponible"          data-inventaire="2019-07-13" data-quantite="25" x="22.5" y="65" />
+        <use href="#hexagone" class="stock finition" data-quantite="30"    data-inventaire="2020-07-13" x="67.5" y="65" />
+      </g>
+      <g class="ZoneC">
+        <use href="#hexagone" class="stock injection" data-quantite="12"  data-inventaire="2020-08-13" x="90" y="52" />
+        <use href="#hexagone" class="stock injection indisponible"        data-quantite="18" data-inventaire="2020-05-13" x="112.5" y="39" />
+        <use href="#hexagone" class="stock moulage indisponible"          data-quantite="24" x="90" y="26" />
+        <use href="#hexagone" class="stock moulage" data-quantite="11"    data-inventaire="2020-07-20" x="45" y="52" />
+        <use href="#hexagone" class="stock finition" data-quantite="27"   data-inventaire="2019-06-11" x="0" y="52" />
+        <use href="#hexagone" class="stock finition" data-quantite="38"   x="112.5" y="65" />
+        <text x="15" y="18">14</text>
+        <text x="60" y="18">0</text>
+        <text x="105" y="18">0</text>
+        <text x="37.5" y="31">0</text>
+        <text x="82.5" y="31">0</text>
+        <text x="127.5" y="31">0</text>
+        <text x="15" y="44">0</text>
+        <text x="60" y="44">4 10 11</text>
+        <text x="105" y="44">12</text>
+        <text x="37.5" y="57">0</text>
+        <text x="82.5" y="57">11</text>
+        <text x="127.5" y="57">0</text>
+        <text x="15" y="70">10</text>
+        <text x="60" y="70">0</text>
+        <text x="105" y="70">0</text>
+        <text x="37.5" y="83">4 10</text>
+        <text x="82.5" y="83">0</text>
+        <text x="127.5" y="83"></text>
+      </g>
+    </g>
+    <g transform="translate(290 0)">
+      <rect x="10" y="10" width=45 height="15" />
+      <rect x="10" y="30" width=35 height="15" />
+      <rect x="10" y="50" width=30 height="15" />
+      <rect x="10" y="70" width=35 height="15" />
+      <rect x="10" y="90" width=40 height="15" />
+      <circle cx="20" cy="120" r="10"></circle>
+      <circle cx="45" cy="120" r="10"></circle>
+      <circle cx="20" cy="145" r="10"></circle>
+      <circle cx="45" cy="145" r="10"></circle>
+      <polygon points="10 165 30 185 10 205"></polygon>
+    </g>
+
+  </svg>
+<p>
+  <select id="question">
+    <option value="q1a">à tous les éléments de type rect.</option>
+    <option value="q1b">à tous les éléments de type rect.</option>
+    <option value="q1c">à tous les éléments de type rect.</option>
+    <option value="q2a">à tous les éléments de type rect.</option>
+    <option value="q2b">q2</option>
+    <option value="q3">q3</option>
+    <option value="q4a">q4</option>
+    <option value="q4b">q4</option>
+    <option value="q5">q5</option>
+    <option value="q6">q6</option>
+    <option value="q7">q7</option>
+    <option value="q8">q8</option>
+    <option value="q9">q9</option>
+    <option value="q10">q10</option>
+    <option value="q11">q11</option>
+    <option value="q12">q12</option>
+    <option value="q13">q13</option>
+    <option value="q14">14. premier</option>
+    <option value="q15">15. dernier</option>
+    <option value="q16">q16</option>
+    <option value="q17">q17</option>
+    <option value="q18">q18</option>
+    <option value="q19">q19</option>
+    <option value="q20">q20</option>
+    <option value="q21">q21</option>
+    <option value="q22">q22</option>
+    <option value="q23">q23</option>
+    <option value="q24">q24</option>
+    </select> 
+    <button onclick="appliquer()">Appliquer</button>
+  </p>
+    <script>
+    function appliquer()
+    {
+      let valueselect = document.getElementById("question").value
+      let ligne = fonctions.find(f => f.code == valueselect);
+      
+      // Selection de tous les éléments avec class="occupe"
+      document.querySelectorAll(".occupe").forEach(elt => elt.classList.remove("occupe"))
+        
+      ligne.fonction();
+    }
+    
+    fonctions = [
+      {code:"q1a",fonction: function() { 
+        const list = document.getElementsByTagName("rect");
+        for (elt of list)
+        {
+          elt.classList.add("occupe");
+        }
+        }
+      },
+      {code:"q1b",fonction: function() { 
+        new Array(...document.getElementsByTagName("rect")).forEach(elt =>
+                                     elt.classList.add("occupe"))
+        }
+      },
+      {code:"q1c",fonction: function() { document.querySelectorAll("rect").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q2a",fonction: function() { document.getElementById("machine41664").classList.add("occupe") } },
+      {code:"q2b",fonction: function() { document.querySelector("#machine41664").classList.add("occupe") } },
+      {code:"q3",fonction: function() { document.querySelectorAll("#machine41664,#machine20125").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q4a",fonction: function() { new Array(...document.getElementsByClassName("indisponible")).forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q4b",fonction: function() { document.querySelectorAll(".indisponible").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q5",fonction: function() { document.querySelectorAll("[data-inventaire]").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q6",fonction: function() { document.querySelectorAll("rect[width='35']").forEach(elt => elt.classList.add("occupe"))  }
+      },
+      {code:"q7",fonction: function() { 
+        document.querySelectorAll(".machine[data-fabricant='billon'i]").forEach(elt => elt.classList.add("occupe"))
+        }
+      },
+      {code:"q8",fonction: function() { document.querySelectorAll(".stock[data-articles~='vis'").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q9",fonction: function() { document.querySelectorAll(".stock[data-articles*='vis'").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q10",fonction: function() { document.querySelectorAll(".stock[data-inventaire^='2019'").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q11",fonction: function() { document.querySelectorAll(".ZoneB .moulage").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q12",fonction: function() { document.querySelectorAll(".ZoneC .moulage.indisponible").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q13",fonction: function() { document.querySelectorAll(".stock:not([data-inventaire])").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q14",fonction: function() { document.querySelectorAll(".ZoneA :first-child").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q15",fonction: function() { document.querySelectorAll(".ZoneB :last-child").forEach(elt => elt.classList.add("occupe")) }  },
+      {code:"q16",fonction: function() { document.querySelectorAll(".IlotC :not(g)").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q17",fonction: function() { document.querySelectorAll(".IlotC> *").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q18",fonction: function() { document.querySelectorAll(".machine.injection+.stock").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q19",fonction: function() { document.querySelectorAll(".machine.injection.indisponible")
+                                          .forEach(elt => elt.parentElement.querySelectorAll(".machine.moulage")
+                                          .forEach(elt => elt.classList.add("occupe")))
+                                        }
+      },
+      {code:"q20",fonction: function() { document.querySelectorAll("g .machine:only-child").forEach(elt => elt.classList.add("occupe")) } },
+      {code:"q21",fonction: function() { document.querySelectorAll(".IlotA .machine:not(.indisponible)").forEach(elt => elt.classList.add("occupe")) } },
+      
+      {code:"q22",fonction: function() { [...document.querySelectorAll(".stock[data-quantite]")]
+                                          .filter(elt => elt.dataset.quantite > 30)
+                                          .forEach(elt => elt.classList.add("occupe")) } },
+      
+      
+      
+      {code:"q22",fonction: function() { [...document.querySelectorAll(".stock")]
+                                          .filter(elt => elt.dataset.quantite > 30)
+                                          .forEach(elt => elt.classList.add("occupe")) } },
+      
+      {code:"q23",fonction: function() { [...document.querySelectorAll("[data-inventaire]")]
+                       .filter(elt => new Date(elt.dataset.inventaire) > new Date('2020-08-12'))  
+                       .forEach(elt => elt.classList.add("occupe")); } },
+
+
+
+      {code:"q24",fonction: function() { 
+        var groupevide = document.querySelector(".IlotC g:empty");
+        var elementsmoulage = document.querySelectorAll(".IlotC .moulage");
+
+        elementsmoulage.forEach(elt => groupevide.appendChild(elt));
+      } },
+
+      {code:"q25",fonction: function() { 
+        var groupevide = document.querySelector(".IlotC g:empty");
+
+        var cercle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        cercle.setAttribute("r", "15");
+        cercle.setAttribute("cx", "7.5");
+        cercle.setAttribute("cy", "7.5");
+        cercle.setAttribute("fill", "blue");
+
+        groupevide.appendChild(cercle);
+      } },
+    ]
+</script>
+
+</body>
+</html>

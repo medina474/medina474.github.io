@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Camera</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	#interactive,
+    #interactive canvas,
+    #interactive video {
+        max-width: 100%;
+        width: 100%; }
+
+    #interactive .drawingBuffer {
+        left: 0;
+        position: absolute;
+        top: 0; }
+
+    </style>
+</head>
+<body>
+    <div id="interactive" class="viewport"></div>
+    <div id="code"></div>
+    <div id="format"></div>
+https://a.kabachnik.info/a-javascript-barcode-reader-with-bootstrap-3-and-quaggajs.html
+<img />
+<script src="quagga.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    Quagga.init({
+        inputStream : {
+        name : "Live",
+        type : "LiveStream"
+        },
+        numOfWorkers: navigator.hardwareConcurrency||1,
+        locate: true,
+        debug: false,
+        frequency: 20,
+        decoder : 
+        {
+            readers : [ "ean_reader" ],
+            multiple:false
+        }
+    }, function(err) {
+        if (err) {
+            console.log(err);
+            return
+        }
+        console.log("Initialization finished. Ready to start");
+        
+        /*
+        Quagga.onDetected(function(result) {
+            window.navigator.vibrate(125);
+            document.getElementById("code").innerText = result.codeResult.code;
+        });
+        */
+        Quagga.onProcessed(function(result) {
+            
+            if (result) 
+            {
+                var drawingCtx = Quagga.canvas.ctx.overlay,
+                    drawingCanvas = Quagga.canvas.dom.overlay;
+
+                if (result.boxes) {
+                    drawingCtx.clearRect(0, 0, 
+                        parseInt(drawingCanvas.getAttribute("width")), 
+                        parseInt(drawingCanvas.getAttribute("height")));
+                    result.boxes.filter(box => box !== result.box)
+                        .forEach(box => Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, 
+                                drawingCtx, {color: "green", lineWidth: 2})
+                        );
+                }
+ 
+                if (result.box) {
+                    Quagga.ImageDebug.drawPath(result.box, {x: 0, y: 1}, drawingCtx, {color: "#00F", lineWidth: 2});
+                }
+ 
+                if (result.codeResult && result.codeResult.code) 
+                {
+                    Quagga.ImageDebug.drawPath(result.line, {x: 'x', y: 'y'}, 
+                        drawingCtx, {color: 'red', lineWidth: 3});
+                    document.getElementById("code").innerText = result.codeResult.code;
+
+                    var checkSum = result.codeResult.code.split('').reduce((acc, value, i) =>
+                        i % 2 == 0 ? acc + parseInt(value) : acc + 3 * parseInt(value), 0);
+  
+                    if (checkSum % 10 == 0) {
+                        window.navigator.vibrate(125);    
+                        document.getElementById("format").innerText = checkSum;
+                    } else
+                        document.getElementById("format").innerText = checkSum;
+                }
+            }
+        });
+        
+        Quagga.start();
+    });
+</script>
+</body>

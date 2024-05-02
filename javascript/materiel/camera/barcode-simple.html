@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <title>QuaggaJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+    <h1>QuaggaJS</h1>
+    <img src="image.jpg">
+https://www.oberhofer.co/mediastreamtrack-and-its-capabilities/
+<script src="quagga.min.js" type="text/javascript"></script>
+<script>
+
+  
+Quagga.decodeSingle({
+    decoder: {
+        readers: ["ean_8_reader"] 
+    },
+    locate: true, 
+    src: 'image.jpg' 
+}
+, function(result)
+{
+    if(result.codeResult) {
+        console.log("result", result.codeResult.code);
+    } else {
+        console.log("not detected");
+    }
+});
+
+</script>
+</body>
+</html>

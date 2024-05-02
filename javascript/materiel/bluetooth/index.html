@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bluetooth Low Energy</title>
+  </head>
+  <body>
+    <p>GATT est l’acronyme de Generic Attribute Profile (Profil d’attribut générique) 
+      et définit la manière dont deux périphériques Bluetooth basse consommation transfèrent les données 
+      en utilisant des concepts appelés Services et Caractéristiques. 
+      Il utilise un protocole de données générique appelé ATT (Attribute Protocol), 
+      utilisé pour stocker les services, les caractéristiques et les données connexes 
+      dans une table de recherche simple, à l'aide d'identifiants 16 bits pour chaque entrée de la table.</p>
+    <p>Le GATT entre en jeu une fois qu'une connexion dédiée est établie entre deux appareils, 
+        ce qui signifie que vous avez déjà suivi le processus de publicité régi par GAP.</p>
+    <p>La chose la plus importante à garder à l’esprit avec le GATT et ses relations est que les relations sont exclusives. 
+      Cela veut dire qu'un périphérique BLE ne peut être connecté qu'à un seul appareil à la fois (un téléphone portable, etc.)! 
+      Dès qu'un périphérique se connecte à un périphérique central, il cessera de s'afficher lui-même et les autres périphériques 
+      ne pourront plus le voir ou s'y connecter tant que la connexion existante n'aura pas été rompue.</p>
+    <p>Establishing a connection is also the only way to allow two way communication, 
+        where the central device can send meaningful data to the peripheral and vice versa.</p>
+    <script>
+      document.addEventListener('pointerup', function(event) {
+        navigator.bluetooth.requestDevice({ filters: [{ services: ['4fafc201-1fb5-459e-8fcc-c5c9c331914b'] }] })
+        .then(device => device.gatt.connect())
+        .then(server => server.getPrimaryService('4fafc201-1fb5-459e-8fcc-c5c9c331914b'))
+        .then(service => service.getCharacteristic('beb5483e-36e1-4688-b7f5-ea07361b26a8'))
+        .then(characteristic => characteristic.readValue())
+        .then(value => {
+            let message = "";
+            
+            console.log('Message : ' + value.byteLength);
+
+            for (let i = 0 ; i < value.byteLength; i++)
+              message += String.fromCharCode(value.getUint8(i));
+            
+              console.log('Message : ' + message);
+          })
+        .catch(error => { console.error(error); });
+      });
+    </script>
+  </body>
+</html>

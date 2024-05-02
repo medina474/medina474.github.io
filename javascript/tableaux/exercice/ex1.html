@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+
+<table class="table is-bordered is-striped">
+  <thead><tr>
+      <th>Code</th>
+      <th>Nom</th>
+      <th>BTS</th>
+      <th>DUT</th>
+      <th>MES</th>
+      <th>Ingenieur</th>
+      <th>Total</th>
+  </tr></thead>
+  <tbody id="databody"></tbody>
+</table>
+<button onclick="remplir(tableau)">remplir</button>
+<div id="resultat"></div>
+
+<div class="select">
+  <select id="question">
+    <option value="tri">tri par rapport au DUT</option>
+    <option value="q2">question 2</option>
+    <option value="q3">question 3</option>
+    <option value="q4">Existe-t-il au moins une région qui compte moins de 5 000 étudiants en école d'ingénieur ?</option>
+    <option value="q5">Est-ce que toutes les régions ont bien au moins 5 000 étudiants inscrits en DUT ?</option>
+    <option value="q6">question 6</option>
+    <option value="q7">question 7</option>
+    <option value="q8">question 8</option>
+    <option value="q9">question 9</option>
+  </select>
+  <button onclick="appliquer()">appliquer</button>
+</div>
+
+
+
+
+
+
+
+<script>
+const fonctions = [
+  { "code":"tri", "fonction": () => tableau.sort((eltA, eltB) => eltA.DUT - eltB.DUT) },
+  { "code":"q2", "fonction": () => tableau.filter(elt => elt.Ingenieur < elt.DUT) },
+  { "code":"q3", "fonction": () => tableau.sort((eltA, eltB) => eltB.MES - eltA.MES)
+                                          .slice(0, 3)},
+  { "code":"q4", "fonction": () => tableau.some(region => region.Ingenieur < 5000) },
+  { "code":"q5", "fonction": () => tableau.every(region => region.DUT > 5000) },
+  { "code":"q6", "fonction": () => { tableau.map(region => region.total = region.DUT +
+                                          region.BTS + region.MES + region.Ingenieur); return tableau; } },
+  { "code":"q7", "fonction": () => tableau.reduce((cumul, region) => cumul += region.total ?? 0, 0) },
+  { "code":"q8", "fonction": () => new Array(tableau.reduce((derniereval, region) => derniereval = region.BTS > derniereval.BTS ? region  : derniereval)) },
+  { "code":"q9", "fonction": () => tableau.filter(region => region.MES > 6000)
+                                          .map(region => region.DUT + region.BTS + region.MES + region.Ingenieur)
+                                          .reduce((cumul, total) => cumul += total ?? 0, 0)
+  }
+]
+
+// 1ère opération filter ne garder que les régions MES > 600
+//11	Île-de-France		      28830	    oui
+//24	Centre-Val de Loire		 5171	    non
+
+// 2e opération calculer le tableau et renvoyer un tableau 
+// map extraire UNE seule colonne la colonne total calculée avec toutes les valeurs
+[132319,
+21077,
+25193]
+
+// 3e opération faire le cumul
+//132319 + 21077 + 25193 + ... = 530092
+
+//https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+
+// Pas de calcul d'accululation mais je retourne la valeur courante ou l'autre suivant le critère
+// A la fin je n'ai qu'une seule ligne celle sélectionnée
+
+// Centre-Val de Loire	     8324	 
+// Normandie	              11885 derniereval = Centre-Val de Loire 8324	
+// Bourgogne-Franche-Comté	10102	derniereval = Normandie 11885	
+// Bretagne                  9433	derniereval = Normandie 11885	
+// Grand Est                15555 derniereval = Normandie 11885	
+// Ile de France            30000 derniereval = Grand Est 15555
+
+function appliquer() {
+  let valueselect = document.getElementById("question").value
+  let ligne = fonctions.find(f => f.code == valueselect);
+  let t = ligne.fonction();
+  
+  if (Array.isArray(t)) 
+    remplir(t);
+  else
+    document.getElementById("resultat").innerText = t;
+}
+
+
+
+const tableau = [{ code: 11, nom:"Île-de-France", "BTS":44049, "DUT":17093, "MES":28830, "Ingenieur":42347},
+{ code: 24, nom:"Centre-Val de Loire", "BTS":8324, "DUT":4511, "MES":5171, "Ingenieur":3071},
+{ code: 27, nom:"Bourgogne-Franche-Comté", "BTS":10102, "DUT":5012, "MES":5180, "Ingenieur":4899},
+{ code: 28, nom:"Normandie", "BTS":11885, "DUT":7011, "MES":6471, "Ingenieur":6497},
+{ code: 32, nom:"Hauts-de-France", "BTS":26320, "DUT":10611, "MES":14485, "Ingenieur":16115},
+{ code: 44, nom:"Grand Est", "BTS":21352, "DUT":12778, "MES":12215, "Ingenieur":14102},
+{ code: 52, nom:"Pays de la Loire", "BTS":16704, "DUT":5716, "MES":5780, "Ingenieur":10292},
+{ code: 53, nom:"Bretagne", "BTS":15467, "DUT":6653, "MES":5835, "Ingenieur":8853},
+{ code: 75, nom:"Nouvelle-Aquitaine", "BTS":21606, "DUT":10082, "MES":11289, "Ingenieur":8718},
+{ code: 76, nom:"Occitanie", "BTS":24394, "DUT":10578, "MES":9980, "Ingenieur":14641},
+{ code: 84, nom:"Auvergne-Rhône-Alpes", "BTS":28795, "DUT":17320, "MES":14938, "Ingenieur":23272},
+{ code: 93, nom:"Provence-Alpes-Côte d'Azur", "BTS":17893, "DUT":7780, "MES":10871, "Ingenieur":5774}]
+    
+    function remplir(tableau)
+    {
+      let contenu = "";
+      for (region of tableau) {
+        contenu += `<tr><td>${region.code}</td><td>${region.nom}</td>
+          <td align="right">${region.BTS}</td>
+          <td align="right">${region.DUT}</td>
+          <td align="right">${region.MES}</td>
+          <td align="right">${region.Ingenieur}</td>
+          <td align="right">${region.total ?? 'nc'}</td></tr>
+          ` 
+      }
+      document.getElementById("databody").innerHTML = contenu;
+    }
+
+function fonction1() {
+
+  elt = { nom:"Grand Est", DUT: 51, BTS: 31 }
+  elt.nom
+  var colonne = "BTS"
+  elt[colonne]
+
+  tableau.sort((eltA, eltB) => eltA.DUT - eltB.DUT)
+  remplir(tableau);
+}
+
+    </script>
+</body>
+</html>
