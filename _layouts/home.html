@@ -8,6 +8,7 @@
   </head>
   <body class="text-slate-950">
     <div class="container-lg px-3 my-5 markdown-body">
+      {% include breadcrumbs.html %}
       <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
 
       {{ content }}
