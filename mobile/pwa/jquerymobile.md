@@ -1,7 +1,5 @@
 ---
 title: JQuery Mobile
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 jQuery Mobile est un système d'interface utilisateur basé sur JQuery et JQuery UI conçu pour créer des sites Web et des applications réactifs accessibles sur tous les smartphones, tablettes et appareils de bureau.

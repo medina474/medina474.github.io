@@ -1,7 +1,5 @@
 ---
 title: Manifest Progressive Web App
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 Le fichier manifest fournit des informations sur l'application, telles que son nom, ses icônes, ses couleurs, etc., permettant ainsi à l'utilisateur de l'ajouter à l'écran d'accueil de son appareil.
