@@ -54,7 +54,7 @@ https://stacklima.com/quel-est-l-inconvenient-d-utiliser-innerhtml-en-javascript
 #### template
 
 Une des fonctions méconnue d'html 5 est l'utilisation de modèles (template).
-Un template est un fragment de code html, non rendu par le navigateur donc totalement invisible et inexistant à l'utilisateur.
+Un template est un fragment de code html, non rendu par le navigateur donc totalement invisible et inexistant vis-à-vis de l'utilisateur.
 
 Ce qu'en dit ChatGPT
 
