@@ -16,11 +16,7 @@
 // $h6-size: 12px;
 
 /* Set the font size to 26px */
-.h1 {
-  font-size: $h1-size-mobile !important;
 
-  @include breakpoint(md) { font-size: $h1-size !important; }
-}
 
 /* Set the font size to 22px */
 .h2 {
@@ -49,8 +45,6 @@
 /* Set the font size to #{$h6-size} */
 .h6 { font-size: $h6-size !important; }
 
-// Heading utilities
-.h1, .h2, .h3, .h4, .h5, .h6 { font-weight: $font-weight-bold !important; }
 
 // Type utilities that match type sale
 /* Set the font size to 26px */
