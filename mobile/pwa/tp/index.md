@@ -1,10 +1,9 @@
 ---
 title: Travaux pratiques
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 > Objectif : Concevoir une application PWA
+{: .objectif}
 
 ## Résumé
 
@@ -22,18 +21,16 @@ Une PWA permet de s'affranchir des outils de création d'applications hybrides
 -->
 
 ### Séance 1
-[Onsen UI](seance2/index.html)
+[Onsen UI](seance1)
 
-<!--
 ### Séance 2
-[Liste](seance3/index.html)
+[Liste](seance2)
 
 ### Séance 4
-[Cartographie](seance4/index.html)
+[Cartographie](seance3)
 
 ### Séance 5
-[Graphisme](seance5/index.html)
+[Graphisme](seance4)
 
 ### Séance 6
-[Graphisme](seance6/index.html)
--->
+[Graphisme](seance5)

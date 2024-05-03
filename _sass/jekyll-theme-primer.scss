@@ -1,7 +1,11 @@
+.text-slate-950 {	color: rgb(2 6 23); }
 
 @import "primer-support/index.scss";
 @import "primer-base/index.scss";
 @import "primer-utilities/index.scss";
 @import "primer-layout/index.scss";
 @import "primer-markdown/index.scss";
+@import "blockquote.scss"
 @import "rouge";
+
+a { color: pink; }

@@ -1,113 +1,138 @@
 ---
 title: Onsen UI
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
-Pour accélérer le développement nous allons utiliser un framework qui permet d'utiliser des composants prédéfinis et obtenir un affichage semblable à ce que l'on trouve dans les applications.
+## Première page
+
+Charger dans la première page la liste des personnes.
+
+Lorsque l'on clique sur une personne passer à la deuxième page pour afficher la liste des films de cette personne en particulier.
+
+![personnes](personnes.png)
 
 
+```javascript
+async function getPersonnes(page) {
 
-### OnsenUI
+  const data = await fetch('https://morseweiswlpykaugwtd.supabase.co/rest/v1/acteur?select=*');
+  const result = await data.json();
 
-Le moyen le plus rapide de développer de belles applications Web HTML5 hybrides et mobiles.
-
-Faites l'expérience d'un développement rationalisé avec une configuration sans délai, en utilisant les technologies que vous connaissez et aimez déjà - Javascript, HTML et CSS.
-
-[https://onsen.io/](https://onsen.io/)
-
-
-
-### Bootstrap
-
-Bootstrap est une collection d'outils utiles à la création du design de sites et d'applications web. C'est un ensemble qui contient des codes HTML et CSS, des formulaires, boutons, outils de navigation et autres éléments interactifs, ainsi que des extensions JavaScript en option.
-
-Universel l'aspect application mobile n'est pas prioritaire. Par rapport aux autres framework, le résultat ne tend pas à imiter une application.
-
-[https://getbootstrap.com/](https://getbootstrap.com/)
-
-### React Native
-
-React Native combine les meilleures parties du développement natif avec React, une bibliothèque JavaScript de premier ordre pour la création d'interfaces utilisateur.
-
-Utilisez-en un peu ou beaucoup. Vous pouvez utiliser React Native aujourd'hui dans vos projets Android et iOS existants ou vous pouvez créer une toute nouvelle application à partir de zéro.
-
-Beaucoup de liberté est laissé à au développeur, le rendu est donc fortement dépendant son niveau. React Native de part sa complexité est déconseillé aux débutants.
-
-[https://reactnative.dev/](https://reactnative.dev/)
-
-## Onsen UI
-
-Pour ce développement nous allons utiliser Onsen UI qui semble être le meilleur choix entre rapidité de développement et rendu final.
-
-OnsenUI peut être utilisé en combinaison avec **JQuery** (déconseillé pour les nouveaux développement), **Angular**, **React** (peu pertinent d'utiliser React avec OnsenUI alors que React Native existe), **Vue JS**, du javascript classique (appelé **Vanilla JS** ou JS nature) ou uniquement du CSS.
-
-Ajouter dans l'entête html les liens vers les librairies Onsen (CSS et javascript).
-
-Vous pouvez télécharger les librairie ou utiliser celle disponible sur les CDNs. Dans le cas d'un téléchargement local il faut aussi télécharger les packs d’icônes.
-
-```html
-<link rel="stylesheet" href="/onsenui@2.12.8/css/onsenui.css">
-<link rel="stylesheet" href="/onsenui@2.12.8/css/onsen-css-components.min.css">
-<script src="/onsenui@2.12.8/js/onsenui.min.js"></script>
+  list_personnes = result;
+}
 ```
 
+### Utilisation de template
 
-### Définir les pages
+Quelles sont les méthodes pour insérer du nouveau code html dans une page à l'aide de javascript ?
 
-Les pages d'application peuvent être définies à 2 endroits :
-- dans des fichiers .html. Dans ce cas ce sont des fichier html incomplets car rappelez vous les pages d'application ne sont pas des pages html.
-- dans le fichier .html principal en tant que **template**.
+#### innerHTML
 
-#### Fichier .html
+Le première pensée est d'utiliser **innerHTML** qui permet de définir un ensemble de code html à insérer dans la page.
 
-Fichier *home.html*, fragment de page .html, contient une page d'application *ons-page*
+Inconvénients de l’utilisation de la propriété innerHTML en JavaScript :
+
+Voici la réponse de ChatGPT à la question : Pourquoi ne faut il pas utiliser innerHTML ?
+
+L'utilisation de `innerHTML` n'est pas recommandée pour plusieurs raisons :
+
+1. **Sécurité** : L'utilisation de `innerHTML` peut entraîner des problèmes de sécurité, en particulier si vous insérez du contenu utilisateur non filtré. Si vous utilisez `innerHTML` pour injecter du contenu fourni par des utilisateurs sans le filtrer correctement, vous pourriez exposer votre application à des attaques par injection de code malveillant, comme les attaques par injection de script (XSS).
+
+2. **Performance** : Lorsque vous utilisez `innerHTML`, le contenu HTML entier de l'élément cible est re-analysé et re-construit, ce qui peut être coûteux en termes de performances. Si vous utilisez `innerHTML` pour modifier un petit morceau de contenu, cette opération est plus lente et moins efficace que d'utiliser des méthodes spécifiques pour manipuler les éléments DOM.
+
+3. **Perte d'état** : Lorsque vous utilisez `innerHTML` pour modifier le contenu d'un élément, le navigateur détruit tous les éléments DOM enfants existants à l'intérieur de cet élément et recrée les nouveaux éléments à partir de la chaîne HTML fournie. Cela signifie que tout état, événements ou liens attachés aux anciens éléments seront perdus. Cela peut causer des problèmes si vous avez déjà attaché des gestionnaires d'événements ou des références à des éléments spécifiques.
+
+4. **Accessibilité** : `innerHTML` ne tient pas compte de l'accessibilité lorsqu'il recrée les éléments DOM. Si vous utilisez `innerHTML` pour mettre à jour le contenu d'un élément, vous risquez de compromettre l'accessibilité de votre application, car les attributs et les informations nécessaires pour les technologies d'assistance peuvent ne pas être correctement associés aux nouveaux éléments créés.
+
+Il est préférable d'utiliser les méthodes DOM spécifiques pour manipuler les éléments et leur contenu, comme `createElement`, `appendChild`, `removeChild`, `setAttribute`, etc. Ces méthodes offrent un meilleur contrôle sur le DOM, améliorent la sécurité et les performances, et préservent l'état existant et l'accessibilité de votre application.
+
+
+https://stacklima.com/quel-est-l-inconvenient-d-utiliser-innerhtml-en-javascript/
+
+
+#### createElement
+
+#### template
+
+Une des fonctions méconnue d'html 5 est l'utilisation de modèles (template).
+Un template est un fragment de code html, non rendu par le navigateur donc totalement invisible et inexistant à l'utilisateur.
+
+Ce qu'en dit ChatGPT
+
+L'utilisation de templates présente plusieurs avantages par rapport à l'utilisation de `createElement` pour générer du contenu dynamique dans le DOM :
+
+1. Syntaxe plus concise : Les templates permettent de définir des structures HTML plus complexes de manière déclarative et facile à lire. Au lieu de construire manuellement chaque élément avec `createElement`, vous pouvez utiliser une syntaxe HTML familière pour définir le contenu du template.
+
+2. Clarté du code : L'utilisation de templates améliore la lisibilité du code en séparant clairement la structure HTML du code JavaScript. Cela facilite la compréhension du code, en particulier pour les développeurs front-end qui sont familiers avec la syntaxe HTML.
+
+3. Réutilisabilité : Les templates peuvent être définis une fois et réutilisés plusieurs fois dans différentes parties de l'application. Cela permet de créer des composants modulaires et d'éviter la duplication de code. Les templates peuvent également être utilisés pour générer des listes d'éléments en liant des données à des modèles.
+
+4. Manipulation simplifiée : Les templates offrent des mécanismes intégrés pour manipuler le contenu généré. Par exemple, vous pouvez utiliser des sélecteurs CSS pour cibler des éléments spécifiques à l'intérieur du template, ajouter des classes, des attributs ou des gestionnaires d'événements aux éléments, le tout de manière plus intuitive et pratique.
+
+5. Performances améliorées : Les templates permettent d'optimiser les performances en évitant la répétition d'opérations coûteuses, comme la modification du DOM à chaque création d'élément. Vous pouvez créer un template une seule fois, cloner ce template et mettre à jour les données liées, ce qui réduit les opérations coûteuses de modification du DOM.
+
+En utilisant des templates, vous pouvez simplifier et améliorer la génération de contenu dynamique dans le DOM, en favorisant une syntaxe plus concise, une meilleure lisibilité du code, une réutilisabilité accrue et des performances optimisées.
+
+Jusqu'au moment ou ce fragment est récupéré, cloné et inséré dans la page comme nouvel élément. C'est ce principe qui est utilisé par Onsen UI que l'on va réutiliser.
 
 ```html
-<ons-page id="home">
-  Bienvenue
-<ons-page>
-```
-
-#### Template
-
-Un *template* html est un fragment de code html totalement invisible. Il est possible d'y accéder avec du code javascript, le cloner et l'ajouter dans la page en cours.
-
-```html
-<template id="home.html">
-  <ons-page id="home">
-    Bienvenue
-  <ons-page>
+<template id="ligne_personne">
+  <ons-list-item modifier="chevron" tappable>
+    <div class="left">
+      <img class="list-item__thumbnail" src="photos/_default.jpg">
+    </div>
+    <div class="center">
+      <span class="list-item__title">
+        <span class="prenom"></span>&nbsp;<strong class="nom"></strong>
+      </span>
+      <span class="list-item__subtitle">
+        <span class="naissance"></span>&nbsp;
+        <span class="deces"></span>
+      </span>
+    </div>
+  </ons-list-item>
 </template>
 ```
 
-Lors de la navigation vers la page home.html, OnsenUI regarde d'abord si un template avec l'identifiant home.html existe dans la page courante. Si c'est la cas clone le contenu du template et remplace le contenu actuel par celui-ci. Si aucun template n'est trouve OnsenUI charge par la méthode AJAX le fichier *home.html* et remplace le contenu de la page actuel par celui cloné.
+### Chargement d'images
 
-En aucun cas il y a une navigation classique vers le fichier home.html mais une substitution du contenu de la page par un contenu chargé par programmation.
 
-Du fait des 2 méthodes de chargement (fichier par ajax ou template), il est conseillé de nommer les template comme des noms de fichiers .html. D'où l'identifiant *home.html*
 
-![Navigation](xhr.png)
+## Films
 
-Notez le chargement xhr de la page *home.html*
-
-### Utiliser la navigation
-
-Pour pousser une nouvelle page en premier plan d'affichage, il faut utiliser la méthode javascript *pushPage(page, options)*.
+![films](films.png)
 
 ```javascript
-myNavigator.pushPage('page2.html');
+async function getFilms(uuid)
+  {
+    const data = await fetch(`http://127.0.0.1:8002/records/Personne/${uuid}?join=Equipe%2CFilm`);
+    const personne = await data.json();
+
+    const liste = document.querySelector("#page2 ons-list");
+
+    for (let equipe of personne.Equipe)
+    {
+      const modele = document.querySelector("#ligne_film");
+      const fragment = modele.content.cloneNode(true).firstElementChild;
+
+      fragment.querySelector(".titre")
+        .appendChild(document.createTextNode(equipe.film.titre));
+
+      fragment.querySelector(".annee")
+        .appendChild(document.createTextNode(equipe.film.annee));
+
+      loadImage(`films/${equipe.film.id}.jpg`, fragment.querySelector("img"));
+
+      fragment.addEventListener("click", function(evt) {
+        myNavigator.pushPage('film.html', {
+          data: {
+            title: `${equipe.film.titre}`,
+            id: evt.currentTarget.dataset.uuid
+          } });
+        });
+
+      fragment.dataset.uuid = equipe.film.id;
+      liste.appendChild(fragment);
+
+    }
+  }
 ```
-
-Pour revenir en arrière il ne faut pas utiliser le bouton retour du navigateur, mais un appel à la fonction *popPage*
-
-```javascript
-myNavigator.popPage();
-```
-Une autre méthode consiste à utiliser l'élément *ons-back-button*. Il peut être ajouté sur le côté gauche de la barre d'outils et s'affiche sous forme de flèche.
-
-<!--
-Nous pouvons maintenant définir notre [page d'accueil](../home/)
--->
-
-Nous pouvons maintenant définir notre [première page](../seance3/)
