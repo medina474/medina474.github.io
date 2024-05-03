@@ -24,15 +24,7 @@ Universel l'aspect application mobile n'est pas prioritaire. Par rapport aux aut
 
 [https://getbootstrap.com/](https://getbootstrap.com/)
 
-### React Native
 
-React Native combine les meilleures parties du développement natif avec React, une bibliothèque JavaScript de premier ordre pour la création d'interfaces utilisateur.
-
-Utilisez-en un peu ou beaucoup. Vous pouvez utiliser React Native aujourd'hui dans vos projets Android et iOS existants ou vous pouvez créer une toute nouvelle application à partir de zéro.
-
-Beaucoup de liberté est laissé à au développeur, le rendu est donc fortement dépendant son niveau. React Native de part sa complexité est déconseillé aux débutants.
-
-[https://reactnative.dev/](https://reactnative.dev/)
 
 ## Onsen UI
 

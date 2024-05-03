@@ -3,7 +3,7 @@ title: Évaluation 1
 ---
 
 > Concevoir une interface pour une centrale de mesure d'ambiance.
-{.objectif}
+{: .objectif}
 
 ![](panneau.png)
 

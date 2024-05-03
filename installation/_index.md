@@ -3,7 +3,7 @@ title: "Installer Raspberry Pi OS"
 ---
 
 > ***Objectif :***  Installer et utiliser un système d'exploitation pour Raspberry Pi.
-{.objectif}
+{: .objectif}
 
 **Raspberry Pi OS** (anciennement Raspbian) est le système d'exploitation officiel, c'est une version aménagée et optimisée de Debian GNU/Linux. La version desktop permet de travailler avec un bureau comme un ordinateur classique. Un clavier, une souris et un écran sont indispensables pour l'utiliser.
 

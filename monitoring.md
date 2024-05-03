@@ -3,7 +3,7 @@ title: Surveiller votre système
 ---
 
 > ***Objectif :*** Mesurer différentes valeurs de notre système. Utilisation du proceseur, occupation de la mémoire, traffic réseau ... afin d'anticiper la résolution de problèmes
-{.objectif}
+{: .objectif}
 
 ## Stocker les données
 
