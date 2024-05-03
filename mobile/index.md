@@ -3,6 +3,7 @@ title: R4.A.11 Développement pour applications mobiles
 ---
 
 > L’objectif de cette ressource est de découvrir ***des techniques*** de développement mobile.
+{.objectif}
 
 ### Savoirs de référence étudiés
 
