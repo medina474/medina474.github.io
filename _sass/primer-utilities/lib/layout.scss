@@ -1,0 +1,18 @@
+// Layout
+// stylelint-disable block-opening-brace-space-after, block-opening-brace-space-before, primer/selector-no-utility
+// stylelint-disable comment-empty-line-before
+
+
+// Width and height utilities, helpful in combination
+// with display-table utilities and images
+/* Max width 100% */
+.width-fit   { max-width: 100% !important; }
+/* Set the width to 100% */
+.width-full  { width: 100% !important; }
+/* Max height 100% */
+.height-fit  { max-height: 100% !important; }
+/* Set the height to 100% */
+.height-full { height: 100% !important; }
+
+/* Remove min-width from element */
+.min-width-0 { min-width: 0 !important; }
