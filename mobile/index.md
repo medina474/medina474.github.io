@@ -43,6 +43,6 @@ TP : 21h : 18 + 3 (saé)
 -->
 
 ## Travaux pratiques
-- [Travaux pratiques](tp/index.html)
+- [Travaux pratiques](pwa/tp)
 
 Utiliser un framework pour PWA [Onsen UI](onsenui/index.html)

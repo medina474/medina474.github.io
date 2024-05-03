@@ -65,12 +65,8 @@ class MainApp extends StatelessWidget {
 }
 ```
 
+[dart](dart)
 
-## le langage Dart
-
-Langage objet
-
-super
 
 ### Widget
 
@@ -149,10 +145,18 @@ il manque la méthode build
   }
 ```
 
-Ajoutons un widget FutureBuilder
+
 
 Que faut-il
 
-future
 
 builder qui est un widget
+
+[introduction](introduction)
+
+[composants](composants)
+[ui](ui)
+[future](future)
+
+[carte](carte)
+[barcode](barcode)
