@@ -43,6 +43,8 @@ En respectant ces conditions, vous pouvez d√©velopper une PWA qui offre une exp√
 
 ## Frameworks
 
+[jQuery Mobile](jquerymobile)
+
 [framework7](framework7)
 
 [OnsenUI](onsenui)
