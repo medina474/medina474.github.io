@@ -95,7 +95,20 @@ Jusqu'au moment ou ce fragment est récupéré, cloné et inséré dans la page 
 
 ### Chargement d'images
 
+```javascript
+function loadImage(source, element) {
+    let photo = new Image;
+    photo.src = source;
 
+    photo.onload = function () {
+      element.setAttribute("src", source);
+    }
+
+    photo.onerror = function () {
+      /*console.log("absent");*/
+    }
+  }
+```
 
 ## Films
 
