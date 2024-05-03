@@ -19,7 +19,7 @@ Les solutions sont :
 
 Xamarin est le fruit du portage de la plateforme .Net sur la plateforme Linux. Ce portage open source appelé Mono n'était pas conduit par Microsoft et violait sa propriété industrielle. Cependant Microsoft considéra que cette diffusion lui était profitable et s'engagea à ne pas poursuivre les auteurs ni demander de royalties. En 2016 Microsoft l'achète et l'intègre dans sa suite Visual Studio et en fait son outil officiel. Toujours en 2016 Microsoft opère un virage open source et lance .Net Core un réécriture complète et multi-plateforme de .Net. Xamarin est abandonné en 2022, mais son successeur est là.
 
-![Xamarin](xamarin.png)
+<img src="xamarin.png" height="64">
 
 ### .Net MAUI (ex Xamarin)
 
@@ -51,7 +51,7 @@ React Native est une solution multiplateforme lancée par Facebook en 2015, util
 
 ### Flutter
 
-[Flutter](../flutter)
+[Flutter](flutter)
 
 
 ### Kotlin Multiplatform 
