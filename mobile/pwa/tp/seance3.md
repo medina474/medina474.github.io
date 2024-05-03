@@ -76,7 +76,7 @@ En utilisant des templates, vous pouvez simplifier et améliorer la génération
 
 Jusqu'au moment ou ce fragment est récupéré, cloné et inséré dans la page comme nouvel élément. C'est ce principe qui est utilisé par Onsen UI que l'on va réutiliser.
 
-```
+```html
 <template id="ligne_personne">
   <ons-list-item modifier="chevron" tappable>
     <div class="left">
