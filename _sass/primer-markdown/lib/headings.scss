@@ -14,12 +14,6 @@
     font-weight: $font-weight-bold;
     line-height: $lh-condensed;
 
-    .octicon-link {
-      color: $black;
-      vertical-align: middle;
-      visibility: hidden;
-    }
-
     &:hover .anchor {
       text-decoration: none;
 
