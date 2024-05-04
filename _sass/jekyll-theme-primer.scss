@@ -9,6 +9,10 @@
 
 .text-slate-950 {	color: rgb(2, 6, 23); }
 
+.max-w-5xl {
+  max-width: 64rem; 
+}
+
 .px-4 {	
   padding-left: 1rem; 
   padding-right: 1rem; 
@@ -17,6 +21,11 @@
 .my-8	{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-auto	{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @import "primer-support/index.scss";
