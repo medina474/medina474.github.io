@@ -65,3 +65,8 @@ Beaucoup de liberté est laissé à au développeur, le rendu est donc fortement
 ### Kotlin Multiplatform 
 
 https://www.jetbrains.com/kotlin-multiplatform/
+
+
+### Native Script
+
+<img src="nativescript.svg" height="64">

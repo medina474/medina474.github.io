@@ -35,8 +35,8 @@ TP : 21h : 18 + 3 (saé)
 
 - [Applications natives](applications-natives)
 - [Compilation cross plateforme](xplatform)
-- [Applications hybrides](hybride)
-- [Progressive Web App](pwa)
+- [Applications hybrides](applications-hybrides)
+- [Progressive Web App](progressise-web-app)
 
 <!--
 ## Travaux dirigés
@@ -44,6 +44,5 @@ TP : 21h : 18 + 3 (saé)
 -->
 
 ## Travaux pratiques
-- [Travaux pratiques](pwa/tp)
+- [Travaux pratiques](progressive-web-app/travaux-pratiques)
 
-Utiliser un framework pour PWA [Onsen UI](onsenui/index.html)
