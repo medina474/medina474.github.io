@@ -3,8 +3,6 @@ title: Nginx
 ---
 
 
-Installer Nginx
-
 Installer le [paquet logiciel](/linux/paquet/) `nginx`.
 
 Vérifier le fonctionnement de Nginx

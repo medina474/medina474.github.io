@@ -1,17 +1,3 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-	<title>History</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/vendor/highlight.js/styles/default.css">
-	<script src="/js/vendor/highlight.js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
-
-<h2>History</h2>
-
 <script>
 window.loadstart = function(event) {
 	console.log("window.loadstart");
@@ -88,8 +74,3 @@ history.pushState(stateObj, "page 2", "bar.html");
 history.replaceState(stateObj, "page 2", "bar.html");
 
 var currentState = history.state;
-
-
-
-</body>
-</html>

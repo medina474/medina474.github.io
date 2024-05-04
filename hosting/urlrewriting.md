@@ -2,7 +2,6 @@
 title: "Urlrewriting"
 ---
 
-
 La réécriture d’URL (URL rewriting) est une technique qui permet de transformer une adresse URL en une autre. Elle rend les URL plus compréhensibles pour l’utilisateur, plus simples et plus efficaces pour le référencement.
 
 La réécriture d'URL récupère des éléments et/ou des parties de l'adresse URL et les transforme en paramètres. Elle masque les paramètres et la vraie nature des pages (l’extension php disparait ainsi que la vraie localisation du fichier).

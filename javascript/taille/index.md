@@ -211,13 +211,13 @@ function Load()
   let operators = document.querySelectorAll("code .o");
   let message;
 
-  operators[i++].nextSibling.textContent  = ` ${window.screen.top}px`;
-  operators[i++].nextSibling.textContent  = ` ${window.screen.left}px`;
-  operators[i++].nextSibling.textContent  = ` ${window.screen.height}px`;
-  operators[i++].nextSibling.textContent  = ` ${window.screen.width}px`;
+  operators[i++].nextSibling.textContent  = ` ${window.screen.top}`;
+  operators[i++].nextSibling.textContent  = ` ${window.screen.left}`;
+  operators[i++].nextSibling.textContent  = ` ${window.screen.height}`;
+  operators[i++].nextSibling.textContent  = ` ${window.screen.width}`;
 
-  operators[i++].nextSibling.textContent = ` ${window.screen.availTop}px`;
-  operators[i++].nextSibling.textContent = ` ${window.screen.availLeft}px`;
+  operators[i++].nextSibling.textContent = ` ${window.screen.availTop}`;
+  operators[i++].nextSibling.textContent = ` ${window.screen.availLeft}`;
 
   message = ` ${window.screen.availHeight}px`;
   message += (window.screen.height - window.screen.availHeight) ? ` (${window.screen.availHeight - window.screen.height}px)` : '';

@@ -135,7 +135,6 @@ Math.imul(3, 4) = ;
 ```
 
 
-
 <script type="application/javascript">
 function Load()
 {
