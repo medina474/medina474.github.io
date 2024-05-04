@@ -1,5 +1,11 @@
 .text-slate-950 {	color: rgb(2, 6, 23); }
 
+.px-4 {	
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+}
+
+
 @import "primer-support/index.scss";
 @import "primer-base/index.scss";
 @import "primer-utilities/index.scss";

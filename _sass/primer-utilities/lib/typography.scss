@@ -147,38 +147,6 @@
 /* Set the line height to zero */
 .lh-0 { line-height: 0 !important; }
 
-// Text alignments
-// Responsive text alignment
-@each $breakpoint, $variant in $responsive-variants {
-  @include breakpoint($breakpoint) {
-    /* Text align to the right */
-    .text#{$variant}-right { text-align: right !important; }
-    /* Text align to the left */
-    .text#{$variant}-left { text-align: left !important; }
-    /* Text align to the center */
-    .text#{$variant}-center { text-align: center !important; }
-  }
-}
-
-// Text styles
-/* Set the font weight to normal */
-.text-normal { font-weight: $font-weight-normal !important; }
-/* Set the font weight to bold */
-.text-bold { font-weight: $font-weight-bold !important;}
-/* Set the font to italic */
-.text-italic { font-style: italic !important; }
-/* Make text uppercase */
-.text-uppercase { text-transform: uppercase !important; }
-/* Underline text */
-.text-underline { text-decoration: underline !important; }
-/* Don't underline text */
-.no-underline { text-decoration: none !important; }
-/* Don't wrap white space */
-.no-wrap { white-space: nowrap !important; }
-/* Normal white space */
-.ws-normal { white-space: normal !important; }
-/* Allow long lines with no spaces to line break */
-.wb-break-all { word-break: break-all !important; }
 
 .text-emphasized {
   font-weight: $font-weight-bold;

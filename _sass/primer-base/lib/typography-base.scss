@@ -21,10 +21,6 @@ h6 { @include h6; }
 // Body text
 // --------------------------------------------------
 
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
 
 small {
   font-size: 90%;
@@ -74,13 +70,4 @@ pre {
   margin-bottom: 0;
   font-family: $mono-font;
   font-size: $font-size-small;
-}
-
-// Octicons
-// --------------------------------------------------
-
-// Move this over here as a temporary override to the octicons source repo
-// instead of updating that upstream.
-.octicon {
-  vertical-align: text-bottom;
 }

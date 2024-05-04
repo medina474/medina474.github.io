@@ -27,9 +27,6 @@ menus. L'expérience utilisateur est très proche d'une vraie application.
 
 ## Onsen UI
 
-Onsen UI est un framework Javascript qui permet de réaliser des applications web ou hybrides très facilement.
-
-Onsen UI peut s'utiliser avec du javascript classique, avec Angular, VueJS ou ReactJS
 
 Rendez vous sur le site [https://onsen.io/](https://onsen.io/)
 
@@ -79,7 +76,3 @@ https://workshop.neotechweb.net/ws/skimap/1.0.0/pistes.php?station=83
 
 
 ## Lighthouse
-
-## Web Worker
-
-[Web Worker](webworker)

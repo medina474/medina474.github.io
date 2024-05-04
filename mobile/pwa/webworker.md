@@ -2,6 +2,23 @@
 title: "Webworker"
 ---
 
+> Un service worker est un script JavaScript exécuté en arrière-plan par le navigateur web. 
+{: .definition }
+
+1. **Caching des ressources**: Le service worker peut être utilisé pour mettre en cache des ressources statiques telles que des fichiers CSS, JavaScript, images, etc. Cela permet une expérience utilisateur plus rapide et une utilisation **hors ligne** de l'application web.
+
+2. **Gestion des requêtes réseau**: Il peut intercepter les requêtes réseau et les rediriger vers le cache, ou même vers un serveur différent. Cela peut être utilisé pour implémenter des **stratégies de mise en cache personnalisées**, des réponses hors ligne ou pour améliorer les performances en réduisant la dépendance au réseau.
+
+3. **Notifications Push**: Les service workers peuvent être utilisés pour recevoir et afficher des notifications push, permettant aux utilisateurs d'être informés même lorsque la page n'est pas active.
+
+4. **Synchronisation des données**: Les service workers peuvent être utilisés pour synchroniser des données en arrière-plan lorsque l'appareil est en ligne. Par exemple, sauvegarder des brouillons de messages lorsque la connexion Internet est instable et les envoyer une fois que la connexion est rétablie.
+
+5. **Gestion des erreurs**: Ils peuvent être utilisés pour gérer les erreurs de réseau ou de serveur de manière transparente pour l'utilisateur, en affichant des pages d'erreur personnalisées ou en tentant de récupérer les données.
+
+6. **Préchargement de ressources**: Les service workers peuvent précharger des ressources importantes pour améliorer les performances, comme les pages suivantes dans une application de navigation ou les images sur une page.
+
+En résumé, les service workers offrent des fonctionnalités puissantes pour améliorer les performances, la fiabilité et l'expérience utilisateur des applications web, en particulier dans les scénarios où la **connectivité réseau est limitée ou instable**.
+
 
 https://developers.google.com/web/fundamentals/primers/service-workers
 
@@ -11,10 +28,10 @@ https://developers.google.com/web/fundamentals/primers/service-workers
 
 Idéal pour : tout ce que vous considérez comme statique par rapport à une "version" particulière de votre site. Vous devriez les avoir mis en cache dans l'événement d'installation, vous pouvez donc compter sur leur présence. … bien que vous n'ayez pas souvent besoin de gérer ce cas spécifiquement, le cache, en se rabattant sur le réseau, le couvre.
 
+Si aucune correspondance n'est trouvée dans le cache, la réponse ressemblera à une erreur de connexion.
+
 ```javascript
 self.addEventListener('fetch', function (event) {
-  // If a match isn't found in the cache, the response
-  // will look like a connection error
   event.respondWith(caches.match(event.request));
 });
 ```
@@ -26,8 +43,6 @@ Idéal pour : les choses qui n'ont pas d'équivalent hors ligne, comme les pings
 ```javascript
 self.addEventListener('fetch', function (event) {
   event.respondWith(fetch(event.request));
-  // or simply don't call event.respondWith, which
-  // will result in default browser behavior
 });
 ```
 
@@ -44,11 +59,11 @@ self.addEventListener('fetch', function (event) {
     caches
       .match(event.request)
       .then(function (response) {
-        // Fall back to network
+        // Revenir au réseau
         return response || fetch(event.request);
       })
       .catch(function () {
-        // If both fail, show a generic fallback:
+        // Si les deux échouent, affichez une solution de secours générique :
         return caches.match('/offline.html');
         // However, in reality you'd have many different
         // fallbacks, depending on URL and headers.

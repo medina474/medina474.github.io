@@ -4,6 +4,11 @@ date: 2022-05-03T15:18:26+01:00
 draft: false
 ---
 
+Onsen UI est un framework Javascript qui permet de réaliser des applications web ou hybrides très facilement.
+
+Onsen UI peut s'utiliser avec du javascript classique, avec Angular, VueJS ou ReactJS
+
+
 ### Les éléments Onsen-UI
 
 En html 5 il est possible de déclarer ses propres éléments et balises. C'est ce qui est fait avec OnsenUI qui définit un bon nombre de nouveau élément combinés avec le CSS et le javascript.

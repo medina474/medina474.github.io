@@ -33,10 +33,10 @@ TP : 21h : 18 + 3 (saé)
 
 ## Cours
 
-- [Applications natives](native/index.html)
-- [Compilation cross plateforme](xplatform/index.html)
-- [Applications hybrides](hybride/index.html)
-- [Progressive Web App](pwa/index.html)
+- [Applications natives](applications-natives)
+- [Compilation cross plateforme](xplatform)
+- [Applications hybrides](hybride)
+- [Progressive Web App](pwa)
 
 <!--
 ## Travaux dirigés
