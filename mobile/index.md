@@ -36,7 +36,7 @@ TP : 21h : 18 + 3 (saé)
 - [Applications natives](applications-natives)
 - [Compilation cross plateforme](xplatform)
 - [Applications hybrides](applications-hybrides)
-- [Progressive Web App](progressise-web-app)
+- [Progressive Web App](progressive-web-app)
 
 <!--
 ## Travaux dirigés
@@ -45,4 +45,3 @@ TP : 21h : 18 + 3 (saé)
 
 ## Travaux pratiques
 - [Travaux pratiques](progressive-web-app/travaux-pratiques)
-

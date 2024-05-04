@@ -2,7 +2,7 @@
 title: Manifest Progressive Web App
 ---
 
-Le fichier manifest fournit des informations sur l'application, telles que son nom, ses icônes, ses couleurs, etc., permettant ainsi à l'utilisateur de l'ajouter à l'écran d'accueil de son appareil.
+> Le fichier manifest fournit des informations sur l'application, telles que son nom, ses icônes, ses couleurs, etc., permettant ainsi à l'utilisateur de l'ajouter à l'écran d'accueil de son appareil.
 
 Créer un fichier manifest.json à la racine de votre site
 

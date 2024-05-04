@@ -1,5 +1,9 @@
 blockquote {
 
+  padding: 1em;
+  border-width: 1px 1px 1px 0.25em;
+  border-color: #000;
+
   &.objectif {
     color: #2160c4;
     border-color: #3273dc;

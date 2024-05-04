@@ -5,7 +5,6 @@
 // container with .markdown-body on it should render generally well. It also
 // includes some GitHub Flavored Markdown specific styling (like @mentions)
 .markdown-body {
-  font-family: $body-font;
   font-size: $h4-size;
   line-height: $body-line-height;
   word-wrap: break-word;
@@ -77,9 +76,7 @@
   }
 
   blockquote {
-    padding: 0 1em;
-    color: $gray-500;
-    border-left: 0.25em solid lighten($gray-300, 5%);
+    
 
     > :first-child {
       margin-top: 0;
