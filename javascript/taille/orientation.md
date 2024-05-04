@@ -20,7 +20,7 @@ Media queries
 function Load(evt)
 {
   let i = 0;
-  let operators = document.querySelectorAll(".token.operator");
+  let operators = document.querySelectorAll("code .o");
   operators[i++].nextSibling.textContent = ` "${window.screen.orientation.type}"`;
   operators[i++].nextSibling.textContent = ` ${window.screen.orientation.angle}°`;
   if (evt.matches) { console.log(evt); }
@@ -28,7 +28,7 @@ function Load(evt)
 
 window.addEventListener("load", Load);
 window.matchMedia("(orientation: portrait)").addListener(evt => {
-  let operators = document.querySelectorAll(".token.operator");
+  let operators = document.querySelectorAll("code .o");
   operators[3].nextSibling.textContent = ` ${evt.matches}`;
 });
 </script>

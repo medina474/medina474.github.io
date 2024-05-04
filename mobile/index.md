@@ -2,7 +2,7 @@
 title: R4.A.11 Développement pour applications mobiles
 ---
 
-> L’objectif de cette ressource est de découvrir ***des techniques*** de développement mobile.
+> **Objectif :** découvrir ***des techniques*** de développement mobile.
 {: .objectif}
 
 ### Savoirs de référence étudiés
@@ -19,7 +19,7 @@ title: R4.A.11 Développement pour applications mobiles
 
 ### SAÉ au sein desquelles la ressource peut être mobilisée et combinée :
 
-SAÉ 4.Real.01 | Développement d’une application complexe
+SAÉ 4.Real.01 : Développement d’une application complexe
 
 ### Mots clés :
 

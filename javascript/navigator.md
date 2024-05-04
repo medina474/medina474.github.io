@@ -110,7 +110,7 @@ navigator.connectionSpeed=;
   window.addEventListener("load",
     function (event) {
 			let i = 0;
-  		let operators = document.querySelectorAll(".token.operator");
+  		let operators = document.querySelectorAll("code .o");
 
       operators[i++].nextSibling.textContent  = ` "${navigator.userAgent}"`;
 			operators[i++].nextSibling.textContent  = ` "${navigator.appName}"`;

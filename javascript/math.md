@@ -140,7 +140,7 @@ Math.imul(3, 4) = ;
 function Load()
 {
   let i = 0;
-  let operators = document.querySelectorAll(".token.operator");
+  let operators = document.querySelectorAll("code .o");
 
   operators[i++].nextSibling.textContent  = ` ${Number.NaN}`;
   operators[i++].nextSibling.textContent  = ` ${Number.NEGATIVE_INFINITY}`;

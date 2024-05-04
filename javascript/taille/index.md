@@ -208,7 +208,7 @@ function Load()
   console.log(window.screen);
 
   let i = 0;
-  let operators = document.querySelectorAll(".token.operator");
+  let operators = document.querySelectorAll("code .o");
   let message;
 
   operators[i++].nextSibling.textContent  = ` ${window.screen.top}px`;
@@ -277,7 +277,7 @@ function Load()
 }
 
 function Scroll() {
-  let operators = document.querySelectorAll(".token.operator");
+  let operators = document.querySelectorAll("code .o");
   let elt = document.querySelector("#div1");
   operators[19].nextSibling.textContent = ` ${window.scrollY}px`;
   operators[20].nextSibling.textContent = ` ${window.scrollX}px`;
