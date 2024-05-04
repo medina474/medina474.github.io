@@ -6,9 +6,6 @@ title: Navigator
 navigator.userAgent = ;
 navigator.appName = ;
 navigator.appCodeName = ;
-```
-
-```javascript
 navigator.appVersion = ;
 navigator.appMinorVersion = ;
 ```
@@ -17,12 +14,11 @@ navigator.appMinorVersion = ;
 navigator.buildID = ;
 ```
 
+Renvoie le numéro de build du navigateur. N'est plus utilisé. Dans les navigateurs modernes, cette propriété renvoie désormais un horodatage fixe comme mesure de confidentialité, 20181001000000 à partir de Firefox 64.
+
 ```javascript
 navigator.product = ;
 navigator.productSub = ;
-```
-
-```javascript
 navigator.vendor = ;
 navigator.vendorSub = ;
 ```
