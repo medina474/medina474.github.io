@@ -1,5 +1,4 @@
 ---
-
 title: Formulaires
 ---
 
@@ -28,7 +27,7 @@ title: Formulaires
   <option>poire</option>
 </select>
 
- <select>
+<select>
   <optgroup label="Bourgogne">
     <option value="volvo">Volvo</option>
     <option value="saab">Saab</option>
@@ -42,11 +41,11 @@ title: Formulaires
 <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
 
 <datalist id="ice-cream-flavors">
-    <option value="Chocolate">
-    <option value="Coconut">
-    <option value="Mint">
-    <option value="Strawberry">
-    <option value="Vanilla">
+  <option value="Chocolate">
+  <option value="Coconut">
+  <option value="Mint">
+  <option value="Strawberry">
+  <option value="Vanilla">
 </datalist>
 
 ## Champs date

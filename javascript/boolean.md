@@ -2,13 +2,16 @@
 title: Booléen
 ---
 
-<pre><code>false</pre></code>
+<pre><code>false
+```
 <script>if (false) document.write('vrai'); else document.write('faux');</script>
 
-<pre><code>0</pre></code>
+<pre><code>0
+```
 <script>if (0) document.write('vrai'); else document.write('faux');</script>
 
-<pre><code>"0"</pre></code>
+<pre><code>"0"
+```
 <script>if ("0") document.write('vrai'); else document.write('faux');</script>
 
 <script>document.write(false == "0.0");</script>

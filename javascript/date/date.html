@@ -74,10 +74,12 @@
 </script>
 
 
-<pre><code class="javascript">date.toLocaleDateString();</pre></code>
+<pre><code class="javascript">date.toLocaleDateString();
+```
 <script>document.write(date.toLocaleDateString());</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });
+```
 <script>document.write(date.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" }));</script><br>
 
 
@@ -98,7 +100,8 @@ Les implémentations ont pour obligation de supporter au minimum les ensembles s
 
 <h3>Jour de la semaine</h3>	
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ weekday: "long" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ weekday: "long" });
+```
 <div class="materiel" id="weekday_long">
     <div>
         { weekday: "long" } -> 
@@ -108,7 +111,8 @@ Les implémentations ont pour obligation de supporter au minimum les ensembles s
 </div>  
 
    
-<pre><code class="javascript">date.toLocaleDateString(undefined, { weekday: "short" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { weekday: "short" });
+```
 <div class="materiel" id="weekday_short">
     <div>
         { weekday: "short" } -> 
@@ -117,7 +121,8 @@ Les implémentations ont pour obligation de supporter au minimum les ensembles s
     </div>
 </div>  
     
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ weekday: "narrow" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ weekday: "narrow" });
+```
 <div class="materiel" id="weekday_narrow">
     <div>
         { weekday: "narrow" } -> 
@@ -144,52 +149,64 @@ Les implémentations ont pour obligation de supporter au minimum les ensembles s
 
 <h3>Jour</h3>
 
-<pre><code class="javascript">date.toLocaleDateString("fr-FR",{ day: "2-digit" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("fr-FR",{ day: "2-digit" });
+```
 <script>document.write(date.toLocaleDateString("fr-FR",{ day: "2-digit" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString("fr-FR", { day: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("fr-FR", { day: "numeric" });
+```
 <script>document.write(date.toLocaleDateString("fr-FR", { day: "numeric" }));</script><br>
 
 <hr>
 
 <h3>Mois</h3>
  
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "narrow" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "narrow" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ month: "narrow" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined, { month: "short" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { month: "short" });
+```
 <script>document.write(date.toLocaleDateString(undefined, { month: "short" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "long" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "long" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ month: "long" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "2-digit" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ month: "2-digit" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ month: "2-digit" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined, { month: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { month: "numeric" });
+```
 <script>document.write(date.toLocaleDateString(undefined, { month: "numeric" }));</script><br>
 
 <hr>
 
 <h3>Année</h3>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ year: "2-digit" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ year: "2-digit" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ year: "2-digit" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined, { year: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { year: "numeric" });
+```
 <script>document.write(date.toLocaleDateString(undefined, { year: "numeric" }));</script><br>
 
 <hr>
 
 <h3>Ère</h3>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ era: "narrow" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ era: "narrow" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ era: "narrow" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined, { era: "short" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { era: "short" });
+```
 <script>document.write(date.toLocaleDateString(undefined, { era: "short" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ era: "long" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ era: "long" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ era: "long" }));</script><br>
 
 <hr>
@@ -197,57 +214,69 @@ Les implémentations ont pour obligation de supporter au minimum les ensembles s
 <h3>Heure</h3>
 
 
-<pre><code class="javascript">date.toLocaleTimeString("fr",{ hour: "2-digit" });</pre></code>
+<pre><code class="javascript">date.toLocaleTimeString("fr",{ hour: "2-digit" });
+```
 <script>document.write(date.toLocaleTimeString("fr-FR", {hour: '2-digit' }));</script><br>
 
-<pre><code class="javascript">date.toLocaleTimeString("fr", { hour: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleTimeString("fr", { hour: "numeric" });
+```
 <script>document.write(date.toLocaleTimeString("fr-FR", { hour: "numeric" }));</script><br>
 
 <hr>
 
 <h3>Minute</h3>
 
-<pre><code class="javascript">date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "2-digit" });</pre></code>
+<pre><code class="javascript">date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "2-digit" });
+```
 <script>document.write(date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "2-digit" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric" });
+```
 <script>document.write(date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric" }));</script><br>
 
 <hr>
 
 <h3>Seconde</h3>
 
-<pre><code class="javascript">date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "numeric", second: "2-digit" });</pre></code>
+<pre><code class="javascript">date.toLocaleTimeString(undefined,{ hour: "numeric", minute: "numeric", second: "2-digit" });
+```
 <script>document.write(date.toLocaleTimeString(undefined,{ second: "2-digit" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric", second: "numeric" });</pre></code>
+<pre><code class="javascript">date.toLocaleTimeString(undefined, { hour: "numeric", minute: "numeric", second: "numeric" });
+```
 <script>document.write(date.toLocaleTimeString(undefined, { second: "numeric" }));</script><br>
 
 <hr>
 
 <h3>timeZoneName</h3>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined,{ timeZoneName: "short" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined,{ timeZoneName: "short" });
+```
 <script>document.write(date.toLocaleDateString(undefined,{ timeZoneName: "short" }));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString(undefined, { timeZoneName: "long" });</pre></code>
+<pre><code class="javascript">date.toLocaleDateString(undefined, { timeZoneName: "long" });
+```
 <script>document.write(date.toLocaleDateString(undefined, { timeZoneName: "long" }));</script><br>
 
 <hr> 
 
 
-<pre><code class="javascript">date.toLocaleDateString("en-US");</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("en-US");
+```
 <script>document.write(date.toLocaleDateString("en-US", options));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString("en-GB");</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("en-GB");
+```
 <script>document.write(date.toLocaleDateString("en-GB", options));</script><br>
 
-<pre><code class="javascript">date.toLocaleDateString("en-AU");</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("en-AU");
+```
 <script>document.write(date.toLocaleDateString("en-AU", options));</script><br>
 
 <hr>
 
-<pre><code class="javascript">date.toLocaleDateString("ja-JP");</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("ja-JP");
+```
 <script>document.write(date.toLocaleDateString("ja-JP", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
 
 <script>document.write(date.toLocaleDateString("ar-SA", { weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
@@ -257,7 +286,8 @@ Les implémentations ont pour obligation de supporter au minimum les ensembles s
 
 <h2>Calendrier</h2>
 
-<pre><code class="javascript">date.toLocaleDateString("ja-JP-u-ca-japanese");</pre></code>
+<pre><code class="javascript">date.toLocaleDateString("ja-JP-u-ca-japanese");
+```
 <script>document.write(date.toLocaleDateString("ja-JP-u-ca-japanese", { era: "long", weekday: "long", year: "numeric", month: "short", day: "numeric" }));</script><br>
 Année (年) 28 de l'ère Heisei (平成), mois 9 (月), jour 7 (日), mercredi (水曜日)
 

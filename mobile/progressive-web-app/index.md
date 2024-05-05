@@ -3,7 +3,8 @@ title: Progressive Web App
 ---
 
 
-> Objectif : Accéder à une application hybride directement depuis le navigateur du terminal sans passer par un outil tiers.
+> **Objectif :** Accéder à une application hybride directement depuis le navigateur du terminal sans passer par un outil tiers.
+{: .objectif}
 
 Accéder à internet sur un appareil mobile, c’est soit ouvrir un site web via un navigateur, soit télécharger une application sur sa tablette ou son smartphone. Dans le premier cas, et à  condition que le site en question ait été conçu en **responsive design**, il y a de fortes chances qu’il mette du temps à se charger. Or une page qui met plus de 3 secondes à apparaître sur un écran est abandonnée par plus de la moitié des internautes.
 

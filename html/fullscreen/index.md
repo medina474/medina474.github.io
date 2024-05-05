@@ -56,6 +56,7 @@ document.exitFullscreen();
 ## Préfixes
 
 ### Mozilla (Firefox) : 
+
 <button onclick="document.documentElement.mozRequestFullScreen()">Passer en plein écran</button>
 <button onclick="document.mozCancelFullScreen()">Quitter le plein écran</button><br>
 
@@ -77,6 +78,7 @@ document.addEventListener("mozfullscreenerror", function() {
 </script>
 
 ### Webkit (Chrome, Opera, Safari) : 
+
 <button onclick="document.documentElement.webkitRequestFullscreen()">Passer en plein écran</button>
 <button onclick="document.webkitExitFullscreen()">Quitter le plein écran</button><br>
 <span id="webkit"></span>
@@ -92,6 +94,7 @@ document.addEventListener("mozfullscreenerror", function() {
 	</script>
 
 ### Microsoft (10 &le; Internet Explorer &le; 11) :
+
 <button onclick="document.documentElement.msRequestFullscreen()">Passer en plein écran</button>
 <button onclick="document.msExitFullscreen()">Quitter le plein écran</button><br>
 <span id="ms"></span><br>
@@ -114,7 +117,7 @@ div:fullscreen { }
 
 
 
-    backdrop
+backdrop
 <script>
   function isItemSupported(item, isFunc, ref){
 	value = eval(item);

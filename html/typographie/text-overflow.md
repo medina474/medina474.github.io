@@ -1,45 +1,44 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Typographie : taille</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../../vendor/highlight.js/styles/default.css">
-    <script src="../../../vendor/highlight.js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <style>
-        p { 
-            border: 1px solid black;
-            width: 100px;
-            height: 124px;
-        }
-      </style>
-</head>
-<body>
+<style>
+p { 
+    border: 1px solid black;
+    width: 100px;
+    height: 124px;
+}
+</style>
 
-<h2>text-overflow</h2>
 
-<pre><code>text-overflow:clip</pre></code>
+
+```css
+text-overflow:clip
+```
 
 <p style="overflow: hidden; text-overflow:clip">Le masseur-kinésithérapeute est un spécialiste de la rééducation.<br>
 La pharmacovigilance enregistre et évalue les effets secondaires des médicaments.</p>
 
-<pre><code>text-overflow:ellipsis</pre></code>
+```css
+text-overflow:ellipsis
+```
 
 <p style="overflow: hidden; text-overflow:ellipsis">Le masseur-kinésithérapeute est un spécialiste de la rééducation.<br>
 La pharmacovigilance enregistre et évalue les effets secondaires des médicaments.</p>
 
-<pre><code>text-overflow:'/..'</pre></code>
+```css
+text-overflow:'/..'
+```
 
 <p style="overflow: hidden; text-overflow:'/..'">Le masseur-kinésithérapeute est un spécialiste de la rééducation.<br>
 La pharmacovigilance enregistre et évalue les effets secondaires des médicaments.</p>
 
-<pre><code>text-overflow:''</pre></code>
+```css
+text-overflow:''
+```
 
 <p style="overflow: hidden; text-overflow:''">Le masseur-kinésithérapeute est un spécialiste de la rééducation.<br>
 La pharmacovigilance enregistre et évalue les effets secondaires des médicaments.</p>
 
-<pre><code>text-overflow:ellipsis ellipsis</pre></code>
+```css
+text-overflow:ellipsis ellipsis
+```
 
 <p style="overflow: hidden; height: auto; text-overflow:clip ellipsis">Le masseur-kinésithérapeute est un spécialiste de la rééducation.<br>
 <span dir="rtl">ובתבומצפונובמצפון</span></p>
