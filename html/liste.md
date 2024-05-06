@@ -307,7 +307,7 @@ title: Listes
 
 ```html
 <ol start='100'>
-	```
+```
 
 <ol start='100'>
 	<li>France</li>
@@ -319,7 +319,7 @@ title: Listes
 
 ```html
 <ol reversed>
-	```
+```
 
 <ol reversed>
 	<li>France</li>
@@ -331,7 +331,7 @@ title: Listes
 
 ```html
 <ol>
-	```
+```
 
 <ol>
 	<li value='2'>France</li>
@@ -341,7 +341,4 @@ title: Listes
 	<li>U.S.A.</li>
 </ol>
 
-<a href="listes/liste-ord-roman.html"></a>
-
-</body>
-</html>
+<a href="listes/liste-ord-roman"></a>
