@@ -283,6 +283,7 @@
 <a href="listes/liste-ord-roman">roman</a>
 
 
-[Listes non ordonnées](listes-non-ordonnées)
+[Listes non ordonnées](liste-non-ordonnée)
 [Listes ordonnées](liste-ordonnee.html)
-[Listes de définition][liste-definition.html]
+[Listes de définition][definition]
+[Position](position)

@@ -1,3 +1,7 @@
+---
+title: liste non ordonnée
+---
+
 Une liste non ordonnée utilise la balise ul (unordered list) pour la liste et la balise li pour les éléments.
 
 ```html
@@ -86,3 +90,31 @@ list-style-type: triangle;
   <li>États-Unis d'Amérique</li>
   <li>Royaume-Uni de Grande-Bretagne et d'Irlande</li>
 </ul>
+
+```css
+list-style-type: "\25b8"
+```
+
+<ul style='list-style-type: "\25b8"'>Pays
+    <li>France</li>
+    <li>Mexique</li>
+    <li>Allemagne</li>
+    <li>Espagne</li>
+    <li>États-Unis d'Amérique</li>
+    <li>Royaume-Uni de Grande-Bretagne et d'Irlande</li>
+</ul>
+
+```css
+list-style-type: symbols(repeating "○" "●")
+```
+
+<ul style='list-style-type: symbols(repeating "○" "●")'>Pays
+    <li>France</li>
+    <li>Mexique</li>
+    <li>Allemagne</li>
+    <li>Espagne</li>
+    <li>États-Unis d'Amérique</li>
+    <li>Royaume-Uni de Grande-Bretagne et d'Irlande</li>
+</ul>
+
+[MDN Web Docs.](https://developer.mozilla.org/fr/docs/Web/HTML/Element/ul)
