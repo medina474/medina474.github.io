@@ -33,65 +33,8 @@
 <p>This is a paragraph before a <strong>definition</strong> list (<code>dl</code>). In principle, such a list should consist of <em>terms</em> and associated definitions. But many authors use <code>dl</code> elements for fancy "layout" things. Usually the effect is not <em>too</em> bad, if you design user style sheet rules for <code>dl</code>which are suitable for real definition lists.</p>
 <dl><dt>recursion</dt><dd>see recursion</dd><dt>recursion, indirect</dt><dd>see indirect recursion</dd><dt>indirect recursion</dt><dd>see recursion, indirect</dd><dt>term</dt><dd>a word or other expression taken into specific use in a well-defined meaning, which is often defined rather rigorously, even formally, and may differ quite a lot from an everyday meaning</dd></dl>
 
-```html
-<ul style='list-style-type: none'>
-```
 
-<ul style="list-style-type: none;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
-</ul>
 
-```html
-<ul style='list-style-type: disc'>
-```
-
-<ul style="list-style-type: disc;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
-</ul>
-
-```html
-<ul style='list-style-type: circle'>
-```
-
-<ul style="list-style-type: circle;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
-</ul>
-
-```html
-<ul style='list-style-type: square'>
-```
-
-<ul style="list-style-type: square;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
-</ul>
-
-```html
-<ul style='list-style-type: triangle'>
-```
-
-<ul style="list-style-type: triangle;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
-</ul>
 
 <h2>Listes ordonnées</h2>
 
@@ -102,11 +45,11 @@
 ```
 
 <ol style="list-style-type: decimal;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -114,11 +57,11 @@
 ```
 
 <ol style="list-style-type: decimal-leading-zero;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -126,11 +69,11 @@
 ```
 
 <ol style="list-style-type: lower-alpha;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -138,11 +81,11 @@
 ```
 
 <ol style="list-style-type: lower-latin;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -150,11 +93,11 @@
 ```
 
 <ol style="list-style-type: upper-alpha;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -162,11 +105,11 @@
 ```
 
 <ol style="list-style-type: upper-latin;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 <h3>Romain</h3>
@@ -176,11 +119,11 @@
 ```
 
 <ol style="list-style-type: lower-roman;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -188,11 +131,11 @@
 ```
 
 <ol style="list-style-type: upper-roman;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -200,11 +143,11 @@
 ```
 
 <ol style="list-style-type: lower-greek;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -212,11 +155,11 @@
 ```
 
 <ol style="list-style-type: armenian;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -258,11 +201,11 @@
 ```
 
 <ol style="list-style-type: hiragana">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -270,11 +213,11 @@
 ```
 
 <ol style="list-style-type: hiragana-iroha">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -282,11 +225,11 @@
 ```
 
 <ol style="list-style-type: katakana">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -294,11 +237,11 @@
 ```
 
 <ol style="list-style-type: katakana-iroha">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -306,11 +249,11 @@
 ```
 
 <ol start='100'>
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -318,11 +261,11 @@
 ```
 
 <ol reversed>
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -330,16 +273,16 @@
 ```
 
 <ol>
-	<li value='2'>France</li>
-	<li value='6'>Mexique</li>
-	<li value='4'>Allemagne</li>
-	<li value='7'>Russie</li>
-	<li>U.S.A.</li>
+  <li value='2'>France</li>
+  <li value='6'>Mexique</li>
+  <li value='4'>Allemagne</li>
+  <li value='7'>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 <a href="listes/liste-ord-roman">roman</a>
 
 
-[Listes non ordonnées](liste.html)
+[Listes non ordonnées](listes-non-ordonnées)
 [Listes ordonnées](liste-ordonnee.html)
 [Listes de définition][liste-definition.html]
