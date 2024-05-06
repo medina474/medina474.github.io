@@ -1,5 +1,5 @@
 <script>
-	function Ctrl($scope) 
+	function Ctrl($scope)
 	{
 		$scope.test = function(q, r) {
 			if (q==r) $scope.score++;
@@ -31,7 +31,7 @@
         					{id:'q2.4', intitule: '<rem>code html</rem>' },
         					{id:'q2.5', intitule: '<comment>code html</comment>' }
         				]
-    	    
+
     	},
     	{
         	'id':   'q3',
@@ -239,7 +239,9 @@
 <div ng-repeat="question in questions" ng-show="q==$index">
 <p>{{$index+1}} / {{questions.length}} {{question.question}}</p>
 	<div ng-repeat="reponse in question.reponses">
-		<input type="radio" name="q{{$parent.$index}}" ng-model="question.id" ng-value="reponse.id" ng-disabled="question.id!='{{question.id}}'" ng-click="test(question.correct, reponse.id)"><label><pre><code>{{reponse.intitule}}</code></pre></label>
+		<input type="radio" name="q{{$parent.$index}}" ng-model="question.id" ng-value="reponse.id" ng-disabled="question.id!='{{question.id}}'" ng-click="test(question.correct, reponse.id)"><label><pre><code>{{reponse.intitule}}
+```
+</label>
 	</div>
 	<div class="commentaire error" ng-show="question.id!='{{question.id}}' && question.id==question.correct">Correct</div>
 	<div class="commentaire success" ng-show="question.id!='{{question.id}}' && question.id!=question.correct">Faux : {{question.commentaire}}</div>
@@ -248,4 +250,3 @@
 		<a href="javascript:void()" class="btn" ng-click="$parent.q=$index+1">Suivant</a>
 	</div>
 </div>
-

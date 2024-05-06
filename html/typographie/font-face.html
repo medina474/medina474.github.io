@@ -28,12 +28,14 @@
 
 <p>Une <strong>fonte de caractères</strong> (en: font) est un ensemble de symboles graphiques, appelés <strong>glyphes</strong>, répertoriant tous les caractères dans une <strong>police d'écriture</strong> (en: typeface), à la même graisse, au même style et au même corps.</p>
 
-<p>Une <strong>police d’écriture</strong> regroupe toutes les fontes d’une même famille (en: font family).<br> 
+<p>Une <strong>police d’écriture</strong> regroupe toutes les fontes d’une même famille (en: font family).<br>
 Ainsi, Arial est une police d’écriture. Arial romain condensé gras 10 points est une fonte, et Arial italique 12 points est une autre fonte.</p>
 
 <h2>Famille de fonte</h2>
 
-<pre><code>font-family: Helvetica, Arial, sans-serif;</code></pre>
+<pre><code>font-family: Helvetica, Arial, sans-serif;
+```
+
 
 <p>La propriété font-family liste un ensemble de police qu'il faut utiliser dans l'ordre de préférence. Si la première police n'est pas installée sur la machine, le navigateur va tenté d'utiliser la seconde, puis la troisième et ainsi de suite. Il est préférable de terminer la liste par une police générique.</p>
 
@@ -41,7 +43,7 @@ Ainsi, Arial est une police d’écriture. Arial romain condensé gras 10 points
 Seules les 3 premières sont véritablement pertinentes.</p>
 
 <h3>Police à empattements</h3>
-<p>Une <strong>police à empattements</strong> (en: serif) est une police dont les caractères possèdent des petites extensions à leurs extrémités. 
+<p>Une <strong>police à empattements</strong> (en: serif) est une police dont les caractères possèdent des petites extensions à leurs extrémités.
 Les empattements étaient initiallelement des défauts laissés par les outils, dans la gravure des caractères. Les polices avec empattements permettent de mieux distinguer chaque lettre et offrent une meilleure continuité dans la lecture en formant une ligne de base imaginaire. On privilégie les polices avec empattements sur les support imprimés, les gouttes d'encre liquide trouve la place de s'y étaler, c'était un moyen de contenir et de maîtriser les bavures inévitables.</p>
 <p>Les polices à empattement sont : Garamond (par Claude Garamont en 1540), Baskerville (par John Baskerville en 1725), Times New Roman (par Stanley Morison pour le journal The Times en 1931), Palatino (par Hermann Zapf en 1950), Georgia (par Matthew Carter pour Microsoft en 1993), Droid Serif (par Steve Matteson en 2007).</p>
 
@@ -62,26 +64,36 @@ Les empattements étaient initiallelement des défauts laissés par les outils, 
 
 <p>Les <strong>polices fantaisistes</strong> (en : fantasy) sont des polices décoratives qui donnent des effets particuliers. Elles sont utilisées principalement pour mettre en valeur les titres.</p>
 
-<pre><code>&lt;p style="font-family: serif"&gt;</code></pre>
+<pre><code>&lt;p style="font-family: serif"&gt;
+```
+
 <p style="font-family: serif;">Il n'avança pas d'un pas vers moi, il restait là, semblable à une statue, comme si le premier geste qu'il avait eu pour m'accueillir l'avait pétrifié.</p>
 
-<pre><code>&lt;p style="font-family: sans-serif"&gt;</code></pre>
+<pre><code>&lt;p style="font-family: sans-serif"&gt;
+```
+
 <p style="font-family: sans-serif;">Il n'avança pas d'un pas vers moi, il restait là, semblable à une statue, comme si le premier geste qu'il avait eu pour m'accueillir l'avait pétrifié.</p>
 
-<pre><code>&lt;p style="font-family: monospace"&gt;</code></pre>
+<pre><code>&lt;p style="font-family: monospace"&gt;
+```
+
 <p style="font-family: monospace;">Il n'avança pas d'un pas vers moi, il restait là, semblable à une statue, comme si le premier geste qu'il avait eu pour m'accueillir l'avait pétrifié.</p>
 
-<pre><code>&lt;p style="font-family: cursive"&gt;</code></pre>
+<pre><code>&lt;p style="font-family: cursive"&gt;
+```
+
 <p style="font-family: cursive;">Il n'avança pas d'un pas vers moi, il restait là, semblable à une statue, comme si le premier geste qu'il avait eu pour m'accueillir l'avait pétrifié.</p>
 
-<pre><code>&lt;p style="font-family: fantasy"&gt;</code></pre>
+<pre><code>&lt;p style="font-family: fantasy"&gt;
+```
+
 <p style="font-family: fantasy;">Il n'avança pas d'un pas vers moi, il restait là, semblable à une statue, comme si le premier geste qu'il avait eu pour m'accueillir l'avait pétrifié.</p>
 
 <h2>Polices de caractères par défaut du navigateur</h2>
 
 <p>Le navigateur définit par défaut 2 types de polices de caractères : une proportionnelle et une de largeur fixe.</p>
 
-<p>Dans le cas de la police proportionnelle, le navigateur définit deux variantes de polices : une police à empattement et une police sans empattement.</p> 
+<p>Dans le cas de la police proportionnelle, le navigateur définit deux variantes de polices : une police à empattement et une police sans empattement.</p>
 
 <p>Par défaut les navigateurs définissent la police de caractères proportionnelle comme étant la police à empattement. La taille de la police de caractère proportionnelle est de 16 pixels ou 12 points et celles de largeur fixe 13 pixels.</p>
 
@@ -94,7 +106,7 @@ Les empattements étaient initiallelement des défauts laissés par les outils, 
 
 <h3>Woff 2</h3>
 
-    
+
 Police Economica de Vicente Lamónaca
 <p class="woff2">Il n'avança pas d'un pas vers moi, il restait là, semblable à une statue, comme si le premier geste qu'il avait eu pour m'accueillir l'avait pétrifié. Pourtant, à peine avais-je franchi le seuil qu'il vint vers moi, se précipitant presque, et de sa main tendue saisit la mienne avec une force qui me fit frémir de douleur — d'autant plus que cette main était aussi froide que de la glace ; elle ressemblait davantage à la main d'un mort qu'à celle d'un vivant.</p>
 

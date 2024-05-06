@@ -12,16 +12,24 @@
 
 <form action="" method="POST">
 
-<pre><code>&lt;input type='text'&gt;</code></pre>
+<pre><code>&lt;input type='text'&gt;
+```
+
 <input type='text'>
 
-<pre><code>&lt;input type='text'&gt;</code></pre>
+<pre><code>&lt;input type='text'&gt;
+```
+
 <input type='text' pattern='[0-9,]*'>
 
-<pre><code>&lt;input type='text'&gt;</code></pre>
+<pre><code>&lt;input type='text'&gt;
+```
+
 <input type='text' pattern='\d*'>
 
-<pre><code>&lt;input type='text'&gt;</code></pre>
+<pre><code>&lt;input type='text'&gt;
+```
+
 <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
 
 
