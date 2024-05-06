@@ -1,26 +1,29 @@
-<!doctype html> 
-<html> 
-<head> 
+<!doctype html>
+<html>
+<head>
 	<meta charset="utf-8">
 	<title>Speech</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../assets/lib/highlight.js/default.css">
 	<script src="../../assets/lib/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-</head> 
-<body> 
+</head>
+<body>
 
-<pre><code class="javascript">
+```javascript
+
 var su = new SpeechSynthesisUtterance();
 su.lang = "fr";
 su.text = "Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ.";
 speechSynthesis.speak(su);
-</code></pre>
+
+```
+
 
 <p>
 Bientôt nous plongerons dans les froides ténèbres ;<br>
 Adieu, vive clarté de nos étés trop courts !<br>
-J'entends déjà tomber avec des chocs funèbres<br> 
+J'entends déjà tomber avec des chocs funèbres<br>
 Le bois retentissant sur le pavé des cours.<br>
 </p>
 
@@ -42,10 +45,10 @@ Sous les coups du bélier infatigable et lourd.<br>
 Il me semble, bercé par ce choc monotone,<br>
 Qu'on cloue en grande hâte un cercueil quelque part.<br>
 Pour qui ? - C'était hier l'été ; voici l'automne !<br>
-Ce bruit mystérieux sonne comme un départ.<br>  
+Ce bruit mystérieux sonne comme un départ.<br>
 </p>
 
-Charles Baudelaire 
+Charles Baudelaire
 
 <a href="javascript:lire()">lire</a>
 <a href="javascript:speechSynthesis.pause(su);">pause</a>
@@ -54,8 +57,8 @@ Charles Baudelaire
 <select id="voices">
 
 </select>
-    
-<script>  
+
+<script>
 var su = new SpeechSynthesisUtterance();
 
 function lire()
@@ -63,12 +66,12 @@ function lire()
   su.lang = "fr";
   su.text = document.getElementById("strophe3").textContent;
   speechSynthesis.speak(su);
-}     
+}
 
 function stop()
 {
   speechSynthesis.speak(su);
-}   
+}
 
 function liste()
 {
@@ -77,7 +80,7 @@ function liste()
 
   let elt = document.getElementById("voices");
 
-  for(voice of voices) 
+  for(voice of voices)
   {
     let option = document.createElement('option');
     option.textContent = `${voice.name} (${voice.lang})`;

@@ -2,15 +2,18 @@
 title: Booléen
 ---
 
-<pre><code>false
+```
+false
 ```
 <script>if (false) document.write('vrai'); else document.write('faux');</script>
 
-<pre><code>0
+```
+0
 ```
 <script>if (0) document.write('vrai'); else document.write('faux');</script>
 
-<pre><code>"0"
+```
+"0"
 ```
 <script>if ("0") document.write('vrai'); else document.write('faux');</script>
 

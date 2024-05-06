@@ -20,21 +20,27 @@
 
 <p>Retourne la luminosité ambiante en lux</p>
 
-<pre><code class="javascript">window.addEventListener('devicelight', function(devicelight) {
+```javascript
+window.addEventListener('devicelight', function(devicelight) {
     devicelight.value = <span id='devicelight.value'></span>;
     devicelight.min = <span id='devicelight.min'></span>;
     devicelight.max = <span id='devicelight.max'></span>;
 });
-</code></pre>
+
+```
+
 
 <h3>Light Level</h3>
 
 <p>Indique seulement 3 niveaux : normal, bright, ou dim</p>
 
-<pre><code class="javascript">window.addEventListener('lightlevel', function(lightlevel) {
+```javascript
+window.addEventListener('lightlevel', function(lightlevel) {
     lightlevel.value = <span id='lightlevel.value'></span>;
 });
-</code></pre>
+
+```
+
 
 <script language='javascript'>
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -46,15 +52,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementById('devicelight.max').innerHTML = devicelight.max;
         }, false);
     } else {
-        //document.write("ondevicelight Non supporté");   
+        //document.write("ondevicelight Non supporté");
     }
-    
+
     if ('onlightlevel' in window) {
 	    window.addEventListener('lightlevel', function(lightlevel) {
             document.getElementById('lightlevel.value').innerHTML = lightlevel.value;
         }, false);
     } else {
-        //document.write("onlightlevel Non supporté");   
+        //document.write("onlightlevel Non supporté");
     }
 });
 </script>
