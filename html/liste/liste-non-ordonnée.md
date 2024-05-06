@@ -55,7 +55,7 @@ ul { list-style-type: none; }
 ### Disque plein
 
 ```css
-list-style-type: disc;
+ul { list-style-type: disc; }
 ```
 
 <ul style='list-style-type: disc'>
@@ -70,7 +70,7 @@ list-style-type: disc;
 ### Cercle évidé
 
 ```css
-list-style-type: circle;
+ul { list-style-type: circle; }
 ```
 
 <ul style='list-style-type: circle'>
@@ -85,7 +85,7 @@ list-style-type: circle;
 ### Carré
 
 ```css
-list-style-type: square;
+ul { list-style-type: square; }
 ```
 
 <ul style='list-style-type: square'>
@@ -100,7 +100,7 @@ list-style-type: square;
 ### Triangle
 
 ```css
-list-style-type: triangle;
+ul { list-style-type: triangle; }
 ```
 
 <ul style="list-style-type: triangle;">
@@ -115,7 +115,7 @@ list-style-type: triangle;
 #### Alternative
 
 ```css
-list-style-type: "\25b8"
+ul { list-style-type: "\25b8" }
 ```
 
 <ul style='list-style-type: "\25b8"'>Pays
@@ -140,7 +140,7 @@ list-style-type: "\25b8"
 
 
 ```css
-list-style-type: symbols(repeating "○" "●")
+ul { list-style-type: symbols(repeating "○" "●"); }
 ```
 
 <ul style='list-style-type: symbols(repeating "○" "●")'>Pays
@@ -154,13 +154,13 @@ list-style-type: symbols(repeating "○" "●")
 
 
 <style>
-li::marker {
+ul.marker li::marker {
   color:red;
   font-size:112%;
 }
 </style>
 
-<ul style='list-style-type: symbols(symbolic "○" "●")'>Pays
+<ul class="marker" style='list-style-type: symbols(symbolic "○" "●")'>Pays
   <li>France</li>
   <li>Mexique</li>
   <li>Allemagne</li>
