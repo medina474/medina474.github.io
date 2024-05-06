@@ -6,7 +6,7 @@ title: Citation
 ## Citation longue
 
 ```html
-&lt;blockquote cite="http://www.b..."&gt;C’était un calmar ... chevelure des furies.&lt;/blockquote&gt;
+<blockquote cite="http://www.b...">C’était un calmar ... chevelure des furies.</blockquote>
 ```
 
 
@@ -21,7 +21,7 @@ L'attribut <code>cite</code> permet de spécifier une URL indiquant la source de
 Suite aux changements climatiques, les ouragans sont de plus en plus violents, et malheureusement <q>On peut braver les lois humaines, mais non résister aux lois naturelles.</q>
 
 ```html
-&lt;p&gt; ... et malheureusement &lt;q&gt;On peut braver ... lois naturelles.&lt;/q&gt;</code> ...&lt;/p&gt;</pre>
+<p> ... et malheureusement <q>On peut braver ... lois naturelles.</q></code> ...</p></pre>
 
 <p> L'élément permet d'inclure dans un texte une citation courte.</p>
 
@@ -31,27 +31,27 @@ Suite aux changements climatiques, les ouragans sont de plus en plus violents, e
 <p>Cet extrait provient de <cite>Vingt mille lieues sous les mers</cite> de Jules Verne.</p>
 
 ```html
-Cet extrait provient de  &lt;cite&gt;Vingt mille lieues sous les mers&lt;/cite&gt;
+Cet extrait provient de  <cite>Vingt mille lieues sous les mers</cite>
 ```
 
 
 <p>L'élément <code>cite</code> définit le titre d'un livre, d'une chanson, d'un film, ....</p>
 
 ```html
-&lt;figure&gt;
-    &lt;blockquote&gt;
+<figure>
+    <blockquote>
  "That monster custom, who all sense doth eat
- Of habit's devil," &lt;abbr title="et cetera"&gt;&c.&lt;/abbr&gt; not in Folio
+ Of habit's devil," <abbr title="et cetera">&c.</abbr> not in Folio
 
  "What a falling off was there !
  From me, whose love was of that dignity
  That it went hand in hand even with the vow
  I made to her in marriage, and to decline
  Upon a wretch."
-    &lt;/blockquote&gt;
-    &lt;footer&gt;
-        — &lt;cite class="title"&gt;Shakespeare manual&lt;/cite&gt; by &lt;cite class="author"&gt;Frederick Gard Fleay&lt;/cite&gt;, p19 (in Google Books)
-    &lt;/footer&gt;
+    </blockquote>
+    <footer>
+        — <cite class="title">Shakespeare manual</cite> by <cite class="author">Frederick Gard Fleay</cite>, p19 (in Google Books)
+    </footer>
 </figure>
 
 ```

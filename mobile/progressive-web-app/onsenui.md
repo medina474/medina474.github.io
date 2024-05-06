@@ -25,7 +25,7 @@ Onsenu UI est ce que appelle une **SPA** (Single Page Application). Tout ce pass
 <ons-navigator id="myNavigator" page="home.html" swipeable />
 ```
 
-L'élément *&lt;ons-navigator&gt;* gère une pile de pages. Il s'agit d'un type de navigation très courant dans les applications mobiles où une page est poussée au-dessus d'une autre à l'aide d'une animation de transition.
+L'élément *<ons-navigator>* gère une pile de pages. Il s'agit d'un type de navigation très courant dans les applications mobiles où une page est poussée au-dessus d'une autre à l'aide d'une animation de transition.
 
 Cet élément est invisible mais essentiel à la gestion du chargement et de l'affichage des pages.
 

@@ -1,21 +1,11 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Listes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/vendor/highlight.js/styles/default.css">
-	<script src="/vendor/highlight.js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
-
-<h2>Listes ordonnées</h2>
+---
+title: Listes ordonnées
+---
 
 <p>ol : ordered list</p>
 
 ```html
-&lt;ol style='list-style-type: decimal'&gt;
+<ol style='list-style-type: decimal'>
 ```
 
 
@@ -28,7 +18,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: decimal-leading-zero'&gt;
+<ol style='list-style-type: decimal-leading-zero'>
 ```
 
 
@@ -41,7 +31,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: lower-alpha'&gt;
+<ol style='list-style-type: lower-alpha'>
 ```
 
 
@@ -54,7 +44,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: lower-latin'&gt;
+<ol style='list-style-type: lower-latin'>
 ```
 
 
@@ -67,7 +57,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: upper-alpha'&gt;
+<ol style='list-style-type: upper-alpha'>
 ```
 
 
@@ -80,7 +70,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: upper-latin'&gt;
+<ol style='list-style-type: upper-latin'>
 ```
 
 
@@ -95,7 +85,7 @@
 <h3>Romain</h3>
 
 ```html
-&lt;ol style='list-style-type: lower-roman'&gt;
+<ol style='list-style-type: lower-roman'>
 ```
 
 
@@ -108,7 +98,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: upper-roman'&gt;
+<ol style='list-style-type: upper-roman'>
 ```
 
 
@@ -121,7 +111,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: lower-greek'&gt;
+<ol style='list-style-type: lower-greek'>
 ```
 
 
@@ -134,7 +124,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: armenian'&gt;
+<ol style='list-style-type: armenian'>
 ```
 
 
@@ -147,7 +137,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: georgian'&gt;
+<ol style='list-style-type: georgian'>
 ```
 
 
@@ -160,7 +150,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: hebrew'&gt;
+<ol style='list-style-type: hebrew'>
 ```
 
 
@@ -183,7 +173,7 @@
 <h3>Japonais</h3>
 
 ```html
-&lt;ol style='list-style-type: hiragana'&gt;
+<ol style='list-style-type: hiragana'>
 ```
 
 
@@ -196,7 +186,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: hiragana-iroha'&gt;
+<ol style='list-style-type: hiragana-iroha'>
 ```
 
 
@@ -209,7 +199,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: katakana'&gt;
+<ol style='list-style-type: katakana'>
 ```
 
 
@@ -222,7 +212,7 @@
 </ol>
 
 ```html
-&lt;ol style='list-style-type: katakana-iroha'&gt;
+<ol style='list-style-type: katakana-iroha'>
 ```
 
 
@@ -235,9 +225,8 @@
 </ol>
 
 ```html
-&lt;ol start='100'&gt;
+<ol start='100'>
 ```
-
 
 <ol start='100'>
 	<li>France</li>
@@ -248,7 +237,7 @@
 </ol>
 
 ```html
-&lt;ol reversed&gt;
+<ol reversed>
 ```
 
 
@@ -261,7 +250,7 @@
 </ol>
 
 ```html
-&lt;ol&gt;
+<ol>
 ```
 
 
@@ -276,11 +265,11 @@
 <h2>Autres numérotations</h2>
 
 <ul>
-    <li><a href="liste-ord-alpha.html">Alpha</a></li>
-    <li><a href="liste-ord-roman.html">Romain</a></li>
-    <li><a href="liste-ord-greek.html">Grec</a></li>
-    <li><a href="liste-ord-hebrew.html">Hébreu</a></li>
-    <li><a href="liste-ord-hiragana.html">Hiragana</a></li>
+    <li><a href="liste-ord-alpha">Alpha</a></li>
+    <li><a href="liste-ord-roman">Romain</a></li>
+    <li><a href="liste-ord-greek">Grec</a></li>
+    <li><a href="liste-ord-hebrew">Hébreu</a></li>
+    <li><a href="liste-ord-hiragana">Hiragana</a></li>
 </ul>
 
 </body>

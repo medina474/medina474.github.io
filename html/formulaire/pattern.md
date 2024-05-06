@@ -13,25 +13,25 @@
 <form action="" method="POST">
 
 ```
-&lt;input type='text'&gt;
+<input type='text'>
 ```
 
 <input type='text'>
 
 ```
-&lt;input type='text'&gt;
+<input type='text'>
 ```
 
 <input type='text' pattern='[0-9,]*'>
 
 ```
-&lt;input type='text'&gt;
+<input type='text'>
 ```
 
 <input type='text' pattern='\d*'>
 
 ```
-&lt;input type='text'&gt;
+<input type='text'>
 ```
 
 <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">

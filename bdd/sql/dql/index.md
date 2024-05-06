@@ -40,10 +40,10 @@ Opérateur|Description
 ---|---
 =|égal
 <>|différent
-&gt;|supérieur
-&gt;=|supérieur ou égal
-&lt;|inférieur
-&lt;=|inférieur ou égal
+>|supérieur
+>=|supérieur ou égal
+<|inférieur
+<=|inférieur ou égal
 
 #### between
 

@@ -43,10 +43,10 @@ https://colorbrewer2.org/#type=diverging&scheme=PiYG&n=10
 Proposer un modèle pour stocker les données du tableau
 Proposer une méthode pour résoudre le problème
 
-Ajouter un sélecteur &lt;select&gt; pour sélectionner le type de diplôme
+Ajouter un sélecteur <select> pour sélectionner le type de diplôme
 
 Tier et afficher le tableau par rapport à l'effectif en DUT
-   
+
 Afficher les régions qui ont moins d'étudiants en école d'ingénieur qu'en DUT
 
 Sélectionner les 3 régions qui comptes le plus d'étudiants en MES
@@ -57,15 +57,13 @@ Existe-t-il au moins une région qui compte moins de 5 000 étudiants en école 
 Est-ce que toutes les régions ont bien au moins 5 000 étudiants inscrits en DUT ?
 
 Ajouter une colonne aux données qui calcule le nombre d'étudiants total dans chaque région.
-   
+
 Calculer le nombre total d'étudiants
 
-    
+
 
 Sélectionner la région qui possède le plus d'étudiant en BTS. Utiliser la fonction reduce pour effecuer la sélection
 
-   
+
 
 Calculer le nombre total d'étudiants en comptabilisant uniquement les régions qui possède plus de 6000 étudiants en MES.
-
-   
