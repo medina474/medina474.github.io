@@ -15,12 +15,6 @@
 <li>Three. Well, probably this list item should be longer so that it will probably wrap to the next line in rendering.</li>
 </menu>
 
-<p>The following is a <code>dir</code> list:</p>
-<dir>
-<li>One.</li>
-<li>Two.</li>
-<li>Three. Well, probably this list item should be longer so that it will probably wrap to the next line in rendering.</li>
-</dir>
 
 <p>This is a paragraph before a <strong>numbered</strong> list (<code>ol</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
 <ol>

@@ -155,25 +155,25 @@ list-style-type: symbols(repeating "○" "●")
 
 <style>
 li::marker {
-    color:red;
-    font-size:112%;
+  color:red;
+  font-size:112%;
 }
 </style>
 
-<ul style='list-style-type: symbols(repeating "○" "●")'>Pays
-    <li>France</li>
-    <li>Mexique</li>
-    <li>Allemagne</li>
-    <li>Espagne</li>
-    <li>États-Unis d'Amérique</li>
-    <li>Royaume-Uni de Grande-Bretagne et d'Irlande</li>
+<ul style='list-style-type: symbols(symbolic "○" "●")'>Pays
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>États-Unis d'Amérique</li>
+  <li>Royaume-Uni de Grande-Bretagne et d'Irlande</li>
 </ul>
 
 
 
 ## Liste imbriquées
 
-<ul style='list-style-type: symbols(repeating "w" "x" "y", "z")'>
+<ul style='list-style-type: symbols(symbolic "w" "x" "y", "z")'>
 	<li>France</li>
 	<li>Mexique</li>
 	<ul>
