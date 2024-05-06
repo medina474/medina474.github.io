@@ -1,7 +1,3 @@
----
-
-title: Listes
----
 
 <p>This is a paragraph before an <strong>unnumbered</strong> list (<code>ul</code>). Note that the spacing between a paragraph and a list before or after that is hard to tune in a user style sheet. You can't guess which paragraphs are logically related to a list, e.g. as a "list header".</p>
 <ul>
@@ -341,4 +337,9 @@ title: Listes
 	<li>U.S.A.</li>
 </ol>
 
-<a href="listes/liste-ord-roman"></a>
+<a href="listes/liste-ord-roman">roman</a>
+
+
+[Listes non ordonnées](liste.html)
+[Listes ordonnées](liste-ordonnee.html)
+[Listes de définition][liste-definition.html]
