@@ -1,11 +1,13 @@
 ---
-title: Les opérateurs bit-à-bit
+title: "Opérateurs bit-à-bit"
+date: 2022-11-27T09:46:36+01:00
+draft: false
 ---
 
 
 ## Inversion bit-à-bit
 
-L'opérateur `^` retourne 0 si pour un bit à 1 et 1 pour un bit à 0
+L'opérateur `^` retourne 0 pour un bit à 1 et 1 pour un bit à 0.
 
  v | r |  7  | 6  | 5  | 4  | 3  | 2  | 1 | 0
 ---|--:|--:|--:|--:|--:|--:|--:|--:|--:
@@ -23,6 +25,7 @@ a      | 73 | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 1
 b      | 15 | 0  | 0  | 0  | 0  | 1  | 1  | 1  | 1
 a & b  |  9 | 0  | 0  | 0  | 0  | 1  | 0  | 0  | 1
 
+
 ## OU bit-à-bit
 
 L'opérateur `|` retourne 1 si l'un ou l'autre des deux bits de même poids est à 1 (ou les deux).
@@ -33,9 +36,10 @@ a      | 73 | 0  | 1  | 0  | 0  | 1  | 0  | 0  | 1
 b      | 15 | 0  | 0  | 0  | 0  | 1  | 1  | 1  | 1
 a \| b | 79 | 0  | 1  | 0  | 0  | 1  | 1  | 1  | 1
 
-## OU exclusif bit-à-bit 
 
-L'opérateur `^` retourne 1 si un seul des des deux bits de même poids est à 1.
+## OU exclusif bit-à-bit
+
+L'opérateur `^` retourne 1 si un seul des deux bits de même poids est à 1.
 
  v | r |  7  | 6  | 5  | 4  | 3  | 2  | 1 | 0
 ---|--:|--:|--:|--:|--:|--:|--:|--:|--:

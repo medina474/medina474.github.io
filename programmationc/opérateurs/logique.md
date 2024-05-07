@@ -1,8 +1,10 @@
 ---
-title: Les opérateurs logiques
+title: "Les opérateurs logiques"
+date: 2022-11-27T09:35:11+01:00
+draft: false
 ---
 
-Ces opérateurs permetent de vérifier si plusieurs conditions sont vraies. Les valeurs renvoyés sont 0 pour faux et 1 pour vrai. 
+Ces opérateurs permetent de vérifier si plusieurs conditions sont vraies. Les valeurs renvoyés sont 0 pour faux et 1 pour vrai.
 
 A noter : Par économie de moyens, le langage C travaille avec des entiers en utilisant la convention suivante : la valeur 0 représente la valeur booléenne faux ou false, et toute autre valeur sera assimilée à la valeur vrai ou true.
 
@@ -19,9 +21,9 @@ a  | !a
 0  | 1
 1  | 0
 
-### OU logique 	
+### OU logique
 
-> L'opérateur **OU logique** vérifie qu'au moins **une** des conditions est réalisée. 
+> L'opérateur **OU logique** vérifie qu'au moins **une** des conditions est réalisée.
 {.definition}
 
 L'opérateur `||` retourne 1 si une des deux conditions a la valeur 1 (ou tout nombre différent de 0).
@@ -32,7 +34,7 @@ L'opérateur `||` retourne 0 seulement si les deux conditions ont la valeur 0.
 condition1 || condition2;
 ```
 
-a  | b  | a && b
+a  | b  | a \|\| b
 --:|--:|--:
 0  | 0 |  0
 1  | 0 |  1
@@ -40,9 +42,9 @@ a  | b  | a && b
 1  | 1 |  1
 
 
-### ET logique 	
+### ET logique
 
-> L'opérateur **ET logique** vérifie que **toutes** les conditions sont vraies. 
+> L'opérateur **ET logique** vérifie que **toutes** les conditions sont vraies.
 {.definition}
 
 L'opérateur `&&` retourne 1 seulement si les deux conditions ont la valeur 1 (ou tout nombre différent de 0).
@@ -63,7 +65,7 @@ a  | b  | a && b
 
 ### Short-circuit evaluation
 
-Short-circuit evaluation (court-circuit d'évaluation) ou lazy evaluation (évaluation paresseuse) ou appel par nécessité ou évaluation retardée est un mécanisme d'optimisation de l'éxecution du programme. Les expressions ne sont évaluées que si c'est nécessaire au résultat final. 
+Short-circuit evaluation (court-circuit d'évaluation) ou lazy evaluation (évaluation paresseuse) ou appel par nécessité ou évaluation retardée est un mécanisme d'optimisation de l'éxecution du programme. Les expressions ne sont évaluées que si c'est nécessaire au résultat final.
 
 Si le résultat est irrémédiablement connu à une étape alors la suite n'est pas évaluée car cela ne pourra faire changer le résultat.
 
@@ -99,15 +101,15 @@ FonctionV() && FonctionA();
 FonctionF() && FonctionA();
 ```
 
-Il n'est pas nécessaire d'appeler `FonctionA` car de toute façon avec `FonctionF` qui retourne faux le résultat final sera faux quelque soit le résultat de `FonctionA`. 
+Il n'est pas nécessaire d'appeler `FonctionA` car de toute façon avec `FonctionF` qui retourne faux le résultat final sera faux quelque soit le résultat de `FonctionA`.
 
-Le court-circuit d'évaluation peut remplacer une syntaxe utilisant `if` 
+Le court-circuit d'évaluation peut remplacer une syntaxe utilisant `if`
 
 ```C
 if (FonctionB())
 {
   FonctionA();
-} 
+}
 ```
 
 ```C

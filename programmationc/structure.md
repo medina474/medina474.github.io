@@ -1,5 +1,4 @@
 ---
-layout: layouts/page.njk
 title: Structure
 ---
 Une structure est un objet composé de plusieurs champs de types différents, qui sert à représenter un objet. Par exemple un client peut être représenté
