@@ -1,6 +1,6 @@
 ---
 
-title: Programmation asynchrone
+title: Fetch
 ---
 
 ## Callback
@@ -19,9 +19,9 @@ Le developpeur affecte à la propriété onReadyStateChange un fonction. Cette f
 var xhttp = new XMLHttpRequest();
 
 xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+  if (this.readyState == 4 && this.status == 200) {
     document.getElementById("demo").innerHTML = xhttp.responseText;
-    }
+  }
 };
 
 xhttp.open("GET", "filename", true);
@@ -29,7 +29,7 @@ xhttp.send();
 // .. Le programme continue .. lors de la réception des données la fonction dans onreadystatechange sera appelée et le traitement pourra se faire
 ```
 
-L'inconvénient est une lecture non linéaire du code car les fonction callback ne sont laà où elle seront appelées (après le send). Les fonction callback sont souvent des fonction anonyme. Le code est truffé de fonction anonymes à l'intérieur d'autres fonctions.
+L'inconvénient est une lecture non linéaire du code car les fonction callback ne sont là où elle seront appelées (après le send). Les fonction callback sont souvent des fonction anonyme. Le code est truffé de fonctions anonymes à l'intérieur d'autres fonctions.
 
 ## Les promesses
 
@@ -44,7 +44,7 @@ Les promesses peuvent être chainées grâce à la propriété thenable.
 
 ```javascript
 fetch('https://example.com/movies.json')
-  .then(response => response.json())
+  .then(reponse => reponse.json())
   .then(data => document.getElementById("demo").innerHTML = data.title;)
   .catch((error) => {
     console.error('Error:', error);
@@ -53,7 +53,7 @@ fetch('https://example.com/movies.json')
 
 L'opération de décodage json est elle aussi une fonction asynchrone cela laisse le temps au navigateur de traiter de larges fichiers sans bloquer l'utilisateur.
 
-Les promesses sont chainables et gèrent le rattrapage d'erreurs.
+Les promesses sont chainables et gèrent le rattrapage d'erreurs (catch).
 
 L'écriture suit cette fois ci un ordre logique d'éxécution, cependant l'imbriquation des promesses et l'utilisation massive de fonctions anonymes rendent le code pas plus simpe à lire.
 
@@ -64,11 +64,14 @@ async et await sont 2 mots clés qui permettent de transformer n'importe qu'elle
 ```javascript
 async function getData()
 {
-  let data = await fetch("https://example.com/movies.json");
-  let datajson = await data.json();
+  let reponse = await fetch("https://example.com/movies.json");
+  let data = await reponse.json();
 }
 ```
 
 Le code est érit dans l'ordre logique sans aucune fonction anonyme. Ces dernières sont ajoutées par le compilateur lorsque le mot clé await est utilisé.
 
-Un `await` est **obligatoirement** utilisé dans une fonction async.
+> Un `await` est **obligatoirement** utilisé dans une fonction async.
+{: .danger}
+
+https://developer.mozilla.org/fr/docs/Web/API/Fetch_API

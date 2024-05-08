@@ -2,7 +2,9 @@
 title: Onsen UI
 ---
 
-## Première page
+## Page des acteurs
+
+[voir](../../../langage/javascript/fetch) le chargement des données en JavaScript
 
 Charger dans la première page la liste des personnes.
 

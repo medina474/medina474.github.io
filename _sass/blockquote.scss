@@ -23,4 +23,10 @@ blockquote {
     border-color: #ffdd57;
     background-color: #fffbeb;
   }
+
+  &.danger {
+    color: #cc0f35;
+    border-color: #f14668;
+    background-color: #feecf0;
+  }
 }
