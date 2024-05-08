@@ -12,7 +12,7 @@ Télécharger et installer [KeePass 2.52](https://keepass.info/download.html).
 Créer un nouveau fichier, renseigner le mot de passe principal, c'est le seul dont vous aurez à vous souvenir.
 
 > En cas de perte de ce mot de passe il sera impossible de récupérer les informations du fichier !
-{.warning}
+{: .warning}
 
 Utilisez des chiffres, des lettres, des majuscules, des minuscules et un moyen mémotechique de retrouver votre mot de passe.
 
@@ -67,7 +67,7 @@ KeePass est capable de fonctionner comme un agent pour vos [clés ssh](../ssh/).
 Installer le module `KeeOtp2` pour pouvoir générer des tokens basés sur le temps. L'heure courante est chiffré avec un code secret partagé entre l'appareil générant le token et le serveur d'authentification. Si le code généré est identique sur les 2 machines alors l'authentification est réussie.
 
 > Attention : donner la possibilité à KeePass de générer des token OTP va à l'encontre de la philosophie de l'authentification à double facteurs puisque les deux se retrouvent au même endroit dans KeePass.
-{.warning}
+{: .warning}
 
 ## Sauvegarde de KeePass
 

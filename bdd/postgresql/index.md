@@ -3,7 +3,7 @@ title: PostgreSQL
 ---
 
 > Avant d'installer vérifier bien les paramètres linguistiques du système. Ils conditionnent le formatages des données (date, heure, monnaie, tri des caractère accentués) de la base.
-{.warning}
+{: .warning}
 
 Installer le [paquet logiciel](/linux/paquet/) `postgresql`.
 

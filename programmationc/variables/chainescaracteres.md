@@ -1,7 +1,5 @@
 ---
-title: "Chaines de caracteres"
-date: 2022-11-13T07:08:45+01:00
-draft: false
+title: Chaines de caracteres
 ---
 
 En langage C le tableau se comporte comme un pointeur aux différences suivantes :

@@ -1,7 +1,5 @@
 ---
-title: "Fichiers"
-date: 2022-11-13T08:23:17+01:00
-draft: false
+title: Fichiers
 ---
 
 L'écriture et la lecture des données, le positionnement dans un fichier se fait à l'aide d'un pointeur de fichier.

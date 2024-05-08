@@ -69,7 +69,7 @@ $ rm -r cinema/
 ```
 
 >Attention en ligne de commande il n'y a pas de corbeille pour récupérer des fichiers accidentellement supprimés.
-{.warning}
+{: .warning}
 
 
 ## Commande `mv` (move).

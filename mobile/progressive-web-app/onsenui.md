@@ -1,7 +1,5 @@
 ---
 title: Onsen UI
-date: 2022-05-03T15:18:26+01:00
-draft: false
 ---
 
 Onsen UI est un framework Javascript qui permet de réaliser des applications web ou hybrides très facilement.
@@ -30,8 +28,23 @@ L'élément *<ons-navigator>* gère une pile de pages. Il s'agit d'un type de na
 Cet élément est invisible mais essentiel à la gestion du chargement et de l'affichage des pages.
 
 >On appelle à partir de maintenant *page* les pages d'application à ne pas confondre avec la *page* html qui sert de support à l'application.
-{.warning}
+{: .warning}
 
 l'attribut *page* défini la page de démarrage de l'application.
 
 l'attribut *swipeable* permet sur la plateforme iOS de revenir en arrière en effectuant un glissement avec les doigts de gauche à droite.
+
+### Utiliser la navigation
+
+Pour pousser une nouvelle page en premier plan d'affichage, il faut utiliser la méthode javascript *pushPage(page, options)*.
+
+```javascript
+myNavigator.pushPage('page2.html');
+```
+
+Pour revenir en arrière il ne faut pas utiliser le bouton retour du navigateur, mais un appel à la fonction *popPage*
+
+```javascript
+myNavigator.popPage();
+```
+Une autre méthode consiste à utiliser l'élément *ons-back-button*. Il peut être ajouté sur le côté gauche de la barre d'outils et s'affiche sous forme de flèche.

@@ -1,7 +1,5 @@
 ---
-title: "Les opérateurs logiques"
-date: 2022-11-27T09:35:11+01:00
-draft: false
+title: Les opérateurs logiques
 ---
 
 Ces opérateurs permetent de vérifier si plusieurs conditions sont vraies. Les valeurs renvoyés sont 0 pour faux et 1 pour vrai.

@@ -60,6 +60,10 @@ Beaucoup de liberté est laissé à au développeur, le rendu est donc fortement
 
 ### Flutter
 
+Flutter est un SDK (Kit de Développement Logiciel) open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le web à partir d'une seule base de code. Le langage utilisé est le **Dart** qui peut être compilé en langage natif ou en Javascript.
+
+<img src="flutter.png" height="64">
+
 [Flutter](flutter)
 
 

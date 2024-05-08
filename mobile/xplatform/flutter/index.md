@@ -2,15 +2,8 @@
 title: Flutter
 ---
 
-Flutter est un SDK (Kit de Développement Logiciel) open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le web à partir d'une seule base de code. Le langage utilisé est le **Dart** qui peut être compilé en langage natif ou en Javascript.
-
-
 
 **Flutter Packages :** Utilisez des packages Flutter tiers provenant de pub.dev pour ajouter des fonctionnalités à votre application. Assurez-vous de vérifier la qualité et la popularité des packages avant de les intégrer dans votre projet.
-
-
-
-<img src="flutter.png" height="64">
 
 [https://flutter.dev/](https://flutter.dev/)
 
@@ -65,7 +58,7 @@ class MainApp extends StatelessWidget {
 }
 ```
 
-[dart](dart)
+[dart](../../../langage/dart/)
 
 
 ### Widget

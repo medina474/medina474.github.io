@@ -15,17 +15,6 @@ Faites l'expérience d'un développement rationalisé avec une configuration san
 [https://onsen.io/](https://onsen.io/)
 
 
-
-### Bootstrap
-
-Bootstrap est une collection d'outils utiles à la création du design de sites et d'applications web. C'est un ensemble qui contient des codes HTML et CSS, des formulaires, boutons, outils de navigation et autres éléments interactifs, ainsi que des extensions JavaScript en option.
-
-Universel l'aspect application mobile n'est pas prioritaire. Par rapport aux autres framework, le résultat ne tend pas à imiter une application.
-
-[https://getbootstrap.com/](https://getbootstrap.com/)
-
-
-
 ## Onsen UI
 
 Pour ce développement nous allons utiliser Onsen UI qui semble être le meilleur choix entre rapidité de développement et rendu final.
@@ -81,20 +70,7 @@ Du fait des 2 méthodes de chargement (fichier par ajax ou template), il est con
 
 Notez le chargement xhr de la page *home.html*
 
-### Utiliser la navigation
 
-Pour pousser une nouvelle page en premier plan d'affichage, il faut utiliser la méthode javascript *pushPage(page, options)*.
-
-```javascript
-myNavigator.pushPage('page2.html');
-```
-
-Pour revenir en arrière il ne faut pas utiliser le bouton retour du navigateur, mais un appel à la fonction *popPage*
-
-```javascript
-myNavigator.popPage();
-```
-Une autre méthode consiste à utiliser l'élément *ons-back-button*. Il peut être ajouté sur le côté gauche de la barre d'outils et s'affiche sous forme de flèche.
 
 <!--
 Nous pouvons maintenant définir notre [page d'accueil](../home/)

@@ -37,9 +37,13 @@ Pour rendre une page web compatible PWA, il faut satifaires quelques conditions.
 
 En respectant ces conditions, vous pouvez développer une PWA qui offre une expérience utilisateur performante et engageante, similaire à celle des applications natives, tout en profitant des avantages de l'écosystème web.
 
-## Web Worker
+### Web Worker
 
 [Web Worker](webworker)
+
+### SPA
+
+[SPA](spa)
 
 
 ## Frameworks
@@ -54,5 +58,7 @@ En respectant ces conditions, vous pouvez développer une PWA qui offre une exp�
 ## Outils
 
 [PWA Builder](https://www.pwabuilder.com/)
+
+## Travaux pratiques
 
 [Travaux pratiques](travaux-pratiques)

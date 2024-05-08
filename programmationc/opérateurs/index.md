@@ -1,7 +1,5 @@
 ---
-title: "Operateurs"
-date: 2022-11-26T13:37:15+01:00
-draft: false
+title: Operateurs
 ---
 
 >Un **opérateur** est un symbole qui indique au programme qu'il faut effectuer des opérations mathématiques ou logiques spécifiques.

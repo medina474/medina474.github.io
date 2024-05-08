@@ -1,7 +1,5 @@
 ---
-title: "Opérateurs bit-à-bit"
-date: 2022-11-27T09:46:36+01:00
-draft: false
+title: Opérateurs bit-à-bit
 ---
 
 

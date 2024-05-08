@@ -1,7 +1,5 @@
 ---
-title: "Math"
-date: 2022-11-26T13:47:52+01:00
-draft: false
+title: Math
 ---
 
 ## Arrondi

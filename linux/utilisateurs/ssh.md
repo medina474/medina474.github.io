@@ -47,7 +47,7 @@ Vous pouvez charger la clé à la demande avec la combinaison de touches `Ctrl M
 Vous pouvez vérifier les clés chargées par l'agent. Menu - Tools - KeeAgent
 
 > Attention : il ne faut pas charger trop de clés en même temps. Lors de la connexion à un serveur les clés sont testées une par une jusqu'à trouver la bonne. Le serveur risque de bloquer la connexion si trop de tentatives infructueuses sont effectuées.
-{.warning}
+{: .warning}
 
 ![][KeeAgent]
 

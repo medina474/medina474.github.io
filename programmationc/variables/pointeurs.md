@@ -1,7 +1,5 @@
 ---
-title: "Pointeurs"
-date: 2022-11-13T08:02:03+01:00
-draft: false
+title: Pointeurs
 ---
 
 > Un pointeur est une variable de type **référence**, dont la valeur est l'**adresse** d'une autre variable appelée cible.

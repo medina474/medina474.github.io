@@ -77,7 +77,7 @@ $ chmod 400 /home/cinema/.ssh/authorized_keys
 ```
 
 > Le jail ne fonctionnera que si l'utilisateur `root` contrôle le dossier `home` de l'utilisateur.
-{.warning}
+{: .warning}
 
 ```shell-session
 $ chown root:cinema /home/cinema

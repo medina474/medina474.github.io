@@ -1,6 +1,5 @@
 ---
 title: "Travaux dirigés"
-draft: false
 ---
 
 > Objectif : Déclarer des variables dans le bon type, saisie au clavier et affichage sur la console.

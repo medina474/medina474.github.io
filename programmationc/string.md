@@ -1,7 +1,5 @@
 ---
-title: "String"
-date: 2022-11-30T13:44:30+01:00
-draft: true
+title: String
 ---
 
 ## Saisie de chaine de caractères
@@ -55,7 +53,7 @@ int main (int argc , char *argv[])
 > ATTENTION : scanf ne permet pas la saisie d'une chaîne comportant des espaces.
 ⇒ Les caractères saisis à partir de l’espace ne sont pas pris en compte mais restent rangés dans le tampon
 d’entrée.
-{.warning}
+{: .warning}
 
 A la fin de la saisie, le caractère ’\0’ est ajouté automatiquement.
 

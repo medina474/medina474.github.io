@@ -18,4 +18,4 @@ Ctrl + W | Rechercher un mot
 Ctrl + C | Annuler une commande
 
 :Attention ! Ctr + Z n'annule pas une commande mais place nano en tâche de fond et l'utilisateur retourne au shell.
-{.warning}
+{: .warning}

@@ -1,7 +1,5 @@
 ---
-title: "Arduino"
-draft: false
-date: 2022-09-05
+title: Arduino
 ---
 
 L’Arduino est une carte basée sur un microcontrôleur du fabriquant Atmel : ATMEGA168 ou ATMEGA328.

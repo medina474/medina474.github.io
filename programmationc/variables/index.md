@@ -1,7 +1,5 @@
 ---
-title: "Variables"
-date: 2022-11-27
-draft: false
+title: Variables
 ---
 
 >Une variable est un élément qui associe un **identifiant** à une **valeur**.
@@ -79,7 +77,7 @@ void main()
 Dans un programme il est possible de manipuler des valeurs sans pour autant les avoir déclarées avant. Ces valeurs existent de manières littérales à l'intérieur même du code du programme.
 
 >Attention, dans le cas des chaines de caractères, il ne faut pas confondre le nom de la variable avec sa valeur.
-{.warning}
+{: .warning}
 
 ```C
 char joueur[10] = "Alice";

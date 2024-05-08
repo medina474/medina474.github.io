@@ -1,7 +1,5 @@
 ---
-title: "Structure"
-date: 2022-11-12T14:43:21+01:00
-draft: false
+title: Structure
 ---
 
 >Un structure permet de regrouper plusieurs types de données dans un seul bloc logique pour les associer à une super variable.
