@@ -19,6 +19,8 @@ Il est donc nécessaire de concevoir et développer l’application **autant de 
 
 <img src="windows.png" height="32"> [Windows](windows)
 
+### Définitions
+
 Langage interprété
 : La traduction se produit en **temps réel** pendant l'exécution. Ainsi, le langage requiert la présence d'un **interpréteur** pour exécuter le programme (appelé dans ce cas script). L'avantage est qu'un même script peut fonctionner sur différentes plateformes, mais la traduction du code à chaque exécution peut affecter les performances. Exemple de langages interprétés : JavaScript, Python, PHP, Ruby, Perl
 
