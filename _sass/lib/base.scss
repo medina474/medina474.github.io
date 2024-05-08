@@ -1,5 +1,12 @@
-a { color: #2160c4; }
-a:hover { color: darken(#2160c4, 10%); }
+a { 
+  color: #2160c4; 
+  text-decoration: none;
+}
+
+a:hover { 
+  color: darken(#2160c4, 10%); 
+  text-decoration: underline;
+}
 
 hr {
   height: 0;

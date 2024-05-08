@@ -1,21 +1,3 @@
-input,
-select,
-textarea,
-button {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-a {
-  color: $text-blue;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 //
 // Remove most spacing between table cells.
 //
@@ -34,12 +16,6 @@ button {
   cursor: pointer;
   // Remove border radius added by Chroma macOS
   border-radius: 0;
-}
-
-// increase the selector specificity for [hidden]
-// so that it always overrides utility classes (.d-block, etc.)
-[hidden][hidden] {
-  display: none !important;
 }
 
 details {

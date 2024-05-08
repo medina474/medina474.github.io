@@ -11,9 +11,9 @@ XMLHttpRequest est beaucoup utilisé par l'approche **AJAX**.
 
 Malgré son nom, XMLHttpRequest peut être utilisé afin de récupérer tout type de données et pas uniquement du XML.
 
-Le téléchargement d'une ressources sur un serveur externe étant une opération lente, un méchanisme de callback est implémenté dans l'objet XMLHttpRequest.
+Le téléchargement d'une ressources sur un serveur externe étant une opération lente, un méchanisme de **callback** est implémenté dans l'objet XMLHttpRequest.
 
-Le developpeur affecte à la propriété onReadyStateChange un fonction. Cette fonction sdera appelé lors de l'arrivée des données.
+Le developpeur affecte à la propriété `onReadyStateChange` une fonction. Cette fonction sera appelé lors de l'arrivée des données.
 
 ```javascript
 var xhttp = new XMLHttpRequest();
@@ -75,3 +75,8 @@ Le code est érit dans l'ordre logique sans aucune fonction anonyme. Ces derniè
 {: .danger}
 
 https://developer.mozilla.org/fr/docs/Web/API/Fetch_API
+
+### Définitions
+
+Fonction callback
+: Une fonction de rappel (callback en anglais) est une fonction passée en tant qu'argument à une autre fonction. Cette fonction est alors invoquée (appelée en retour) par la fonction principale lorsqu'un certain événement se produit ou qu'une opération est terminée.

@@ -12,14 +12,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
-body {
-  margin: 0;
-}
-
 /* HTML5 display definitions
    ========================================================================== */
 
@@ -29,43 +21,12 @@ body {
  * 2. Add the correct display in IE.
  */
 
-article,
-aside,
-details, /* 1 */
-figcaption,
-figure,
-footer,
-header,
-main, /* 2 */
-menu,
-nav,
-section { /* 1 */
-  display: block;
-}
 
 summary {
   display: list-item;
 }
 
-/**
- * Add the correct display in IE 9-.
- */
 
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
@@ -88,24 +49,6 @@ template, /* 1 */
 /* Links
    ========================================================================== */
 
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent; /* 1 */
-}
-
-/**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
 /* Text-level semantics
    ========================================================================== */
 
@@ -120,23 +63,6 @@ abbr[title] {
   text-decoration: underline dotted; /* 2 */
 }
 
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-
-b,
-strong {
-  font-weight: inherit;
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
-}
 
 /**
  * Add the correct font style in Android 4.3-.
@@ -146,15 +72,6 @@ dfn {
   font-style: italic;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 
 /**
  * Add the correct background and color in IE 9-.
@@ -165,13 +82,6 @@ mark {
   color: #000;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -197,21 +107,6 @@ sup {
 /* Embedded content
    ========================================================================== */
 
-/**
- * Remove the border on images inside links in IE 10-.
- */
-
-img {
-  border-style: none;
-}
-
-/**
- * Hide the overflow in IE.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
 
 /* Grouping content
    ========================================================================== */
@@ -229,24 +124,6 @@ samp {
   font-size: 1em; /* 2 */
 }
 
-/**
- * Add the correct margin in IE 8.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
 
 /* Forms
    ========================================================================== */
