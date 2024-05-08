@@ -2,7 +2,6 @@
 title: "Autority"
 ---
 
-
 ## Création du certificat de l'autorité racine de confiance
 
 La validation de l'identité repose sur un travail de l'autorité. Ce travail de notariat n'est pas gratuit. Et les certificats sont généralement assez chers.

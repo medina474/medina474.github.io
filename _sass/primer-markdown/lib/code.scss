@@ -5,7 +5,6 @@
   tt {
     padding: 0.2em 0.4em;
     margin: 0;
-    font-size: 85%;
     background-color: rgba($black, 0.05);
     border-radius: $border-radius;
 
@@ -42,8 +41,6 @@
   pre {
     padding: $spacer-3;
     overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
     background-color: $gray-100;
     border-radius: $border-radius;
   }

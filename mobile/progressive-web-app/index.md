@@ -30,21 +30,18 @@ Pour rendre une page web compatible PWA, il faut satifaires quelques conditions.
 - [Web App Manifest](manifest) : Un fichier JSON appelé manifeste web app doit être inclus dans l'application.
 - [Service Workers](service-workers) : Les service workers sont des scripts JavaScript qui s'exécutent en arrière-plan et permettent à l'application de fonctionner hors ligne, d'améliorer les performances et de fournir des fonctionnalités telles que les notifications push. Ils sont essentiels pour une PWA.
 - Technologies Web Standards : La PWA est construite à l'aide de technologies web standard telles que HTML, CSS et JavaScript.
-- Responsive Design : L'application doit être conçue pour être responsive, c'est-à-dire qu'elle doit s'adapter à différentes tailles d'écrans et être utilisable sur les smartphones, tablettes et ordinateurs de bureau.
-- Navigation sans interruption : Une PWA doit permettre une navigation fluide et sans interruption, offrant une expérience utilisateur semblable à celle d'une application native.
+- **Responsive Design** : L'application doit être conçue pour être responsive, c'est-à-dire qu'elle doit s'adapter à différentes tailles d'écrans et être utilisable sur les smartphones, tablettes et ordinateurs de bureau.
+- Navigation sans interruption : Une PWA doit permettre une navigation **fluide** et sans interruption, offrant une expérience utilisateur semblable à celle d'une application native. La conception d'une [SPA](single-page-application) est essentiel.
 - Capacités natives (Facultatif) : Les PWA peuvent accéder à certaines fonctionnalités natives de l'appareil, telles que la caméra, le GPS, les notifications push, etc., en utilisant des APIs telles que l'API de géolocalisation, l'API de notifications, etc.
 
 En respectant ces conditions, vous pouvez développer une PWA qui offre une expérience utilisateur performante et engageante, similaire à celle des applications natives, tout en profitant des avantages de l'écosystème web.
 
 
-### SPA
-
-[SPA](single-page-application)
-
-
 ## Frameworks
 
 [jQuery Mobile](jquerymobile)
+
+[Bootstrap](bootstrap)
 
 [framework7](framework7)
 

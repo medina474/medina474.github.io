@@ -2,7 +2,7 @@
 title: HTTPS
 ---
 
-**Secure Sockets Layer (SSL)**, et son successeur **Transport Layer Security (TLS)**, sont des protocoles de sécurisation des échanges sur Internet. Le protocole SSL a été développé à l'origine par Netscape. L'IETF (_Internet Engineering Task Force_) en a poursuivi le développement en le rebaptisant Transport Layer Security (TLS). On parle parfois de SSL/TLS pour désigner indifféremment SSL ou TLS.
+**Secure Sockets Layer (SSL)**, et son successeur **Transport Layer Security (TLS)**, sont des protocoles de sécurisation des échanges sur Internet. Le protocole SSL a été développé à l'origine par Netscape. L'IETF (_Internet Engineering Task Force_) en a poursuivi le développement en le rebaptisant Transport Layer Security (TLS). On parle parfois de SSL pour désigner indifféremment SSL ou TLS.
 
 ## Protocole SSL
 
@@ -18,10 +18,11 @@ SSL 2.0 est la première version parue, elle possédait un certain nombre de dé
 
 Le protocole SSL/TLS a plusieurs missions :
 
->Garantir la **confidentialité** des données échangées\
+> Garantir la **confidentialité** des données échangées\
 Assurer l'**intégrité** de ces données\
 **Authentifier** le serveur\
 Optionnellement authentifier le client via l'utilisation d'un certificat numérique
+{: .objectif}
 
 Le protocole SSL crée un canal de communication entre le client et le serveur **indépendamment du protocole** utilisé, il sécurise ainsi les transactions sur le web (protocole HTTP) ou les connexions via protocole FTP, IMAP ou POP, etc...
 
@@ -35,7 +36,6 @@ Il fonctionne sur l'établissement de clés privées et publiques qui s'apparent
 ## Travaux pratiques
 
 ### Préparer la demande
-
 
 ```shell-session
 openssl req -new -sha256 -newkey rsa:2048 -nodes -utf8 -days 70 -keyout https.key -out https.csr
@@ -59,8 +59,6 @@ server {
 ```
 
 ### LibreSSL
-
-
 
 ```shell-session
 libressl ^
@@ -87,6 +85,8 @@ x509 -req -sha256 ^
 ```shell-session
 libressl req -in https.csr -noout -text
 ```
+
+### Définitions
 
 CA
 : Certificate Authority ou Autorité de certification. Agence notariale reconnue pour son honnêteté et sa rigueur.
