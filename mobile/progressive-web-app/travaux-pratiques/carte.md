@@ -1,11 +1,13 @@
 ---
-title: Carte
+title: Travaux pratiques - La carte
 ---
 
-1. Ajouter un nouveau gabarit (template) de page.
+### 1. Ajouter un nouveau gabarit (template) de page.
 
 ```html
 ```
+
+### 2. Librairie de cartographie
 
 Sur cette page ajouter une carte à l'aide de la librairie [Leaflet](https://leafletjs.com/).
 
@@ -26,6 +28,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 ```
+
+### 3. Chargement des données
 
 Faire un appel au webservice pour récupérer l'ensemble des établissements dans une zone donnée.
 
@@ -58,6 +62,8 @@ for (let e of etablissements) {
     .bindPopup(`<strong>${e.nom}</strong><br>${e.ville}`));
 }
 ```  
+
+### 3. Géolocalisation
 
 Faire un appel à l'API de géolocalisation du navigateur.
 
@@ -94,3 +100,5 @@ Ajouter un popup sur chaque marqueur, indiquer le nom et la ville de l'établiss
 clusters.addLayer(L.marker([e.lat, e.long])
   .bindPopup(`<strong>${e.nom}</strong><br>${e.ville}`));
 ```
+
+### 4. Cluster
