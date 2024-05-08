@@ -12,6 +12,12 @@ blockquote {
     background-color: #eef3fc;
   }
 
+  &.definition {
+    color: #257942;
+    border-color: #48c774;
+    background-color: #effaf3;
+  }
+
   &.warning {
     color: #947600;
     border-color: #ffdd57;

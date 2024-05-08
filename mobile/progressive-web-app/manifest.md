@@ -8,29 +8,29 @@ Créer un fichier manifest.json à la racine de votre site
 
 ```json
 {
-  "name": "Ski Map",
-  "short_name": "SkiMap",
-  "icons": [{
-    "src": "/images/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
+  "name": "Ski Map",
+  "short_name": "SkiMap",
+  "icons": [{
+    "src": "/images/icons/icon-128x128.png",
+    "sizes": "128x128",
+    "type": "image/png"
+    },
     {
-      "src": "/images/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    }],
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#3E4EB8",
-  "theme_color": "#2F3BA2"
+      "src": "/images/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3E4EB8",
+  "theme_color": "#2F3BA2"
 }
 ```
 
 Ajouter le lien vers le manifest dans votre page
 
 ```html
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="./manifest.json">
 ```
 
 Ajouter les icones de l'application

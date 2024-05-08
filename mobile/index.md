@@ -23,7 +23,7 @@ SAÉ 4.Real.01 : Développement d’une application complexe
 
 ### Mots clés :
 
-Programmation mobile, PWA
+Programmation mobile, PWA, SPA
 
 ### Volumes horaires
 
