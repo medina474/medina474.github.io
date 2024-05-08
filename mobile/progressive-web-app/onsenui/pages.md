@@ -4,7 +4,7 @@ title: Pages
 
 Onsenu UI est ce que appelle une [SPA](../progressive-web-app/single-page-application) (Single Page Application). Tout ce passe dans **une seule page html**. La navigation se fait en javascript en chargeant dynamiquement des **fragments** de page qui remplace le contenu actuel.
 
->On appelle à partir de maintenant *page* les pages d'application à ne pas confondre avec la *page* html qui sert de support à l'application.
+>On appelle à partir de maintenant *page* les pages d'application à ne pas confondre avec la *page* html qui sert de support à l'application SPA.
 {: .warning}
 
 ### Définir les pages
