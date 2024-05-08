@@ -1,7 +1,5 @@
 ---
-title: "Langage de requête de données"
-date: 2023-08-26T13:15:51+02:00
-published: true
+title: Langage de requête de données
 ---
 
 DQL pour Data Query Language est le sous-langage responsable de la lecture, ou de l'interrogation, des données d'une base de données.

@@ -1,7 +1,5 @@
 ---
-
 title: Media Queries
-
 ---
     
 <style>
