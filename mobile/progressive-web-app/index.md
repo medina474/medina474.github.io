@@ -28,7 +28,7 @@ Pour rendre une page web compatible PWA, il faut satifaires quelques conditions.
 
 - Une PWA doit être hébergée sur un serveur sécurisé utilisant [HTTPS](../../securité/https/).
 - [Web App Manifest](manifest) : Un fichier JSON appelé manifeste web app doit être inclus dans l'application.
-- [Service Workers](webworker) : Les service workers sont des scripts JavaScript qui s'exécutent en arrière-plan et permettent à l'application de fonctionner hors ligne, d'améliorer les performances et de fournir des fonctionnalités telles que les notifications push. Ils sont essentiels pour une PWA.
+- [Service Workers](service-workers) : Les service workers sont des scripts JavaScript qui s'exécutent en arrière-plan et permettent à l'application de fonctionner hors ligne, d'améliorer les performances et de fournir des fonctionnalités telles que les notifications push. Ils sont essentiels pour une PWA.
 - Technologies Web Standards : La PWA est construite à l'aide de technologies web standard telles que HTML, CSS et JavaScript.
 - Responsive Design : L'application doit être conçue pour être responsive, c'est-à-dire qu'elle doit s'adapter à différentes tailles d'écrans et être utilisable sur les smartphones, tablettes et ordinateurs de bureau.
 - Navigation sans interruption : Une PWA doit permettre une navigation fluide et sans interruption, offrant une expérience utilisateur semblable à celle d'une application native.

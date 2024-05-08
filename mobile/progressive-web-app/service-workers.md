@@ -1,8 +1,8 @@
 ---
-title: "Webworker"
+title: "Service workers"
 ---
 
-> Un service worker est un script JavaScript exécuté en arrière-plan par le navigateur web. 
+> **Définition** : Un service worker est un script JavaScript exécuté en arrière-plan par le navigateur web. 
 {: .definition }
 
 1. **Caching des ressources**: Le service worker peut être utilisé pour mettre en cache des ressources statiques telles que des fichiers CSS, JavaScript, images, etc. Cela permet une expérience utilisateur plus rapide et une utilisation **hors ligne** de l'application web.

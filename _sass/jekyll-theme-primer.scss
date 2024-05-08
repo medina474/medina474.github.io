@@ -1,3 +1,7 @@
+a { color: #2160c4; }
+a:hover { color: color.adjust(#2160c4,$lightness: -10%); }
+
+
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

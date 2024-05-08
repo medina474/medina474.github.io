@@ -18,7 +18,7 @@ title: Technologie
 
 - Protéger la communication avec le protocole HTTPS et un [certificat TLS](security/certificat).
 
-- Fonctionner en mode [hors connexion](pwa/webworker)
+- Fonctionner en mode [hors connexion](pwa/service-workers)
 
 ## Développement hybride avec Flutter
 

@@ -5,7 +5,6 @@
 // container with .markdown-body on it should render generally well. It also
 // includes some GitHub Flavored Markdown specific styling (like @mentions)
 .markdown-body {
-  font-size: $h4-size;
   word-wrap: break-word;
 
   // Clearfix on the markdown body

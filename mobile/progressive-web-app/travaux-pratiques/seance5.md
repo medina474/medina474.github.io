@@ -47,4 +47,4 @@ Dans le cas d'une PWA le service worker est utilisé pour la gestion des communi
 
 Le service worker va observer tous les communications : chargement des pages, des feuilles de styles css, des images, d'appels API et va mettre mettre en cache ce qui le plus opportun. Le cache d'un service worker est un cache différent du cache par défaut du navigateur.
 
-Voir les différentes stratégies de mise en cache avec un [service worker](../../webworker)
+Voir les différentes stratégies de mise en cache avec un [service worker](../../service-workers)

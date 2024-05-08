@@ -15,7 +15,7 @@ Parmi ces nouveaux éléments il y a : alert-dialog, action-sheet, dialog, popov
 
 ### Les pages
 
-Onsenu UI est ce que appelle une **SPA** (Single Page Application). Tout ce passe dans une seule page html. La navigation se fait en javascript en chargeant dynamiquement des **fragments** de page qui remplace le contenu actuel.
+Onsenu UI est ce que appelle une [SPA](../progressive-web-app/single-page-application) (Single Page Application). Tout ce passe dans une seule page html. La navigation se fait en javascript en chargeant dynamiquement des **fragments** de page qui remplace le contenu actuel.
 
 ### La navigation
 

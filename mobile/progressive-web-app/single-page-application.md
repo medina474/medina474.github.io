@@ -2,7 +2,7 @@
 title: Single Page Application
 ---
 
-> Une Single Page Application (SPA) est une application web qui fonctionne à l'intérieur d'une seule page web. Plutôt que de charger de nouvelles pages complètes à chaque interaction de l'utilisateur, une SPA charge une seule page HTML initiale et met à jour le contenu interne dynamiquement en utilisant des chargements en JavaScript.
+> **Définition** : Une Single Page Application (SPA) est une application web qui fonctionne à l'intérieur d'une seule page web. Plutôt que de charger de nouvelles pages complètes à chaque interaction de l'utilisateur, une SPA charge une seule page HTML initiale et met à jour le contenu interne dynamiquement en utilisant des chargements en JavaScript.
 {:.definition}
 
 Les bénéfices des SPA sont :
