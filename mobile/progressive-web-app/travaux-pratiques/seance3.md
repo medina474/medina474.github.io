@@ -9,7 +9,7 @@ title: Carte
 
 Sur cette page ajouter une carte à l'aide de la librairie [Leaflet](https://leafletjs.com/).
 
-<img src="leaflet.png" height="32">
+<img src="leaflet.png" class="h-8">
 
 ```html
 <link rel="stylesheet" href="leaflet/leaflet.css"

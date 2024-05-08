@@ -13,11 +13,11 @@ Les langages de développement des différentes plateformes sont eux aussi très
 
 Il est donc nécessaire de concevoir et développer l’application **autant de fois** que de plateformes pour lesquelles ont veut distribuer l'application. Et les développeurs maîtrisent en général l’un ou l’autre de ces environnements.
 
-<img src="ios.webp" height="32"> [iOS](ios)
+![ios.webp](){: .h-8 .align-middle} [iOS](ios)
 
-<img src="android.png" height="32"> [Android](android)
+<img src="android.png" class="h-8 align-middle"> [Android](android)
 
-<img src="windows.png" height="32"> [Windows](windows)
+<img src="windows.png" class="h-8 align-middle"> [Windows](windows)
 
 ### Définitions
 
