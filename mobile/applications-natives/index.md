@@ -13,11 +13,11 @@ Les langages de développement des différentes plateformes sont eux aussi très
 
 Il est donc nécessaire de concevoir et développer l’application **autant de fois** que de plateformes pour lesquelles ont veut distribuer l'application. Et les développeurs maîtrisent en général l’un ou l’autre de ces environnements.
 
-[iOS](ios)
+<img src="ios.webp" height="32"> [iOS](ios)
 
-[Android](android)
+<img src="android.png" height="32"> [Android](android)
 
-[Windows](windows)
+<img src="windows.png" height="32"> [Windows](windows)
 
 Langage interprété
 : La traduction se produit en **temps réel** pendant l'exécution. Ainsi, le langage requiert la présence d'un **interpréteur** pour exécuter le programme (appelé dans ce cas script). L'avantage est qu'un même script peut fonctionner sur différentes plateformes, mais la traduction du code à chaque exécution peut affecter les performances. Exemple de langages interprétés : JavaScript, Python, PHP, Ruby, Perl
