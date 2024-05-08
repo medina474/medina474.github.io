@@ -1,5 +1,5 @@
 a { color: #2160c4; }
-a:hover { color: color.adjust(#2160c4,$lightness: -10%); }
+a:hover { color: adjust(#2160c4, $lightness: -10%); }
 
 
 .font-sans {
