@@ -1,5 +1,5 @@
 ---
-title: Séance 1
+title: Page d’accueil
 ---
 
 Pour accélérer le développement nous allons utiliser le framework [OnsenUI](../onsenui/) qui permet d'utiliser des composants prédéfinis et obtenir un affichage semblable à ce que l'on trouve dans les applications natives.
@@ -32,6 +32,27 @@ Vous pouvez télécharger les librairies ou utiliser celle disponible sur les CD
 ```
 
 ## Page d'accueil
+
+> Prérequis : Connaître le langage [SVG](../../../svg)
+
+Ajouter le [logo](logo.svg), fichier au format svg, à l'intérieur du code de la page d'accueil.
+
+L'inclusion en ligne (inline) de fichier SVG doit toujours être préférée à l'utilisation comme une simple image avec la balise *img* ou à l'inclusion totalement obsolète avec une balise *object*.
+
+L'avantage d'une inclusion en ligne est de pouvoir contrôler l'illustration SVG avec le CSS de la page et de le manipuler avec du javascript. Ce qui n'est pas possible avec la balise *img*.
+
+
+Ajouter la forme de fond.
+
+```svg
+<path fill="#663399" d="M0 0 h32 v30 q-16 6 -32 0" />
+```
+
+Ainsi que le titre
+
+```svg
+<text fill="#fff" x="16" y="5" font-size="3" text-anchor="middle">Cinéma</text>
+```
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 35">

@@ -7,7 +7,6 @@
 .markdown-body {
   word-wrap: break-word;
 
-  // Clearfix on the markdown body
   &::before {
     display: table;
     content: "";
