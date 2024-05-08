@@ -1,6 +1,4 @@
-a { color: #2160c4; }
-a:hover { color: darken(#2160c4, 10%); }
-
+@import "./lib/base.scss";
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -32,11 +30,11 @@ a:hover { color: darken(#2160c4, 10%); }
 
 .align-middle	{ vertical-align: middle; }
 
-.h-8{ height: 2rem; }
+.h-8 { height: 2rem; }
 
 @import "primer-support/index.scss";
 @import "primer-utilities/index.scss";
 @import "primer-layout/index.scss";
 @import "primer-markdown/index.scss";
-@import "blockquote.scss";
+@import "./lib/blockquote.scss";
 @import "rouge";
