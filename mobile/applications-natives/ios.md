@@ -22,7 +22,7 @@ Objective C et Swift sont des langages exclusivement utilisé par Apple pour ses
 
 #### Une exemple en Objective C
 
-```ObjectiveC
+```objective-c
 -(void)testMethod:(BOOL(^)(NSInteger))guessTheNumber {
   BOOL winner = guessTheNumber(5);
   if( winner ) {
@@ -46,7 +46,7 @@ Objective C et Swift sont des langages exclusivement utilisé par Apple pour ses
 
 #### Une exemple en Swift
 
-```Swift
+```swift
 func sayHelloWorld() -> String {
   return "hello, world"
 }

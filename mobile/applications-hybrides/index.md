@@ -19,8 +19,8 @@ Les solutions permettant des développer des applications hybrides sont entre au
 - [Apache Cordova](https://cordova.apache.org/) et tous ses dérivées comme [Ionic](https://ionicframework.com/) ou [Monaca](https://monaca.io/)
 - Capacitor (Ionic)
 
-<img src="cordova.png" height="64"> <img src="ionic.png" height="64">
+<img src="cordova.png" height="64"> <img src="ionic.png" height="48">
 
 - Les solutions en ligne (développement depuis le web) comme [GoodBarber](https://fr.goodbarber.com/)
 
-<img src="goodbarber.png" height="64">
+<img src="goodbarber.png" height="48">

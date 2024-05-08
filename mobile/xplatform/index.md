@@ -29,9 +29,10 @@ Il ea étét fondé en 2011 (à la base appelé « Mono for Android » et « Mon
 
 L'interface responsive en XML utilise XAML
 
-Flutter est plus accessible pour les développeurs et propose un tronc commun pour toute l’application, ce qui apporte un gain de temps substantiel.
+<img src="net-maui-robot.png" height="64">
 
 https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0
+
 [https://dotnet.microsoft.com/en-us/](https://dotnet.microsoft.com/en-us/)
 
 
@@ -48,7 +49,6 @@ React Native est un framework d'applications mobiles créé par Facebook sur la 
 
 React Native est une solution multiplateforme lancée par Facebook en 2015, utilisant le Javascript et ayant vite fait ses preuves au sein de la communauté des développeurs. Aujourd’hui, son principal avantage face à Flutter est son ancienneté (facilité pour le développeur de trouver des bibliothèques ou du support). Néanmoins, Flutter rattrape bien son retard grâce à sa possibilité de personnaliser les éléments d’interface, et ses performances supérieures à son concurrent direct.
 
-
 React Native combine les meilleures parties du développement natif avec React, une bibliothèque JavaScript de premier ordre pour la création d'interfaces utilisateur.
 
 Utilisez-en un peu ou beaucoup. Vous pouvez utiliser React Native aujourd'hui dans vos projets Android et iOS existants ou vous pouvez créer une toute nouvelle application à partir de zéro.
@@ -60,6 +60,8 @@ Beaucoup de liberté est laissé à au développeur, le rendu est donc fortement
 ### Flutter
 
 Flutter est un SDK (Kit de Développement Logiciel) open-source créé par Google. Il est utilisé pour développer des applications multiplateformes pour Android, iOS, Linux, Mac, Windows et le web à partir d'une seule base de code. Le langage utilisé est le **Dart** qui peut être compilé en langage natif ou en Javascript.
+
+Flutter est plus accessible pour les développeurs et propose un tronc commun pour toute l’application, ce qui apporte un gain de temps substantiel.
 
 <img src="flutter.png" height="64">
 

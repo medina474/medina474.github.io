@@ -39,20 +39,3 @@
     @content;
   }
 }
-
-// Clearfix
-//
-// Clears floats via mixin.
-
-@mixin clearfix {
-  &::before {
-    display: table;
-    content: "";
-  }
-
-  &::after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-}
