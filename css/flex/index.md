@@ -1,7 +1,5 @@
 ---
-
 title: Flex
-
 ---
 
 Disposition des éléments suivant <u>une</u> seule direction 

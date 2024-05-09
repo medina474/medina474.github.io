@@ -1,11 +1,8 @@
 ---
-
 title: Proximity API
 ---
 
-<h2></h2>
-
-<h3>User Proximity</h3>
+### User Proximity
 
 ```javascript
 window.addEventListener('userproximity', function(userproximity) {
@@ -14,8 +11,7 @@ window.addEventListener('userproximity', function(userproximity) {
 
 ```
 
-
-<h3>Device Proximity</h3>
+### Device Proximity
 
 ```javascript
 window.addEventListener('deviceproximity', function(deviceproximity) {
@@ -26,16 +22,14 @@ window.addEventListener('deviceproximity', function(deviceproximity) {
 
 ```
 
-	<script>
-	window.addEventListener('userproximity', function(event) {
-		document.getElementById("userproximity.near").innerHTML = userproximity.near;
-	});
+<script>
+window.addEventListener('userproximity', function(event) {
+	document.getElementById("userproximity.near").innerHTML = userproximity.near;
+});
 
-	window.ondeviceproximity = function(deviceproximity) {
-		document.getElementById("deviceproximity.min").innerHTML = deviceproximity.min;
-		document.getElementById("deviceproximity.max").innerHTML = deviceproximity.max;
-		document.getElementById("deviceproximity.value").innerHTML = deviceproximity.value;
-	}
-	</script>
-</body>
-</html>
+window.ondeviceproximity = function(deviceproximity) {
+	document.getElementById("deviceproximity.min").innerHTML = deviceproximity.min;
+	document.getElementById("deviceproximity.max").innerHTML = deviceproximity.max;
+	document.getElementById("deviceproximity.value").innerHTML = deviceproximity.value;
+}
+</script>

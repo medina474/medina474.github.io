@@ -1,24 +1,14 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-	<title>Ambient Light</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/assets/lib/highlight.js/default.css">
-	<script src="/assets/lib/highlight.js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
+---
+title: Ambient Light API
+---
 
-<h2>Ambient Light API</h2>
+Les capteur ALS (Ambient Light Sensor) mesurent la luminosité ambiante. L'appareil peut ainsi ajuster la luminosité et/ou le contraste des éléments affichés sur l'écran. Cela a deux avantages : améliorer l'expérience utilisateur en adaptant la visibilité à l'environnement (plein soleil, obscurité) et économiser l'énergie en baissant la luminosité de l'écran quand cela est possible.
 
-<p>Les capteur ALS (Ambient Light Sensor) mesurent la luminosité ambiante. L'appareil peut ainsi ajuster la luminosité et/ou le contraste des éléments affichés sur l'écran. Cela a deux avantages : améliorer l'expérience utilisateur en adaptant la visibilité à l'environnement (plein soleil, obscurité) et économiser l'énergie en baissant la luminosité de l'écran quand cela est possible.</p>
+L'information de luminosité peut être fournie par un capteur spécifique qui délivrera un mesure précise ou directement par la caméra.
 
-<p>L'information de luminosité peut être fournie par un capteur spécifique qui délivrera un mesure précise ou directement par la caméra.</p>
+### Device Light
 
-<h3>Device Light</h3>
-
-<p>Retourne la luminosité ambiante en lux</p>
+Retourne la luminosité ambiante en lux
 
 ```javascript
 window.addEventListener('devicelight', function(devicelight) {
@@ -29,10 +19,9 @@ window.addEventListener('devicelight', function(devicelight) {
 
 ```
 
+### Light Level
 
-<h3>Light Level</h3>
-
-<p>Indique seulement 3 niveaux : normal, bright, ou dim</p>
+Indique seulement 3 niveaux : normal, bright, ou dim
 
 ```javascript
 window.addEventListener('lightlevel', function(lightlevel) {
@@ -40,7 +29,6 @@ window.addEventListener('lightlevel', function(lightlevel) {
 });
 
 ```
-
 
 <script language='javascript'>
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -64,6 +52,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 });
 </script>
-
-</body>
-</html>

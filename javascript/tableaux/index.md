@@ -504,10 +504,10 @@ Array.reduce(function (select, current) {
 https://dmitripavlutin.com/how-three-dots-changed-javascript/
 
 :shallow copy
- copie superficielle
+copie superficielle
 
 :deep copy 
- copie profonde
+copie profonde
 
 <script>
 document.getElementById('d0').innerText = JSON.stringify( new Array() );

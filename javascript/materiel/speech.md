@@ -1,24 +1,13 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Speech</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../../assets/lib/highlight.js/default.css">
-	<script src="../../assets/lib/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
+---
+title: Speech
+---
 
 ```javascript
-
 var su = new SpeechSynthesisUtterance();
 su.lang = "fr";
 su.text = "Il me semble, bercé par ce choc monotone, Qu'on cloue en grande hâte un cercueil quelque part. Pour qui ? - C'était hier l'été ; voici l'automne ! Ce bruit mystérieux sonne comme un départ.";
 speechSynthesis.speak(su);
-
 ```
-
 
 <p>
 Bientôt nous plongerons dans les froides ténèbres ;<br>
@@ -99,5 +88,3 @@ default: false
 */
 
 </script>
-</body>
-</html>

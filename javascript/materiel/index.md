@@ -1,5 +1,4 @@
 ---
-
 title: Matériel
 style: materiel.css
 ---
