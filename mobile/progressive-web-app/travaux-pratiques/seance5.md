@@ -6,13 +6,8 @@ Autocomplétion
 
 masque SVG
 
-
 Onsen UI Splitter side
 
-## Lighthouse
-
-Lighthouse est un outil de Chrome qui teste une page ou un site suivant plusieurs critères et qui donne des conseils pour améliorer son code.
-Il y a différents domaines d'analyse : l'accessibilité aux personnes mal voyantes, performance, optimisation pour les moteurs de recherche (seo) et aussi donc pwa.
 
 ## Service Worker
 

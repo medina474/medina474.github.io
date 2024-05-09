@@ -23,14 +23,7 @@ Une PWA permet de s'affranchir des outils de création d'applications hybrides
 - [Séance 1](accueil) : Mise en place d'OnsenUI, création de la page d'accueil
 - [Séance 2](acteurs) : Liste des acteurs
 - [Séance 3](carte) : Placer les cinémas sur une carte
-
-### Séance 2
-
-### Séance 3
-[Cartographie](seance3)
-
-### Séance 4
-[Graphisme](seance4)
+- [Séance 4](pwa) : Convertir en PWA
 
 ### Séance 5
 [Graphisme](seance5)
