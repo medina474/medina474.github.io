@@ -34,7 +34,7 @@ window.addEventListener('lightlevel', function(lightlevel) {
 document.addEventListener("DOMContentLoaded", function(event) {
 
     if ('ondevicelight' in window) {
-	    window.addEventListener('devicelight', function(devicelight) {
+      window.addEventListener('devicelight', function(devicelight) {
             document.getElementById('devicelight.value').innerHTML = devicelight.value;
             document.getElementById('devicelight.min').innerHTML = devicelight.min;
             document.getElementById('devicelight.max').innerHTML = devicelight.max;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     if ('onlightlevel' in window) {
-	    window.addEventListener('lightlevel', function(lightlevel) {
+      window.addEventListener('lightlevel', function(lightlevel) {
             document.getElementById('lightlevel.value').innerHTML = lightlevel.value;
         }, false);
     } else {

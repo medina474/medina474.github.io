@@ -10,11 +10,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: decimal;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -23,11 +23,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: decimal-leading-zero;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -36,11 +36,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: lower-alpha;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -49,11 +49,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: lower-latin;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -62,11 +62,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: upper-alpha;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -75,11 +75,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: upper-latin;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 <h3>Romain</h3>
@@ -90,11 +90,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: lower-roman;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -103,11 +103,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: upper-roman;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -116,11 +116,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: lower-greek;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -129,11 +129,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: armenian;">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -178,11 +178,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: hiragana">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -191,11 +191,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: hiragana-iroha">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -204,11 +204,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: katakana">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -217,11 +217,11 @@ title: Listes ordonnées
 
 
 <ol style="list-style-type: katakana-iroha">
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -229,11 +229,11 @@ title: Listes ordonnées
 ```
 
 <ol start='100'>
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -242,11 +242,11 @@ title: Listes ordonnées
 
 
 <ol reversed>
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 ```html
@@ -255,11 +255,11 @@ title: Listes ordonnées
 
 
 <ol>
-	<li value='2'>France</li>
-	<li value='6'>Mexique</li>
-	<li value='4'>Allemagne</li>
-	<li value='7'>Espagne</li>
-	<li>U.S.A.</li>
+  <li value='2'>France</li>
+  <li value='6'>Mexique</li>
+  <li value='4'>Allemagne</li>
+  <li value='7'>Espagne</li>
+  <li>U.S.A.</li>
 </ol>
 
 <h2>Autres numérotations</h2>

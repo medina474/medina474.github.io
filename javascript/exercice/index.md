@@ -32,7 +32,7 @@ Position
 Donner l'index de la première région avec un ratio supérieur à 6
 Donner l'index de la dernière région avec un ratio supérieur à 6
 
-	
+  
 Tri du tableau
 Trier le tableau suivant le nombre de ca positifs et afficher le résultat dans la console
 

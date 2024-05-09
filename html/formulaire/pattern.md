@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Formulaire</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/assets/lib/highlight.js/default.css">
-	<script src="/assets/lib/highlight.js/highlight.pack.js"></script>
+  <meta charset="utf-8">
+  <title>Formulaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/lib/highlight.js/default.css">
+  <script src="/assets/lib/highlight.js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>

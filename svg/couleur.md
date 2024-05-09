@@ -31,14 +31,14 @@ Trés souvent les coordonnées s'expriment en pourcentage
   <use href="#grid"/>
   <defs>
     <linearGradient id="degrade">
-		<stop offset="0" stop-color="red"/>
-		<stop offset="0.1357" stop-color="orange"/>
-		<stop offset="0.2959" stop-color="yellow"/>
-		<stop offset="0.4686" stop-color="green"/>
-		<stop offset="0.6501" stop-color="blue"/>
-		<stop offset="0.8364" stop-color="indigo"/>
-		<stop offset="1" stop-color="violet"/>
-	  </linearGradient>
+    <stop offset="0" stop-color="red"/>
+    <stop offset="0.1357" stop-color="orange"/>
+    <stop offset="0.2959" stop-color="yellow"/>
+    <stop offset="0.4686" stop-color="green"/>
+    <stop offset="0.6501" stop-color="blue"/>
+    <stop offset="0.8364" stop-color="indigo"/>
+    <stop offset="1" stop-color="violet"/>
+    </linearGradient>
   </defs>
     <rect x="50" y="50" width="400" height="150" fill="url(#degrade)" />
 </svg>
@@ -72,10 +72,10 @@ Le dégradé se propage depuis le centre d'un cercle vers l'extérieur.
   <use href="#grid"/>
   <defs>
     <radialGradient id="degrade2">
-		<stop  offset="0" stop-color="red"/>
-		<stop  offset="0.5" stop-color="orange"/>
+    <stop  offset="0" stop-color="red"/>
+    <stop  offset="0.5" stop-color="orange"/>
     <stop  offset="1" stop-color="yellow"/>
-	  </radialGradient>
+    </radialGradient>
   </defs>
     <rect x="50" y="50" width="400" height="150" fill="url(#degrade2)" />
 </svg>
@@ -99,9 +99,9 @@ Le dégradé se propage depuis le centre d'un cercle vers l'extérieur.
 <svg width="550" height="250">
 <defs>
   <linearGradient id="userSpaceOnUse" gradientUnits="userSpaceOnUse">
-		<stop  offset="0" style="stop-color:red"/>
-		<stop  offset="1" style="stop-color:green;"/>
-	</linearGradient>
+    <stop  offset="0" style="stop-color:red"/>
+    <stop  offset="1" style="stop-color:green;"/>
+  </linearGradient>
 </defs>
   <rect width="100" height="195" fill="url(#userSpaceOnUse)" />
   <rect x="150" width="100" height="195" fill="url(#userSpaceOnUse)" />
@@ -115,9 +115,9 @@ Le dégradé se propage depuis le centre d'un cercle vers l'extérieur.
 <svg width="550" height="250">
 <defs>
   <linearGradient id="objectBoundingBox" gradientUnits="objectBoundingBox">
-		<stop  offset="0" style="stop-color:red"/>
-		<stop  offset="1" style="stop-color:green;"/>
-	</linearGradient>
+    <stop  offset="0" style="stop-color:red"/>
+    <stop  offset="1" style="stop-color:green;"/>
+  </linearGradient>
 </defs>
   <rect width="100" height="195" fill="url(#objectBoundingBox)" />
   <rect x="150" width="100" height="195" fill="url(#objectBoundingBox)" />

@@ -5,19 +5,19 @@ title: Media Queries
 <style>
 table { border-collapse: collapse }
 td { border:1px solid gray; }
-	@media only screen and (device-width: 1024px) and (orientation : landscape)
+  @media only screen and (device-width: 1024px) and (orientation : landscape)
    {
        .ipad:after {content: "ipad ?"  }
     }
-	@media screen and (max-width: 640px) { .small:after { content: "\2713" } }
-	@media screen and (min-width: 800px) { .medium:after { content: "\2713" } }
-	@media screen and (min-width: 1024px) and (max-width: 1280px) { .wide:after { content: "\2713" } }
-	@media screen and (max-device-width: 480px) { .maxdevice:after { content: "\2713" } }
-	@media screen and (min-aspect-ratio: 16/9) { .aspect169:after { content: "\2713" } }
-	@media screen and (min-aspect-ratio: 3/4) { .aspect34:after { content: "\2713" } }
-	@media screen and (min-resolution: 2dppx) { .resolution2:after { content: "\2713" } }
-	@media print and (max-width: 14.8cm) { .printA5:after { content: "\2713" } }
-	@media print and (min-width: 19cm) { .printA4:after { content: "\2713" } }
+  @media screen and (max-width: 640px) { .small:after { content: "\2713" } }
+  @media screen and (min-width: 800px) { .medium:after { content: "\2713" } }
+  @media screen and (min-width: 1024px) and (max-width: 1280px) { .wide:after { content: "\2713" } }
+  @media screen and (max-device-width: 480px) { .maxdevice:after { content: "\2713" } }
+  @media screen and (min-aspect-ratio: 16/9) { .aspect169:after { content: "\2713" } }
+  @media screen and (min-aspect-ratio: 3/4) { .aspect34:after { content: "\2713" } }
+  @media screen and (min-resolution: 2dppx) { .resolution2:after { content: "\2713" } }
+  @media print and (max-width: 14.8cm) { .printA5:after { content: "\2713" } }
+  @media print and (min-width: 19cm) { .printA4:after { content: "\2713" } }
 </style>
 
 - [La largeur de la zone d'affichage (viewport)](width) 
@@ -58,16 +58,16 @@ window.dispatchEvent(ev);
 </script>
 
 <table border="1">
-	<tr><td class="small"></td><td>La page fait 640px de largeur au maximum</td><td><code>@media screen and (max-width: 640px)</code></td></tr>
-	<tr><td class="medium"></td><td>La page fait 800px de largeur au minimum</td><td><code>@media screen and (min-width: 800px)</code></td></tr>
-	<tr><td class="wide"></td><td>La page fait entre 1024 et 1280px de largeur</td><td><code>@media screen and (min-width: 1024px) and (max-width: 1280px)</code></td></tr>
-	<tr><td class="maxdevice"></td><td>L'appareil fait 480px de largeur au maximum</td><td><code>@media screen and (max-device-width: 480px)</code></td></tr>
-	<tr><td class="aspect169"></td><td>La page a un ratio minimum de 16/9 (1.78)</td><td><code>@media screen and (min-aspect-ratio: 16/9)</code></td></tr>
-	<tr><td class="aspect34"></td><td>La page a un ratio minimum de 3/4 (0.75)</td><td><code>@media screen and (aspect-ratio: 3/4)</code></td></tr>
-	<tr><td class="resolution2"></td><td>La résolution de au minimum de 2</td><td><code>@media screen and (min-resolution: 2dppx)</code></td></tr>
-	<tr><th colspan="3">Print</th></tr>
-	<tr><td class="printA5"></td><td>La page est A5</td><td><code>@media print and (max-width: 14.8cm)</code></td></tr>
-	<tr><td class="printA4"></td><td>La page est A4</td><td><code>@media screen and (orientation:landscape)</code></td></tr>
+  <tr><td class="small"></td><td>La page fait 640px de largeur au maximum</td><td><code>@media screen and (max-width: 640px)</code></td></tr>
+  <tr><td class="medium"></td><td>La page fait 800px de largeur au minimum</td><td><code>@media screen and (min-width: 800px)</code></td></tr>
+  <tr><td class="wide"></td><td>La page fait entre 1024 et 1280px de largeur</td><td><code>@media screen and (min-width: 1024px) and (max-width: 1280px)</code></td></tr>
+  <tr><td class="maxdevice"></td><td>L'appareil fait 480px de largeur au maximum</td><td><code>@media screen and (max-device-width: 480px)</code></td></tr>
+  <tr><td class="aspect169"></td><td>La page a un ratio minimum de 16/9 (1.78)</td><td><code>@media screen and (min-aspect-ratio: 16/9)</code></td></tr>
+  <tr><td class="aspect34"></td><td>La page a un ratio minimum de 3/4 (0.75)</td><td><code>@media screen and (aspect-ratio: 3/4)</code></td></tr>
+  <tr><td class="resolution2"></td><td>La résolution de au minimum de 2</td><td><code>@media screen and (min-resolution: 2dppx)</code></td></tr>
+  <tr><th colspan="3">Print</th></tr>
+  <tr><td class="printA5"></td><td>La page est A5</td><td><code>@media print and (max-width: 14.8cm)</code></td></tr>
+  <tr><td class="printA4"></td><td>La page est A4</td><td><code>@media screen and (orientation:landscape)</code></td></tr>
 </table>
 
 ## Device ratio
@@ -89,15 +89,15 @@ window.dispatchEvent(ev);
 
 Bootstrap
 
-	<div class="clearfix visible-xs">XS</div>
-	<div class="clearfix visible-sm">SM > 768px container = 750px</div>
-	<div class="clearfix visible-md">MD  viewport > 992px container = 970px</div>
-	<div class="clearfix visible-lg">LG viewport > 1200px container = 1170px</div>
+  <div class="clearfix visible-xs">XS</div>
+  <div class="clearfix visible-sm">SM > 768px container = 750px</div>
+  <div class="clearfix visible-md">MD  viewport > 992px container = 970px</div>
+  <div class="clearfix visible-lg">LG viewport > 1200px container = 1170px</div>
 
-	<ul>
-		<li><a href="full.html">Full</a></li>
-	</ul>
-	https://www.alsacreations.com/article/lire/1500-matchmedia-javascript-media-queries.html
+  <ul>
+    <li><a href="full.html">Full</a></li>
+  </ul>
+  https://www.alsacreations.com/article/lire/1500-matchmedia-javascript-media-queries.html
 <script>
 var mql = window.matchMedia('(max-width: 600px)');
 

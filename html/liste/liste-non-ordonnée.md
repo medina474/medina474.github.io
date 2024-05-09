@@ -45,11 +45,11 @@ ul { list-style-type: none; }
 ```
 
 <ul style='list-style-type: none'>
-	<li>France</li>
-	<li>Mexique</li>
-	<li>Allemagne</li>
-	<li>Espagne</li>
-	<li>États-Unis d'Amérique</li>
+  <li>France</li>
+  <li>Mexique</li>
+  <li>Allemagne</li>
+  <li>Espagne</li>
+  <li>États-Unis d'Amérique</li>
 </ul>
 
 ### Disque plein
@@ -174,9 +174,9 @@ ul.marker li::marker {
 ## Liste imbriquées
 
 <ul style='list-style-type: symbols(symbolic "w" "x" "y", "z")'>
-	<li>France</li>
-	<li>Mexique</li>
-	<ul>
+  <li>France</li>
+  <li>Mexique</li>
+  <ul>
         <li>France</li>
         <li>Mexique</li>
         <li>Allemagne</li>
@@ -204,8 +204,8 @@ ul.marker li::marker {
         </ul>
         <li>U.S.A.</li>
     </ul>
-	<li>Espagne</li>
-	<li>U.S.A.</li>
+  <li>Espagne</li>
+  <li>U.S.A.</li>
 </ul>
 
 

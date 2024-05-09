@@ -14,13 +14,13 @@ Ce n'est pas parce que le navigateur implémente les interfaces de programmation
 <div class="materiel" id="geolocation">
 <div></div>
 <div class="support">
-	<a class="button" href='geolocation'>Tester</a>
+  <a class="button" href='geolocation'>Tester</a>
 </div>
 </div>
 
 <script>
 if ("geolocation" in navigator)
-	document.getElementById("geolocation").classList.add("support");
+  document.getElementById("geolocation").classList.add("support");
 </script>
 
 ## Vibration
@@ -32,13 +32,13 @@ if ("geolocation" in navigator)
 <div class="materiel" id="vibrate">
 <div></div>
 <div class="support">
-	<a class="button" href='vibrate'>Tester</a>
+  <a class="button" href='vibrate'>Tester</a>
 </div>
 </div>
-	
+  
 <script>
 if ("vibrate" in navigator)
-	document.getElementById("vibrate").classList.add("support");
+  document.getElementById("vibrate").classList.add("support");
 </script>
 
 ## Capteur de lumière ambiante
@@ -50,13 +50,13 @@ if ("vibrate" in navigator)
 <div class="materiel" id="ambient">
 <div></div>
 <div class="support">
-	<a class="button" href='ambient'>Tester</a>
+  <a class="button" href='ambient'>Tester</a>
 </div>
 </div>
 
 <script>
 if ("ondevicelight" in window)
-	document.getElementById("ambient").classList.add("support");
+  document.getElementById("ambient").classList.add("support");
 </script>
 
 ## Capteur de proximité
@@ -68,13 +68,13 @@ if ("ondevicelight" in window)
 <div class="materiel" id="proximity">
 <div></div>
 <div class="support">
-	<a class="button" href='proximity'>Tester</a>
+  <a class="button" href='proximity'>Tester</a>
 </div>
 </div>
 
 <script>
 if ("ondeviceproximity" in window)
-	document.getElementById("proximity").classList.add("support");
+  document.getElementById("proximity").classList.add("support");
 </script>
 
 ## Mouvements
@@ -82,7 +82,7 @@ if ("ondeviceproximity" in window)
 <div class="materiel" id="motion">
 <div></div>
 <div class="support">
-	<a class="button" href='motion'>Tester</a>
+  <a class="button" href='motion'>Tester</a>
 </div>
 </div>
 
@@ -91,7 +91,7 @@ if ("ondeviceproximity" in window)
 ```
 <script>
 if ("ondevicemotion" in window)
-	document.getElementById("motion").classList.add("support");
+  document.getElementById("motion").classList.add("support");
 </script>
 
 ## Orientation
@@ -99,7 +99,7 @@ if ("ondevicemotion" in window)
 <div class="materiel" id="orientation">
 <div></div>
 <div class="support">
-	<a class="button" href='orientation'>Tester</a>
+  <a class="button" href='orientation'>Tester</a>
 </div>
 </div>
 
@@ -110,7 +110,7 @@ if ("ondevicemotion" in window)
 
 <script>
 if ("ondeviceorientation" in window || "orientation" in screen)
-	document.getElementById("orientation").classList.add("support");
+  document.getElementById("orientation").classList.add("support");
 </script>
 
 ## Lecteur code barre
@@ -118,7 +118,7 @@ if ("ondeviceorientation" in window || "orientation" in screen)
 <div class="materiel" id="barcode">
 <div></div>
 <div class="support">
-	<a class="button" href='barcode'>Tester</a>
+  <a class="button" href='barcode'>Tester</a>
 </div>
 </div>
 
@@ -135,13 +135,13 @@ document.getElementById("barcode").classList.toggle("support", 'BarcodeDetector'
 <div class="materiel" id="speech">
 <div></div>
 <div class="support">
-	<a class="button" href='speech'>Tester</a>
+  <a class="button" href='speech'>Tester</a>
 </div>
 </div>
 
 <script>
 if ("speechSynthesis" in window)
-	document.getElementById("speech").classList.add("support");
+  document.getElementById("speech").classList.add("support");
 </script>
 
 ## Batterie
@@ -153,14 +153,14 @@ if ("speechSynthesis" in window)
 <div class="materiel" id="battery">
 <div></div>
 <div class="support">
-	<a class="button" href='batterie'>Tester</a>
+  <a class="button" href='batterie'>Tester</a>
 </div>
 </div>
-	
+  
 
 <script>
 if ("battery" in navigator)
-	document.getElementById("battery").classList.add("support");
+  document.getElementById("battery").classList.add("support");
 </script>
 
 L'API de statut de la batterie fournit des informations sur le niveau de charge de la batterie et envoie des notifications lors du changement de ce niveau.

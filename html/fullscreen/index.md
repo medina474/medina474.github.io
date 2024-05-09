@@ -1,7 +1,7 @@
 ---
 title: Fullscreen API
 ---
-	
+  
 <style>
 #fullscreen { display:none }
 #fullscreen:-moz-full-screen { display:block; color:#fff }
@@ -35,20 +35,20 @@ document.exitFullscreen();
 <span id="std"></span><br>
 
 <script>
-	std = document.getElementById("std")
-	function fullscreenStatus(engine, enabled, element) {
-		msg  = "Plein écran " + (enabled ? "" : "non ") + "supporté.<br>"
-		msg += "Élément en plein écran : " + element
-		engine.innerHTML = msg
-		engine.className = (enabled ? "ok" : "ko")
-	}
+  std = document.getElementById("std")
+  function fullscreenStatus(engine, enabled, element) {
+    msg  = "Plein écran " + (enabled ? "" : "non ") + "supporté.<br>"
+    msg += "Élément en plein écran : " + element
+    engine.innerHTML = msg
+    engine.className = (enabled ? "ok" : "ko")
+  }
 
-	fullscreenStatus(std, document.fullscreenEnabled, document.fullscreenElement)
-	document.addEventListener("fullscreenchange", () => {
-				fullscreenStatus(std, document.fullscreenEnabled,
-							document.fullscreenElement)})
+  fullscreenStatus(std, document.fullscreenEnabled, document.fullscreenElement)
+  document.addEventListener("fullscreenchange", () => {
+        fullscreenStatus(std, document.fullscreenEnabled,
+        			document.fullscreenElement)})
 
-	document.addEventListener("fullscreenerror", () => {
+  document.addEventListener("fullscreenerror", () => {
     std.innerHTML = "Erreur de passage en plein écran !"
     std.className = "ko" });
 </script>
@@ -91,7 +91,7 @@ document.addEventListener("mozfullscreenerror", function() {
   document.addEventListener("webkitfullscreenerror", function() {
         webkit.innerHTML = "Erreur de passage en plein écran !"
         webkit.className = "ko" })
-	</script>
+  </script>
 
 ### Microsoft (10 &le; Internet Explorer &le; 11) :
 
@@ -108,7 +108,7 @@ document.addEventListener("mozfullscreenerror", function() {
         ms.innerHTML = "Erreur de passage en plein écran !"
         ms.className = "ko" })
 </script>
-	
+  
 
 ```css
 div:fullscreen { }
@@ -120,38 +120,38 @@ div:fullscreen { }
 backdrop
 <script>
   function isItemSupported(item, isFunc, ref){
-	value = eval(item);
+  value = eval(item);
 //	alert(item+" :\n\n"+value);		// DÃ©bug.
-	if (!ref)
-		ref = value;
-	if (!value || value != ref){
-		document.write('<br><br><span id="'+item+'"></span>');
+  if (!ref)
+    ref = value;
+  if (!value || value != ref){
+    document.write('<br><br><span id="'+item+'"></span>');
  		eltMsg = document.getElementById(item);
 //		eltMsg.innerHTML = item.slice(item.lastIndexOf('.')+1) + (isFunc?"()":"") + " non supportÃ©" + (isFunc?"e":"") + " par votre navigateur !";
-		eltMsg.innerHTML = item + (isFunc?"()":"") + " non supportÃ©" + (isFunc?"e":"") + " par votre navigateur !";
-		eltMsg.className = "ko";
-	}
+    eltMsg.innerHTML = item + (isFunc?"()":"") + " non supportÃ©" + (isFunc?"e":"") + " par votre navigateur !";
+    eltMsg.className = "ko";
+  }
 }
 
-	isItemSupported("document.documentElement.requestFullscreen", true)
-	isItemSupported("document.exitFullscreen", true)
-	isItemSupported("document.fullscreenEnabled")
-	isItemSupported("document.fullscreenElement")
+  isItemSupported("document.documentElement.requestFullscreen", true)
+  isItemSupported("document.exitFullscreen", true)
+  isItemSupported("document.fullscreenEnabled")
+  isItemSupported("document.fullscreenElement")
 
-	isItemSupported("document.documentElement.msRequestFullscreen", true)
-	isItemSupported("document.msExitFullscreen", true)
-	isItemSupported("document.msFullscreenEnabled")
-	isItemSupported("document.msFullscreenElement")
+  isItemSupported("document.documentElement.msRequestFullscreen", true)
+  isItemSupported("document.msExitFullscreen", true)
+  isItemSupported("document.msFullscreenEnabled")
+  isItemSupported("document.msFullscreenElement")
 
-	isItemSupported("document.documentElement.mozRequestFullScreen", true)
-	isItemSupported("document.mozCancelFullScreen", true)
-	isItemSupported("document.mozFullScreenEnabled")
-	isItemSupported("document.mozFullScreenElement")
+  isItemSupported("document.documentElement.mozRequestFullScreen", true)
+  isItemSupported("document.mozCancelFullScreen", true)
+  isItemSupported("document.mozFullScreenEnabled")
+  isItemSupported("document.mozFullScreenElement")
 
-	isItemSupported("document.documentElement.webkitRequestFullscreen", true)
-	isItemSupported("document.webkitExitFullscreen", true)
-	isItemSupported("document.webkitFullscreenEnabled")
-	isItemSupported("document.webkitFullscreenElement")
+  isItemSupported("document.documentElement.webkitRequestFullscreen", true)
+  isItemSupported("document.webkitExitFullscreen", true)
+  isItemSupported("document.webkitFullscreenEnabled")
+  isItemSupported("document.webkitFullscreenElement")
   */
 </script>	 
 

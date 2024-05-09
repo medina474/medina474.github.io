@@ -192,7 +192,7 @@ Entre n et m fois : {n,m}
 RewriteRule ^x{3,5}$ redirection.php?v0=$0&v1=$1
 
 Si on ne met de délimiteurs (début, fin ou autres caractères), alors les caractères x supplémentaires ne feront pas partie du groupe mais la règle sera validée tout de même.
-	{3}	{3,}	{3,5}
+  {3}	{3,}	{3,5}
 http://hostname/xx
 http://hostname/xxx
 

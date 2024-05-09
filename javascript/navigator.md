@@ -64,8 +64,8 @@ navigator.language = ;
 <table>
 <script language='javascript'>
 let a = "";
-	for (i=0; i < navigator.languages.length; i++)
-		 a += '<tr><td>' + navigator.languages[i] + '</td></tr>';
+  for (i=0; i < navigator.languages.length; i++)
+     a += '<tr><td>' + navigator.languages[i] + '</td></tr>';
 
 </script>
 </table>
@@ -105,43 +105,43 @@ navigator.connectionSpeed=;
 
   window.addEventListener("load",
     function (event) {
-			let i = 0;
+      let i = 0;
   		let operators = document.querySelectorAll("code .o");
 
       operators[i++].nextSibling.textContent  = ` "${navigator.userAgent}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.appName}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.appCodeName}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.appVersion}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.appMinorVersion}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.buildID}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.product}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.productSub}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.vendor}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.vendorSub}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.appName}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.appCodeName}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.appVersion}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.appMinorVersion}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.buildID}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.product}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.productSub}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.vendor}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.vendorSub}"`;
 
-			operators[i++].nextSibling.textContent  = ` "${navigator.cookieEnabled}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.doNotTrack}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.platform}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.oscpu}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.cpuClass}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.cookieEnabled}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.doNotTrack}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.platform}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.oscpu}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.cpuClass}"`;
 
-			operators[i++].nextSibling.textContent  = ` "${navigator.onLine}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.onLine}"`;
 
-			let t = "";
-			for (j=0; j<navigator.plugins.length; j++)
-		 		t += navigator.plugins[j].name + ' (' + navigator.plugins[j].version + ') ' + navigator.plugins[j].filename + ' '+navigator.plugins[j].description + ' ';
+      let t = "";
+      for (j=0; j<navigator.plugins.length; j++)
+     		t += navigator.plugins[j].name + ' (' + navigator.plugins[j].version + ') ' + navigator.plugins[j].filename + ' '+navigator.plugins[j].description + ' ';
 
-			operators[i++].nextSibling.textContent  = t;
+      operators[i++].nextSibling.textContent  = t;
 
-			operators[i++].nextSibling.textContent  = ` "${navigator.systemLanguage}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.userLanguage}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.language}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.systemLanguage}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.userLanguage}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.language}"`;
 
-			operators[i++].nextSibling.textContent  = ` ${navigator.maxTouchPoints}`;
-			operators[i++].nextSibling.textContent  = ` ${navigator.hardwareConcurrency}`;
-			operators[i++].nextSibling.textContent  = ` ${navigator.webdriver}`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.pointerEnabled}"`;
-			operators[i++].nextSibling.textContent  = ` "${navigator.pointerEnabled}"`;
+      operators[i++].nextSibling.textContent  = ` ${navigator.maxTouchPoints}`;
+      operators[i++].nextSibling.textContent  = ` ${navigator.hardwareConcurrency}`;
+      operators[i++].nextSibling.textContent  = ` ${navigator.webdriver}`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.pointerEnabled}"`;
+      operators[i++].nextSibling.textContent  = ` "${navigator.pointerEnabled}"`;
     }, true);
 })();
 </script>
