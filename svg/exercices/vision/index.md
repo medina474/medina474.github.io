@@ -3,7 +3,7 @@ title: SVG - Exercice - Filtre
 ---
 
 > ***Prérequis :*** le format SVG, les [filtres](../)
-:{.info}
+{:.info}
 
 ## Exercice 1
 

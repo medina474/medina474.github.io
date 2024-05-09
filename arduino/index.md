@@ -17,11 +17,11 @@ La carte dispose d’un logiciel système interne (appelé bootloader) qui perme
 Pour programmer un Arduino il existe plusieurs solutions. Le plus connu et le plus utilisé et celui disponible sur le [site officiel](https://www.arduino.cc/en/software). Il est est un peu daté et concurencé par d'autres outils comme Visual Studio Code avec l'extension PlatformIO. Pour répondre à cette concurence une nouvelle version est en préparation et sera très prochainement disponible.
 
 > **PWM** : Pulse Width Modulation. La modulation de largeur d'impulsions est une technique couramment utilisée pour synthétiser des signaux pseudo analogiques à l'aide de circuits numériques (1 ou 0).
-{.definition}
+{:.definition}
 
 
 > **Bootloader** : Le chargeur d'amorçage permet de charger un programme dans la mémoire FLASH du microcontrôleur à partir de la ligne série et d'exécuter celui-ci.
-{.definition}
+{:.definition}
 
 ### Caractéristiques techniques
 

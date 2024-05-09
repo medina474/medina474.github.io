@@ -3,7 +3,7 @@ title: SVG - Télévision
 ---
 
 > ***Pérequis :*** le format SVG, les [formes](../), les [propriétés](../../propriétés), le [masquage](../../découpe)
-{.info}
+{:.info}
 
 Vous devez dessiner un téléphone au format SVG.
 Utilisez Visual Studio Code avec l'extension SVG de Jock pour prévisualiser le résualt.

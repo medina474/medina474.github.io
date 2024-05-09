@@ -3,7 +3,7 @@ title: Développement Linux sur PC
 ---
 
 > Développer à distance depuis Visual Studio Code sur PC.
-{.info}
+{:.info}
 
 ## WSL2 Sous système Linux pour Windows
 

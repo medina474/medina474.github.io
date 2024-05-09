@@ -3,7 +3,7 @@ title: Tableaux
 ---
 
 > **Définition :** Les tableaux servent à stocker un ensemble d'éléments de manière **ordonnée**. Ils sont gérés par l'objet `Array`.
-{.definition}
+{:.definition}
 
 ## Création
 

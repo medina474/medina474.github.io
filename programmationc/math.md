@@ -27,7 +27,7 @@ long double ceill(long double);
 Ces trois fonctions retournent l'arrondi entier supérieur (en anglais ceil signifiant plafond) de la valeur spécifiée en paramètre.
 
 >Attention aux valeurs négatives ! La valeur plafond de -5.82 est -5 car -5 est supérieur à -5.42.
-{.warning}
+{:.warning}
 
 ## Floor : Arrondi inférieur
 
@@ -42,4 +42,4 @@ long double floorl(long double);
 Ces trois fonctions retournent l'arrondi entier inférieur (en anglais floor signifiant plancher) de la valeur spécifiée en paramètre.
 
 >Attention aux valeurs négatives ! La valeur plancher de -5.21 est -6 car -6 est inférieure à -5.21.
-{.warning}
+{:.warning}

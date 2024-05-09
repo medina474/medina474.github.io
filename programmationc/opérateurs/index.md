@@ -3,7 +3,7 @@ title: Operateurs
 ---
 
 >Un **opérateur** est un symbole qui indique au programme qu'il faut effectuer des opérations mathématiques ou logiques spécifiques.
-{.definition}
+{:.definition}
 
 ## Opérateurs de signe
 

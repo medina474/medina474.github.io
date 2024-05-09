@@ -5,14 +5,14 @@ title: Media Queries - Orientation
 ---
 
 La page est orientée en portrait
-{.match .portrait}
+{:.match .portrait}
 
 ```css
 @media screen and (orientation:portrait)
 ```
 
 La page est orientée en paysage
-{.match .landscape}
+{:.match .landscape}
 
 ```css
 @media screen and (orientation:landscape)

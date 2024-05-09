@@ -3,7 +3,7 @@ title: KeePass
 ---
 
 > **KeePass** est un logiciel gestionnaire de mots de passe. Il permet de centraliser, protéger et sauvegarder un ensemble de mots de passe dans un seul fichier chiffré.
-{.definition}
+{:.definition}
 
 L'avantage est que vous n'avez plus à vous souvenir des mots de passe de vos différents comptes. Les mots de passe peuvent être très longs et très compliqués le gestionnaire se charge de les retenir pour vous.
 

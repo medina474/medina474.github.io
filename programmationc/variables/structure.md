@@ -3,7 +3,7 @@ title: Structure
 ---
 
 >Un structure permet de regrouper plusieurs types de données dans un seul bloc logique pour les associer à une super variable.
-{.definition}
+{:.definition}
 
 Exemple de variables indépendantes representant des conditions météorologiques.
 

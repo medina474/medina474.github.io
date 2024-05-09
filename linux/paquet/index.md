@@ -5,7 +5,7 @@ title: Gestion des paquets logiciels
 ## Effectuer une mise à jour du système.
 
 > Sans être connecté à l'utilisateur root, il est nécessaire d'utiliser la précommande _sudo_ (_substitute user do ..._) à chaque ligne.
-{.info}
+{:.info}
 
 ```shell-session
 $ apt update

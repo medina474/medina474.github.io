@@ -3,7 +3,7 @@ title: "Travaux dirigés"
 ---
 
 > Objectif : Déclarer des variables dans le bon type, saisie au clavier et affichage sur la console.
-{.objectif}
+{:.objectif}
 
 ## Exercice 1  :
 

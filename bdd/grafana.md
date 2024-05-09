@@ -3,7 +3,7 @@ title: Grafana
 ---
 
 >Grafana est un outil web de visualisation de données. Il fournit des diagrammes, des graphiques, des alertes depuis des sources de données auquel il est connecté.
-{.definition}
+{:.definition}
 
 Pour le visualeur de données nous allons utiliser plutôt Grafana, qui permet de visualiser des données d'autres sources que InfluxDB.
 

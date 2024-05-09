@@ -31,10 +31,10 @@ systemctl restart dhcpcd
 ## 2. Installer un serveur DHCP et DNS
 
 > ***Dynamic Host Configuration Protocol (DHCP)*** est un protocole réseau dont le rôle est d’assurer la configuration automatique des paramètres IP d'une machine, notamment en lui attribuant automatiquement une adresse IP et un masque de sous-réseau. DHCP peut aussi configurer l’adresse de la passerelle par défaut et les serveurs de noms DNS.
-{.definition}
+{:.definition}
 
 > ***Domain Name System (DNS)*** est un service informatique distribué utilisé pour traduire les noms de domaine Internet en adresse IP. Le DNS est un composant essentiel du réseau internet.
-{.definition}
+{:.definition}
 
 Par exemple :
 iutsd.univ-lorraine.fr est un nom de domaine pleinement qualifié (FQDN) il pointe vers une machine dont l'adresse IP est 193.50.135.38.

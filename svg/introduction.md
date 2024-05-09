@@ -87,7 +87,7 @@ La **programmation procédurale** est une séquence d'appels à des fonctions pe
 L'interface de programmation Canvas (API) ajouté à l'HTML5 permet de dessiner via un programme JavaScript. Le développeur définit précisément, dans le code du programme, chacune des étapes à exécuter par le navigateur pour aboutir au résultat.
 
 > Programation **procédurale** ou impérative = **Comment**
-{.definition}
+{:.definition}
 
 ```javascript
 var ctx = document.getElementById("dessin").getContext("2d");
@@ -128,7 +128,7 @@ La **programmation descriptive** décrit à l'aide de mots clés (balises, attri
 La programmation déclarative se concentre directement sur l’objectif à atteindre.
 
 > Programation **déclarative** ou descriptive = **Quoi**
-{.definition}
+{:.definition}
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" width="150" height="100" viewbox="0 0 1500 1000">

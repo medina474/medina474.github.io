@@ -22,7 +22,7 @@ a  | !a
 ### OU logique
 
 > L'opérateur **OU logique** vérifie qu'au moins **une** des conditions est réalisée.
-{.definition}
+{:.definition}
 
 L'opérateur `||` retourne 1 si une des deux conditions a la valeur 1 (ou tout nombre différent de 0).
 
@@ -43,7 +43,7 @@ a  | b  | a \|\| b
 ### ET logique
 
 > L'opérateur **ET logique** vérifie que **toutes** les conditions sont vraies.
-{.definition}
+{:.definition}
 
 L'opérateur `&&` retourne 1 seulement si les deux conditions ont la valeur 1 (ou tout nombre différent de 0).
 

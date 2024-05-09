@@ -3,7 +3,7 @@ title: SVG - Smartphone
 ---
 
 > ***Prérequis :*** le format SVG, les [formes](../) et les [propriétés](../../propriétés)
-:{.info}
+{:.info}
 
 Vous devez dessiner un téléphone au format SVG.
 Utilisez Visual Studio Code avec l'extension SVG de Jock pour prévisualiser le résultat.

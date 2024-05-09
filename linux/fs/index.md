@@ -17,7 +17,7 @@ $ ls
 Lister tous les fichiers et dossiers, même ceux cachés. 
 
 > Les fichiers et dossiers cachés sont ceux dont le nom commence par un point `.`.\
-{.info}
+{:.info}
 
 `.cinema\` est un dossier caché.
 

@@ -26,7 +26,7 @@ Transférer l'image sur une carte micro SD avec le logiciel [Rufus](https://gith
 ### Activer l'accès à distance par ssh
 
 > **headless** : mode de fonctionnement _sans tête_, utilisation d'un appareil sans écran, ni clavier, ni souris branchés directement à lui.
-{.definition}
+{:.definition}
 
 Créer un fichier appelé simplement `ssh`, sans extension. Utiliser notepad, et enregistrer le fichier dans la partition boot de la carte.
 

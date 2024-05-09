@@ -3,7 +3,7 @@ title: Variables
 ---
 
 >Une variable est un élément qui associe un **identifiant** à une **valeur**.
-{.definition}
+{:.definition}
 
 ### Caractéristiques
 
@@ -42,7 +42,7 @@ Sa **visibilité**, dans un langage évolué comme le C++, le C# ou Java, c'est 
 #### Déclaration
 
 >Les variables doivent être déclarées **avant** d'être utilisées.
-{.warning}
+{:.warning}
 
 ```C
 #include <stdio.h>

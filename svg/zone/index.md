@@ -7,7 +7,7 @@ Le **viewport** est la zone d'affichage visible d'une illustration SVG.
 Le viewport est défini grâce aux propriétés `height` et `width` de l’élément racine `<svg>`.
 
 > Le ***viewport*** est la fenêtre d'affichage ouverte sur le svg. Seule une partie de l'illustration est visible à travers cette fenêtre.
-{.definition}
+{:.definition}
 
 ## Zone de travail
 
@@ -30,7 +30,7 @@ Que se passe-t-il ?
 Le cercle n’est pas visible car il est **en dehors du viewport**.
 
 >Le viewport par défaut d'un élément svg est de **300px / 150px**.
-{.definition}
+{:.definition}
 
 Changer le viewport de l’élément svg en  360px de large et 210px de haut en utilisant les attributs `width` et `height` de l'élément `<svg>`. 
 
@@ -110,7 +110,7 @@ Passons la taille du viewport à 100 / 160.
 Le ratio est inversé les marges sont maintenant en haut et en bas.
 
 > Seuls les éléments à l'intérieur du viewbox sont affichés avec garantie.
-{.info}
+{:.info}
 
 ### Alignement
 
