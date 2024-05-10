@@ -11,11 +11,11 @@ Tous les SGBDR implément le langage SQL mais chacun l'a agrémenté d'extension
 
 Le langage SQL est décomposé en 4 sous ensembles de commandes
 
-- [DDL](sql/ddl) (DATA DEFINITION LANGAGE)
-- [DQL](sql/dql) (DATA QUERY LANGAGE)
-- [DML](sql/dml/) (DATA MANIPULATION LANGAGE)
-- [DCL](sql/dcl/) (DATA CONTROL LANGAGE)
-- [TCL](sql/tcl/) (TRANSACTION CONTROL LANGAGE)
+- [DDL](./ddl) (DATA DEFINITION LANGAGE)
+- [DQL](./dql) (DATA QUERY LANGAGE)
+- [DML](./dml/) (DATA MANIPULATION LANGAGE)
+- [DCL](./dcl/) (DATA CONTROL LANGAGE)
+- [TCL](./tcl/) (TRANSACTION CONTROL LANGAGE)
 
 [schéma](schema)
 

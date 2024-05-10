@@ -103,7 +103,7 @@ L'intérêt du masquage est d'utiliser des dégradés.
  </defs>
 ```
 
-Comme le découpage il faut faire référnce à la définition du masque
+Comme le découpage il faut faire référence à la définition du masque
 
 ```svg
 <g mask="url(#masque)" />

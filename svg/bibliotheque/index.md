@@ -61,8 +61,8 @@ Lorsque l'on utilise le SVG en mode inline incorporé directement dans la page H
 </svg>
 
 <svg>
-<use href="#grid"/>
-<use href="#ligneverte" x="100" y="50"/>
+  <use href="#grid"/>
+  <use href="#ligneverte" x="100" y="50"/>
 </svg>
 
 La bibliothèque permet des stocker des formes mais aussi des dégradés, des motifs, des masques, des marqueurs etc. 
@@ -120,6 +120,7 @@ la propriété css color doit être utilisée en svg avec la valeur `currentColo
 
 ![](shadow.png)
 
-Références
+### Références
+
 - https://la-cascade.io/utiliser-svg-use/
 - https://caniuse.com/mdn-svg_elements_symbol
