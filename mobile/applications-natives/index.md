@@ -22,7 +22,8 @@ Il est donc nécessaire de concevoir et développer l’application **autant de 
 ### Définitions
 
 Langage interprété
-: La traduction se produit en **temps réel** pendant l'exécution. Ainsi, le langage requiert la présence d'un **interpréteur** pour exécuter le programme (appelé dans ce cas script). L'avantage est qu'un même script peut fonctionner sur différentes plateformes, mais la traduction du code à chaque exécution peut affecter les performances.  Exemple de langages interprétés : JavaScript, Python, PHP, Ruby, Perl
+: La traduction se produit en **temps réel** pendant l'exécution. Ainsi, le langage requiert la présence d'un **interpréteur** pour exécuter le programme (appelé dans ce cas script). L'avantage est qu'un même script peut fonctionner sur différentes plateformes, mais la traduction du code à chaque exécution peut affecter les performances.  
+Exemple de langages interprétés : JavaScript, Python, PHP, Ruby, Perl
 
 Langage semi-interprété
 : Le code source est d'abord traduit dans un **langage intermédiaire** (appelé bytecode) qui est un langage pour une machine virtuelle générique. La traduction du bytecode par la machine virutelle est plus rapide qu'une interprétation d'un script textuel, les performances sont ainsi normalement préservées.  

@@ -50,7 +50,8 @@ En respectant ces conditions, vous pouvez d√©velopper une PWA qui offre une exp√
 
 ## Outils
 
-[PWA Builder](https://www.pwabuilder.com/)
+- [PWA Builder](https://www.pwabuilder.com/)
+- [Mask Icon](https://maskable.app/editor)
 
 ## Travaux pratiques
 

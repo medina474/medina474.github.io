@@ -43,5 +43,10 @@ TP : 21h : 18 + 3 (saé)
 - Mise en place d'un environnement de distribution des données ([voir](td/index.html))
 -->
 
+
+
 ## Travaux pratiques
-- [Travaux pratiques](progressive-web-app/travaux-pratiques)
+- [Concevoir une application PWA][pwa]
+
+
+[pwa]: progressive-web-app/travaux-pratiques

@@ -76,3 +76,5 @@ https://lp.jetbrains.com/kmm-for-crossplatform-developers/
 ### Native Script
 
 <img src="nativescript.svg" height="64">
+
+NativeScript est un framework open-source qui permet de développer des applications mobiles natives pour Android et iOS en utilisant des langages web comme JavaScript, TypeScript et CSS. Il permet aux développeurs de créer des applications qui ont l'apparence et les performances d'applications natives, tout en partageant une grande partie du code entre les plateformes. Avec NativeScript, vous pouvez créer des applications riches en fonctionnalités, en utilisant les compétences que vous avez déjà en développement web.

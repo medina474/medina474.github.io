@@ -2,7 +2,7 @@
 title: Travaux pratiques
 ---
 
-> Objectif : Concevoir une application PWA
+> **Objectif** : Concevoir une application PWA
 {: .objectif}
 
 ## Résumé
