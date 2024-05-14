@@ -25,6 +25,3 @@ Une PWA permet de s'affranchir des outils de création d'applications hybrides
 - [Séance 2](accueil) : création de la page d'accueil
 - [Séance 3](carte) : Placer les cinémas sur une carte
 - [Séance 4](pwa) : Convertir en PWA
-
-### Séance 5
-[Graphisme](seance5)

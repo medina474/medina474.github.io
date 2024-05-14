@@ -29,10 +29,29 @@ Pour en savoir plus lire : https://stacklima.com/quel-est-l-inconvenient-d-utili
 
 ### createElement
 
+Les fonctions `createElement`, `appendChild`, `removeChild`, `setAttribute` permettent d'agir sur le DOM de manière éfficace. Cependant les nombre de lignes de codes peut devenir trés important même pour quelques éléménts. De plus il est difficile de se rendre compte de la structure finale du rendu.
+
 ### template
 
 Une des fonctions méconnue d'html 5 est l'utilisation de modèles (template).
 Un template est un fragment de code html, non rendu par le navigateur donc totalement invisible et inexistant vis-à-vis de l'utilisateur.
+
+```javascript
+const elt = document.createElement("div")
+
+const portrait = document.createElement("img")
+portrait.setAttribute("src", "moi.jpg")
+portrait.className = "rounded"
+elt.appendChild(portait)
+```
+
+Aura pour rendu html
+
+
+```html
+<div><img src="moi.jpg" class="rounded"></div>
+``` 
+
 
 #### Ce que dit ChatGPT à propos des templates
 
@@ -53,22 +72,43 @@ En utilisant des templates, vous pouvez simplifier et améliorer la génération
 Jusqu'au moment ou ce fragment est récupéré, cloné et inséré dans la page comme nouvel élément. C'est ce principe qui est utilisé par Onsen UI que l'on va réutiliser.
 
 ```html
-<template id="ligne_personne">
+<template id="ligne_acteur">
   <ons-list-item modifier="chevron" tappable>
     <div class="left">
       <img class="list-item__thumbnail" src="photos/_default.jpg">
     </div>
     <div class="center">
-      <span class="list-item__title">
-        <span class="prenom"></span>&nbsp;<strong class="nom"></strong>
-      </span>
-      <span class="list-item__subtitle">
-        <span class="naissance"></span>&nbsp;
-        <span class="deces"></span>
-      </span>
+      <span class="list-item__title">${acteur.nom}</span>
+      <span class="list-item__subtitle">${acteur.age??"décédé"}</span>
     </div>
   </ons-list-item>
 </template>
+```
+
+### Utilisation du template
+
+```javascript
+const nouvelElement = document.getElementById("ligne_acteur").content.cloneNode(true);
+nouvelElement.querySelector(".list-item__title").textContent = acteur.nom;
+
+page.querySelector('ons-list').appendChild(nouvelElement);
+```
+
+### Chargement d'images
+
+```javascript
+function loadImage(source, element) {
+    let photo = new Image;
+    photo.src = source;
+
+    photo.onload = function () {
+      element.setAttribute("src", source);
+    }
+
+    photo.onerror = function () {
+      /*console.log("absent");*/
+    }
+  }
 ```
 
 ### Définitions

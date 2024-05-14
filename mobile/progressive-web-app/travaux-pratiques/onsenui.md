@@ -1,5 +1,5 @@
 ---
-title: OnsenUI
+title: Onsen UI
 ---
 
 Pour accélérer le développement nous allons utiliser le framework [OnsenUI](../onsenui/) qui permet d'utiliser des composants prédéfinis et obtenir un affichage semblable à ce que l'on trouve dans les applications natives.
