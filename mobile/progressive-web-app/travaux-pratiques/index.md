@@ -5,7 +5,7 @@ title: Travaux pratiques
 > **Objectif** : Concevoir une application PWA
 {: .objectif}
 
-## Résumé
+## Rappels
 
 Une PWA reprend les principes de l'application hybride, mais pour une application web.
 
@@ -20,8 +20,9 @@ Une PWA permet de s'affranchir des outils de création d'applications hybrides
 [Mise en place](seance1/index.html)
 -->
 
-- [Séance 1](accueil) : Mise en place d'OnsenUI, création de la page d'accueil
-- [Séance 2](acteurs) : Liste des acteurs
+
+- Séance 1 : Mise en place d'[OnsenUI](onsenui), liste des [acteurs](acteurs).
+- [Séance 2](accueil) : création de la page d'accueil
 - [Séance 3](carte) : Placer les cinémas sur une carte
 - [Séance 4](pwa) : Convertir en PWA
 

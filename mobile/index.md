@@ -48,5 +48,66 @@ TP : 21h : 18 + 3 (saé)
 ## Travaux pratiques
 - [Concevoir une application PWA][pwa]
 
+## Séances
+
+#### TD 1
+
+date|sujet
+---|---
+mercredi 07/02|[cours](#cours)
+mercredi 07/02|Mise en place d'[OnsenUI](onsenui), liste des [acteurs](acteurs).
+mercredi 14/02|
+
+#### TD 2
+
+date|sujet
+---|---
+mercredi 07/02|[cours](#cours)
+mercredi 07/02|Mise en place d'[OnsenUI](onsenui), liste des [acteurs](acteurs).
+mercredi 14/02|
+
+#### TP1
+
+date|sujet
+---|---
+mercredi 21/02|
+mercredi 21/02|
+mercredi 15/05|
+mercredi 15/05|
+mercredi 22/05|
+mercredi 29/05|
+mercredi 05/06|
+mercredi 05/06|
+mercredi 12/06|
+
+#### TP2
+
+date|sujet
+---|---
+mercredi 14/02|
+mercredi 21/02|
+mercredi 15/05|
+mercredi 22/05|
+mercredi 22/05|
+mercredi 29/05|
+mercredi 05/06|
+mercredi 12/06|
+mercredi 12/06|
+
+#### TP3
+
+date|sujet
+---|---
+mercredi 14/02|
+mercredi 21/02|
+mercredi 15/05|
+mercredi 22/05|
+mercredi 29/05|
+mercredi 29/05|
+mercredi 05/06|
+mercredi 12/06|
+mercredi 19/06|
 
 [pwa]: progressive-web-app/travaux-pratiques
+[onsenui]: progressive-web-app/travaux-pratiques/onsenui
+[acteurs]: progressive-web-app/travaux-pratiques/acteurs

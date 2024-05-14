@@ -2,4 +2,4 @@
 title: PHP
 ---
 
-Installer le [paquet logiciel](/linux/paquet/) php-7
+Installer le [paquet logiciel](/linux/paquet/) php-8
