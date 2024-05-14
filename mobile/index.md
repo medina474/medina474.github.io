@@ -55,16 +55,16 @@ TP : 21h : 18 + 3 (saé)
 date|sujet
 ---|---
 mercredi 07/02|[cours](#cours)
-mercredi 07/02|Mise en place d'[OnsenUI](onsenui), liste des [acteurs](acteurs).
-mercredi 14/02|
+mercredi 07/02|Mise en place d'[OnsenUI][onsenui], liste des [acteurs][acteurs].
+mercredi 14/02|Utilisation d'un template html.
 
 #### TD 2
 
 date|sujet
 ---|---
 mercredi 07/02|[cours](#cours)
-mercredi 07/02|Mise en place d'[OnsenUI](onsenui), liste des [acteurs](acteurs).
-mercredi 14/02|
+mercredi 07/02|Mise en place d'[OnsenUI][onsenui], liste des [acteurs][acteurs].
+mercredi 14/02|Utilisation d'un template html.
 
 #### TP1
 
@@ -111,3 +111,4 @@ mercredi 19/06|
 [pwa]: progressive-web-app/travaux-pratiques
 [onsenui]: progressive-web-app/travaux-pratiques/onsenui
 [acteurs]: progressive-web-app/travaux-pratiques/acteurs
+[template]: progressive-web-app/travaux-pratiques/template

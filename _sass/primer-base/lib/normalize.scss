@@ -27,7 +27,6 @@ summary {
 }
 
 
-
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
@@ -36,15 +35,6 @@ progress {
   vertical-align: baseline;
 }
 
-/**
- * Add the correct display in IE 10-.
- * 1. Add the correct display in IE.
- */
-
-template, /* 1 */
-[hidden] {
-  display: none !important;
-}
 
 /* Links
    ========================================================================== */
@@ -62,26 +52,6 @@ abbr[title] {
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
 }
-
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-  font-style: italic;
-}
-
-
-/**
- * Add the correct background and color in IE 9-.
- */
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -231,13 +201,7 @@ legend {
   white-space: normal; /* 1 */
 }
 
-/**
- * Remove the default vertical scrollbar in IE.
- */
 
-textarea {
-  overflow: auto;
-}
 
 /**
  * 1. Add the correct box sizing in IE 10-.
