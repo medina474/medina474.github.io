@@ -56,7 +56,7 @@ date|sujet
 ---|---
 mercredi 07/02|[cours](#cours)
 mercredi 07/02|Mise en place d'[OnsenUI][onsenui], liste des [acteurs][acteurs].
-mercredi 14/02|Utilisation d'un template html.
+mercredi 14/02|Utilisation d'un [template][template] html.
 
 #### TD 2
 
@@ -64,7 +64,7 @@ date|sujet
 ---|---
 mercredi 07/02|[cours](#cours)
 mercredi 07/02|Mise en place d'[OnsenUI][onsenui], liste des [acteurs][acteurs].
-mercredi 14/02|Utilisation d'un template html.
+mercredi 14/02|Utilisation d'un [template][template] html.
 
 #### TP1
 
