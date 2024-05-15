@@ -2,7 +2,6 @@
 title: Progressive Web App
 ---
 
-
 > **Objectif :** Accéder à une application hybride directement depuis le navigateur du terminal sans passer par un outil tiers.
 {: .objectif}
 

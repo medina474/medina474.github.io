@@ -20,8 +20,20 @@ Une PWA permet de s'affranchir des outils de création d'applications hybrides
 [Mise en place](seance1/index.html)
 -->
 
+### Séances 
 
-- Séance 1 : Mise en place d'[OnsenUI](onsenui), liste des [acteurs](acteurs).
-- [Séance 2](accueil) : création de la page d'accueil
-- [Séance 3](carte) : Placer les cinémas sur une carte
-- [Séance 4](pwa) : Convertir en PWA
+- Séance 1 : Mise en place d'[OnsenUI][onsenui], liste des [acteurs][acteurs].
+- Séance 2 : Utilisation d'un [template][template] html
+- Séance 3 : [lazy][lazy] load, [page d'accueil][accueil.md]
+- Séance 4 : [Carte][carte]
+- Séance 5 : [Navigation][navigation] vers la page des films
+- Séance 6 : Rendre le site fonctionnel [PWA](pwa) 
+
+[onsenui]: ./onsenui
+[acteurs]: ./acteurs
+[template]: ./template
+[lazy]: ./lazy
+[accueil]: ./accueil
+[carte]: ./carte
+[navigation]: ./navigation
+[pwa]: ./pwa

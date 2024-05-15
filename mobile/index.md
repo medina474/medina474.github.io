@@ -46,7 +46,7 @@ TP : 21h : 18 + 3 (saé)
 
 
 ## Travaux pratiques
-- [Concevoir une application PWA][pwa]
+- [Concevoir une application PWA][tp1]
 
 ## Séances
 
@@ -70,10 +70,10 @@ mercredi 14/02|Utilisation d'un [template][template] html.
 
 date|sujet
 ---|---
-mercredi 21/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
-mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
-mercredi 15/05|[Navigation][navigation]
-mercredi 15/05|Rendre le site compatible [PWA](pwa) 
+mercredi 21/02|[lazy][lazy] load, [page d'accueil](progressive-web-app/travaux-pratiques/accueil.md)
+mercredi 21/02|[Carte][carte]
+mercredi 15/05|[Navigation][navigation] vers la page des films
+mercredi 15/05|Rendre le site fonctionnel [PWA][pwa] 
 mercredi 22/05|
 mercredi 29/05|
 mercredi 05/06|
@@ -85,8 +85,8 @@ mercredi 12/06|
 date|sujet
 ---|---
 mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
-mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
-mercredi 15/05|[Navigation][navigation]
+mercredi 21/02|[Carte][carte]
+mercredi 15/05|[Navigation][navigation] vers la page des films
 mercredi 22/05|
 mercredi 22/05|
 mercredi 29/05|
@@ -100,7 +100,7 @@ date|sujet
 ---|---
 mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
 mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
-mercredi 15/05|[Navigation][navigation]
+mercredi 15/05|[Navigation][navigation] vers la page des films
 mercredi 22/05|
 mercredi 29/05|
 mercredi 29/05|
@@ -108,8 +108,12 @@ mercredi 05/06|
 mercredi 12/06|
 mercredi 19/06|
 
-[pwa]: progressive-web-app/travaux-pratiques
+[tp1]: progressive-web-app/travaux-pratiques
 [onsenui]: progressive-web-app/travaux-pratiques/onsenui
 [acteurs]: progressive-web-app/travaux-pratiques/acteurs
 [template]: progressive-web-app/travaux-pratiques/template
+[lazy]: progressive-web-app/travaux-pratiques/lazy
+[accueil]: progressive-web-app/travaux-pratiques/accueil
+[carte]: progressive-web-app/travaux-pratiques/carte
 [navigation]: progressive-web-app/travaux-pratiques/navigation
+[pwa]: progressive-web-app/travaux-pratiques/pwa
