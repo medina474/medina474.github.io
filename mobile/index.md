@@ -72,7 +72,7 @@ date|sujet
 ---|---
 mercredi 21/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
 mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
-mercredi 15/05|[Navigation](navigation) 
+mercredi 15/05|[Navigation][navigation]
 mercredi 15/05|Rendre le site compatible [PWA](pwa) 
 mercredi 22/05|
 mercredi 29/05|
@@ -86,7 +86,7 @@ date|sujet
 ---|---
 mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
 mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
-mercredi 15/05|[Navigation](navigation) 
+mercredi 15/05|[Navigation][navigation]
 mercredi 22/05|
 mercredi 22/05|
 mercredi 29/05|
@@ -100,7 +100,7 @@ date|sujet
 ---|---
 mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
 mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
-mercredi 15/05|[Navigation](navigation) 
+mercredi 15/05|[Navigation][navigation]
 mercredi 22/05|
 mercredi 29/05|
 mercredi 29/05|
@@ -112,3 +112,4 @@ mercredi 19/06|
 [onsenui]: progressive-web-app/travaux-pratiques/onsenui
 [acteurs]: progressive-web-app/travaux-pratiques/acteurs
 [template]: progressive-web-app/travaux-pratiques/template
+[navigation]: progressive-web-app/travaux-pratiques/navigation
