@@ -52,6 +52,7 @@ En respectant ces conditions, vous pouvez d√©velopper une PWA qui offre une exp√
 
 - [PWA Builder](https://www.pwabuilder.com/)
 - [Mask Icon](https://maskable.app/editor)
+- [PWA Workshop](https://pwa-workshop.js.org/fr/)
 
 ## Travaux pratiques
 

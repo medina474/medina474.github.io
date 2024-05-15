@@ -10,4 +10,3 @@ Le projet n'est plus actif depuis plusieurs années. Il a été officiellement a
 
 [https://jquerymobile.com/](https://jquerymobile.com/)
 
-
