@@ -1,5 +1,5 @@
 ---
-title; Chargement paresseux
+title: Chargement paresseux
 ---
 
 > **Objectif** : Charger uniquement les éléments
