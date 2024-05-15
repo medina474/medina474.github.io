@@ -70,10 +70,10 @@ mercredi 14/02|Utilisation d'un [template][template] html.
 
 date|sujet
 ---|---
-mercredi 21/02|lazy load, page d'accueil
-mercredi 21/02|Carte
-mercredi 15/05|
-mercredi 15/05|
+mercredi 21/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
+mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
+mercredi 15/05|[Navigation](navigation) 
+mercredi 15/05|Rendre le site compatible [PWA](pwa) 
 mercredi 22/05|
 mercredi 29/05|
 mercredi 05/06|
@@ -85,8 +85,8 @@ mercredi 12/06|
 date|sujet
 ---|---
 mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
-mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte.md)
-mercredi 15/05|
+mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
+mercredi 15/05|[Navigation](navigation) 
 mercredi 22/05|
 mercredi 22/05|
 mercredi 29/05|
@@ -98,9 +98,9 @@ mercredi 12/06|
 
 date|sujet
 ---|---
-mercredi 14/02|lazy load, page d'accueil
-mercredi 21/02|Carte
-mercredi 15/05|
+mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei](progressive-web-app/travaux-pratiques/accueil.md)l
+mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
+mercredi 15/05|[Navigation](navigation) 
 mercredi 22/05|
 mercredi 29/05|
 mercredi 29/05|

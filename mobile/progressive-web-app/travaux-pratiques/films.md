@@ -2,11 +2,6 @@
 title: Films
 ---
 
-## Films
-
-Lorsque l'on clique sur une personne passer à la deuxième page pour afficher la liste des films de cette personne en particulier.
-
-![films](films.png)
 
 ```javascript
 async function getFilms(uuid)

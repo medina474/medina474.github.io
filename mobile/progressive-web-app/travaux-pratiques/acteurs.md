@@ -49,7 +49,7 @@ for(acteur of acteurs) {
   var nouvelElement = document.createElement('ons-list-item');
   nouvelElement.innerHTML = `
       <div class="left">
-        <img class="list-item__thumbnail" loading="lazy" src="https://placekitten.com/g/40/40">
+        <img class="list-item__thumbnail" src="https://placekitten.com/g/40/40">
       </div>
       <div class="center">
         <span class="list-item__title">${acteur.nom}</span>

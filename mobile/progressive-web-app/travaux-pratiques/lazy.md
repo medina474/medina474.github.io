@@ -1,10 +1,16 @@
 ---
+title; Chargement paresseux
 ---
+
+> **Objectif** : Charger uniquement les éléments
+{:.objectif}
+
+Ajouter un composant lazy-repeat dans l'élément list
 
 ```html
 <ons-list>
-          <ons-lazy-repeat></ons-lazy-repeat>
-        </ons-list>
+  <ons-lazy-repeat></ons-lazy-repeat>
+</ons-list>
 ```javascript
 
 ```javascript
