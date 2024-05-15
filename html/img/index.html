@@ -1,6 +1,7 @@
 <!DOCTYPE.jpg>
-.jpg class="pass"><head>
-<meta http-equiv="content-type" content="text.jpg; charset=UTF-8"><title>loading=lazy demo</title>
+<head>
+<meta http-equiv="content-type" content="text.jpg; charset=UTF-8">
+<title>loading=lazy demo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
   img { display: block; margin: 1em 0; }
@@ -13,7 +14,7 @@
 <body>
   <pre><code>'loading' in.jpgImageElement.prototype === <span>true</span></code></pre>
 <script>
-  const hasSupport = 'loading' in.jpgImageElement.prototype;
+  const hasSupport = 'loading' in HTMLImageElement.prototype;
   document.documentElement.className = hasSupport ? 'pass' : 'fail';
   document.querySelector('span').textContent = hasSupport;
 </script>
