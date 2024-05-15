@@ -36,6 +36,7 @@ Vous pouvez télécharger les librairies ou utiliser celle disponible sur les CD
 <link rel="stylesheet" href="./onsenui@2.12.8/css/onsen-css-components.min.css">
 <script src="./onsenui@2.12.8/js/onsenui.min.js"></script>
 ```
+### Définitions
 
 CDN
 : Content Delivery Network est un réseau de serveurs repartis autour du monde. Ils distribuent des fichiers statiques fréquemment demandés pour les pages Web à forte fréquentation. Les CDN accélerent le chargement des pages web. 

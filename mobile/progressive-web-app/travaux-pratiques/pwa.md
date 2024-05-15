@@ -12,4 +12,4 @@ Il y a différents domaines d'analyse : l'accessibilité aux personnes mal voyan
 
 ### Icones
 
-Générer les icones à l'aide de https://maskable.app/editor
+Générer les icones de l'application à l'aide de https://maskable.app/editor et de l'[icône générique](logo-i.svg)
