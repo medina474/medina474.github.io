@@ -21,13 +21,19 @@
 
   const wrapper = document.getElementById("wrapper")
 
-  for (let i = 0 ; i < 150 ; i++) {
-    const img = document.createElement("img");
-    img.setAttribute("loading", "lazy")
-    img.setAttribute("src", `${i}.jpg`)
-    img.setAttribute("width", "300")
-    img.setAttribute("height", "450")
-    wrapper.appendChild(img)
+  for (let i = 0 ; i <= 150 ; i++) {
+
+    const pic = new Image()
+    pic.src = `${i}.jpg`
+
+    img.onload = function () {
+      const img = document.createElement("img");
+      img.setAttribute("loading", "lazy")
+      img.setAttribute("src", `${i}.jpg`)
+      img.setAttribute("width", "300")
+      img.setAttribute("height", "450")
+      wrapper.appendChild(img)
+    }
   }
 </script>
 
