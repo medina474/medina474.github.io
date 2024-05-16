@@ -1,10 +1,10 @@
-<!DOCTYPE.jpg>
+<!DOCTYPE html>
 <head>
 <meta http-equiv="content-type" content="text.jpg; charset=UTF-8">
 <title>loading=lazy demo</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-  img { display: block; margin: 1em 0; }
+  img { display: block; margin: 1em; }
   .fail img { display: none; }
   pre { border: 2px solid red; }
   .fail pre { border-color: red; background: pink; }
@@ -23,17 +23,16 @@
 
   for (let i = 0 ; i <= 150 ; i++) {
 
-    const pic = new Image()
-    pic.src = `${i}.jpg`
-
-    pic.onload = function () {
-      const img = document.createElement("img");
-      img.setAttribute("loading", "lazy")
-      img.setAttribute("src", `${i}.jpg`)
-      img.setAttribute("width", "300")
-      img.setAttribute("height", "450")
-      wrapper.appendChild(img)
-    }
+    const img = document.createElement("img");
+    img.setAttribute("loading", "lazy")
+    img.setAttribute("src", `${i}.jpg`)
+    img.setAttribute("width", "300")
+    img.setAttribute("height", "450")
+    img.addEventListener("error", function() {
+      img.setAttribute("src", `99.jpg`)
+    })
+    wrapper.appendChild(img)
+    
   }
 </script>
 
