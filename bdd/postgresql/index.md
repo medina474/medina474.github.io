@@ -20,7 +20,7 @@ listen_addresses = '*'
 ## Administration
 L'administration du serveur PostgreSQL se fait à l'aide du l'utilisateur `postgres` (équivalent de root).
 
-```shell-session
+```>shell
 $ su --login postgres
 ```
 
@@ -28,14 +28,14 @@ $ su --login postgres
 
 Créer un utilisateur simple `iutsd` ainsi qu'une base de données associée.
 
-```shell-session
+```>shell
 $ createuser --pwprompt iutsd
 $ createdb iutsd -O iutsd
 ```
 
 Changer le mot de passe de l'utilisateur (si pas défini lors de la création)
 
-```shell-session
+```>shell
 $ psql
 
 ALTER USER iutsd WITH password 'supermotdepasse';
@@ -52,13 +52,13 @@ exit
 ```
 Retourner à l'utilisateur root.
 
-```shell-session
+```>shell
 exit
 ```
 
 Autoriser l'utilisateur à se connecter à distance
 
-```shell-session
+```>shell
 $ nano /etc/postgresql/11/main/pg_hba.conf
 ```
 
@@ -71,7 +71,7 @@ host    sameuser    iutsd    0.0.0.0/0         md5
 
 Redémarrer PostgreSql
 
-```shell-session
+```>shell
 $ systemctl restart postgresql
 ```
 
@@ -79,13 +79,13 @@ $ systemctl restart postgresql
 
 Télécharger l'outil d'administration graphique [pgAdmin](https://www.pgadmin.org/)
 
-```shell-session
+```>shell
 $ docker pull dpage/pgadmin4
 ```
 
 Se connecter avec l'utilisateur iutsd à la base de données iutsd (Maintenance database)
 
-```shell-session
+```>shell
 docker run --env-file ./pgadmin4.env dpage/pgadmin4
 ```
 

@@ -20,7 +20,7 @@ Match Group sftp
 
 Redémarrer le serveur `ssh`
 
-```shell-session
+```>shell
 $ systemctl restart sshd
 ```
 
@@ -28,7 +28,7 @@ Les utilisateurs du groupe `sftp` pourront se connecter à l'aide de `sftp`. Ils
 
 Créer le groupe `sftp`.
 
-```shell-session
+```>shell
 $ groupadd sftp
 ```
 
@@ -37,12 +37,12 @@ $ groupadd sftp
 NON TP sur la différence entre
 Ajouter l'utilisateur `pi` au groupe `sftp`.
 
-```shell-session
+```>shell
 $ gpasswd -a pi sftp
 ```
 Vérifier les groupes auxquels appartient l'utilisateur `pi`.
 
-```shell-session
+```>shell
 $ groups pi
 ```
 
@@ -50,7 +50,7 @@ $ groups pi
 
 Retirer l'utilisateur du group `sftp`.
 
-```shell-session
+```>shell
 $ gpasswd -d pi sftp
 ```
 
@@ -60,13 +60,13 @@ $ gpasswd -d pi sftp
 
 Nous allons utiliser un autre utilisateur `cinema`.
 
-```shell-session
+```>shell
 $ adduser cinema --disabled-login --disabled-password --gecos Cinéma
 ```
 
 `--disabled-password` : ne pas créer de mot de passe, l'authentification se fera par clé.
 
-```shell-session
+```>shell
 $ mkdir /home/cinema/.ssh
 $ touch /home/cinema/.ssh/authorized_keys
 $ nano /home/cinema/.ssh/authorized_keys
@@ -79,14 +79,14 @@ $ chmod 400 /home/cinema/.ssh/authorized_keys
 > Le jail ne fonctionnera que si l'utilisateur `root` contrôle le dossier `home` de l'utilisateur.
 {: .warning}
 
-```shell-session
+```>shell
 $ chown root:cinema /home/cinema
 $ chmod 750 /home/cinema
 ```
 
 Créer un dossier qui contiendra les fichiers du site web
 
-```shell-session
+```>shell
 $ mkdir /home/cinema/public_html
 $ chown cinema:www-data /home/cinema/public_html
 ```

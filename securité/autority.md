@@ -43,7 +43,7 @@ Rubrique `[dn]` : Contient les informations du propriétaire du certificat : Le 
 Rubrique `[v3_ca]` : Contient les propriétés pour définir un certificat racine et définit la politique d'utilisation du certificat (keyUsage)
 
 Générer le certificat de l'autorité (master.crt) racine ainsi que la clé privée associée (master.key)
-```shell-session
+```>shell
 $ openssl req -x509 -utf8 -newkey rsa:4096 ^
 -keyout master.key ^
 -config master.cnf ^

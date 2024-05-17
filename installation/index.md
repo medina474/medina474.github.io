@@ -41,7 +41,7 @@ Le moyen le plus simple pour générer le mot de passe crypté consiste à utili
 
 Ouvrez une fenêtre de terminal et entrez
 
-```shell-session
+```>shell
 echo 'supermotdepasse' | openssl passwd -6 -stdin
 ```
 
@@ -96,7 +96,7 @@ Enregistrer la session (save sur le profil Default Setings) pour la retrouver ce
 ## Définition
 
 headless
-: Système fonctionnant sans écran, clavier et souris 
+: Système fonctionnant sans écran, clavier et souris
 
 hid
 : Human Interface Devices : Prériphériques pour que l'utilisateur puisse intéragir avec le système :clavier, souris, manette, afficheur ...

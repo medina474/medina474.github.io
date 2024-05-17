@@ -24,24 +24,24 @@ title: Linux
 
 Éteindre (utilisateur `root` ou `sudo`).
 
-```shell-session
+```>shell
 $ shutdown -h now
 ```
 
 ou
 
-```shell-session
+```>shell
 $ halt
 ```
 
 Redémarrer (utilisateur `root` ou `sudo`).
 
-```shell-session
+```>shell
 $ shutdown -r now
 ```
 
 ou
 
-```shell-session
+```>shell
 $ reboot
 ```

@@ -19,14 +19,14 @@ https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gap
 
 ## GATT
 
-Un profil n'existe pas réellement sur le périphérique BLE lui-même, il s'agit simplement d'une **collection prédéfinie** de services qui a été compilée par le Bluetooth SIG ou par les concepteurs de périphériques. Le profil de fréquence cardiaque, par exemple, combine le service de fréquence cardiaque et le service d'informations sur l'appareil. 
+Un profil n'existe pas réellement sur le périphérique BLE lui-même, il s'agit simplement d'une **collection prédéfinie** de services qui a été compilée par le Bluetooth SIG ou par les concepteurs de périphériques. Le profil de fréquence cardiaque, par exemple, combine le service de fréquence cardiaque et le service d'informations sur l'appareil.
 
 
 ### Prestations de service
 
 Les services sont utilisés pour diviser les données en entités logiques et contiennent des morceaux de données spécifiques appelés caractéristiques. Un service peut avoir une ou plusieurs caractéristiques, et chaque service se distingue des autres services au moyen d'un identifiant numérique unique appelé UUID, qui peut être soit 16 bits (pour les services BLE officiellement adoptés) soit 128 bits (pour les services personnalisés ).
 
-Une liste complète des services BLE officiellement adoptés est disponible sur la page Services du Portail des développeurs Bluetooth. Si vous regardez le service de fréquence cardiaque, par exemple, nous pouvons voir que ce service officiellement adopté a un UUID 16 bits de 0x180D et contient jusqu'à 3 caractéristiques, bien que seule la première soit obligatoire : mesure de la fréquence cardiaque, capteur corporel Emplacement et point de contrôle de la fréquence cardiaque. 
+Une liste complète des services BLE officiellement adoptés est disponible sur la page Services du Portail des développeurs Bluetooth. Si vous regardez le service de fréquence cardiaque, par exemple, nous pouvons voir que ce service officiellement adopté a un UUID 16 bits de 0x180D et contient jusqu'à 3 caractéristiques, bien que seule la première soit obligatoire : mesure de la fréquence cardiaque, capteur corporel Emplacement et point de contrôle de la fréquence cardiaque.
 
 ### Caractéristiques
 
@@ -36,17 +36,17 @@ Le concept de niveau le plus bas dans les transactions GATT est la caractéristi
 
 Par exemple, la caractéristique de mesure de la fréquence cardiaque est obligatoire pour le service de fréquence cardiaque et utilise un UUID de 0x2A37. Il commence par une seule valeur de 8 bits décrivant le format de données HRM (que les données soient UINT8 ou UINT16, etc.), et continue en incluant les données de mesure de la fréquence cardiaque qui correspondent à cet octet de configuration.
 
-Les caractéristiques sont le point principal sur lequel vous interagirez avec votre périphérique BLE, il est donc important de comprendre le concept. Ils sont également utilisés pour renvoyer des données au périphérique BLE, car vous pouvez également écrire dans la caractéristique. Vous pouvez implémenter une interface de type UART simple avec un « service UART » personnalisé et deux caractéristiques, une pour le canal TX et une pour le canal RX, où une caractéristique pourrait être configurée en lecture seule et l'autre aurait des privilèges d'écriture. 
+Les caractéristiques sont le point principal sur lequel vous interagirez avec votre périphérique BLE, il est donc important de comprendre le concept. Ils sont également utilisés pour renvoyer des données au périphérique BLE, car vous pouvez également écrire dans la caractéristique. Vous pouvez implémenter une interface de type UART simple avec un « service UART » personnalisé et deux caractéristiques, une pour le canal TX et une pour le canal RX, où une caractéristique pourrait être configurée en lecture seule et l'autre aurait des privilèges d'écriture.
 
-https://www.kernel.org/pub/linux/bluetooth/ 
+https://www.kernel.org/pub/linux/bluetooth/
 
-## Étape 1 Intaller  *BlueZ 5.9* sur Raspberry 
+## Étape 1 Intaller  *BlueZ 5.9* sur Raspberry
 
 BlueZ la pile de contrôle du bluetooth pour Linux.
 
 a. Télécharger et décompresser les sources du projets
 
-```shell-session
+```>shell
 wget https://www.kernel.org/pub/linux/bluetooth/bluez-X.XX.tar.xz
 tar xvf bluez-X.XX.tar.xz
 ```
@@ -59,7 +59,7 @@ b. corriger les 2 fichiers sources `tools/l2test.c` et `tools/rctest.c`. Ajouter
 
 c. Installer les librairies nécessaires lors de la compilation
 
-```shell-session
+```>shell
 apt-get install -y libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
 ```
 
@@ -69,7 +69,7 @@ https://www.argenox.com/library/bluetooth-low-energy/using-raspberry-pi-ble/
 
 d. Compiler
 
-```shell-session
+```>shell
 cd bluez-5.9
 
 export LDFLAGS=-lrt
@@ -81,15 +81,15 @@ make install
 
 e. Tester
 
-```shell-session
+```>shell
 btmon -v
 
-hcitool -i hci0 lescan 
+hcitool -i hci0 lescan
 ```
 
 Arrêter et démarrer le bluetooth
 
-```shell-session
+```>shell
 hciconfig hci0 down
 hciconfig hci0 up
 ```
@@ -120,7 +120,7 @@ Sur Rapsberry écrire un programme NodeJS à l'aide de la librairie @abandonware
 
 Le programme NodeJs scan les périphériques Bluetooth indiquant un service Environmental Sensing, se connecte et lit les valeurs
 
-Comme il ya beaucoup d'appareils Bluetoth dans la salle il convient de filter suivant le nom de machine 
+Comme il ya beaucoup d'appareils Bluetoth dans la salle il convient de filter suivant le nom de machine
 
 ```javascript
 console.log(`${peripheral.address} ${peripheral.advertisement.localName} ${peripheral.rssi}`);
@@ -154,7 +154,7 @@ https://www.w3schools.com/nodejs/nodejs_raspberrypi_webserver_websocket.asp
 
 # Beacon
 
-Le beacon émet un signal à intervalles réguliers. Lorsqu’un appareil se situe dans la zone de diffusion, il réceptionne l’émission et la manifeste sous forme d’une action précise pour le destinataire. Les applications sont multiples. Elles peuvent s’intégrer dans un cadre professionnel ou ouvert au public. 
+Le beacon émet un signal à intervalles réguliers. Lorsqu’un appareil se situe dans la zone de diffusion, il réceptionne l’émission et la manifeste sous forme d’une action précise pour le destinataire. Les applications sont multiples. Elles peuvent s’intégrer dans un cadre professionnel ou ouvert au public.
 
 A l'aide de flutter faire de votre téléphone une balise Beacon
 

@@ -7,7 +7,7 @@ Installer le [paquet logiciel](/linux/paquet/) `nginx`.
 
 Vérifier le fonctionnement de Nginx
 
-```shell-session
+```>shell
 systemctl status nginx
 ```
 
@@ -42,13 +42,13 @@ server {
 
 Activer la configuration en créant un lien de de fichier dans le dossier `sites-enabled`
 
-```shell-session
+```>shell
 ln -s /etc/nginx/sites-available/cinema.conf /etc/nginx/sites-enabled/cinema.conf
 ```
 
 Redémarrer nginx
 
-```shell-session
+```>shell
 systemctl restart nginx
 ```
 

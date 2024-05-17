@@ -11,19 +11,19 @@ https://docs.microsoft.com/fr-fr/windows/wsl/install-win10
 
 Activer la fonctionalité Windows Subsystem Linux
 
-```shell-session
+```>shell
 $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
 Activer la fonctionalité Virtual Machine Platform
 
-```shell-session
+```>shell
 $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 Passer WSL en version 2
 
-```shell-session
+```>shell
 $ wsl --set-default-version 2
 ```
 

@@ -2,7 +2,7 @@
 title: Documentation
 ---
 
-```shell-session
+```>shell
 $ npm install --save swagger-ui-express
 $ npm install --save yamljs
 ```
@@ -74,12 +74,12 @@ Il est possible d'écrire la définition des méthodes dans un commentaire de do
 
 Installer l'outil en global avec l'utilisateur root
 
-```shell-session
+```>shell
 npm install swagger-jsdoc --save
 ```
 
 Lancer la commande pour générer le fichier swagger.yaml à partir des fichier *.js trouvés dans le dossier api.
 
-```shell-session
+```>shell
 node node_modules/swagger-jsdoc/bin/swagger-jsdoc.js -d swagger.yaml api/*.js
 ```

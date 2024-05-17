@@ -7,14 +7,14 @@ title: Gestion des paquets logiciels
 > Sans être connecté à l'utilisateur root, il est nécessaire d'utiliser la précommande _sudo_ (_substitute user do ..._) à chaque ligne.
 {:.info}
 
-```shell-session
+```>shell
 $ apt update
 $ apt list --upgradable
 $ apt upgrade -y
 ```
 Il est possible de chainer plusieurs commande sur une seule ligne, en utilisant l'opérateur _&&_
 
-```shell-session
+```>shell
 $ apt update && apt upgrade -y
 ```
 
@@ -25,16 +25,16 @@ _`apt list --upgradable`_ permet de lister les paquets qui doivent être mise à
 _`apt upgrade`_ permet d'appliquer les mises à jour trouvées, le commutateur _-y_ permet d'accepter automatiquement toutes les demandes.
 
 
-```shell-session
+```>shell
 $ apt list --manual-installed
 ```
 
-```shell-session
+```>shell
 $ apt search paquet
 ```
 
 
-```shell-session
+```>shell
 $ apt install paquet
 ```
 
@@ -44,9 +44,9 @@ Stocker les clés des dépôts des éditeurs tiers dans un dossier porte-clés
 
 Créer un dossier `/usr/local/share/keyrings`
 
-```shell-session
+```>shell
 $ wget -qO /usr/local/share/keyrings/mongodb-org-4_4.asc https://www.mongodb.org/static/pgp/server-4.4.asc
-```shell-session
+```>shell
 
 Exemple de clé GPG
 

@@ -7,15 +7,15 @@ title: FusionAuth
 
 Installer FusionAuth sur votre PC à l'intérieur d'un conteneur Docker
 
-```shell-session
+```>shell
 curl -o docker-compose.yml https://raw.githubusercontent.com/FusionAuth/fusionauth-containers/master/docker/fusionauth/docker-compose.yml && curl -o .env https://raw.githubusercontent.com/FusionAuth/fusionauth-containers/master/docker/fusionauth/.env
 ```
 
-```shell-session
+```>shell
 docker-compose up -d
 ```
 
-```shell-session
+```>shell
 docker ps -a
 ```
 
