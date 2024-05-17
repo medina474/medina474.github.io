@@ -12,8 +12,15 @@
 </style>
 </head>
 <body>
-  <pre><code>'loading' in.jpgImageElement.prototype === <span>true</span></code></pre>
-  <div id="wrapper"></div>
+  <div style="position: absolute; top: 0; bottom: 0; overflow: auto;">
+    <pre><code>'loading' in.HTMLImageElement.prototype === <span>true</span></code></pre>
+    <div id="wrapper">
+
+    </div>
+  </div>
+  <template>
+    <img loading="lazy" src="99.jpg" width="300" height="450" onerror="this.src='99.jpg'">
+  </template>
 <script>
   const hasSupport = 'loading' in HTMLImageElement.prototype;
   document.documentElement.className = hasSupport ? 'pass' : 'fail';
@@ -22,20 +29,11 @@
   const wrapper = document.getElementById("wrapper")
 
   for (let i = 0 ; i <= 150 ; i++) {
-
-    const img = document.createElement("img");
-    img.setAttribute("loading", "lazy")
-    img.setAttribute("src", `${i}.jpg`)
-    img.setAttribute("width", "300")
-    img.setAttribute("height", "450")
-    img.addEventListener("error", function() {
-      img.setAttribute("src", `99.jpg`)
-    })
-    wrapper.appendChild(img)
-    
+    const f = document.querySelector("template").content.cloneNode(true);
+    f.querySelector("img").setAttribute("src", `${i}.jpg`)
+    wrapper.appendChild(f)
   }
 </script>
-
 
 
 </body>
