@@ -4,14 +4,14 @@ title: GraphQL
 
 ## Définitions
 
-Over-fetching 
+Over-fetching
 : Fait de récupérer trop d'information, lors d'un appel à une API.
 
 Under-fetching
-: Fait de récupérer trop peu d'information, lors d'un appel à une API. Ce qui oblige à effectuer des appels supplémentaires. 
+: Fait de récupérer trop peu d'information, lors d'un appel à une API. Ce qui oblige à effectuer des appels supplémentaires.
 
 
-GraphQL (Graph Query Language) est un langage de requêtes créé par Facebook en 2012. C'est une alternative auw Web Services REST. Le client définit dans la requête la structure de données qu'il veut que le serveur leui envoi. Ce langage évite les problèmes de retour de données insuffisants (under-fetching) ou surnuméraires (over-fetching). 
+GraphQL (Graph Query Language) est un langage de requêtes créé par Facebook en 2012. C'est une alternative auw Web Services REST. Le client définit dans la requête la structure de données qu'il veut que le serveur leui envoi. Ce langage évite les problèmes de retour de données insuffisants (under-fetching) ou surnuméraires (over-fetching).
 
 ## Exercice
 
@@ -38,7 +38,7 @@ app.use('/graphql', graphqlHTTP({
 }));
 ```
 
-Dans le fichier `queries.js` définir 2 objets à exporter : 
+Dans le fichier `queries.js` définir 2 objets à exporter :
 -typeDefs un texte contenant la description de l'ensemble du service
 -resolvers un objet comprenant un ensemble de fonctions qui vont résoudre les requêtes.
 
@@ -84,7 +84,7 @@ exports.resolvers = {
     actors: (obj, args) => {
 
       let query = `SELECT * from actor ORDER BY movie_count desc`;
-      
+
       return db
         .manyOrNone(query)
         .then(res => res)
@@ -129,9 +129,9 @@ Dans le resolver
 
 ## PostGraphile
 
-PostGraphile est une solution qui détecte automatiquement les tables, les colonnes, les relations, les vues d'une base de données Posgresql. Elle expose ensuite ces éléments dans un service GraphQL. 
+PostGraphile est une solution qui détecte automatiquement les tables, les colonnes, les relations, les vues d'une base de données Posgresql. Elle expose ensuite ces éléments dans un service GraphQL.
 
-```shell-session
+```shell
 npx postgraphile -c 'postgres://musique:rJ0NARPxpZQyilfovnHlKxf0@localhost/192.168.1.20' --watch --enhance-graphiql --dynamic-json
 ```
 

@@ -7,6 +7,7 @@
 
 ## Anciens cours
 
+- [Linux](linux)
 - [HTML](html)
 - [CSS](css)
 - [Javascript](javascript)

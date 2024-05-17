@@ -22,7 +22,7 @@ Chrome – Paramètres – Rechercher : certificats – Gérer les certificats �
 
 Sur le Raspberry
 
-```shell-session
+```shell
 $ openssl req -new -utf8 -newkey rsa:2048 -nodes -keyout cinema.key -config cinema.cnf -out cinema.csr
 ```
 

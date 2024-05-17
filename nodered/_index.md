@@ -6,20 +6,20 @@ title: NodeRed
 
 Installer NodeRed à l'aide du script fourni par l'éditeur.
 
-```shell-session
+```shell
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 ```
 
 https://nodered.org/docs/getting-started/raspberrypi
 
 
-## Sécuriser l'accès 
+## Sécuriser l'accès
 
 Éditer le fichier `/home/iutsd/.node-red/settings.js`
 
 Générer le Hash du votre mot de passe
 
-```shell-session
+```shell
 node-red admin hash-pw
 ```
 
@@ -45,11 +45,11 @@ Rendez vous avec un navigateur sur l'adresse IP de votre rasberry et en spécifi
 
 ## Créer un premier service
 
-La programmation avec NodeRed consiste à poser des brique (`node`) sur le diagramme (`flow`) et à les relier entre eux. 
+La programmation avec NodeRed consiste à poser des brique (`node`) sur le diagramme (`flow`) et à les relier entre eux.
 
 Les données échangées sont des objets JSON et doivent posséder la propriété `payload` (charge utile). Le payload peut être un nombre, une chaine de caractères, un tableau ou un objet complexe.
 
-Certains nodes peuvent avoir plusieurs entrèes/sorties. 
+Certains nodes peuvent avoir plusieurs entrèes/sorties.
 
 Ajouter les nodes `http in`, `http response` `function` et `debug`
 

@@ -63,7 +63,7 @@ Cocher `Enable agent for Windows OpenSSH`
 
 Ouvrir un terminal Windows et tester l'utilisation de la clé
 
-```shell-session
+```shell
 $ ssh -V
 $ ssh -T git@gitlab.com
 ```
@@ -87,7 +87,7 @@ export SSH_AUTH_SOCK="C:/USERS/<VOTRE COMPTE>/.ssh/keeagent.sock"
 
 Relancer KeePass ainsi que Git Bash et tester l'utilisation de la clé
 
-```shell-session
+```shell
 $ ssh -V
 $ ssh -T git@gitlab.com
 ```

@@ -11,7 +11,7 @@ Pour le visualeur de données nous allons utiliser plutôt Grafana, qui permet d
 
 ### Sur PC avec Docker
 
-```shell-session
+```shell
 docker pull grafana/grafana
 
 docker run --name=lpamio-grafana -p 9005:3000 -d grafana/grafana:latest
@@ -21,19 +21,19 @@ docker run --name=lpamio-grafana -p 9005:3000 -d grafana/grafana:latest
 
 Ajout de la clé du dépôt
 
-```shell-session
+```shell
 $ wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
 ```
 
 Ajout du dépôt pour apt
 
-```shell-session
+```shell
 $ echo "deb https://packages.grafana.com/oss/deb stable main" | tee -a /etc/apt/sources.list.d/grafana.list
 ```
 
 Mise à jour du catalogue des paquets disponibles depuis les dépôts
 
-```shell-session
+```shell
 $ apt update
 ```
 
@@ -44,7 +44,7 @@ Installer le [paquet logiciel](/linux/paquet/) `grafana`.
 
 Activation du service
 
-```shell-session
+```shell
 $ systemctl enable --now grafana-server
 ```
 
@@ -59,7 +59,7 @@ Stocker le nouveau mot de passe dans KeePass.
 
 ### Plugins
 
-```shell-session
+```shell
 $ grafana-cli plugins install grafana-worldmap-panel
 $ grafana-cli plugins install simpod-json-datasource
 ```

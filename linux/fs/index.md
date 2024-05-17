@@ -8,32 +8,32 @@ Les fichier dans un système Linux n'ont pas forcement d'extension. Pour différ
 
 Lister les fichiers et dossiers.
 
-```shell-session
+```shell
 $ ls
 ```
 
 ### Options
 
-Lister tous les fichiers et dossiers, même ceux cachés. 
+Lister tous les fichiers et dossiers, même ceux cachés.
 
 > Les fichiers et dossiers cachés sont ceux dont le nom commence par un point `.`.\
 {:.info}
 
 `.cinema\` est un dossier caché.
 
-```shell-session
+```shell
 $ ls -a
 ```
 
 Afficher le détail des fichiers sous forme de liste.
 
-```shell-session
+```shell
 $ ls -l
 ```
 
 Afficher le détail de tous les fichiers (y compris les fichiers cachés) sous forme de liste.
 
-```shell-session
+```shell
 $ ls -la
 ```
 
@@ -41,7 +41,7 @@ $ ls -la
 
 Créer un dossier.
 
-```shell-session
+```shell
 $ mkdir cinema
 ```
 
@@ -49,7 +49,7 @@ $ mkdir cinema
 
 Supprimer le dossier à condition que celui ci soit vide.
 
-```shell-session
+```shell
 $ rmdir cinema
 ```
 
@@ -57,14 +57,14 @@ $ rmdir cinema
 
 Supprimer un fichier
 
-```shell-session
+```shell
 $ rm index.js
 ```
 Commande `rm --recursive` (remove).
 
-Supprimer tous les fichier et sous dossier, ainsi que le dossier `cinema`. 
+Supprimer tous les fichier et sous dossier, ainsi que le dossier `cinema`.
 
-```shell-session
+```shell
 $ rm -r cinema/
 ```
 
@@ -76,7 +76,7 @@ $ rm -r cinema/
 
 Déplacer le fichier `main.css` dans le dossier `styles`.
 
-```shell-session
+```shell
 $ mv main.css styles/
 ```
 
@@ -84,7 +84,7 @@ Le renommage d'un fichier est équivalent à déplacer ce fichier dans le même 
 
 Renommer le fichier `index.js` en `server.js`
 
-```shell-session
+```shell
 $ mv index.js server.js
 ```
 
@@ -92,19 +92,19 @@ $ mv index.js server.js
 
 Duplique un fichier
 
-```shell-session
+```shell
 $ cp index.js server.js
 ```
 
 Copie un fichier dans un dossier
 
-```shell-session
+```shell
 $ cp main.css styles/
 ```
 
 ## Analyser l'occupation de la carte mémoire.
 
-```shell-session
+```shell
 $ ncdu
 ```
 

@@ -6,7 +6,7 @@ Ouvrir un dossier por votre application
 
 Initialiser un dépot git
 
-```shell-session
+```shell
 $ git init
 ```
 
@@ -28,7 +28,7 @@ npm init
 L'environnement permet de spécifier les particularités des différents systèmes où s'executera l'application.
 Adresse du serveur de la base de donées, mot de passe.
 
-```shell-session
+```shell
 $ npm install --save-dev dotenv
 ```
 
@@ -67,7 +67,7 @@ const port = process.env.PORT || 3000;
 
 ## Serveur ExpressJS
 
-```shell-session
+```shell
 $ npm install --save-dev express
 ```
 
@@ -84,7 +84,7 @@ app.listen(port, () => {
 
 Démarrer le serveur
 
-```shell-session
+```shell
 $ nodemon index.js
 ```
 
@@ -120,7 +120,7 @@ app.use('/', main());
 
 ## base de données
 
-```shell-session
+```shell
 $ npm install --save-dev pg-promise
 ```
 
@@ -178,7 +178,7 @@ Cliquer sur le lien `send request` au dessus de la ligne
 
 Cette fois ci il va falloir lire les données envoyées par la requête. Cela peut être effectué avec le module body parser.
 
-```shell-session
+```shell
 npm install --save body-parser
 ```
 

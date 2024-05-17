@@ -6,7 +6,7 @@ title: JAMStack
 
 Créer le projet et installer Eleventy (11ty)
 
-```shell-session
+```shell
 git init
 
 npm init
@@ -101,13 +101,13 @@ title: PostgreSQL
 
 Compiler les fichiers. Il seront placés dans un dossier `_site`. Démarrer le serveur web intégré.
 
-```shell-session
+```shell
 $ npx @11ty/eleventy --serve
 ```
 
 ## CSS
 
-```shell-session
+```shell
 npm install --save-dev clean-css
 ```
 
@@ -161,7 +161,7 @@ let div = document.getElementById("menu");
 
 Pour la coloration syntaxique il faut ajouter le plugin syntaxhighlight et ajouter au` code fence` le langage à mettre en évidence.
 
-```shell-session
+```shell
 $ npm install -save @11ty/eleventy-plugin-syntaxhighlight
 ```
 
@@ -179,7 +179,7 @@ config.addPlugin(syntaxHighlight);
 
 Il est possible d'ajouter à la syntaxe Markdown d'autres commandes utiles comme l'ajout d'attibut css, la prise en charges des balises html de définition dt/dd l'insersertion de caractères émoji.
 
-```shell-session
+```shell
 $ npm install -save @gerhobbelt/markdown-it-attrs
 $ npm install -save markdown-it-deflist
 $ npm install -save markdown-it-emoji

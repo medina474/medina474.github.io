@@ -4,7 +4,7 @@ title: Travaux pratiques
 
 ### Générer la demande de certificat
 
-```shell-session
+```shell
 openssl req -new -sha256 -newkey rsa:2048 -nodes -utf8 -days 70 -keyout https.key -out https.csr
 ```
 2 fichiers générés la clé secrète et la demande de certificat
@@ -27,7 +27,7 @@ server {
 
 ### LibreSSL
 
-```shell-session
+```shell
 libressl ^
 req -new -sha256 -nodes -utf8 -newkey rsa:2048 -days 700 ^
 -keyout keys\https.key ^
@@ -37,7 +37,7 @@ req -new -sha256 -nodes -utf8 -newkey rsa:2048 -days 700 ^
 ```
 ### Accepter la demande
 
-```shell-session
+```shell
 libressl ^
 x509 -req -sha256 ^
 -in requetes\%1%.csr ^
@@ -49,6 +49,6 @@ x509 -req -sha256 ^
 -out certificats\%1%.crt
 ```
 
-```shell-session
+```shell
 libressl req -in https.csr -noout -text
 ```
