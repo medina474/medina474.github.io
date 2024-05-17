@@ -12,10 +12,10 @@ useradd iutsd
 
 `--disabled-login` : le compte est désactivé.
 
-### Modifier le mot de passe 
+### Modifier le mot de passe
 
 ```shell-session
-passwd 
+passwd
 ```
 
 Modifier le mot de passe d'un autre utilisateur depuis le compte root.
@@ -38,15 +38,20 @@ id
 
 ## Groupes
 
+Voir les groupes d'un utilisateur
+
+```shell
+groups user
+```
+
 ### Ajouter un groupe secondaire à l'utilisateur
 
-```shell-session
+```shell
 gpasswd -a user group
 ```
 
-```
+```shell
 gpasswd -d user group
 ```
 
 umask
-
