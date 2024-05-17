@@ -5,11 +5,11 @@ title: Services
 L'outil systemctl permet de configurer les services qui sont lancés au démarrage de l'appareil
 
 
-```>shell
+```shell
 $ systemctl list-units --type=service
 ```
 
-```>shell
+```shell
 $ systemctl list-units --type=service --state=running
 ```
 
@@ -17,31 +17,31 @@ $ systemctl list-units --type=service --state=running
 
 Détail d'un service (`q` pour quitter)
 
-```>shell
+```shell
 $ systemctl status service
 ```
 
 Active un service
 
-```>shell
+```shell
 $ systemctl enable service
 ```
 
 Active et démarre un service
 
-```>shell
+```shell
 $ systemctl enable --now service
 ```
 
 Démarrer un service
 
-```>shell
+```shell
 $ systemctl start service
 ```
 
 Arrête un service
 
-```>shell
+```shell
 $ systemctl stop service
 ```
 
@@ -49,18 +49,18 @@ systemctl unmask name.service
 
 Recharge la configuration
 
-```>shell
+```shell
 $ systemctl reload service
 ```
 
 Arrête et redémarre un service
 
-```>shell
+```shell
 $ systemctl restart service
 ```
 
 ## Timer
 
-```>shell
+```shell
 $ systemctl list-units --type=timer
 ```

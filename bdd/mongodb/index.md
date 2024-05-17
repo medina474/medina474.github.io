@@ -8,15 +8,15 @@ MongoDB est une base de données orientée document. Contrairement à une base d
 
 Ajouter la clé gpg  `https://www.mongodb.org/static/pgp/server-4.4.asc`dans le porte-clé du système.
 
-```>shell
+```shell
 wget -qO /usr/local/share/keyrings/mongodb-org-4_4.asc https://www.mongodb.org/static/pgp/server-4.4.asc
 ```
 
-```>shell
+```shell
 echo "deb [arch=amd64,arm64 signed-by=/usr/local/share/keyrings/mongodb-org-4_4.asc] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 ```
 
-```>shell
+```shell
 apt update
 ```
 

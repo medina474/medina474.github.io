@@ -4,7 +4,7 @@ title: Utilisateurs
 
 ## Ajouter un utilisateur
 
-```>shell
+```shell
 useradd iutsd
 ```
 
@@ -14,25 +14,25 @@ useradd iutsd
 
 ### Modifier le mot de passe
 
-```>shell
+```shell
 passwd
 ```
 
 Modifier le mot de passe d'un autre utilisateur depuis le compte root.
 
-```>shell
+```shell
 passwd iutsd
 ```
 
 ### Supprimer un utilisateur
 
-```>shell
+```shell
 userdel iutsd
 ```
 
 ### Afficher l'identité de l'utilisateur
 
-```>shell
+```shell
 id
 ```
 

@@ -4,13 +4,13 @@ title: Réseaux
 
 ### Afficher l'adresse IP de la machine
 
-```>shell
+```shell
 $ hostname -I
 ```
 
 ### Modifier le nom d'hôte de la machine
 
-```>shell
+```shell
 $ hostnamectl set-hostname iutsd-raspberry30-896.ad.univ-lorraine.fr
 ```
 
@@ -24,24 +24,24 @@ Ajouter le nom d'hôte dans le fichier hosts
 
 Affiche le nom d'hôte de la machine
 
-```>shell
+```shell
 $ hostnamectl
 ```
 
 
-```>shell
+```shell
 $ ifconfig
 ```
 
 Installer le [paquet logiciel](/linux/paquet/) `dnsutils`.
 
-```>shell
+```shell
 dig @127.0.0.1 www.univ-lorraine.fr
 ```
 
 ### Programmes à l'écoute
 
-```>shell
+```shell
 $ netstat -tulpn | grep LISTEN
 ```
 ### Afficher les réseaux wifi à proximité

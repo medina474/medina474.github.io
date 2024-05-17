@@ -6,7 +6,7 @@ title: NodeRed
 
 Installer NodeRed à l'aide du script fourni par l'éditeur.
 
-```>shell
+```shell
 bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 ```
 
@@ -19,7 +19,7 @@ https://nodered.org/docs/getting-started/raspberrypi
 
 Générer le Hash du votre mot de passe
 
-```>shell
+```shell
 node-red admin hash-pw
 ```
 

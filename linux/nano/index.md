@@ -4,7 +4,7 @@ title: Éditeur de fichier nano
 
 Nano est un éditeur de fichier parmi d'autres. Il est assez simple d'utilisation et très répandu dans les installation par défaut des distributions Linux.
 
-```>shell
+```shell
 $ nano /etc/
 ```
 

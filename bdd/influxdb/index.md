@@ -41,7 +41,7 @@ Cette solution est utilisée en DevOps pour la surveillance des systèmes (nombr
 
 > Dans le cas ou un serveur PC surveille notre installation Raspberry.
 
-```>shell
+```shell
 docker pull influxdb:2.0.4
 ```
 
@@ -51,13 +51,13 @@ docker pull influxdb:2.0.4
 
 Ajouter la clé gpg  `https://repos.influxdata.com/influxdb.key`dans le porte-clé du système.
 
-```>shell
+```shell
 wget -qO /usr/local/share/keyrings/influxdb.gpg https://repos.influxdata.com/influxdb.key
 ```
 
 Convertir la clé au format gpg NE FONCTIONNE PAS
 
-```>shell
+```shell
 echo '23a1c8836f0afc5ed24e0486339d7cc8f6790b83886c4c96995b88a061c5bb5d influxdb.key' | sha256sum -c && cat influxdb.key | gpg --dearmor | sudo tee /usr/local/share/keyrings/influxdb.gpg > /dev/null
 
 sha256sum -c 23a1c8836f0afc5ed24e0486339d7cc8f6790b83886c4c96995b88a061c5bb5d influxdb.key
@@ -82,17 +82,17 @@ Installer le [paquet logiciel](/linux/paquet/) `influxdb`.
 
 Activer le service influxdb
 
-```>shell
+```shell
 systemctl enable --now influxdb
 ```
 
 #### Mode client
 
-```>shell
+```shell
 influx
 ```
 
-```>shell
+```shell
 # Créer une base de données
 > CREATE DATABASE iutsd
 
@@ -108,7 +108,7 @@ influx
 
 Visualiser les données
 
-```>shell
+```shell
 > SELECT solde FROM nom
 ```
 
@@ -124,7 +124,7 @@ Un mesure est associée à une ou plusieures étiquette.
 
 Installer le [paquet logiciel](/linux/paquet/) `telegraf`.
 
-```>shell
+```shell
 systemctl enable --now telegraf
 ```
 

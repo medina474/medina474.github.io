@@ -24,7 +24,7 @@ nohook wpa_supplicant
 
 Redémarrer le service dhcp client
 
-```>shell
+```shell
 systemctl restart dhcpcd
 ```
 
@@ -48,7 +48,7 @@ Installer le [paquet logiciel](/linux/paquet/) `dnsmasq`.
 
 Arrêter le service, car il n'est pas encore correctement configuré
 
-```>shell
+```shell
 $ systemctl stop dnsmasq
 ```
 
@@ -67,7 +67,7 @@ dhcp-range=192.168.0.50,192.168.0.150,255.255.255.0,12h
 
 Tester la configuration
 
-```>shell
+```shell
 dnsmasq --test
 ```
 
@@ -114,7 +114,7 @@ Il faut maintenant dire au système d'utiliser ce fichier de configuration. [Éd
 
 Décommenter et compléter la ligne
 
-```>shell
+```shell
 DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
 
@@ -139,7 +139,7 @@ Créer les règles dans la table de routage
 
 Installer le paquet iptables
 
-```>shell
+```shell
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 iptables-save > /etc/iptables.ipv4.rules
 ```

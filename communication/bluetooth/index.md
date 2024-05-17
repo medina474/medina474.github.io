@@ -46,7 +46,7 @@ BlueZ la pile de contrôle du bluetooth pour Linux.
 
 a. Télécharger et décompresser les sources du projets
 
-```>shell
+```shell
 wget https://www.kernel.org/pub/linux/bluetooth/bluez-X.XX.tar.xz
 tar xvf bluez-X.XX.tar.xz
 ```
@@ -59,7 +59,7 @@ b. corriger les 2 fichiers sources `tools/l2test.c` et `tools/rctest.c`. Ajouter
 
 c. Installer les librairies nécessaires lors de la compilation
 
-```>shell
+```shell
 apt-get install -y libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
 ```
 
@@ -69,7 +69,7 @@ https://www.argenox.com/library/bluetooth-low-energy/using-raspberry-pi-ble/
 
 d. Compiler
 
-```>shell
+```shell
 cd bluez-5.9
 
 export LDFLAGS=-lrt
@@ -81,7 +81,7 @@ make install
 
 e. Tester
 
-```>shell
+```shell
 btmon -v
 
 hcitool -i hci0 lescan
@@ -89,7 +89,7 @@ hcitool -i hci0 lescan
 
 Arrêter et démarrer le bluetooth
 
-```>shell
+```shell
 hciconfig hci0 down
 hciconfig hci0 up
 ```

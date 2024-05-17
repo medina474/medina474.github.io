@@ -41,7 +41,7 @@ Le moyen le plus simple pour générer le mot de passe crypté consiste à utili
 
 Ouvrez une fenêtre de terminal et entrez
 
-```>shell
+```shell
 echo 'supermotdepasse' | openssl passwd -6 -stdin
 ```
 

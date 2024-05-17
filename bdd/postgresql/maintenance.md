@@ -4,19 +4,19 @@ title: Maintenance d'un serveur PostgreSQL
 
 ## Sauvegarder la base de données iutsd
 
-```>shell
+```shell
 $ pg_dump iutsd > iutsd.out
 ```
 
 ## restaurer la sauvegarde
 
-```>shell
+```shell
 $ psql -d iutsd -v ON_ERROR_STOP=1  -f /var/lib/postgresql/iutsd.out
 ```
 
 ou l'outil spécifique _pg_restore_.
 
-```>shell
+```shell
 pg_restore iutsd.backup --clean
 ```
 
@@ -43,10 +43,10 @@ voir le fichier [pgbackup.service](pgbackup.service)
 voir le fichier [pgbackup.timer](pgbackup.timer)
 
 
-```>shell
+```shell
 $ systemctl enable --now mybackup.timer
 ```
 
-```>shell
+```shell
 $ systemctl list-timers --all
 ```

@@ -11,14 +11,14 @@ Voir le paragraphe [durcir la sécurité](../security/hardened).
 > Sans être connecté à l'utilisateur root, il est nécessaire d'utiliser la précommande _sudo_ (_substitute user do ..._) à chaque ligne.
 {:.info}
 
-```>shell
+```shell
 apt update
 apt list --upgradable
 apt upgrade -y
 ```
 Il est possible de chainer plusieurs commande sur une seule ligne, en utilisant l'opérateur _&&_
 
-```>shell
+```shell
 apt update && apt upgrade -y
 ```
 _`apt update`_ permet de mettre à jour les catalogues contenant la liste des différentes versions des paquets disponibles.
@@ -31,7 +31,7 @@ _`apt upgrade`_ permet d'appliquer les mises à jour trouvées, le commutateur -
 
 ### Régler le fuseau horaire sur Paris.
 
-```>shell
+```shell
 timedatectl set-timezone Europe/Paris
 ```
 
@@ -40,7 +40,7 @@ timedatectl set-timezone Europe/Paris
 
 Générer les fichiers systèmes pour la nouvelle langue
 
-```>shell
+```shell
 localectl set-locale LANG=fr_FR.UTF-8
 locale-gen
 ```
@@ -50,7 +50,7 @@ Vérifier que la ligne `fr_FR.UTF-8 UTF-8` est bien décommenter dans le fichier
 
 Redémarrer et contrôller ensuite les paramètres
 
-```>shell
+```shell
 locale
 ```
 

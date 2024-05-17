@@ -131,7 +131,7 @@ Dans le resolver
 
 PostGraphile est une solution qui détecte automatiquement les tables, les colonnes, les relations, les vues d'une base de données Posgresql. Elle expose ensuite ces éléments dans un service GraphQL.
 
-```>shell
+```shell
 npx postgraphile -c 'postgres://musique:rJ0NARPxpZQyilfovnHlKxf0@localhost/192.168.1.20' --watch --enhance-graphiql --dynamic-json
 ```
 
