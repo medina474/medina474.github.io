@@ -2,6 +2,8 @@
 title: Onsen UI
 ---
 
+![Onsen UI](onsenui.png)
+
 Onsen UI est un framework Javascript qui permet de réaliser des applications web ou hybrides très facilement.
 
 [https://onsen.io/](https://onsen.io/)
