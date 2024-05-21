@@ -2,6 +2,9 @@
 title: Linux
 ---
 
+[Installation](installation)
+[Accès ssh](ssh)
+
 ## Utiliser le [système de fichiers](fs)
 + Renommer, déplacer, copier et supprimer des fichiers.
 + Supprimer des dossiers.
