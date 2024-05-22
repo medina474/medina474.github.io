@@ -4,15 +4,17 @@ title: SVG
 
 ### Etape 1 : Détail d'un film
 
-Lorsque l'on clique sur une ligne d'un film  afficher les détails de ce film.
+Lorsque l'on clique sur une ligne d'un film afficher les détails de ce film.
 
-URL de l'API :
-https://morseweiswlpykaugwtd.supabase.co/functions/v1/film`,
+#### API
 
-Appel en POST
+URL de la définition de l'API :
+https://morseweiswlpykaugwtd.supabase.co/rest/v1/?apikey=
 
-Paramètres : { "film_id": *** }
 
+#### Affiche
+
+https://morseweiswlpykaugwtd.supabase.co/storage/v1/object/public/films/film_id.jpg
 
 ![films](film.png)
 
