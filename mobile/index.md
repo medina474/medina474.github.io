@@ -67,7 +67,6 @@ mercredi 07/02|[cours](#cours)
 
 date|sujet
 ---|---
-mercredi 22/05|
 mercredi 29/05|
 mercredi 05/06|
 mercredi 05/06|
@@ -77,7 +76,6 @@ mercredi 12/06|
 
 date|sujet
 ---|---
-mercredi 22/05|
 mercredi 29/05|
 mercredi 05/06|
 mercredi 12/06|
@@ -87,7 +85,6 @@ mercredi 12/06|
 
 date|sujet
 ---|---
-mercredi 29/05|
 mercredi 29/05|
 mercredi 05/06|
 mercredi 12/06|

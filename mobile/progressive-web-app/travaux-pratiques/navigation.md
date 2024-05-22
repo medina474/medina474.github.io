@@ -25,20 +25,3 @@ Appel en mode POST avec les paramètres suivants
 
 { "personne_id": 1 }
 
-## Détail d'un film
-
-Afficher les détail d'un film
-
-
-![films](film.png)
-
-![films](film-2.png)
-
-
-Colorier les étoiles en fonction de la note du film
-
-Etoile
-
-```
-<path d="m50,2 12,34h36l-28,22 10,34-30-20-30,20 10-34-28-22h36z" />
-```

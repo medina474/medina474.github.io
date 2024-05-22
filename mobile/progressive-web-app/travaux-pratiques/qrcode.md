@@ -2,6 +2,7 @@
 title: Lecteur QRCode
 ---
 
+https://github.com/mebjas/html5-qrcode
 
 ```javascript
 const html5QrCode = new Html5Qrcode(
