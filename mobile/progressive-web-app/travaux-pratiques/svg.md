@@ -1,5 +1,5 @@
 ---
-title: SVG
+title: Page de détail
 ---
 
 ### Etape 1 : Détail d'un film
@@ -8,9 +8,12 @@ Lorsque l'on clique sur une ligne d'un film afficher les détails de ce film.
 
 #### API
 
-URL de la définition de l'API :
-https://morseweiswlpykaugwtd.supabase.co/rest/v1/?apikey=
+URL de l'API :
+https://morseweiswlpykaugwtd.supabase.co/functions/v1/film
 
+Appel en POST
+
+Paramètres : { "film_id": *** }
 
 #### Affiche
 
