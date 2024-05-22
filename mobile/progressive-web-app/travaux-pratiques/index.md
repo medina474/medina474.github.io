@@ -41,7 +41,7 @@ mercredi 14/02|Utilisation d'un [template][template] html.
 date|sujet
 ---|---
 mercredi 21/02|[lazy][lazy] load, [page d'accueil][accueil]
-mercredi 21/02|[Carte][carte]
+mercredi 21/02|[Carte][carte] avec LeafLet
 mercredi 15/05|[Navigation][navigation] vers la page des films
 mercredi 15/05|Rendre le site fonctionnel [PWA][pwa]
 mercredi 22/05|[Page détail du film](svg)
@@ -50,8 +50,8 @@ mercredi 22/05|[Page détail du film](svg)
 
 date|sujet
 ---|---
-mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei][accueil]
-mercredi 21/02|[Carte][carte]
+mercredi 14/02|[lazy][lazy] load, [page d'accueil][accueil]
+mercredi 21/02|[Carte][carte] avec LeafLet
 mercredi 15/05|[Navigation][navigation] vers la page des films
 mercredi 22/05|Rendre le site fonctionnel [PWA][pwa]
 mercredi 22/05|[Page détail du film](svg)
@@ -60,8 +60,8 @@ mercredi 22/05|[Page détail du film](svg)
 
 date|sujet
 ---|---
-mercredi 14/02|[lazy](progressive-web-app/travaux-pratiques/lazy) load, [page d'accuei][accueil]
-mercredi 21/02|[Carte](progressive-web-app/travaux-pratiques/carte)
+mercredi 14/02|[lazy][lazy] load, [page d'accueil][accueil]
+mercredi 21/02|[Carte][carte] avec LeafLet
 mercredi 15/05|[Navigation][navigation] vers la page des films
 mercredi 22/05|[Page détail du film](svg)
 mercredi 29/05|Rendre le site fonctionnel [PWA][pwa]
