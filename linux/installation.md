@@ -4,47 +4,51 @@ title: Installation
 
 Démarrer sur l'iso _debian-12.5.0-amd64-netinst.iso_
 
-## Debian GNU/Linux UEFI Installer menu
+### Debian GNU/Linux UEFI Installer menu
 
 Advanced options ...
 
 ... Expert install
 
-## Debian installer main menu
+### Debian installer main menu
 
-### Choose language
+#### Choose language
 
 - Select a language : French - Français
 - Pays (territoire ou région) : France
 - Pays qui servira de base aux paramètres régionaux par défaut : France fr_FR.UTF-8
 - Paramètres régionaux supplémentaires : (aucun)
 
-### Acces software for a blind person using a braille display
+#### Acces software for a blind person using a braille display
 
 - Ne pas faire, sauter l'étape
 
-### Configurer le clavier
+### Menu princinpal du programme d'installation Debian
 
-Disposition du clavier à utiliser : Français
+#### Configurer le clavier
 
-### Détection et montage du support d'installation
+- Disposition du clavier à utiliser : Français
+- Continuer
 
-Continuer
+#### Détection et montage du support d'installation
 
-### Charger des composants depuis le support d'installation
+- Continuer
+
+#### Charger des composants depuis le support d'installation
 
 - Ne rien sélectionner
+- Continuer
 
-### Détecter le matériel réseau
+#### Détecter le matériel réseau
 
-### Configurer le réseau
+#### Configurer le réseau
 
 - Faut-il configurer le réseau automatiquement ? : Oui
 - Délai d'attente (en secondes) pour la détection du réseau : 3
 - Nom de la machine :
 - Domaine :
 
-### Créer les utilisateurs et choisir les mots de passe
+#### Créer les utilisateurs et choisir les mots de passe
 
 Faut-il autoriser les connexions du superutilisateur ?
 Oui
@@ -52,7 +56,7 @@ Oui
 Faut-il créer un compte d'utilisateur ordinaire maintenant ?
 Non
 
-### Configurer l'horloge
+#### Configurer l'horloge
 
 Faut-il utiliser NTP pour régler l'horloge ?
 Non
@@ -60,10 +64,11 @@ Non
 Fuseau horaire :
 Europe/Paris
 
-### Détecter les disques
+#### Détecter les disques
 
-### Partionnner les disques
+#### Partionnner les disques
 Assité - utiliser un disque entier
+SCSI1 (0,0,0) (sda)
 
 Schéma de partitionnement
 Tout dans une seule partition (recommandé pour les débutants)
@@ -73,7 +78,7 @@ Terminer le partitionnement et appliquer les changements
 Faut-il appliquer les changements sur les disques ?
 Oui
 
-### Installer le système de base
+#### Installer le système de base
 
 Noyau à installer
 linux-image-amd64
@@ -81,34 +86,35 @@ linux-image-amd64
 Pilotes à inclure sur l'image disque en mémoire ( initrd )
 image ciblée : seulement les pilotes nécessaires pour ce système
 
-### Configurer l'outil de gestion des paquets
+#### Configurer l'outil de gestion des paquets
 
 Faut-il analyser d'autres supports d'installation ?
-Non
+_Non_
 
 Faut-il utiliser un miroir sur le réseau
-Oui
+_Oui_
 
 Protocole de téléchargement des fichiers
-http
+_http_
 
 Souhaitez-vous utiliser des microprogrammes non libres ?
-Oui
+_Oui_
 
 Souhaitez-vous utiliser des logiciels non libres ?
-Non
+_Non_
 
 Souhaitez-vous utiliser des logiciels de la section contrib ?
-Non
+_Non_
 
 Activer les dépôts source dans APT
 Non
 
 Services à utiliser
+
 - mises à jour de sécurité
 - mises à jour de la publication
 
-### Choisir et installer des logiciels
+#### Choisir et installer des logiciels
 
 Gestion des mises à jour sur ce système :
 Installation automatique des mises à jour de sécurité
@@ -116,7 +122,7 @@ Installation automatique des mises à jour de sécurité
 Sélection des logiciels
 Tout décocher
 
-### Installer le programme de démarrage GRUB
+#### Installer le programme de démarrage GRUB
 
 Faut-il forcer l'installation sur le chemin des supports amovibles EFI
 Non
@@ -127,7 +133,7 @@ Oui
 Faut-il exécuter os-prober automatiquement pour détecter et amorcer d'autres systèmes ? (12 bookworm)
 Non
 
-### Terminer l'installation
+#### Terminer l'installation
 
 L'horloge système est-elle à l'heure universelle (UTC) ?
 Non
