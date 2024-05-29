@@ -47,6 +47,8 @@ TP : 21h : 18 + 3 (saé)
 
 ## Travaux pratiques
 - [Concevoir une application PWA][tp1]
+- [Concevoir une application Hybride][tp2]
+
 
 ## Séances
 
@@ -90,11 +92,10 @@ mercredi 05/06|
 mercredi 12/06|
 mercredi 19/06|
 
+
 [tp1]: progressive-web-app/travaux-pratiques
+[tp2]: applications-hybrides/travaux-pratiques
 [onsenui]: progressive-web-app/travaux-pratiques/onsenui
-[acteurs]: progressive-web-app/travaux-pratiques/acteurs
-[template]: progressive-web-app/travaux-pratiques/template
-[lazy]: progressive-web-app/travaux-pratiques/lazy
 [accueil]: progressive-web-app/travaux-pratiques/accueil
 [carte]: progressive-web-app/travaux-pratiques/carte
 [navigation]: progressive-web-app/travaux-pratiques/navigation

@@ -1,5 +1,5 @@
 ---
-title: SVG
+title: Scalable Vector Graphics
 ---
 
 > ***Objectif :*** Concevoir des éléments graphiques redimensionnables sans perte de qualité. Interagir avec les propriétés graphiques. Animer les éléments.
