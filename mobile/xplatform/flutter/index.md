@@ -16,24 +16,24 @@ choisir Empty Application, puis le dossier, puis le nom de l'application (cinema
 Anatomie d'un projet Flutter
 
 
-.dart_tool
-.idea
-android
-ios
-lib
-linux
-macos
-web
-windows
-.gitignore
-.metadata
-analysis_options.yaml
-cinema_flutter.iml
-pubspec.lock
-pubspec.yaml
-README.md
+- .dart_tool
+- .idea
+- android
+- ios
+- lib
+- linux
+- macos
+- web
+- windows
+- .gitignore
+- .metadata
+- analysis_options.yaml
+- cinema_flutter.iml
+- pubspec.lock
+- pubspec.yaml
+- README.md
 
-lib/main.dart
+fichier `lib/main.dart`
 
 ```dart
 import 'package:flutter/material.dart';
