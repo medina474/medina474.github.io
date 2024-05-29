@@ -69,14 +69,9 @@ Les **Widgets** sont les éléments de base de toute interface utilisateur Flutt
 
 #### Statefull
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+Un widget Statefull est un widget avec état, ce qui signifie qu'il possède un objet State (défini ci-dessous) qui contient des champs qui **affectent** son apparence.
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+La classe State est la configuration de l'état. Il contient les valeurs (dans ce cas le titre) fournies par le parent (dans ce cas le widget App) et utilisées par la méthode build de l'État. Les champs d'une sous-classe de widget sont toujours marqués « final ».
 
 ### Widget MaterialApp
 
