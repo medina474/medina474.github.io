@@ -2,6 +2,20 @@
 title: Flutter
 ---
 
+## Installation
+
+Utiliser Visual Studio Code, et installer les plugins [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) et [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
+
+Avec Visual Studio Code lancer l'outil de diagnostic **flutter doctor** à partir du menu View, Command
+Palette (Ctrl Maj P)
+
+Installer le, comme indiqué dans la documentation (mettre à jour le path)
+
+Dans Andoid Studio assurez vous d'avoir au moins un SDK installé, le composant Android SDK Command-line Tools
+
+Vous devez aussi avoir un téléphone relié au debuggeur ou un appareil virtuel
+
+
 
 **Flutter Packages :** Utilisez des packages Flutter tiers provenant de pub.dev pour ajouter des fonctionnalités à votre application. Assurez-vous de vérifier la qualité et la popularité des packages avant de les intégrer dans votre projet.
 
