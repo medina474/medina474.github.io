@@ -9,7 +9,9 @@ Utiliser Visual Studio Code, et installer les plugins [Dart](https://marketplace
 Avec Visual Studio Code lancer l'outil de diagnostic **flutter doctor** à partir du menu View, Command
 Palette (Ctrl Maj P)
 
-Installer le, comme indiqué dans la documentation (mettre à jour le path)
+Télécharger Flutter et le placer à la racine de votre dique C
+
+Mettre à jour le path - Variables d'environnement
 
 Dans Andoid Studio assurez vous d'avoir au moins un SDK installé, le composant Android SDK Command-line Tools
 

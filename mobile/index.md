@@ -47,7 +47,7 @@ TP : 21h : 18 + 3 (saé)
 
 ## Travaux pratiques
 - [Concevoir une application PWA][tp1]
-- [Concevoir une application Hybride][tp2]
+- [Concevoir une application Multiplateforme][tp3]
 
 
 ## Séances
