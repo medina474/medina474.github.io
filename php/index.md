@@ -5,7 +5,7 @@ title: PHP
 Installer le [paquet logiciel](/linux/paquet/) php-8
 
 
-wget https://packages.sury.org/php/apt.gpg -O /usr/share/keyrings/deb.sury.org-php.gpg
+curl https://packages.sury.org/php/apt.gpg -o /usr/share/keyrings/deb.sury.org-php.gpg
 echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php-sury.list
 apt update
 
@@ -28,15 +28,3 @@ mv composer.phar /usr/local/bin/composer
 apt install --no-install unzip
 apt install --no-install-recommends php-xml
 apt install --no-install-recommends php-curl
-
-## Symfony
-
-wget https://get.symfony.com/cli/installer -O - | bash
-mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
-
-apt install --no-install-recommends php8.2-xml
-
-Warning
-apt install --no-install-recommends php8.2-mbstring
-apt install --no-install-recommends php8.2-intl
-apt install --no-install-recommends php8.2-mysql
