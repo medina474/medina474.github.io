@@ -125,18 +125,18 @@ Tout décocher
 #### Installer le programme de démarrage GRUB
 
 Faut-il forcer l'installation sur le chemin des supports amovibles EFI
-Non
+_Non_
 
 Faut-il mettre à jour les variables dans la mémoire non volatile pour démarrer Debian automatiquement ? (12 bookworm)
-Oui
+_Oui_
 
 Faut-il exécuter os-prober automatiquement pour détecter et amorcer d'autres systèmes ? (12 bookworm)
-Non
+_Non_
 
 #### Terminer l'installation
 
 L'horloge système est-elle à l'heure universelle (UTC) ?
-Non
+_Non_
 
 Veuillez sélectionner <Continuer> pour redémarrer
 Continuer

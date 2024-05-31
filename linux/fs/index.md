@@ -108,6 +108,10 @@ $ cp main.css styles/
 $ ncdu
 ```
 
+
+liste les partitions
+df -hT
+
 ## Définitions
 
 fs
