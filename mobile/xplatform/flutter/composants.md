@@ -12,16 +12,3 @@ Les **composants** : ils ont été recréés par Google. Les développeurs dispo
 
 
 ## Les concurrents
-
-
-
-## Installation
-
-[Télécharger](https://flutter.dev/docs/get-started/install/windows) Flutter pour votre OS.
-
-Installer le, comme indiqué dans la documentation (mettre à jour le path)
-
-Utiliser Visual Studio Code, et installer les plugins [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) et [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
-
-Avec Visual Studio Code lancer l'outil de diagnostic **flutter doctor** à partir du menu View, Command
-Palette (Ctrl Maj P)

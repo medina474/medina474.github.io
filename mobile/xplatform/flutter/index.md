@@ -2,6 +2,22 @@
 title: Flutter
 ---
 
+## Installation
+
+Utiliser Visual Studio Code, et installer les plugins [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) et [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
+
+Avec Visual Studio Code lancer l'outil de diagnostic **flutter doctor** à partir du menu View, Command
+Palette (Ctrl Maj P)
+
+Télécharger Flutter et le placer à la racine de votre dique C
+
+Mettre à jour le path - Variables d'environnement
+
+Dans Andoid Studio assurez vous d'avoir au moins un SDK installé, le composant Android SDK Command-line Tools
+
+Vous devez aussi avoir un téléphone relié au debuggeur ou un appareil virtuel
+
+
 
 **Flutter Packages :** Utilisez des packages Flutter tiers provenant de pub.dev pour ajouter des fonctionnalités à votre application. Assurez-vous de vérifier la qualité et la popularité des packages avant de les intégrer dans votre projet.
 
@@ -16,24 +32,24 @@ choisir Empty Application, puis le dossier, puis le nom de l'application (cinema
 Anatomie d'un projet Flutter
 
 
-.dart_tool
-.idea
-android
-ios
-lib
-linux
-macos
-web
-windows
-.gitignore
-.metadata
-analysis_options.yaml
-cinema_flutter.iml
-pubspec.lock
-pubspec.yaml
-README.md
+- .dart_tool
+- .idea
+- android
+- ios
+- lib
+- linux
+- macos
+- web
+- windows
+- .gitignore
+- .metadata
+- analysis_options.yaml
+- cinema_flutter.iml
+- pubspec.lock
+- pubspec.yaml
+- README.md
 
-lib/main.dart
+fichier `lib/main.dart`
 
 ```dart
 import 'package:flutter/material.dart';
@@ -69,14 +85,9 @@ Les **Widgets** sont les éléments de base de toute interface utilisateur Flutt
 
 #### Statefull
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+Un widget Statefull est un widget avec état, ce qui signifie qu'il possède un objet State (défini ci-dessous) qui contient des champs qui **affectent** son apparence.
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+La classe State est la configuration de l'état. Il contient les valeurs (dans ce cas le titre) fournies par le parent (dans ce cas le widget App) et utilisées par la méthode build de l'État. Les champs d'une sous-classe de widget sont toujours marqués « final ».
 
 ### Widget MaterialApp
 
