@@ -47,7 +47,7 @@ TP : 21h : 18 + 3 (saé)
 
 ## Travaux pratiques
 - [Concevoir une application PWA][tp1]
-- [Concevoir une application Multiplateforme][tp3]
+- [Concevoir une application multiplateforme avec Flutter][tp3]
 
 
 ## Séances
@@ -70,7 +70,7 @@ mercredi 07/02|[cours](#cours)
 date|sujet
 ---|---
 mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
-mercredi 05/06|
+mercredi 05/06|[Stateful Widget][tp3b]
 mercredi 05/06|
 mercredi 12/06|
 
@@ -79,7 +79,7 @@ mercredi 12/06|
 date|sujet
 ---|---
 mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
-mercredi 05/06|
+mercredi 05/06|[Stateful][tp3b]
 mercredi 12/06|
 mercredi 12/06|
 
@@ -88,7 +88,7 @@ mercredi 12/06|
 date|sujet
 ---|---
 mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
-mercredi 05/06|
+mercredi 05/06|[Stateful Widget][tp3b]
 mercredi 12/06|
 mercredi 19/06|
 
@@ -96,8 +96,4 @@ mercredi 19/06|
 [tp1]: progressive-web-app/travaux-pratiques
 [tp2]: applications-hybrides/travaux-pratiques
 [tp3]: xplatform/flutter
-[onsenui]: progressive-web-app/travaux-pratiques/onsenui
-[accueil]: progressive-web-app/travaux-pratiques/accueil
-[carte]: progressive-web-app/travaux-pratiques/carte
-[navigation]: progressive-web-app/travaux-pratiques/navigation
-[pwa]: progressive-web-app/travaux-pratiques/pwa
+[tp3b]: xplatform/travaux-pratiques/seance2
