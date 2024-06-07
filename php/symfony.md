@@ -73,3 +73,21 @@ php bin/console make:registration-form
 php bin/console make:security:form-login
 
 composer require symfony/rate-limiter
+
+### Entity
+
+php bin/console make:entity
+
+### Tailwind
+
+composer require symfonycasts/tailwind-bundle
+php bin/console tailwind:init
+
+php bin/console tailwind:build --watch
+
+
+###
+
+composer require easycorp/easyadmin-bundle
+
+php bin/console make:admin:dashboard
