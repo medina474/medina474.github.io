@@ -29,3 +29,16 @@ class _FlutterMapWidgetState extends State<FlutterMapWidget> {
     super.dispose();
   }
 ```
+
+En Flutter, une classe qui étend StatefulWidget est généralement vide ou ne contient que des informations de configuration parce que le véritable travail de gestion de l'état et de construction du widget est délégué à une classe séparée qui étend State. Cette séparation permet une gestion plus claire et plus modulaire de l'état et de l'interface utilisateur.
+Structure d'un StatefulWidget
+
+Un StatefulWidget est composé de deux parties principales :
+
+La classe StatefulWidget :
+Cette classe est généralement utilisée pour passer des paramètres de configuration et pour créer une instance de la classe State.
+Elle est souvent concise et contient uniquement des informations nécessaires pour initialiser l'état du widget.
+
+La classe State :
+Cette classe contient l'état mutable du widget et la logique de rendu.
+C'est dans cette classe que vous gérez l'état et définissez la méthode build qui retourne l'interface utilisateur du widget.

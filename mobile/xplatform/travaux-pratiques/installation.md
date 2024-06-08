@@ -16,3 +16,5 @@ Mettre à jour le path dans les Variables d'environnement de l'utilisateur.
 Dans Andoid Studio assurez vous d'avoir au moins un SDK installé ainsi que le composant Android SDK Command-line Tools
 
 Vous pouvez relier votre téléphone ou utiliser un appareil virtuel (Virtual Device Manager)
+
+
