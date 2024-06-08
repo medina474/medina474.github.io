@@ -1,6 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <path fill="#000"
-    d="m 7.49,13.72 v 8.9 a 1.92,1.92 0 0 0 1.92,1.92 h 13.8 a 1.92,1.92 0 0 0 1.92,-1.92 v -7.93 a 1,1 0 0 0 -1,-1 H 7.49 m 10.84,5.81 -2.56,2 a 0.53,0.53 0 0 1 -0.75,0 0.51,0.51 0 0 1 -0.15,-0.37 V 17.1 a 0.52,0.52 0 0 1 0.9,-0.37 l 2.56,2 a 0.53,0.53 0 0 1 0,0.77 z" />
-  <path fill="#000"
-    d="M 24.83,10.33 24.56,8.39 A 1,1 0 0 0 23.47,7.57 h -0.3 l -1,3.11 -2.79,0.39 1,-3.11 -1.07,0.15 -1.58,0.22 -1,3.11 -2.73,0.42 1,-3.1 -1.1,0.15 -1.55,0.22 -1,3.1 -2.78,0.39 1,-3.11 -1.67,0.23 a 1,1 0 0 0 -0.82,1.08 v 0 l 0.28,2 0.13,0.93 L 24,11.42 a 1,1 0 0 0 0.83,-1.08 z" />
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 19 19"
+   width="38"
+   height="38"
+   version="1.1"
+   id="svg333"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs337" />
+  <sodipodi:namedview
+     id="namedview335"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="8.734375"
+     inkscape:cx="36.579606"
+     inkscape:cy="24.729875"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg333" />
+  <path
+     fill="#000"
+     d="m 0.88728553,7.1677815 v 8.8999995 a 1.92,1.92 0 0 0 1.92,1.92 H 16.607286 a 1.92,1.92 0 0 0 1.92,-1.92 V 8.1377815 a 1,1 0 0 0 -1,-1 H 0.88728553 m 10.84,5.81 -2.56,2 a 0.53,0.53 0 0 1 -0.75,0 0.51,0.51 0 0 1 -0.15,-0.37 v -4.03 a 0.52,0.52 0 0 1 0.9,-0.369999 l 2.56,1.999999 a 0.53,0.53 0 0 1 0,0.77 z"
+     id="path329" />
+  <path
+     fill="#000"
+     d="m 18.227286,3.7777815 -0.27,-1.94 a 1,1 0 0 0 -1.09,-0.82 h -0.3 l -1,3.11 -2.79,0.39 1,-3.11 -1.07,0.15 -1.58,0.22 -1,3.11 -2.73,0.42 1,-3.1 -1.1,0.15 -1.55,0.22 -1,3.1 -2.78,0.39 1,-3.11 -1.67,0.23 a 1,1 0 0 0 -0.81999997,1.08 v 0 l 0.28,2 0.13,0.93 16.51000047,-2.33 a 1,1 0 0 0 0.83,-1.08 z"
+     id="path331" />
 </svg>

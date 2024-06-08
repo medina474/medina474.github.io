@@ -71,7 +71,7 @@ date|sujet
 ---|---
 mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
 mercredi 05/06|[Stateful Widget][tp3b]
-mercredi 05/06|
+mercredi 05/06|[Stateful Widget][tp3b]
 mercredi 12/06|
 
 #### TP2
