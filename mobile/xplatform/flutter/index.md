@@ -6,7 +6,7 @@ Flutter est un **framework**, un ensemble d'outil pour développer des applicati
 
 Flutter est développé par Google c'est donc une alternative sérieuse et crédible aux développements d'applications natives.
 
-Le langage utilisé est **Dart**, une évolution de javascript qui utilise un **typage fort**.
+Le langage utilisé est **[Dart](dart)**, une tentative de remplacement de javascript qui utilise un **typage fort**.
 
 Flutter reprend des concepts de React tout en les améliorant. Toute l'application est pensée en forme de Widget qui vont vivre et se rafraîchir de manière indépendante.
 
@@ -17,19 +17,7 @@ Les **composants** : ils ont été recréés par Google. Les développeurs dispo
 
 ## Installation
 
-Utiliser Visual Studio Code, installer les plugins [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code) et [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
-
-Avec Visual Studio Code lancer l'outil de diagnostic **flutter doctor** à partir du menu View, Command
-Palette (Ctrl Maj P)
-
-Télécharger Flutter et placer le à la racine de votre dique C
-
-Mettre à jour le path - Variables d'environnement de l'utilisateur
-
-Dans Andoid Studio assurez vous d'avoir au moins un SDK installé ainsi que le composant Android SDK Command-line Tools
-
-Vous pouvez relier votre téléphone ou utiliser un appareil virtuel (Virtual Device Manager)
-
+[installation](installation)
 
 
 **Flutter Packages :** Utilisez des packages Flutter tiers provenant de pub.dev pour ajouter des fonctionnalités à votre application. Assurez-vous de vérifier la qualité et la popularité des packages avant de les intégrer dans votre projet.
@@ -96,12 +84,9 @@ Les **Widgets** sont les éléments de base de toute interface utilisateur Flutt
 #### Stateless
 
 
-
-
 ### Widget MaterialApp
 
 ### Widget Scaffold
-
 
 
 ### Widget Center

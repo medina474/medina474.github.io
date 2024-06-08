@@ -65,35 +65,9 @@ date|sujet
 ---|---
 mercredi 07/02|[cours](#cours)
 
-#### TP1
-
-date|sujet
----|---
-mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
-mercredi 05/06|[Stateful Widget][tp3b]
-mercredi 05/06|[Stateful Widget][tp3b]
-mercredi 12/06|
-
-#### TP2
-
-date|sujet
----|---
-mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
-mercredi 05/06|[Stateful][tp3b]
-mercredi 12/06|
-mercredi 12/06|
-
-#### TP3
-
-date|sujet
----|---
-mercredi 29/05|[Application multiplateforme avec Flutter][tp3]
-mercredi 05/06|[Stateful Widget][tp3b]
-mercredi 12/06|
-mercredi 19/06|
 
 
 [tp1]: progressive-web-app/travaux-pratiques
 [tp2]: applications-hybrides/travaux-pratiques
-[tp3]: xplatform/flutter
+[tp3]: xplatform/travaux-pratiques
 [tp3b]: xplatform/travaux-pratiques/seance2

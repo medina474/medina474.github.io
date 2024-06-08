@@ -2,7 +2,6 @@
 title: "Introduction"
 ---
 
-
 Effacer le programme et commencer par le programme HelloWorld
 
 https://flutter.dev/docs/development/ui/widgets-intro
