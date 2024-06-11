@@ -24,11 +24,6 @@ Les **composants** : ils ont été recréés par Google. Les développeurs dispo
 
 [https://flutter.dev/](https://flutter.dev/)
 
-Installer l'extension Flutter pour VS Code
-
-Flutter: New Project
-
-choisir Empty Application, puis le dossier, puis le nom de l'application (cinema_flutter)
 
 Anatomie d'un projet Flutter
 
@@ -49,30 +44,6 @@ Anatomie d'un projet Flutter
 - pubspec.yaml
 - README.md
 
-fichier `lib/main.dart`
-
-```dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Cinéma'),
-        ),
-      ),
-    );
-  }
-}
-```
 
 [dart](../../../langage/dart/)
 
