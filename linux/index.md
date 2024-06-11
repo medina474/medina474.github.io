@@ -48,3 +48,8 @@ ou
 ```shell
 $ reboot
 ```
+
+wget
+curl -OL http://
+O output
+L suivre les redirectiosn

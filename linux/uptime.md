@@ -5,7 +5,7 @@ title: Uptime Kuma
 
 ### Ajouter un utilisateur
 
-adduser uptime --disabled-login --disabled-password --gecos "Uptime Kuma"
+useradd -r -s /usr/sbin/nologin -U -M uptime
 
 #### Se connecter avec cet utilisateur
 

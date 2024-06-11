@@ -8,9 +8,7 @@ title: Utilisateurs
 useradd iutsd
 ```
 
-`--disabled-password` : le compte n'a pas de mot de passe. Il n'est pas possible de se connecter sauf en utilisant un système de clés.
-
-`--disabled-login` : le compte est désactivé.
+`-s /usr/sbin/nologin` : le compte est désactivé.
 
 ### Modifier le mot de passe
 
