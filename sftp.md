@@ -61,10 +61,8 @@ $ gpasswd -d pi sftp
 Nous allons utiliser un autre utilisateur `cinema`.
 
 ```shell
-$ adduser cinema --disabled-login --disabled-password --gecos Cinéma
+$ useradd -s /usr/sbin/nologin -g www-data cinema
 ```
-
-`--disabled-password` : ne pas créer de mot de passe, l'authentification se fera par clé.
 
 ```shell
 $ mkdir /home/cinema/.ssh
