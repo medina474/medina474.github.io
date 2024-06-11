@@ -48,3 +48,27 @@ Choisir Empty Application, puis le dossier, puis le nom de l'application (cinema
 Lancer l'emulateur depuis Visual Studio Code - Menu palette Flutter: Launch Emulator
 
 Vous pouvez aussi relier votre téléphone avec un cable USB.
+
+### Debugger
+
+create a launch.json file
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Emulateur Android",
+      "request": "launch",
+      "type": "dart",
+      "args": ["-d", "emulator-5554"]
+    },
+    {
+      "name": "Chrome",
+      "request": "launch",
+      "type": "dart",
+      "args": ["-d", "chrome"]
+    },
+  ]
+}
+```

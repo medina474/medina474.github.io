@@ -67,7 +67,7 @@ Flutter est plus accessible pour les développeurs et propose un tronc commun po
 [Flutter](flutter)
 
 
-### Kotlin Multiplatform Mobile
+### KMP Kotlin Multiplatform Mobile
 
 https://www.jetbrains.com/kotlin-multiplatform/
 https://lp.jetbrains.com/kmm-for-crossplatform-developers/
