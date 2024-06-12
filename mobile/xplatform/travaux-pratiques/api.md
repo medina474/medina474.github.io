@@ -2,6 +2,7 @@
 title: API
 ---
 
+```dart
 Future<List<Acteur>> fetchActeurs() async {
     final response = await http.get(
         Uri.parse(
@@ -20,3 +21,23 @@ Future<List<Acteur>> fetchActeurs() async {
     }
     //return ["Acteur A", "Acteur B", "Acteur C"];
   }
+```
+
+```dart
+FutureBuilder<List<Acteur>>(
+  future: fetchActeurs(),
+  builder: (context, snapshot) { }
+```
+
+```dart
+if (snapshot.connectionState == ConnectionState.waiting) {
+  return const Center(child: CircularProgressIndicator());
+} else if (snapshot.hasError) {
+  return Center(child: Text('Erreur : ${snapshot.error}'));
+} else {
+``` 
+
+```dart
+return ListView.builder(
+  itemCount: snapshot.data!.length,
+```
