@@ -12,6 +12,8 @@ Installer Android Studio
 
 Dans Andoid Studio assurez vous d'avoir au moins un SDK installé ainsi que le composant ***Android SDK Command-line Tools***
 
+#### Emulateur Android
+
 Ajouter un appareil virtuel dans le menu Device Manager
 
 ### Plugin Flutter
@@ -53,7 +55,7 @@ Vous pouvez aussi relier votre téléphone avec un cable USB.
 
 create a launch.json file
 
-```
+```json
 {
   "version": "0.2.0",
   "configurations": [

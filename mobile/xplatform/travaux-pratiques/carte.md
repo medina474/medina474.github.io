@@ -30,6 +30,42 @@ FlutterMap(
 
 Ajouter un composant pour améliorer les appels réseaux flutter_map_cancellable_tile_provider
 
+
+Future<void> _getPosition() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    // Vérifiez si les services de localisation sont activés
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      // Les services de localisation ne sont pas activés, ne poursuivez pas
+      return;
+    }
+
+    // Vérifiez les permissions
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        // Les permissions sont refusées, ne poursuivez pas
+        return;
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      // Les permissions sont refusées de façon permanente, ne poursuivez pas
+      return;
+    }
+
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+
+    setState(() {
+      _positionUtilisateur = LatLng(position.latitude, position.longitude);
+      _mapController.move(_positionUtilisateur, 14.0);
+    });
+  }
+
 Ajouter un marqueur sur la carte
 
 https://homework.family/google-map-dans-flutter/

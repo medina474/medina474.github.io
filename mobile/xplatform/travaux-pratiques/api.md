@@ -2,6 +2,20 @@
 title: API
 ---
 
+Un Future est un objet qui représente une valeur ou une erreur qui sera disponible à un moment donné dans le **futur**. Les Futures sont utilisés pour les opérations asynchrones, comme la récupération de données d'une API, la lecture de fichiers, ou toute autre tâche qui peut prendre un certain temps à s'exécuter.
+
+```dart
+Future<List<String>> fetchActeurs() async {
+  return ["Acteur A", "Acteur B", "Acteur C"];
+}
+```
+
+```dart
+FutureBuilder<List<String>>(
+  future: fetchActeurs(),
+  builder: (context, snapshot) { }
+```
+
 ```dart
 Future<List<Acteur>> fetchActeurs() async {
     final response = await http.get(
@@ -15,29 +29,36 @@ Future<List<Acteur>> fetchActeurs() async {
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);
-      return data.map((elt) => Acteur.fromJson(elt)).toList();
+      return data.map((elt) => date["nom"].toString()).toList();
     } else {
       throw Exception("Erreur du web service");
     }
-    //return ["Acteur A", "Acteur B", "Acteur C"];
   }
 ```
 
-```dart
-FutureBuilder<List<Acteur>>(
-  future: fetchActeurs(),
-  builder: (context, snapshot) { }
-```
 
 ```dart
 if (snapshot.connectionState == ConnectionState.waiting) {
   return const Center(child: CircularProgressIndicator());
-} else if (snapshot.hasError) {
+}
+```
+
+```dart
+else if (snapshot.hasError) {
   return Center(child: Text('Erreur : ${snapshot.error}'));
-} else {
+} 
 ``` 
 
 ```dart
-return ListView.builder(
-  itemCount: snapshot.data!.length,
+else {
+  return ListView.builder(
+    itemCount: snapshot.data!.length,
+    itemBuilder: (context, index) {
+      return ListTile(title: Text(acteurs[index]));
+    });
+}
 ```
+
+### JSON to Class
+
+
