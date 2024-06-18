@@ -54,6 +54,23 @@ Les **Widgets** sont les éléments de base de toute interface utilisateur Flutt
 
 #### Stateless
 
+Les widgets sans état sont idéaux pour représenter des parties de votre interface utilisateur qui ne changent pas en fonction des interactions des utilisateurs ou des mises à jour des données. Ils sont couramment utilisés pour afficher du contenu statique, tel que des en-têtes, des étiquettes, des icônes ou des images. Des exemples de widgets sans état incluent Text, Icon et Image.
+
+Les widgets staleless sont sans état. Cela ne veut pas dire qu'ils ne sont pas complexes. Les widgets staleless ne sont pas interractifs mais ils peuvent contenir des widget stateful qui eux sont interractifs.
+
+#### Stateful
+
+D'un autre côté, un widget Stateful représente une partie de l'interface utilisateur qui peut changer au fil du temps ou en réponse aux interactions de l'utilisateur. Ces widgets sont mutables et peuvent être mis à jour dynamiquement.
+
+Caractéristiques des widgets avec état :
+
+État mutable : les widgets avec état peuvent maintenir un état interne mutable, qui peut changer au fil du temps. Cet état est généralement stocké dans un objet distinct appelé objet « State ».
+
+Méthode de construction (build) : comme les widgets sans état, les widgets avec état ont également une méthode de construction. Cette méthode définit l’apparence et la structure initiales du widget.
+
+Objet d'état : les widgets avec état sont associés à un objet d'état mutable. Cet objet State est responsable du stockage et de la gestion de l’état interne du widget.
+
+Capacité de reconstruction : les widgets avec état peuvent demander une reconstruction de leur interface utilisateur lorsque leur état interne change. Cela les rend adaptés aux composants dynamiques de l’interface utilisateur.
 
 ### Widget MaterialApp
 
@@ -63,6 +80,7 @@ Les **Widgets** sont les éléments de base de toute interface utilisateur Flutt
 ### Widget Center
 
 ### Widget Text
+
 
 
 Créer un Widget pour la liste des acteurs
@@ -109,7 +127,7 @@ Maintenant il faut écire la classe _ActeursWidgetState
 class _ActeursWidgetState extends State<ActeursWidget> {}
 ```
 
-il manque la méthode build
+La méthode build créé et retourne l'interface utilisateur du widget
 
 ```dart
 @override
@@ -118,12 +136,8 @@ il manque la méthode build
   }
 ```
 
+La fonction `setState` indique à la classe que l'état a changé est qu'il faut reconstruire (build) l'interface utilisateur
 
-
-Que faut-il
-
-
-builder qui est un widget
 
 [introduction](introduction)
 
