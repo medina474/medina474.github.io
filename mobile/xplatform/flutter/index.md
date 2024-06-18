@@ -68,7 +68,7 @@ Les **Widgets** sont les éléments de base de toute interface utilisateur Flutt
 Créer un Widget pour la liste des acteurs
 nouveau fichier lib/acteurs.dart
 
-Déclarer la classe
+Déclarer la classe avec le mot clé `class`
 
 ```dart
 import 'package:flutter/material.dart';
@@ -77,19 +77,21 @@ class ActeursWidget extends StatefulWidget {
 }
 ```
 
-Il manque le constructeur
+Déclarer le constructeur c'est une fonction avec le même nom que la classe
 
 ```dart
-const ActeursWidget({super.key});
+ActeursWidget({super.key});
 ```
 
 Ajoutons un titre
+
+Les variables ou fonctions qui commencent avec un _underscore_ _ sont **privés** à la classe
 
 ```dart
 class ActeursWidget extends StatefulWidget {
   const ActeursWidget({super.key, required this.title});
 
-  final String title;
+  final String _title;
 }
 ```
 
