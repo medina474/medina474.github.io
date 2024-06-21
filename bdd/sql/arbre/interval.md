@@ -1,0 +1,1 @@
+Représentation intervallaire
