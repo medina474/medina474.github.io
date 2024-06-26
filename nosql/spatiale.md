@@ -23,7 +23,6 @@ Le type LINESTRING représente une ligne constituée de points.
 ```sql
 INSERT INTO `linestrings` (`data`) VALUES (GeomFromText('LINESTRING(3 5,6 7,8 2,12 1)',0));
 ```
-<br>
 
 ### POLYGON
 

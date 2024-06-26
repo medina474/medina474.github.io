@@ -3,6 +3,7 @@ title: Nouveaux paradigmes de base de données
 ---
 
 > **Objectif :**  Appréhender les paradigmes non relationnels de base de données intégrés pour le développement d'applications sur des supports spécifiques. 
+{: .objectif}
 
 Cette ressource développe les différentes implémentations des données dans l'entreprise qui pourront être utilisée dans des développements d'applications spécifiques.
 
@@ -11,22 +12,25 @@ Cette ressource développe les différentes implémentations des données dans l
 - Les différents savoirs de référence pourront être approfondis.
 
 
-Samedi 7 septembre CM
-Samedi 7 septembre TD 1
 
-Samedi 14 septembre CM
-Samedi 14 septembre TD 2
+[arbre](sql/arbre/)
 
-Samedi 21 septembre TD 3
-Samedi 21 septembre TD 4
+- Samedi 7 septembre CM
+- Samedi 7 septembre TD 1
 
-Mercredi 25 septembre TD 5
-Mercredi 25 septembre TD 6
+- Samedi 14 septembre CM
+- Samedi 14 septembre TD 2
 
-Mercredi 25 septembre / Samedi 28 septembre TP 1
-Mercredi 25 septembre / Samedi 28 septembre TP 2
+- Samedi 21 septembre TD 3
+- Samedi 21 septembre TD 4
 
-Mercredi 16 octobre TD 7
+- Mercredi 25 septembre TD 5
+- Mercredi 25 septembre TD 6
 
-Mercredi 16 octobre / Samedi 19 octobre TP 3 
-Mercredi 16 octobre / Samedi 19 octobre TP 4
+- Mercredi 25 septembre / Samedi 28 septembre TP 1
+- Mercredi 25 septembre / Samedi 28 septembre TP 2
+
+- Mercredi 16 octobre TD 7
+
+- Mercredi 16 octobre / Samedi 19 octobre TP 3 
+- Mercredi 16 octobre / Samedi 19 octobre TP 4

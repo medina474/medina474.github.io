@@ -1,8 +1,8 @@
 ---
-title: SGBDR
+title: Système de gestion de bases de données relationnelles
 ---
 
-Les bases de données relationnelles sont un élément clé de la gestion de données dans de nombreuses applications informatiques. Elles fournissent une structure organisée pour stocker, gérer et récupérer des informations. Voici une introduction aux bases de données relationnelles :
+Les bases de données relationnelles sont un élément clé de la gestion de données dans de nombreuses applications informatiques. Elles fournissent une structure organisée pour stocker, gérer et récupérer des informations. 
 
 ### Qu'est-ce qu'une base de données relationnelle ?
 
