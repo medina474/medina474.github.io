@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>Calcul</h1>
+
+  A: <input type="text" id="nombre1"> + 
+  B: <input type="text" id="nombre2">
+  <button onclick="Calcul1()">Somme</button> = <input type="text" id="resultat1">  
+
+  <script>
+    function Addition(a, b) {
+      return a + b;
+    }
+
+    function Calcul1() {
+      // Prendre le nombre qui est dans input id=nombre1
+      var n1 = Number(nombre1.value);
+
+      // Prendre le nombre qui est dans input id=nombre1
+      var n2 = Number(nombre2.value);
+
+      // Mettre dans résultat1 le résultat de l'addition
+      resultat1.value = Addition(n1, n2)
+    }
+  </script>
+
+  <p>Faire maintenant une multiplication et une division. Attention il ne peut y avoir qu'un seul nombre1 dans la page !</p>
+
+  <!-- Répondre ici -->
+
+  <div>
+    Notes : <br> 
+    1: <input type="text" id="note1"><br>
+    2: <input type="text" id="note2"><br>
+    3: <input type="text" id="note3"><br>
+    4: <input type="text" id="note4"><br>
+    5: <input type="text" id="note5"><br>
+    6: <input type="text" id="note6"><br>
+    
+    <button onclick="CalculMoyenne()">Moyenne</button> = <input type="text" id="moyenne">  
+  </div>
+
+  <!-- Répondre ici -->
+
+  <div style="margin-top: 2rem;">
+    Note de film : <strong id="note">5.6</strong> pour <em id="nombre">8</em> personnes<br>
+      
+    <p>
+    Nouvelle note <input type="text" id="nouvelle"> <button onclick="CalculNote()">Voter</button>
+    <br>
+    Quanfd on vote il faut incrémenter (+1) le nombre de personne et calculer la nouvelle moyenne
+    </p>
+<!-- Répondre ici -->
+
+  </div>
+
+</body>
+</html>
