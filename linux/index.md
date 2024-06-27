@@ -2,26 +2,27 @@
 title: Linux
 ---
 
-[Installation](installation)
-[Accès ssh](ssh)
++ [Installer Debian 12](installation)
++ [Accès à distance par ssh](utilisateurs/ssh)
 
-## Utiliser le [système de fichiers](fs)
+### Utiliser le [système de fichiers](fs)
+
 + Renommer, déplacer, copier et supprimer des fichiers.
 + Supprimer des dossiers.
 + Connaitre l'[organisation](fs/organisation) et l'arborescence des dossiers
 
-## Installer des [paquets logigicels](paquet)
+### Installer des [paquets logigicels](paquet)
 
-## Éditer des fichier avec [nano](nano)
+### Éditer des fichier avec [nano](nano)
 
-## Gérer les [utilisateurs](utilisateurs)
+### Gérer les [utilisateurs](utilisateurs)
 + Attribuer des [droits](droits)
 
-## Gérer les [réseaux](network)
+### Gérer les [réseaux](network)
 
-## Gérer les [services](services)
+### Gérer les [services](services)
 
-
+### [Observer](uptime)
 
 ## Commandes utiles
 

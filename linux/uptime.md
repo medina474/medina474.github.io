@@ -1,4 +1,3 @@
-
 ---
 title: Uptime Kuma
 ---

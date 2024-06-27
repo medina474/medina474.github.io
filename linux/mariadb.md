@@ -3,6 +3,7 @@ title: MariaDB
 ---
 
 apt install --no-install-recommends mariadb-server
+
 mysql_secure_installation
 
 - Switch to unix_socket authentication [Y/n] y
