@@ -22,7 +22,7 @@ title: Linux
 
 ### Gérer les [services](services)
 
-### [Observer](uptime)
+### [Observer](observer/uptime)
 
 ## Commandes utiles
 

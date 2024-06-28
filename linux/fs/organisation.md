@@ -10,13 +10,13 @@ Le répertoire de départ appelé racine est représenté par la barre oblique `
 
 dossier|contenu
 ---|---
-bin	 | alias du dossier `/usr/bin`. Contient les exécutables des commandes essentielles (`passwd`, `cp`, `mv`, `mkdir`, ...) pour les utilisateurs
+_bin_	 | alias du dossier `/usr/bin`. Contient les exécutables des commandes essentielles pour les utilisateurs. (`passwd`, `cp`, `mv`, `mkdir`, ...)
 boot | Fichiers statiques pour le programme d'amorçage
 dev	 | Fichiers des pilotes de périphériques
 etc	 | Dossier contenant les fichiers de configuration de tous les programmes du système.
 home | Dossier contenant les dossier des utilisateurs (un dossier par utilisateur)
 home/iutsd | Dossier de l'utilisateur `iutsd`
-lib	 | alias du dossier `/usr/lib` Bibliothèques partagées et modules noyaux essentiels (par exemple `ngx_http_geoip_module.so` module pour le serveur nginx qui géolocalise une adresse ip grâce à une base de données)
+_lib_	 | alias du dossier `/usr/lib` Bibliothèques partagées et modules noyaux essentiels (par exemple `ngx_http_geoip_module.so` module pour le serveur nginx qui géolocalise une adresse ip grâce à une base de données)
 lost+found|Contient des fragments de fichiers corrompus, récupérés par la commande fsck. Cela peut se produire si le système est arrêté brutalement pendant une écriture.
 media |	Points de montage pour les supports amovibles comme les clés ou disques durs usb
 mnt	 | Point de montage pour les montages temporaires executé par l'utilisateur
@@ -24,7 +24,7 @@ opt  | Dossier pour les programmes installés manuellement par l'utilisateur. (o
 proc | Dossier virtuel pour les informations système.
 root | Dossier personnel de l'utilisateur root. (Le seul qui ne soit pas dans `home`)
 run	 | Données variables d'exécution comme les fichiers .pid qui contiennent des informations sur les programmes en cours d'exécution.
-sbin | alias du dossier `/usr/sbin`. Contient les exécutables des programmes systèmes essentiels (`fsck`) réservés au superutilisateur `root`.
+_sbin_ | alias du dossier `/usr/sbin`. Contient les exécutables des programmes systèmes essentiels (`fsck`) réservés au superutilisateur `root`.
 srv  | Données pour les services fournis par le système
 sys	 | Répertoire virtuel pour les informations système
 tmp	 | Dossier pour les fichiers temporaires
