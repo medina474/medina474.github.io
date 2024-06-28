@@ -8,7 +8,7 @@ title: Utilisateurs
 useradd iutsd
 ```
 
-`-s /usr/sbin/nologin` : le compte est désactivé.
+`-s /usr/sbin/nologin` : le compte ne peut pas se connecter.
 
 ### Modifier le mot de passe
 
