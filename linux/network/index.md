@@ -71,3 +71,8 @@ Installer le [paquet logiciel](/linux/paquet/) `openconnect`.
 ```
 openconnect -u xxx5@iutsd-enseignant --authgroup='Universite-de-Lorraine' vpn.lothaire.net
 ```
+
+
+To determine whether a given executable daemon/path/to/daemon supports TCP Wrappers, type:
+
+ $ ldd /path/to/daemon | grep libwrap.so
