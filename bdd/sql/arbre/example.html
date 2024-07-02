@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tree Diagram with D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .node {
+            cursor: pointer;
+        }
+
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+
+        .node text {
+            font: 12px sans-serif;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const treeData = {
+            name: "Root",
+            children: [
+                {
+                    name: "Child 1",
+                    children: [
+                        { name: "Grandchild 1" },
+                        { name: "Grandchild 2" }
+                    ]
+                },
+                {
+                    name: "Child 2",
+                    children: [
+                        { name: "Grandchild 3" },
+                        { name: "Grandchild 4" }
+                    ]
+                }
+            ]
+        };
+
+        const margin = { top: 20, right: 90, bottom: 30, left: 90 },
+              width = 960 - margin.left - margin.right,
+              height = 500 - margin.top - margin.bottom;
+
+        const svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        const root = d3.hierarchy(treeData);
+
+        const treeLayout = d3.tree().size([height, width]);
+
+        treeLayout(root);
+
+        svg.selectAll('.link')
+            .data(root.links())
+          .enter().append('path')
+            .attr('class', 'link')
+            .attr('d', d3.linkHorizontal()
+                .x(d => d.y)
+                .y(d => d.x)
+            );
+
+        const node = svg.selectAll('.node')
+            .data(root.descendants())
+          .enter().append('g')
+            .attr('class', 'node')
+            .attr('transform', d => `translate(${d.y},${d.x})`);
+
+        node.append('circle')
+            .attr('r', 10);
+
+        node.append('text')
+            .attr('dy', '.35em')
+            .attr('x', d => d.children ? -13 : 13)
+            .attr('text-anchor', d => d.children ? 'end' : 'start')
+            .text(d => d.data.name);
+    </script>
+</body>
+</html>

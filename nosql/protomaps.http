@@ -1,0 +1,17 @@
+POST https://app.protomaps.com/api/v1/extracts 
+
+{
+  "token":"e215594596fb911b",
+  "region":{ "type": "bbox", "data":[17.94,-62.89,17.88,-62.78] }
+}
+
+###
+GET https://osmx1.protomaps.com/1a657c95-dac9-4b9d-8dbc-5c68ce3ff1b0
+
+###
+POST https://app.protomaps.com/api/v1/extracts/1a657c95-dac9-4b9d-8dbc-5c68ce3ff1b0 
+
+{ "token": "e215594596fb911b" }
+
+###
+pmtiles extract https://build.protomaps.com/20240624.pmtiles stbarth.pmtiles --bbox=-62.8871773,17.9397858,-62.7827643,17.8795122

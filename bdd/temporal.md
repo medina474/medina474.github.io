@@ -6,24 +6,95 @@ title: Requêtes temporelles
 
 ### précède
 
+A précède à B
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" y1="4" x2="5" y2="4" stroke-width="1" stroke="black" />
+<line x1="8" y1="6" x2="15" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+Allen|Postgres
+---|---
+<  |<<
+
 ### succède
+
+A succède à B
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="13" y1="4" x2="15" y2="4" stroke-width="1" stroke="black" />
+<line x1="3" y1="6" x2="10" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+
+Allen|Postgres
+---|---
+>  |>>
+
 
 ### égale
 
-### rencontre
+### rencontre / rejoint
 
-### chevauche
+meet
+
+Allen|Postgres
+---|---
+m  |-\|-
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+### chevauche / intersecte
+
+overlap
+
+Allen|Postgres
+---|---
+o  |&&
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
+<svg>
 
 ### pendant
 
+during
+
+Allen|Postgres
+---|---
+d  |
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
 ### commence
+
+Allen|Postgres
+---|---
+s  |
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
+<svg>
 
 ### finit
 
+
+Allen|Postgres
+---|---
+f  |
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
 <svg>
-
-</svg>
-
 
 = 	equal 	int4range(1,5) = '[1,4]'::int4range 	t
 
