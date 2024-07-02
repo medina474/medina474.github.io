@@ -53,8 +53,8 @@ L'opérateur _Succède_ (>) est le transposé de l'opérateur _Précède_ (<).
 A _Égale_ B lorsque les bornes inférieures et supérieurs de chaque intervalle sont égales.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text y="2" x="6" font-size="1.8" text-anchor="middle">A</text>
-<text y="6" x="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="6" y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="6" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="3" x2="10" y1="3" y2="3" stroke-width="1" stroke="black" />
 <line x1="3" x2="10" y1="7" y2="7" stroke-width="1" stroke="black" />
 </svg>
@@ -79,8 +79,8 @@ Allen|Postgres
 A m B | A -\|- B
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="3" x2="7" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="7" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -96,8 +96,8 @@ L'opérateur _Rencontre_ (m) a comme transposé l'opérateur _Rencontré par_ (m
 A chevauche (overlaps) B lorsque la borne supérieure de A est supérieur à la borne inférieure de B sans que la borne inférieure de A soit supérieur à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="3" x2="8"  y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="5" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -117,8 +117,8 @@ L'opérateur _Chevauche_ (o) a comme transposé l'opérateur _Est chevauché par
 A se déroule _Pendant_ (during) B lorque la borne inférieure de A est supérieur à la borne inférieure de B et que la borne supérieure de A est inférieur à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="7" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="5" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -142,8 +142,8 @@ Allen |Postgres
 A di B | A @> B 
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5" x2="14" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="7" x2="10" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -159,8 +159,8 @@ L'opérateur _Contient_ (di) est le transposé de l'opérateur _Pendant_ (d).
 A _Commence_ en même temps (starts) que B lorsque la borne inférieure de A est égale à la borne inférieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5" y1="4" x2="10" y2="4" stroke-width="1" stroke="black" />
 <line x1="5" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -180,8 +180,8 @@ L'opérateur _Commence_ (s) a comme transposé l'opérateur _Débuté par_ (si).
 A _Finit_ en même temps (finishes) que B lorsque la borne supérieure de A est égale à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5"  x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="10" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -201,8 +201,8 @@ L'opérateur _Finit_ (f) a comme transposé l'opérateur _Terminé par_ (fi). `i
 ### Union
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
-<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="5" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 <line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
