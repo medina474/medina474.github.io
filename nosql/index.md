@@ -1,29 +1,43 @@
 ---
-title: Not Only SQL
+title: Nouveaux paradigmes de base de données
 ---
 
-Qu'est-ce qu'une base de données géographique ?
+> **Objectif :**  Appréhender les paradigmes non relationnels de base de données intégrés pour le développement d'applications sur des supports spécifiques. 
+{: .objectif}
 
-Une base de données géographique (BDG), également connue sous le nom de Système de Gestion de Bases de Données Géographiques (SGBDG), est un système conçu pour gérer, stocker, et interroger des données spatiales et géographiques. Contrairement aux bases de données traditionnelles, les BDG sont spécialisées dans la manipulation de données qui sont liées à des emplacements géographiques. Ces données peuvent inclure des points, des lignes, des polygones, et d'autres types de représentations spatiales.
+Cette ressource développe les différentes implémentations des données dans l'entreprise qui pourront être utilisée dans des développements d'applications spécifiques.
 
-#### Représentation des données spatiales
+### Savoirs de référence étudiés
+- Concepts, structure de données et langages d'interrogation (par ex. : base de données mobiles, embarquées, objets, NoSQL — déductives, clés-valeurs, documents, colonnes, graphe...)
+- Les différents savoirs de référence pourront être approfondis.
 
-Vecteur : Représentation des données sous forme de points, lignes et polygones.
-    
-Raster : Représentation des données sous forme de grille, où chaque cellule a une valeur correspondant à une caractéristique géographique.
 
-Analyse spatiale
+- Samedi 7 septembre CM
+- Samedi 7 septembre TD 1
 
-Géocodage : Transformation des adresses en coordonnées géographiques.
+- Samedi 14 septembre CM
+- Samedi 14 septembre TD 2
 
-Topologie : Étude des relations spatiales entre les objets géographiques (adjacence, connectivité).
+- Samedi 21 septembre TD 3
+- Samedi 21 septembre TD 4
 
-Requêtes spatiales : Recherche de proximité, intersection, inclusion, etc.
+- Mercredi 25 septembre TD 5
+- Mercredi 25 septembre TD 6
 
-Outils et technologies
+- Mercredi 25 septembre / Samedi 28 septembre TP 1
+- Mercredi 25 septembre / Samedi 28 septembre TP 2
 
-    Logiciels SIG (Systèmes d'Information Géographique) : QGIS, ArcGIS, etc.
-    Bases de données spatiales : PostgreSQL/PostGIS, MySQL avec support spatial, etc.
-    Langages de programmation : Python (avec bibliothèques comme GeoPandas, Shapely), R (avec bibliothèques comme sf, sp), etc.
+- Mercredi 16 octobre TD 7
+
+- Mercredi 16 octobre / Samedi 19 octobre TP 3 
+- Mercredi 16 octobre / Samedi 19 octobre TP 4
+
+
+
+[arbre](arbre)
 
 [Base de données spatiales](spatial)
+
+[Base de données spatiales](spatiale)
+
+[Base de données spatiales](temporal)

@@ -184,13 +184,24 @@ select '[5,15]'::int4range &< '[10,15]'::int4range;
 
 L'opérateur Finit (f) a comme transposé l'opérateur Terminé par (fi). `i` pour inverse.
 
+## Opérateurs combinatoires
 
+### Union
 
-<svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
-<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
-<svg>
+```sql
+select '[5,10]'::int4range + '[8,15]'::int4range;
+```
+### Intersection
 
+```sql
+select '[5,10]'::int4range * '[8,15]'::int4range;
+```
+
+### Difference
+
+```sql
+select '[5,10]'::int4range - '[8,15]'::int4range;
+```
 
 - https://fr.wikipedia.org/wiki/-Alg%C3%A8bre_des_intervalles_d%27Allen
 - https://drops.dagstuhl.de/opus/volltexte/2018/9776/pdf/LIPIcs-TIME-2018-11.pdf
