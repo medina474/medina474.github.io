@@ -13,10 +13,10 @@ Deux intervalles A et B peuvent se positionner selon 13 configurations.
 A _Précède_ B lorsque la borne supérieure de A est strictement inférieur à la borne inférieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text y="3" x="4" font-size="1.8" text-anchor="middle">A</text>
-<text y="5" x="11" font-size="1.8" text-anchor="middle">B</text>
+<text x="4"  y="3"  font-size="1.8" text-anchor="middle">A</text>
+<text x="12" y="5"  font-size="1.8" text-anchor="middle">B</text>
 <line x1="3" x2="5"  y1="4" y2="4" stroke-width="1" stroke="black" />
-<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<line x1="8" x2="16" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
 
 Allen|Postgres
@@ -32,9 +32,9 @@ select '[3,5]'::int4range << '[8,15]'::int4range;
 A _Succède_ à B lorsque la borne inférieure de A est strictement supérieur à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text y="3" x="14" font-size="1.8" text-anchor="middle">A</text>
-<text y="5" x="6" font-size="1.8" text-anchor="middle">B</text>
-<line x1="8" x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
+<text x="12" y="3" font-size="1.8" text-anchor="middle">A</text>
+<text x="4"  y="5"  font-size="1.8" text-anchor="middle">B</text>
+<line x1="8" x2="16" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="3" x2="5"  y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
 
@@ -70,7 +70,7 @@ select '[3,10]'::int4range = '[3,10]'::int4range;
 
 L'opérateur _Égale_ (=) est son propre transposé.
 
-### 3. Rencontre / rejoint
+### 4. Rencontre / rejoint
 
 A _Rencontre_ (meets) B lorsque la borne supérieure de A moins la borne inférieure de B est égale à une unité.
 
@@ -79,10 +79,10 @@ Allen|Postgres
 A m B | A -\|- B
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<text y="2" x="6" font-size="1.8" text-anchor="middle">A</text>
-<text y="6" x="6" font-size="1.8" text-anchor="middle">B</text>
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="3" x2="7" y1="4" y2="4" stroke-width="1" stroke="black" />
-<line x1="7" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
+<line x1="7" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
 
 ```sql
@@ -91,11 +91,13 @@ select '[3,6]'::int4range -|- '[7,14]'::int4range;
 
 L'opérateur _Rencontre_ (m) a comme transposé l'opérateur _Rencontré par_ (mi). `i` pour inverse.
 
-### Chevauche / intersecte
+### 5. Chevauche / intersecte
 
 A chevauche (overlaps) B lorsque la borne supérieure de A est supérieur à la borne inférieure de B sans que la borne inférieure de A soit supérieur à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="3" x2="8"  y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="5" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -110,11 +112,13 @@ select '[3,8]'::int4range && '[5,14]'::int4range;
 
 L'opérateur _Chevauche_ (o) a comme transposé l'opérateur _Est chevauché par_ (oi). `i` pour inverse.
 
-### Pendant
+### 6. Pendant
 
 A se déroule _Pendant_ (during) B lorque la borne inférieure de A est supérieur à la borne inférieure de B et que la borne supérieure de A est inférieur à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="7" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="5" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -129,7 +133,7 @@ select '[7,10]'::int4range <@ '[5,14]'::int4range;
 
 L'opérateur _Pendant_ (d) a comme transposé l'opérateur _Contient_ (di). `i` pour inverse.
 
-### Contient
+### 7. Contient
 
 A _Contient_ B lorsque la borne inférieure de A est inférieur à la borne inférieure de B et que la borne supérieure de A est supérieur à la borne supérieure de B.
 
@@ -138,6 +142,8 @@ Allen |Postgres
 A di B | A @> B 
 
 <svg viewbox="0 0 20 8" width="200" height="80">
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5" x2="14" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="7" x2="10" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -148,11 +154,13 @@ select '[5,14]'::int4range @> '[7,10]'::int4range;
 
 L'opérateur _Contient_ (di) est le transposé de l'opérateur _Pendant_ (d).
 
-### Commence
+### 8. Commence
 
 A _Commence_ en même temps (starts) que B lorsque la borne inférieure de A est égale à la borne inférieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5" y1="4" x2="10" y2="4" stroke-width="1" stroke="black" />
 <line x1="5" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -167,11 +175,13 @@ select '[5,15]'::int4range &> '[5,10]'::int4range;
 
 L'opérateur _Commence_ (s) a comme transposé l'opérateur _Débuté par_ (si). `i` pour inverse.
 
-### Finit
+### 9. Finit
 
 A _Finit_ en même temps (finishes) que B lorsque la borne supérieure de A est égale à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
 <line x1="5"  x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
 <line x1="10" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
@@ -191,8 +201,11 @@ L'opérateur _Finit_ (f) a comme transposé l'opérateur _Terminé par_ (fi). `i
 ### Union
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="5"  x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
-<line x1="10" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<line x1="5" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
 
 ```sql
@@ -201,8 +214,11 @@ select '[5,10]'::int4range + '[8,15]'::int4range;
 ### Intersection
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="5"  x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
-<line x1="10" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<line x1="5" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
 
 ```sql
@@ -212,8 +228,11 @@ select '[5,10]'::int4range * '[8,15]'::int4range;
 ### Difference
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="5"  x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
-<line x1="10" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<text x="5"  y="2" font-size="1.8" text-anchor="middle">A</text>
+<text x="11" y="6" font-size="1.8" text-anchor="middle">B</text>
+<line x1="5" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 </svg>
 
 ```sql
