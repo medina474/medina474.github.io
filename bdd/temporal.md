@@ -4,118 +4,193 @@ title: Requêtes temporelles
 
 > Logique d’intervalles d’Allen : ensemble complet d’opérateurs booléens de base pour le positionnement relatif dans le temps.
 
-### précède
+Un intervalle possède un début d et une fin f, tels que d < f.
 
-A précède à B
+Deux intervalles A et B peuvent se positionner selon 13 configurations.
+
+### Précède
+
+A précède B
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="3" y1="4" x2="5" y2="4" stroke-width="1" stroke="black" />
-<line x1="8" y1="6" x2="15" y2="6" stroke-width="1" stroke="black" />
+<text y="3" x="4" font-size="1.8" text-anchor="middle">A</text>
+<text y="5" x="11" font-size="1.8" text-anchor="middle">B</text>
+<line x1="3" x2="5"  y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="8" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
 <svg>
 
 Allen|Postgres
 ---|---
-<  |<<
+A < B | A << B
 
-### succède
+```sql
+select '[3,5]'::int4range << '[8,15]'::int4range;
+```
 
-A succède à B
+### Succède
+
+A succède à B. 
 
 <svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="13" y1="4" x2="15" y2="4" stroke-width="1" stroke="black" />
-<line x1="3" y1="6" x2="10" y2="6" stroke-width="1" stroke="black" />
+<text y="3" x="14" font-size="1.8" text-anchor="middle">A</text>
+<text y="5" x="6" font-size="1.8" text-anchor="middle">B</text>
+<line x1="8" x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="3" x2="5"  y1="6" y2="6" stroke-width="1" stroke="black" />
 <svg>
 
+Allen|Postgres
+------|---
+A > B | A >> B
+
+```sql
+select '[8,15]'::int4range >> '[3,5]'::int4range;
+```
+
+L'opérateur Succède (>) est le transposé de l'opérateur Précède (<).
+
+### Égale
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<text y="2" x="6" font-size="1.8" text-anchor="middle">A</text>
+<text y="6" x="6" font-size="1.8" text-anchor="middle">B</text>
+<line x1="3" x2="10" y1="3" y2="3" stroke-width="1" stroke="black" />
+<line x1="3" x2="10" y1="7" y2="7" stroke-width="1" stroke="black" />
+<svg>
+
+Allen|Postgres
+------|---
+A = B | A = B
+
+
+```sql
+select '[3,10]'::int4range = '[3,10]'::int4range;
+```
+
+L'opérateur Égale (=) est son propre transposé.
+
+### Rencontre / rejoint
+
+A rencontre (meets) B
 
 Allen|Postgres
 ---|---
->  |>>
+A m B | A -\|- B
 
+<svg viewbox="0 0 20 8" width="200" height="80">
+<text y="2" x="6" font-size="1.8" text-anchor="middle">A</text>
+<text y="6" x="6" font-size="1.8" text-anchor="middle">B</text>
+<line x1="3" x2="7" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
+<svg>
 
-### égale
+```sql
+select '[3,6]'::int4range -|- '[7,14]'::int4range;
+```
 
-### rencontre / rejoint
+L'opérateur Rencontre (m) a comme transposé l'opérateur Rencontré par (mi). `i` pour inverse.
 
-meet
+### Chevauche / intersecte
+
+A chevauche (overlaps) B 
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="3" x2="8"  y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="5" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
+<svg>
 
 Allen|Postgres
----|---
-m  |-\|-
+-------|---
+A o B  | A && B
+
+```sql
+select '[3,8]'::int4range && '[5,14]'::int4range;
+```
+
+L'opérateur _Chevauche_ (o) a comme transposé l'opérateur _Est chevauché par_ (oi). `i` pour inverse.
+
+### Pendant
+
+A se déroule pendant (during) B
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="7" x2="10" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="5" x2="14" y1="6" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+Allen|Postgres
+------|---
+A d B | A <@ B 
+
+```sql
+select '[7,10]'::int4range <@ '[5,14]'::int4range;
+```
+
+L'opérateur _Pendant_ (d) a comme transposé l'opérateur _Contient_ (di). `i` pour inverse.
+
+### Contient
+
+A contient B
+
+Allen |Postgres
+------|---
+A di B | A @> B 
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="5" x2="14" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="7" x2="10" y1="6" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+```sql
+select '[5,14]'::int4range @> '[7,10]'::int4range;
+```
+
+L'opérateur _Contient_ (di) est le transposé de l'opérateur _Pendant_ (d).
+
+### Commence
+
+A commence en même temps (starts) que B
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="5" y1="4" x2="10" y2="4" stroke-width="1" stroke="black" />
+<line x1="5" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+Allen |Postgres
+------|---
+A s B | A &> B
+
+```sql
+select '[5,15]'::int4range &> '[5,10]'::int4range;
+```
+
+L'opérateur Commence (s) a comme transposé l'opérateur Débuté par (si). `i` pour inverse.
+
+### Finit
+
+A finit en même temps (finishes) que B
+
+<svg viewbox="0 0 20 8" width="200" height="80">
+<line x1="5"  x2="15" y1="4" y2="4" stroke-width="1" stroke="black" />
+<line x1="10" x2="15" y1="6" y2="6" stroke-width="1" stroke="black" />
+<svg>
+
+Allen|Postgres
+------|---
+A f B | A &< B 
+
+```sql
+select '[5,15]'::int4range &< '[10,15]'::int4range;
+```
+
+L'opérateur Finit (f) a comme transposé l'opérateur Terminé par (fi). `i` pour inverse.
+
+
 
 <svg viewbox="0 0 20 8" width="200" height="80">
 <line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
 <line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
 <svg>
 
-### chevauche / intersecte
 
-overlap
-
-Allen|Postgres
----|---
-o  |&&
-
-<svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
-<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
-<svg>
-
-### pendant
-
-during
-
-Allen|Postgres
----|---
-d  |
-
-<svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
-<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
-<svg>
-
-### commence
-
-Allen|Postgres
----|---
-s  |
-
-<svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
-<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
-<svg>
-
-### finit
-
-
-Allen|Postgres
----|---
-f  |
-
-<svg viewbox="0 0 20 8" width="200" height="80">
-<line x1="3" y1="4" x2="7" y2="4" stroke-width="1" stroke="black" />
-<line x1="7" y1="6" x2="14" y2="6" stroke-width="1" stroke="black" />
-<svg>
-
-= 	equal 	int4range(1,5) = '[1,4]'::int4range 	t
-
-<> 	not equal 	numrange(1.1,2.2) <> numrange(1.1,2.3) 	t
-
-< 	less than 	int4range(1,10) < int4range(2,3) 	t
-> 	greater than 	int4range(1,10) > int4range(1,5) 	t
-
-<= 	less than or equal 	numrange(1.1,2.2) <= numrange(1.1,2.2) 	t
->= 	greater than or equal 	numrange(1.1,2.2) >= numrange(1.1,2.0) 	t
-
-@> 	contains range 	int4range(2,4) @> int4range(2,3) 	t
-@> 	contains element 	'[2011-01-01,2011-03-01)'::tsrange @> '2011-01-10'::timestamp 	t
-<@ 	range is contained by 	int4range(2,4) <@ int4range(1,7) 	t
-<@ 	element is contained by 	42 <@ int4range(1,7) 	f
-
-&& 	overlap (have points in common) 	int8range(3,7) && int8range(4,12) 	t
-<< 	strictly left of 	int8range(1,10) << int8range(100,110) 	t
->> 	strictly right of 	int8range(50,60) >> int8range(20,30) 	t
-&< 	does not extend to the right of 	int8range(1,20) &< int8range(18,20) 	t
-&> 	does not extend to the left of 	int8range(7,20) &> int8range(5,10) 	t
--|- 	is adjacent to 	numrange(1.1,2.2) -|- numrange(2.2,3.3) 	t
 - https://fr.wikipedia.org/wiki/-Alg%C3%A8bre_des_intervalles_d%27Allen
 - https://drops.dagstuhl.de/opus/volltexte/2018/9776/pdf/LIPIcs-TIME-2018-11.pdf
