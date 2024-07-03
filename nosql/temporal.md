@@ -10,7 +10,7 @@ Deux intervalles A et B peuvent se positionner selon 13 configurations.
 
 ### 1. Précède
 
-A _Précède_ B lorsque la borne supérieure de A est strictement inférieur à la borne inférieure de B.
+A _Précède_ B lorsque la borne supérieure de A est strictement inférieure à la borne inférieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
 <text x="4"  y="3"  font-size="1.8" text-anchor="middle">A</text>
@@ -29,7 +29,7 @@ select '[3,5]'::int4range << '[8,15]'::int4range;
 
 ### 2. Succède
 
-A _Succède_ à B lorsque la borne inférieure de A est strictement supérieur à la borne supérieure de B.
+A _Succède_ à B lorsque la borne inférieure de A est strictement supérieure à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
 <text x="12" y="3" font-size="1.8" text-anchor="middle">A</text>
@@ -50,7 +50,7 @@ L'opérateur _Succède_ (>) est le transposé de l'opérateur _Précède_ (<).
 
 ### Égale
 
-A _Égale_ B lorsque les bornes inférieures et supérieurs de chaque intervalle sont égales.
+A _Égale_ B lorsque les bornes inférieures et supérieures de chaque intervalle sont égales.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
 <text x="6" y="2" font-size="1.8" text-anchor="middle">A</text>
@@ -93,7 +93,7 @@ L'opérateur _Rencontre_ (m) a comme transposé l'opérateur _Rencontré par_ (m
 
 ### 5. Chevauche / intersecte
 
-A chevauche (overlaps) B lorsque la borne supérieure de A est supérieur à la borne inférieure de B sans que la borne inférieure de A soit supérieur à la borne supérieure de B.
+A chevauche (overlaps) B lorsque la borne supérieure de A est supérieure à la borne inférieure de B sans que la borne inférieure de A soit supérieure à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
 <text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
@@ -114,7 +114,7 @@ L'opérateur _Chevauche_ (o) a comme transposé l'opérateur _Est chevauché par
 
 ### 6. Pendant
 
-A se déroule _Pendant_ (during) B lorque la borne inférieure de A est supérieur à la borne inférieure de B et que la borne supérieure de A est inférieur à la borne supérieure de B.
+A se déroule _Pendant_ (during) B lorque la borne inférieure de A est supérieure à la borne inférieure de B et que la borne supérieure de A est inférieure à la borne supérieure de B.
 
 <svg viewbox="0 0 20 8" width="200" height="80">
 <text x="5"  y="3" font-size="1.8" text-anchor="middle">A</text>
@@ -135,7 +135,7 @@ L'opérateur _Pendant_ (d) a comme transposé l'opérateur _Contient_ (di). `i` 
 
 ### 7. Contient
 
-A _Contient_ B lorsque la borne inférieure de A est inférieur à la borne inférieure de B et que la borne supérieure de A est supérieur à la borne supérieure de B.
+A _Contient_ B lorsque la borne inférieure de A est inférieure à la borne inférieure de B et que la borne supérieure de A est supérieure à la borne supérieure de B.
 
 Allen |Postgres
 ------|---
