@@ -2,6 +2,23 @@
 title: Requêtes temporelles
 ---
 
+## Limites inclusives et exclusives
+
+Chaque plage non vide a deux limites, la limite inférieure et la limite supérieure. Tous les points entre ces valeurs sont inclus dans la plage. Une limite inclusive signifie que le point limite lui-même est également inclus dans la plage, tandis qu'une limite exclusive signifie que le point limite n'est pas inclus dans la plage.
+
+Dans la forme textuelle d'une plage, une limite inférieure inclusive est représentée par « [ » tandis qu'une limite inférieure exclusive est représentée par « ( ». De même, une limite supérieure inclusive est représentée par « ] », tandis qu'une limite supérieure exclusive est représentée par ")". (Voir la section 8.17.5 pour plus de détails.)
+
+Les fonctions lower_inc et upper_inc testent respectivement l'inclusivité des limites inférieure et supérieure d'une valeur de plage.
+
+## Plages infinies (illimitées)
+
+La limite inférieure d'une plage peut être omise, ce qui signifie que toutes les valeurs inférieures à la limite supérieure sont incluses dans la plage, par exemple (,3). De même, si la limite supérieure de la plage est omise, alors toutes les valeurs supérieures à la limite supérieure de la plage. La limite inférieure est incluse dans la plage. Si les limites inférieure et supérieure sont omises, toutes les valeurs du type d'élément sont considérées comme étant dans la plage. La spécification d'une limite manquante comme inclusive est automatiquement convertie en exclusive, par exemple, [,] est converti. à (,). Vous pouvez considérer ces valeurs manquantes comme +/-infini, mais ce sont des valeurs de type de plage spéciales et sont considérées comme étant au-delà des valeurs +/-infinies de tout type d'élément de plage.
+
+Les types d'éléments qui ont la notion « d'infini » peuvent les utiliser comme valeurs liées explicites. Par exemple, avec les plages d'horodatage, [today,infinity) exclut la valeur d'horodatage spéciale infinity, tandis que [today,infinity] l'inclut, tout comme [today,) et [today,].
+
+Les fonctions lower_inf et upper_inf testent respectivement les limites inférieure et supérieure infinies d'une plage.
+
+
 > Logique d’intervalles d’Allen : ensemble complet d’opérateurs booléens de base pour le positionnement relatif dans le temps.
 
 Un intervalle possède un début d et une fin f, tels que d < f.
@@ -48,7 +65,7 @@ select '[8,15]'::int4range >> '[3,5]'::int4range;
 
 L'opérateur _Succède_ (>) est le transposé de l'opérateur _Précède_ (<).
 
-### Égale
+### 3. Égale
 
 A _Égale_ B lorsque les bornes inférieures et supérieures de chaque intervalle sont égales.
 
