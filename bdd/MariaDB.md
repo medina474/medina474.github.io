@@ -27,3 +27,4 @@ create user iutsd@'localhost' identified by 'supermotdepasse';
 create database iutsd;
 grant all privileges on iutsd.* to 'iutsd'@'%';
 ```
+WITH GRANT OPTION
