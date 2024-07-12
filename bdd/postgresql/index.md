@@ -137,4 +137,4 @@ EXECUTE PROCEDURE trigger_set_timestamp();
 
 |application|commande|version|
 |-|-|-:|
-postgresql|psql --version|11.9
+postgresql|psql --version|15.7

@@ -28,3 +28,7 @@ mv composer.phar /usr/local/bin/composer
 apt install --no-install unzip
 apt install --no-install-recommends php-xml
 apt install --no-install-recommends php-curl
+
+
+https://www.phptutorial.net/php-tutorial/php-remember-me/
+  https://paragonie.com/blog/2015/04/secure-authentication-php-with-long-term-persistence
