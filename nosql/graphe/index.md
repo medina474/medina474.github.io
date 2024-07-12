@@ -17,28 +17,32 @@ Les sommets sont parfois appelés des **nœuds**. En anglais ils sont appelés _
 Les arêtes sont parfois appelés des **arcs**. En anglais ils sont appelés _**edges**_.
 
 <svg>
-<circle cx="30" cy="70" r="5"/>
-<text x="25" y="60">A</text>
-<circle cx="115" cy="15" r="5"/>
-<text x="125" y="15">B</text>
-<circle cx="150" cy="90" r="5"/>
-<text x="160" y="90">D</text>
-<circle cx="50" cy="120" r="5"/>
-<text x="30" y="125">C</text>
+<g>
+<circle cx="30" cy="25" r="5"/>
+<text x="10" y="30">A</text>
+<circle cx="115" cy="40" r="5"/>
+<text x="125" y="45">B</text>
+<circle cx="70" cy="120" r="5"/>
+<text x="50" y="125">C</text>
+<circle cx="150" cy="80" r="5"/>
+<text x="160" y="85">D</text>
 <circle cx="170" cy="140" r="5"/>
 <text x="180" y="140">E</text>
-<circle cx="200" cy="60" r="5"/>
-<text x="195" y="50">H</text>
+<circle cx="200" cy="50" r="5"/>
+<text x="195" y="40">H</text>
 <circle cx="280" cy="40" r="5"/>
 <text x="290" y="40">G</text>
 <circle cx="250" cy="100" r="5"/>
 <text x="260" y="110">F</text>
-<line x1="30" y1="70" x2="115"  y2="15" stroke="#000" stroke-width="2"  />
-<line x1="30" y1="70" x2="150"  y2="90" stroke="#000" stroke-width="2"  />
-<line x1="50" y1="120" x2="150"  y2="90" stroke="#000" stroke-width="2"  />
-<line x1="150" y1="90" x2="170"  y2="140" stroke="#000" stroke-width="2"  />
-<line x1="50" y1="120" x2="115"  y2="15" stroke="#000" stroke-width="2"  />
-<line x1="280" y1="40" x2="250"  y2="100" stroke="#000" stroke-width="2"  />
+</g>
+<g stroke="#000" stroke-width="2">
+<line x1="30"  y1="25"  x2="115" y2="40"/>
+<line x1="115" y1="40"  x2="70"  y2="120"/>
+<line x1="70"  y1="120" x2="150" y2="80"/>
+<line x1="150" y1="80"  x2="170" y2="140"/>
+<line x1="30"  y1="25"  x2="150" y2="80"/>
+<line x1="280" y1="40"  x2="250" y2="100"/>
+</g>
 </svg>
 
 ```
@@ -57,6 +61,7 @@ Dans un graphe G = {V , E}
 - deux sommets A, B ∈ V (qui appartiennent à l'ensemble des sommets V) sont **adjacents** s’ils sont reliés par une arête. Par exemple si A—B ∈ E (l'arête A-B appartient à l'ensemble V des arêtes) ;
 - une arête A—B est **incidente** aux sommets A et B ;
 - le **degré** d’un sommet est le nombre d’arêtes qui lui sont incidentes.
+- l'**ordre** d'un graphe est le nombre de sommets
 
 Dans notre exemple :
 - A et B sont adjacents ;
@@ -64,7 +69,8 @@ Dans notre exemple :
 - le degré de A est 2 ;
 - le degré de D est 3 ;
 - le degré de F est 0 ;
-- le degré de G est 1.
+- le degré de G est 1 ;
+- L'ordre du graphe est 8.
 
 ### Sous-graphes
 
@@ -74,37 +80,76 @@ Soit un graphe G = {V , E}. Le graphe G' {V', E'} est un **sous-graphe** de G si
 - les sommets composant les arêtes de E' doivent appartenir à V'.
 
 <svg>
-<g fill="red" >
-<circle cx="30" cy="70" r="5"/>
-<text x="25" y="60">A</text>
-<circle cx="115" cy="15" r="5"/>
-<text x="125" y="15">B</text>
-<circle cx="150" cy="90" r="5"/>
-<text x="160" y="90">D</text>
-<circle cx="50" cy="120" r="5"/>
-<text x="30" y="125">C</text>
-<circle cx="170" cy="140" r="5"/>
-<text x="180" y="140">E</text>
-<g stroke="#f00" stroke-width="2">
-<line x1="30" y1="70" x2="115"  y2="15" />
-<line x1="30" y1="70" x2="150"  y2="90" />
-<line x1="50" y1="120" x2="150"  y2="90" />
-<line x1="150" y1="90" x2="170"  y2="140" />
-<line x1="50" y1="120" x2="115"  y2="15" />
+<g fill="red">
+  <circle cx="30" cy="25" r="5"/>
+  <text x="10" y="30">A</text>
+  <circle cx="115" cy="40" r="5"/>
+  <text x="125" y="45">B</text>
+  <circle cx="70" cy="120" r="5"/>
+  <text x="50" y="125">C</text>
+  <circle cx="150" cy="80" r="5"/>
+  <text x="160" y="85">D</text>
+  <circle cx="170" cy="140" r="5"/>
+  <text x="180" y="140">E</text>
 </g>
-</g>
-<circle cx="200" cy="60" r="5"/>
-<text x="195" y="50">H</text>
+<g>
+<circle cx="200" cy="50" r="5"/>
+<text x="195" y="40">H</text>
 <circle cx="280" cy="40" r="5"/>
 <text x="290" y="40">G</text>
 <circle cx="250" cy="100" r="5"/>
 <text x="260" y="110">F</text>
-<line x1="280" y1="40" x2="250"  y2="100" stroke="#000" stroke-width="2"  />
+</g>
+<g stroke="#f00" stroke-width="2">
+  <line x1="30"  y1="25"  x2="115" y2="40"/>
+  <line x1="115" y1="40"  x2="70"  y2="120"/>
+  <line x1="70"  y1="120" x2="150" y2="80"/>
+  <line x1="150" y1="80"  x2="170" y2="140"/>
+  <line x1="30"  y1="25"  x2="150" y2="80"/>
+</g>
+<g stroke="#000" stroke-width="2">
+<line x1="280" y1="40"  x2="250" y2="100"/>
+</g>
 </svg>
 
 ### Multigraphes
 
 Une paire de sommets peut être connectée par plus d’une arête
+
+<svg>
+<g fill="red">
+  <circle cx="280" cy="40" r="5"/>
+  <text x="290" y="40">G</text>
+  <circle cx="250" cy="100" r="5"/>
+  <text x="260" y="110">F</text>
+</g>
+<g>
+  <circle cx="30" cy="25" r="5"/>
+  <text x="10" y="30">A</text>
+  <circle cx="115" cy="40" r="5"/>
+  <text x="125" y="45">B</text>
+  <circle cx="70" cy="120" r="5"/>
+  <text x="50" y="125">C</text>
+  <circle cx="150" cy="80" r="5"/>
+  <text x="160" y="85">D</text>
+  <circle cx="170" cy="140" r="5"/>
+  <text x="180" y="140">E</text>
+  <circle cx="200" cy="50" r="5"/>
+  <text x="195" y="40">H</text>
+</g>
+<g stroke="#f00" stroke-width="2" fill="none">
+  <line x1="280" y1="40"  x2="250" y2="100"/>
+  <path d=" M280 40Q 230 50, 250 100">
+</g>
+<g stroke="#000" stroke-width="2" fill="none">
+  <line x1="30"  y1="25"  x2="115" y2="40"/>
+  <line x1="115" y1="40"  x2="70"  y2="120"/>
+  <line x1="70"  y1="120" x2="150" y2="80"/>
+  <line x1="150" y1="80"  x2="170" y2="140"/>
+  <line x1="30"  y1="25"  x2="150" y2="80"/>
+</g>
+</svg>
+
 
 ### Graphes dirigés
 
@@ -118,9 +163,86 @@ Le degré intérieur de D est 1 ; son degré extérieur est 2.
 
 ### Boucles : 
 
-On peut autoriser qu’un graphe contienne des boucles,
-c’est-`a-dire qu’une arˆete ait pour extr´emit´es le mˆeme sommet
+Une boucle c'est lorsqu'une arête a pour extrémités un seul et même sommet.
+
+<svg>
+<g fill="red">
+  <circle cx="280" cy="40" r="5"/>
+  <text x="290" y="40">G</text>
+  <circle cx="250" cy="100" r="5"/>
+  <text x="240" y="92">F</text>
+</g>
+<g>
+  <circle cx="30" cy="25" r="5"/>
+  <text x="10" y="30">A</text>
+  <circle cx="115" cy="40" r="5"/>
+  <text x="125" y="45">B</text>
+  <circle cx="70" cy="120" r="5"/>
+  <text x="50" y="125">C</text>
+  <circle cx="150" cy="80" r="5"/>
+  <text x="160" y="85">D</text>
+  <circle cx="170" cy="140" r="5"/>
+  <text x="180" y="140">E</text>
+  <circle cx="200" cy="50" r="5"/>
+  <text x="195" y="40">H</text>
+</g>
+<g stroke="#f00" stroke-width="2" fill="none">
+  <line x1="280" y1="40"  x2="250" y2="100"/>
+  <circle cx="245" cy="114" r="15"/>
+</g>
+<g stroke="#000" stroke-width="2" fill="none">
+  <line x1="30"  y1="25"  x2="115" y2="40"/>
+  <line x1="115" y1="40"  x2="70"  y2="120"/>
+  <line x1="70"  y1="120" x2="150" y2="80"/>
+  <line x1="150" y1="80"  x2="170" y2="140"/>
+  <line x1="30"  y1="25"  x2="150" y2="80"/>
+</g>
+</svg>
+
+### Chemins
+
+Un chemin est un sous-graphe G = {V , E} où
+- V = {v1 , v2 , ..., vn },
+- E = {v1 — v 2 , v2 —v3 , ... , vn-1 — vn },
+- n  1,
+- les sommets v1 , v2 , . . . , vn sont tous distincts,
+- les sommets v1 et vn sont appelés les **extrémités** du chemin.
+
+La longueur d’un chemin contenant n sommets est n - 1
+
+<svg>
+<g fill="#f00">
+<circle cx="30" cy="70" r="5"/>
+<text x="25" y="60">A</text>
+<circle cx="150" cy="90" r="5"/>
+<text x="160" y="100">D</text>
+<circle cx="200" cy="60" r="5"/>
+<text x="195" y="50">H</text>
+<circle cx="280" cy="40" r="5"/>
+<text x="290" y="40">G</text>
+<circle cx="250" cy="100" r="5"/>
+<text x="260" y="110">F</text>
+</g>
+<circle cx="115" cy="15" r="5"/>
+<text x="125" y="15">B</text>
+<circle cx="50" cy="120" r="5"/>
+<text x="30" y="125">C</text>
+<circle cx="170" cy="140" r="5"/>
+<text x="180" y="140">E</text>
+<g stroke="#f00" stroke-width="2">
+<line x1="150" y1="90" x2="200"  y2="60"/>
+<line x1="200" y1="60" x2="250"  y2="100" />
+<line x1="30" y1="70" x2="150"  y2="90" />
+<line x1="280" y1="40" x2="250"  y2="100" />
+</g>
+<g stroke="#000" stroke-width="2">
+<line x1="150" y1="90" x2="170"  y2="140" />
+<line x1="50" y1="120" x2="115"  y2="15" />
+<line x1="30" y1="70" x2="115"  y2="15" />
+<line x1="50" y1="120" x2="150"  y2="90" />
+</g>
+</svg>
 
 ### Graphes connexes
 
-n graphe G = (V , E ) est connexe si pour toute paire de sommets u, v 2 V , il existe un chemin `a extr´emit´es u et v dans G .
+Un graphe G = {V , E} est connexe si pour **toute paire** de sommets A, B ∈ V, il existe un chemin à extrémités A et B dans G .
