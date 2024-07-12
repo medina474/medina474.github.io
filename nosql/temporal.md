@@ -13,8 +13,8 @@ Les types de plage sont des types de données représentant une plage de valeurs
 - int4range : Intervalle d'entier
 - int8range : Intervalle d'entier long
 - numrange : Intervalle de nombres décimaux
-- tsrange : Intervalle d'horodatage sans fuseau
-- tstzrange : Intervalle Range of timestamp with time zone
+- tsrange : Intervalle d'horodatage sans fuseau horaire
+- tstzrange : Intervalle d'horodatage avec fuseau horaire
 - daterange : Intervalle de date
 
 ### Déclaration
