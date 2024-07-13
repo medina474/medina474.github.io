@@ -32,8 +32,8 @@ L’arête {A, B} pourra être notée  A—B ou B—A.
 
 Soit un graphe G = {V , E}.
 
-- L'**ordre** (_order_) d'un graphe est le nombre de sommets |V| ;
-- La **taille** (_size_) d'un graphe est le nombre d'arêtes |E| ;
+- L'**ordre** (_order_) d'un graphe est le nombre de sommets \|V\| ;
+- La **taille** (_size_) d'un graphe est le nombre d'arêtes \|E\| ;
 - deux sommets A, B ∈ V (qui appartiennent à l'ensemble des sommets V) sont **adjacents** s’ils sont reliés par une arête. Par exemple si A—B ∈ E (l'arête A-B appartient à l'ensemble E des arêtes) ;
 - une arête A—B est **incidente** aux sommets A et B ;
 - le **degré** (_degree_ or _valency_) d’un sommet est le nombre d’arêtes qui lui sont incidentes.
@@ -100,17 +100,15 @@ Une paire de sommets peut être connectée par plus d’une arête
 </svg>
 
 
-### Graphes orientés / directed graph
+### Graphes orientés / directed graph, digraph
 
-Un graphe est orienté si ses arêtes, appelées **arcs** dans ce cas, ont un sens de parcours.
+Un graphe est orienté si ses arêtes, appelées **arcs** (_directed edges, directed links, directed lines, arrows or arcs_) dans ce cas, ont un sens de parcours.
 
 - Une arête partant du sommet A et allant au sommet B est dénotée A → B.
-- Le **degré intérieur** d’un sommet est le nombre d’arêtes arrivant à ce sommet.
-- Le **degré extérieur** d’un sommet est le nombre d’arêtes sortant de ce sommet
+- Le **degré entrant** d’un sommet est le nombre d’arêtes arrivant à ce sommet. 
+- Le **degré sortant** d’un sommet est le nombre d’arêtes sortant de ce sommet
 
-
-
-Le degré intérieur de D est 1 ; son degré extérieur est 2.
+Le degré entrant de D est 1 ; son degré sortant est 2.
 
 ### Graphes étiqueté
 
@@ -161,126 +159,19 @@ Une boucle c'est lorsqu'une arête a pour extrémités un seul et même sommet. 
 </svg>
 
 ### Vide
-
 Un graphe vide contient que des sommets et aucun arête.
 
-<svg>
-<g>
-  <circle cx="280" cy="40" r="5"/>
-  <text x="290" y="40">G</text>
-  <circle cx="250" cy="100" r="5"/>
-  <text x="240" y="92">F</text>
-  <circle cx="30" cy="25" r="5"/>
-  <text x="10" y="30">A</text>
-  <circle cx="115" cy="20" r="5"/>
-  <text x="125" y="25">B</text>
-  <circle cx="70" cy="120" r="5"/>
-  <text x="50" y="125">C</text>
-  <circle cx="150" cy="80" r="5"/>
-  <text x="160" y="85">D</text>
-  <circle cx="170" cy="140" r="5"/>
-  <text x="180" y="140">E</text>
-  <circle cx="200" cy="50" r="5"/>
-  <text x="195" y="40">H</text>
-</g>
-</svg>
+![alt text](graphe-A-vide.svg)
 
 ### Complet
 
 Un graphe est dit complet quand tous les sommets sont adjacents de tous les autres.
-
-<svg>
-<g stroke="#ccc" stroke-width="1" fill="none">
-  <line x1="115" y1="20"  x2="70"  y2="120"/>
-  <line x1="115" y1="20"  x2="150"  y2="80"/>
-  <line x1="115" y1="20"  x2="170"  y2="140"/>
-  <line x1="115" y1="20"  x2="200"  y2="50"/>
-  <line x1="115" y1="20"  x2="250"  y2="100"/>
-  <line x1="115" y1="20"  x2="280"  y2="40"/>
-</g>
-<g stroke="#ccc" stroke-width="1" fill="none">
-  <line x1="70" y1="120"  x2="150"  y2="80"/>
-  <line x1="70" y1="120"  x2="170"  y2="140"/>
-  <line x1="70" y1="120"  x2="200"  y2="50"/>
-  <line x1="70" y1="120"  x2="250"  y2="100"/>
-  <line x1="70" y1="120"  x2="280"  y2="40"/>
-</g>
-<g stroke="#ccc" stroke-width="1" fill="none">
-  <line x1="170" y1="140"  x2="150"  y2="80"/>
-  <line x1="170" y1="140"  x2="200"  y2="50"/>
-  <line x1="170" y1="140"  x2="250"  y2="100"/>
-  <line x1="170" y1="140"  x2="280"  y2="40"/>
-</g>
-<g stroke="#ccc" stroke-width="1" fill="none">
-  <line x1="150" y1="80"  x2="200"  y2="50"/>
-  <line x1="150" y1="80"  x2="250"  y2="100"/>
-  <line x1="150" y1="80"  x2="280"  y2="40"/>
-</g>
-<g stroke="#ccc" stroke-width="1" fill="none">
-  <line x1="200" y1="50"  x2="250"  y2="100"/>
-  <line x1="200" y1="50"  x2="280"  y2="40"/>
-</g>
-<g stroke="#ccc" stroke-width="1" fill="none">
-  <line x1="250" y1="100"  x2="280"  y2="40"/>
-</g>
-<g>
-  <circle cx="280" cy="40" r="5"/>
-  <text x="290" y="40">G</text>
-  <circle cx="250" cy="100" r="5"/>
-  <text x="240" y="92">F</text>
-  <circle cx="30" cy="25" r="5"/>
-  <text x="10" y="30">A</text>
-  <circle cx="115" cy="20" r="5"/>
-  <text x="125" y="25">B</text>
-  <circle cx="70" cy="120" r="5"/>
-  <text x="50" y="125">C</text>
-  <circle cx="150" cy="80" r="5"/>
-  <text x="160" y="85">D</text>
-  <circle cx="170" cy="140" r="5"/>
-  <text x="180" y="140">E</text>
-  <circle cx="200" cy="50" r="5"/>
-  <text x="195" y="40">H</text>
-</g>
-<g stroke="#000" stroke-width="1" fill="none">
-  <line x1="30"  y1="25"  x2="70" y2="120"/>
-  <line x1="30"  y1="25"  x2="115" y2="20"/>
-  <line x1="30"  y1="25"  x2="150" y2="80"/>
-  <line x1="30"  y1="25"  x2="170" y2="140"/>
-  <line x1="30"  y1="25"  x2="200" y2="50"/>
-  <line x1="30"  y1="25"  x2="250" y2="100"/>
-  <line x1="30"  y1="25"  x2="280" y2="40"/>
-</g>
-
-</svg>
-
-
-
-
-
-
-
-
 
 
 ### Chaîne
 
 Dans un graphe non orienté, une **chaîne** (en. _Walk_) est une suite finie non vide d'arête du graphe. Les sommets et les arêtes peuvent aparaître zéro, une ou plusieurs fois dans la chaîne.
 
-<svg>
-  <circle cx="25" cy="25" r="5"/>
-  <circle cx="50" cy="100" r="5"/>
-  <circle cx="140" cy="130" r="5"/>
-  <circle cx="150" cy="80" r="5"/>
-  <circle cx="200" cy="40" r="5"/>
-  <circle cx="290" cy="140" r="5"/>
-<g stroke="#000">
-  <line x1="25"  y1="25" x2="150" y2="80" />
-  <line x1="150"  y1="80" x2="140" y2="130" stroke-width="3" />
-  <line x1="140"  y1="130" x2="290" y2="140" />
-  <line x1="290"  y1="140" x2="150" y2="80" />
-  <line x1="140"  y1="130" x2="50" y2="100" />
-</g>
-<svg>
 
 A  C D F C D B
 
@@ -291,10 +182,6 @@ Un circuit est une séquence de nœuds adjacents commençant et se terminant au 
 ### Chemin
 
 En termes pratiques, un chemin est une séquence de nœuds non répétés connectés par des arêtes présentes dans un graphe. Nous pouvons comprendre un chemin comme un graphe où le premier et le dernier nœuds ont un degré un, et les autres nœuds ont un degré deux.
-
-
-
-
 
 
 La longueur d'une chaîne est celle de sa suite d'arêtes (un moins que la longueur sa suite de sommets). 
@@ -326,39 +213,6 @@ Un chemin est un sous-graphe G = {V , E} où
 - les sommets v1 et vn sont appelés les **extrémités** du chemin.
 
 La longueur d’un chemin contenant n sommets est n - 1
-
-<svg>
-<g fill="#f00">
-<circle cx="30" cy="70" r="5"/>
-<text x="25" y="60">A</text>
-<circle cx="150" cy="90" r="5"/>
-<text x="160" y="100">D</text>
-<circle cx="200" cy="60" r="5"/>
-<text x="195" y="50">H</text>
-<circle cx="280" cy="40" r="5"/>
-<text x="290" y="40">G</text>
-<circle cx="250" cy="100" r="5"/>
-<text x="260" y="110">F</text>
-</g>
-<circle cx="115" cy="15" r="5"/>
-<text x="125" y="15">B</text>
-<circle cx="50" cy="120" r="5"/>
-<text x="30" y="125">C</text>
-<circle cx="170" cy="140" r="5"/>
-<text x="180" y="140">E</text>
-<g stroke="#f00" stroke-width="2">
-<line x1="150" y1="90" x2="200"  y2="60"/>
-<line x1="200" y1="60" x2="250"  y2="100" />
-<line x1="30" y1="70" x2="150"  y2="90" />
-<line x1="280" y1="40" x2="250"  y2="100" />
-</g>
-<g stroke="#000" stroke-width="2">
-<line x1="150" y1="90" x2="170"  y2="140" />
-<line x1="50" y1="120" x2="115"  y2="15" />
-<line x1="30" y1="70" x2="115"  y2="15" />
-<line x1="50" y1="120" x2="150"  y2="90" />
-</g>
-</svg>
 
 ### Graphes connexes
 
