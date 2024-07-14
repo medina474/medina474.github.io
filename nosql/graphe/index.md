@@ -2,8 +2,8 @@
 title: Théorie des graphes
 ---
 
-> La théorie des graphes est l'étude des structures mathématiques utilisées pour modéliser des relations par paires entre des objets. Dans ce contexte, un graphe est constitué de sommets qui sont reliés par des arêtes.
-{ .definition }
+> La théorie des graphes est l'étude des structures mathématiques utilisées pour modéliser des relations par paires entre des objets. Un graphe est constitué de sommets qui sont reliés par des arêtes.
+{: .definition }
 
 Un graphe **G** est constitué de deux ensembles **V** et **E** où  
 - V est un ensemble fini mais non vide de sommets ;
@@ -21,7 +21,7 @@ Les **arêtes** sont appelés aussi des **arcs**. En anglais ils sont appelés _
 
 ```
 V = [A, B, C, D, E, F, G, H, I, J]  
-E = [{A, B}, {A, C}, {B, C}, {C, D}, {B, E}, {E, F}, {D, F}, {H, I}, {H, J}, {I, J}]
+E = [{A, B}, {A, C}, {B, C}, {C, D}, {B, E}, {D, F}, {H, I}, {H, J}, {I, J}]
 ```
 
 #### Notation : 
@@ -48,7 +48,8 @@ Dans notre exemple :
 - le degré de E est 1 ;
 - L'ordre du graphe est 10.
 
-La somme des degrés de tous les sommets d'un graphe est égal au double du nombre total d'arêtes.
+> La somme des degrés de tous les sommets d'un graphe est égal au double du nombre total d'arêtes.
+{: .definition }
 
 ### Sous-graphes
 
@@ -65,40 +66,7 @@ Le graphe G' {V', E'} est un **sous-graphe** de G si les conditions suivantes so
 
 Une paire de sommets peut être connectée par plus d’une arête
 
-<svg>
-<g fill="red">
-  <circle cx="280" cy="40" r="5"/>
-  <text x="290" y="40">G</text>
-  <circle cx="250" cy="100" r="5"/>
-  <text x="260" y="110">F</text>
-</g>
-<g>
-  <circle cx="30" cy="25" r="5"/>
-  <text x="10" y="30">A</text>
-  <circle cx="115" cy="20" r="5"/>
-  <text x="125" y="25">B</text>
-  <circle cx="70" cy="120" r="5"/>
-  <text x="50" y="125">C</text>
-  <circle cx="150" cy="80" r="5"/>
-  <text x="160" y="85">D</text>
-  <circle cx="170" cy="140" r="5"/>
-  <text x="180" y="140">E</text>
-  <circle cx="200" cy="50" r="5"/>
-  <text x="195" y="40">H</text>
-</g>
-<g stroke="#f00" stroke-width="2" fill="none">
-  <line x1="280" y1="40"  x2="250" y2="100"/>
-  <path d=" M280 40Q 230 50, 250 100">
-</g>
-<g stroke="#000" stroke-width="2" fill="none">
-  <line x1="30"  y1="25"  x2="115" y2="20"/>
-  <line x1="115" y1="20"  x2="70"  y2="120"/>
-  <line x1="70"  y1="120" x2="150" y2="80"/>
-  <line x1="150" y1="80"  x2="170" y2="140"/>
-  <line x1="30"  y1="25"  x2="150" y2="80"/>
-</g>
-</svg>
-
+![Sous-graphe](graphe-A-multi.svg)
 
 ### Graphes orientés / directed graph, digraph
 
@@ -108,7 +76,7 @@ Un graphe est orienté si ses arêtes, appelées **arcs** (_directed edges, dire
 - Le **degré entrant** d’un sommet est le nombre d’arêtes arrivant à ce sommet. 
 - Le **degré sortant** d’un sommet est le nombre d’arêtes sortant de ce sommet
 
-Le degré entrant de D est 1 ; son degré sortant est 2.
+![Sous-graphe](graphe-A-digraph.svg)
 
 ### Graphes étiqueté
 
@@ -117,46 +85,14 @@ Un graphe est étiqueté si ses arêtes (ou ses arcs dans le cas d'un graphe ori
 ### Graphes pondérés
 
 Dans le cas où les étiquettes sont des nombres, le graphe est dit pondéré. Les étiquettes sont appelées les **poids** entre les sommets.
-Le poids d'une chaîne est la somme des poids des arêtes constituant la chaîne.
+
+Le **poids** d'une chaîne est la somme des poids des arêtes constituant la chaîne.
+
 De manière identique dans un graphe orienté Le poids d'un chemin est la somme des poids des arcs constituant le chemin.
 
 ### Boucles : 
 
 Une boucle c'est lorsqu'une arête a pour extrémités un seul et même sommet. L'incidence est compté double pour le sommet.
-
-<svg>
-<g fill="red">
-  <circle cx="280" cy="40" r="5"/>
-  <text x="290" y="40">G</text>
-  <circle cx="250" cy="100" r="5"/>
-  <text x="240" y="92">F</text>
-</g>
-<g>
-  <circle cx="30" cy="25" r="5"/>
-  <text x="10" y="30">A</text>
-  <circle cx="115" cy="20" r="5"/>
-  <text x="125" y="25">B</text>
-  <circle cx="70" cy="120" r="5"/>
-  <text x="50" y="125">C</text>
-  <circle cx="150" cy="80" r="5"/>
-  <text x="160" y="85">D</text>
-  <circle cx="170" cy="140" r="5"/>
-  <text x="180" y="140">E</text>
-  <circle cx="200" cy="50" r="5"/>
-  <text x="195" y="40">H</text>
-</g>
-<g stroke="#f00" stroke-width="2" fill="none">
-  <line x1="280" y1="40"  x2="250" y2="100"/>
-  <circle cx="245" cy="114" r="15"/>
-</g>
-<g stroke="#000" stroke-width="2" fill="none">
-  <line x1="30"  y1="25"  x2="115" y2="20"/>
-  <line x1="115" y1="20"  x2="70"  y2="120"/>
-  <line x1="70"  y1="120" x2="150" y2="80"/>
-  <line x1="150" y1="80"  x2="170" y2="140"/>
-  <line x1="30"  y1="25"  x2="150" y2="80"/>
-</g>
-</svg>
 
 ### Vide
 Un graphe vide contient que des sommets et aucun arête.
@@ -174,6 +110,18 @@ Dans un graphe non orienté, une **chaîne** (en. _Walk_) est une suite finie no
 
 
 A  C D F C D B
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Circuit
 
