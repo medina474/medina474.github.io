@@ -18,12 +18,10 @@
 <circle r="5" cx="110" cy="40" /><text x="105" y="30">C</text>
 <circle r="5" cx="185" cy="130" /><text x="180" y="150">D</text>
 <circle r="5" cx="195" cy="15" /><text x="180" y="12">E</text>
-<circle r="5" cx="263" cy="70" /><text x="260" y="90">F</text>
+<circle r="5" cx="263" cy="70" /><text x="275" y="75">F</text>
 <circle r="5" cx="320" cy="15" /><text x="325" y="12">G</text>
 <circle r="5" cx="353" cy="115" /><text x="340" y="135">H</text>
 <circle r="5" cx="405" cy="55" /><text x="400" y="45">I</text>
 <circle r="5" cx="411" cy="115" /><text x="408" y="135">J</text>
-
-  <circle cx="273" cy="60" r="15" stroke="#000" fill="none"/>
 
 </svg>

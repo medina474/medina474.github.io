@@ -3,7 +3,7 @@ title: Théorie des graphes
 ---
 
 > La théorie des graphes est l'étude des structures mathématiques utilisées pour modéliser des relations par paires entre des objets. Un graphe est constitué de sommets qui sont reliés par des arêtes.
-{: .definition }
+{:.definition}
 
 Un graphe **G** est constitué de deux ensembles **V** et **E** où  
 - V est un ensemble fini mais non vide de sommets ;
@@ -17,7 +17,7 @@ Les **sommets** sont appelés aussi des **nœuds**. En anglais ils sont appelés
 
 Les **arêtes** sont appelés aussi des **arcs**. En anglais ils sont appelés _**links**_, _**lines**_ ou _**edges**_.
 
-![Graphe](graphe-A-1.svg)
+![Graphe](graphe-A.svg)
 
 ```
 V = [A, B, C, D, E, F, G, H, I, J]  
@@ -45,7 +45,7 @@ Dans notre exemple :
 - le degré de A est 2 ;
 - le degré de B est 3 ;
 - le degré de G est 0 ;
-- le degré de E est 1 ;
+- le degré de E est 1 ;graphe-A-multi1
 - L'ordre du graphe est 10.
 
 > La somme des degrés de tous les sommets d'un graphe est égal au double du nombre total d'arêtes.
@@ -103,64 +103,64 @@ Un graphe vide contient que des sommets et aucun arête.
 
 Un graphe est dit complet quand tous les sommets sont adjacents de tous les autres.
 
+![alt text](graphe-A-complet.svg)
 
 ### Chaîne
 
 Dans un graphe non orienté, une **chaîne** (en. _Walk_) est une suite finie non vide d'arête du graphe. Les sommets et les arêtes peuvent aparaître zéro, une ou plusieurs fois dans la chaîne.
 
+La longueur d'une chaîne est celle de sa suite d'arêtes (un moins que la longueur sa suite de sommets). 
 
-A  C D F C D B
+### Trail
 
+Dans un ... Les arêtes ne peuvent apparaître qu'une seule fois dans la chaîne.
 
+#### Circuit
 
+Un circuit est une trail de nœuds adjacents commençant et se terminant au même nœud. Les circuits ne répètent jamais les arêtes. Cependant, ils autorisent les répétitions de sommets dans la séquence.
 
+### Chemin / Path
 
+Dans un chemin Les arêtes ne peuvent apparaître qu'une seule fois dans la chaîne.
 
+> Un chemin est un sous-graphe où le premier et le dernier nœuds ont un degré un, et les autres nœuds ont un degré deux.
+{.definition}
 
+#### Cycle
 
+Un cycle consiste en une séquence de sommets adjacents et distincts dans un graphe. La seule exception est que le premier et le dernier nœuds de la séquence de cycles doivent être le même nœud.
 
+Un cycle est un chemin fermée.
 
+- les sommets v1 , v2 , . . . , vn sont tous distincts,
 
-
-
-### Circuit
-
-Un circuit est une séquence de nœuds adjacents commençant et se terminant au même nœud. Les circuits ne répètent jamais les arêtes. Cependant, ils autorisent les répétitions de sommets dans la séquence.
 
 ### Chemin
 
-En termes pratiques, un chemin est une séquence de nœuds non répétés connectés par des arêtes présentes dans un graphe. Nous pouvons comprendre un chemin comme un graphe où le premier et le dernier nœuds ont un degré un, et les autres nœuds ont un degré deux.
-
-
-La longueur d'une chaîne est celle de sa suite d'arêtes (un moins que la longueur sa suite de sommets). 
-La notion correspondante dans un graphe orienté est celle d'un chemin. 
-
 La **source** de la chaîne est son premier sommet, et son **but** est son dernier sommet. Une chaîne est dite élémentaire si aucun sommet ne figure plus d'une fois dans la suite, à l'exception de la source et le but de la chaîne qui peuvent coïncider.
 
-Parcours|Répetition de sommets|Répetition d'arêtes|Fermé
----|---|---|---
-Walk|Oui |	Oui 	|
-Trail 	|Oui |	Non 	|Non
-Circuit |	Oui |	Non 	|Oui
-Chemin / Path |	Non |	Non |	Non
-Cycle |	Non |	Non |	Oui
+Parcours||Répetition de sommets|Répetition d'arêtes|Fermé
+---|---|---|---|---
+Walk||Oui |	Oui 	|
+Trail|	|Oui |	Non 	|Circuit
+Chemin | Path |	Non |	Non |	Cycle
 
-### Cycle
 
-Un cycle consiste en une séquence de nœuds adjacents et distincts dans un graphe. La seule exception est que le premier et le dernier nœuds de la séquence de cycles doivent être le même nœud.
 
-Un cycle est un chemin fermée.
 
 ### Chemins
 
 Un chemin est un sous-graphe G = {V , E} où
-- V = {v1 , v2 , ..., vn },
-- E = {v1 — v 2 , v2 —v3 , ... , vn-1 — vn },
+- V = {v1, v2, ...,vn },
+- E = {v1—v2 , v2—v3 , ... , vn-1—vn },
 - n  1,
 - les sommets v1 , v2 , . . . , vn sont tous distincts,
 - les sommets v1 et vn sont appelés les **extrémités** du chemin.
 
 La longueur d’un chemin contenant n sommets est n - 1
+
+
+
 
 ### Graphes connexes
 

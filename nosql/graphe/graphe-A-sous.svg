@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="430" height="150">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="430" height="150" 
+  style="font-family: ui-sans-serif, system-ui, sans-serif;font-size:14px">
 <g stroke="#000">
   <line x1="405" y1="55" x2="353" y2="115"/>
   <line x1="411" y1="115" x2="353" y2="115"/>
