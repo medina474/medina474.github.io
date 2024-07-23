@@ -13,8 +13,6 @@ $ systemctl list-units --type=service
 $ systemctl list-units --type=service --state=running
 ```
 
-
-
 Détail d'un service (`q` pour quitter)
 
 ```shell

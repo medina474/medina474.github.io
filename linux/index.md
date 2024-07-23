@@ -1,14 +1,17 @@
 ---
-title: Linux
+title: Distribution Linux
 ---
 
-Une distribution Linux est un système d'exploitation basé sur le noyau Linux, qui est le cœur du système. Ce noyau est ensuite complété par divers logiciels, outils et bibliothèques pour former un système d'exploitation complet et fonctionnel. Voici quelques éléments clés qui composent une distribution Linux :
+> Une distribution Linux est un système d'exploitation basé sur le noyau Linux, qui est le cœur du système. Ce noyau est ensuite complété par divers logiciels, outils et bibliothèques pour former un système d'exploitation complet et fonctionnel. 
+{:.definition}
+
+Voici quelques éléments clés qui composent une distribution Linux :
 
 1. **Noyau Linux** : C'est le cœur du système. Développé par Linus Torvalds et par la communauté open source, il gère les ressources matérielles et les communications entre le matériel et les logiciels.
 
 2. **Gestionnaire de paquets** : Un outil pour installer, mettre à jour et supprimer les logiciels du système. L'inventaire inclut APT (Debian, Ubuntu et dérivés), YUM/DNF (REHL, CentOS, Fedora et dérivés), Pacman (Arch Linux), ZYpp (OpenSUSE) et emerge (Gentoo).
 
-3. **Environnement de bureau** : Une interface graphique pour interagir avec le système. L'inventaire inclut GNOME, KDE, XFCE, LXDE, Cinnamon, Mate, Enlightment et Unity.
+3. **Environnement de bureau** : Une interface graphique pour interagir avec le système des distributions de bureau. Les distributions serveurs n'ont généralement pas de bureau et se pilotent par le terminal et à distance. L'inventaire inclut GNOME, KDE, XFCE, LXDE, Cinnamon, Mate, Enlightment et Unity.
 
 4. **Applications et outils de base** : Les distributions Linux incluent souvent un ensemble d'applications et d'outils de base tels que des navigateurs web, des éditeurs de texte, des lecteurs multimédia, des outils de gestion de fichiers, une suite burautique etc.
 
@@ -29,26 +32,27 @@ Une distribution Linux est un système d'exploitation basé sur le noyau Linux, 
 - **Mandriva** : Distribution Linux développée par la société française Mandriva.
 - **Gentoo**: Distribution dont les paquets sont compilés à partir du code source, ce qui permet d'optimiser les logiciels pour le matériel spécifique de l'utilisateur et de choisir les fonctionnalités à inclure ou exclure.
 
-
-Chaque distribution Linux a ses propres caractéristiques et objectifs, permettant aux utilisateurs de choisir celle qui répond le mieux à leurs besoins. Et au final ce sont quand même les mêmes applications qui seront utilisées.
+Chaque distribution Linux a ses propres caractéristiques et objectifs, permettant aux utilisateurs de choisir celle qui répond le mieux à leurs besoins. Mais au final ce sont quand même les mêmes applications qui seront utilisées ...
 
 + [Installer Debian 12](debian)
 + [Installer Rocky Linux](rocky)
 
-+ [Accès à distance par ssh](utilisateurs/ssh)
+### Installer des paquets logigicels
+
++ Utiliser [APT](paquet/apt)
+
 
 ### Utiliser le [système de fichiers](fs)
 
++ Connaitre l'[organisation](fs/organisation) et l'arborescence des dossiers
 + Renommer, déplacer, copier et supprimer des fichiers.
 + Supprimer des dossiers.
-+ Connaitre l'[organisation](fs/organisation) et l'arborescence des dossiers
-
-### Installer des [paquets logigicels](paquet)
 
 ### Éditer des fichier avec [nano](nano)
 
 ### Gérer les [utilisateurs](utilisateurs)
-+ Attribuer des [droits](droits)
++ Attribuer des [droits](utilisateurs/droits)
++ [Accès à distance par ssh](utilisateurs/ssh)
 
 ### Gérer les [réseaux](network)
 

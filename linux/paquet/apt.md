@@ -1,5 +1,5 @@
 ---
-title: Gestion des paquets logiciels
+title: Gestion des paquets logiciels avec APT
 ---
 
 ## Effectuer une mise à jour du système.
