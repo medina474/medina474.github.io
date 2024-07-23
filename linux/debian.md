@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Installer Debian 12
 ---
 
 Démarrer sur l'iso _debian-12.5.0-amd64-netinst.iso_

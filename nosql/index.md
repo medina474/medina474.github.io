@@ -41,3 +41,5 @@ Cette ressource développe les différentes implémentations des données dans l
 [Base de données spatiales](spatiale)
 
 [Base de données spatiales](temporal)
+
+HTML comme base de données microdata microformat ld json
