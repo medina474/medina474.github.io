@@ -45,7 +45,7 @@ Dans notre exemple :
 - le degré de A est 2 ;
 - le degré de B est 3 ;
 - le degré de G est 0 ;
-- le degré de E est 1 ;graphe-A-multi1
+- le degré de E est 1 ;
 - L'ordre du graphe est 10.
 
 > La somme des degrés de tous les sommets d'un graphe est égal au double du nombre total d'arêtes.
