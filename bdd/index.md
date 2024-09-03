@@ -1,6 +1,12 @@
 ---
-title: Base de données
+title: Ressource R5.07 : Base de données
 ---
+
+## Volume horaire
+
+Volume horaire défini nationalement : 14 heures dont 8 heures de TP
+
+## Introduction
 
 Dans toutes applications il est important de stocker et d'exploiter les données recoltées.
 
@@ -43,6 +49,17 @@ Ces bases de données sont intégrées directement dans des applications ou des 
 
 Chaque type de base de données a ses avantages et ses inconvénients, et le choix dépendra des besoins spécifiques de l'application. De nombreuses applications modernes utilisent également une combinaison de différents types de bases de données pour répondre à leurs exigences en matière de stockage et de traitement de données.
 
+
+
+fs
+: File System, Système de fichiers est une façon de stocker de façon permanente les informations et de les organiser dans des fichiers sur un disque dur, 
+
+
+SGBDR
+: Système de Gestion de Bases de Données Relationnelles 
+
+RDBMS
+: Relational DataBase Management System
 
 [SGBDR](sgbdr)
 

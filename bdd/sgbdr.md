@@ -21,6 +21,7 @@ Une base de données relationnelle est une collection de données structurées, 
 Prenons un exemple simple d'une base de données relationnelle pour une librairie :
 
 **Table "Livres" :**
+
 | ID | Titre            | Auteur         | Année |
 |----|------------------|----------------|-------|
 | 1  | Fondation        | Isaac Asimov   | 1951  |
@@ -28,6 +29,7 @@ Prenons un exemple simple d'une base de données relationnelle pour une librairi
 | 3  | Le Seigneur des Anneaux | J.R.R. Tolkien | 1954 |
 
 **Table "Emprunts" :**
+
 | ID | LivreID | Emprunteur   | Date       |
 |----|---------|--------------|------------|
 | 1  | 2       | Alice Dupont | 2023-05-15 |
