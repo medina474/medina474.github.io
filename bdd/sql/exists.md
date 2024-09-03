@@ -115,6 +115,8 @@ Cependant, il y a une différence dans la manière dont la requête est exécut�
 Exemple 3 : Utilisation de EXISTS avec NOT EXISTS
 
 Ensuite, nous avons besoin d'une liste des clients qui n'ont pas acheté de bateau pendant l'été 2023 mais qui ont acheté un bateau pendant l'hiver précédent (c'est-à-dire de décembre 2022 à mars 2023). La requête permettant d'obtenir ce rapport est la suivante :
+
+```sql
 SELECT *
 FROM   client c1
 WHERE  EXISTS ( SELECT * FROM sale s1
@@ -131,6 +133,7 @@ AND    NOT EXISTS ( SELECT * FROM sale s2
                    AND s2.sale_date >= '2023-6-21'
                    AND s2.sale_date <= '2023-09-20' -- summer
                   ) ;
+```
 
 Résultats :
 client_id	Client_name	Country
@@ -151,13 +154,14 @@ Exercice 1 : Anciennes commandes
 Exercice : Le propriétaire de l'entreprise veut savoir quels produits (voitures ou bateaux) n'ont pas été commandés au cours des 365 derniers jours.
 
 Solution :
+```sql
 SELECT p1.product_name
   FROM  product p1
   WHERE NOT EXISTS ( SELECT 1 FROM sale s
                      WHERE  s.product_id = p1.product_id
                      AND    s.sale_date >= CURRENT_DATE - 365
                    );
-
+```
 Résultats :
 Product_name
 Ferrari F20
@@ -173,6 +177,7 @@ Exercice 2 : Acheteurs de moteurs de bateaux
 Exercice : Notre entreprise est connue pour la fabrication d'un moteur de bateau et nous avons quelques clients qui n'achètent que ce produit. Le service marketing souhaite identifier les clients qui n'achètent que des moteurs de bateaux afin de pouvoir les cibler dans une campagne de marketing.
 
 Solution :
+```sql
 SELECT * FROM client c1
 WHERE EXISTS ( SELECT * FROM sale s1  -- they buy boat engines
            JOIN  product p1 ON p1.product_id = s1.product_id
@@ -184,6 +189,7 @@ AND NOT EXISTS ( SELECT * FROM sale s2  -- they never buy other product
             WHERE c1.client_id = s2.client_id
                  AND p2.product_name <> 'Boat engine'
                 );
+```
 
 Résultats :
 client_id	Client_name	Country
@@ -234,6 +240,8 @@ Comme nous ne joignons pas correctement les tables client et productle résultat
 Une fois que nous avons toutes les paires possibles, nous procédons à l'élimination de ces paires dans le tableau à l'aide de l'opérateur . sale à l'aide de l'opérateur NOT EXISTS.
 
 Solution en utilisant EXCEPT:
+
+```sql
 SELECT c1.client_name, p1.product_name
 FROM client c1, product p1
 EXCEPT
@@ -241,6 +249,7 @@ SELECT client_name, product_name
 FROM sale s
 JOIN product p ON p.product_id  = s.product_id
 JOIN client c ON c.client_id = s.client_id
+```
 
 Explication : La première partie de cette approche est similaire à la solution précédente ; nous créons toutes les paires client-produit possibles. Ensuite, à l'aide de l'opérateur EXCEPT, nous supprimons les paires qui se trouvent dans le tableau. sale tableau. Nous obtenons ainsi les paires que nous recherchons.
 

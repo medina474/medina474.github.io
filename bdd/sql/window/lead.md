@@ -1,9 +1,12 @@
+---
+title: MEAD
+---
+
 ATTENTION REECRIRE
 https://learnsql.fr/blog/fonction-sql-lead/
 
 Fonction SQL LEAD
 
-Apprenez à connaître la fonction SQL LEAD, une fonction importante à connaître pour toute personne travaillant avec SQL dans l'analyse de données. Apprenez à travers des exemples comment utiliser cette fonction en pratique.
 
 La fonction SQL LEAD est une fonction de fenêtre SQL très importante et utile. Les fonctions SQL window sont essentielles pour effectuer des analyses de données efficaces. Elles vous permettent de travailler avec des groupes de lignes et des lignes individuelles en même temps. Elles facilitent la rédaction de rapports complexes. Elles sont utiles pour préparer des classements, comparer différentes périodes de temps, calculer des totaux courants, des moyennes mobiles, la longueur de la série, et bien d'autres choses encore.
 
@@ -12,8 +15,6 @@ Si vous souhaitez vous familiariser avec les fonctions SQL window, consultez not
 Qu'est-ce que la fonction SQL LEAD ?
 
 La fonction SQL LEAD est une fonction SQL window qui vous permet d'accéder aux données d'une ligne ultérieure et de les comparer à la ligne actuelle. Cette fonction est particulièrement utile lorsque vous devez travailler avec des séquences de données. Par exemple, si vous examinez des données de vente, LEAD peut vous montrer les ventes de demain à côté de celles d'aujourd'hui, le tout sur une seule ligne. Il est ainsi facile de voir immédiatement les changements ou les tendances.
-
-La meilleure façon d'apprendre les fonctions de fenêtrage est de les mettre en pratique. Je recommande ce cours sur Fonctions de fenêtrage. Il comporte 218 exercices interactifs, ce qui équivaut à environ 20 heures de codage.
 
 Vous pouvez utiliser la fonction LEAD pour
 
@@ -24,6 +25,7 @@ Vous pouvez utiliser la fonction LEAD pour
 LEAD Cette fonction est similaire à LAG, une autre fonction de fenêtre SQL. La principale différence est que LEAD examine les lignes à venir, tandis que LAG examine les lignes précédentes. Utilisez LEAD lorsque vous souhaitez voir ce qui va se passer et LAG lorsque vous souhaitez revoir ce qui s'est passé auparavant. Les deux sont utiles pour comparer les données avec les lignes voisines.
 
 Pour des exemples d'utilisation des fonctions LEAD et LAG, et pour une comparaison de leurs capacités, voir notre guide Les fonctions LAG et LEAD dans SQL.
+
 Syntaxe de base de la fonction SQL LEAD
 
 La façon la plus simple d'utiliser la fonction LEAD est de n'utiliser qu'un seul argument, qui spécifie la colonne que vous souhaitez consulter :
@@ -45,15 +47,19 @@ production_date	quantity_required
 2024-04-02 	180
 2024-04-03 	200
 
-Si vous souhaitez connaître la quantité requise pour le jour suivant, vous utilisez la fonction LEAD comme suit:</P
+Si vous souhaitez connaître la quantité requise pour le jour suivant, vous utilisez la fonction LEAD comme suit:
+
+```sql
 SELECT
   production_date,
   quantity_required,
   LEAD(quantity_required) OVER (ORDER BY production_date) AS next_day_quantity
 FROM
   production_schedule;
+```
 
 Cette requête ajoutera une colonne indiquant les quantités requises pour le jour suivant à côté de celles d'aujourd'hui.
+
 production_date 	quantity_required 	next_day_quantity
 2024-04-01 	150 	180
 2024-04-02 	180 	200
@@ -61,6 +67,7 @@ production_date 	quantity_required 	next_day_quantity
 
 Dans notre requête OVER(ORDER BY production_date), les lignes sont classées par date de production. La fonction LEAD examine la ligne qui suit la ligne actuelle et en tire la valeur quantity_required. La ligne qui suit 2024-04-01 est celle de 2024-04-02. La quantité requise pour 2024-04-02 est de 180, et c'est ce que LEAD renvoie. S'il n'y a pas de ligne suivante, la fonction LEAD renvoie NULL: il n'y a pas de ligne suivante pour 2024-04-03, donc next_day_quantity est NULL.
 LEAD - exemple
+
 Syntaxe de la fonction LEAD Suite : Paramètres facultatifs Offset et Default
 
 La syntaxe complète de la fonction LEAD prend deux autres arguments facultatifs, offset et default. Ils permettent de mieux contrôler le comportement de LEAD.
@@ -73,7 +80,8 @@ Voici la décomposition de cette syntaxe :
     offset: Cet argument entier facultatif spécifie le nombre de lignes qui précèdent la ligne actuelle que vous souhaitez consulter. Si vous omettez ce paramètre, la valeur par défaut est 1, ce qui permet de récupérer les données de la ligne suivante.
     default: Cet argument facultatif fournit une valeur par défaut que la fonction renverra si le décalage spécifié dépasse les limites de l'ensemble de résultats. S'il est omis, la valeur de retour par défaut est NULL.
     OVER: Ce mot-clé introduit la spécification de la fenêtre, définissant la manière dont les lignes sont regroupées et ordonnées dans le but de LEAD.
-    ORDER BY column2: Cette clause spécifie l'ordre dans lequel les lignes sont traitées. Elle détermine la ligne "suivante" dont il faut extraire les données pour chaque ligne de l'ensemble de résultats de la requête en cours.
+
+ORDER BY column2: Cette clause spécifie l'ordre dans lequel les lignes sont traitées. Elle détermine la ligne "suivante" dont il faut extraire les données pour chaque ligne de l'ensemble de résultats de la requête en cours.
 
 Exemple 2 : Arguments de décalage et de défaut
 
@@ -84,6 +92,7 @@ SELECT
   LEAD(quantity_required, 2, 0) OVER (ORDER BY production_date) AS two_days_later_quantity
 FROM
   production_schedule;
+
 production_date 	quantity_required 	two_days_later_quantity
 2024-04-01 	150 	200
 2024-04-02 	180 	0
@@ -91,9 +100,11 @@ production_date 	quantity_required 	two_days_later_quantity
 
 Ici, vous donnez 2 comme argument de décalage. Cela indique à la fonction LEAD de regarder deux lignes plus loin, au lieu de la ligne suivante. Vous donnez également 0 comme argument par défaut. Cela permet à la fonction LEAD d'afficher 0 au lieu de NULL lorsqu'il n'y a pas de ligne suivante à partir de laquelle extraire des données.
 LEAD - exemple 2
+
 Exemple 3 : Fonction LEAD avec PARTITION BY
 
 Il est évident que vous pouvez utiliser la syntaxe des fonctions de la fenêtre complète avec la fonction LEAD. Par exemple, vous pouvez la combiner avec PARTITION BY. Supposons que votre table production_schedule contienne des données sur plusieurs produits. Vous souhaitez effectuer des prévisions séparément pour chaque produit.
+
 production_date 	product_id 	quantity_required
 2024-04-01	101	150
 2024-04-02	101	180
@@ -103,6 +114,7 @@ production_date 	product_id 	quantity_required
 2024-04-03	102	120
 
 Vous pouvez partitionner vos données sur OVER(), comme suit :
+
 SELECT
   production_date,
   product_id,
@@ -127,6 +139,7 @@ LearnSQL.fr est une plateforme en ligne conçue pour vous aider à maîtriser SQ
 Exemple pratique 1 : Planification des commandes de farine pour la production d'une boulangerie
 
 Scénario : Une boulangerie doit planifier la quantité de farine à commander pour chaque production de pain. Il est important d'avoir suffisamment d'ingrédients sans surstocker. Les données relatives à la production planifiée de pain sont stockées dans le tableau daily_bread_production.
+
 production_date 	batches_planned
 2024-04-01 	20
 2024-04-02 	25
@@ -159,6 +172,7 @@ sales_date 	total_sales
 2024-04-04 	150
 
 Cette requête calculera les ventes du jour suivant, l'augmentation entre les ventes d'aujourd'hui et celles du jour suivant, ainsi que le pourcentage de croissance d'un jour à l'autre :
+
 SELECT
   sales_date,
   total_sales,
@@ -171,6 +185,7 @@ FROM
 Cette requête utilise LEAD pour trouver les ventes du jour suivant. Elle utilise ensuite LEAD et la valeur du jour pour calculer l'augmentation. Enfin, elle utilise LEAD et les ventes du jour pour calculer le pourcentage de croissance quotidien.
 
 Voici le résultat :
+
 sales_date 	total_sales 	next_day_sales 	increase 	percentage_growth
 2024-04-01 	100 	110 	10 	10.0
 2024-04-02 	110 	90 	-20 	-18.2
@@ -182,7 +197,6 @@ Conclusion et autres ressources
 
 Nous avons exploré la fonction SQL LEAD, une fonction de fenêtre SQL puissante qui permet aux analystes de consulter les lignes suivantes de leurs ensembles de données. Nous avons abordé la syntaxe de base de la fonction LEAD et nous avons montré son application dans divers scénarios tels que les tendances des ventes, la gestion des stocks et la planification de la production.
 
-Si vous aimez apprendre SQL à l'aide d'exercices pratiques, vous devez essayer LearnSQL.fr.
 
 Pour ceux qui débutent avec les fonctions de fenêtre, je recommande notre cours Fonctions de fenêtrage . Il s'agit d'un programme de formation interactif et pratique conçu pour vous familiariser avec la syntaxe complète et les applications des fonctions SQL à fenêtre. Il comprend 218 exercices pratiques qui vous aideront à maîtriser les détails des fonctions SQL window.
 

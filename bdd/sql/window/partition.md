@@ -12,11 +12,13 @@ Cet article explique le SQL PARTITION BY et ses utilisations avec des exemples. 
 
 La première chose à laquelle il faut s'intéresser est la syntaxe. Voici comment utiliser la clause SQL PARTITION BY:
 
+```sql
 SELECT
     <column>,
     <window function=""> OVER(PARTITION BY <column> [ORDER BY <column>])
 FROM table;
 </column></column></window></column>
+```
 
 Examinons un exemple qui utilise une clause PARTITION BY. Nous allons utiliser la table suivante appelée car_list_prices:
 car_make	car_model	car_type	car_price
@@ -116,31 +118,38 @@ OVER(PARTITION BY … ORDER BY …)	UNBOUNDED PRECEDING	CURRENT ROW
 Il existe un article détaillé intitulé "SQL Fonctions de fenêtrage Cheat Sheet" dans lequel vous trouverez de nombreux détails syntaxiques et exemples concernant les différentes limites du cadre de fenêtre.
 La clause SQL PARTITION BY en action
 
-Dans cette section, nous présentons quelques exemples de la clause SQL PARTITION BY. Tous sont basés sur la table paris_london_flightsutilisée par une compagnie aérienne pour analyser les résultats commerciaux de cette route pour les années 2018 et 2019. Voici un sous-ensemble de ces données :
+Dans cette section, nous présentons quelques exemples de la clause SQL PARTITION BY. Tous sont basés sur la table paris_london_flights utilisée par une compagnie aérienne pour analyser les résultats commerciaux de cette route pour les années 2018 et 2019. Voici un sous-ensemble de ces données :
+
 aircraft_make	aircarft_model	flight_number	scheduled_departure	real_departure	scheduled_arrival	num_of_passengers	total_revenue
 Boeing	757 300	FLP003	2019-01-30 15:00:00	2019-01-30 15:00:00	2019-01-30 15:00:00	260	82630.10
 Boeing	737 200	FLP003	2019-02-01 15:00:00	2019-02-01 15:10:00	2019-02-01 15:55:00	195	58459.34
 Airbus	A500	FLP003	2019-02-01 15:00:00	2019-02-01 15:03:00	2019-02-01 15:03:55	312	91570.87
 Airbus	A500	FLP001	2019-10-28 05:00:00	2019-10-28 05:04:00	2019-10-28 05:55:00	298	87943.00
 Boeing	737 200	FLP002	2019-10-28 09:00:00	2019-10-28 09:00:00	2019-10-28 09:55:00	178	56342.45
+
 Exemple 1
 
 La première requête génère un rapport comprenant le site flight_number, aircraft_model avec la quantité de passagers transportés, et le revenu total. La requête est présentée ci-dessous :
+
+```sql
 SELECT DISTINCT
        flight_number,
        aircraft_model,
-    SUM(num_of_passengers) OVER (PARTITION BY flight_number, aircraft_model)
-                                                            AS total_passengers,
-    SUM(total_revenue) OVER (PARTITION BY flight_number, aircraft_model)
-                                                            AS total_revenue
+    SUM(num_of_passengers) 
+        OVER (PARTITION BY flight_number, aircraft_model)
+        AS total_passengers,
+    SUM(total_revenue) 
+        OVER (PARTITION BY flight_number, aircraft_model)
+        AS total_revenue
 FROM paris_london_flights
 ORDER BY flight_number, aircraft_model;
-
+```
 Puisque le nombre total de passagers transportés et le revenu total sont générés pour chaque combinaison possible de flight_number et aircraft_model, nous utilisons la clause suivante PARTITION BY pour générer un ensemble d'enregistrements avec le même numéro de vol et le même modèle d'avion :
 OVER (PARTITION BY flight_number, aircraft_model)
 
 Ensuite, pour chaque ensemble d'enregistrements, nous appliquons les fonctions de fenêtre SUM(num_of_passengers) et SUM(total_revenue) pour obtenir les métriques total_passengers et total_revenue présentées dans l'ensemble de résultats suivant.
 flight_number	aircraft_model	total_passengers	total_revenue
+
 FLP001	737 200	20481	6016060.82
 FLP001	757 300	18389	5361126.23
 FLP001	Airbus A500	53872	15892165.58
@@ -150,9 +159,12 @@ FLP002	Airbus A500	54627	16004812.16
 FLP003	737 200	20098	5874892.44
 FLP003	757 300	15708	4573379.28
 FLP003	Airbus A500	57533	16712475.04
+
 Exemple 2
 
 Dans la requête suivante, nous montrons l'évolution de l'activité en comparant les mesures d'un mois à celles du mois précédent. Nous créons un rapport utilisant des fonctions de fenêtre pour montrer la variation mensuelle du nombre de passagers et des recettes.
+
+```sql
 WITH year_month_data AS (
   SELECT DISTINCT
        EXTRACT(YEAR FROM scheduled_departure) AS year,
@@ -170,10 +182,10 @@ SELECT  year,
      LAG(passengers) OVER (ORDER BY year, month) passengers_previous_month,
      passengers - LAG(passengers) OVER (ORDER BY year, month) AS passengers_delta
 FROM year_month_data;
-
+```
 Dans la requête ci-dessus, nous utilisons une clause WITH pour générer une CTE (CTE signifie common table expressions et est un type de requête permettant de générer une table virtuelle qui peut être utilisée dans le reste de la requête). Nous introduisons des données dans une table virtuelle appelée year_month_dataqui comporte 3 colonnes : year, month, et passengers avec le total des passagers transportés au cours du mois.
 
-Vous voulez apprendre les fonctions de fenêtrage ? Cliquez ici pour vivre une expérience interactive exceptionnelle !
+
 
 Ensuite, la deuxième requête (qui prend le CTE year_month_data en entrée) génère le résultat de la requête. La colonne passagers contient le total des passagers transportés associé à l'enregistrement actuel. Avec la fonction fenêtre LAG(passenger), nous obtenons la valeur de la colonne passagers de l'enregistrement précédent à l'enregistrement courant. Nous ORDER BY year and month :
 LAG(passengers) OVER (ORDER BY year, month)
@@ -194,11 +206,14 @@ year	month	passengers	passengers_previous_month	passengers_delta
 2019	10	24989	23719	1270
 2019	11	24371	24989	-618
 2019	12	1087	24371	-23284
+
 Troisième exemple
 
 Pour notre dernier exemple, intéressons-nous aux retards des vols. Nous voulons obtenir différentes moyennes de retards pour expliquer les raisons de ces retards.
 
 Nous utilisons un CTE pour calculer une colonne appelée month_delay avec le retard moyen pour chaque mois et obtenir le modèle d'avion. Ensuite, dans la requête principale, nous obtenons les différentes moyennes comme nous le voyons ci-dessous :
+
+```sql
 WITH paris_london_delays AS (
   SELECT DISTINCT
        aircraft_model,
@@ -222,12 +237,16 @@ SELECT  DISTINCT
  
 FROM paris_london_delays
 ORDER BY 1,2,3
+```
 
 Cette requête calcule plusieurs moyennes. La première est la moyenne par modèle d'avion et par année, ce qui est très clair. La seconde est la moyenne par année pour tous les modèles d'avions. Notez que nous utilisons uniquement la colonne année dans la clause PARTITION BY. La troisième et dernière moyenne est la moyenne glissante, où nous utilisons les 3 mois les plus récents et le mois en cours (c'est-à-dire la ligne) pour calculer la moyenne avec l'expression suivante :
+
+```sql
 AVG(month_delay) OVER (PARTITION BY aircraft_model, year
                                ORDER BY month
                                ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
                            ) AS rolling_average_last_4_months
+```
 
 La clause ROWS BETWEEN 3 PRECEDING AND CURRENT ROW du site PARTITION BY restreint le nombre de lignes (c'est-à-dire de mois) à inclure dans la moyenne : les 3 mois précédents et le mois en cours. Vous pouvez voir un résultat partiel de cette requête ci-dessous :
 aircraft_model	year	month	month_delay	year_avg_delay	year_avg_delay_all_models	rolling_average_last_4_months
@@ -243,5 +262,3 @@ L'article "The RANGE Clause in SQL Fonctions de fenêtrage: 5 Practical Examples
 La puissance de Fonctions de fenêtrage et de la clause SQL PARTITION BY
 
 Les fonctions de classement sont une ressource très puissante du langage SQL, et la clause SQL PARTITION BY joue un rôle central dans leur utilisation. Dans cet article, nous avons couvert le fonctionnement de cette clause et montré plusieurs exemples utilisant différentes syntaxes.
-
-Avant de conclure, je vous propose un SQL avancé cours, où vous pourrez aller au-delà des bases et devenir un maître du SQL. Si vous voulez en savoir plus sur la clause OVER, il existe un article complet sur le sujet : "How to Define a Window Frame in SQL Fonctions de fenêtrage." Améliorez vos compétences et développez vos atouts !

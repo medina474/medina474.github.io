@@ -71,15 +71,19 @@ id	first_name	last_name	parent_id
 16	Suzy	Wellington	9
 
 Vous pouvez utiliser ce tableau pour vérifier si les requêtes que je vais vous présenter produisent des résultats corrects.
-Exemple 1 : Liste de tous les enfants d'un parent
+
+### Exemple 1 : Liste de tous les enfants d'un parent
 
 Il s'agit de la requête la plus simple, je vais donc l'utiliser pour vous familiariser avec l'arborescence. Ici, je veux trouver tous les enfants d'un parent spécifié. Dans ce cas, je souhaite trouver tous les enfants d'une personne appelée Marge Wellington, dont l'ID est 4.
 
 Voici la petite requête :
+
+```sql
 SELECT first_name,
      last_name
 FROM parent_child
 WHERE parent_id = 4;
+```
 
 J'ai simplement sélectionné le prénom et le nom de famille dans la table et j'ai utilisé la clause WHERE pour n'afficher que les lignes où il y a un 4 dans la colonne parent_id.
 
@@ -99,6 +103,7 @@ Le résultat de l'exemple précédent était un peu, eh bien, basique. Je n'ai l
 Au lieu de chercher les enfants d'un parent, je chercherai maintenant les parents de l'enfant. Je veux savoir qui est le parent de Sam Francis Dijkstra. Outre les noms, je veux aussi voir les identifiants.
 
 La requête pour cela est la suivante :
+```sql
 SELECT child.id AS child_id,
      child.first_name AS child_first_name,
      child.last_name AS child_last_name,
@@ -109,6 +114,7 @@ FROM parent_child child
 JOIN parent_child parent
   ON child.parent_id = parent.id
 WHERE child.id = 11;
+```
 
 Le concept principal que j'introduis ici est l'auto-jointure. J'ai donné l'alias child à la table parent_child et je l'ai jointe à elle-même en utilisant l'alias parent alias. Ce faisant, j'agis comme si je travaillais avec deux tables différentes. L'une contient les données relatives aux enfants ; c'est pourquoi je l'ai nommée child. L'autre contient les données relatives aux parents, c'est pourquoi je l'ai appelée parent.
 
@@ -130,6 +136,8 @@ Dans cet exemple, je veux lister chaque personne du tableau et montrer à quelle
 Pour ce faire, j'utiliserai un CTE - pas un CTE ordinaire, mais un CTE récursif. Si vous avez besoin de rafraîchir vos connaissances en matière d'ETC, voici un article expliquant ce qu'est un ETC.
 
 Voici ma requête :
+
+```sql
 WITH RECURSIVE generation AS (
     SELECT id,
         first_name,
@@ -155,6 +163,7 @@ SELECT first_name,
      last_name,
      generation_number
 FROM generation;
+```
 
 Comme tout ETC récursif, le mien commence par deux mots-clés : WITH RECURSIVE. J'ai nommé la génération CTE. Dans la première instruction SELECT, je sélectionne les ID et les noms. De plus, il y a une nouvelle colonne appelée generation_number avec un 0 pour toutes les lignes où parent_id = NULL. Pourquoi NULL? Parce que je sais que la personne qui est le prédécesseur de toutes les autres n'a pas de parent dans la table. Par conséquent, la valeur doit être NULL.
 
@@ -193,6 +202,7 @@ Exemple 4 : Liste de tous les descendants
 Cet exemple est une extension du précédent. Je veux vous montrer comment lister tous les descendants d'un parent et afficher à la fois les noms des parents et des enfants.
 
 Voici la requête :
+```sql
 WITH RECURSIVE generation AS (
     SELECT id,
          first_name,
@@ -224,6 +234,7 @@ FROM generation g
 JOIN parent_child parent
 ON g.parent_id = parent.id
 ORDER BY generation_number;
+```
 
 Si vous comparez cette requête avec la précédente, vous verrez que la partie CTE est identique. Il n'est pas nécessaire que je la reprenne.
 
@@ -281,6 +292,8 @@ Le dernier exemple est le plus complexe, mais aussi le plus amusant. Du moins, s
 Ici, il s'agit d'afficher chaque personne du tableau. De plus, chaque descendant doit être représenté de manière à ce qu'il soit graphiquement évident de savoir de quel enfant il s'agit et à quelle génération il appartient. Il s'agit d'une vue arborescente. Je pense qu'il est préférable que vous attendiez que je passe à la sortie de la requête pour voir ce que je veux dire par là.
 
 Au travail ! Une fois de plus, l'ETC récursif nous sauve la mise :
+
+```sql
 WITH RECURSIVE tree_view AS (
     SELECT id,
          parent_id,
@@ -309,6 +322,7 @@ SELECT
      AS parent_child_tree
 FROM tree_view
 ORDER BY order_sequence;
+```
 
 Vous savez déjà comment fonctionnent les requêtes récursives. Cette fois-ci, l'ETC s'appelle tree_view. La première instruction SELECT sélectionne des données dans la table où parent_id est NULL. Il y a la colonne level avec la valeur 0. J'ai utilisé la fonction CAST() pour changer le type de données id en VARCHAR ; vous verrez pourquoi j'en ai besoin.
 
@@ -350,7 +364,6 @@ Les arborescences parents-enfants sont très intéressantes. Il s'agit d'un ense
 
 Plus important encore, je vous ai montré cinq requêtes que vous pouvez utiliser pour résoudre certains des problèmes les plus courants concernant les données hiérarchiques. Comme vous l'avez vu, les ETC et les ETC récursifs sont essentiels pour interroger les arbres parents-enfants.
 
-Si vous aimez apprendre SQL à l'aide d'exercices pratiques, vous devez essayer LearnSQL.fr.
 
 Je suis sûr que vous avez déjà rencontré des données hiérarchiques dans le cadre de votre travail. Vous avez probablement réalisé que vous deviez vous équiper de connaissances approfondies en matière de requêtes récursives pour traiter ce type de données. Nous avons un coursRequêtes récursives qui vous guidera systématiquement à travers les ETC en général, les requêtes récursives et la façon dont les requêtes sur les données hiérarchiques et les graphiques fonctionnent en SQL.
 

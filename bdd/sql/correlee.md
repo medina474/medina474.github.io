@@ -155,6 +155,8 @@ Exercice 5 : Pourcentage de l'argent dépensé par le client pour l'achat
 Exercice : Pour chaque client ayant effectué un achat, affichez l'ID de chaque achat effectué par ce client, le pourcentage de l'argent dépensé pour cet achat par rapport à l'ensemble de l'argent dépensé par ce client. Arrondissez les pourcentages à des nombres entiers. Affichez trois colonnes : contact_name purchase_id et percentage.
 
 Solution :
+
+```sql
 SELECT
   contact_name,
   purchase_id,
@@ -162,6 +164,7 @@ SELECT
 FROM purchase p
 JOIN customer
   ON p.customer_id = customer.customer_id;
+```
 
 Explication de la solution :
 
@@ -171,6 +174,8 @@ Exercice 6 : Clients dont les achats sont supérieurs au montant moyen de leurs 
 Exercice : Recherchez les clients dont le dernier achat a été supérieur au montant moyen de leurs achats. Affichez le nom du client et le dernier montant d'achat.
 
 Solution :
+
+```sql
 SELECT
   c.contact_name,
   p.total_price AS last_purchase_total
@@ -187,6 +192,7 @@ AND p.total_price > (
     FROM purchase ap
     WHERE ap.customer_id = p.customer_id
 );
+```
 
 Explication de la solution :
 
@@ -230,6 +236,8 @@ Exercice 7 : étudiants ayant obtenu une note supérieure à la moyenne
 Exercice : Trouvez les étudiants qui ont obtenu une note finale supérieure à la moyenne dans l'une des éditions de cours auxquelles ils ont assisté. Afficher : le nom et le prénom de l'étudiant, le titre du cours et son adresse final_grade. N'affichez que les étudiants dont la note finale dans cette édition du cours était supérieure à la note finale moyenne dans cette édition du cours.
 
 Solution :
+
+```sql
 SELECT
   first_name,
   last_name,
@@ -247,6 +255,7 @@ WHERE final_grade > (
   FROM course_enrollment AS c_e
   WHERE c_e.course_edition_id = c_en.course_edition_id
 );
+```
 
 Explication de la solution :
 
@@ -300,6 +309,7 @@ Exercice : Pour chaque édition de cours, présentez les données suivantes :
     results_better_than_average - Le nombre d'étudiants dont la note finale est supérieure à la note finale moyenne pour cette édition du cours.
 
 Solution :
+```sql
 SELECT
   c.title,
   ROUND(AVG(final_grade)) AS average_result,
@@ -317,6 +327,7 @@ WHERE final_grade > (
 GROUP BY
   c.id,
   c.title;
+```
 
 Explication de la solution :
 

@@ -1,9 +1,13 @@
+---
+title: LAG
+---
+
 ATTENTION REECRIRE
 https://learnsql.fr/blog/fonction-sql-lag/
 
 Fonction SQL LAG()
 
-La fonction LAG() - l'une des fonctions de fenêtre de SQL, est un outil important pour la planification et l'analyse des tendances. Dans cet article, je vais vous montrer comment inclure la fonction SQL LAG() dans vos requêtes à l'aide de quelques exemples concrets.
+La fonction LAG() - l'une des fonctions de fenêtre de SQL, est un outil important pour la planification et l'analyse des tendances. 
 
 LesfonctionsSQL window, également appelées fonctions analytiques ou fonctions OVER, ajoutent une nouvelle dimension à l'analyse des données. Elles vous permettent d'inclure des agrégats ou des données provenant d'autres lignes à côté de la ligne actuelle.
 
@@ -18,6 +22,7 @@ Cette fonction vous permet d'inclure une valeur de colonne provenant d'une ligne
 La meilleure façon d'apprendre les fonctions de fenêtrage est de les mettre en pratique. Je recommande ce cours sur Fonctions de fenêtrage. Il comporte 218 exercices interactifs, ce qui équivaut à environ 20 heures de codage.
 
 Elle peut également être utilisée pour répondre à diverses questions. Quelle est l'ampleur de l'écart entre les résultats moyens de l'école A et de l'école B ? Dans quelle mesure l'utilisation d'une matière première différente affecte-t-elle la durée de vie d'un composant ?
+
 Syntaxe de la fonction LAG()
 
 Dans sa forme la plus simple, la syntaxe de la fonction SQL LAG() est ...
@@ -71,6 +76,8 @@ Vous souhaiterez souvent utiliser les résultats de LAG() dans des calculs. Par 
 Vous pouvez utiliser le résultat d'une fonction dans des calculs comme vous le feriez pour n'importe quelle autre colonne.
 
 La requête se présente comme suit :
+
+```sql
 SELECT
   year,
   month,
@@ -80,6 +87,7 @@ SELECT
   ((sales_value - LAG(sales_value) OVER (ORDER BY year, month)) * 100)
    / (LAG(sales_value) OVER (ORDER BY year, month)) AS percentage
 FROM monthly_sales;
+```
 
 Les résultats sont les suivants :
 year	month	sales_value	last_month	change	percentage
