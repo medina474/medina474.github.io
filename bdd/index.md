@@ -49,8 +49,7 @@ Ces bases de données sont intégrées directement dans des applications ou des 
 
 Chaque type de base de données a ses avantages et ses inconvénients, et le choix dépendra des besoins spécifiques de l'application. De nombreuses applications modernes utilisent également une combinaison de différents types de bases de données pour répondre à leurs exigences en matière de stockage et de traitement de données.
 
-[SGBDR](sgbdr)
-
+## Définitions
 
 fs
 : File System, Système de fichiers est une façon de stocker de façon permanente les informations et de les organiser dans des fichiers sur un disque dur, 
@@ -61,3 +60,8 @@ SGBDR
 
 RDBMS
 : Relational DataBase Management System
+
+## Programme
+
+- [Base de données relationnelle](sgbdr)
+- [Travaux dirigés 1](sgbdr/td)
