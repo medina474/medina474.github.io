@@ -4,7 +4,9 @@ title: Langage de requête de données
 
 DQL pour Data Query Language est le sous-langage responsable de la lecture, ou de l'interrogation, des données d'une base de données.
 
-En SQL, cela correspond à la commande **select**
+En SQL, cela correspond principalment à la commande **select** qui permet de sélectionner et d'extraire des données spécifiques à partir d'une ou plusieurs tables. 
+
+La dénomination de ce type de commande est _requête_ ou _query_ en anglais
 
 ## Source
 
@@ -25,12 +27,12 @@ where Country = 'France';
 ```
 
 FirstName|LastName|City
----|---|---
-Camille|Bernard|Paris
-Dominique|Lefebvre|Paris
-Marc|Dubois|Lyon
-Wyatt|Girard|Bordeaux
-Isabelle|Mercier|Dijon
+---------|---------|---
+Camille  |Bernard  |Paris
+Dominique|Lefebvre |Paris
+Marc     |Dubois   |Lyon
+Wyatt    |Girard   |Bordeaux
+Isabelle |Mercier  |Dijon
 
 ### Opérateurs
 
@@ -51,7 +53,6 @@ Détermine si une valeur se trouve entre deux limites inclusives. `between` peut
 where total between 10.0 and 20.0
 ```
 
-
 between [lowerbound] and [upperbound]
 
 #### in
@@ -71,7 +72,17 @@ détermine si une valeur correspond à tout ou partie d'une chaîne. souvent uti
 ```
 ### Conditions multiples
 
+Les conditions peuvent être combinées avec des opérateurs booléen AND et OR.
+
 ## Tri
+
+La commande ORDER BY dans une requête SELECT en SQL est utilisée pour trier les résultats retournés par la requête en fonction d'une ou plusieurs colonnes.
+
+```sql
+SELECT nom, prenom, age
+FROM utilisateurs
+ORDER BY age ASC;
+```
 
 ## Pagination
 
