@@ -6,17 +6,17 @@ title: Ressource R5.07 - Base de données
 
 Les thèmes recommandés à développer pour atteindre les acquis d’apprentissage visés sont :
 
-–Bases de données :
-–Introduction aux bases de données relationnelles ;
-–Tables, schémas relationnels ;
-–Requêtes SQL de base ;
-–Base de données noSQL.
-–Introduction à l’IoT :
-–Architectures IoT (Extreme edge/edge/mist/fog/cloud, passerelle) ;
-–Communication indirecte orientée message (Publier/Souscrire, broker, MQTT) ;
-–Gestion de la qualité de service (QoS) ;
-–Notions d’API (déclaration, appel de services) ;
-–Tableau de bord (node-red, grafana...).
+- Bases de données :
+- Introduction aux bases de données relationnelles ;
+- Tables, schémas relationnels ;
+- Requêtes SQL de base ;
+- Base de données noSQL.
+- Introduction à l’IoT :
+- Architectures IoT (Extreme edge/edge/mist/fog/cloud, passerelle) ;
+- Communication indirecte orientée message (Publier/Souscrire, broker, MQTT) ;
+- Gestion de la qualité de service (QoS) ;
+- Notions d’API (déclaration, appel de services) ;
+- Tableau de bord (node-red, grafana...).
 
 ### Volume horaire
 
