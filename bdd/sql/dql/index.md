@@ -16,6 +16,8 @@ Dans une commande **select** il convient de définir les colonnes que l'on veut 
 select FirstName, LastName, City from customers;
 ```
 
+Pour sélectionner toutes les colonnes il faut utiliser le caractère joker *.
+
 ## Filtre
 
 La clause `where` permet de spécifier une condition qui doit être satisfaite pour qu'une ligne soit incluse dans le résultat de la requête.
@@ -81,7 +83,7 @@ La commande ORDER BY dans une requête SELECT en SQL est utilisée pour trier le
 ```sql
 SELECT nom, prenom, age
 FROM utilisateurs
-ORDER BY age ASC;
+ORDER BY age DESC, nom ASC;
 ```
 
 ## Pagination
@@ -97,3 +99,62 @@ Lors de l'utilisation de LIMIT, il est important d'utiliser une clause ORDER BY 
 L'optimiseur de requêtes prend en compte LIMIT lors de la génération des plans de requête, vous obtiendrez donc très probablement différents plans (générant différents ordres de lignes) en fonction de ce que vous donnez pour LIMIT et OFFSET. Ainsi, l'utilisation de différentes valeurs LIMIT/OFFSET pour sélectionner différents sous-ensembles d'un résultat de requête donnera des résultats incohérents à moins que vous n'appliquiez un classement prévisible des résultats avec ORDER BY. Ce n'est pas un bug; c'est une conséquence inhérente du fait que SQL ne promet pas de fournir les résultats d'une requête dans un ordre particulier à moins que ORDER BY ne soit utilisé pour contraindre l'ordre.
 
 Les lignes ignorées par une clause OFFSET doivent toujours être calculées à l'intérieur du serveur ; par conséquent, un OFFSET important pourrait être inefficace.
+
+## Aggrégation
+
+En SQL, une agrégation est une opération qui permet de combiner plusieurs valeurs de données en une seule valeur résumée. Les opérations d'agrégation sont souvent utilisées en combinaison avec la clause GROUP BY pour regrouper les données selon des critères spécifiques avant de les résumer.
+
+### Compter
+
+Compte le nombre d'enregistrements dans un ensemble de données.
+
+```sql
+SELECT COUNT(*) FROM utilisateurs;
+```
+
+On peut compter sur n'importe quelle colonne, dans ce cas pour ne pas avoir à choisir on utilise le caractère joker *.
+
+
+### Somme
+
+Calcule la somme des valeurs d'une colonne numérique.
+
+```sql
+SELECT SUM(salaire) FROM employes;
+```
+
+### Moyenne 
+
+Calcule la moyenne des valeurs d'une colonne numérique.
+
+```sql
+SELECT AVG(salaire) FROM employes;
+```
+
+### Minimum
+
+Retourne la valeur minimale dans une colonne.
+
+```sql
+SELECT MIN(age) FROM utilisateurs;
+```
+### Maximum
+
+Retourne la valeur maximale dans une colonne.
+
+```sql
+SELECT MAX(age) FROM utilisateurs;
+```
+
+## Regoupement
+
+Les fonctions d'agrégation deviennent particulièrement puissantes lorsqu'elles sont utilisées avec GROUP BY, qui regroupe les lignes partageant une valeur commune dans une ou plusieurs colonnes avant d'appliquer l'agrégation.
+
+```sql
+SELECT departement, AVG(salaire)
+FROM employes
+GROUP BY departement;
+```
+### Filtre après aggrégation
+
+HAVING  Semblable à WHERE, mais utilisé pour filtrer les résultats après un GROUP BY, sur les résultats des fonctions d'agrégation.
