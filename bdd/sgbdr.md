@@ -69,3 +69,77 @@ La cardinalité d'une relation définit combien d'entités d'un côté de la rel
 Le schéma entité-relation est souvent considéré comme un modèle conceptuel, car il se concentre sur la représentation abstraite des données et de leurs relations sans se préoccuper des détails d'implémentation. Il s'agit d'une étape importante dans la conception d'une base de données, car elle permet de visualiser la structure des données et les interactions entre elles avant de passer à la création physique de la base de données.
 
 Une fois le schéma entité-relation créé, il peut servir de base pour la conception et la création de la base de données réelle à l'aide d'un système de gestion de base de données (SGBD) tel que MySQL, PostgreSQL, Oracle Database, etc. Le schéma entité-relation est un outil précieux pour communiquer avec les parties prenantes du projet, comprendre les besoins en matière de données et s'assurer que la base de données est conçue de manière appropriée pour prendre en charge les opérations et les requêtes requises.
+
+### Formes normales
+
+Les formes normales sont des règles ou des critères utilisés dans la conception de bases de données relationnelles pour organiser les données de manière à réduire la redondance et améliorer l'intégrité des données. Elles permettent de structurer une base de données de façon à minimiser les anomalies de mise à jour, d'insertion et de suppression. Il existe plusieurs formes normales, chacune apportant des améliorations spécifiques par rapport à la précédente. 
+
+#### 1NF Première forme normale
+
+La première forme normale impose les conditions suivantes :
+
+- **Atomicité** : Chaque colonne d'une table doit contenir des valeurs atomiques, c'est-à-dire indivisibles. Par exemple, une colonne ne doit pas contenir une liste de valeurs ou une valeur composite.
+- **Absence de répétition** : Les enregistrements doivent être uniques, et chaque colonne doit contenir un seul type de données.
+
+|Immatriculation | Modèle  | Caractéristiques
+|----------------|---------|--------------
+| TT-802-AX      | Nissan  | 4 roues motrices, ABS, toit ouvrant, peinture verte, 65 l, 140 cv
+| QS-123-DB      | Peugeot | jantes aluminium, peinture bleu, 50 l, 110 cv
+
+| ID | Produit       | Ingrédients      
+|----|---------------|--------------
+| 1  | Sun Secure    | octocrylène, dioxyde de titane 
+| 2  | UV Screen     | acide para-aminobenzoïque, taurate copolymer, ceteareth-20 
+
+#### 2NF Deuxième forme normale
+
+La deuxième forme normale est basée sur la première et ajoute les conditions suivantes :
+
+- **Dépendance fonctionnelle totale** : Tous les attributs non clés doivent dépendre **entièrement** de la clé primaire. En d'autres termes, il ne doit pas y avoir de dépendances partielles entre les colonnes. Si une colonne dépend seulement d'une partie de la clé primaire (dans le cas où celle-ci est composée), la table n'est pas en 2NF.
+
+| N° Commande | N° Produit | NomClient | AdresseClient      | Quantité
+|-------------|------------|-----------|--------------------|---------
+| 1	          | 101        | Dupont    | 10 rue du Marché   | 	2
+| 1	          | 102        | Dupont    | 10 rue du Marché   | 	1
+| 2	          | 103        | Martin    | 22 avenue de Paris | 	5
+| 3	          | 102        | Grosjean  | 10 place Bleue     | 	3
+
+La clé primaire de la table est composée de CommandeID et ProduitID
+
+NomClient et AdresseClient dépendent uniquement de CommandeID, ce qui signifie qu'ils ne dépendent pas entièrement de la clé primaire composée (CommandeID, ProduitID). Ils dépendent seulement de la partie CommandeID.
+
+#### 3NF Troisième forme normale
+
+La troisième forme normale repose sur la deuxième et impose :
+
+- **Absence de dépendance transitive** : Aucune colonne non clé ne doit dépendre d'une autre colonne non clé. Autrement dit, chaque colonne non clé doit dépendre directement de la clé primaire.
+
+|EmployéID	  | NomEmployé	| Poste	    | Salaire	| DépartementID |	NomDépartement
+|-------------|-------------|-----------|---------|---------------|---------------
+|1|	Dupont|	Ingénieur|	60000	|101	|Informatique
+|2|	Martin|	Chef de projet|	75000	|102|	Gestion
+|3|	Durand|	Technicien|	45000	|101|	Informatique
+
+Dans cette table, l'attribut NomDépartement dépend de DépartementID, qui lui-même dépend de EmployéID. Cette situation crée une dépendance transitive : EmployéID → DépartementID → NomDépartement. Par conséquent, la table ne respecte pas la 3NF, car NomDépartement dépend indirectement de la clé primaire EmployéID via une autre colonne non clé (DépartementID).
+
+#### BCNF Forme normale de Boyce-Codd
+
+La forme normale de Boyce-Codd est une extension de la 3NF et traite certains cas particuliers où la 3NF ne suffit pas. Elle impose :
+
+- **Dépendance fonctionnelle stricte** : Pour chaque dépendance fonctionnelle, l'ensemble des attributs sur lequel une colonne dépend doit être une super-clé de la table.
+
+#### 4NF Quatrième forme normale
+
+La quatrième forme normale traite des dépendances multivaluées :
+
+- **Aucune dépendance multivaluée** : Si un attribut dans une table dépend de la clé primaire, il ne doit pas y avoir de dépendance entre cet attribut et un autre ensemble d'attributs indépendant.
+
+#### 5NF Cinquième forme normale
+
+La cinquième forme normale traite de la décomposition en respectant les jointures :
+
+- **Aucune dépendance de jointure** : Une table doit être décomposable en plus petites tables sans perte d'informations lors des jointures.
+
+#### 6NF Sixième forme normale
+
+La sixième forme normale, rarement utilisée, est destinée aux bases de données temporelles et impose une décomposition encore plus fine pour gérer les variations dans le temps.

@@ -1,8 +1,8 @@
 ---
-title: Ressource R5.07 : Base de données
+title: Ressource R5.07 - Base de données
 ---
 
-## Volume horaire
+### Volume horaire
 
 Volume horaire défini nationalement : 14 heures dont 8 heures de TP
 
@@ -49,6 +49,7 @@ Ces bases de données sont intégrées directement dans des applications ou des 
 
 Chaque type de base de données a ses avantages et ses inconvénients, et le choix dépendra des besoins spécifiques de l'application. De nombreuses applications modernes utilisent également une combinaison de différents types de bases de données pour répondre à leurs exigences en matière de stockage et de traitement de données.
 
+[SGBDR](sgbdr)
 
 
 fs
@@ -60,22 +61,3 @@ SGBDR
 
 RDBMS
 : Relational DataBase Management System
-
-[SGBDR](sgbdr)
-
-[MariaDB](MariaDB)
-
-[SQL](sql)
-
-[TD](td)
-
-[prometheus](prometheus)
-[grafana](grafana)
-[ORM](ORM)
-
-[InfluxDB](influxdb)
-[MongoDB](mongodb)
-
-[SQL](sql)
-
-[PostgreSQL](postgresql)
