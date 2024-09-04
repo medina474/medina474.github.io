@@ -2,7 +2,7 @@
 title: "Schémas"
 ---
 
-A PostgreSQL database cluster contains one or more named databases. Roles and a few other object types are shared across the entire cluster. A client connection to the server can only access data in a single database, the one specified in the connection request.
+Un cluster de bases de données PostgreSQL contient une ou plusieurs bases de données nommées. Les rôles et quelques autres types d'objets sont partagés dans l'ensemble du cluster. Une connexion client au serveur ne peut accéder qu'aux données d'une seule base de données, celle spécifiée dans la demande de connexion.
 
 Il existe plusieurs raisons pour lesquelles on peut vouloir utiliser des schémas :
 
