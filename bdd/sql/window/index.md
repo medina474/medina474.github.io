@@ -1,38 +1,48 @@
 ---
-title: Window
+title: fonction de fenêtrage
 ---
 
-En SQL, une fonction de fenêtre ou fonction analytique est une fonction qui utilise les valeurs d'une ou de plusieurs lignes pour renvoyer une valeur pour chaque ligne. (Cela contraste avec une fonction d'agrégation, qui renvoie une valeur unique pour plusieurs lignes.) Les fonctions de fenêtre ont une clause OVER ; toute fonction sans clause OVER n'est pas une fonction de fenêtre, mais plutôt une fonction d'agrégation ou à ligne unique (scalaire).
+En SQL, une fonction de fenêtrage ou fonction analytique est une fonction qui utilise les valeurs d'une ou de plusieurs lignes pour renvoyer une valeur pour chaque ligne. (Cela contraste avec une fonction d'agrégation, qui renvoie une valeur unique pour plusieurs lignes.) Les fonctions de fenêtrage ont une clause _OVER_.
 
-- PostgreSQL - version 8.4 in 2009.
-- MySQL - version 8 in 2018.
-- MariaDB - version 10.2 in 2016.
+Toute fonction sans clause _OVER_ n'est pas une fonction de fenêtrage, mais plutôt une fonction d'[agrégation](../agrégation) ou à ligne unique (scalaire).
 
+### Implémentation
+
+- PostgreSQL - version 8.4 en 2009.
+- MariaDB - version 10.2 en 2016.
+- MySQL - version 8 en 2018.
 
 ### Ranking Functions
 
 #### row_number()
+
 #### rank()
+
 #### dense_rank()
 
+
 ### Distribution Functions
+
 #### percent_rank()
+
 #### cume_dist()
 
+
 ### Analytic Functions
+
 #### lead()
+
 #### lag()
+
 #### ntile()
+
 #### first_value()
+
 #### last_value()
+
 #### nth_value()
 
-### Aggregate Functions
-#### avg()
-#### count()
-#### max()
-#### min()
-#### sum()
+
 
 [first](first)
 

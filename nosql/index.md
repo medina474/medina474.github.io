@@ -35,4 +35,4 @@ Cette ressource développe les différentes implémentations des données dans l
 
 ### Programme
 
-[Fonctions de fenêtrage](../bdd/window)
+[Fonctions de fenêtrage](../bdd/sql/window)
