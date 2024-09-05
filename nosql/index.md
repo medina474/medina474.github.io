@@ -11,6 +11,7 @@ Cette ressource développe les différentes implémentations des données dans l
 - Concepts, structure de données et langages d'interrogation (par ex. : base de données mobiles, embarquées, objets, NoSQL — déductives, clés-valeurs, documents, colonnes, graphe...)
 - Les différents savoirs de référence pourront être approfondis.
 
+### Calendrier
 
 - Samedi 7 septembre CM
 - Samedi 7 septembre TD 1
@@ -32,17 +33,6 @@ Cette ressource développe les différentes implémentations des données dans l
 - Mercredi 16 octobre / Samedi 19 octobre TP 3 
 - Mercredi 16 octobre / Samedi 19 octobre TP 4
 
+### Programme
 
-[graphe](graphe)
-
-[arbre](arbre)
-
-[Base de données spatiales](spatial)
-
-[Base de données spatiales](spatiale)
-
-[Base de données temprelles](temporelle)
-
-[UUID](uuid)
-
-HTML comme base de données microdata microformat ld json
+[Fonctions de fenêtrage](../bdd/window)
