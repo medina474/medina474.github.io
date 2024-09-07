@@ -1,5 +1,5 @@
 ---
-title: Agrégation
+title: Fonctions d'agrégation
 ---
 
 En SQL, une agrégation est une opération qui permet de combiner plusieurs valeurs de données en une seule valeur résumée. Les opérations d'agrégation sont souvent utilisées en combinaison avec la clause GROUP BY pour regrouper les données selon des critères spécifiques avant de les résumer.

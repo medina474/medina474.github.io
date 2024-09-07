@@ -35,4 +35,5 @@ Cette ressource développe les différentes implémentations des données dans l
 
 ### Programme
 
-[Fonctions de fenêtrage](../bdd/sql/window)
+- [Informatique décisionnelle](bi)
+- [Fonctions de fenêtrage](../bdd/sql/window)
