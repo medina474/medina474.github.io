@@ -36,4 +36,6 @@ Cette ressource développe les différentes implémentations des données dans l
 ### Programme
 
 - [Informatique décisionnelle](bi)
-- [Fonctions de fenêtrage](../bdd/sql/window)
+  - [Entrepôts de données](bi/datawarehouse)
+  - [Modèle de données](bi/models)
+  - [Fonctions de fenêtrage](../bdd/sql/window)
