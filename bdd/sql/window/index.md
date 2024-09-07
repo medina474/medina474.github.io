@@ -31,23 +31,29 @@ La fonction fenêtre DENSE_RANK() en SQL attribue un rang à chaque ligne dans u
 
 ### Fonctions de distribution
 
-#### renag relatif
+#### rang relatif
 
 La fonction fenêtre PERCENT_RANK() en SQL calcule le rang relatif d'une ligne par rapport à l'ensemble des résultats, sous forme de pourcentage. Elle attribue une valeur comprise entre 0 et 1, qui indique où se situe la ligne dans l'ensemble trié. Le premier élément a toujours une valeur de 0 et le dernier une valeur proche de 1 (mais jamais exactement 1, sauf dans certains cas spécifiques).
 
 #### distribution cumulative
 
+La fonction de fenêtrage CUME_DIST() (cumulative distribution) est une fonction analytique SQL qui calcule la distribution cumulative d'une ligne dans un ensemble de résultats. Elle renvoie la fraction ou le pourcentage des lignes d'un ensemble de données qui ont une valeur inférieure ou égale à celle de la ligne actuelle, en fonction d'un certain ordre.
 
-### Analytic Functions
+(number of partition rows preceding or peers with current row) / (total partition rows). The value thus ranges from 1/N to 1.
 
-#### lead()
+### Fonctions analytiques
 
-#### lag()
+#### valeur suivante
+
+La fonction de fenêtrage LEAD() en SQL est utilisée pour accéder à la valeur d’une ligne suivante par rapport à la ligne actuelle dans un ensemble de résultats, sans avoir à écrire une sous-requête complexe. Elle permet de "regarder" en avant dans les données d'une fenêtre pour obtenir une valeur future, ce qui peut être utile pour comparer des enregistrements successifs.
+
+#### valeur précédente
+
+La fonction de fenêtrage LAG() en SQL permet d'accéder à la valeur d’une ligne précédente par rapport à la ligne actuelle dans un ensemble de résultats. Cela est utile pour comparer des enregistrements successifs ou calculer des différences entre la valeur actuelle et une valeur passée. C'est l'inverse de la fonction LEAD(), qui accède aux lignes suivantes.
 
 #### ntile()
 
 La fonction fenêtre NTILE() en SQL divise un ensemble de résultats en un nombre spécifié de groupes égaux (ou presque égaux) et attribue un numéro de groupe à chaque ligne. Cela permet de classer les lignes dans des partitions, souvent appelées "quartiles", "quintiles" ou autres, selon le nombre de groupes que vous spécifiez.
-
 
 #### première valeur
 first_value()
@@ -57,58 +63,3 @@ last_value()
 
 #### nième valeur 
 nth_value()
-
-
-
-[first](first)
-
-[lead](lead)
-
-[lag](lag)
-
-[partition](partition)
-
-
-row_number ()
-
-
-
-rank ()
-
-Returns the rank of the current row, with gaps; that is, the row_number of the first row in its peer group.
-
-dense_rank () → bigint
-
-Returns the rank of the current row, without gaps; this function effectively counts peer groups.
-
-percent_rank () → double precision
-
-Returns the relative rank of the current row, that is (rank - 1) / (total partition rows - 1). The value thus ranges from 0 to 1 inclusive.
-
-cume_dist () → double precision
-
-Returns the cumulative distribution, that is (number of partition rows preceding or peers with current row) / (total partition rows). The value thus ranges from 1/N to 1.
-
-ntile ( num_buckets integer ) → integer
-
-Returns an integer ranging from 1 to the argument value, dividing the partition as equally as possible.
-
-lag ( value anycompatible [, offset integer [, default anycompatible ]] ) → anycompatible
-
-Returns value evaluated at the row that is offset rows before the current row within the partition; if there is no such row, instead returns default (which must be of a type compatible with value). Both offset and default are evaluated with respect to the current row. If omitted, offset defaults to 1 and default to NULL.
-
-lead ( value anycompatible [, offset integer [, default anycompatible ]] ) → anycompatible
-
-Returns value evaluated at the row that is offset rows after the current row within the partition; if there is no such row, instead returns default (which must be of a type compatible with value). Both offset and default are evaluated with respect to the current row. If omitted, offset defaults to 1 and default to NULL.
-
-first_value ( value anyelement ) → anyelement
-
-Returns value evaluated at the row that is the first row of the window frame.
-
-last_value ( value anyelement ) → anyelement
-
-Returns value evaluated at the row that is the last row of the window frame.
-
-nth_value ( value anyelement, n integer ) → anyelement
-
-Returns value evaluated at the row that is the n'th row of the window frame (counting from 1); returns NULL if there is no such row.
