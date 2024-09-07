@@ -12,6 +12,14 @@ Toute fonction sans clause _OVER_ n'est pas une fonction de fenêtrage, mais plu
 - MariaDB - version 10.2 en 2016.
 - MySQL - version 8 en 2018.
 
+###
+
+Les fonctions de fenêtrage s'écrivent en ajoutant la clause OVER() après la fonction. 
+
+```sql
+fonction_de_fenêtrage() OVER (PARTITION BY clause_partition ORDER BY clause_ordre)
+```
+
 ### Fonctions de classement
 
 #### row_number()

@@ -3,7 +3,8 @@ https://learnsql.fr/blog/comment-utiliser-la-clause-sql-partition-by-avec-over/
 
 Comment utiliser la clause SQL PARTITION BY avec OVER
 
-Au cœur de chaque appel de fonction fenêtre se trouve une clause OVER qui définit comment les fenêtres des enregistrements sont construites. Dans la clause OVER, il peut y avoir une sous-clause facultative PARTITION BY qui définit les critères d'identification des enregistrements à inclure dans chaque fenêtre. Poursuivez votre lecture et franchissez une étape importante dans le développement de vos compétences en SQL !
+Au cœur de chaque appel de fonction fenêtre se trouve une clause OVER qui définit comment les fenêtres des enregistrements sont construites. Dans la clause OVER, il peut y avoir une sous-clause facultative PARTITION BY qui définit les critères d'identification des enregistrements à inclure dans chaque fenêtre. 
+
 Qu'est-ce que la clause PARTITION BY en SQL ?
 
 L'expression SQL PARTITION BY est une sous-clause de la clause OVER, qui est utilisée dans presque toutes les invocations de fonctions de fenêtre comme AVG(), MAX() et RANK(). Comme de nombreux lecteurs le savent probablement, les fonctions de fenêtre opèrent sur des cadres de fenêtre qui sont des ensembles de lignes qui peuvent être différents pour chaque enregistrement du résultat de la requête. C'est là qu'intervient la sous-clause SQL PARTITION BY: elle permet de définir les enregistrements qui doivent faire partie du cadre de fenêtre associé à chaque enregistrement du résultat.
