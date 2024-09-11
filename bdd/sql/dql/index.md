@@ -102,7 +102,7 @@ Les lignes ignorées par une clause OFFSET doivent toujours être calculées à 
 
 ## Agrégation
 
-[Agrégation](agrégation)
+[Agrégation](../agrégation)
 
 
 
