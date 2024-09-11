@@ -82,3 +82,4 @@ RDBMS
 - [Base de données relationnelle](sgbdr)
 - [Travaux dirigés 1](sgbdr/td)
 - Le [langage SQL](sql)
+- Les [jointures](sql/jointure)

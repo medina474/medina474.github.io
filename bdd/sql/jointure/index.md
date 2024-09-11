@@ -1,83 +1,81 @@
-Le nombre de produit par catégories
+---
+title: Jointures
+---
+
+Les jointures en SQL (ou joins en anglais) permettent de combiner des enregistrements de plusieurs tables d'une base de données en fonction d'une condition définie. Elles sont utilisées lorsque l'on veut extraire des données provenant de plusieurs sources qui partagent un lien commun, souvent une clé étrangère (foreign key). 
+
+Le type de jointure utilisé dépend du résultat attendu et de la structure des données.
+
+## Jointure interne (INNER JOIN)
+
+C'est le type de jointure le plus courant. Il ne renvoie que les lignes qui ont des correspondances dans les deux tables. Autrement dit, seules les lignes pour lesquelles il y a des données correspondantes dans les deux tables seront retournées.
 
 ```sql
-SELECT c.CategoryName, COUNT(p.ProductID) AS ProductCount
-FROM categories c
-JOIN products p ON c.category_id = p.category_id
-GROUP BY c.CategoryName;
+SELECT table1.colonne, table2.colonne
+FROM table1
+INNER JOIN table2
+ON table1.id = table2.id;
 ```
 
-Les produits jamais commandés
+Dans cet exemple, seules les lignes qui ont le même id dans table1 et table2 seront incluses dans le résultat.
+
+## Jointure externe gauche (LEFT JOIN ou LEFT OUTER JOIN)
+
+Cette jointure renvoie **toutes** les lignes de la table de gauche, même si elles n'ont pas de correspondance dans la table de droite. Si aucune correspondance n'est trouvée, les colonnes de la table de droite contiendront des valeurs NULL.
 
 ```sql
-select * from products p 
-left join order_details od on od.ProductID = p.ProductID 
-where od.OrderDetailID is null;
+SELECT table1.colonne, table2.colonne
+FROM table1
+LEFT JOIN table2
+ON table1.id = table2.id;
 ```
 
-Les ventes mois par mois de Dodsworth
+Ici, toutes les lignes de table1 seront retournées, et s'il n'y a pas de correspondance dans table2, les colonnes associées à table2 seront remplies par des valeurs NULL.
+
+## Jointure externe droite (RIGHT JOIN ou RIGHT OUTER JOIN)
+
+C'est l'inverse du LEFT JOIN. Elle renvoie toutes les lignes de la table de droite et les lignes correspondantes de la table de gauche. Si une ligne de la table de droite n'a pas de correspondance dans la table de gauche, les colonnes de la table de gauche auront des valeurs NULL.
 
 ```sql
-select year(OrderDate), month(OrderDate), d.unit_price * d.quantity 
-from order_details d
-join orders o on o.OrderID = d.OrderID 
-join employees y on y.employee_id = o.employee_id 
-where LastName = 'Dodsworth'
-group by year(OrderDate), month(OrderDate)
+SELECT table1.colonne, table2.colonne
+FROM table1
+RIGHT JOIN table2
+ON table1.id = table2.id;
 ```
 
+Dans cet exemple, toutes les lignes de table2 seront incluses, même si elles ne correspondent pas à table1.
+
+## Jointure externe complète (FULL JOIN ou FULL OUTER JOIN)
+
+Cette jointure combine les fonctionnalités des jointures gauche et droite. Elle renvoie toutes les lignes des deux tables, avec des valeurs NULL là où il n'y a pas de correspondance dans l'autre table.
+
 ```sql
-CREATE TABLE IF NOT EXISTS calendrier (
-  DateValue DATE PRIMARY KEY,
-  YearValue INT,
-  MonthValue INT,
-  DayValue INT,
-  WeekDayName VARCHAR(10),
-  WeekDayNumber INT,
-  WeekNumber INT,
-  QuarterValue INT
-);
+SELECT table1.colonne, table2.colonne
+FROM table1
+FULL JOIN table2
+ON table1.id = table2.id;
 ```
 
-```sql
-SET SESSION max_recursive_iterations = 100000;
+Cela renvoie toutes les lignes de table1 et table2, qu'il y ait ou non des correspondances entre les deux.
 
-INSERT INTO calendrier 
-WITH RECURSIVE CalendarCTE AS (
-    SELECT 
-        '2020-01-01' AS DateValue,
-        YEAR('2020-01-01') AS YearValue,
-        MONTH('2020-01-01') AS MonthValue,
-        DAY('2020-01-01') AS DayValue,
-        DAYNAME('2020-01-01') AS WeekDayName,
-        WEEKDAY('2020-01-01') + 1 AS WeekDayNumber, -- WEEKDAY retourne de 0 à 6, on ajuste pour avoir 1 à 7
-        WEEK('2020-01-01', 3) AS WeekNumber, -- Mode 3 : semaines commencent le lundi
-        QUARTER('2020-01-01') AS QuarterValue
-    UNION ALL
-    SELECT
-        DATE_ADD(DateValue, INTERVAL 1 DAY),
-        YEAR(DATE_ADD(DateValue, INTERVAL 1 DAY)),
-        MONTH(DATE_ADD(DateValue, INTERVAL 1 DAY)),
-        DAY(DATE_ADD(DateValue, INTERVAL 1 DAY)),
-        DAYNAME(DATE_ADD(DateValue, INTERVAL 1 DAY)),
-        WEEKDAY(DATE_ADD(DateValue, INTERVAL 1 DAY)) + 1,
-        WEEK(DATE_ADD(DateValue, INTERVAL 1 DAY), 3),
-        QUARTER(DATE_ADD(DateValue, INTERVAL 1 DAY))
-    FROM CalendarCTE
-    WHERE DATE_ADD(DateValue, INTERVAL 1 DAY) <= '2030-12-31'
-)
-SELECT * FROM CalendarCTE;
+## Jointure croisée (CROSS JOIN)
+
+La jointure croisée renvoie le produit cartésien des deux tables. Chaque ligne de la première table est combinée avec chaque ligne de la deuxième table. Cela produit un grand nombre de lignes dans le résultat.
+
+```sql
+SELECT table1.colonne, table2.colonne
+FROM table1
+CROSS JOIN table2;
 ```
 
+Cela peut être utile dans des situations spécifiques mais doit être utilisé avec prudence car cela peut générer des résultats volumineux.
+
+## Self Join (auto-jointure)
+
+C'est une jointure dans laquelle une table est jointe avec elle-même. Cela peut être utile pour comparer les lignes d'une même table.
+
 ```sql
-select c.YearValue , c.MonthValue, sum(montant)
-from calendrier c 
-left join 
-(select 
-o.OrderDate, d.unit_price * d.quantity as montant
-from order_details d
-left join orders o on o.OrderID = d.OrderID 
-left join employees y on y.employee_id = o.employee_id
-where LastName = 'Dodsworth') k on k.OrderDate = c.DateValue 
-group by c.YearValue , c.MonthValue 
+SELECT A.colonne, B.colonne
+FROM table A, table B
+WHERE A.id = B.id;
 ```
