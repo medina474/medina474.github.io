@@ -79,3 +79,4 @@ SELECT A.colonne, B.colonne
 FROM table A, table B
 WHERE A.id = B.id;
 ```
+![SQL Jointure](SQL_Joins.svg)
