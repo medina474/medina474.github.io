@@ -2,6 +2,7 @@
 title: Opérateurs bit-à-bit
 ---
 
+Les opérateurs bit-à-bit travaillent sur chacun des bits des opérandes.
 
 ## Inversion bit-à-bit
 

@@ -57,14 +57,6 @@ En savoir plus sur les [opérateurs logiques](logique)
 
 ## Opérateurs bit-à-bit
 
-Les opérateurs bit-à-bit travaillent sur chacun des bits des opérandes. la table de vérité des opérateurs &, |, and ^ est la suivante.
-
-a	| b	| a & b	| a \| b | a ^ b
----|---|---|---|---
-0	| 0	| 0	| 0	| 0
-0	| 1	| 0	| 1	| 1
-1	| 1	| 1	| 1	| 0
-1	| 0	| 0	| 1	| 1
 
 Supposons que la variable **a** a pour valeur 60 et que la variable **b** la valeur 13 alors :
 
@@ -91,23 +83,7 @@ Opérateur |	Description |	Exemple
 
 En savoir plus sur les [opérateurs bit-à-bit](bit)
 
-## Opérateurs d'affectation
 
-Les opérateurs d'affection combinent l'affectation simple aux autre opérateurs pour simplifier l'écriture d'une formule.
-
-Opérateur |	Description |	Opérateur | Équivalence
----|---|---|---
-=	| Opérateur d'affectation simple. Attribue les valeurs des opérandes de droite à l'opérande de gauche c = a + b attribuera la valeur de a + b à c
-+=	| Addition et affectation |	a += 5 | a = a + 5
--=	| Soustraction et affectation	| a -= 5 | a = a - 5
-*=	| Miltiplication et affectation	| a *= 5 | a = a * 5
-/=	| Division et affectation	| a /= 5 | a = a / 5
-%=	| Modulo et affectation	| a %= 5 | a = a % 5
-<<=	| Décallage à gauche et affectation	| a <<= 2 | a = a << 2
-\>>=	| Décallage à droite et affectation	| a >>= 2 | a = a >> 2
-&=	| Et binaire et affectation	| a &= 2 | a = a & 2
-^=	| Ou exclusif et affectation	| a ^= 2 | a = a ^ 2
-\|=	| Ou binaire et affectation	| a \|= 2 | a = a | 2
 
 ## Autres
 
