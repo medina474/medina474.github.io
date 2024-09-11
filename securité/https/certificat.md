@@ -102,3 +102,8 @@ Renvoyez le certificat sur le Raspberry
 Let's Encrypt est une autorité de certification. Cette autorité fournit des certificats gratuits X.509 pour le protocole cryptographique TLS au moyen d'un processus automatisé. La durée des certificats est limité et son soumis à un contrôle de l'hébergement et du nom de domaine.
 
 Installer le [paquet logiciel](/linux/paquet/) `certbot`.
+
+
+```
+certbot certificates
+```
