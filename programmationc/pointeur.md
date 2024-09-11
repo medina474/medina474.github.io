@@ -2,16 +2,7 @@
 title: Les pointeurs
 ---
 
-Qu'est-ce qu'un
-pointeur?
-C'est une variable qui
-contient l'adresse d'une
-autre variable.
-On dit que le pointeur pointe
-sur la variable.
 
-L'opérateur &.
-L'opérateur adresse & retourne l'adresse d'une variable en mémoire.
 
 Exemple :
 int i = 5;
@@ -19,7 +10,7 @@ printf'(" Voici i: %d\n",i);
 printf'(" Voici son adresse : %p\n",&i);
 
 Pour afficher l'adresse d'une variable ont utilise généralement %p qui affiche l'adresse en hexadécimal (4 octets).
-L'adresses d'une variable correspond à l'adresse de début de la variable dans la mémoire.
+
 
 Déclaration d'un pointeur.
 Une variable de type pointeur se déclare à l'aide de l'objet
@@ -28,6 +19,7 @@ Exemple :
 int *pi; // pi est un pointeur pointant sur un entier
 char *pc; // pc est un pointeur pointant sur un char
 float *pf; // pf est un pointeur pointant sur un float
+
 L'opérateur * désigne le contenu de l'adresse,
 Exemple :
 int *pi,X; // pi est un pointeur pointant sur un entier
@@ -130,58 +122,7 @@ carre(X,Y);
 free(X);free(Y); // on libère la mémoire allouées aux pointeurs
 ```
 
-## Les pointeurs et les tableaux.
 
-Le langage C gère un tableau comme un pointeur à la différence près qu'il réserve un emplacement dimensionné
-par la déclaration.
-Exemple : int T[50];
-int i, *pi, T[10];
-pi = &i; // *pi représente i car pi pointe sur i
-*pi = 0; // c'est équivalent à i = 0
-pi = &T[0]; // pi pointe maintenant sur le premier élément du tableau T
-// *pi représente T[0]
-*pi = 0; // équivalent à T[0] = 0;
-
-Les pointeurs et les tableaux.
-La déclaration de T[50] réserve en mémoire 50 entiers,
-mais nous avons en même temps un nouveau pointeur
-initialisé sur le début du tableau.
-Exemple :
-int *pi, T[10],X;
-pi = T; // pi pointe sur le début du tableau soit le premier élément
-*T = 0; // c'est équivalent à T[0] = 0
-*(T+2) = 5; // c'est équivalent à T[2] = 5
-*(pi+5) = 0; // équivalent à T[5] = 0;
-
-Les tableaux en mémoire : Tableaux de
-pointeurs
-Exemple : tableau 1 dimension
-char Tab1D[5];
-Exemple : tableau 2 dimensions avec des chaines de caractères
-char Tab2D [5][7] ={"UN","DEUX","TROIS","QUATRE","CINQ"};
-On alloue le maximum pour ne pas avoir de problèmes de débordement.
-Zones Mémoire Perdues
-
-Les tableaux en mémoire : Tableaux de pointeurs
-
-On déclare un tableau de pointeurs dans lequel chaque pointeur désigne l'adresse d'un autre tableau
-Exemple : tableau 2 dimensions avec des chaines de caractères
-char *Tab2D [5] ; 
-
-Les tableaux en mémoire : Tableaux de
-pointeurs
-
-```C
-char *Tab[] = { "UN" , "DEUX", "TROIS", "QUATRE", "CINQ"} ;
-Tab[0]  pointe sur "UN"
-Tab[1]  pointe sur "DEUX"
-*Tab[0]  retourne sur 'U' de "UN"
-*( Tab[0] + 1)  retourne sur 'N' de "UN"
-*( Tab[1] + 2)  retourne sur 'U' de "DEUX"
-```
-
-Attention:
-*Tab[4] + 1  retourne 'D' car *Tab[4]  'C' et 'C' + 1  'D'
 
 Pointeur de pointeur:
 Un pointeur de pointeur est un pointeur pointant sur un pointeur, pointant sur

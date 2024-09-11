@@ -9,11 +9,10 @@ Fonction SQL LAG()
 
 La fonction LAG() - l'une des fonctions de fenêtre de SQL, est un outil important pour la planification et l'analyse des tendances. 
 
-LesfonctionsSQL window, également appelées fonctions analytiques ou fonctions OVER, ajoutent une nouvelle dimension à l'analyse des données. Elles vous permettent d'inclure des agrégats ou des données provenant d'autres lignes à côté de la ligne actuelle.
+Les fonctions SQL window, également appelées fonctions analytiques ou fonctions OVER, ajoutent une nouvelle dimension à l'analyse des données. Elles vous permettent d'inclure des agrégats ou des données provenant d'autres lignes à côté de la ligne actuelle.
 
 La fonction LAG() vous permet de regarder "par la fenêtre" une ligne précédente et d'inclure ses données à côté de la ligne actuelle. Une fonction similaire, LEAD(), vous permet de vous projeter dans les lignes suivantes. En utilisant les fonctions LEAD() et LAG(), vous pouvez facilement inclure dans vos rapports des éléments utiles tels que des comparaisons d'une année sur l'autre.
 
-Si l'analyse des données vous tient à cœur, vous pouvez consulter le cours LearnSQL.fr'sFonctions de fenêtrage . Vous apprendrez en résolvant plus de 200 exercices interactifs guidés à l'aide d'une base de données réelle à laquelle vous accéderez via votre navigateur. Le cours dure environ 20 heures ; lorsque vous aurez terminé, vous pourrez utiliser vos nouvelles compétences pour dynamiser vos propres projets d'analyse de données.
 
 Que fait la fonction LAG() ?
 
@@ -25,15 +24,6 @@ Elle peut également être utilisée pour répondre à diverses questions. Quell
 
 Syntaxe de la fonction LAG()
 
-Dans sa forme la plus simple, la syntaxe de la fonction SQL LAG() est ...
-LAG(column_1) OVER (ORDER BY column_2)
-
-... où :
-
-    column_1 est le nom de la colonne que vous souhaitez inclure dans la ligne précédente.
-    OVER indique que vous utilisez une fonction de fenêtre ; ce mot-clé est obligatoire.
-    ORDER BY est également obligatoire lorsque vous utilisez LAG(). La séquence des lignes doit être prévisible, sinon la fonction n'a pas de sens. Toutefois, l'ordre choisi ne doit pas nécessairement être le même que celui du rapport final.
-    column_2 est la colonne que vous utilisez pour ordonner les lignes. Vous pouvez spécifier plus d'une colonne ici.
 
 SQL séquence d'abord vos données en utilisant les valeurs de la colonne_2. À chaque ligne, il revient à la ligne précédente de cette séquence et récupère la valeur de la colonne_1. Cette valeur est incluse avec toutes les autres données que vous avez demandées pour la ligne en cours.
 Exemple de base de la fonction LAG()

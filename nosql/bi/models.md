@@ -18,13 +18,13 @@ Le modèle en étoile est une structure simple où une table de faits est relié
 
 Le modèle flocon est une extension du modèle étoile. Dans ce modèle, certaines ou toutes les tables de dimensions sont **normalisées**, c’est-à-dire qu'elles sont subdivisées en plusieurs sous-tables pour éliminer les redondances. Le modèle est appelé "flocon" parce que la structure résultante a une forme plus complexe, semblable à celle d'un flocon de neige.
     
-### Caractéristiques du modèle flocon :
+### Caractéristiques du modèle flocon
 
 - **Normalisation** : Les tables de dimensions sont divisées en plusieurs sous-tables pour éliminer les données redondantes. Chaque sous-table représente une dimension spécifique.
 - **Complexité** : Les requêtes sont plus complexes à écrire et prennent plus de temps à s'exécuter car elles impliquent plusieurs jointures entre les tables de dimensions et sous-tables.
 - **Réduction de la redondance** : Le modèle flocon réduit la redondance des données dans les dimensions. Les tables étant normalisées, les données redondantes sont éliminées, ce qui réduit la taille des tables.
 
-#### Inconvénients :
+#### Inconvénients
 
 - **Requêtes plus lentes** : Le modèle flocon nécessite des jointures supplémentaires entre les tables, ce qui peut ralentir l’exécution des requêtes.
 - **Complexité accrue** : La structure est plus complexe à comprendre et à concevoir par rapport au modèle étoile.

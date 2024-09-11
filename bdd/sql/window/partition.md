@@ -17,8 +17,9 @@ La première chose à laquelle il faut s'intéresser est la syntaxe. Voici comme
 SELECT
     <column>,
     <window function=""> OVER(PARTITION BY <column> [ORDER BY <column>])
-FROM table;
-</column></column></window></column>
+    FROM table;
+</column></column></window>
+</column>
 ```
 
 Examinons un exemple qui utilise une clause PARTITION BY. Nous allons utiliser la table suivante appelée car_list_prices:

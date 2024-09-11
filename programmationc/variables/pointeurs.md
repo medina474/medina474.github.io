@@ -6,6 +6,7 @@ title: Pointeurs
 
 Sur un sytème 32 bits la taille d'un pointeur est de 4 octets (32 bits), sur un système 64 bits la taille d'un pointeur de de 8 octets (64 bits).
 
+
 ```C
 int score = 65040073;
 int *pointeur = &score;
@@ -94,7 +95,7 @@ int *pointeur = &score;
     <tspan x="0" y="294">10014</tspan>
     <tspan x="0" y="314">10015</tspan>
   </text>
-  <rect x="40" y="60" width="75" height="80" class="variable"/>
+  <rect x="40" y="60" width="80" height="80" class="variable"/>
   <text x="0" y="0">
     <tspan x="45" y="15">0000 1100</tspan>
     <tspan x="45" y="35">0100 0000</tspan>
@@ -135,8 +136,11 @@ Pour déclarer un pointeur il convient de spécifier aussi le type de la variabl
 
 Dans cette déclaration le pointeur `*pointeur` vise une variable de type `int`.
 
-L'opérateur `&` sur une variable existante permet de d'assigner au pointeur l'adresse de la variable cible.
+L'adresses d'une variable correspond à l'adresse de début de la variable dans la mémoire.
 
+### Opérateur Adresse de ...
+
+L'opérateur `&` sur une variable existante permet de d'assigner au pointeur l'adresse de la variable cible.
 
 Le format %p de `printf` permet d'afficher l'adresse mémoire d'un pointeur.
 
@@ -144,7 +148,9 @@ Le format %p de `printf` permet d'afficher l'adresse mémoire d'un pointeur.
 printf("%p\n", pointeur);
 ```
 
-Pour modifier la valeur d'une variable données en passant par le pointeur s'effectue en utilisant l'opérateur d"indérection `*`;
+### Opérateur contenu de ...
+
+Pour modifier la valeur d'une variable données en passant par le pointeur s'effectue en utilisant l'opérateur d"indirection `*`;
 
 ```C
 *pointeur = 66000000;
@@ -153,19 +159,76 @@ printf("%d\n", score);
 
 l'opérateur d'indirection `*` modifie la valeur ciblée par le pointeur, et non le pointeur lui-même.
 
+## Les pointeurs et les tableaux.
+
+Le langage C gère un tableau comme un pointeur à la différence près qu'il réserve un emplacement dimensionné
+par la déclaration.
+Exemple : int T[50];
+int i, *pi, T[10];
+pi = &i; // *pi représente i car pi pointe sur i
+*pi = 0; // c'est équivalent à i = 0
+pi = &T[0]; // pi pointe maintenant sur le premier élément du tableau T
+// *pi représente T[0]
+*pi = 0; // équivalent à T[0] = 0;
+
+## Tableaux.
+
+La déclaration de T[50] réserve en mémoire 50 entiers, mais nous avons en même temps un nouveau pointeur
+initialisé sur le début du tableau.
+
+```C
+int *pi, T[10], X;
+pi = T; // pi pointe sur le début du tableau soit le premier élément
+*T = 0; // c'est équivalent à T[0] = 0
+*(T+2) = 5; // c'est équivalent à T[2] = 5
+*(pi+5) = 0; // équivalent à T[5] = 0;
+```
+
+Les tableaux en mémoire = Tableaux de pointeurs
+
+Exemple : tableau 1 dimension
+
+```C
+char Tab1D[5];
+```
+
+Exemple : tableau 2 dimensions avec des chaines de caractères
+
+```C
+char Tab2D [5][7] = {"UN", "DEUX", "TROIS", "QUATRE", "CINQ"};
+```
+
+On alloue le maximum pour ne pas avoir de problèmes de débordement.
+Zones Mémoire Perdues
+
+
+On déclare un tableau de pointeurs dans lequel chaque pointeur désigne l'adresse d'un autre tableau
+Exemple : tableau 2 dimensions avec des chaines de caractères
+char *Tab2D [5] ; 
+
+```C
+char *Tab[] = { "UN" , "DEUX", "TROIS", "QUATRE", "CINQ"} ;
+Tab[0]  pointe sur "UN"
+Tab[1]  pointe sur "DEUX"
+*Tab[0]  retourne sur 'U' de "UN"
+*( Tab[0] + 1)  retourne sur 'N' de "UN"
+*( Tab[1] + 2)  retourne sur 'U' de "DEUX"
+```
+
+Attention:
+*Tab[4] + 1  retourne 'D' car *Tab[4] = 'C' et 'C' + 1 = 'D'
+
 ## Allocation dynamique
 
 Les allocations de mémoires pour les pointeurs sont réalisées dans une zone mémoire bien spécifique qui s’appelle le tas (heap) (cours INFO2).
 
-I L’allocation correspond à la réservation d’un bloc mémoire spécifique à votre programme par le gestionnaire de mémoire du système d’exploitation.
+- L’allocation correspond à la réservation d’un bloc mémoire spécifique à votre programme par le gestionnaire de mémoire du système d’exploitation.
+- Cette opération est qualifiée d’allocation dynamique car la taille du bloc est modifiable à tout instant dans votre programme.
+- La gestion de l’allocation mémoire se fait grˆace aux 3 fonctions suivantes :
 
-I Cette opération est qualifiée d’allocation dynamique car la taille du bloc est modifiable à tout instant dans votre programme.
-
-I La gestion de l’allocation mémoire se fait grˆace aux 3 fonctions suivantes :
-
-X malloc et calloc : demande de mémoire du programme au système d’exploitation ;
-X realloc : changement de la taille du bloc mémoire alloué (en + ou en -) ;
-X free : libération du bloc mémoire lorsqu’il n’est plus utilisé.
+- malloc et calloc : demande de mémoire du programme au système d’exploitation ;
+- realloc : changement de la taille du bloc mémoire alloué (en + ou en -) ;
+- free : libération du bloc mémoire lorsqu’il n’est plus utilisé.
 
 Afin de pouvoir gérer la mémoire dynamiquement en utilisant ces fonctions, il faut inclure stdlib.h.
 
@@ -227,7 +290,7 @@ void *free(void *pointeur);
 
 Cette fonction permet de libérer l’espace mémoire alloué par les 3 fonctions précédentes.
 
-Il est important de libérer l’espace après utilisation, sinon celui-ci devient inutilisable pour la suite du programme ! ! ! !
+Il est important de libérer l’espace après utilisation, sinon celui-ci devient inutilisable pour la suite du programme ! ! 
 
 
 ```C
