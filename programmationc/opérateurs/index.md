@@ -57,14 +57,6 @@ En savoir plus sur les [opérateurs logiques](logique)
 
 ## Opérateurs bit-à-bit
 
-Les opérateurs bit-à-bit travaillent sur chacun des bits des opérandes. la table de vérité des opérateurs &, |, and ^ est la suivante.
-
-a	| b	| a & b	| a \| b | a ^ b
----|---|---|---|---
-0	| 0	| 0	| 0	| 0
-0	| 1	| 0	| 1	| 1
-1	| 1	| 1	| 1	| 0
-1	| 0	| 0	| 1	| 1
 
 Supposons que la variable **a** a pour valeur 60 et que la variable **b** la valeur 13 alors :
 

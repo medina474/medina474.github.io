@@ -84,12 +84,9 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 ### Opérateurs
 
 - [Opérateurs d'affectation](opérateurs/affectation)
-- Opérateurs arithmétiques
-- Opérateurs d'incrémentation et de décrémentation
-- [Opérateurs logiques]((opérateurs/logique)
-- [Opérateurs bit à bit](bit)
-- Opérateurs combinés
-- Opérateurs relationnels
+- [Opérateurs arithmétiques](opérateurs/arithmétiques)
+- [Opérateurs logiques](opérateurs/logique)
+- [Opérateurs bit à bit](opérateurs/bit)
 
 - [Les pointeurs](variables/pointeurs)
 - [Les chaines de caractères](string)
