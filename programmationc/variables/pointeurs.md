@@ -95,7 +95,7 @@ int *pointeur = &score;
     <tspan x="0" y="294">10014</tspan>
     <tspan x="0" y="314">10015</tspan>
   </text>
-  <rect x="40" y="60" width="80" height="80" class="variable"/>
+  <rect x="40" y="60" width="90" height="80" class="variable"/>
   <text x="0" y="0">
     <tspan x="45" y="15">0000 1100</tspan>
     <tspan x="45" y="35">0100 0000</tspan>
@@ -114,7 +114,7 @@ int *pointeur = &score;
     <tspan x="45" y="295">0110 0000</tspan>
     <tspan x="45" y="315">0000 0000</tspan>
   </text>
-  <rect x="40" y="1" width="75" height="320" class="rect"/>
+  <rect x="40" y="1" width="90" height="320" class="rect"/>
   <path d="M40,20h75 M40,40h75 M40,60h75 M40,80h75 M40,100h75 M40,120h75 M40,140h75 M40,160h75  M40,180h75  M40,200h75  M40,220h75  M40,240h75  M40,260h75  M40,280h75  M40,300h75" class="ligne"/>
   <path
      style="fill:none;stroke:#000;stroke-width:1.5px;stroke-opacity:1"
@@ -138,11 +138,17 @@ Dans cette déclaration le pointeur `*pointeur` vise une variable de type `int`.
 
 L'adresses d'une variable correspond à l'adresse de début de la variable dans la mémoire.
 
+```c
+int *pi;   // pi est un pointeur pointant sur un entier
+char *pc;  // pc est un pointeur pointant sur un char
+float *pf; // pf est un pointeur pointant sur un float
+```
+
 ### Opérateur Adresse de ...
 
 L'opérateur `&` sur une variable existante permet de d'assigner au pointeur l'adresse de la variable cible.
 
-Le format %p de `printf` permet d'afficher l'adresse mémoire d'un pointeur.
+Le format %p de `printf` permet d'afficher l'adresse mémoire en hexadécimal d'un pointeur.
 
 ```C
 printf("%p\n", pointeur);
@@ -159,17 +165,7 @@ printf("%d\n", score);
 
 l'opérateur d'indirection `*` modifie la valeur ciblée par le pointeur, et non le pointeur lui-même.
 
-## Les pointeurs et les tableaux.
 
-Le langage C gère un tableau comme un pointeur à la différence près qu'il réserve un emplacement dimensionné
-par la déclaration.
-Exemple : int T[50];
-int i, *pi, T[10];
-pi = &i; // *pi représente i car pi pointe sur i
-*pi = 0; // c'est équivalent à i = 0
-pi = &T[0]; // pi pointe maintenant sur le premier élément du tableau T
-// *pi représente T[0]
-*pi = 0; // équivalent à T[0] = 0;
 
 
 ## Allocation dynamique
@@ -298,7 +294,53 @@ int main (int argc, char *argv[])
 }
 ```
 
+## L'arithmétique des pointeurs
+
+On peut déplacer un pointeur dans la mémoire à l'aide des opérateurs d'addition, de soustraction, d'incrémentation, de décrémentation.
+
+On ne peut le déplacer que d'un nombre de cases mémoire multiple de la taille définit lors de la déclaration.
+
+```c
+int *pi = malloc(100 * sizeof(int));
+char *pc = malloc(100 * sizeof(char));
+*pi = 5;
+*pc = 'A';
+
+*(pi+1) = 200; // 200 est de contenu de la case mémoire 4 octets après pi
+*(pi+2) = 500; // 500 est le contenu de la case mémoire 8 octets après pi
+
+
+*pc = 'A'; // la case mémoire pc contient le code ASCII de A = 65
+pc--; // on décrémente la valeur du pointeur pc de 1
+*pf = 1.5; // 1,5 est stocké dans la case mémoire pf et les 4
+// suivantes
+pf++; // on incrémente la valeur du pointeur pf de 4 cases
+//mémoires qui correspond à la taille d'un float
+int *pi,*qi,i;
+pi = qi; // autorisé
+
+i = pi + qi; // interdit : on ne peut pas additionner deux pointeurs
+// ça n'a pas de sens
+
+i = pi-qi; // autorisé : donne le nombre d'objets entre les deux
+// pointeurs
+
+I = pi*qi; // interdit : on ne peut pas multiplier deux pointeurs
+// ça n'a pas de sens
+```
 ## Utilisation des pointeurs
+
+## Les pointeurs et les tableaux.
+
+Le langage C gère un tableau comme un pointeur à la différence près qu'il réserve un emplacement dimensionné
+par la déclaration.
+Exemple : int T[50];
+int i, *pi, T[10];
+pi = &i; // *pi représente i car pi pointe sur i
+*pi = 0; // c'est équivalent à i = 0
+pi = &T[0]; // pi pointe maintenant sur le premier élément du tableau T
+// *pi représente T[0]
+*pi = 0; // équivalent à T[0] = 0;
 
 ## Tableaux.
 

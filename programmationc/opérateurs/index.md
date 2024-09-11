@@ -55,34 +55,9 @@ Opérateur |	Description |	Exemple
 
 En savoir plus sur les [opérateurs logiques](logique)
 
-## Opérateurs bit-à-bit
-
-
 Supposons que la variable **a** a pour valeur 60 et que la variable **b** la valeur 13 alors :
-
-a = 0011 1100\
-b = 0000 1101
-
-
-a&b = 0000 1100
-a|b = 0011 1101
-a^b = 0011 0001
-~a = 1100 0011
-
-Supposons que la variable **a** a pour valeur 60 et que la variable **b** la valeur 13 alors :
-
-
-Opérateur |	Description |	Exemple
----|---|---
-&	| L'opérateur **ET binaire** copie un bit dans le résultat s'il existe dans les deux opérandes.	| (A & B) = 12, i.e., 0000 1100
-\|	| L'opérateur **OU binaire** copie un bit s'il existe dans l'un ou l'autre des opérandes.	| (A \| B) = 61, i.e., 0011 1101
-^	| L'opérateur **XOR binaire** copie le bit s'il est défini dans un opérande mais pas dans les deux.	| (A ^ B) = 49, i.e., 0011 0001
-~	| L'opérateur de complément est unaire et a pour effet de "basculer" les bits.	| (~a ) = ~(60), i.e,. -0111101
-\<\<	| Opérateur de **décalage binaire à gauche**. La valeur des opérandes de gauche est déplacée vers la gauche du nombre de bits spécifié par l'opérande de droite.	| a << 2 = 240 i.e., 1111 0000
-\>\>	| Opérateur de **décalage binaire vers la droite**. La valeur des opérandes de gauche est déplacée vers la droite du nombre de bits spécifié par l'opérande de droite.	| a >> 2 = 15 i.e., 0000 1111
 
 En savoir plus sur les [opérateurs bit-à-bit](bit)
-
 
 
 ## Autres
