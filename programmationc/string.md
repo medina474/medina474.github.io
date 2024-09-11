@@ -1,6 +1,53 @@
 ---
-title: String
+title: chaîne de caractères
 ---
+
+Les chaînes de caractères en C sont des séquences d'octets terminées par un caractère spécial appelé le caractère nul (\0). Contrairement à d'autres langages de programmation qui ont des types dédiés pour les chaînes (comme string en Python ou Java), en C, les chaînes de caractères sont simplement des **tableaux de caractères** (type char).
+
+Les tableaux étant aussi des pointeurs, les chaînes de caractères sont des pointeurs.
+
+### Tableau de caractères
+
+Une chaîne de caractères est déclarée comme un tableau de type char, où chaque élément représente un caractère, et la dernière position du tableau contient le caractère nul (\0).
+
+```C
+char nom[10] = "Alice"; // Déclare un tableau de 10 caractères
+```
+#### Accès aux caractères
+
+Les caractères individuels d'une chaîne peuvent être accédés via leur index, comme pour tout tableau :
+
+```C
+printf("%c", nom[0]);  // Affiche 'A'
+```
+
+### Fonctions de manipulation
+
+La bibliothèque standard de C (<string.h>) fournit plusieurs fonctions pour manipuler les chaînes de caractères, telles que :
+
+- strlen() : Calculer la longueur de la chaîne (sans compter le caractère nul).
+- strcpy() : Copier une chaîne dans une autre (=).
+- strcmp() : Comparer deux chaînes (==).
+- strcat() : Concaténer deux chaînes (+).
+
+> NE JAMAIS faire d'opération sur les chaines de caractère = + ==. Il faut utiliser les fonctions prévues pour la manipulation des chaînes.
+
+```C
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char chaine1[20] = "Bonjour";
+    char chaine2[20] = " le monde";
+    strcat(chaine1, chaine2);  // Concatène chaine2 à la fin de chaine1
+    printf("%s\n", chaine1);   // Affiche "Bonjour le monde"
+    return 0;
+}
+```
+
+Mémoire : Il est important de noter que les chaînes de caractères en C **ne sont pas redimensionnables dynamiquement** (comme les chaînes en Python). Vous devez allouer une taille suffisante lors de la déclaration ou utiliser l'allocation dynamique avec malloc pour gérer les chaînes plus grandes.
+
+En résumé, bien que les chaînes de caractères en C soient simples, elles nécessitent une gestion **explicite** de la mémoire et une **compréhension approfondie** des tableaux et des pointeurs.
 
 ## Saisie de chaine de caractères
 
@@ -10,18 +57,19 @@ La fonction scanf est prévue pour faire de la saisie de valeurs formatée. C’
 # include < stdio .h >
 int main (int argc , char *argv[])
 {
-i n t nombre ,* pNombre ;
-pNombre = ( i n t *) malloc ( s i z e o f ( i n t ) ) ;
-scanf ("%d" ,& nombre ) ;
-scanf ("%d",pNombre ) ;
-printf (" Nombre 1 : %d\ nNombre 2 : %d",nombre ,* pNombre ) ;
+  int nombre ,* pNombre ;
+  pNombre = (int *) malloc ( sizeof (int) );
+  
+  scanf ("%d" ,&nombre);
+  scanf ("%d",pNombre);
+  
+  printf (" Nombre 1 : %d\ nNombre 2 : %d",nombre ,* pNombre ) ;
 }
 ```
 
-
 Pour que la fonction scanf puisse s’occuper de la saisie des chaînes de caractères, il faut utiliser le format %s.
-Une chaîne de caractères étant définie comme un pointeur, on ne met pas le
-& devant la variable à saisir.
+
+Une chaîne de caractères étant définie comme un pointeur, on ne met pas le & devant la variable à saisir.
 
 ```C
 # include < stdio .h >
@@ -35,20 +83,6 @@ int main (int argc , char *argv[])
 
 A la fin de la saisie, le caractère ’\0’ est ajouté automatiquement.
 
-
-Pour que le fonction scanf puisse s’occuper de la saisie des chaînes de caractères, il faut utiliser le format %s.
-
-Une chaîne de caractères étant déja définie comme un pointeur, on ne met pas l'opérateur `&` devant la variable à saisir.
-
-```C
-# include < stdio .h >
-int main (int argc , char *argv[])
-{
-  char texte[20];
-  scanf ("%s",texte ) ;
-  printf (" Texte saisi : %s",texte ) ;
-}
-```
 
 > ATTENTION : scanf ne permet pas la saisie d'une chaîne comportant des espaces.
 ⇒ Les caractères saisis à partir de l’espace ne sont pas pris en compte mais restent rangés dans le tampon
@@ -57,43 +91,39 @@ d’entrée.
 
 A la fin de la saisie, le caractère ’\0’ est ajouté automatiquement.
 
-M’sieur, c’est quoi le tampon d’entrée ?
+### Le tampon d’entrée ?
 
 Lorsque vous tapez au clavier, chaque caractère est écrit dans un tampon (buffer en anglais). C’est dans ce tampon que scanf ira lire ;
 
-Tout ce qui n’est pas lu
-sera lu au prochain appel d’une fonction de lecture. Ainsi, si le tampon est plein, le scanf
-prend le contenu commeci cela venait d’une saisie
-opérateur ;
+Tout ce qui n’est pas lu sera lu au prochain appel d’une fonction de lecture. Ainsi, si le tampon est plein, le scanf prend le contenu comme ci cela venait d’une saisie opérateur ;
 
 Le buffer d’entrée en langage C se nomme stdin.
-Tampon
-”Bonjour je m’appelle Bernard”
-Mémoire
-”Bonjour\0”
+
 Le tampon est géré par le système d’exploitation
 La mémoire est géré par le programme. Elle ne
-contient que ce qui est lu
-par le scanf scanf va lire le tampon et placer ce qu’elle a lu en mémoire.
+contient que ce qui est lu par le scanf scanf va lire le tampon et placer ce qu’elle a lu en mémoire.
 
- : Comment on fait alors m’sieur ?
+Utilisation particulière
+
 On utilise un format particulier de la fonction scanf
-On peut faire suivre le symbole % d’une liste de caractères entre crochets à la
-place du s. Celle-ci peut être une liste de caractères interdits.
-Ainsi, scanf lit alors jusqu’à ce qu’elle tombe sur un caractère interdit. Ce
-caractère est principalement le retour chariot.
+On peut faire suivre le symbole % d’une liste de caractères entre crochets à la place du s. Celle-ci peut être une liste de caractères interdits.
+
+Ainsi, scanf lit alors jusqu’à ce qu’elle tombe sur un caractère interdit. Ce caractère est principalement le retour chariot.
 
 ```C
 # include < stdio .h >
+
 int main (int argc , char *argv[])
 {
-c h a r nom [20];
-scanf (" %[ˆ\ n]",nom) ; // lecture des caractères ( espace compris ) jusqu ’au retour chariot
+  char nom[20];
+  scanf (" %[ˆ\n]", nom) ; // lecture des caractères ( espace compris ) jusqu ’au retour chariot
 }
 ```
 
 
 On peut aussi ajouter une plage de caractères autorisés.
+
+```C
 c h a r formule [];
 scanf (" %[[0123456789/* -+=() ]ˆ\n]",formule ) ; // pour saisir des formules
 c h a r voyelles [];
@@ -103,8 +133,10 @@ scanf ("%[[a-z]ˆ\n]",voyelles ) ; // les lettres de l’alphabet en minuscule
 c h a r nom [];
 scanf ("%[[A-Z]ˆ\n]",voyelles ) ; // les lettres de l’alphabet en majuscule
 int main (int argc , char *argv[])
-Dans ce cas, la saisie s’arrête avec le retour chariot mais la phrase mise en
-mémoire par le scanf sera stoppée au premier caractère en dehors de la plage.
+```C
+
+Dans ce cas, la saisie s’arrête avec le retour chariot mais la phrase mise en mémoire par le scanf sera stoppée au premier caractère en dehors de la plage.
+
 Exemple avec les voyelles
 
 
