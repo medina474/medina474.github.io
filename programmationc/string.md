@@ -124,20 +124,23 @@ int main (int argc , char *argv[])
 On peut aussi ajouter une plage de caractères autorisés.
 
 ```C
-c h a r formule [];
+char formule [];
 scanf (" %[[0123456789/* -+=() ]ˆ\n]",formule ) ; // pour saisir des formules
-c h a r voyelles [];
+
+char voyelles [];
 scanf ("%[[ aeiouy ]ˆ\n]",voyelles ) ; // pour saisir uniquement des voyelles
-c h a r nom [];
+
+char nom [];
 scanf ("%[[a-z]ˆ\n]",voyelles ) ; // les lettres de l’alphabet en minuscule
-c h a r nom [];
+
+char nom [];
 scanf ("%[[A-Z]ˆ\n]",voyelles ) ; // les lettres de l’alphabet en majuscule
+
 int main (int argc , char *argv[])
 ```C
 
 Dans ce cas, la saisie s’arrête avec le retour chariot mais la phrase mise en mémoire par le scanf sera stoppée au premier caractère en dehors de la plage.
 
-Exemple avec les voyelles
 
 
 ## Manipulation

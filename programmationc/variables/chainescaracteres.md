@@ -3,13 +3,13 @@ title: Chaines de caracteres
 ---
 
 En langage C le tableau se comporte comme un pointeur aux différences suivantes :
-I La réservation de la zone mémoire est dimensionnée par sa déclaration
-(ex : int tab[100]) ;
-I Cette zone mémoire ne peut pas être redimensionnée. On dit alors que la
-taille du tableau est statique.
 
-Si je déclare int tab[100], alors tab (le nom du tableau) est un pointeur
-contenant l’adresse du premier élément du tableau.
+La réservation de la zone mémoire est dimensionnée par sa déclaration
+(ex : int tab[100]) ;
+
+Cette zone mémoire ne peut pas être redimensionnée. On dit alors que la taille du tableau est statique.
+
+Si je déclare int tab[100], alors tab (le nom du tableau) est un pointeur contenant l’adresse du premier élément du tableau.
 tab = &tab[0];
 *tab = *(&tab[0]) = tab[0];
 

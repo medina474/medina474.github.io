@@ -82,7 +82,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Les variables](variables)
 - [Les pointeurs](variables/pointeurs)
 - [Les chaines de caractères](string)
-- [Les structures](structure)
+- [Les structures](variables/structure)
 - [Les fichiers](fichier)
 
 
