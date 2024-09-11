@@ -2,7 +2,9 @@
 title: Perfectionnement en langage C
 ---
 
-Le langage C reste aujourd'hui très utilisé, notamment pour le développement des systèmes d'exploitation, des logiciels embarqués et des applications nécessitant des performances élevées. Sa simplicité, sa proximité avec le matériel et sa portabilité sont les principales raisons de son succès durable.
+> Le langage C reste aujourd'hui très utilisé, notamment pour le développement des systèmes d'exploitation, des logiciels embarqués et des applications nécessitant des performances élevées. Sa simplicité, sa proximité avec le matériel et sa portabilité sont les principales raisons de son succès durable.
+
+## Histoire
 
 Le langage C a été créé au début des années 1970 par Dennis Ritchie aux laboratoires Bell (AT&T) pour réécrire le système d'exploitation UNIX, qui était initialement en langage d'assemblage.
 
@@ -12,7 +14,7 @@ La première version du C était étroitement liée à UNIX. Son adoption rapide
 
 ### K & R C (1978)
 
-En 1978, Brian Kernighan et Dennis Ritchie publient le livre de référence "The C Programming Language". C'est la première formalisation du langage C. Ce standard a dominé jusqu'au milieu des années 1980. Il introduisait des concepts tels que les types de données, les structures
+En 1978, Brian Kernighan et Dennis Ritchie publient le livre de référence "The C Programming Language". C'est la première formalisation du langage C. Ce standard a dominé jusqu'au milieu des années 1980. Il introduisait des concepts tels que les types de données, les structures.
 
 ### ANSI C (1989) ou C89
 
@@ -78,11 +80,10 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 
 
 - [Les variables](variables)
-- [Les pointeurs](pointeur)
+- [Les pointeurs](variables/pointeurs)
 - [Les chaines de caractères](string)
 - [Les structures](structure)
 - [Les fichiers](fichier)
-
 
 
 ## Opérateurs 
@@ -96,49 +97,3 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - Opérateurs relationnels
 
 - [math](math)
-
-Opérateurs de conversion de type
-
-
-Les Opérateurs
-
-Les Opérateurs relationnels :
-
-Ils sont utilisés pour les structures conditionnelles, de choix et itératives. Ils permettent de comparer une variable par rapport à une autre variable ou à une valeur ou une expression. Le résultat ne peut être que VRAI ou FAUX.
-
-FAUX : false correspond à 0
-VRAI : true correspond à toute valeur ≠ 0
-!
-
-Les Opérateurs
-Les Opérateurs logiques :
-Ils sont utilisés exactement comme les opérateurs relationnels.
-
-Les Opérateurs
- :
-Exemple :
-Résultat :
-
-Les Opérateurs
-L'Opérateur de conversion de type :
-Ils existe deux conversions possibles:
- La conversion implicite :
-Elle est effectuée pour évaluer le même type de données lors d'évaluation
-d'expressions. Les conversions systématiques de char en int, en float, en
-double, la conversion se fait toujours du type le plus petit vers le plus
-long.
- La conversion explicite :
-On peut changer le type d'une variable vers un autre type en utilisant
-l'opérateur cast (type) en le mettant devant l'identificateur de la variable
-à convertir.
-Les Opérateurs
-L'opérateur de conversion de type :
-Exemple :
-Résultat :
-!
-Les Opérateurs
-La priorité
-des opérateurs :
-
-https://www.doc.ic.ac.uk/lab/cplus/cstyle.html
-https://www.digikey.fr/fr/resources/conversion-calculators/conversion-calculator-resistor-color-code

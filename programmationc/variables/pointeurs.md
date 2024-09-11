@@ -171,6 +171,135 @@ pi = &T[0]; // pi pointe maintenant sur le premier élément du tableau T
 // *pi représente T[0]
 *pi = 0; // équivalent à T[0] = 0;
 
+
+## Allocation dynamique
+
+> La déclaration d'un pointeur n'engendre pas de réservation en mémoire.
+
+Les allocations de mémoires pour les pointeurs sont réalisées dans une zone mémoire bien spécifique qui s’appelle le tas (heap) (cours INFO2).
+
+- L’allocation correspond à la réservation d’un bloc mémoire spécifique à votre programme par le gestionnaire de mémoire du système d’exploitation.
+- Cette opération est qualifiée d’allocation dynamique car la taille du bloc est modifiable à tout instant dans votre programme.
+- La gestion de l’allocation mémoire se fait grˆace aux 3 fonctions suivantes :
+
+- malloc et calloc : demande de mémoire du programme au système d’exploitation ;
+- realloc : changement de la taille du bloc mémoire alloué (en + ou en -) ;
+- free : libération du bloc mémoire lorsqu’il n’est plus utilisé.
+
+Afin de pouvoir gérer la mémoire dynamiquement en utilisant ces fonctions, il faut inclure stdlib.h.
+
+La déclaration d’un pointeur n’engendre pas de réservation mémoire. Si on ne réserve pas d’emplacement mémoire, il y a risque de débordement d’un pointeur dans les données voisines, donc de plantage du programme.
+
+
+### malloc
+
+```C
+void *malloc(size t taille);
+```
+
+Elle permet d’allouer un bloc de mémoire de taille octets dans la zone de mémoire appelée tas (heap), réservée aux données ;
+
+Le bloc de données n’est pas initialisé lors de l’allocation ;
+
+Elle renvoie un pointeur de type void (permettant de gérer les adresses de données de tous types). Il convient donc de le convertir en un type de données déterminé (cast) ;
+
+Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si taille vaut 0, elle renvoie un pointeur nul : NULL.
+
+```C
+int *p;
+
+p = (int *) malloc(10 * sizeof(int)); 
+// réservation pour 10 entiers
+
+if ( p== NULL) // test création du pointeur
+{
+  printf("erreur d'allocation mémoire !!!");
+  // ici traitement de l'erreur ...
+}
+```
+
+### calloc
+
+```C
+void *calloc(size t nombre, size t tailleType);
+```
+
+Elle permet d’allouer un bloc de mémoire de nombre ∗ tailleType octets dans la zone de mémoire appelée tas (heap), réservée aux données ;
+
+Le bloc de données est initialisé avec des 0 lors de l’allocation ;
+
+Elle renvoie un pointeur de type void (permettant de gérer les adresses de données de tous types). Il convient donc de le convertir en un type de données déterminé (cast) ;
+
+Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si taille vaut 0, elle renvoie un pointeur nul : NULL.
+
+```C
+int *p;
+p = (int *) calloc(10 , sizeof(int) ); 
+// réservation pour 10 entiers
+if ( p== NULL) // test création du pointeur
+{
+  printf("erreur d'allocation mémoire !!!");
+  // ici traitement de l'erreur ...
+}
+```
+
+### realloc
+
+```C
+void *realloc(void *pointeurBase, size t newTaille);
+```
+
+Elle permet de changer la taille d’un bloc de mémoire déjà alloué. Elle est le reflet de l’aspect dynamique des pointeurs ;
+
+Le paramètre newTaille correspond à l’addition de la taille de l’ancien bloc et de la taille du bloc supplémentaire à ajouter ;
+
+Le contenu du bloc précédant est gardé ⇒ pas besoin de gérer le copie ;
+
+Elle renvoie un pointeur de type void (permettant de gérer les adresses de données de tous types). Il convient donc de le convertir en un type de données déterminé (cast) ;
+
+Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si newTaille vaut 0, elle renvoie un pointeur nul : NULL.
+
+```C
+int *p;
+
+p = (int *) realloc( p , 20 * sizeof(int) );
+// réservation pour 10 entiers supplémentaires
+
+if ( p== NULL) // test création du pointeur
+{
+  printf("erreur d'allocation mémoire !!!");
+  // ici traitement de l'erreur ...
+} 
+```
+
+!!! ATTENTION, les données peuvent être déplacées si l'espace n'est pas suffisant !!!
+
+### Libération
+
+La fonction free
+
+```C
+void *free(void *pointeur);
+```
+
+Cette fonction permet de libérer l’espace mémoire alloué par les 3 fonctions précédentes.
+
+Il est important de libérer l’espace après utilisation, sinon celui-ci devient inutilisable pour la suite du programme ! ! 
+
+
+```C
+# include < stdio .h >
+
+int main (int argc, char *argv[])
+{
+  int *p;
+  ...
+  free(p); // libération de la mémoire occupée
+}
+```
+
+## Utilisation des pointeurs
+
 ## Tableaux.
 
 La déclaration de T[50] réserve en mémoire 50 entiers, mais nous avons en même temps un nouveau pointeur
@@ -216,90 +345,41 @@ Tab[1]  pointe sur "DEUX"
 ```
 
 Attention:
+
 *Tab[4] + 1  retourne 'D' car *Tab[4] = 'C' et 'C' + 1 = 'D'
 
-## Allocation dynamique
+### Passage de paramètres aux fonctions
 
-Les allocations de mémoires pour les pointeurs sont réalisées dans une zone mémoire bien spécifique qui s’appelle le tas (heap) (cours INFO2).
-
-- L’allocation correspond à la réservation d’un bloc mémoire spécifique à votre programme par le gestionnaire de mémoire du système d’exploitation.
-- Cette opération est qualifiée d’allocation dynamique car la taille du bloc est modifiable à tout instant dans votre programme.
-- La gestion de l’allocation mémoire se fait grˆace aux 3 fonctions suivantes :
-
-- malloc et calloc : demande de mémoire du programme au système d’exploitation ;
-- realloc : changement de la taille du bloc mémoire alloué (en + ou en -) ;
-- free : libération du bloc mémoire lorsqu’il n’est plus utilisé.
-
-Afin de pouvoir gérer la mémoire dynamiquement en utilisant ces fonctions, il faut inclure stdlib.h.
-
-La déclaration d’un pointeur n’engendre pas de réservation mémoire. Si on ne réserve pas d’emplacement mémoire, il y a risque de débordement d’un pointeur dans les données voisines, donc de plantage du programme.
-
-
-### malloc
-
-```C
-void *malloc(size t taille);
-```
-
-Elle permet d’allouer un bloc de mémoire de taille octets dans la zone de mémoire appelée tas (heap), réservée aux données ;
-
-Le bloc de données n’est pas initialisé lors de l’allocation ;
-
-Elle renvoie un pointeur de type void (permettant de gérer les adresses de données de tous types). Il convient donc de le convertir en un type de données déterminé (cast) ;
-
-Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si taille vaut 0, elle renvoie un pointeur nul : NULL.
-
-
-### calloc
-
-```C
-void *calloc(size t nombre, size t tailleType);
-```
-
-Elle permet d’allouer un bloc de mémoire de nombre ∗ tailleType octets dans la zone de mémoire appelée tas (heap), réservée aux données ;
-
-Le bloc de données est initialisé avec des 0 lors de l’allocation ;
-
-Elle renvoie un pointeur de type void (permettant de gérer les adresses de données de tous types). Il convient donc de le convertir en un type de données déterminé (cast) ;
-
-Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si taille vaut 0, elle renvoie un pointeur nul : NULL.
-
-### realloc
-
-```C
-void *realloc(void *pointeurBase, size t newTaille);
-```
-
-Elle permet de changer la taille d’un bloc de mémoire déjà alloué. Elle est le reflet de l’aspect dynamique des pointeurs ;
-
-Le paramètre newTaille correspond à l’addition de la taille de l’ancien bloc et de la taille du bloc supplémentaire à ajouter ;
-
-Le contenu du bloc précédant est gardé ⇒ pas besoin de gérer le copie ;
-
-Elle renvoie un pointeur de type void (permettant de gérer les adresses de données de tous types). Il convient donc de le convertir en un type de données déterminé (cast) ;
-
-Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si newTaille vaut 0, elle renvoie un pointeur nul : NULL.
-
-### Libération
-
-La fonction free
-
-```C
-void *free(void *pointeur);
-```
-
-Cette fonction permet de libérer l’espace mémoire alloué par les 3 fonctions précédentes.
-
-Il est important de libérer l’espace après utilisation, sinon celui-ci devient inutilisable pour la suite du programme ! ! 
-
-
-```C
-# include < stdio .h >
-
-int main (int argc, char *argv[])
+Exemple : Fonction qui prend un pointeur en paramètre d'entrée
+int carre(int *A)
 {
-  int *p;
-  ...
-  free(p); // libération de la mémoire occupée
+int Res;
+Res = (*A) * (*A); // équivalent à : *A**A ou * A * * A
+return (Res);
+}
+Void main(void)
+{
+int *X,Y;
+X = (int*)malloc(1*sizeof(int)); // initialisation du pointeur sur le tas
+// (heap) zone mémoire réservée aux
+// données
+*X = 2;
+Y = carre(X);
+}
+
+Les pointeurs avec une fonction.
+Exemple : Fonction qui prend un pointeur en paramètre d'entrée et retourne un pointeur.
+
+```C
+void carre(int *A)
+{
+  (*A) = (*A) * (*A); // équivalent à : *A**A ou * A * * A
+}
+
+Void main(void)
+{
+  int *X;
+  X = 2;
+  carre(&X);
 }
 ```
