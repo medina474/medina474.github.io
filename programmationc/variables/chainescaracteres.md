@@ -25,10 +25,9 @@ En se basant sur la relation de précédence alphabétique des caractères, nous
 pouvons définir une précédence lexicographique pour les chaînes de caractères.
 Cette relation de précédence qui suit l’ordre du dictionnaire est définie de la
 manière suivante :
-I La chaîne vide "" précède lexicographiquement toutes les autres chaînes ;
-I La chaîne A = a1a2...ap (p caractères) précède lexicographiquement la
-chaîne B = b1b2...bm (m caractères) si l’une des deux conditions suivantes
-est remplie :
+- La chaîne vide "" précède lexicographiquement toutes les autres chaînes ;
+- La chaîne A = a1a2...ap (p caractères) précède lexicographiquement la
+chaîne B = b1b2...bm (m caractères) si l’une des deux conditions suivantes est remplie :
 X a1 < b1 ;
 X a1 = b1 et a2a3...ap précède lexicographiquement b2b3...bm
 
@@ -36,8 +35,7 @@ X a1 = b1 et a2a3...ap précède lexicographiquement b2b3...bm
 • "ABC" précède "B" car ’A’<’B’ ;
 • "Abc" précède "abc" car ’A’<’a’ ;
 • "ab" précède "abcd" car "" précède "cd" ;
-• " ab" précède "ab" car ’ ’<’a’ (le code ASCII de ’ ’ est 32, et le
-code ASCII de ’a’ est 97).
+• " ab" précède "ab" car ’ ’<’a’ (le code ASCII de ’ ’ est 32, et le code ASCII de ’a’ est 97).
 Il ne faut pas oublier que l’ordinateur travaille avec les codes ASCII ! ! !
 
 Contrairement aux langage plus évolués (Java, C++, PHP, ...), il n’existe
