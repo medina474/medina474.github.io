@@ -34,6 +34,15 @@ Avant d’essayer de supprimer des lignes, il est recommandé d’effectuer une 
 
 ## Modifier des données
 
+La commande UPDATE en SQL permet de modifier des données existantes dans une table. Elle est utilisée pour mettre à jour une ou plusieurs lignes d'une table en modifiant les valeurs de colonnes spécifiques, selon des conditions données.
+
+```sql
+UPDATE nom_table
+SET colonne1 = nouvelle_valeur1, colonne2 = nouvelle_valeur2, ...
+WHERE condition;
+```
+
+Il est toujours recommandé d’utiliser une condition WHERE appropriée pour éviter des modifications involontaires.
 
 ## Upsert
 
