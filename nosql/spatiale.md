@@ -121,11 +121,12 @@ Le type de données que vous choisissez doit être déterminé par la zone de tr
 Créer un table aeroports contenant un nom une colonne de type point
 
 Ajouter les éléments suivant
-A  Point(5, 6)
-B  Point(9, 17)
-C  Point(13, 4)
-D  Point(8, 11)
-E  Point(1, 4)
+
+- A  Point(5, 6)
+- B  Point(9, 17)
+- C  Point(13, 4)
+- D  Point(8, 11)
+- E  Point(1, 4)
 
 Quelles est la distance entre chaque points ?
 
