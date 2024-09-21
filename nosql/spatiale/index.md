@@ -28,22 +28,24 @@ Points : Représentent des emplacements précis (ex. emplacements de capteurs, a
 Lignes : Représentent des entités linéaires (ex. routes, rivières).
     
 Polygones : Représentent des surfaces (ex. limites de villes, zones de conservation).
-SROD
-
-ESPG
 
 
-4.3.3. When to use the Geography data type
 
-The geography data type allows you to store data in longitude/latitude coordinates, but at a cost: there are fewer functions defined on GEOGRAPHY than there are on GEOMETRY; those functions that are defined take more CPU time to execute.
+### Quand utiliser le type de données Géographie
 
-The data type you choose should be determined by the expected working area of the application you are building. Will your data span the globe or a large continental area, or is it local to a state, county or municipality?
+Le type de données géographie permet de stocker des données en coordonnées longitude/latitude, mais à un coût : il y a moins de fonctions définies sur GEOGRAPHY que sur GEOMETRY ; les fonctions qui sont définies demandent plus de temps de traitement CPU pour être exécutées.
 
-    If your data is contained in a small area, you might find that choosing an appropriate projection and using GEOMETRY is the best solution, in terms of performance and functionality available.
+Le type de données que vous choisissez doit être déterminé par la zone de travail prévue de l'application que vous développez. Vos données couvriront-elles le globe ou une grande région continentale, ou sont-elles locales à un État, un comté ou une municipalité ?
 
-    If your data is global or covers a continental region, you may find that GEOGRAPHY allows you to build a system without having to worry about projection details. You store your data in longitude/latitude, and use the functions that have been defined on GEOGRAPHY.
+- Si vos données sont contenues dans une petite zone, vous pourriez constater que choisir une projection appropriée et utiliser GEOMETRY est la meilleure solution en termes de performance et de fonctionnalités disponibles.
 
-    If you don't understand projections, and you don't want to learn about them, and you're prepared to accept the limitations in functionality available in GEOGRAPHY, then it might be easier for you to use GEOGRAPHY than GEOMETRY. Simply load your data up as longitude/latitude and go from there.
+- Si vos données sont globales ou couvrent une région continentale, vous pourriez constater que GEOGRAPHY vous permet de construire un système sans avoir à vous soucier des détails de projection. Vous stockez vos données en longitude/latitude et utilisez les fonctions définies sur GEOGRAPHY.
+
+- Si vous ne comprenez pas les projections et que vous ne voulez pas en apprendre davantage, et que vous êtes prêt à accepter les limitations des fonctionnalités disponibles dans GEOGRAPHY, il pourrait être plus simple pour vous d'utiliser GEOGRAPHY plutôt que GEOMETRY. Il vous suffit de charger vos données en longitude/latitude et de partir de là.
 
 :SIG
   Système d'information géographique contient des données alphanumériques et des données spatiales.
+
+SROD
+
+ESPG
