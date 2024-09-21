@@ -62,3 +62,9 @@ D  Point(8, 11)
 E  Point(1, 4)
 
 Quelles est la distance entre chaque points ?
+
+Créer une table perimetre contenant un nom et une colonne de type polygon
+
+A 8,9 10,12 7,6
+
+Quels sont les aéroports dans la zone ?
