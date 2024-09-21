@@ -30,41 +30,11 @@ Lignes : Représentent des entités linéaires (ex. routes, rivières).
 Polygones : Représentent des surfaces (ex. limites de villes, zones de conservation).
 
 
+ogr2ogr -append -lco GEOMETRY_NAME=the_geom -lco SCHEMA=public -f "PostgreSQL" PG:"host=atelier.neotechweb.net port=5432 user=i2m dbname=i2m password=iutstdie18" -a_srs "EPSG:4326" -nln bound FRA_adm.gpkg
 
-### Quand utiliser le type de données Géographie
-
-Le type de données géographie permet de stocker des données en coordonnées longitude/latitude, mais à un coût : il y a moins de fonctions définies sur GEOGRAPHY que sur GEOMETRY ; les fonctions qui sont définies demandent plus de temps de traitement CPU pour être exécutées.
-
-Le type de données que vous choisissez doit être déterminé par la zone de travail prévue de l'application que vous développez. Vos données couvriront-elles le globe ou une grande région continentale, ou sont-elles locales à un État, un comté ou une municipalité ?
-
-- Si vos données sont contenues dans une petite zone, vous pourriez constater que choisir une projection appropriée et utiliser GEOMETRY est la meilleure solution en termes de performance et de fonctionnalités disponibles.
-
-- Si vos données sont globales ou couvrent une région continentale, vous pourriez constater que GEOGRAPHY vous permet de construire un système sans avoir à vous soucier des détails de projection. Vous stockez vos données en longitude/latitude et utilisez les fonctions définies sur GEOGRAPHY.
-
-- Si vous ne comprenez pas les projections et que vous ne voulez pas en apprendre davantage, et que vous êtes prêt à accepter les limitations des fonctionnalités disponibles dans GEOGRAPHY, il pourrait être plus simple pour vous d'utiliser GEOGRAPHY plutôt que GEOMETRY. Il vous suffit de charger vos données en longitude/latitude et de partir de là.
-
-:SIG
-  Système d'information géographique contient des données alphanumériques et des données spatiales.
+https://guides.codepath.com/android/Genymotion-2.0-Emulators-with-Google-Play-support
+http://opengapps.org/
 
 SROD
 
 ESPG
-
-### Exercices
-
-Créer un table aeroports contenant un nom une colonne de type point
-
-Ajouter les éléments suivant
-A  Point(5, 6)
-B  Point(9, 17)
-C  Point(13, 4)
-D  Point(8, 11)
-E  Point(1, 4)
-
-Quelles est la distance entre chaque points ?
-
-Créer une table perimetre contenant un nom et une colonne de type polygon
-
-A 8,9 10,12 7,6
-
-Quels sont les aéroports dans la zone ?
