@@ -8,7 +8,10 @@ Contrairement aux bases de données traditionnelles qui gèrent des données tex
 
 Une base de données spatiales est une base de données optimisée pour stocker et interroger des données reliées à des objets référencés géographiquement, y compris des points, les lignes et des polygones. 
 
-Alors que les bases de données classiques peuvent comprendre différents types de données numériques et caractères, des fonctions additionnelles ont besoin d'être ajoutées pour traiter les types de données spatiales. Celles-ci sont typiquement appelées géométrie ou caractère. L'Open Geospatial Consortium a créé les spécifications des caractéristiques simples et les standards pour compléter les systèmes de gestion de bases de données avec les fonctionnalités de gestion de données spatiales1.
+Alors que les bases de do
+:SIG
+  Système d'information géographique contient des données alphanumériques et des données spatiales.
+nnées classiques peuvent comprendre différents types de données numériques et caractères, des fonctions additionnelles ont besoin d'être ajoutées pour traiter les types de données spatiales. Celles-ci sont typiquement appelées géométrie ou caractère. L'Open Geospatial Consortium a créé les spécifications des caractéristiques simples et les standards pour compléter les systèmes de gestion de bases de données avec les fonctionnalités de gestion de données spatiales1.
 
 Well-Known Text (WKT) 
 Well-Known Binary (WKB)
