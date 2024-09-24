@@ -40,4 +40,8 @@ Cette ressource développe les différentes implémentations des données dans l
   - [Modèle de données](bi/models)
   - [Fonctions de fenêtrage](../bdd/sql/window)
   - [CTE](../bdd/cte)
-   - [Spatial](spatiale)
+
+- [Spatial](spatiale)
+- [Base de données orientées documents]()
+- [Base de données temporelles](../bdd/mongodb)
+- [Base de données graphe](graphe)
