@@ -4,37 +4,6 @@ title: MongoDB
 
 MongoDB est une base de données orientée document. Contrairement à une base de données relationnelle classique dans laquelle les données sont organisées d’après un schéma (tables, champs, types de données) et mises en relation les unes avec les autres, on stocke les données dans une base MongoDB dans un document dans le style [JSON](../../cours/json), c’est à dire sous la forme clé:valeur, tableaux, objets et sous-objets.
 
-## Installation
-
-Ajouter la clé gpg  `https://www.mongodb.org/static/pgp/server-4.4.asc`dans le porte-clé du système.
-
-```shell
-wget -qO /usr/local/share/keyrings/mongodb-org-4_4.asc https://www.mongodb.org/static/pgp/server-4.4.asc
-```
-
-```shell
-echo "deb [arch=amd64,arm64 signed-by=/usr/local/share/keyrings/mongodb-org-4_4.asc] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-```
-
-```shell
-apt update
-```
-
-Installer le [paquet logiciel](/linux/paquet/) `mongodb-org-server`.
-
-paquet mongodb-org pour l'ensemble des outils client/serveur
-
-
-service mongod
-
-Si accès depuis l'extérieur
-[Éditer](/linux/nano) le fichier de configuration `/etc/mongod.conf` pour écouter sur toutes les interfaces réseau 0.0.0.0
-
-mongod 	Le serveur de base de données MongoDB
-mongo 	Client. Permet d’exécuter toutes les commandes Mongo depuis un Shell
-mongostat, mongotop 	Utilitaires de monitoring
-mongodump, mongorestore, mongoexport, mongoimport 	Utilitaires d’import / export
-bsondump, mongofiles, mongooplog, mongoperf 	Utilitaires divers
 
 ### créer une base de données
 
@@ -58,9 +27,11 @@ db.createCollection(<name>, { options } )
 
 La commande create compte deux paramètres. Tout d’abord, le paramètre name (nom de la collection) et options (options pour configurer la collection). Dans les options, vous pouvez définir par exemple si les documents d’une collection doivent posséder une taille précise (capped: true) ou s’ils doivent avoir une quantité restreinte de Bytes (size: <number>) ou encore une quantité limitée de documents (max: <number>). Une collection nommée macollection, une limitation à 6.142.800 Bytes et un maximum de 10 000 documents seraient définis à titre d’exemple avec la commande suivante (les espaces entre les éléments ont uniquement été insérés pour assurer une meilleure lisibilité) :
 
+```
 db.createCollection ("macollection", { capped: true,
           size: 6142800,
           max: 10000 } )
+```
 
 ### Ajouter des documents dans la collection
 
@@ -126,29 +97,3 @@ db.macollection.remove( { Age: 28 }, 1);
 ```
 
 Vous trouverez des informations sur l’administration, les paramètres de sécurité, la distribution des données sur plusieurs systèmes d’autres documentations utiles sur mongodb.com et dans le tutotiel MongoDB sur tutorialspoint.com.
-
-
-
-## Node Red
-
-Utiliser MongoDB avec NodeRed
-
-[Éditer](/linux/nano) le fichier `~\.node-red\settings.js` et ajouter dans dans la fonction `functionGlobalContext`
-
-```json
-functionGlobalContext: {
-  ObjectId : require('mongodb').ObjectID,
-},
-```
-
-Puis dans la function
-
-```javascript
-var ObjectId = global.get('ObjectId');
-
-msg.payload=[{
-  "_id": ObjectId("5c9156c7f8c3ec3259454571")
-}];
-
-return msg;
-```
