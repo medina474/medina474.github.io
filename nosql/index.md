@@ -41,7 +41,14 @@ Cette ressource développe les différentes implémentations des données dans l
   - [Fonctions de fenêtrage](../bdd/sql/window)
   - [CTE](../bdd/cte)
 
+#### Base de données orientées documents
+
+Une base de données orientée documents est un type de base de données NoSQL qui stocke les données sous forme de documents. Contrairement aux bases de données relationnelles (qui utilisent des tables, lignes et colonnes), les bases de données orientées documents organisent les informations en documents, souvent au format JSON ou plus rarement XML.
+
+- [CouchDB](../bdd/couchdb)
+- [MongoDB](../bdd/mongodb)
+
+
 - [Spatial](spatiale)
-- [Base de données orientées documents]()
-- [Base de données temporelles](../bdd/mongodb)
+- [Base de données temporelles](../bdd/temporal)
 - [Base de données graphe](graphe)
