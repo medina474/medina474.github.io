@@ -4,8 +4,27 @@ title: MongoDB
 
 MongoDB est une base de données orientée document. Contrairement à une base de données relationnelle classique dans laquelle les données sont organisées d’après un schéma (tables, champs, types de données) et mises en relation les unes avec les autres, on stocke les données dans une base MongoDB dans un document dans le style [JSON](../../cours/json), c’est à dire sous la forme clé:valeur, tableaux, objets et sous-objets.
 
+## Wire Protocol
 
-### créer une base de données
+Le protocole Wire de MongoDB, souvent appelé simplement le Wire Protocol, est le protocole de communication natif utilisé par MongoDB pour l'interaction entre un client (comme un driver MongoDB) et un serveur MongoDB. Il définit comment les commandes et les requêtes sont envoyées au serveur MongoDB et comment les réponses sont renvoyées au client. Le protocole Wire est basé sur un échange de messages au **format binaire**, conçu pour permettre une communication rapide et efficace entre clients et serveurs.
+
+Il faut obligatoirement une librairie spécialisée pour communiquer.
+
+## MongoSH
+
+mongosh (MongoDB Shell) est un outil en ligne de commande fourni par MongoDB pour interagir directement avec les bases de données MongoDB. Il permet aux développeurs et administrateurs de base de données de se connecter à une instance MongoDB (locale ou distante) et d'exécuter des commandes pour gérer, interroger, et manipuler les données.
+
+Interface interactive : mongosh vous permet de taper des commandes MongoDB et d'obtenir des réponses immédiates dans le shell.
+
+Support de JavaScript : Comme MongoDB utilise une syntaxe proche de JavaScript pour ses requêtes, mongosh vous permet d'exécuter des commandes en JavaScript, ce qui est utile pour effectuer des requêtes complexes ou automatiser certaines tâches.
+
+Administration et gestion des bases : Vous pouvez lister, créer, supprimer des bases de données et collections, ainsi qu’inspecter et modifier les documents stockés.
+
+Connexions locales ou distantes : Vous pouvez l'utiliser pour vous connecter à une instance MongoDB locale ou à des services dans le cloud comme MongoDB Atlas.
+
+## Commandes
+
+### Créer une base de données
 
 Dès lors que MongoDB et le client sont exécutés, vous pouvez passer à la gestion et au traitement des données. Mais il convient tout d’abord de créer une base de données. A contrario, les collections et les documents seront sauvegardés dans la base de données test créée par défaut.
 

@@ -2,22 +2,7 @@
 title: CouchDB
 ---
 
-Ajouter un conteneur CouchDB à votre composition Docker
-
-```yml
-  couchdb:
-    container_name: r5a10-couchdb
-    image: couchdb:${COUCH_DB_VERSION:-3.3}
-    environment:
-      COUCHDB_PASSWORD: ${DB_ROOT_PASSWORD}
-      COUCHDB_USER: ${COUCHDB_USER:-admin}
-    volumes:
-      - couchdb:/opt/couchdb/data
-    ports:
-      - 3007:5984
-```
-
-CouchDB (Apache CouchDB) est un système de gestion de bases de données NoSQL, orienté document, développé par la fondation Apache. Il stocke les données sous forme de documents JSON et offre une architecture distribuée, conçue pour être tolérante aux pannes et hautement disponible. 
+> CouchDB est un système de gestion de bases de données NoSQL, **orienté document**, développé par la fondation Apache. Il stocke les données sous forme de documents JSON et offre une architecture distribuée, conçue pour être tolérante aux pannes et hautement disponible. 
 
 ### Stockage de documents JSON
 
@@ -57,6 +42,21 @@ PouchDB est une base de données JavaScript qui fonctionne dans le navigateur ou
 
 Vous pouvez utiliser PouchDB dans une application mobile (via un framework comme Cordova ou Ionic, ou même dans des Progressive Web Apps) pour stocker des données localement et les synchroniser avec CouchDB lorsque l'appareil est en ligne.
 
+Exercice
+
+Ajouter un conteneur CouchDB à votre composition Docker
+
+```yml
+  couchdb:
+    container_name: r5a10-couchdb
+    image: couchdb:${COUCH_DB_VERSION:-3.3}
+    environment:
+      COUCHDB_PASSWORD: ${DB_ROOT_PASSWORD}
+      COUCHDB_USER: ${COUCHDB_USER:-admin}
+    volumes:
+      - couchdb:/opt/couchdb/data
+    ports:
+      - 3007:5984
 ```
 
 ```http

@@ -28,4 +28,4 @@ La BI regroupe un ensemble de solutions technologiques qui facilitent l'accès a
 Avec les progrès des technologies, la BI évolue vers des approches plus avancées, telles que la Business Analytics (analyse prédictive) et le Big Data, qui permettent non seulement d'analyser des **données historiques** mais aussi de prévoir des **scénarios futurs** et de mieux comprendre les comportements clients.
 
 :KPI
-  Key Performance Indicators, en français indicateurs clés de performance
+Key Performance Indicators, en français indicateurs clés de performance.
