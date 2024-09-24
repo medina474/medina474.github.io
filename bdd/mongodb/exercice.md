@@ -2,9 +2,72 @@
 title: MongoDB
 ---
 
+## Requêtes simples
 
+### Q1 Afficher le premier document de la collection restaurant.
 
-Telécharger Compass l'outil d'administration de MogoDB
+### Q2 Afficher tous les documents de la collection restaurants.
+
+### Q3 Afficher les champs restaurant_id, nom, arrondissement et cuisine pour tous les documents de la collection restaurant
+
+### Q4 Afficher les 5 premiers documents de la collection restaurants. Utiliser la projection de Q3
+
+### Q5 Afficher la liste des boroughs
+
+```
+Bronx
+Brooklyn
+Manhattan
+Missing
+Queens
+Staten Island
+```
+
+### Q6 Quel est le nombre de cuisine différentes dans le Bronx ? à Manhattan ?
+
+### Q7 Afficher les champs restaurant_id, nom, arrondissement et cuisine, mais exclure le champ id pour les restaurants servant de la cuisine française.
+
+### Q8 Afficher les champs restaurant_id, nom, arrondissement et code postal, mais exclure le champ id pour les restaurant servant des Pizzas.
+
+### Q9 Afficher tous les restaurants qui se trouvent dans l'arrondissement de Brooklyn.
+
+### Q10 Afficher les 5 premiers restaurants de l'arrondissement Bronx
+
+### Q11 afficher les 5 prochains restaurants après avoir sauté les 5 premiers dans l'arrondissement du Bronx.
+
+### Q12 Retrouvez les restaurants qui ont obtenu une note supérieure à 90.
+
+???
+
+### Q13 Retrouvez les restaurants qui ont obtenu une note supérieure à 80 mais inférieure à 100.
+
+### Q14 Retrouver les restaurants qui se situent à une latitude inférieure à -95.75
+
+### Q15 trouvez les restaurants qui ne préparent aucune cuisine « américaine » et dont la note est supérieure à 70 et leur latitude inférieure à -65,754168.
+
+### Q16 trouvez les restaurants qui ne préparent aucune cuisine « américaine » et qui ont obtenu un score supérieur à 70 et sont situés dans une longitude inférieure à -65,754168. (Remarque : effectuez cette requête sans utiliser l'opérateur $and )
+
+### Q17 trouvez les restaurants qui ne préparent aucune cuisine « américaine » et qui ont obtenu un score « A » n'appartenant pas à l'arrondissement de Brooklyn. Le document doit être affiché selon la cuisine par ordre décroissant.
+
+### Q18 trouvez l'identifiant du restaurant, le nom, le quartier et la cuisine des restaurants qui contiennent « Wil » comme les trois premières lettres de leur nom.
+
+### Q19 Trouvez l'identifiant du restaurant, le nom, l'arrondissement et la cuisine des restaurants qui contiennent « ces » comme les trois dernières lettres de leur nom.
+
+### Q20 recherchez l'identifiant du restaurant, le nom, l'arrondissement et la cuisine des restaurants qui contiennent « Reg » comme trois lettres quelque part dans leur nom.
+
+### Q21 Trouver les restaurants qui appartiennent à l'arrondissement de Staten Island et préparent des plats américains ou chinois.
+
+### Q22 recherchez l'identifiant du restaurant, le nom, le quartier et la cuisine des restaurants qui ont obtenu un score ne dépassant pas 10.
+
+### Q23 recherchez l'identifiant du restaurant, le nom, le quartier et la cuisine des restaurants qui ont préparé des plats sauf « Américain » et « Chinois » ou le nom du restaurant commence par la lettre « Wil ».
+
+### Q24 recherchez l'identifiant, le nom et les notes du restaurant qui ont obtenu la note « A » et obtenu un score de 11 à une date ISO » 2014-08-11T00:00:00Z » parmi de nombreuses dates d'enquête.
+
+### Q25 organisez le nom des restaurants par ordre croissant avec toutes les colonnes.
+
+### Q26 organisez le nom des restaurants par ordre décroissant avec toutes les colonnes.
+
+### Q27 classez le nom de la cuisine par ordre croissant et pour cette même cuisine, le arrondissement doit être par ordre décroissant.
 
 ## Trouver des restaurants avec des requêtes géospatiales
 
@@ -20,19 +83,7 @@ Un index géospatial améliore presque toujours les performances des fonctions _
 
 
 
-```bash
-mongosh "mongodb://admin:supermotdepasse@127.0.0.1:27017"
 
-test>
-```
-
-Par défaut vous vous trouvez sur la base de données test
-
-Lister les bases de données : 
-
-```javascript
-show dbs
-```
 
 Changer de base de données
 
