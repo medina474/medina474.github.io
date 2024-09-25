@@ -69,6 +69,12 @@ Staten Island
 
 ### Q27 classez le nom de la cuisine par ordre croissant et pour cette même cuisine, le arrondissement doit être par ordre décroissant.
 
+### Q28 savoir si toutes les adresses contiennent la rue ou non.
+
+### Q29 sélectionnez tous les documents de la collection du restaurant dont la valeur du champ de coordonnées est Double.
+
+### Q30 Écrivez une requête MongoDB qui sélectionnera l'identifiant du restaurant, le nom et les notes des restaurants qui ont un score multiple de 7.
+
 ## Trouver des restaurants avec des requêtes géospatiales
 
 L'indexation géospatiale de MongoDB vous permet d'exécuter efficacement des requêtes spatiales sur une collection contenant des formes et des points géospatiaux. Pour présenter les capacités des fonctionnalités géospatiales et comparer différentes approches, ce didacticiel vous guidera tout au long du processus d'écriture de requêtes pour une application géospatiale simple.
@@ -80,9 +86,6 @@ Téléchargez les exemples de jeux de données depuis
 Ceux-ci contiennent respectivement les collections restaurantset neighborhoods.
 
 Un index géospatial améliore presque toujours les performances des fonctions _$geoWithinrequêtes_ et _$geoIntersects_.
-
-
-
 
 
 Changer de base de données
@@ -124,7 +127,6 @@ db.restaurants.createIndex({ coord: "2dsphere" })
 db.neighborhoods.createIndex({ geometry: "2dsphere" })
 ```
 
-
 #### Trouver le quartier actuel
 
 En supposant que l'appareil mobile de l'utilisateur puisse donner une localisation raisonnablement précise pour l'utilisateur, il est simple de trouver le quartier actuel de l'utilisateur avec $geoIntersects.
@@ -142,12 +144,12 @@ Vous pouvez également effectuer une requête pour trouver tous les restaurants 
 ```javascript
 var neighborhood = db.neighborhoods.findOne( { geometry: { $geoIntersects: { $geometry: { type: "Point", coordinates: [ -73.93414657, 40.82302903 ] } } } } )
 
-db.restaurants.find( { coord: { $geoWithin: { $geometry: neighborhood.geometry } } } ).count()
+db.restaurants.find( { _coordonnees_: { $geoWithin: { $geometry: neighborhood.geometry } } } ).count()
 ```
 
 Trouver des restaurants à proximité
 
-Pour trouver des restaurants à une distance spécifiée d'un point, vous pouvez utiliser soit $geoWithinavec $centerSphere pour renvoyer les résultats dans un ordre non trié, soit $nearSphere avec $maxDistance si vous avez besoin de résultats triés par distance.
+Pour trouver des restaurants à une distance spécifiée d'un point, vous pouvez utiliser soit $geoWithin avec $centerSphere pour renvoyer les résultats dans un ordre non trié, soit $nearSphere avec $maxDistance si vous avez besoin de résultats triés par distance.
 
 Non trié avec $geoWithin
 
@@ -165,7 +167,7 @@ db.restaurants.find({ location:
 
 $centerSphereLe deuxième argument de accepte le rayon en radians, vous devez donc le diviser par le rayon de la Terre en miles. Pour plus d'informations sur la conversion entre les unités de distance, consultez Convertir la distance en radians pour les opérateurs sphériques .
 
-Trié avec$nearSphere
+Trié avec $nearSphere
 
 Vous pouvez également utiliser $nearSphereet spécifier un $maxDistanceterme en mètres. Cela renverra tous les restaurants situés à moins de cinq miles de l'utilisateur, triés du plus proche au plus éloigné :
 

@@ -151,20 +151,18 @@ Q27
 db.restaurants.find().sort({cuisine:1,borough:-1})
 ```
 
-Q26 know whether all the addresses contain the street or not.
-
+Q28
 ```
 db.restaurants.find({"address.street":{$exists:false}}).count()==0
 ```
 
-Q27 select all documents in the restaurant's collection where the coord field value is Double.
-
+Q29 
 ```
 db.restaurants.find({ "coord": { $type: "double" } })
 ```
 
-Q28 Write a MongoDB query which will select the restaurant Id, name and grades for those restaurants which return 0 as a remainder after dividing the score by 7.
+Q30 Write a MongoDB query which will select the restaurant Id, name and grades for those restaurants which return 0 as a remainder after dividing the score by 7.
 
 ```
-db.restaurants.find("{grades.score":{$mod:[7,0]}},{restaurant_id:1,name:1,grades:1,_id:0})
+db.restaurants.find({"grades.score":{$mod:[7,0]}},{restaurant_id:1,name:1,grades:1,_id:0})
 ```
