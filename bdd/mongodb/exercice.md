@@ -77,19 +77,41 @@ db.restaurants.find(cuisine: "French"},{restaurant_id:1,name:1,borough:1,cuisine
 ```
 ### Q8 Afficher les champs restaurant_id, nom, arrondissement et code postal, mais exclure le champ id pour les restaurant servant des Pizzas.
 
+```javascript
+db.restaurants.find({},{restaurant_id:1,name:1,borough:1,"address.zipcode":1,_id:0})
+```
+
 ### Q9 Afficher tous les restaurants qui se trouvent dans l'arrondissement de Brooklyn.
+```javascript
+db.restaurants.find({borough:"Brooklyn"})
+```
 
 ### Q10 Afficher les 5 premiers restaurants de l'arrondissement Bronx
+```javascript
+db.restaurants.find({borough:"Bronx"}).limit(5)
+```
+
 
 ### Q11 afficher les 5 prochains restaurants après avoir sauté les 5 premiers dans l'arrondissement du Bronx.
+```javascript
+db.restaurants.find({borough:"Bronx"}).skip(5).limit(5)
+```
 
 ### Q12 Retrouvez les restaurants qui ont obtenu une note supérieure à 90.
 
-???
+```javascript
+db.restaurants.find({"grades.score":{$gt:90}})
+```
 
 ### Q13 Retrouvez les restaurants qui ont obtenu une note supérieure à 80 mais inférieure à 100.
+```javascript
+db.restaurants.find({$and:[{"grades.score":{gt:90}},{"grades.score":{lt:100}}]})
+```
 
 ### Q14 Retrouver les restaurants qui se situent à une latitude inférieure à -95.75
+```javascript
+db.restaurants.find({"address.coord.coordinates.0":{$lt:-95.75}})
+```
 
 ### Q15 trouvez les restaurants qui ne préparent aucune cuisine « américaine » et dont la note est supérieure à 70 et leur latitude inférieure à -65,754168.
 

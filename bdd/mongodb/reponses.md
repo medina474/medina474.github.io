@@ -39,41 +39,27 @@ Q7
 
 
 Q8
-```javascript
-db.restaurants.find({},{restaurant_id:1,name:1,borough:1,"address.zipcode":1,_id:0})
-```
+
 
 Q9
-```javascript
-db.restaurants.find({borough:"Brooklyn"})
-```
+
 
 Q10
-```javascript
-db.restaurants.find({borough:"Bronx"}).limit(5)
-```
+
 
 Q9 display the next 5 restaurants after skipping the first 5 in the borough Bronx.
 
-```javascript
-db.restaurants.find({borough:"Bronx"}).skip(5).limit(5)
-```
+
 
 Q12 
-```javascript
-db.restaurants.find({"grades.score":{gt:90}})
-```
+
 
 
 Q13 
-```javascript
-db.restaurants.find({$and:[{"grades.score":{gt:90}},{"grades.score":{lt:100}}]})
-```
+
 
 Q14
-```javascript
-db.restaurants.find({"address.coord.0":{$lt:-95.754168}})
-```
+
 
 Q15 
 ```javascript
