@@ -28,13 +28,33 @@ Téléchargez les exemples de jeux de données depuis
 
 ### Q1 Afficher le premier document de la collection restaurant.
 
+```javascript
+db.restaurants.findOne();
+```
+
 ### Q2 Afficher tous les documents de la collection restaurants.
+
+```javascript
+db.restaurants.find();
+```
 
 ### Q3 Afficher les champs restaurant_id, nom, arrondissement et cuisine pour tous les documents de la collection restaurant
 
+```javascript
+db.restaurants.find({},{restaurant_id:1, name:1, borough:1, cuisine:1});
+```
+
 ### Q4 Afficher les 5 premiers documents de la collection restaurants. Utiliser la projection de Q3
 
+```javascript
+db.restaurants.find({},{restaurant_id:1, name:1, borough:1, cuisine:1})().limit(5);
+```
+
 ### Q5 Afficher la liste des boroughs
+
+```javascript
+db.restaurants.distinct("borough")
+```
 
 ```
 Bronx
@@ -47,8 +67,14 @@ Staten Island
 
 ### Q6 Quel est le nombre de cuisine différentes dans le Bronx ? à Manhattan ?
 
-### Q7 Afficher les champs restaurant_id, nom, arrondissement et cuisine, mais exclure le champ id pour les restaurants servant de la cuisine française.
+```javascript
+db.restaurants.distinct("cuisine", { borough: "Manhattan"}).length
+```
 
+### Q7 Afficher les champs restaurant_id, nom, arrondissement et cuisine, mais exclure le champ _id, pour les restaurants servant de la cuisine française.
+```javascript
+db.restaurants.find(cuisine: "French"},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0})
+```
 ### Q8 Afficher les champs restaurant_id, nom, arrondissement et code postal, mais exclure le champ id pour les restaurant servant des Pizzas.
 
 ### Q9 Afficher tous les restaurants qui se trouvent dans l'arrondissement de Brooklyn.

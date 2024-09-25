@@ -24,29 +24,19 @@ db.restaurants.find()
 ```
 
 Q3
-```javascript
-db.restaurants.find({},{restaurant_id:1,name:1,borough:1,cuisine:1})
-```
+
 
 Q4
-```javascript
-db.restaurants.find().limit(5)
-```
+
 
 Q5
-```javascript
-db.restaurants.distinct("borough")
-```
+
 
 Q6
-```javascript
-db.restaurants.distinct("cuisine", { borough: "Manhattan"}).length
-```
+
 
 Q7 
-```javascript
-db.restaurants.find({},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0})
-```
+
 
 Q8
 ```javascript
