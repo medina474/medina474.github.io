@@ -2,6 +2,10 @@
 title: MongoDB
 ---
 
+Téléchargez les exemples de jeux de données depuis 
+- https://raw.githubusercontent.com/mongodb/docs-assets/geospatial/neighborhoods.json 
+- https://raw.githubusercontent.com/mongodb/docs-assets/geospatial/restaurants.json
+
 ## Requêtes simples
 
 ### Q1 Afficher le premier document de la collection restaurant.
@@ -79,9 +83,7 @@ Staten Island
 
 L'indexation géospatiale de MongoDB vous permet d'exécuter efficacement des requêtes spatiales sur une collection contenant des formes et des points géospatiaux. Pour présenter les capacités des fonctionnalités géospatiales et comparer différentes approches, ce didacticiel vous guidera tout au long du processus d'écriture de requêtes pour une application géospatiale simple.
 
-Téléchargez les exemples de jeux de données depuis 
-- https://raw.githubusercontent.com/mongodb/docs-assets/geospatial/neighborhoods.json 
-- https://raw.githubusercontent.com/mongodb/docs-assets/geospatial/restaurants.json
+
 
 Ceux-ci contiennent respectivement les collections restaurantset neighborhoods.
 
