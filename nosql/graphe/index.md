@@ -4,7 +4,25 @@ title: Graphe
 
 Neo4j est une base de données orientée graphe, c'est-à-dire qu'elle est conçue pour stocker et gérer des données sous forme de graphes. Contrairement aux bases de données relationnelles traditionnelles (comme MySQL ou PostgreSQL) qui utilisent des tables, Neo4j fonctionne avec des nœuds (nodes) et des relations (relationships).
 
-##
+## Concepts
+
+Nœuds (Nodes) : Les nœuds représentent des entités, comme des personnes, des objets, des lieux, etc. Chaque nœud peut avoir des propriétés (par exemple, un nœud "Personne" peut avoir un nom et un âge).
+
+**Relations** (Relationships) : Les relations relient deux nœuds et décrivent la nature du lien entre eux (par exemple, une personne peut "CONNAÎTRE" une autre personne). Les relations peuvent aussi avoir des propriétés.
+
+**Propriétés** (Properties) : Les nœuds et les relations peuvent avoir des propriétés, qui sont des paires clé-valeur (par exemple, "nom: Alice").
+
+**Étiquettes** (Labels) : Les nœuds peuvent être étiquetés pour définir leur type (par exemple, un nœud peut avoir l'étiquette "Personne").
+
+**Cypher** : Neo4j utilise le langage de requête Cypher pour interroger la base de données. C'est un langage spécifique aux graphes, qui permet de facilement décrire des relations complexes entre les nœuds.
+
+## Avantages
+
+Modélisation des relations complexes : Contrairement aux bases de données relationnelles, qui nécessitent souvent des jointures coûteuses pour modéliser des relations, Neo4j peut naviguer entre les nœuds et les relations de manière extrêmement efficace.
+
+Performances pour les requêtes de graphe : Les requêtes impliquant plusieurs relations entre des entités (comme les relations sociales, les connexions entre objets, etc.) sont beaucoup plus rapides et plus intuitives à réaliser dans Neo4j.
+
+Utilisation naturelle pour les cas d'utilisation liés aux graphes : Il est particulièrement bien adapté pour les réseaux sociaux, les moteurs de recommandation, la détection de fraudes, la gestion de réseaux, etc.
 
 ## Exercice
 
