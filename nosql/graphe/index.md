@@ -2,6 +2,12 @@
 title: Graphe
 ---
 
+Neo4j est une base de données orientée graphe, c'est-à-dire qu'elle est conçue pour stocker et gérer des données sous forme de graphes. Contrairement aux bases de données relationnelles traditionnelles (comme MySQL ou PostgreSQL) qui utilisent des tables, Neo4j fonctionne avec des nœuds (nodes) et des relations (relationships).
+
+##
+
+## Exercice
+
 Ajouter le serveur Neo4J à votre environnemt Docker
 
 ```yaml
@@ -88,4 +94,54 @@ RETURN DISTINCT coActors.name
 
 ```cypher
 MATCH (people:Person)-[relatedTo]-(:Movie {title: "Cloud Atlas"}) RETURN people.name, Type(relatedTo), relatedTo.roles
+```
+
+#### Utilisez des modèles de longueur variable pour trouver des films et des acteurs jusqu'à 4 « sauts » de Kevin Bacon.
+
+```cypher
+MATCH (bacon:Person {name:"Kevin Bacon"})-[*1..4]-(hollywood)
+RETURN DISTINCT hollywood
+```
+
+#### Utilisez l'algorithme shortestPath() intégré pour trouver le lien entre Kevin Bacon vers Meg Ryan.
+
+
+```cypher
+MATCH p=shortestPath(
+(bacon:Person {name:"Kevin Bacon"})-[*]-(meg:Person {name:"Meg Ryan"})
+)
+RETURN p
+```
+
+#### Recommandons de nouveaux co-acteurs pour Tom Hanks
+
+Une approche de recommandation de base consiste à trouver des connexions au-delà d'un voisinage immédiat qui sont elles-mêmes bien connectées.
+
+Élargissez les co-acteurs de Tom Hanks pour trouver des co-co-acteurs qui n'ont pas travaillé avec Tom Hanks.
+
+```cypher
+MATCH (tom:Person {name:"Tom Hanks"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors),
+    (coActors)-[:ACTED_IN]->(m2)<-[:ACTED_IN]-(cocoActors)
+  WHERE NOT (tom)-[:ACTED_IN]->()<-[:ACTED_IN]-(cocoActors) AND tom <> cocoActors
+  RETURN cocoActors.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC
+```
+
+#### Trouvez quelqu’un qui puisse présenter Tom Hanks à son potentiel co-acteur, dans ce cas Tom Cruise.
+
+```cypher
+MATCH (tom:Person {name:"Tom Hanks"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors),
+  (coActors)-[:ACTED_IN]->(m2)<-[:ACTED_IN]-(cruise:Person {name:"Tom Cruise"})
+RETURN tom, m, coActors, m2, cruise
+```
+
+### Supprimer les données
+
+```cypher
+MATCH (n) DETACH DELETE n
+```
+
+Vérifions que tout est supprimé
+
+```cypher
+MATCH (n) RETURN n
 ```
