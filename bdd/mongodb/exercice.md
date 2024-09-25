@@ -2,6 +2,24 @@
 title: MongoDB
 ---
 
+## Serveur avec Docker
+
+```yaml
+mongodb:
+    container_name: r5a10-mongodb
+    image: mongo:${MONGODB_VERSION:-7.0.7-jammy}
+    volumes:
+      - ./data/configdb:/data/configdb
+      - mongodb:/data/db
+    ports:
+      - ${MONGODB_PORT:-27017}:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:-admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+```
+
+## Jeu de données
+
 Téléchargez les exemples de jeux de données depuis 
 - https://raw.githubusercontent.com/mongodb/docs-assets/geospatial/neighborhoods.json 
 - https://raw.githubusercontent.com/mongodb/docs-assets/geospatial/restaurants.json
