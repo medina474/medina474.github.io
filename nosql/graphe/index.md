@@ -43,7 +43,7 @@ Ajouter le serveur Neo4J à votre environnemt Docker
 
 Rendez vous à l'adresse : http://127.0.0.1:7474/browser/
 
-Executer le fichier graphe.txt dans le browser Neo4J
+Executer le fichier [graphe.txt](graphe.txt) dans le browser Neo4J
 
 ### Créer les contraintes
 
