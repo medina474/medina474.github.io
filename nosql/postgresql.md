@@ -76,9 +76,9 @@ Chaque table, vue et fonction SQL devient un endpoint d'API accessible via des r
     ports:
       - 3005:3000
     environment:
-      PGRST_DB_URI: postgres://${POSTGREST_USER:-postgrest}:${DB_PASSWORD}@${POSTGREST_HOST:-postgresql}:${POSTGREST_DB_PORT:-5432}/${DB_NAME:-postgrest}
+      PGRST_DB_URI: postgres://${POSTGREST_USER:-postgres}:${DB_ROOT_PASSWORD}@${POSTGREST_HOST:-postgresql}:${POSTGREST_DB_PORT:-5432}/${DB_NAME:-northwind}
       PGRST_DB_SCHEMAS: ${POSTGREST_DB_SCHEMAS:-public}
-      PGRST_DB_ANON_ROLE: ${POSTGREST_DB_ANON_ROLE:-postgrest}
+      PGRST_DB_ANON_ROLE: ${POSTGREST_DB_ANON_ROLE:-postgres}
       PGRST_JWT_SECRET: ${POSTGREST_JWT_SECRET}
       PGRST_DB_USE_LEGACY_GUCS: ${POSTGREST_DB_USE_LEGACY_GUCS:-false}
       PGRST_APP_SETTINGS_JWT_SECRET: ${POSTGREST_APP_SETTINGS_JWT_SECRET}
