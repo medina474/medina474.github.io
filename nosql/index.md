@@ -56,6 +56,6 @@ Une base de données orientée documents est un type de base de données NoSQL q
 
 - [Base de données graphe](graphe)
 
-- PostgreSQL : [One db to rule them all](postgresql)
+- [GraphQL](graphe/graphql)
 
 - [Base de données temporelles](../bdd/temporal)

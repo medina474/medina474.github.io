@@ -1,0 +1,2 @@
+WITH TomH as a
+MATCH (a)-[:ACTED_IN]->(m)<-[:DIRECTED]-(d) RETURN a,m,d LIMIT 10;
