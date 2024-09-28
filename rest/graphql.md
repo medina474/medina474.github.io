@@ -11,7 +11,6 @@ Under-fetching
 : Fait de récupérer trop peu d'information, lors d'un appel à une API. Ce qui oblige à effectuer des appels supplémentaires.
 
 
-GraphQL (Graph Query Language) est un langage de requêtes créé par Facebook en 2012. C'est une alternative auw Web Services REST. Le client définit dans la requête la structure de données qu'il veut que le serveur leui envoi. Ce langage évite les problèmes de retour de données insuffisants (under-fetching) ou surnuméraires (over-fetching).
 
 ## Exercice
 
