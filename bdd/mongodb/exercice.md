@@ -5,7 +5,7 @@ title: MongoDB
 ## Serveur avec Docker
 
 ```yaml
-mongodb:
+  mongodb:
     container_name: r5a10-mongodb
     image: mongo:${MONGODB_VERSION:-7.0.7-jammy}
     volumes:
