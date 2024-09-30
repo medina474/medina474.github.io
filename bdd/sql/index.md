@@ -1,5 +1,5 @@
 ---
-title: SQL
+title: Structured Query Language
 ---
 
 SQL, acronyme de Structured Query Language (Langage de Requête Structuré), est un langage de programmation spécialement conçu pour la gestion des bases de données relationnelles. Il permet de manipuler, interroger et gérer les données stockées dans une base de données de manière structurée et cohérente.
@@ -10,8 +10,8 @@ Tous les SGBDR implément le langage SQL mais chacun l'a agrémenté d'extension
 
 Le langage SQL est décomposé en 4 sous ensembles de commandes
 
-- [DDL](./ddl) (DATA DEFINITION LANGAGE)
-- [DQL](./dql) (DATA QUERY LANGAGE)
-- [DML](./dml/) (DATA MANIPULATION LANGAGE)
-- [DCL](./dcl/) (DATA CONTROL LANGAGE)
-- [TCL](./tcl/) (TRANSACTION CONTROL LANGAGE)
+- [DATA DEFINITION LANGAGE](./ddl) (DDL)
+- [DATA QUERY LANGAGE](./dql) (DQL)
+- [DATA MANIPULATION LANGAGE](./dml/) (DML)
+- [DATA CONTROL LANGAGE](./dcl/) (DCL)
+- [TRANSACTION CONTROL LANGAGE](./tcl/) (TCL)

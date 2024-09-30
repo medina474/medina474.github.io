@@ -28,7 +28,7 @@ from customers
 where Country = 'France';
 ```
 
-FirstName|LastName|City
+FirstName|LastName |City
 ---------|---------|---
 Camille  |Bernard  |Paris
 Dominique|Lefebvre |Paris
