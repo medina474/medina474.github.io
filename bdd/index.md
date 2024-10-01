@@ -84,3 +84,5 @@ RDBMS
 - Le [langage SQL](sql)
 - Les [jointures](sql/jointure)
 - Les [déclencheurs](sql/trigger)
+- Les [transactions](sql/tcl)
+- Les [vues](sql/vues)
