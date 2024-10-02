@@ -50,9 +50,39 @@ Typage limité : Le JSON ne prend pas en charge des types de données plus compl
 
 https://jsonformatter.curiousconcept.com/
 
-insert into velos values ("Trek Fuel EX 9.9 Sram XX1", "{""coloris"":""Bleu"",""poids"":14.11,""taille cadre"":""XS"",""taille des roues"":27.5,""matière"":""Carbone"",""groupe"":""Sram"",""offres"":[{""vendeur"":""Vélomania"",""stock"":7,""prix"":12749},{""vendeur"":""CycloSport"",""stock"":3,""prix"":11999},{""vendeur"":""Freedom Wheels"",""stock"":0,""prix"":9990}]}");
-insert into velos values ("Giant TG 9.9 Sram XX1", "{""coloris"":""Rouge"",""poids"":13.54,""taille cadre"":""L"",""taille des roues"":26,""matière"":""Aluminium"",""groupe"":""Sram"",""offres"":[{""vendeur"":""Vélomania"",""stock"":3,""prix"":7580},{""vendeur"":""CycloSport"",""stock"":8,""prix"":7770},{""vendeur"":""Freedom Wheels"",""stock"":1,""prix"":7649}]}");
+```json
+{
+  "coloris":"Bleu",
+  "poids":14.11,
+  "taille cadre":"XS",
+  "taille des roues":27.5,
+  "matière":"Carbone",
+  "groupe":"Sram",
+  "offres":[
+    { "vendeur":"Vélomania",      "stock":7, "prix":12749 },
+    { "vendeur":"CycloSport",     "stock":3, "prix":11999 },
+    { "vendeur":"Freedom Wheels", "stock":0, "prix":9990  }
+  ]
+}
+```
 
+```json
+{
+  "coloris":"Rouge",
+  "poids":13.54,
+  "taille cadre":"L",
+  "taille des roues":26,
+  "matière":"Aluminium",
+  "groupe":"Shimano",
+  "offres":[
+    {"vendeur":"Vélomania","stock":3,"prix":7580},
+    {"vendeur":"Freedom Wheels","stock":1,"prix":7649}
+  ]
+}
+```
+
+```sql
 select nom, json_extract(caracteristiques,'$.coloris') from velos
-select nom, caracteristiques->'$.coloris' from velos
-select nom, caracteristiques->>'$.coloris' from velos
+select nom, caracteristiques->'$.poids' from velos
+select nom, caracteristiques->>'$.poids' from velos
+```
