@@ -123,12 +123,14 @@ Les colonnes sélectionnées en témoignent. Les noms et les identifiants des en
 La table originale m'indique que l'ID de Sam Francis Dijkstra est 11. J'ai utilisé la clause WHERE pour filtrer les données et n'afficher que le parent de Sam Francis. Vous pouvez également utiliser la clause WHERE sur les colonnes child.first_name et child.last_name. J'ai choisi de filtrer les données en utilisant l'ID car la requête est un peu plus courte de cette façon.
 
 Voici le résultat :
+
 child_id	child_first_name	child_last_name	parent_first_name	parent_last_name	parent_id
 11	Sam Francis	Dijkstra	Mary	Dijkstra	5
 
 La mère de Sam Francis est Mary Dijkstra, ce qui est vrai.
 
 Tout est clair jusqu'à présent ? Oui, bien sûr. Passons à la suite !
+
 Exemple 3 : Obtenir un numéro de génération (ou niveau de l'arbre) pour chaque nœud
 
 Dans cet exemple, je veux lister chaque personne du tableau et montrer à quelle génération elle appartient. Quel est l'objectif de cette opération ? Lorsque j'obtiens ces données, je peux facilement voir qui appartient à quelle génération : parents, enfants, petits-enfants, etc.
@@ -176,27 +178,29 @@ Pour que tout cela fonctionne, j'ai joint la table parent_child avec l'ETC lui-m
 Après avoir écrit l'ETC, je dois utiliser ses données. Pour ce faire, j'ai écrit une simple instruction SELECT qui renvoie les noms et les numéros de génération de l'ETC. Bien joué, n'est-ce pas ?
 
 Voici à quoi ressemble le résultat :
-first_name	last_name	generation_number
-Rosa	Wellington	0
-Jon	Wellington	1
-Joni	Wellington	1
-Marge	Wellington	1
-Mary	Dijkstra	2
-Frank	Wellington	2
-Jason	Wellington	2
-Bobby	Wellington	2
-Sammy	Wellington	2
-Sarah	Wellington	2
-Sam Francis	Dijkstra	3
-Stephen	Wellington	3
-Trent	Wellington	3
-June	Wellington	3
-Josephine	Wellington	3
-Suzy	Wellington	3
+
+first_name|last_name|generation_number
+Rosa      |Wellington|0
+Jon       |Wellington|1
+Joni      |Wellington|1
+Marge     |Wellington|1
+Mary      |Dijkstra|2
+Frank     |Wellington|2
+Jason     |Wellington|2
+Bobby     |Wellington|2
+Sammy     |Wellington|2
+Sarah     |Wellington|2
+Sam Francis|Dijkstra|3
+Stephen   |Wellington|3
+Trent     |Wellington|3
+June      |Wellington|3
+Josephine|Wellington|3
+Suzy|Wellington|3
 
 Avec ce résultat, je vois que Rosa Wellington est le nœud racine parce que son numéro de génération est 0. Toutes les personnes ayant la valeur 1 sont ses enfants, la valeur 2 sont ses petits-enfants et la valeur 3 sont ses arrière-petits-enfants. Si vous vérifiez cela dans le tableau source, vous constaterez que tout ce que j'ai dit est vrai.
 
 Vous souhaitez apprendre les requêtes récursives SQL ? Consultez notre cours interactif.
+
 Exemple 4 : Liste de tous les descendants
 
 Cet exemple est une extension du précédent. Je veux vous montrer comment lister tous les descendants d'un parent et afficher à la fois les noms des parents et des enfants.
@@ -367,4 +371,3 @@ Plus important encore, je vous ai montré cinq requêtes que vous pouvez utilise
 
 Je suis sûr que vous avez déjà rencontré des données hiérarchiques dans le cadre de votre travail. Vous avez probablement réalisé que vous deviez vous équiper de connaissances approfondies en matière de requêtes récursives pour traiter ce type de données. Nous avons un coursRequêtes récursives qui vous guidera systématiquement à travers les ETC en général, les requêtes récursives et la façon dont les requêtes sur les données hiérarchiques et les graphiques fonctionnent en SQL.
 
-Bonne chance dans votre apprentissage ! Et n'hésitez pas à utiliser toutes les requêtes que je vous ai montrées et à les adapter à vos besoins professionnels.

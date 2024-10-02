@@ -39,3 +39,7 @@ Le SGBD, y compris SQLite, optimise les requêtes de manière dynamique. Si vous
 #### 3. Le tri est mieux géré dans la requête finale
 
 L'ordre dans lequel vous souhaitez afficher les résultats dépend souvent du contexte d'utilisation de la vue. Ainsi, il est préférable de laisser la tâche de tri à la requête qui interroge la vue, plutôt que de forcer un ordre dans la définition de la vue elle-même. En ne spécifiant pas de tri dans la vue, vous gardez la flexibilité de choisir l'ordre qui convient lors de l'exécution de la requête finale.
+
+#### Cas particulier 
+
+Lors de l'utilisation avec LIMIT 

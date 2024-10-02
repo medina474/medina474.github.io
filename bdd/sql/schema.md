@@ -1,5 +1,5 @@
 ---
-title: "Schémas"
+title: Schémas
 ---
 
 Un cluster de bases de données PostgreSQL contient une ou plusieurs bases de données nommées. Les rôles et quelques autres types d'objets sont partagés dans l'ensemble du cluster. Une connexion client au serveur ne peut accéder qu'aux données d'une seule base de données, celle spécifiée dans la demande de connexion.
