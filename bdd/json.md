@@ -99,3 +99,10 @@ Prendre les offres comme source et pour chaque offre afficher le vendeur et le p
 select value->>'$.vendeur', value->>'$.prix' 
   FROM json_each((select Caracteristiques->'$.offres' from Produits))
 ```
+
+Récupérer à la fois la table Produits et les caractéristiques
+
+```sql
+select p.Nom, o.value->'$.vendeur', o.value->'$.prix' 
+from Produits p, json_each(p.Caracteristiques, '$.offres') as o
+```
