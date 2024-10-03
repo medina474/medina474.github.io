@@ -80,14 +80,13 @@ RDBMS
 ## Programme
 
 - [Base de données relationnelle](sgbdr)
-- Le [langage SQL](sql)
-- Les [jointures](sql/jointure)
-- Les [déclencheurs](sql/trigger)
-- Le principe [ACID](sql/acid)
-- Les [transactions](sql/tcl)
-- Les [vues](sql/vues)
-- Le [format JSON](json)
-
+  - Le [langage SQL](sql)
+  - Les [jointures](sql/jointure)
+  - Les [déclencheurs](sql/trigger)
+  - Les [vues](sql/vues)
+  - Le principe [ACID](sql/acid)
+  - Les [transactions](sql/tcl)
+  - Le [format JSON](json)
 
 ### Travaux dirigés
 

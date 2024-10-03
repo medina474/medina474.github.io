@@ -1,6 +1,6 @@
 ---
 title: Travaux dirigés
-----
+---
 
 ### 1. Nombre de clients
 
@@ -24,6 +24,8 @@ select count(*) from artists;
 ```sql
 select distinct country from customers;
 ```
+
+Utilisation de `distinct` pour supprimer les doublons.
 
 ### 5. Nombre de clients par pays
 

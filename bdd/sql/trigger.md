@@ -19,3 +19,37 @@ BEGIN
   -- Actions à exécuter lorsque le déclencheur est activé
 END;
 ```
+
+### Mettre à jour la date de modification lorsqu'un client (customer) est modifié
+
+```sql
+CREATE TRIGGER MAJCustomer
+AFTER UPDATE ON customers
+FOR EACH ROW
+BEGIN
+	UPDATE customers SET DateModification = datetime();
+END;
+```
+
+### Ajouter un enregistrement dans la table Message lorsque le nom du client change
+
+```sql
+CREATE TRIGGER NomCustomer
+AFTER UPDATE ON customers 
+FOR EACH ROW WHEN OLD.LastName <> NEW.LastName
+BEGIN
+	INSERT INTO Messages (Texte) 
+     VALUES ('Changement de nom ' ||  OLD.LastName || ' devient ' || NEW.LastName);
+END;
+```
+
+### Interdir la suppression d'une ligne de facture
+
+```sql
+CREATE TRIGGER SuppressionItems
+BEFORE DELETE ON invoice_items
+FOR EACH ROW
+BEGIN
+	SELECT RAISE(ABORT, 'Interdit');
+END;
+```

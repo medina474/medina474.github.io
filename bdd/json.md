@@ -86,3 +86,16 @@ select nom, json_extract(caracteristiques,'$.coloris') from velos
 select nom, caracteristiques->'$.poids' from velos
 select nom, caracteristiques->>'$.poids' from velos
 ```
+
+Extraire les offres
+
+```sql
+select Caracteristiques->'$.offres' from Produits)
+```
+
+Prendre les offres comme source et pour chaque offre afficher le vendeur et le prix
+
+```sql
+select value->>'$.vendeur', value->>'$.prix' 
+  FROM json_each((select Caracteristiques->'$.offres' from Produits))
+```
