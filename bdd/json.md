@@ -82,27 +82,27 @@ https://jsonformatter.curiousconcept.com/
 ```
 
 ```sql
-select nom, json_extract(caracteristiques,'$.coloris') from velos
-select nom, caracteristiques->'$.poids' from velos
-select nom, caracteristiques->>'$.poids' from velos
+SELECT nom, json_extract(caracteristiques,'$.coloris') from Produits
+SELECT nom, caracteristiques->'$.poids' from Produits
+SELECT nom, caracteristiques->>'$.poids' from Produits
 ```
 
 Extraire les offres
 
 ```sql
-select Caracteristiques->'$.offres' from Produits)
+SELECT Caracteristiques->'$.offres' FROM Produits)
 ```
 
 Prendre les offres comme source et pour chaque offre afficher le vendeur et le prix
 
 ```sql
-select value->>'$.vendeur', value->>'$.prix' 
-  FROM json_each((select Caracteristiques->'$.offres' from Produits))
+SELECT value->>'$.vendeur', value->>'$.prix' 
+  FROM json_each((SELECT Caracteristiques->'$.offres' FROM Produits))
 ```
 
 Récupérer à la fois la table Produits et les caractéristiques
 
 ```sql
-select p.Nom, o.value->'$.vendeur', o.value->'$.prix' 
-from Produits p, json_each(p.Caracteristiques, '$.offres') as o
+SELECT p.Nom, o.value->'$.vendeur', o.value->'$.prix' 
+  FROM Produits p, json_each(p.Caracteristiques, '$.offres') AS o
 ```

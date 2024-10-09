@@ -92,3 +92,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Les chaines de caractères](string)
 - [Les structures](variables/structure)
 - [Les fichiers](fichier)
+
+## Travaux dirigés
+
+- [Travaux dirigés](td)
