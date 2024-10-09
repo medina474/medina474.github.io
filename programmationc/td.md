@@ -64,7 +64,7 @@ tasks.json
         "${workspaceFolderBasename}.exe"
       ],
       "options": {
-        "cwd": "D:/w64devkit/bin"
+        "cwd": "${workspaceFolder}"
       },
       "problemMatcher": [
         "$gcc"
@@ -313,6 +313,14 @@ Définir des constantes
 ```C
 #include <stdio.h>
 
+void affiche(int valeur) {
+  printf("GPS %d\n", (valeur >> 0 & 1));
+  printf("CAMERA %d\n", (valeur >> 1 & 1));
+  printf("AUTOMATIQUE %d\n", (valeur >> 2 & 1));
+  printf("RADAR %d\n", (valeur >> 3 & 1));
+  printf("ABS %d\n", (valeur >> 4 & 1));
+  printf("ESP %d\n", (valeur >> 5 & 1));
+}
 
 void main() {
 
@@ -333,26 +341,17 @@ void main() {
   printf("OPTION_CAMERA | OPTION_ABS OPTION_ESP %d\n", vehicule1);
 
   int z = 13; // 1101
-  printf("GPS %d\n", (z >> 0 & 1));
-  printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("RADAR %d\n", (z >> 2 & 1));
-  printf("ABS %d\n", (z >> 3 & 1));
+  affiche(z);
 
-  puts("Retirer l'accLa fonction fgets en C est utilisée pour lire une ligne de texte (ou une partie de ligne) depuis un flux d'entrée (comme le clavier ou un fichier), ce qui la rend idéale pour lire des chaînes de caractères qui peuvent contenir des espaces ou des caractères spéciaux. Contrairement à scanf, qui s'arrête à un espace, fgets continue à lire jusqu'à ce qu'elle rencontre un saut de ligne (\n), une fin de fichier ou le nombre maximal de caractères spécifié.és si il existe déja. Le remet sinon");
+  puts("Retirer l'accés si il existe déja. Le remet sinon");
   z ^= OPTION_RADAR; // z = z XOR 0b1000;
-  printf("GPS %d\n", (z >> 0 & 1));
-  printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("RADAR %d\n", (z >> 2 & 1));
-  printf("ABS %d\n", (z >> 3 & 1));
+  affiche(z);
 
   z = 13;
   puts("Retirer l'accès dans tous les cas");
   z &= ~OPTION_RADAR; // ! inversion logique uniquement 0 ou 1
                       // ~ inversion bits à bits
-  printf("GPS %d\n", (z >> 0 & 1));
-  printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("OPTION_RADAR %d\n", (z >> 2 & 1));
-  printf("OPTION_ABS %d\n", (z >> 3 & 1));
+  affiche(z);
 }
 ```
 
