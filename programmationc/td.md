@@ -2,7 +2,31 @@
 title: Travaux dirigés
 ----
 
-### Exercice 1 : Premier programme
+### Exercice 1 : Installation de l'environnement de développement
+
+Télécharger W64DevKit pour Windows
+
+[https://github.com/skeeto/w64devkit](https://github.com/skeeto/w64devkit)
+
+Dans la rubrique Releases (bandeau à droite)
+
+Prendre l'executable pour 64 bits
+
+Installer sur la partition D:\
+
+Modifier les variables d'environnement pour votre compte
+
+Dans la variable Path ajouter D:\w64devkit\bin
+
+Lancer VSCode
+
+Ajouter l'extension C/C++ de Microsoft
+
+Créer un dossier TP dans D:\
+
+Ouvrir ce dossier avec VSCode
+
+### Exercice 2 : Premier programme
 
 La fonction puts en C est utilisée pour afficher une chaîne de caractères (_string_) sur la sortie standard, généralement la console.
 
@@ -244,10 +268,10 @@ void main() {
     printf("CAMERA NON %d\n", vehicule1 & OPTION_CAMERA);
   }
 
-  printf("lecture et écriture %d\n",   vehicule1);
+  printf("OPTION_CAMERA | OPTION_ABS %d\n",   vehicule1);
   vehicule1 |= OPTION_ESP;
 
-  printf("lecture et accès %d\n", vehicule1);
+  printf("OPTION_CAMERA | OPTION_ABS OPTION_ESP %d\n", vehicule1);
 
   int z = 13; // 1101
   printf("GPS %d\n", (z >> 0 & 1));
@@ -259,8 +283,8 @@ void main() {
   z ^= OPTION_RADAR; // z = z XOR 0b1000;
   printf("GPS %d\n", (z >> 0 & 1));
   printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("z est il en mode %d\n", (z >> 2 & 1));
-  printf("z est il en acces %d\n", (z >> 3 & 1));
+  printf("OPTION_RADAR %d\n", (z >> 2 & 1));
+  printf("OPTION_ABS %d\n", (z >> 3 & 1));
 
   z = 13;
   puts("Retirer l'accès dans tous les cas");
@@ -268,7 +292,7 @@ void main() {
                       // ~ inversion bits à bits
   printf("GPS %d\n", (z >> 0 & 1));
   printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("z est il en mode %d\n", (z >> 2 & 1));
-  printf("z est il en acces %d\n", (z >> 3 & 1));
+  printf("OPTION_RADAR %d\n", (z >> 2 & 1));
+  printf("OPTION_ABS %d\n", (z >> 3 & 1));
 }
 ```
