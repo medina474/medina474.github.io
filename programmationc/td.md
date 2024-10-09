@@ -32,11 +32,94 @@ La fonction puts en C est utilisée pour afficher une chaîne de caractères (_s
 
 Une particularité de puts est qu'après avoir affiché la chaîne, elle ajoute automatiquement un caractère de nouvelle ligne (\n). Cela signifie que le curseur passe à la ligne suivante après l'affichage du texte.
 
+Créer un fichier main.c
+
 ```c
 #include <stdio.h>
 
 void main() {
   puts("Bonjour Jérôme");
+}
+```
+
+Cliquer sur l'icone de menu Run & Debug
+
+Créer 2 fichier dans le dossier .VSCode
+
+
+tasks.json
+
+```json
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "Compilation",
+      "command": "D:/w64devkit/bin/gcc.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${workspaceFolder}${pathSeparator}main.c",
+        "-o",
+        "${workspaceFolderBasename}.exe"
+      ],
+      "options": {
+        "cwd": "D:/w64devkit/bin"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
+```
+
+launch.json
+
+```json
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Lancer",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}${pathSeparator}${workspaceFolderBasename}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        },
+        {
+            "description": "Set Disassembly Flavor to Intel",
+            "text": "-gdb-set disassembly-flavor intel",
+            "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Compilation"
+    }
+  ]
 }
 ```
 
