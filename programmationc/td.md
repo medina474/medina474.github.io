@@ -297,46 +297,22 @@ char buffer[100];
 fgets(buffer, 100, stdin);
 ```
 
-### Tableaux
+### Bitwise
 
-```c
-void main() {
-  int tableau[] = {25, 50, 75, 100};
+Définir des constantes
 
-  printf("%d\n", tableau[0]);
-
-  tableau[1] = 33;
-  printf("%d\n", tableau[1]);
-
-  int *p = tableau;
-  printf("%d %p\n", *p, p);
-  p = p + 1;
-  printf("%d %p\n", *p, p);
-  p = p + 1;
-  printf("%d %p\n", *p, p);
-
-  *p = 60;
-  printf("%d\n", tableau[2]);
-
-  int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
-  p = matrix[0];
-
-  p = p + 5;
-  printf("%d %p\n", *p, p);
-}
-```
-
-## Bitwise
-
-```c
-#include <stdio.h>
-
+```C
 #define OPTION_GPS 0b000001
 #define OPTION_CAMERA 0b000010
 #define OPTION_AUTOMATIQUE 0b000100
 #define OPTION_RADAR 0b001000
 #define OPTION_ABS 0b010000
 #define OPTION_ESP 0b100000
+```
+
+```C
+#include <stdio.h>
+
 
 void main() {
 
@@ -359,15 +335,15 @@ void main() {
   int z = 13; // 1101
   printf("GPS %d\n", (z >> 0 & 1));
   printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("z est il en mode %d\n", (z >> 2 & 1));
-  printf("z est il en acces %d\n", (z >> 3 & 1));
+  printf("RADAR %d\n", (z >> 2 & 1));
+  printf("ABS %d\n", (z >> 3 & 1));
 
   puts("Retirer l'accLa fonction fgets en C est utilisée pour lire une ligne de texte (ou une partie de ligne) depuis un flux d'entrée (comme le clavier ou un fichier), ce qui la rend idéale pour lire des chaînes de caractères qui peuvent contenir des espaces ou des caractères spéciaux. Contrairement à scanf, qui s'arrête à un espace, fgets continue à lire jusqu'à ce qu'elle rencontre un saut de ligne (\n), une fin de fichier ou le nombre maximal de caractères spécifié.és si il existe déja. Le remet sinon");
   z ^= OPTION_RADAR; // z = z XOR 0b1000;
   printf("GPS %d\n", (z >> 0 & 1));
   printf("CAMERA %d\n", (z >> 1 & 1));
-  printf("OPTION_RADAR %d\n", (z >> 2 & 1));
-  printf("OPTION_ABS %d\n", (z >> 3 & 1));
+  printf("RADAR %d\n", (z >> 2 & 1));
+  printf("ABS %d\n", (z >> 3 & 1));
 
   z = 13;
   puts("Retirer l'accès dans tous les cas");
@@ -377,5 +353,41 @@ void main() {
   printf("CAMERA %d\n", (z >> 1 & 1));
   printf("OPTION_RADAR %d\n", (z >> 2 & 1));
   printf("OPTION_ABS %d\n", (z >> 3 & 1));
+}
+```
+
+### Tableaux
+
+Un tableau = un pointeur
+
+```c
+void main() {
+  
+  int tableau[] = {25, 50, 75, 100};
+
+  // Accès par indice
+  printf("%d\n", tableau[0]);
+
+  tableau[1] = 33;
+  printf("%d\n", tableau[1]);
+
+  // Utilisation d'un pointeur
+  int *p = tableau;
+  printf("%d %p\n", *p, p);
+
+  p = p + 1;
+  printf("%d %p\n", *p, p);
+  
+  p = p + 1;
+  printf("%d %p\n", *p, p);
+
+  *p = 60;
+  printf("%d\n", tableau[2]);
+
+  int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+  p = matrix[0];
+
+  p = p + 5;
+  printf("%d %p\n", *p, p);
 }
 ```
