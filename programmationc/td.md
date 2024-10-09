@@ -155,11 +155,57 @@ printf("Valeur maximale : %llu\n", ULLONG_MAX);
 printf("Signé : %lld / %lld\n", LLONG_MIN, LLONG_MAX);
 ```
 
-```c
-```
+### Lecture clavier
+
+La fonction scanf en C est utilisée pour lire des entrées formatées depuis l'entrée standard (généralement le clavier). Elle permet de capturer des valeurs saisies par l'utilisateur et de les stocker dans des variables. Son fonctionnement repose sur des spécificateurs de format, similaires à ceux utilisés avec la fonction printf, mais dans ce cas, pour la lecture.
+
+Pour stocker la valeur lue, scanf a besoin de connaître l'adresse de la variable où stocker la donnée. Cela signifie que vous devez passer les adresses des variables à scanf (à l'aide de l'opérateur **&** pour obtenir l'adresse d'une variable).
+
+Si vous oubliez le &, cela causera un comportement indéfini, car scanf essaiera de modifier une adresse mémoire incorrecte.
 
 ```c
+int age;
+
+printf("Entrez votre âge : ");
+scanf("%d", &age);  // Lire un entier
 ```
 
+Cas particulier des chaines de caractères.
+
+La variable _nom_ est déja un pointeur il ne faut pas utiliser l'opérateur &
+
 ```c
+char nom[50];
+scanf("%s", nom); 
+```
+
+Le spécificateur %s lit une chaîne de caractères jusqu'à un espace ou une nouvelle ligne. Pour lire une phrase entière avec des espaces, vous devez utiliser une autre approche comme fgets.
+
+### Tableaux
+
+```c
+void main() {
+  int tableau[] = {25, 50, 75, 100};
+
+  printf("%d\n", tableau[0]);
+
+  tableau[1] = 33;
+  printf("%d\n", tableau[1]);
+
+  int *p = tableau;
+  printf("%d %p\n", *p, p);
+  p = p + 1;
+  printf("%d %p\n", *p, p);
+  p = p + 1;
+  printf("%d %p\n", *p, p);
+
+  *p = 60;
+  printf("%d\n", tableau[2]);
+
+  int matrix[2][3] = { {1, 4, 2}, {3, 6, 8} };
+  p = matrix[0];
+
+  p = p + 5;
+  printf("%d %p\n", *p, p);
+}
 ```
