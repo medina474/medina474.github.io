@@ -1,0 +1,33 @@
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "Compilation",
+      "command": "gcc",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-D__USE_MINGW_ANSI_STDIO",
+        "-g",
+        "${workspaceFolder}${pathSeparator}main.c",
+        "-o",
+        "${workspaceFolderBasename}.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "close": true
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
