@@ -3,7 +3,7 @@
 
 void main()
 {
-  puts("");
+  puts("**************************************************");
   puts("Entiers");
 
   puts("");
@@ -29,7 +29,7 @@ void main()
 
   puts("");
   puts("Un long long int est garanti d'être au moins de 64 bits");
-  printf("long long int : %d octets (%d bits)\n", sizeof(long long int), __LONG_LONG_WIDTH__);
+  printf("long long int : %d octets (%d bits)\n", sizeof(long long int), 64);
   printf("Valeur maximale : %llu\n", ULLONG_MAX);
   printf("Signé : %lld / %lld\n", LLONG_MIN, LLONG_MAX);
 }

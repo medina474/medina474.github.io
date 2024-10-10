@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
+#include <stdlib.h>
+#include <math.h>
 
 void main()
 {
@@ -16,14 +18,14 @@ void main()
   printf("long double : %d octets (%d bits)\n", sizeof(long double), sizeof(long double) * CHAR_BIT);
 
   puts("");
-  puts("Nombre de chiffres dans la mantisse à virgule flottante.");
+  puts("Nombre de chiffres dans la mantisse à virgule flottante / dans l'exposant.");
   puts("La base spécifiée par FLT_RADIX est 2 ; par conséquent, ces valeurs spécifient des bits.");
-  printf("float : %d / %d bits\n", FLT_MANT_DIG, sizeof(float) * CHAR_BIT);
-  printf("double : %d / %d bits\n", DBL_MANT_DIG, sizeof(double) * CHAR_BIT);
-  printf("long double : %d / %d bits\n", LDBL_MANT_DIG, sizeof(long double) * CHAR_BIT);
+  printf("float : %d / %d (%d bits)\n", FLT_MANT_DIG, (int)round(log2(FLT_MAX_EXP + abs(FLT_MIN_EXP))), sizeof(float) * CHAR_BIT);
+  printf("double : %d / %d (%d bits)\n", DBL_MANT_DIG, (int)round(log2(DBL_MAX_EXP + abs(DBL_MIN_EXP))), sizeof(double) * CHAR_BIT);
+  printf("long double : %d / %d (%d bits)\n", LDBL_MANT_DIG, (int)round(log2(LDBL_MAX_EXP + abs(LDBL_MIN_EXP))), sizeof(long double) * CHAR_BIT);
 
   puts("");
-  puts("Nombre de chiffres significatifs, q, de sorte qu'un nombre à virgule flottante avec q chiffres décimaux peut être arrondi en représentation à virgule flottante puis restauré à sa valeur initiale sans perte de précision.");
+  puts("Nombre de chiffres significatifs, q, de sorte qu'un nombre à virgule flottante avec q chiffres décimaux peut être arrondi en représentation à virgule flottante puis restauré à sa valeur initiale sans perte de précision. Nombre de chiffres après la virgule");
   printf("float : %d\n", FLT_DIG);
   printf("double : %d\n", DBL_DIG);
   printf("long double : %d\n", LDBL_DIG);
@@ -61,8 +63,4 @@ void main()
   printf("double : %.15e (%.323lf)\n", DBL_MIN, DBL_MIN);
   puts("");
   printf("long double %.18Le (%.4950Lf)\n", LDBL_MIN, LDBL_MIN);
-
-  puts("");
-  float r = 15 / 2;
-  printf("%f\n", r);
 }

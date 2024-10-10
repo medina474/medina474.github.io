@@ -7,9 +7,9 @@
       "args": [
         "-fdiagnostics-color=always",
         "-g",
-        "${workspaceFolder}${pathSeparator}main.c",
+        "${file}",
         "-o",
-        "${workspaceFolderBasename}"
+        "${fileBasenameNoExtension}.exe"
       ],
       "options": {
         "cwd": "${workspaceFolder}"

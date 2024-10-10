@@ -10,10 +10,6 @@ void main() {
   printf("Le code ASCII de la lettre 1 est %i\n", '1');
   printf("Le code ASCII de la lettre 2 est %i\n", '2');
 
-  printf("Le code ASCII de la lettre é est %i\n", 'é');
-  printf("Le code ASCII de la lettre ☠ est %i\n", '☠');
-
   printf("Le caractère dont le code est %c\n", 67);
   printf("Le caractère dont le code est %c\n", 99);
-  printf("Le caractère dont le code est %c\n", 50089);
 }
