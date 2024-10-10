@@ -113,3 +113,5 @@ if (FonctionB())
 ```C
 FonctionB() && FonctionA();
 ```
+
+Chapitre suivant : les [Opérateurs bit-à-bit](bit)

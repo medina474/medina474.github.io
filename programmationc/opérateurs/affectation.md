@@ -18,4 +18,8 @@ Opérateur |	Description |	Opérateur | Équivalence
 ^=	| Ou exclusif et affectation	| a ^= 2 | a = a ^ 2
 \|=	| Ou binaire et affectation	| a \|= 2 | a = a | 2
 
-Les opérateurs d'affection combinent l'affectation simple aux autre opérateurs pour simplifier l'écriture d'une formule.
+
+> Les opérateurs d'affection combinent l'affectation simple aux autre opérateurs pour simplifier l'écriture d'une formule.
+{.definition}
+
+Chapitre suivant : les [Opérateurs arithmétiques](arithmétiques)

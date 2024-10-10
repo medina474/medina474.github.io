@@ -91,3 +91,5 @@ Pré-décrémentation (--var) : La décrémentation est effectuée avant que la 
 int a = 5;
 int result = --a;  // a devient 4, puis result vaut 4
 ```
+
+Chapitre suivant : les [Opérateurs logique](logique)

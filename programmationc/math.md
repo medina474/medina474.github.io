@@ -1,5 +1,5 @@
 ---
-title: Math
+title: Fonctions mathématiques
 ---
 
 ## Arrondi
@@ -7,7 +7,7 @@ title: Math
 3 déclinaisons de la fonction ***round*** en fonction du type de données utilisé pour le paramètre et la valeur de retour : double, float ou long double.
 
 ```C
-double      round(double);
+double      round(double)fichie;
 float       roundf(float);
 long double roundl(long double);
 ```
