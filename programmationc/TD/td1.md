@@ -4,15 +4,15 @@ title: Travaux dirigés 1
 
 ## Demander à l'utilisateur d'entrer un nombre entier. Calculer la sortie
 
-sa.  Si ce nombre est inférieur à 5 la sortie est égale à 1, sinon la sortie est égale à 0
+a.  Si ce nombre est inférieur à 5 la sortie est égale à 1, sinon la sortie est égale à 0
 
 b. Écrire la sortie suivant les conditions suivantes :
 
 - Si ce nombre est inférieur à 3 alors la sortie est 1
 - Si ce nombre est inférieur à 5 alors la sortie est 6
--  Si ce nombre est inférieur à 7 alors la sortie est 4
--  Si ce nombre est inférieur à 9 alors la sortie est 8
--  Sinon la sortie est 10
+- Si ce nombre est inférieur à 7 alors la sortie est 4
+- Si ce nombre est inférieur à 9 alors la sortie est 8
+- Sinon la sortie est 10
 
 ## Demander à l'utilisateur d'entrer deux nombres entiers.
 
