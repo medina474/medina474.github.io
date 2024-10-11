@@ -19,6 +19,7 @@ La lecture ou l'écriture dans un fichier n'est pas directe, mais utilise une zo
 
 Une structure spécifique gère ce tampon et d'autre variables nécessaires à la gestion du processus.
 
+```C
 typdef struct
 {
   char *buffer; // pointeur vers le tampon
@@ -27,6 +28,7 @@ typdef struct
   int flag; // bits donnant l'état du fichier
   int fd; // descripteur (identifiant de fichier)
 } FILE;
+```
 
 #### Ouverture des fichiers
 

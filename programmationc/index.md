@@ -47,10 +47,13 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Opérateurs logiques](opérateurs/logique)
 - [Opérateurs bit à bit](opérateurs/bit)
 
-### Les instruction
-- [Instructions conditionnelles](instructions/arithmétiques)
-- [Instructions de boucles](instructions/logique)
-- [Instructions de débranchement](instructions/bit)
+### Les instructions
+
+- [Instructions conditionnelles](instructions/conditions)
+- [Instructions de boucles](instructions/boucles)
+- [Instructions de débranchement](instructions/debranchement)
+
+### Les programmation avancée
 
 - [Les pointeurs](variables/pointeurs)
 - [Les chaines de caractères](string)
