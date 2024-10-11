@@ -1,5 +1,5 @@
 ---
-title:
+title: Instructions conditionnelles
 ---
 
 > Les instructions conditionnelles en C permettent d'exécuter des blocs de code spécifiques en fonction de conditions. Elles permettent de prendre des décisions logiques dans un programme.

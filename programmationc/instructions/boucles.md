@@ -1,5 +1,5 @@
 ---
-title: 
+title: Instructions conditionnelles
 ---
 
 Les instructions de boucles en C permettent de répéter l'exécution d'un bloc de code tant qu'une condition donnée est vraie. Elles sont particulièrement utiles lorsque vous avez besoin d'exécuter plusieurs fois le même code ou un ensemble d'instructions. 

@@ -1,5 +1,5 @@
 ---
-title:
+title: Instructions de débranchement
 ---
 
 1. break
@@ -47,4 +47,3 @@ printf("Ce message ne sera pas affiché.\n");
 
 fin:
     printf("Fin du programme.\n");
-
