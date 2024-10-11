@@ -65,3 +65,8 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 ## Travaux dirigés
 
 - [Travaux dirigés](td)
+- [Travaux dirigés 1](td1)
+- [Travaux dirigés 2](td2)
+- [Travaux dirigés 3](td3)
+- [Travaux dirigés 4](td4)
+- [Travaux dirigés 5](td5)
