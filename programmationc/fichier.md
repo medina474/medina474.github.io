@@ -38,14 +38,15 @@ FILE * fopen( char *nom_fichier, char *mode_acces);
 
 ```C
 #include <stdio.h>
+
 void main(void)
 {
   FILE *fp;
   fp = fopen("nomdufichier.dat","r"); // Ouverture du fichier en mode lecture
   if (fp==NULL)
-{
- printf("Erreur d'ouverture de fichier\n");
-}
+  {
+  puts("Erreur d'ouverture de fichier");
+  }
 ...
 ...
 }
@@ -85,12 +86,13 @@ int fclose( FILE *pointeur_fichier);
 
 ```C
 #include <stdio.h>
+
 void main(void)
 {
-FILE *fp;
-...
-...
-fclose(fp); // Fermeture du fichier, retourne 0 si pas d'erreur sinon EOF
+  FILE *fp;
+  ...
+  ...
+  fclose(fp); // Fermeture du fichier, retourne 0 si pas d'erreur sinon EOF
 }
 ```
 
@@ -116,7 +118,7 @@ int fputc( int caractere, FILE *pointeur_fichier);
 La fonction fputc transfère un caractère dans le fichier pointé par pointeur_fichier. La fonction retourne le caractère écrit si pas d'erreur, et EOF s'il y a une erreur.
 
 ```C
-fputc( 'A', fp);
+fputc('A', fp);
 ```
 
 ### Lecture et écriture en mode chaine:
@@ -171,7 +173,7 @@ nombre alors erreur.
 ```C
 struct client k[5];
 ...
-fread(k, sizeof(struct client),5,fp);
+fread(k, sizeof(struct client), 5, fp);
 ```
 
 #### Ecriture :
