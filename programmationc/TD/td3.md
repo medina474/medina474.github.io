@@ -2,12 +2,6 @@
 title: Travaux dirigés 3
 ---
 
-## Écrire dans un fichier texte
-
-Demander à l'utilisateur de renseigner des mesures 
-
-Enregistrer les données dans un fichier au format texte
-
 ## Lire un fichier texte
 
 Lire la totalité du fichier _observations.csv_
