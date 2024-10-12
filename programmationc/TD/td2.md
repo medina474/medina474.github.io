@@ -12,4 +12,16 @@ Lorsque que le tableau est rempli retourner au début et continuer l'enregistrem
 
 Calculer et afficher la moyenne des valeurs stockées dans le tableau.
 
-Faire un fonction qui calcul la moyenne pour un tableau de 5 valeurs.
+Écrire un fonction qui calcul la moyenne pour un tableau de 5 valeurs.
+
+Appeler cette fonction et afficher le résultat à chaque enregistrement
+
+Demander à l'utilsateur d'entrer la taille du tableau voulue.
+
+Écrire un fonction qui calcul la moyenne pour un tableau de x valeurs.
+
+Enregistrer les valeurs saisies dans un fichier texte
+
+Enregistrer les valeurs saisies dans un fichier binaire
+
+Comparer les 2 fichiers.
