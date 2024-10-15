@@ -120,7 +120,7 @@ Lorsque vous utilisez la fonction LAST_VALUE, vous devez vous rappeler de défin
 Pour vous souvenir de ce détail et d'autres nuances des fonctions de fenêtre SQL, nous vous recommandons notre feuille de contrôle SQL Fonctions de fenêtrage . Il s'agit d'un guide de référence rapide téléchargeable pour les fonctions de fenêtre.
 MIN vs FIRST_VALUE
 
-La fonction FIRST_VALUE peut facilement être confondue avec la fonctionMIN . La fonction MIN renvoie la plus petite valeur de l'ensemble de données. La fonction FIRST_VALUE trouve la valeur d'une expression pour la plus petite ligne sur la base de l'expression donnée dans ORDER BY.
+La fonction FIRST_VALUE peut facilement être confondue avec la fonction MIN . La fonction MIN renvoie la plus petite valeur de l'ensemble de données. La fonction FIRST_VALUE trouve la valeur d'une expression pour la plus petite ligne sur la base de l'expression donnée dans ORDER BY.
 
 Vous utilisez généralement la fonction FIRST_VALUE avec deux expressions différentes en tant qu'argument de la fonction FIRST_VALUE et dans ORDER BY. Cette requête, comme nous l'avons vu à plusieurs reprises dans cet article, renvoie le premier prix enregistré d'Apple, Inc.
 SELECT

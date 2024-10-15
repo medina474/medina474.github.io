@@ -34,11 +34,12 @@ LEAD(column1) OVER (ORDER BY column2)
 
 Voici une description de cette syntaxe :
 
-    column1: Il s'agit de la colonne à partir de laquelle vous souhaitez accéder aux données de la ligne suivante.
+  column1: Il s'agit de la colonne à partir de laquelle vous souhaitez accéder aux données de la ligne suivante.
     OVER: Cette clause fait partie de la syntaxe des fonctions de fenêtre. Vous devez l'utiliser avec toutes les fonctions de fenêtre. Elle permet de définir la fenêtre sur laquelle la fonction LEAD fonctionnera.
     ORDER BY column2: Cette clause spécifie l'ordre dans lequel les lignes doivent être traitées et détermine la ligne suivante à partir de laquelle les données doivent être extraites. La clause ORDER BY est obligatoire pour LEAD.
 
 Cette syntaxe permet d'obtenir la valeur de la colonne spécifiée (column1) dans la ligne suivante, en fonction de l'ordre (ORDER BY column2) défini. S'il n'y a pas de ligne suivante, la fonction renvoie NULL.
+
 Exemple 1 : Utilisation de base de la fonction SQL LEAD
 
 Voyons un exemple de base de l'utilisation de la fonction LEAD. Supposons que vous ayez une table nommée production_schedule avec des colonnes pour la date et la quantité de produits requis :
@@ -76,8 +77,10 @@ LEAD(column1, offset, default) OVER (... ORDER BY column2)
 
 Voici la décomposition de cette syntaxe :
 
-    column1: Il s'agit de la colonne à partir de laquelle vous souhaitez accéder aux données d'une ligne ultérieure.
+column1: Il s'agit de la colonne à partir de laquelle vous souhaitez accéder aux données d'une ligne ultérieure.
+
     offset: Cet argument entier facultatif spécifie le nombre de lignes qui précèdent la ligne actuelle que vous souhaitez consulter. Si vous omettez ce paramètre, la valeur par défaut est 1, ce qui permet de récupérer les données de la ligne suivante.
+    
     default: Cet argument facultatif fournit une valeur par défaut que la fonction renverra si le décalage spécifié dépasse les limites de l'ensemble de résultats. S'il est omis, la valeur de retour par défaut est NULL.
     OVER: Ce mot-clé introduit la spécification de la fenêtre, définissant la manière dont les lignes sont regroupées et ordonnées dans le but de LEAD.
 
