@@ -31,7 +31,6 @@ Cette ressource développe les différentes implémentations des données dans l
 - Mercredi 16 octobre TD 7
 
 - Mercredi 16 octobre / Samedi 19 octobre TP 3 
-- Mercredi 16 octobre / Samedi 19 octobre TP 4
 
 ### Programme
 
@@ -39,7 +38,7 @@ Cette ressource développe les différentes implémentations des données dans l
   - [Entrepôts de données](bi/datawarehouse)
   - [Modèle de données](bi/models)
   - [Fonctions de fenêtrage](../bdd/sql/window)
-  - [CTE](../bdd/cte)
+  - [CTE](../bdd/sql/cte)
 
 #### Base de données orientées spatiales
 

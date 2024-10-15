@@ -46,6 +46,21 @@ void main() {
   // sizeof(int) = 4 octets
   // tableau 5 cases x 4 = 20 octets
 
+
+  FILE *fichier;
+  fichier = fopen("texte.txt","w"); // Ouverture du fichier en mode lecture
+  if (fichier==NULL) 
+  {
+    printf("Erreur d'ouverture de fichier\n");
+  }
+
+  FILE * fichierb;
+  fichierb = fopen("binaire.txt","wb"); // Ouverture du fichier en mode lecture
+  if (fichierb==NULL) 
+  {
+    printf("Erreur d'ouverture de fichier\n");
+  }
+
   puts("Bonjour entrer des valeurs :");
 
   int p = 0;
@@ -59,7 +74,11 @@ void main() {
     int valeur;
     scanf("%d", &valeur);
     if (valeur < 0) break;
+    
     printf("valeur saisie = %d\n", valeur);
+    fprintf(fichier, "%d\n", valeur);
+    fwrite(&valeur, sizeof(int), 1, fichierb);
+
     tableau[p] = valeur;
     p++;
     if (p == taille) p = 0;
@@ -70,4 +89,6 @@ void main() {
   }
 
   free(tableauP);
+  fclose(fichier);
+  fclose(fichierb);
 }

@@ -63,6 +63,7 @@ FROM stock_quotes
 WHERE symbol = 'AAPL';
 
 Cette requête ne sélectionne que les cours de l'action Apple Inc. (symbole AAPL). Elle sélectionne la date de cotation et le prix à cette date. Elle utilise la fonction FIRST_VALUE pour sélectionner le premier cours enregistré pour la société. Tous les cours de l'action Apple sont triés par OVER (ORDER BY quote_date). La fonction FIRST_VALUE renvoie le prix de la première ligne de ce tri, c'est-à-dire le premier prix jamais enregistré pour Apple.
+
 Exemple 2 : FIRST_VALUE avec PARTITION BY - Premier cours pour tous les symboles
 
 Vous utilisez généralement FIRST_VALUE avec PARTITION BY. De cette façon, la fonction FIRST_VALUE est appliquée séparément dans chaque partition définie par PARTITION BY. Supposons que vous ayez besoin de trouver le premier prix pour chaque société. Voici la requête que vous devez écrire :
@@ -90,6 +91,7 @@ SELECT
          PARTITION BY symbol
          ORDER BY quote_date) AS perc_growth
 FROM stock_quotes;
+
 Exemple 3. Première valeur de chaque jour pour chaque entreprise
 
 Vous pouvez utiliser la fonction FIRST_VALUE pour calculer le prix d'ouverture (le premier prix du jour) pour chaque date, comme suit :
@@ -108,7 +110,7 @@ FIRST_VALUE et autres Fonctions de fenêtrage
 
 FIRST_VALUE est similaire aux autres fonctions de fenêtre.
 
-Si vous aimez apprendre SQL à l'aide d'exercices pratiques, vous devez essayer LearnSQL.fr.
+
 FIRST_VALUE vs LAST_VALUE
 
 La fonction FIRST_VALUE a son équivalent double, LAST_VALUE. Comme son nom l'indique, la fonction LAST_VALUE renvoie la dernière valeur de la partition ordonnée d'un ensemble de résultats. Avec FIRST_VALUE, vous comparez la valeur actuelle au point de départ des données, tandis qu'avec LAST_VALUE, vous la comparez au point d'arrivée.
