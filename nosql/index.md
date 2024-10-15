@@ -34,11 +34,11 @@ Cette ressource développe les différentes implémentations des données dans l
 
 ### Programme
 
-- [Informatique décisionnelle](bi)
-  - [Entrepôts de données](bi/datawarehouse)
+- [Informatique décisionnelle](bi) (Business Intelligence)
+  - [Entrepôts de données](bi/datawarehouse) (Data Warehouse)
   - [Modèle de données](bi/models)
   - [Fonctions de fenêtrage](../bdd/sql/window)
-  - [CTE](../bdd/sql/cte)
+  - [CTE](../bdd/sql/cte) (Common Table Expression)
 
 #### Base de données orientées spatiales
 
@@ -51,7 +51,6 @@ Une base de données orientée documents est un type de base de données NoSQL q
 - [CouchDB](../bdd/couchdb)
 - [MongoDB](../bdd/mongodb)
   - [Exercice](../bdd/mongodb/exercice)
-
 
 - [Base de données graphe](graphe)
 
