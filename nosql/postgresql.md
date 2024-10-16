@@ -218,11 +218,6 @@ Analyse des données
       resources:
         limits:
           memory: 100M
-    configs:
-      - source: grafana_provisioning
-        target: /etc/grafana/provisioning
-      - source: grafana_dashboards
-        target: /etc/grafana/dashboards
     volumes:
       - grafana:/var/lib/grafana
     ports:
