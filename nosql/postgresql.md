@@ -139,3 +139,67 @@ RUN npm install -g postgraphile &&\
 EXPOSE 5000
 ENTRYPOINT ["postgraphile", "-n", "0.0.0.0", "--cors"]
 ```
+
+### FerretDB
+
+Clone de MongoDB mais avec postgreSQL
+
+```json
+  ferretdb:
+    container_name: r5a10-ferretdb
+    image: ghcr.io/ferretdb/ferretdb
+    healthcheck:
+      test: ["CMD", "/ferretdb", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    ports:
+      - 27017:27017
+      - 8088:8088
+    volumes:
+      - ferretdb:/state
+    environment:
+      FERRETDB_POSTGRESQL_URL: postgres://postgres:supermotdepasse@postgresql:5432/ferretdb
+      FERRETDB_TELEMETRY: disable
+```
+
+### Metabase
+
+Analyse des données
+
+
+```json
+  metabase:
+    container_name: r5a10-metabase
+    image: metabase/metabase:latest
+    healthcheck:
+      test: curl --fail -I http://localhost:3000/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      postgresql:
+        condition: service_healthy
+    volumes:
+      - /dev/urandom:/dev/random:ro
+    ports:
+      - 3002:3000
+    environment:
+      MB_DB_TYPE: ${MB_DB_TYPE:-postgres}
+      MB_DB_HOST: ${MB_DB_HOST:-postgresql}
+      MB_DB_PORT: ${MB_DB_HOST:-5432}
+      MB_DB_USER: ${MB_DB_USER:-postgres}
+      MB_DB_PASS: ${DB_ROOT_PASSWORD}
+      MB_DB_DBNAME: ${MB_DB_DBNAME:-metabase}
+      MB_SITE_LOCALE: fr
+      MB_ADMIN_EMAIL: etudiant@univ-lorraine.fr
+      MB_ANON_TRACKING_ENABLED: false
+      MB_CHECK_FOR_UPDATES: false
+      MB_NO_SURVEYS: yes
+      MB_START_OF_WEEK: monday
+      MB_CUSTOM_FORMATTING: '{"type/Temporal":{"time_style":"HH:mm","date_style":"D MMMM, YYYY","date_abbreviate":true},"type/Currency":{"currency":"EUR"},"type/Number":{"number_separators":", "}}'
+      MB_EMAIL_SMTP_HOST: mailpit
+      MB_EMAIL_SMTP_PORT: 1025
+      MB_EMAIL_FROM_ADDRESS: metabase@univ-lorraine.fr
+```
