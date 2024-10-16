@@ -203,3 +203,34 @@ Analyse des données
       MB_EMAIL_SMTP_PORT: 1025
       MB_EMAIL_FROM_ADDRESS: metabase@univ-lorraine.fr
 ```
+
+### Grafana
+
+```json
+  grafana:
+    container_name: r5a10-grafana
+    image: grafana/grafana-oss:${GRAFANA_VERSION:-11.1.3}
+    restart: no
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 100M
+    configs:
+      - source: grafana_provisioning
+        target: /etc/grafana/provisioning
+      - source: grafana_dashboards
+        target: /etc/grafana/dashboards
+    volumes:
+      - grafana:/var/lib/grafana
+    ports:
+      - 3001:3000
+    environment:
+      GF_SECURITY_ADMIN_EMAIL: etudiant@univ-lorraine.fr
+      GF_SECURITY_ADMIN_PASSWORD: supermotdepasse
+      GF_USERS_DEFAULT_THEME: light
+      GF_USERS_ALLOW_SIGN_UP: false
+      GF_FEATURE_TOGGLES_ENABLE: traceQLStreaming metricsSummary lokiFormatQuery alertmanagerRemoteOnly
+```
