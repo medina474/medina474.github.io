@@ -211,9 +211,6 @@ Analyse des données
     container_name: r5a10-grafana
     image: grafana/grafana-oss:${GRAFANA_VERSION:-11.1.3}
     restart: no
-    depends_on:
-      mariadb:
-        condition: service_healthy
     deploy:
       resources:
         limits:
