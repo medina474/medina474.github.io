@@ -11,7 +11,7 @@
 
 [R5.07 : Base de données](bdd)
 
-[R5.AII.10 : Informatique spécialisée](r5aII10)
+[R5.AII.10 : Informatique spécialisée](r5aii10)
 
 
 ## Anciens cours
