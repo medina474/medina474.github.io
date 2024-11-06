@@ -3,7 +3,7 @@ title: SQLite
 ---
 
 > Créer un programme C qui lit et écrit une base de données SQLite.
-{. objectif}
+{: .objectif}
 
 - Demander à l'utilisateur d'entrer les données d'un camion
 - Afficher la liste des camions
