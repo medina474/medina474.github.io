@@ -2,7 +2,7 @@
 title: Communication réseau
 ---
 
-Télécharger DataDog Vector depuis Arche
+Télécharger DataDog Vector depuis [le site de Datadog](https://vector.dev/docs/setup/installation/package-managers/msi/)
 
 Ecrire le fichier de configuration permettant de lancer un serveur web et d'écouter sur le protocole http
 
