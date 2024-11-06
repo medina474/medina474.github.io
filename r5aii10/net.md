@@ -21,7 +21,21 @@ sinks:
     type: "console"
     inputs: ["web"]
     encoding:
-      codec: "json"
-      json:
-        pretty: true
+      codec: text
 ```
+
+Utiliser Visual Studio Code et REST Client pour tester le fonctionnement.
+
+### Programme C
+
+Écrire un programme C qui permet d'envoyer des messages en http.
+
+Utiliser la commiunication par ***socket***
+
+Créer tout d'abord une variable de type ***sockaddr_in*** pour contenir l'adresse de vore serveur.
+
+Si le programme s'execute sur la même machine il faut utiliser l'adresse loopback 127.0.0.1
+
+déclarer une chaine de caractère et envoyer là à l'aide la fonction ***send***
+
+Attendre et lire la réponse à l'aide de la fonction ***recv***
