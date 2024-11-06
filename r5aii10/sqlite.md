@@ -115,14 +115,74 @@ sqlite3_bind_int(requete, 3, poids);
 sqlite3_step(requete);
 ```
 
-Écrire une fonction qui teste l'existence de la table que vous voulez créer.
+Détruire le code de la requête seulement à la sortie de la boucle
 
-Tous les éléments d'une base de données (tables, colonnes, index) sont stockés dans les *tables systèmes* (sqlite_master).
+```
+} while (1);
 
+sqlite3_finalize(requete);
+```
 
-Si la création échoue sortir du programme.
 
 
 ### Lire des données
 
-Afficher les données de la table en utilisant les fonctions ***sqlite3_prepare_v2*** et ***sqlite3_step***.
+Afficher les données de la table en utilisant la fonction ***sqlite3_step*** autant de fois qu'il y a de lignes à lire.
+
+```c
+sqlite3_stmt *requete;
+const char sql3[200] = "SELECT * FROM vehicule ORDER BY poids";
+sqlite3_prepare_v2(db, sql3, strlen(sql3), &requete, NULL);
+
+do
+{
+  int result = sqlite3_step(requete);
+  if (result != SQLITE_ROW) break; // Si le résultat de la lecture n'est pas une ligne de données alors sortir
+
+  char marque[20];
+  strcpy(marque, (const char *)sqlite3_column_text(requete, 0));
+  
+  char immatriculation[20];
+  strcpy(immatriculation, (const char *)sqlite3_column_text(requete, 1));
+  
+
+  int poids;
+  poids = sqlite3_column_int(requete, 2);
+
+  printf("%s %s %d\n", marque, immatriculation, poids);
+
+} while (1);
+```
+
+Que se passe t il si dans la base de données une des valeurs est NULL ? Le programme plante. Il faut tester d'abord le type de la colonne retournée avec la fonction ***sqlite3_column_type***.
+
+```C
+char marque[20];
+if (sqlite3_column_type(requete, 0) != SQLITE_NULL)
+{
+  strcpy(marque, (const char *)sqlite3_column_text(requete, 0));
+}
+else
+{
+  strcpy(marque, "(vide)");
+}
+```
+
+### Table système
+
+Cooment faire pour ne pas essayer de créer la table à chaque fos que le programme démarre ?
+
+Il faut interroger la table *sqlite_master* qui est la table système de sqlite. Cette table contient la définition des tables que l'utilisateur à créer.
+
+```c
+const char *sql4 = "SELECT name, type FROM sqlite_master WHERE name = 'vehicule' AND type = 'table'";
+result = sqlite3_prepare_v2(db, sql4, strlen(sql4), &requete, NULL);
+result = sqlite3_step(requete);
+if (result == SQLITE_ROW)
+{
+  puts("Table vehicule existante");
+}
+else
+{
+  // Créer la table véhicule
+```
