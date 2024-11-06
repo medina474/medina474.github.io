@@ -113,8 +113,10 @@ sqlite3_bind_text(requete, 2, marque, -1, NULL);
 sqlite3_bind_int(requete, 3, poids);
 
 sqlite3_step(requete);
+sqlite3_reset(requete);
 ```
 
+Utiliser **sqlite3_reset** pour réinitialiser les valeurs liées.
 Détruire le code de la requête seulement à la sortie de la boucle
 
 ```
