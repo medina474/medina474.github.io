@@ -8,7 +8,7 @@ title: SQLite
 - Demander à l'utilisateur d'entrer les données d'un véhicule (marque, immatriculation, poids maxi)
 - Afficher la liste des véhicules
 
-Pour Windows il faut télécharger les sources de SQLite sur le [https://www.sqlite.org/download.html](site officiel). Prendre la version amalgamtion.
+Pour Windows il faut télécharger les sources de SQLite sur le [site officiel](https://www.sqlite.org/download.html). Prendre la version amalgamtion.
 
 ### Ouvrir la base de données SQLite
 
