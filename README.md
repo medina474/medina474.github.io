@@ -21,6 +21,7 @@
 ## Anciens cours
 
 - [Linux](linux)
+- [Installer Raspberry Pi](linux/raspberrypi)
 - [HTML](html)
 - [CSS](css)
 - [Javascript](javascript)
