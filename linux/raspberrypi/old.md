@@ -29,30 +29,6 @@ _`apt upgrade`_ permet d'appliquer les mises à jour trouvées, le commutateur -
 
 ## Configurations supplémentaires
 
-### Régler le fuseau horaire sur Paris.
-
-```shell
-timedatectl set-timezone Europe/Paris
-```
-
-### Activer la paramètres linguistiques pour la France
-
-
-Générer les fichiers systèmes pour la nouvelle langue
-
-```shell
-localectl set-locale LANG=fr_FR.UTF-8
-locale-gen
-```
-
-Vérifier que la ligne `fr_FR.UTF-8 UTF-8` est bien décommenter dans le fichier _`/etc/locale.gen`_
-
-
-Redémarrer et contrôller ensuite les paramètres
-
-```shell
-locale
-```
 
 Si besoin revoir les [commandes](../linux) d'un système Linux.
 
