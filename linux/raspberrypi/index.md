@@ -18,9 +18,9 @@ Plusieurs autres systèmes pour des usages spécifiques sont disponibles : Ubunt
 
 La version Lite est une version allégée, sans interface graphique et sans bureau. Elle convient parfaitement à une utilisation en mode serveur.
 
-Télécharger le fichier _raspios_lite_armhf-2022-04-07/2022-04-04-raspios-bullseye-armhf-lite.img.xz_ sur la [page officielle](https://www.raspberrypi.com/software/operating-systems/)
+Télécharger le fichier _2024-10-22-raspios-bookworm-arm64-lite.img.xz_ sur la [page officielle](https://www.raspberrypi.com/software/operating-systems/)
 
-Transférer l'image sur une carte micro SD avec le logiciel [Rufus](https://github.com/pbatard/rufus/releases/download/v3.20/rufus-3.20p.exe).
+Transférer l'image sur une carte micro SD avec le logiciel [Rufus](https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe).
 
 
 ### Activer l'accès à distance par ssh
@@ -37,7 +37,7 @@ Fichier vide, sa seule présence suffit à autoriser les connexions extérieures
 
 Dans les versions antérieures le premier utilisateur par défaut était `pi` et le mot de passe `raspberry`. C'est un gros problème de sécurité car de nombreux systèmes étaient accessibles avec le compte par défaut.
 
-Le moyen le plus simple pour générer le mot de passe crypté consiste à utiliser OpenSSL sur un Raspberry Pi déjà en cours d'exécution.
+Le moyen le plus simple pour générer le mot de passe chiffré consiste à utiliser OpenSSL sur un Raspberry Pi déjà en cours d'exécution.
 
 Ouvrez une fenêtre de terminal et entrez
 
@@ -92,6 +92,8 @@ Pour faire fonctionner le pavé numérique, aller dans le menu Terminal – Feat
 Vous pouvez aussi enregistrer le nom d'utilisateur dans Connection - Data.
 
 Enregistrer la session (save sur le profil Default Setings) pour la retrouver ces réglages à la prochaine connexion.
+
+Vous êtes maintenant connecté, vous pouvez passer à la [configuration](configuration).
 
 ## Définition
 
