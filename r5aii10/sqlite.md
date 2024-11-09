@@ -2,7 +2,7 @@
 title: SQLite
 ---
 
-> Créer un programme C qui lit et écrit des données dans une base de données SQLite.
+> **Objectif :** Créer un programme C qui lit et écrit des données dans une base de données SQLite.
 {: .objectif}
 
 - Demander à l'utilisateur d'entrer les données d'un véhicule (marque, immatriculation, poids).
@@ -22,10 +22,10 @@ sqlite3_open("vehicules.db", &db);
 
 Si le fichier n'existe pas, il est créé.
 
-### Créer les tables 
+### Créer les tables
 
-Créer la table en préparant une requête SQL de type *CREATE TABLE* puis en l'executant avec la fonction ***sqlite3_step***. 
-Déclarer d'abord une pointeur de type ***sqlite3_stmt*** 
+Créer la table en préparant une requête SQL de type *CREATE TABLE* puis en l'executant avec la fonction ***sqlite3_step***.
+Déclarer d'abord une pointeur de type ***sqlite3_stmt***
 
 ```c
 const char* sql = "CREATE TABLE vehicules (marque text, immatriculation text, poids int)"; // Le texte de la requête SQL
@@ -45,9 +45,9 @@ sqlite3_finalize(requete); // Suppression du code
 
 Demander à l'utilisateur les données à insérer. Puis utiliser les fonctions ***sqlite3_prepare_v2*** et ***sqlite3_step*** pour les enregistrer dans la base de données.
 
-Construire la chaine de caractère contenant la requête SQL. Utiliser la fonction ***sprintf***. 
-La fonction sprintf est équivalente à la fonction bien connue ***printf*** mais à la place d'afficher la chaine à l'écran elle est copié dans une variable. 
-La variante ***snprintf*** permet de limiter la taille des variables insérées, en effet nous ne savons pas à l'avance ce que l'utilisateur va écrire. 
+Construire la chaine de caractère contenant la requête SQL. Utiliser la fonction ***sprintf***.
+La fonction sprintf est équivalente à la fonction bien connue ***printf*** mais à la place d'afficher la chaine à l'écran elle est copié dans une variable.
+La variante ***snprintf*** permet de limiter la taille des variables insérées, en effet nous ne savons pas à l'avance ce que l'utilisateur va écrire.
 Il est possible que le texte final fasse plus que la longueur prévue (dans notre cas ici 200 caractères).
 
 ```c
@@ -63,9 +63,9 @@ Attention ne pas oublier les guillemets simples autour des valeurs de type texte
 Utiliser de nouveau les fonctions ***sqlite3_prepare_v2*** et ***sqlite3_step*** pour préparer et exécuter la requête.
 
 ```c
-sqlite3_prepare_v2(db, sql2, 200, &requete, NULL); 
+sqlite3_prepare_v2(db, sql2, 200, &requete, NULL);
 sqlite3_step(requete);
-sqlite3_finalize(requete); 
+sqlite3_finalize(requete);
 ```
 
 Attention : Cette méthode pour construire une requête en insérant les données de l'utilisateur dans la requête d'exécution fonctionne, cependant ce n'est pas considéré comme une bonne pratique. Il y a deux problèmes, une problème grave de sécurité d'une part et de performance d'autre part
@@ -92,7 +92,7 @@ INSERT INTO vehicules (marque, immatriculation, poids) VALUES ('PIRATE', '', 0);
 
 #### performance
 
-lors de l'éxécution de cette requête dans une boucle. La préparation ***sqlite3_prepare_v2*** et la destruction ***sqlite3_finalize*** vont être appelé à chaque itération. Ce sont des opérations gourmandes en ressources mémoire et en temps processeur. 
+lors de l'éxécution de cette requête dans une boucle. La préparation ***sqlite3_prepare_v2*** et la destruction ***sqlite3_finalize*** vont être appelé à chaque itération. Ce sont des opérations gourmandes en ressources mémoire et en temps processeur.
 
 La solution est de passer par une requête paramétrée. La requête est préparée UNE seule fois, avant la boucle. Commme nous ne connaissons pas encore les valeurs à mettre à l'intérieur nous utilisons des paramètres symbolisés par un ?
 
@@ -143,10 +143,10 @@ do
 
   char marque[20];
   strcpy(marque, (const char *)sqlite3_column_text(requete, 0));
-  
+
   char immatriculation[20];
   strcpy(immatriculation, (const char *)sqlite3_column_text(requete, 1));
-  
+
 
   int poids;
   poids = sqlite3_column_int(requete, 2);
