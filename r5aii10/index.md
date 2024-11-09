@@ -6,4 +6,6 @@ title: Informatique spécialisée
 
 [Télémétrie](telemetry)
 
+- [Installation de Grafana](grafana) 
+
 [Communication réseau](net)
