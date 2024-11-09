@@ -7,5 +7,6 @@ title: Informatique spécialisée
 [Télémétrie](telemetry)
 
 - [Installation de Grafana](grafana) 
-
+- [Installation de Loki](loki)
+ 
 [Communication réseau](net)

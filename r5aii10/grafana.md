@@ -27,9 +27,3 @@ Redemarrer Grafana
 ```sh
 sudo systemctl stop grafana-server && sudo systemctl start grafana-server
 ```
-
-### Loki
-
-```sh
-sudo apt-get update && sudo apt-get install loki -y
-```
