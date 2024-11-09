@@ -4,6 +4,8 @@ title: Télémétrie
 
 ### Grafana
 
+Grafana est un outil open source de **visualisation** et de **surveillance de données** principalement utilisé pour analyser et afficher des métriques de performance provenant de diverses sources. Il permet de créer des **tableaux de bord interactifs** et personnalisables pour surveiller des systèmes, des applications et des infrastructures. Grafana supporte de nombreux types de sources de données.
+
 ```sh
 wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
