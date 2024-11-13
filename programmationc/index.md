@@ -70,3 +70,4 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Travaux dirigés 3](TD/td3)
 - [Travaux dirigés 4](TD/td4)
 - [Travaux dirigés 5](TD/td5)
+- [Travaux dirigés 6](TD/td6)

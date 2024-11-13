@@ -25,3 +25,5 @@ Enregistrer les valeurs saisies dans un fichier texte
 Enregistrer les valeurs saisies dans un fichier binaire
 
 Comparer les 2 fichiers.
+
+voir la [correction](td2.c)
