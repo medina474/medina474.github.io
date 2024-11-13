@@ -1,8 +1,12 @@
 ---
 title: Structure
 ---
-Une structure est un objet composé de plusieurs champs de types différents, qui sert à représenter un objet. Par exemple un client peut être représenté
-par son nom, son prénom, son année de naissance, son adresse.
+
+Les structures en C permettent de regrouper différents types de données sous un même nom, facilitant la gestion des données complexes dans un programme
+
+Une structure est un objet composé de plusieurs champs de types différents, qui sert à représenter un objet. Par exemple un client peut être représenté par son nom, son prénom, son année de naissance, son adresse.
+
+Une structure est un **type de données personnalisé** qui peut contenir des variables de types différents. On la définit à l'aide du mot-clé ***struct***.
 
 ```C
 struct client // client est le nom de la structure

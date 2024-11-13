@@ -3,7 +3,7 @@ title: Loki
 ---
 
 ```sh
-sudo apt-get update && sudo apt-get install loki -y
+sudo apt-get update && sudo apt-get install --no-install-recommends loki -y
 ```
 
 ```http
@@ -23,8 +23,8 @@ Content-Type: application/json
 }
 ```
 
-```
-sudo apt-get install libcurl4-openssl-dev
+```sh
+sudo apt-get install --no-install-recommends libcurl4-openssl-dev
 ```
 
 ```c

@@ -2,6 +2,8 @@
 title: Travaux dirigés 4
 ---
 
+voir le cours sur les structures
+
 ## Écrire dans un fichier binaire
 
 Demander à l'utilisateur d'entrer 2 valeurs : température et pression.
