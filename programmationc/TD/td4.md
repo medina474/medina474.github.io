@@ -2,7 +2,7 @@
 title: Travaux dirigés 4
 ---
 
-voir le cours sur les structures
+voir le cours sur les [structures](../structure)
 
 ## Écrire dans un fichier binaire
 
