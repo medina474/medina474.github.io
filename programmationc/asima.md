@@ -75,21 +75,46 @@ Les vannes permettent ainsi d’enclencher les puissances suivantes : Y1 : 1 kW,
 La puissance de chauffage peut être enclenchée par pas de 1 kW, de 0 kW à 15 kW.
 
 
-### Description fonctionnelle 3
+#### Description fonctionnelle 3
 
 Les radiateurs doivent, conformément à la description fonctionnelle 1, être connectés et déconnectés par réglage du potentiomètre et non avec les boutons-poussoirs « ▲ » et « ▼ ».
 La gamme de réglage linéaire du potentiomètre vaut 0 V  0 % à 10 V 100 %.
 
-### Description fonctionnelle 4
+#### Description fonctionnelle 4
 
 Les radiateurs doivent, conformément à la description fonctionnelle 2, être connectés et déconnectés par réglage du potentiomètre et non avec les boutons-poussoirs « ▲ » et « ▼ ».
+
+### M14 : 
+
+Code|Nom|Description des contacts|Adresse|Controllino
+|---|---|---|---|---|
+||**Boutons-poussoirs**|||
+S0|Arrêt    |Rupteur   |E124.0|*A0*
+S1|Démarrage|Contacteur|E124.1|*A1*
+S2|Descente |Contacteur|E124.2|*A2*
+S3|Montée   |Contacteur|E124.3|*A3*
+S4|Rythme   |Contacteur|E124.4|*A4*
+S5|Man/auto |Contacteur|E124.5|*A5*
+||**Entrée analogique**|||
+U1|Valeur de réglage|PEW130|
+||**Voyants lumineux**|||
+H1|||A124.0|*R0*
+H2|||A124.1|*R1*
+H3|||A124.2|*R2*
+H4|||A124.3|*R3*
+H5|||A124.4|*R4*
+H6|||A124.5|*R5*
+H7|||A124.6|*R6*
+H8|||A124.7|*R7*
+
+
 
 ### M16 : Système de remplissage de cuves
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
 ||**Boutons-poussoirs**|||
-S0|Arrêt |Rupteur|E124.0
+S0|Arrêt |Rupteur|E124.0|*A0*
 S1|Marche|Contacteur|E124.1
 S2|Cuve 1 vide|Contacteur|E124.2
 S3|Cuve 2 vide|Contacteur|E124.3
