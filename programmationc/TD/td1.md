@@ -21,6 +21,6 @@ c.  Si n1 = 5 et n2 > 10 alors la sortie vaut 1 sinon 0
 d.
 
 -  Si n1 > 4 et n2 == 3 alors la sortie vaut 1 sinon
--   Si n1 > 6 et n2 == 4 alors la sortie vaut 1 sinon
--   Si n1 > 8 et n2 == 5 alors la sortie vaut 1 sinon
--   la sortie vaut 0
+-  Si n1 > 6 et n2 == 4 alors la sortie vaut 1 sinon
+-  Si n1 > 8 et n2 == 5 alors la sortie vaut 1 sinon
+-  la sortie vaut 0
