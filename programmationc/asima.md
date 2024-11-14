@@ -43,7 +43,7 @@ E17  | D5  |       |
 
 ### M13 : Commande de chauffage
 
-Commander la puissance du chauffage d’un entrepôt en connectant ou déconnectant des radiateurs.
+> Commander la puissance du chauffage d’un entrepôt en connectant ou déconnectant des radiateurs.
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
@@ -181,21 +181,21 @@ S5|Marche                 |Contacteur|E124.5|*A5*
 |**Capteurs**|||
 B1|Capteur de pression 1|Rupteur|E124.6|*A6*
 B2|Capteur de pression 2|Rupteur|E124.7|*A7*
-Sorties
+|**Sorties**|||
 M1|Commande pompe 1||A124.0|*R0*
 M2|Commande pompe 2||A124.1|*R1*
 M3|Commande pompe 3||A124.2|*R2*
 M4|Commande pompe 4||A124.3|*R3*
 SH|Avertisseur sonore||A124.5|*R5*
 |**Voyants lumineux**|||
-H1|Voyant lumineux pompe 1||A125.0|
-H2|Voyant lumineux pompe 2||A125.1|
-H3|Voyant lumineux pompe 3||A125.2|
-H4|Voyant lumineux pompe 4||A125.3|
+H1|Pompe 1||A125.0|
+H2|Pompe 2||A125.1|
+H3|Pompe 3||A125.2|
+H4|Pompe 4||A125.3|
 
 ### M44 : Installation de pompage des eaux usées
 
-Etudier et réaliser la programmation d'une installation de pompage des eaux usées.
+> Etudier et réaliser la programmation d'une installation de pompage des eaux usées.
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
