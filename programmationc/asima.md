@@ -41,29 +41,31 @@ E17  | D5  |     |
      | D10 |     |
      | D11 |     |
 
+M13
+
 M42
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
-|<th colspan="4">Boutons-poussoirs
+|**Boutons-poussoirs**
 S0|Arrêt|Rupteur|E124.0|*A0*
 S1|Bouton-poussoir station 4|Contacteur|E124.1|*A1*
 S2|Bouton-poussoir station 3|Contacteur|E124.2|*A2*
 S3|Bouton-poussoir station 2|Contacteur|E124.3|*A3*
 S4|Bouton-poussoir station 1|Contacteur|E124.4|*A4*
-S5|Descente|Contacteur|E124.5|
-|<th colspan="4">Capteurs
-B6 |Capteur station 1    |Rupteur|E124.6|
-B7 |Capteur station 2    |Rupteur|E124.7|
+S5|Descente|Contacteur|E124.5|*A5*
+|**Capteurs**
+B6 |Capteur station 1    |Rupteur|E124.6|*A6*
+B7 |Capteur station 2    |Rupteur|E124.7|*A7*
 B8 |Capteur station 3    |Rupteur|E125.0|
 B9 |Capteur station 4    |Rupteur|E125.1|
 B10|Fin de course en bas |Rupteur|E125.2|
 B11|Fin de course en haut|Rupteur|E125.3|
-|<th colspan="4">Sorties
+|**Sorties**
 K1|Monter||A124.0|*R0*
-K2|Descendre||A124.5|A124.1|*R5*
-|<th colspan="4">Voyant lumineux
-H1|Voyant lumineux station 4||A124.1|*R1*
-H2|Voyant lumineux station 3||A124.2|*R2*
-H3|Voyant lumineux station 2||A124.3|*R3*
-H4|Voyant lumineux station 1||A124.4|*R4*
+K2|Descendre||A124.5|*R5*
+|**Voyant lumineux**
+H1|Station 4||A124.1|*R1*
+H2|Station 3||A124.2|*R2*
+H3|Station 2||A124.3|*R3*
+H4|Station 1||A124.4|*R4*
