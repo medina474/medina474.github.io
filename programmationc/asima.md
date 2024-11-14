@@ -113,27 +113,27 @@ H8|||A124.7|*R7*
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
-||**Boutons-poussoirs**|||
+|**Boutons-poussoirs**|||
 S0|Arrêt |Rupteur|E124.0|*A0*
 S1|Marche|Contacteur|E124.1
 S2|Cuve 1 vide|Contacteur|E124.2
 S3|Cuve 2 vide|Contacteur|E124.3
 S4|Cuve 3 vide|Contacteur|E124.4
-||**Capteurs
+|**Capteurs**|||
 B1|Niveau max cuve 1|Rupteur|E124.6
 B2|Niveau max cuve 2|Rupteur|E124.7
 B3|Niveau max cuve 3|Rupteur|E125.0
 B4|Niveau min cuve 1|Rupteur|E125.1
 B5|Niveau min cuve 2|Rupteur|E125.2
 B6|Niveau min cuve 3|Rupteur|E125.3
-||**Sorties
+|**Sorties**|||
 Y1|Vanne de remplissage cuve 1|A124.0|*R0*
 Y2|Vanne de remplissage cuve 2|A124.1|*R1*
 Y3|Vanne de remplissage cuve 3|A124.2|*R2*
 Y4|Vanne de vidage cuve 1|A124.3|*R3*
 Y5|Vanne de vidage cuve 2|A124.4|*R4*
 Y6|Vanne de vidage cuve 3|A124.5|*R5*
-||**Voyants lumineux
+|**Voyants lumineux**|||
 H1|Voyant installation marche|A125.0
 H2|Voyant cuve 1|A125.1
 H3|Voyant cuve 2|A125.2
@@ -177,21 +177,21 @@ S1|Protection du moteur Q1|Rupteur|E124.1|*A1*
 S2|Protection du moteur Q2|Rupteur|E124.2|*A2*
 S3|Protection du moteur Q3|Rupteur|E124.3|*A3*
 S4|Protection du moteur Q4|Rupteur|E124.4|*A4*
-S5|Marche|Contacteur|E124.5|*A5*
+S5|Marche                 |Contacteur|E124.5|*A5*
 |**Capteurs**|||
 B1|Capteur de pression 1|Rupteur|E124.6|*A6*
 B2|Capteur de pression 2|Rupteur|E124.7|*A7*
 Sorties
-M1|Commande pompe 1|A124.0|*R0*
-M2|Commande pompe 2|A124.1|*R1*
-M3|Commande pompe 3|A124.2|*R2*
-M4|Commande pompe 4|A124.3|*R3*
-SH|Avertisseur sonore|A124.5|*R5*
+M1|Commande pompe 1||A124.0|*R0*
+M2|Commande pompe 2||A124.1|*R1*
+M3|Commande pompe 3||A124.2|*R2*
+M4|Commande pompe 4||A124.3|*R3*
+SH|Avertisseur sonore||A124.5|*R5*
 |**Voyants lumineux**|||
-H1|Voyant lumineux pompe 1|A125.0|
-H2|Voyant lumineux pompe 2|A125.1|
-H3|Voyant lumineux pompe 3|A125.2|
-H4|Voyant lumineux pompe 4|A125.3|
+H1|Voyant lumineux pompe 1||A125.0|
+H2|Voyant lumineux pompe 2||A125.1|
+H3|Voyant lumineux pompe 3||A125.2|
+H4|Voyant lumineux pompe 4||A125.3|
 
 ### M44 : Installation de pompage des eaux usées
 
