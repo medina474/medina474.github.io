@@ -127,12 +127,12 @@ B4|Niveau min cuve 1|Rupteur|E125.1
 B5|Niveau min cuve 2|Rupteur|E125.2
 B6|Niveau min cuve 3|Rupteur|E125.3
 ||**Sorties
-Y1|Vanne de remplissage cuve 1|A124.0
-Y2|Vanne de remplissage cuve 2|A124.1
-Y3|Vanne de remplissage cuve 3|A124.2
-Y4|Vanne de vidage cuve 1|A124.3
-Y5|Vanne de vidage cuve 2|A124.4
-Y6|Vanne de vidage cuve 3|A124.5
+Y1|Vanne de remplissage cuve 1|A124.0|*R0*
+Y2|Vanne de remplissage cuve 2|A124.1|*R1*
+Y3|Vanne de remplissage cuve 3|A124.2|*R2*
+Y4|Vanne de vidage cuve 1|A124.3|*R3*
+Y5|Vanne de vidage cuve 2|A124.4|*R4*
+Y6|Vanne de vidage cuve 3|A124.5|*R5*
 ||**Voyants lumineux
 H1|Voyant installation marche|A125.0
 H2|Voyant cuve 1|A125.1
@@ -166,3 +166,59 @@ H1|Station 4||A124.1|*R1*
 H2|Station 3||A124.2|*R2*
 H3|Station 2||A124.3|*R3*
 H4|Station 1||A124.4|*R4*
+
+### M43 : Commande de pompe
+
+Code|Nom|Description des contacts|Adresse|Controllino
+|---|---|---|---|---|
+|**Boutons-poussoirs**|||
+S0|Arrêt                  |Rupteur|E124.0|*A0*
+S1|Protection du moteur Q1|Rupteur|E124.1|*A1*
+S2|Protection du moteur Q2|Rupteur|E124.2|*A2*
+S3|Protection du moteur Q3|Rupteur|E124.3|*A3*
+S4|Protection du moteur Q4|Rupteur|E124.4|*A4*
+S5|Marche|Contacteur|E124.5|*A5*
+|**Capteurs**|||
+B1|Capteur de pression 1|Rupteur|E124.6|*A6*
+B2|Capteur de pression 2|Rupteur|E124.7|*A7*
+Sorties
+M1|Commande pompe 1|A124.0|*R0*
+M2|Commande pompe 2|A124.1|*R1*
+M3|Commande pompe 3|A124.2|*R2*
+M4|Commande pompe 4|A124.3|*R3*
+SH|Avertisseur sonore|A124.5|*R5*
+|**Voyants lumineux**|||
+H1|Voyant lumineux pompe 1|A125.0|
+H2|Voyant lumineux pompe 2|A125.1|
+H3|Voyant lumineux pompe 3|A125.2|
+H4|Voyant lumineux pompe 4|A125.3|
+
+### M44 : Installation de pompage des eaux usées
+
+Code|Nom|Description des contacts|Adresse|Controllino
+|---|---|---|---|---|
+|**Boutons-poussoirs**|||
+S0|Installation arrêt|Rupteur|E124.0|*A0*
+S1|Installation marche|Contacteur|E124.1|*A1*
+S3|Pompe 1 – test |Contacteur|E124.3|*A3*
+S4|Pompe 2 – test |Contacteur|E124.4|*A4*
+S5|Reset          |Contacteur|E124.5|*A5*
+S6|Q1 – Pompe 1   |Rupteur|E124.6|*A6*
+S7|Q2 – Pompe 2   |Rupteur|E124.7|*A7*
+|**Capteurs**|||
+B1|Pompes arrêt   |Rupteur|E125.0|
+B2|Pompe 1 marche |Rupteur|E125.1|
+B3|Trop-plein     |Rupteur|E125.2|
+B4|Pompes arrêt   |Rupteur|E125.3|
+B5|Pompe 2 marche |Rupteur|E124.2|
+|**Entrées analogiques**|||
+U1|Niveau d’eau          ||PEW130|*A8*
+U2|Niveau d’enclenchement||PEW132|*A9*
+|**Sorties**|||
+Sh|Avertisseur sonore|A124.0|*R0*
+M1|Pompe 1||A124.1|*R1*
+M2|Pompe 2||A124.3|*R3*
+|**Voyants lumineux**|||
+H1|Validation||A124.2|*R8*
+H3|Pompe 1||A124.4|*D0*
+H4|Pompe 2||A124.5|*D1*
