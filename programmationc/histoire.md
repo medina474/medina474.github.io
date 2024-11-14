@@ -2,7 +2,7 @@
 title: Histoire
 ---
 
-Le langage C a été créé au début des années 1970 par Dennis Ritchie aux laboratoires Bell (AT&T) pour réécrire le système d'exploitation UNIX, qui était initialement en langage d'assemblage.
+Le langage C a été créé au début des années 1970 par Dennis Ritchie et Ken Thompson aux laboratoires Bell (AT&T) pour réécrire le système d'exploitation UNIX, qui était initialement en langage d'assemblage.
 
 ### Langage C original
 

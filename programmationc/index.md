@@ -38,6 +38,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 
 ## Concepts
 
+- [La compilation](compilation)
 - [Les variables](variables)
 
 ### Opérateurs

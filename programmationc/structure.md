@@ -2,40 +2,29 @@
 title: Structure
 ---
 
-Les structures en C permettent de regrouper différents types de données sous un même nom, facilitant la gestion des données complexes dans un programme
+Les structures en C permettent de regrouper différents types de données sous un même nom, facilitant la gestion des données complexes dans un programme.
 
 Une structure est un objet composé de plusieurs champs de types différents, qui sert à représenter un objet. Par exemple un client peut être représenté par son nom, son prénom, son année de naissance, son adresse.
 
 Une structure est un **type de données personnalisé** qui peut contenir des variables de types différents. On la définit à l'aide du mot-clé ***struct***.
 
-```C
-struct client // client est le nom de la structure
-{
-  char nom[25];
-  char prenom[20];
-  int annee_naissance;
-  char adresse[100];
-} Un_Client ; // Un_Client et le nom d'une variable de type client
-// optionnel si on déclare seulement le type
-// ; obligatoire dans tous les cas
-```
+#### Définition de la structure
 
-Définition du type et déclaration de variables?
-Définition de la structure
 ```C
-struct client // client est le nom de la structure
+struct Personne
 {
   char nom[25];
   char prenom[20];
   int annee_naissance;
   char adresse[100];
-} ;
+};
+```
 
 Une fois la structure définie, on peut créer des variables de ce type.
 
 ```c
-struct client Un_Client;      // déclaration de la variable Un_Client
-struct client NouveauClient;  // déclaration de la variable NouveauClient
+struct Personne un_client;      // déclaration de la variable Un_Client
+struct Personne nouveauClient;  // déclaration de la variable NouveauClient
 ```
 
 ### Manipulation des champs :
@@ -45,22 +34,16 @@ Les structures peuvent être manipulées champs par champs ou dans leur ensemble
 Pour accéder aux membres d'une structure, on utilise l'opérateur point ***.***.
 
 ```C
-typedef struct client CLIENT; // création d'un alias CLIENT sur struct client
-struct client // client est le nom de la structure
-{
-  char nom[25];
-  char prenom[20];
-  int annee_naissance;
-  char adresse[100];
-} ;
-
-Int main(void){
+int main(void){
   CLIENT Un_Client; // déclaration de la variable Un_Client
   CLIENT NouveauClient; // déclaration de la variable NouveauClient
+  
   gets(NouveauClient.nom); // initialisation du champs nom
   gets(NouveauClient.prenom);
   gets(NouveauClient.adresse);
+  
   scanf("%d",&NouveauClient.annee_naissance);
+  
   Un_Client = NouveauClient; // Affectation sur l'ensemble des champs (copie)
 }
 ```
@@ -81,6 +64,7 @@ int main (void){
   if (pdate == NULL){
     printf("erreur d'allocation mémoire!!!"); exit(-1);
   }
+  
   printf("Donnez le jour : ");
   scanf("%d",&pdate->jour);
 
@@ -132,5 +116,8 @@ typedef struct {
     int age;
     float taille;
 } Personne;
+
+typedef struct client CLIENT; // création d'un alias CLIENT sur struct client
+
 
 Personne personne3; // Pas besoin d'écrire "struct Personne"
