@@ -84,7 +84,7 @@ La gamme de réglage linéaire du potentiomètre vaut 0 V  0 % à 10 V 100 %.
 
 Les radiateurs doivent, conformément à la description fonctionnelle 2, être connectés et déconnectés par réglage du potentiomètre et non avec les boutons-poussoirs « ▲ » et « ▼ ».
 
-### M14 : 
+### M14 : Rampe d’éclairage
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
@@ -139,8 +139,8 @@ H2|Voyant cuve 1|A125.1
 H3|Voyant cuve 2|A125.2
 H4|Voyant cuve 3|A125.3
 
-
-### M42
+Monte-charge
+### M42 : Monte-charge
 
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
