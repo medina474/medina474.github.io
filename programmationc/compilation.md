@@ -26,7 +26,5 @@ Code source -> compilateur -> Assembleur -> Code objet -> Linker -> Fichier exé
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
-<script>
-mermaid.init({ noteMargin: 10 }, '.language-mermaid');
+  mermaid.initialize({ startOnLoad: true });
 </script>
