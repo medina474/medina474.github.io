@@ -8,16 +8,18 @@ Solution plus efficace : on passe en paramètre deux pointeurs.
 ```C
 void carre(int *A, int *Res)
 {
-*Res = (*A) * (*A); // équivalent à : *A**A ou * A * * A
+  *Res = (*A) * (*A); // équivalent à : *A**A ou * A * * A
 }
+
 void main(void)
 {
-int *X,*Y;
-X = (int*)malloc(1*sizeof(int));
-Y = (int*)malloc(1*sizeof(int));
-*X = 2;
-carre(X,Y);
-free(X);free(Y); // on libère la mémoire allouées aux pointeurs
+  int *X,*Y;
+  X = (int*)malloc(1*sizeof(int));
+  Y = (int*)malloc(1*sizeof(int));
+  *X = 2;
+  carre(X,Y);
+  free(X);
+  free(Y); // on libère la mémoire allouées aux pointeurs
 ```
 
 Pointeur de pointeur:

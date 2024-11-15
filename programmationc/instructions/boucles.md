@@ -11,14 +11,14 @@ L'instruction while exécute un bloc de code tant qu'une condition est vraie. La
 ```C
 int i = 0;
 while (i < 5) {
-    printf("%d\n", i);
-    i++;
+  printf("%d\n", i);
+  i++;
 }
 ```
 
 ## do-while
 
-L'instruction do-while est similaire à while, mais la différence principale est que la condition est vérifiée après l'exécution du bloc de code. Cela garantit que le bloc de code est exécuté au moins une fois, même si la condition est fausse dès le début.
+L'instruction do-while est similaire à while, mais la différence principale est que la condition est vérifiée **après** l'exécution du bloc de code. Cela garantit que le bloc de code est exécuté **au moins une fois**, même si la condition est fausse dès le début.
 
 ```C
 int i = 0;
@@ -63,14 +63,14 @@ Il est possible de contrôler le comportement des boucles avec les [instructions
 - break : Pour sortir immédiatement de la boucle.
 - continue : Pour sauter à l'itération suivante sans exécuter le reste du bloc de code.
 
-Boucles imbriquées
+## Boucles imbriquées
 
 Il est possible d'imbriquer des boucles, c'est-à-dire de placer une boucle à l'intérieur d'une autre. Cela est souvent utilisé pour parcourir des structures de données en plusieurs dimensions comme des tableaux.
 
 ```C
 for (int i = 0; i < 3; i++) {
-    for (int j = 0; j < 3; j++) {
-        printf("i = %d, j = %d\n", i, j);
-    }
+  for (int j = 0; j < 3; j++) {
+    printf("i = %d, j = %d\n", i, j);
+  }
 }
 ```

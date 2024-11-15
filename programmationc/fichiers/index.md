@@ -10,9 +10,9 @@ Le positionnement dans un fichier est donnée par un pointeur.
 
 ### Types de fichier
 
-Les binaires : Dans un fichier dit "binaire", les informations sont codées telles que, comme en mémoire. Ce sont généralement des nombres. Ils ne sont pas lisibles sauf avec un éditeur hexadécimal ou le programme qui l'a écrit.
+Les **binaires** : Dans un fichier dit "binaire", les informations sont codées telles que, comme en mémoire. Ce sont généralement des nombres. Ils ne sont pas lisibles sauf avec un éditeur hexadécimal ou le programme qui l'a écrit.
 
-Les fichiers texte : Dans un fichier dit "texte", les informations sont codées en ASCII. Ces fichiers sont visualisable facilement avec un simple éditeur de texte.
+Les fichiers **texte** : Dans un fichier dit "texte", les informations sont codées en ASCII. Ces fichiers sont visualisable facilement avec un simple éditeur de texte.
 
 ### Manipulation des fichiers
 
@@ -231,8 +231,7 @@ Positionnement dans un fichier:
 int fseek(FILE *pointeur_fichier, long offset, int base);
 ```
 
-La fonction fseek permet de placer le pointeur de position sur un octet quelconque d'un fichier. Le paramètre offset impose le nombre d'octets dont il faut décaler le pointeur relativement à la
-base. Si l'offset est négatif le déplacement s'effectue vers le début du fichier. base précise l'origine du déplacement dans le fichier.
+La fonction fseek permet de placer le pointeur de position sur un octet quelconque d'un fichier. Le paramètre offset impose le nombre d'octets dont il faut décaler le pointeur relativement à la base. Si l'offset est négatif le déplacement s'effectue vers le début du fichier. base précise l'origine du déplacement dans le fichier.
 
 La fonction retourne 0 si pas d'erreur sinon un nombre non nul.
 
