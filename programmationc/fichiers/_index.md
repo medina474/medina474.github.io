@@ -1,10 +1,7 @@
 ---
 title: Fichiers
----
+--- 
 
-L'écriture et la lecture des données, le positionnement dans un fichier se fait à l'aide d'un pointeur de fichier.
-
-Les fichiers binaires : Dans un fichier dit binaire, les informations sont codées telles quelles. Ils ne sont pas éditables sauf avec un éditeur hexadécimal.
 Les fichiers texte : Dans un fichier dit texte, les informations sont codées en ASCII. Ces fichiers sont éditables. Le dernier octet de ces fichiers est EOF (End Of File : caractère ASCII spécifique).
 
 Lorsqu'un programme doit lire ou écrire des données dans un fichier, le chemin pris par ces données pour arriver à leur destination passe par un tampon. Ce tampon est une zone de mémoire RAM dans laquelle sont temporairement stockées les données.
@@ -12,27 +9,6 @@ Cette zone tampon est gérée par une structure de type FILE. On l'utilise en d�
 
 ### Ouvrir un fichier
 
-Avant qu'un programme puisse manipuler un fichier, il doit commencer par l'ouvrir. Le but est d'accéder aux données, de stocker les informations dans une structure FILE afin de les réutiliser plus tard pour une lecture ou une écriture.
-
-```C
-FILE *fopen(char *nomFichier, char *modeAcces);
-```
-
-```C
-#include <stdio .h>
-
-int main (int argc, char *argv[])
-{
-  FILE *fp;
-  fp = fopen("donnees.txt", "r") ;
-  if (fp == NULL)
-  {
-    printf (" Erreur d'ouverture de fichier \n") ;
-    exit ( -1) ;
-  }
-  ...
-}
-```
 
 Mode d'accès | Cible | Résultat
 ---|---|---
@@ -65,7 +41,7 @@ void main(int argc, char *argv[])
 }
 ```
 
-Il ne faut pas oublier de fermer un fichier après utilisation car le nombre de fichiers susceptibles d'être ouverts simultanément est limité (nombre de pointeurs FILE limité).
+
 
 ### Lecture en mode caractère (fichiers ASCII)
 
@@ -93,26 +69,6 @@ void main(int argc, char *argv[])
 
 ### Écriture en mode caractère (fichiers ASCII)
 
-```C
-int fputc(int caractere, FILE *pointeurFichier);
-```
-
-La fonction fputc transfère un caractère dans le fichier pointé par pointeur Fichier. La fonction retourne le caractère écrit si pas d'erreur, et EOF s'il y a eu une erreur.
-
-```C
-#include <stdio .h>
-
-void main(int argc, char *argv[])
-{
-  FILE *fp;
-  int c = 'A';
-  fp = fopen ("donnees.txt ", "w");
-  ...
-  c = fputc(c, fp);
-  ...
-  fclose(fp);
-}
-```
 
 ```C
 char *fgets(char *pointeurTampon, int nombre, FILE *pointeurFichier);
@@ -259,12 +215,6 @@ Valeur de base Constante symbolique Signification
 fseek (fp ,0 ,0) ; /* on se place au début du fichier */
 ...
 fseek (fp , -3 , SEEK_END ) ; /* on se place 3 octets avant la fin du fichier */
-
-long ftell(FILE *pointeurFichier);
-
-La fonction ftell permet de connaître l'octet du fichier sur lequel pointe le pointeur de fichier.
-
-La fonction retourne, sous forme de valeur long, la position actuelle du pointeur de fichier relativement au début du fichier, ou -1 en cas d'erreur.
 
 ```C
 #include <stdio .h>

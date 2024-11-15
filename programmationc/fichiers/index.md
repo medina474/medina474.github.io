@@ -5,11 +5,12 @@ title: Les fichiers
 Un fichier est un ensemble d'informations stockées sur une mémoire de masse (disque dur, CD-ROM, mémoire flash...)
 
 En C, un fichier est une suite d'octets. Les informations contenues dans un fichier ne sont pas forcément de même type (char, int, float structure...)
-L'adresse d'une information dans le fichier est donnée par un pointeur.
+
+Le positionnement dans un fichier est donnée par un pointeur.
 
 ### Types de fichier
 
-Les binaires : Dans un fichier dit "binaire", les informations sont codées telles que comme en mémoire. Ce sont généralement des nombres.
+Les binaires : Dans un fichier dit "binaire", les informations sont codées telles que, comme en mémoire. Ce sont généralement des nombres. Ils ne sont pas lisibles sauf avec un éditeur hexadécimal ou le programme qui l'a écrit.
 
 Les fichiers texte : Dans un fichier dit "texte", les informations sont codées en ASCII. Ces fichiers sont visualisable facilement avec un simple éditeur de texte.
 
@@ -23,10 +24,10 @@ Une structure spécifique gère ce tampon et d'autre variables nécessaires à l
 typdef struct
 {
   char *buffer; // pointeur vers le tampon
-  char *ptr; // pointeur vers le caractère suivant dans le tampon
-  int cnt; // nombre de caractères dans le tampon
-  int flag; // bits donnant l'état du fichier
-  int fd; // descripteur (identifiant de fichier)
+  char *ptr;    // pointeur vers le caractère suivant dans le tampon
+  int cnt;   // nombre de caractères dans le tampon
+  int flag;  // bits donnant l'état du fichier
+  int fd;    // descripteur (identifiant de fichier)
 } FILE;
 ```
 
@@ -34,7 +35,12 @@ typdef struct
 
 Avant qu'un programme puisse manipuler un fichier, il faut commencer par l'ouvrir.
 
-FILE * fopen( char *nom_fichier, char *mode_acces);
+Le but est d'accéder aux données, de stocker les informations dans une structure FILE afin de les réutiliser plus tard pour une lecture ou une écriture.
+
+```C
+// Déclaration
+FILE * fopen(char *nom_fichier, char *mode_acces);
+```
 
 ```C
 #include <stdio.h>
@@ -45,15 +51,14 @@ void main(void)
   fp = fopen("nomdufichier.dat","r"); // Ouverture du fichier en mode lecture
   if (fp==NULL)
   {
-  puts("Erreur d'ouverture de fichier");
+    puts("Erreur d'ouverture de fichier");
   }
 ...
 ...
 }
 ```
 
-
-Les différents modes d'accès aux fichiers.
+##### Les différents modes d'accès aux fichiers.
 
 
 |Mode|Description|
@@ -82,7 +87,10 @@ Quand un fichier n'est plus utilisé, on le ferme. Cela annule sa liaison avec l
 
 Attention il ne faut pas oublier de fermer un fichier après utilisation, car le nombre de fichiers susceptibles d'être ouverts simultanément est limité (nombre de pointeurs FILE limité).
 
+```c
+// Déclaration
 int fclose( FILE *pointeur_fichier);
+```
 
 ```C
 #include <stdio.h>
@@ -96,11 +104,16 @@ void main(void)
 }
 ```
 
-### Lecture et écriture en mode caractère:
+Il ne faut pas oublier de fermer un fichier après utilisation car le nombre de fichiers susceptibles d'être ouverts simultanément est limité (nombre de pointeurs FILE limité).
+
+### Lecture et écriture en mode caractère
 
 #### Lecture :
 
-int fgetc( FILE *pointeur_fichier);
+```c
+// Déclaration
+int fgetc(FILE *pointeur_fichier);
+```
 
 La fonction fgetc retourne le caractère lu sous la forme d'un int.
 
@@ -113,7 +126,10 @@ c = fgetc(fp);
 
 #### Ecriture :
 
-int fputc( int caractere, FILE *pointeur_fichier);
+```c
+// Déclaration
+int fputc(int caractere, FILE *pointeur_fichier);
+```
 
 La fonction fputc transfère un caractère dans le fichier pointé par pointeur_fichier. La fonction retourne le caractère écrit si pas d'erreur, et EOF s'il y a une erreur.
 
@@ -121,11 +137,14 @@ La fonction fputc transfère un caractère dans le fichier pointé par pointeur_
 fputc('A', fp);
 ```
 
-### Lecture et écriture en mode chaine:
+### Lecture et écriture en mode chaine
 
 #### Lecture :
 
-char *fgets(char *pointeur_tampon,int nombre, FILE *pointeur_fichier);
+```c
+// Déclaration
+char *fgets(char *pointeur_tampon, int nombre, FILE *pointeur_fichier);
+```
 
 La fonction fgets lit dans le fichier à partir de la position courante, nombre caractères et les range à l'emplacement pointé par pointeur_tampon. La fonction s'arrête si un saut de ligne '\n' a été lu ou si nombre-1 caractères ont été lu ou si c'est la fin de fichier.
 
@@ -136,15 +155,21 @@ fgets(stringbuf, 81 , fp);
 
 #### Ecriture :
 
+```c
+// Déclaration
 char * fputs( char *pointeur_tampon, FILE *pointeur_fichier);
+```
 
 La fonction fputs écrit une chaine de caractère dans un fichier à partir de la position courante.la fonction retourne une valeur positive si pas d'erreur, et EOF s'il y a une erreur.
 
-### Lecture et écriture formatées:
+### Lecture et écriture formatées
 
 #### Lecture :
 
+```c
+// Déclaration
 char *fscanf(FILE *pointeur_fichier,char *chaine_formatee, variables,..,..);
+```
 
 La fonction fscanf lit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement lues si pas d'erreur. La valeur EOF signifie fin de fichier ou erreur.
 
@@ -157,7 +182,10 @@ fscanf(fp, "%ld %s %s",&num, nom, prenom);
 
 #### Ecriture :
 
+```c
+// Déclaration
 int * fprintf(FILE * pointeur_fichier,char *chaine_formatee, variables,..,..);
+```
 
 La fonction fprintf écrit des données dans un fichier en les formatant, elle retourne le nombre de données correctement écrites si pas d'erreur, et EOF s'il y a une erreur.
 
@@ -165,7 +193,10 @@ La fonction fprintf écrit des données dans un fichier en les formatant, elle r
 
 #### Lecture :
 
+```c
+// Déclaration
 int *fread(void *pointeur_Tampon,size-t taille,size_t nombre,FILE *point_fic);
+```
 
 La fonction fread lit un bloc de données de taille x nombre octets et le range à l'emplacement référencé par pointeur_tampon. Elle retourne le nombre d'octets lus. Si la valeur est inférieur à
 nombre alors erreur.
@@ -178,7 +209,10 @@ fread(k, sizeof(struct client), 5, fp);
 
 #### Ecriture :
 
+```c
+// Déclaration
 int * fwrite(void *pointeur_Tampon,size-t taille,size_t nombre,FILE *point_fic);
+```
 
 La fonction fwrite écrit un bloc de données de taille x nombre octets rangé à l'emplacement référencé par pointeur_tampon dans
 
@@ -192,7 +226,10 @@ Si on veut accéder à la valeur C5 : il faut un accès direct aux données donc
 
 Positionnement dans un fichier:
 
+```c
+// Déclaration
 int fseek(FILE *pointeur_fichier, long offset, int base);
+```
 
 La fonction fseek permet de placer le pointeur de position sur un octet quelconque d'un fichier. Le paramètre offset impose le nombre d'octets dont il faut décaler le pointeur relativement à la
 base. Si l'offset est négatif le déplacement s'effectue vers le début du fichier. base précise l'origine du déplacement dans le fichier.
@@ -205,11 +242,16 @@ fseek(fp,0,SEEK_END); // on se place à la fin du fichier
 fseek(fp,-3,SEEK_END); // on se place 3 octets avant la fin du fichier
 ```
 
-#### Lecture de la position du pointeur dans un fichier:
+#### Lecture de la position du pointeur dans un fichier
 
+```c
+// Déclaration
 long ftell(FILE *pointeur_fichier);
+```
 
-La fonction ftell permet de connaitre l'octet du fichier sur lequel pointe le pointeur de fichier. La fonction retourne dans un entier long la position courante dans le fichier à partir du début du fichier. Retourne -1 en cas d'erreur.
+La fonction ftell permet de connaitre l'octet du fichier sur lequel pointe le pointeur de fichier. 
+
+La fonction retourne dans un entier long la position courante dans le fichier à partir du début du fichier. Retourne -1 en cas d'erreur.
 
 ```C
 long position ;
@@ -219,7 +261,7 @@ position = ftell(fp);
 Exemple recherche de la taille d'un fichier (on considère le fichier ouvert)
 
 ```C
-long Taille;
-fseek(fp,0,SEEK_END); // on se place en fin de fichier
-Taille = ftell(fp); // lecture de la position dans le fichier
+long taille;
+fseek(fp, 0, SEEK_END); // on se place en fin de fichier
+taille = ftell(fp); // lecture de la position dans le fichier
 ```
