@@ -37,11 +37,11 @@ La bibliothèque standard de C (<string.h>) fournit plusieurs fonctions pour man
 #include <string.h>
 
 int main() {
-    char chaine1[20] = "Bonjour";
-    char chaine2[20] = " le monde";
-    strcat(chaine1, chaine2);  // Concatène chaine2 à la fin de chaine1
-    printf("%s\n", chaine1);   // Affiche "Bonjour le monde"
-    return 0;
+  char chaine1[20] = "Bonjour";
+  char chaine2[20] = " le monde";
+  strcat(chaine1, chaine2);  // Concatène chaine2 à la fin de chaine1
+  printf("%s\n", chaine1);   // Affiche "Bonjour le monde"
+  return 0;
 }
 ```
 
@@ -51,7 +51,7 @@ En résumé, bien que les chaînes de caractères en C soient simples, elles né
 
 ## Saisie de chaine de caractères
 
-La fonction scanf est prévue pour faire de la saisie de valeurs formatée. C’est à dire que l’on précise dans quel format doivent être saisies les variables.
+La fonction ***scanf*** est prévue pour faire de la saisie de valeurs formatée. C’est à dire que l’on précise dans quel format doivent être saisies les variables.
 
 ```C
 # include < stdio .h >
@@ -60,8 +60,8 @@ int main (int argc , char *argv[])
   int nombre ,* pNombre ;
   pNombre = (int *) malloc ( sizeof (int) );
 
-  scanf ("%d" ,&nombre);
-  scanf ("%d",pNombre);
+  scanf ("%d", &nombre);
+  scanf ("%d", pNombre);
 
   printf (" Nombre 1 : %d\ nNombre 2 : %d",nombre ,* pNombre ) ;
 }
@@ -89,7 +89,6 @@ A la fin de la saisie, le caractère ’\0’ est ajouté automatiquement.
 d’entrée.
 {: .warning}
 
-A la fin de la saisie, le caractère ’\0’ est ajouté automatiquement.
 
 ### Le tampon d’entrée ?
 
