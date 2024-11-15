@@ -3,7 +3,7 @@ title: Perfectionnement en langage C
 ---
 
 > Le langage C reste aujourd'hui très utilisé, notamment pour le développement du noyau des systèmes d'exploitation, des logiciels embarqués et des applications nécessitant des performances élevées. Sa simplicité, sa proximité avec le matériel et sa portabilité sont les principales raisons de son succès durable.
-{.definition}
+{:.definition}
 
 - [Histoire du langage C](histoire)
 

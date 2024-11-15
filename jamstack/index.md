@@ -7,3 +7,15 @@ title: JAMStack
 [hugo](hugo)
 
 [markdown](markdown)
+
+> Objectifs : 
+{:.objectif}
+
+> Définition : 
+{:.definition}
+
+> Attention : 
+{:.warning}
+
+> Attention : 
+{:.danger}

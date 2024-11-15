@@ -124,7 +124,7 @@ Un circuit est une trail de nœuds adjacents commençant et se terminant au mêm
 Dans un chemin Les arêtes ne peuvent apparaître qu'une seule fois dans la chaîne.
 
 > Un chemin est un sous-graphe où le premier et le dernier nœuds ont un degré un, et les autres nœuds ont un degré deux.
-{.definition}
+{:.definition}
 
 #### Cycle
 

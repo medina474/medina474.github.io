@@ -20,6 +20,6 @@ Opérateur |	Description |	Opérateur | Équivalence
 
 
 > Les opérateurs d'affection combinent l'affectation simple aux autre opérateurs pour simplifier l'écriture d'une formule.
-{.definition}
+{:.definition}
 
 Chapitre suivant : les [Opérateurs arithmétiques](arithmétiques)

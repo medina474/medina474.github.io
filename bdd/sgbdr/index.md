@@ -7,7 +7,7 @@ Les bases de données relationnelles sont un élément clé de la gestion de don
 ### Qu'est-ce qu'une base de données relationnelle ?
 
 > Une base de données relationnelle est une collection de données structurées, organisées en tables. Chaque table est composée de lignes (enregistrements) et de colonnes (champs). Chaque ligne représente une entité unique, comme un client, un produit ou une commande, tandis que chaque colonne représente un attribut de ces entités.
-{.definition}
+{:.definition}
 
 ### Terminologie clé
 

@@ -11,7 +11,7 @@ L'adresse d'une information dans le fichier est donnée par un pointeur.
 
 Les binaires : Dans un fichier dit "binaire", les informations sont codées telles que comme en mémoire. Ce sont généralement des nombres.
 
-Les fichiers texte : Dans un fichier dit "texte", les informations sont codées en ASCII. Ces fichiers sont visualisable facilement avec un simple éditeur de texte. Le
+Les fichiers texte : Dans un fichier dit "texte", les informations sont codées en ASCII. Ces fichiers sont visualisable facilement avec un simple éditeur de texte.
 
 ### Manipulation des fichiers
 
