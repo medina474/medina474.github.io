@@ -9,7 +9,7 @@ a. Ouvrir le fichier [observations.csv](observations.csv) en mode lecture
 
 b. Lire la totalité du fichier 
 
-c. Afficher la plus grande valeur (maximim), la plus petite (minimum).
+c. A la fin de la lecture, afficher la plus grande valeur (maximim) et la plus petite (minimum).
 
 d. Afficher la moyenne des valeurs lues.
 
@@ -18,7 +18,7 @@ e. Pour chaque ligne lue afficher la moyenne depuis le début de la série et la
 
 #### a. Ouvrir le fichier
 
-La fonction ***fopen*** ouvre le fichier. si le retour est NULL alors c'est qu'il y a eu un problème. la fonction ***perror*** permet d'afficher le détail de l'erreur, pour en savoir un peu plus.
+La fonction ***[fopen](../../fichiers)*** ouvre le fichier. si le retour est NULL alors c'est qu'il y a eu un problème. la fonction ***perror*** permet d'afficher le détail de l'erreur, pour en savoir un peu plus.
 
 
 #### b. Lire la totalité du fichier 
