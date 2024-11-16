@@ -17,11 +17,12 @@ mermaid
 Code source -> compilateur -> Assembleur -> Code objet -> Linker -> Fichier exécutable
 
 ```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+  graph LR;
+    Code source-->compilateur;
+    compilateur-->Assembleur;
+    Assembleur-->Code objet;
+    Code objet-->Linker;
+    Linker-->Fichier exécutable
 ```
 
 <script type="module">
