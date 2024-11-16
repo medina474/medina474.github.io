@@ -13,7 +13,7 @@ c. Afficher la plus grande valeur (maximim), la plus petite (minimum).
 
 d. Afficher la moyenne des valeurs lues.
 
-e. Pour chaque ligne lue afficher la moyenne depuis le début de la série et la moyenne glissante sur les 5 dernières valeurs.
+e. Pour chaque ligne lue afficher la moyenne depuis le début de la série et la moyenne glissante sur les 5 dernières valeurs. (voir [td2](td2))
 
 
 #### a. Ouvrir le fichier
@@ -26,3 +26,7 @@ La fonction ***fopen*** ouvre le fichier. si le retour est NULL alors c'est qu'i
 La lecture d'une ligne se fait avec la fonction ***fgets***
 
 La conversion s'effectue à l'aide la fonction ***atof**
+
+Répeter l'opération tant qu'il y a des lignes
+
+#### c. Calculer à chaque ligne le maximum et le minimum
