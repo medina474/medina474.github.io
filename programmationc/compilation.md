@@ -2,27 +2,34 @@
 title: Compilation
 ---
 
-Le traitement par le préprocesseur : le fichier source est analysé par le préprocesseur qui effectue des
-transformations textuelles dans le fichier source. Substitution de chaine de caractère, des constantes, prise en compte des directives de compilation inclusion des autres fichiers sources...
+**Prétraitement** : Le traitement par le préprocesseur : le fichier source est analysé par le préprocesseur qui effectue des transformations textuelles dans le fichier source. Substitution de chaine de caractère, des constantes, prise en compte des directives de compilation, inclusion des autres fichiers sources...
 
-**La compilation** : C’est la traduction du fichier généré par le préprocesseur en assembleur, c’est-à-dire en une suite d’instruction du microprocesseur. (en mnémonique rendant la lecture possible)
+```c
+#define PI 3.1415
 
-**L’assemblage** : Cette opération transforme le code assembleur en un fichier binaire directement compréhensible par le processeur.(fichiers objets)
+double aire = PI * pow(rayon, 2);
+```
 
-**L’édition de liens** : C’est la liaison de tous les fichiers objets utilisés par le programme (source(s), librairies de fonctions standard ou autres...) 
+remplacé par
 
-EXECUTABLE
+```c
+double aire = 3.1415 * pow(rayon, 2);
+```
 
-mermaid
-Code source -> compilateur -> Assembleur -> Code objet -> Linker -> Fichier exécutable
+**La compilation** : C’est la traduction du fichier généré par le préprocesseur en assembleur, c’est-à-dire en une suite d’instruction correspondant au microprocesseur cible. (en mnémonique rendant la lecture encore possible).
+
+**L’assemblage** : L'assembleur traduit le code assembleur en code objet binaire directement compréhensible par le processeur. (fichiers objets).
+
+**L’édition de liens** : Le linker combine le code objet avec les bibliothèques nécessaires (comme la bibliothèque standard C) pour produire un exécutable. (fichiers exe ou out).
 
 ```mermaid
-  graph LR;
-    Code source-->compilateur;
-    compilateur-->Assembleur;
-    Assembleur-->Code objet;
-    Code objet-->Linker;
-    Linker-->Fichier exécutable
+graph LR;
+  A((Source C .c)) --> B[Prétraitement]
+  B --> C[Compilation]
+  C --> D[Assemblage]
+  D --> E((Code Objet .o))
+  E --> F[Édition des liens]
+  F --> G((Exécutable .exe))
 ```
 
 <script type="module">
