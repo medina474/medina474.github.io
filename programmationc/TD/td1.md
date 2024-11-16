@@ -4,7 +4,7 @@ title: Travaux dirigés 1
 
 ## Demander à l'utilisateur d'entrer un nombre entier. Calculer la sortie
 
-a.  Si ce nombre est inférieur à 5 la sortie est égale à 1, sinon la sortie est égale à 0
+a. Si ce nombre est inférieur à 5 la sortie est égale à 1, sinon la sortie est égale à 0
 
 b. Écrire la sortie suivant les conditions suivantes :
 
@@ -16,7 +16,7 @@ b. Écrire la sortie suivant les conditions suivantes :
 
 ## Demander à l'utilisateur d'entrer deux nombres entiers.
 
-c.  Si n1 = 5 et n2 > 10 alors la sortie vaut 1 sinon 0
+c. Si n1 = 5 et n2 > 10 alors la sortie vaut 1 sinon 0
 
 d.
 
