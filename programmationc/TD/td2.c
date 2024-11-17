@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 float calculMoyenne(int tab[5]) {
   int somme = 0;
@@ -18,7 +19,7 @@ float calculMoyenneN(int tab[], int nb) {
   return (float)somme / nb;  // cast conversion de type
 }
 
-void main() {
+int main() {
 
   puts("Test de la fonction calculMoyenne");
   int t1[5] = { 1, 1, 1, 1, 1 };

@@ -15,6 +15,7 @@ d. Afficher la moyenne des valeurs lues.
 
 e. Pour chaque ligne lue afficher la moyenne depuis le début de la série et la moyenne glissante sur les 5 dernières valeurs. (voir [td2](td2))
 
+f. Enregistrer dans un nouveau fichier 
 
 #### a. Ouvrir le fichier
 
