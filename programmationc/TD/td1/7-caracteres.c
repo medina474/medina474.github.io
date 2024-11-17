@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main() {
+int main() {
   printf("Le code ASCII de la lettre A est %i\n", 'A');
   printf("Le code ASCII de la lettre B est %i\n", 'B');
   printf("Le code ASCII de la lettre Z est %i\n", 'Z');

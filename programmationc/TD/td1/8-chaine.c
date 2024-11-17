@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void test() {
+int test() {
   char chaine3[30];
   strcpy(chaine3, "Ciao Luigi");
 

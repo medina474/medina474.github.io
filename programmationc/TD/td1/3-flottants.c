@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void main()
+int main()
 {
   puts("**************************************************");
   puts("Flottants");

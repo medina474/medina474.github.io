@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <limits.h>
 
-void main()
+int main()
 {
   puts("**************************************************");
   puts("Entiers");
 
   puts("");
   printf("char  : %d octet (%d bits)\n", sizeof(unsigned char), CHAR_BIT);
-  printf("Non signé : 0 / %d\n", UCHAR_MAX);
-  printf("Signé : %d / %d\n", SCHAR_MIN, SCHAR_MAX);
+  printf("Non signé :    0 / %d\n", UCHAR_MAX);
+  printf("Signé     : %d / %d\n", SCHAR_MIN, SCHAR_MAX);
 
   puts("");
   printf("short int : %d octets (%d bits)\n", sizeof(unsigned short int), __SHRT_WIDTH__);

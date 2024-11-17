@@ -1,3 +1,5 @@
 {
-  "svg.preview.background": "transparent"
+  "files.associations": {
+    "stdio.h": "c"
+  }
 }
