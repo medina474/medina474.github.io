@@ -43,6 +43,7 @@ Toutes les cartes Arduino sont équipées de micro-controleur ATMEGA de Atmel
 ![](mega.jpg)
 
 Alimentation - via port USB ou 7 à 12 V sur connecteur alim
+
 Caractéristiques             | Arduino UNO R3 | Mega 2560
 ---|---|---
 Microcontrôleur              | ATmega328P | ATmega2560
