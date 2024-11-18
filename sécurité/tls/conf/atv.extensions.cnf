@@ -1,0 +1,10 @@
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[ alt_names ]
+DNS.1 = atv.neotech.fr
+DNS.2 = atv.krys-group.com
+IP.1 = 192.168.137.102
+IP.2 = 127.0.0.1
