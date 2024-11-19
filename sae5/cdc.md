@@ -31,6 +31,12 @@ Un module de paramétrage initial doit permettre de saisir les données de la st
 - Coordonnées bancaires de la structure : BIC, IBAN, n° ICS
 - Une case à cocher « structure assujettie / non assujettie à la TVA »
 
+##### Quelques structures
+
+- [Jardins de Cocagne de Thaon-les-Vosges](https://thaonlesvosges.fr/ville-au-quotidien/emploi/les-structures-de-linsertion-par-lactivite-economique/les-jardins-de-cocagne/)
+- [Le jardin de Cocagne Angevin](https://www.jardin-cocagne-angers.org/)
+- [Les potagers de Velles](https://www.solidariteaccueil.org/les-potagers-de-velles)
+
 #### 2. Calendrier
 
 La structure doit définir de manière générale son calendrier livrable c'est-à-dire les jours et semaines où des livraisons sont possibles.
@@ -40,6 +46,7 @@ Les jours possibles de livraison dans la semaine sont définis d'après les jour
 La structure doit pouvoir définir, de manière globale les **semaines non livrables**, à décocher sur un calendrier (cela revient à exclure les semaines de fermeture de la structure)
 
 Ces éléments auront une incidence sur le parcours de commande (dates proposées en livraison), le paramétrage des abonnements et l'information des dates de livraison des produits, les récaps de commandes et feuilles de routes.
+
 
 #### 3. Dépôts
 
@@ -79,8 +86,6 @@ Il faudrait prévoir un module de visualisation des tournées facilitant leur (r
 
 Un même point de dépôt peut appartenir à 2 tournées différentes, dans le cas où un même site propose 2 créneaux différents de livraison / récupération de paniers dans la semaine. Le client choisi un des 2 créneaux de livraison. A voir comment cette double appartenance sera gérée informatiquement (sélection du point de dépôt puis du jour 2).
 
-À noter le besoin d'une très bonne ergonomie des documents de préparation des livraisons car ils seront utilisés par des non professionnels de la logistique. Un outil de paramétrage ou d'export vers des fichiers bureautiques ou la création peu complexe de modèles par des utilisateurs avertis (ex  modèles.odt Dolibarr) sera indispensable.
-
 
 #### 6. Adhérents
 
@@ -101,15 +106,20 @@ La fiche client comporte :
 
 (cf. paragraphe 7)
 
-- Date de 1ère adhésion, historique des adhésions avec leur période et le type d'adhésion. Élément indiquant si l'adhésion est à jour ou non (réglée ou non réglée / en cours ou expirée), avec indication de la date d'expiration de la dernière adhésion.
+- Date de 1ère adhésion, 
+- Historique des adhésions avec leur période et le type d'adhésion. 
+- Élément indiquant si l'adhésion est à jour ou non (réglée ou non réglée / en cours ou expirée), avec indication de la date d'expiration de la dernière adhésion.
 - Une case « dispensé d'adhésion » à cocher, pour le cas de clients professionnels à qui l'on ne demande pas d'adhésion.
+
+Pour le reste confer le paragraphe 7
 
 ##### Les éléments relatifs à ses différentes commandes de produits ou d'abonnements
 
-(cf. paragraphe 8)
-
 - Les commandes doivent pouvoir être réalisées, modifiées, ou visualisées depuis la fiche client. L'historique des commandes doit être présent, avec l'information du point de dépôt et les frais de livraison éventuellement associés, et un accès aux bons de livraisons et aux factures.
-- Note : Il se peut qu'un client ait plusieurs abonnements en même temps (pas de limite de nombre).
+
+> Note : Il se peut qu'un client ait plusieurs abonnements en même temps (pas de limite de nombre).
+
+Pour le reste confer le paragraphe 8
 
 ##### Espace client « Mon compte »
 
@@ -146,15 +156,13 @@ Les deux sont liés, un adhérent panier est obligatoirement adhérent de l'asso
 
 Un adhérent sans panier est appelé un **soutien**. Il devra être dans la liste des personnes convoquées aux assemblées générales de l'association.
 
-######  Adhésion à l'association
+###### 7.1 Adhésion à l'association
+
+> A noter que c'est cette adhésion qui est la base pour calculer une partie de la cotisation annuelle que reverse le jardin au Réseau national.
 
 Dans le cas des Jardins de Cocagne sous statut associatif (98 % des jardins), l'adhésion est obligatoire pour pouvoir accéder aux services et à la vente des produits de l'association. Tout client doit avant tout être adhérent, sauf cas particulier de clients professionnels à qui l'on ne demanderait pas d'adhésion (cf. case « dispensé d'adhésion » prévue sur la fiche client).
 
 On peut proposer différents types d'adhésion à des prix différents (exemple Adhésion soutien, Adhésion solidaire… ) qui doivent être paramétrables dans l'outil : libellé + montant (boutons Créer, Enregistrer, Fermer, Supprimer, Archiver).
-
-###### Adhésion au panier
-
-> A noter que c'est cette adhésion qui est la base pour calculer une partie de la cotisation annuelle que reverse le jardin au Réseau national.
 
 Adhésion valable sur une périodicité fixe déterminée par le Jardin
 
@@ -168,6 +176,11 @@ Sauf cas particuliers
 - D'autres Jardins font une cotisation dégressive au trimestre en fonction de la période d'inscription de l'adhérent.
 
 Les renouvellements d'adhésions sont tous appelés en même temps, avant la fin de la périodicité fixe.
+
+###### 7.2 Adhésion au panier
+
+Confer les abonnements aux produits
+
 
 #### 8. Produits et abonnements
 

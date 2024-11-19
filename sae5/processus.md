@@ -4,17 +4,19 @@ date: 2023-08-08T15:18:00+02:00
 draft: false
 ---
 
-### Synthèse des commandes à préparer et à livrer
+### 9. Synthèse des commandes à préparer et à livrer
 
 Un onglet spécifique est dédié au récapitulatif des commandes à préparer et à livrer (état de commandes ou de produits « en préparation »). Cette synthèse est actualisée en permanence et est consultable en avance pour n'importe quelle date à venir. Les commandes passées sont consultables dans les archives.
 
 Les tournées de livraison sont affectées suivant des **jour de préparation**
 
+###### Cas concrets
+
 La page principale de cet onglet récapitule la synthèse des commandes à préparer par jour de préparation  en quantité par type de produits.
 
 Lorsque l'on clique sur une journée de préparation, on accède à la liste de l'ensemble des commandes à préparer pour cette journée. Cette liste peut être triée et filtrée selon différents critères (tournée de livraison, ordre des points de dépôt, type de clients, nom des clients, type de produits).
 
-On édite 3 types de documents :
+Le gestionnaire de commande édite alors trois documents :
 
 - la feuille de préparation de commandes
 - les étiquettes paniers
@@ -22,14 +24,19 @@ On édite 3 types de documents :
 
 ### feuille de préparation de commandes
 
+La feuille de préparation indique le nombre de panier à préparer. Trier par type de panier et par lieu de livraison
+
 La feuille de préparation de commandes indique les noms des clients, le type de client, les produits commandés, le point de dépôt, le no de tournée.
+
 Lors de l'édition, plusieurs modes de présentation peuvent être proposés selon le choix de la structure (ex : entrée par type de client puis type de produits, puis ordre alphabétique des clients / ou bien ex :  entrée par type de produits puis par point de dépôt puis par ordre alphabétique des clients)
 
 En bas de page une synthèse indique le nombre de produits à préparer par types de produits.
 
 ###  Étiquettes paniers
 
-Imprimer pour chaque panier une étiquette contenant le nom de l'adhérent, le type de produit et le dépôt.
+Les étiquettes nominatives sont collées sur les cagettes. Elles permettent d'identifier à qui est destiné le panier.
+
+Pour chaque panier une étiquette contenant le nom de l'adhérent, le type de produit et le dépôt est imprimée.
 
 ### Feuille de route de livraison
 
@@ -46,3 +53,5 @@ Pour chaque point de dépôt (avec rappel adresse, no téléphone et nom gérant
 ### Validation
 
 Sur la feuille de route, un bouton « valider que la livraison a été effectuée » permet de passer l'ensemble des produits figurant sur la feuille de route à l'état « livré ».
+
+> À noter le besoin d'une très bonne ergonomie des documents de préparation des livraisons car ils seront utilisés par des non professionnels de la logistique. Un outil de paramétrage ou d'export vers des fichiers bureautiques ou la création peu complexe de modèles par des utilisateurs avertis (ex  modèles.odt Dolibarr) sera indispensable.

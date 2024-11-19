@@ -1,7 +1,5 @@
 ---
 title: S5.A.01 Développement avancé
-date: 2023-08-08T15:18:00+02:00
-draft: false
 ---
 
 La problématique professionnelle est de créer, en équipe, une application en suivant une démarche itérative ou incrémentale, avec une intégration continue de l'application.
