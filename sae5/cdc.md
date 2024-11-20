@@ -18,7 +18,7 @@ Ce projet doit répondre à 2 enjeux majeurs pour le Réseau et les Jardins de C
 - doter les jardins de cocagne d'un outil qui favorise le développement de leur activité économique mais aussi à terme les relations avec leur communauté d'adhérents et de partenaires économiques,
 - constituer un projet co-pensé et co-construit par les jardins de cocagne et non pensé par la tête de réseau au bénéfice de ses membres.
 
-#### 1. Structure
+### 1. Structure
 
 Un module de paramétrage initial doit permettre de saisir les données de la structure utilisatrice :
 
@@ -32,13 +32,13 @@ Un module de paramétrage initial doit permettre de saisir les données de la st
 - Coordonnées bancaires de la structure : BIC, IBAN, n° ICS
 - Une case à cocher « structure assujettie / non assujettie à la TVA »
 
-##### Quelques structures
+#### Quelques structures
 
 - [Jardins de Cocagne de Thaon-les-Vosges](https://thaonlesvosges.fr/ville-au-quotidien/emploi/les-structures-de-linsertion-par-lactivite-economique/les-jardins-de-cocagne/)
 - [Le jardin de Cocagne Angevin](https://www.jardin-cocagne-angers.org/)
 - [Les potagers de Velles](https://www.solidariteaccueil.org/les-potagers-de-velles)
 
-#### 2. Calendrier
+### 2. Calendrier
 
 La structure doit définir de manière générale son calendrier livrable c'est-à-dire les jours et semaines où des livraisons sont possibles.
 
@@ -48,7 +48,7 @@ La structure doit pouvoir définir, de manière globale les **semaines non livra
 
 Ces éléments auront une incidence sur le parcours de commande (dates proposées en livraison), le paramétrage des abonnements et l'information des dates de livraison des produits, les récaps de commandes et feuilles de routes.
 
-##### Jours fériés
+#### Jours fériés
 
 La prise en compte des **jours fériés** auront pour incidence de **décaler** la livraison sur un jour inhabituel de la même semaine (ex : mardi 8 mai férié, livraison décalée au mercredi 9 mai). Cette déclaration des décalages de livraison doit s'aborder jour férié par jour férié, et idéalement par tournée de livraison (exemple pour 2 tournées prévues les mardis, l'une pourrait être décalée au lundi et l'autre au mercredi pour des raisons d'organisation).
 
