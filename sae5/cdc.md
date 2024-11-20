@@ -5,6 +5,7 @@ draft: false
 ---
 
 > **À noter :** Ce document est un cahier des charges original donné par une structure nationale en vue de développer un système complet de gestion. Il vous expose à une mise en situation réelle. Il ne définit pas les priorités de développement, ni le rendu attendu pour cette situation d'apprentissage et d'évaluation. Quelques références au logiciel Dolibarr sont présentes dans ce document. Cette solution n'est finalement pas retenue et doit être ignorée.
+{: .definition }
 
 #### Objectifs du document
 
@@ -47,16 +48,20 @@ La structure doit pouvoir définir, de manière globale les **semaines non livra
 
 Ces éléments auront une incidence sur le parcours de commande (dates proposées en livraison), le paramétrage des abonnements et l'information des dates de livraison des produits, les récaps de commandes et feuilles de routes.
 
+##### Jours fériés
 
-#### 3. Dépôts
+La prise en compte des **jours fériés** auront pour incidence de **décaler** la livraison sur un jour inhabituel de la même semaine (ex : mardi 8 mai férié, livraison décalée au mercredi 9 mai). Cette déclaration des décalages de livraison doit s'aborder jour férié par jour férié, et idéalement par tournée de livraison (exemple pour 2 tournées prévues les mardis, l'une pourrait être décalée au lundi et l'autre au mercredi pour des raisons d'organisation).
+
+### 3. Dépôts
 
 > Les points de dépôts (PDD) sont des lieux de livraison des produits commandés. Ils regroupent la plupart du temps plusieurs commandes, que les clients viennent chercher à cet endroit à un **jour** et **créneau horaire** précis.
+{: .definition}
 
 Une fiche point de dépôt comprend :
 
 - Boutons Créer, Enregistrer, Fermer, Supprimer, Archiver
 - N° identifiant créé automatiquement (numéro unique, non modifiable)
-- Identifiant de tournée et no d'ordre de livraison dans la tournée (cf. «bTournée de livraison »).
+- Identifiant de tournée et no d'ordre de livraison dans la tournée (cf. « [Tournée de livraison](#5-tournées-de-livraison) »).
 - Nom du point de dépôt, adresse, code postal, ville, no de téléphone n° obligatoire pour l'enregistrement de la fiche
 - Mail générique de la structure, site web de la structure (facultatif)
 - Nom de la personne référente + mail + téléphone spécifique de la personne référente
@@ -64,13 +69,47 @@ Une fiche point de dépôt comprend :
 - Une zone de texte libre de présentation du lieu et le téléchargement possible d'une photo ou image du lieu.
 - Prévoir une case de texte libre pour noter des commentaires.
 
+#### Capacité d'accueil
 
-#### 4. Jours de préparation
+Prévoir une case permettant de définir le nombre d'abonnements paniers maximum accueillis sur le point de dépôt. Cela induirait ensuite une fonction de vérification du nombre de places restantes pour valider une nouvelle inscription, et pourra définir un statut COMPLET de point de dépôt.
+
+La capacité d'accueil doit être affichée dans l'espace d'information.
+
+#### Catégories
+
+Prévoir 3 catégories de points de dépôts à choisir en menu déroulant :
+
+##### PDD Ouvert à tous
+
+ex : cas d'une boulangerie où n'importe qui peut se faire livrer un panier Ces PDD sont disponibles et affichés en tous lieux du front office.
+
+##### PDD Réservé à un public spécifique
+
+ex : cas d'un comité d' entreprise ou seuls les salariés de l'entreprise peuvent s'y faire livrer un panier Ces PDD sont affichés publiquement sur le front office mais indiquent une petite phrase « réservé aux ... (texte personnalisable) ». Ils sont proposés dans le parcours de commande, mais le choix de ce PDD est soumis à validation par un mot de passe.
+
+En back office, sur les fiches PDD appartenant à cette catégorie, on doit avoir une case où écrire le texte personnalisable et une case avec le mot de passe (unique et modifiable).
+
+L'information « Point dépôt réservé aux texte personnalisable » si c'est un PDD Réservé à un public spécifique
+
+Cette information doit être affichée dans l'espace d'information.
+
+##### PDD Professionnel
+
+ex : cas d'une école qui commande des légumes pour sa cantine
+En back office, sur les fiches PDD appartenant à cette catégorie, on doit pouvoir lier le lieu à une catégorie de client (cf. « 3.2 Clients »). En front office, ces PDD Professionnels n'apparaissent pas sur le site général, et n'apparaissent que dans le parcours de commande privé depuis les espaces clients des personnes appartenant à cette catégorie de client (cf. « 3.11 Parcours de Commande »).
+
+Les catégories doivent s'afficher de manière différente sur la carte de localisation.
+
+Sur la carte publique, ne doivent figurer que les PDD ouverts à tous et ceux réservés à un public spécifique (n'apparaissent pas les PDD professionnels). Dans les commandes des professionnels (catégories clients spécifiques), un onglet déroulant des PDD de leur catégorie sera suffisant si c'est plus simple.
+
+Il serait pertinent que les indicateurs des points de dépôts puissent avoir une couleur différente : I couleur pour l'indicateur du PDD sur le site du Jardin de Cocagne, 1 couleur pour les PDD ouverts à tous, 1 couleur pour les PDD réservés à un public spécifique.
+
+### 4. Jours de préparation
 
 Les jours de préparation sont des jours pendant lesquels tous les paniers appartenant à une ou plusieurs tournées sont préparés.
 
 
-#### 5. Tournées de livraison
+### 5. Tournées de livraison
 
 Les points de dépôts sont livrés dans des **tournées de livraison**.
 
@@ -80,6 +119,10 @@ Une tournée de livraison est définie par :
 - un jour de livraison
 - une **succession ordonnées** de points de dépôts, définie grâce à un n° d'ordre de livraison dans la tournée, donner la possibilité de définir une couleur pour une tournée (la couleur a pour incidence de coloriser les PDD dans la partie gestion des PDD et synthèse des commandes à préparer et livrer / feuilles de route)
 
+#### Livraison à domicile
+
+Les Jardins peuvent proposer une livraison à domicile des paniers. Moyennant un coût supplémentaire, les adhérents peuvent demander à être livrés à leur domicile plutôt qu'en PDD. Le système doit pouvoir insérer dans les tournées des arrêts à domicile.
+
 ##### Module de visualisation
 
 Il faudrait prévoir un module de visualisation des tournées facilitant leur (ré)organisation. Ex : liste globale des PDD organisée par identifiant de tournée puis ordre de livraison, et prévoir une facilité pour les reclasser (changer l'ordre de livraison d'une tournée, changer un PDD de tournée.)
@@ -87,7 +130,7 @@ Il faudrait prévoir un module de visualisation des tournées facilitant leur (r
 Un même point de dépôt peut appartenir à 2 tournées différentes, dans le cas où un même site propose 2 créneaux différents de livraison / récupération de paniers dans la semaine. Le client choisi un des 2 créneaux de livraison. A voir comment cette double appartenance sera gérée informatiquement (sélection du point de dépôt puis du jour 2).
 
 
-#### 6. Adhérents
+### 6. Adhérents
 
 Un client peut être une personne physique ou morale.
 
@@ -106,8 +149,8 @@ La fiche client comporte :
 
 (cf. paragraphe 7)
 
-- Date de 1ère adhésion, 
-- Historique des adhésions avec leur période et le type d'adhésion. 
+- Date de 1ère adhésion,
+- Historique des adhésions avec leur période et le type d'adhésion.
 - Élément indiquant si l'adhésion est à jour ou non (réglée ou non réglée / en cours ou expirée), avec indication de la date d'expiration de la dernière adhésion.
 - Une case « dispensé d'adhésion » à cocher, pour le cas de clients professionnels à qui l'on ne demande pas d'adhésion.
 
@@ -148,7 +191,7 @@ Depuis cet espace, il pourra :
 
 Le module gestion des utilisateurs : il devra permettre de gérer un annuaire avec des profils de droits (ou groupes). Il serait souhaitable de ne pas distinguer des adhérents, de clients ou d'utilisateurs mais avoir un outil puissant de gestion des permissions.
 
-#### 7. Adhésions
+### 7. Adhésions
 
 Il sera nécessaire de distinguer l'adhésion à l'abonnement panier et l'adhésion à l'association Jardin de Cocagne avec la possibilité de lier automatiquement les deux dans le paramétrage de la structure.
 
@@ -182,7 +225,7 @@ Les renouvellements d'adhésions sont tous appelés en même temps, avant la fin
 Confer les abonnements aux produits
 
 
-#### 8. Produits et abonnements
+### 8. Produits et abonnements
 
 Les produits sont les différentes unités élémentaires qui peuvent être vendues. Cela peut être :
 
@@ -241,3 +284,32 @@ En parallèle, un email automatique est envoyé informant le client de la tacite
 Prévoir module puissant de paramétrage de mails (signatures, formules type...)
 
 Si une résiliation a été programmée pour cet abonnement (pour avant ou pour le jour de la fin de l'abonnement), alors l'abonnement n'est pas renouvelé.
+
+##### Composition des paniers
+
+Après la préparation des paniers, on veut suivre ce qui a été mis dans les paniers c'est à dire les légumes vendus.
+
+A terme, il pourra être envisagé un outil qui aide à préparer la livraison en aidant l'encadrant à calculer les besoins en légumes mais aussi à communiquer (sous toutes réserves!) aux adhérents une composition prévisionnelle de paniers.
+Par contre, il n'est pas souhaité une fonction de choix de la compo du panier par le client.
+
+Un module doit pouvoir permettre, chaque semaine, d'aller renseigner les compositions des paniers de la semaine pour les clients qui sont abonnés aux paniers. Sur une même tournée, la composition est différente d'un type de panier à un autre, et peut aussi être différente d'une tournée à une autre (ex : composition du petit panier différente le Mardi et le Vendredi).
+
+La composition d'un panier est caractérisée par :
+
+- un type de panier, un no de tournée et un no de semaine
+- une liste de légumes avec les quantités prévues et une unité pour chaque ligne (kg, botte, pièce etc.)
+- le prix unitaire des légumes (prix au kg, à la botte, à la pièce etc.)
+- le prix légumes mis en panier : détail pour chaque ligne (= prix unitaire * quantité prévue) et le prix total de légumes mis en panier (= la somme du détail de chaque ligne).
+
+Pour faciliter la saisie des compos de paniers (qui se ressemblent souvent), prévoir une fonction « dupliquer », pour apporter ensuite juste des modifications mineures.
+
+Dans un premier temps, cette composition serait exploitée pour publication :
+
+- Sur l'espace client des personnes abonnées au panier : ne s'affiche de la composition de son panier (d'après le type de panier, no de tournée auquel il appartient)
+- Par envoi d'email aux personnes recevant un panier cette semaine (idem ne s'affiche que la composition de son panier)
+- Par publipostage pour édition de la feuille de chou
+- Éventuellement sur le site internet ou réseaux sociaux. Le Jardin doit pouvoir choisir quel type de publication il souhaite mettre en place ou non, et quels éléments sont publiés (seulement la liste des légumes, avec les grammages prévus ou non, avec les tarifs unitaires légumes ou non etc.)
+Dans les évolutions à long terme on pourrait imaginer .
+- Pouvoir consulter le récap successif semaines après semaines des compositions de paniers (ordonnés par type et no de tournée).
+- Pouvoir suivre dans le temps le prix total légumes mis en panier semaines après semaines (afin d'encadrer les variations et être au plus près en fin d'année)
+- Pouvoir alimenter la variation des stocks d'après le nombre de panier préparés et leur composition, ou éventuellement calculer les quantités de récoltes à effectuer pour honorer ces  paniers (cf. paragraphe suivant)

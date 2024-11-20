@@ -4,12 +4,6 @@ date: 2023-08-08T15:18:00+02:00
 draft: false
 ---
 
-#### 2. Calendrier
-
-##### Jours fériés
-
-La prise en compte des **jours fériés** auront pour incidence de **décaler** la livraison sur un jour inhabituel de la même semaine (ex : mardi 8 mai férié, livraison décalée au mercredi 9 mai). Cette déclaration des décalages de livraison doit s'aborder jour férié par jour férié, et idéalement par tournée de livraison (exemple pour 2 tournées prévues les mardis, l'une pourrait être décalée au lundi et l'autre au mercredi pour des raisons d'organisation).
-
 #### 3. Dépôts
 
 ##### Carte de géolocalisation

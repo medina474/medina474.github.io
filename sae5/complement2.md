@@ -6,44 +6,13 @@ draft: false
 
 #### 3. Dépôts
 
-##### Capacité d'accueil
 
-Prévoir une case permettant de définir le nombre d'abonnements paniers maximum accueillis sur le point de dépôt. Cela induirait ensuite une fonction de vérification du nombre de places restantes pour valider une nouvelle inscription, et pourra définir un statut COMPLET de point de dépôt.
-
-La capacité d'accueil doit être affichée dans l'espace d'information.
 
 ##### Export
 
 Prévoir également une fonction d'export csv paramétrable des données des PDD, afin de permettre la réintégration dans d'autres outils si besoin (ex : sur une carte googlemaps ou openstreet d'un autre site internet).
 
-##### Catégories
 
-Prévoir 3 catégories de points de dépôts à choisir en menu déroulant :
-
-###### PDD Ouvert à tous
-
-ex : cas d'une boulangerie où n'importe qui peut se faire livrer un panier Ces PDD sont disponibles et affichés en tous lieux du front office.
-
-###### PDD Réservé à un public spécifique
-
-ex : cas d'un comité d' entreprise ou seuls les salariés de l'entreprise peuvent s'y faire livrer un panier Ces PDD sont affichés publiquement sur le front office mais indiquent une petite phrase « réservé aux texte personnalisable ». Ils sont proposés dans le parcours de commande, mais le choix de ce PDD est soumis à validation par un mot de passe.
-
-En back office, sur les fiches PDD appartenant à cette catégorie, on doit avoir une case où écrire le texte personnalisable et une case avec le mot de passe (unique et modifiable).
-
-L'information « Point dépôt réservé aux texte personnalisable » si c'est un PDD Réservé à un public spécifique
-
-Cette information doit être affichée dans l'espace d'information.
-
-###### PDD Professionnel
-
-ex : cas d'une école qui commande des légumes pour sa cantine
-En back office, sur les fiches PDD appartenant à cette catégorie, on doit pouvoir lier le lieu à une catégorie de client (cf. « 3.2 Clients »). En front office, ces PDD Professionnels n'apparaissent pas sur le site général, et n'apparaissent que dans le parcours de commande privé depuis les espaces clients des personnes appartenant à cette catégorie de client (cf. « 3.11 Parcours de Commande »).
-
-Les catégories doivent s'afficher de manière différente sur la carte de localisation.
-
-Sur la carte publique, ne doivent figurer que les PDD ouverts à tous et ceux réservés à un public spécifique (n'apparaissent pas les PDD professionnels). Dans les commandes des professionnels (catégories clients spécifiques), un onglet déroulant des PDD de leur catégorie sera suffisant si c'est plus simple.
-
-Il serait pertinent que les indicateurs des points de dépôts puissent avoir une couleur différente : I couleur pour l'indicateur du PDD sur le site du Jardin de Cocagne, 1 couleur pour les PDD ouverts à tous, 1 couleur pour les PDD réservés à un public spécifique.
 
 ##### Congés
 
@@ -53,12 +22,6 @@ Un module de déclaration de fermeture temporaire d'un point de dépôt pour con
 ##### Frais de livraison
 
 Certains dépôts font l'objet de frais de livraison (différents niveaux de frais de livraison paramétrables).
-
-#### 5. Tournées de livraison
-
-##### Livraison à domicile
-
-Les Jardins peuvent proposer une livraison à domicile des paniers. Moyennant un coût supplémentaire, les adhérents peuvent demander à être livrés à leur domicile plutôt qu'en PDD. Le système doit pouvoir insérer dans les tournées des arrêts à domicile.
 
 
 #### 6. Adhérents
@@ -181,34 +144,6 @@ Néanmoins il est possible de changer de point de dépôt ponctuellement pour un
 
 Lors de cette opération de changement de PDD, l'outil doit vérifier sur l'ensemble du compte client s'il y a d'autres livraisons de produits de prévues sur ce PDD pour cette même date ou période (ex : abonnement panier + œuf + fromage) et offrir la possibilité d'effectuer les changements de point de dépôt pour tous les produits ou individuellement pour chacun des cas.
 
-##### Composition des paniers
-
-Après la préparation des paniers, on veut suivre ce qui a été mis dans les paniers c'est à dire les légumes vendus.
-
-A terme, il pourra être envisagé un outil qui aide à préparer la livraison en aidant l'encadrant à calculer les besoins en légumes mais aussi à communiquer (sous toutes réserves!) aux adhérents une composition prévisionnelle de paniers.
-Par contre, il n'est pas souhaité une fonction de choix de la compo du panier par le client.
-
-Un module doit pouvoir permettre, chaque semaine, d'aller renseigner les compositions des paniers de la semaine pour les clients qui sont abonnés aux paniers. Sur une même tournée, la composition est différente d'un type de panier à un autre, et peut aussi être différente d'une tournée à une autre (ex : composition du petit panier différente le Mardi et le Vendredi).
-
-La composition d'un panier est caractérisée par :
-
-- un type de panier, un no de tournée et un no de semaine
-- une liste de légumes avec les quantités prévues et une unité pour chaque ligne (kg, botte, pièce etc.)
-- le prix unitaire des légumes (prix au kg, à la botte, à la pièce etc.)
-- le prix légumes mis en panier : détail pour chaque ligne (= prix unitaire * quantité prévue) et le prix total de légumes mis en panier (= la somme du détail de chaque ligne).
-
-Pour faciliter la saisie des compos de paniers (qui se ressemblent souvent), prévoir une fonction « dupliquer », pour apporter ensuite juste des modifications mineures.
-
-Dans un premier temps, cette composition serait exploitée pour publication :
-
-- Sur l'espace client des personnes abonnées au panier : ne s'affiche de la composition de son panier (d'après le type de panier, no de tournée auquel il appartient)
-- Par envoi d'email aux personnes recevant un panier cette semaine (idem ne s'affiche que la composition de son panier)
-- Par publipostage pour édition de la feuille de chou
-- Éventuellement sur le site internet ou réseaux sociaux. Le Jardin doit pouvoir choisir quel type de publication il souhaite mettre en place ou non, et quels éléments sont publiés (seulement la liste des légumes, avec les grammages prévus ou non, avec les tarifs unitaires légumes ou non etc.)
-Dans les évolutions à long terme on pourrait imaginer .
-- Pouvoir consulter le récap successif semaines après semaines des compositions de paniers (ordonnés par type et no de tournée).
-- Pouvoir suivre dans le temps le prix total légumes mis en panier semaines après semaines (afin d'encadrer les variations et être au plus près en fin d'année)
-- Pouvoir alimenter la variation des stocks d'après le nombre de panier préparés et leur composition, ou éventuellement calculer les quantités de récoltes à effectuer pour honorer ces  paniers (cf. paragraphe suivant)
 
 
 ##### Gestion des dons des clients
