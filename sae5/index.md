@@ -31,10 +31,10 @@ Manager une équipe informatique
 
 #### Sujet
 
-- [Contexte et cadre du projet](contexte/index.html)
+- [Contexte et cadre du projet](contexte)
 
-- [Cahier des charges](cdc/index.html)
-- [Parcours](parcours/index.html)
-- [Processus](processus/index.html)
-- [saisie](saisie/index.html)
-- [complement](complement/index.html)
+- [Cahier des charges](cdc)
+- [Parcours](parcours)
+- [Processus](processus)
+- [saisie](saisie)
+- [complement](complement)

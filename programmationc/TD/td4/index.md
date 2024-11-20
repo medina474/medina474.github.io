@@ -2,7 +2,7 @@
 title: Travaux dirigés 4
 ---
 
-> Énoncé : Lire un fichier texte contenant des valeurs numériques en colonne et effctuer une analyse.
+> Énoncé : Lire un fichier texte contenant des valeurs numériques en colonne et effectuer une analyse.
 {: .definition }
 
 a. Ouvrir le fichier [notes.tsv](notes.tsv) en mode lecture
