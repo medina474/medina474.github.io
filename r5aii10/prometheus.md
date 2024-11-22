@@ -5,6 +5,13 @@ title: Prometheus
 ```shell
 sudo apt-get install --no-install-recommends prometheus
 ```
+```shell
+sudo apt-get install --no-install-recommends prometheus-node-exporter
+```
+
+
+
+
 
 A supprimer
 
