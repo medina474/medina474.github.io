@@ -5,7 +5,7 @@ title: Animation
 Il exite plusieurs méthodes pour animer des éléments SVG.
 
 ### Javascript
-Il est possible d'agir avec du javascript sur les propriétés des éléments. Il est nécessaire d'utiliser des librairies tierces pour faciliter la programmation des animations (Comme JQuery par exemple). Cette méthode n'est pas la plus simple, ni la plus rapide à mettre en oeuvre.
+Il est possible d'agir avec du javascript sur les propriétés des éléments. Il est nécessaire d'utiliser des bibliothèques tierces pour faciliter la programmation des animations (Comme JQuery par exemple). Cette méthode n'est pas la plus simple, ni la plus rapide à mettre en oeuvre.
 
 ### CSS
 Les animations en CSS ont l'avantage de pouvoir être utilisées sur n'importe quel élement d'une page html. C'est la méthode la plus utilisée car elle est versatile et elle est la seule à pouvoir être utilisée sur des éléments aussi bien html que SVG.

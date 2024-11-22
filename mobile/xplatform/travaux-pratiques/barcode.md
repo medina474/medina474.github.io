@@ -2,7 +2,7 @@
 title: Lecteur de code barre
 ---
 
-Plusieurs (trop) librairies existent pour lire des codes barres
+Plusieurs (trop) bibliothèques existent pour lire des codes barres
 
 https://fluttergems.dev/qr-code-bar-code/
 

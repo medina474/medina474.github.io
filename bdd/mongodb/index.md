@@ -8,7 +8,7 @@ MongoDB est une base de données orientée document. Contrairement à une base d
 
 Le protocole Wire de MongoDB, souvent appelé simplement le Wire Protocol, est le protocole de communication natif utilisé par MongoDB pour l'interaction entre un client (comme un driver MongoDB) et un serveur MongoDB. Il définit comment les commandes et les requêtes sont envoyées au serveur MongoDB et comment les réponses sont renvoyées au client. Le protocole Wire est basé sur un échange de messages au **format binaire**, conçu pour permettre une communication rapide et efficace entre clients et serveurs.
 
-Il faut obligatoirement une librairie spécialisée pour communiquer.
+Il faut obligatoirement une bibliothèque spécialisée pour communiquer.
 
 ## MongoSH
 

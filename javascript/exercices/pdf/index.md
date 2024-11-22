@@ -28,7 +28,7 @@ https://lindell.me/JsBarcode/
 
 Intégrer un QRCode dans le pdf
 
-Librairie de base\
+Bibliothèque de base\
 http://davidshimjs.github.io/qrcodejs/
 
 Version SVG\

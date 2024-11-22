@@ -12,7 +12,7 @@ Simplicité: Proposer une syntaxe claire et concise, facilitant l'adoption pour 
 
 Portabilité: Un code Dart peut être transpilé en JavaScript, permettant ainsi aux applications Dart d'être exécutées dans n'importe quel navigateur web moderne.
 
-Evolutivité: Conçu pour les grands projets, Dart facilite la maintenance et l'évolution des codes de grande envergure grâce à des fonctionnalités comme les librairies modulaires et la vérification statique des types.
+Evolutivité: Conçu pour les grands projets, Dart facilite la maintenance et l'évolution des codes de grande envergure grâce à des fonctionnalités comme les bibliothèques modulaires et la vérification statique des types.
 
 https://w3r.one/fr/blog/mobile/flutter/dart/introduction-dart-fondamentaux-caracteristiques
 

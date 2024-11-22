@@ -24,7 +24,7 @@ Commentaire en bloc: Peuvent s’étendre sur plusieurs lignes, sont délimités
 Auteur: Emmanuel Medina */
 ```
 
-### Librairies
+### Bibliothèques
 
 #include <stdio.h>
 #include <stdlib.h>

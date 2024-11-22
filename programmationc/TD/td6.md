@@ -26,4 +26,4 @@ d. Lorsque l'utilisateur entre un nombre supérieur à 300 pour la vitesse. Affi
 
 e. Tri du tableau
 
-Utilisez la fonction qsort de la librairie standard pour trier un tableau pour trier le tableau suivant la caractéristiques temperature
+Utilisez la fonction qsort de la bibliothèque standard pour trier un tableau pour trier le tableau suivant la caractéristiques temperature

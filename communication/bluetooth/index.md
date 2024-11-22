@@ -57,7 +57,7 @@ b. corriger les 2 fichiers sources `tools/l2test.c` et `tools/rctest.c`. Ajouter
 #include <linux/sockios.h>
 ```
 
-c. Installer les librairies nécessaires lors de la compilation
+c. Installer les bibliothèques nécessaires lors de la compilation
 
 ```shell
 apt-get install -y libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev
@@ -116,7 +116,7 @@ Lire depuis le téléphone avec l'application nRF les valeurs renvoyées par l'E
 
 ## Étape 6
 
-Sur Rapsberry écrire un programme NodeJS à l'aide de la librairie @abandonware/noble
+Sur Rapsberry écrire un programme NodeJS à l'aide de la bibliothèque @abandonware/noble
 
 Le programme NodeJs scan les périphériques Bluetooth indiquant un service Environmental Sensing, se connecte et lit les valeurs
 

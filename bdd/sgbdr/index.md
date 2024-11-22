@@ -19,7 +19,7 @@ Les bases de données relationnelles sont un élément clé de la gestion de don
 
 ### Exemple
 
-Prenons un exemple simple d'une base de données relationnelle pour une librairie :
+Prenons un exemple simple d'une base de données relationnelle pour une bibliothèque :
 
 **Table "Livres" :**
 

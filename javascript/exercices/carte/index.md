@@ -4,7 +4,7 @@ title: Carte
 
 > Leaflet est un bibliothèque Javascript optimisée pour afficher des cartes géographiques adaptées aux mobiles.
 
-Télécharger la librairie [https://leafletjs.com/](https://leafletjs.com/)
+Télécharger la bibliothèque [https://leafletjs.com/](https://leafletjs.com/)
 
 Créer un page HTML\
 Ajouter le lien vers le fichier CSS et vers le fichier JS dans cet ordre.

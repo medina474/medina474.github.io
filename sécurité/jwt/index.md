@@ -2,7 +2,7 @@
 title: JWT
 ---
 
-JWT est un jeton permettant d’échanger des informations de manière sécurisée. Ce jeton est composé de trois parties, dont la dernière, la signature, permet d’en vérifier la légitimité. JWT est souvent utilisé pour offrir une authentification stateless au sein d’applications. Plusieurs librairies permettent de manipuler ces tokens évitant ainsi l’écriture d’un code personnel pouvant donner lieu à des vulnérabilités. 
+JWT est un jeton permettant d’échanger des informations de manière sécurisée. Ce jeton est composé de trois parties, dont la dernière, la signature, permet d’en vérifier la légitimité. JWT est souvent utilisé pour offrir une authentification stateless au sein d’applications. Plusieurs bibliothèques permettent de manipuler ces tokens évitant ainsi l’écriture d’un code personnel pouvant donner lieu à des vulnérabilités. 
 
 JWT pour JSON Web Token est une méthode sécurisée d’échange d’informations, décrite par la RFC 7519. L’information est échangée sous la forme d’un jeton signé afin de pouvoir en vérifier la légitimité. Ce jeton est compact et peut être inclus dans une URL ou dans l'entête d'une requête http.
 

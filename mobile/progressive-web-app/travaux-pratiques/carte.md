@@ -7,9 +7,9 @@ title: Travaux pratiques - La carte
 ```html
 ```
 
-### 2. Librairie de cartographie
+### 2. Bibliothèque de cartographie
 
-Sur cette page ajouter une carte à l'aide de la librairie [Leaflet](https://leafletjs.com/).
+Sur cette page ajouter une carte à l'aide de la bibliothèque [Leaflet](https://leafletjs.com/).
 
 <img src="leaflet.png" class="h-8">
 

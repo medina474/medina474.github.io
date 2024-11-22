@@ -10,7 +10,7 @@ La compilation cross plateforme utilise un langage autre que celui préconisé p
 l'appareil. Cela permet d'utiliser un langage déjà connu d'un développeur et de l'utiliser sur plusieurs plateformes.
 Cette approche est appelée WORA Write once, run anywhere
 
-Les performances sont proches d'une application native, cependant des librairies d'adaptation et/ou ou micro machines
+Les performances sont proches d'une application native, cependant des bibliothèques d'adaptation et/ou ou micro machines
 virtuelles sont nécessaires à l'exécution du programme, elles ralentissent le programme de manière imperceptible mais
 surtout augmentent grandement la taille de l'exécutable.
 
@@ -38,7 +38,7 @@ https://learn.microsoft.com/fr-fr/dotnet/maui/what-is-maui?view=net-maui-7.0
 
 ### React Native
 
-React Native est un framework d'applications mobiles créé par Facebook sur la base de son framework existant React. Il est utilisé pour développer des applications natives pour Android, iOS et UWP en utilisant le langage Javascript et donc la librairie React..
+React Native est un framework d'applications mobiles créé par Facebook sur la base de son framework existant React. Il est utilisé pour développer des applications natives pour Android, iOS et UWP en utilisant le langage Javascript et donc la bibliothèque React..
 
 > La plus grande erreur que nous ayons commise en tant que société a été de parier trop sur HTML par opposition au natif. - Mark Zuckerberg, 2012 -
 

@@ -64,7 +64,7 @@ Dimensions | 68 x 53 x 15 mm | 107 x 53 x 15 mm
 ![](arduino-memory-map.png)
 
 STARTUP : code de démarrage\
-CODE : code de l'application, y compris celui des librairies\
+CODE : code de l'application, y compris celui des bibliothèques\
 LOAD_DATA : les valeurs des variables globales et statiques initialisées\
 REGISTERS : registres du microcontrôleur (GPIOs, TIMERS, etc.)\
 DATA : variables globales et statiques initialisées\

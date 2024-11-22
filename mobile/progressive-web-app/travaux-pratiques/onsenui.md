@@ -27,9 +27,9 @@ L'application est responsive et s'affiche en pleine largeur sur tous les écrans
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-Ajouter dans l'entête html les liens vers la librairie OnsenUI (fichiers CSS et JavaScript).
+Ajouter dans l'entête html les liens vers la bibliothèque OnsenUI (fichiers CSS et JavaScript).
 
-Vous pouvez télécharger les librairies ou utiliser celle disponible sur les CDNs. Dans le cas d'un téléchargement local il faut aussi télécharger les packs d’icônes.
+Vous pouvez télécharger les bibliothèques ou utiliser celle disponible sur les CDNs. Dans le cas d'un téléchargement local il faut aussi télécharger les packs d’icônes.
 
 ```html
 <link rel="stylesheet" href="./onsenui@2.12.8/css/onsenui.css">

@@ -45,9 +45,6 @@ Ajouter un menu contenant quatre onglet "Tab"
 - Dans le quatrième onglet un plan svg (https://github.com/bumbu/svg-pan-zoom#readme).
 
 Ajouter une gestion des cartes de la station pour afficher les pistes
-Utiliser la librairie Leaflet
+Utiliser la bibliothèque Leaflet
 
 https://workshop.neotechweb.net/ws/skimap/1.0.0/pistes.php?station=83
-
-
-

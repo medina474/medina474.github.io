@@ -3,11 +3,11 @@ title: libprom
 ---
 
 
-libprom est une librairie c qui fournit des bibliothèques partagées pour l'instrumentation des logiciels et l'exposition des métriques au format texte tel que défini par le format d'exposition Prometheus (voir https://prometheus.io/docs/instrumenting/exposition_formats/ pour plus de détails). libprom fournit l'implémentation de l'API principale et libpromhttp, un gestionnaire Web simple pour exposer les métriques pour le scraping.
+libprom est une bibliothèque c qui fournit des bibliothèques partagées pour l'instrumentation des logiciels et l'exposition des métriques au format texte tel que défini par le format d'exposition Prometheus (voir https://prometheus.io/docs/instrumenting/exposition_formats/ pour plus de détails). libprom fournit l'implémentation de l'API principale et libpromhttp, un gestionnaire Web simple pour exposer les métriques pour le scraping.
 
 
 ```shell
-# 1. La librairie microhttp (un micro serveur web en C)
+# 1. La bibliothèque microhttp (un micro serveur web en C)
 sudo apt install libmicrohttpd-dev
 
 #2. Récupérer les sources du projet libprom
@@ -25,7 +25,7 @@ sudo apt install cmake
 # compiler l'ensemble du projet
 make
 
-# installer les librairies compilées dans le système (sudo car modification du système)
+# installer les bibliothèques compilées dans le système (sudo car modification du système)
 cd prom/build
 sudo make install
 

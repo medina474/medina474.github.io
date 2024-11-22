@@ -26,7 +26,7 @@ La fonction ***[fopen](../../fichiers)*** ouvre le fichier. si le retour est NUL
 
 La lecture d'une ligne se fait avec la fonction ***fgets***
 
-La conversion s'effectue à l'aide la fonction ***atof*** de la librairie ***stdlib.h***.
+La conversion s'effectue à l'aide la fonction ***atof*** de la bibliothèque ***stdlib.h***.
 
 Répeter l'opération tant qu'il y a des lignes
 
