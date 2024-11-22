@@ -74,3 +74,8 @@ int main() {
   promhttp_stop_daemon(server);
 }
 ```
+Librarie d'affichage semi graphique
+
+```shell
+sudo apt-get install libncurses-dev
+```
