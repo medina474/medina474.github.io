@@ -6,7 +6,7 @@ title: Informatique spécialisée
 
 [Télémétrie](telemetry)
 - [Journaux](log) 
-- 
+
 
 - [Installation de Grafana](grafana) 
 - [Installation de Loki](log/loki)
