@@ -8,5 +8,6 @@ title: Informatique spécialisée
 
 - [Installation de Grafana](grafana) 
 - [Installation de Loki](loki)
- 
+- [Installation de Prometheus](prometheus)
+- Implémenter [libprom](libprom)
 [Communication réseau](net)

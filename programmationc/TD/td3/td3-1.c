@@ -16,8 +16,8 @@ void main()
 
   double mini = __DBL_MAX__;
   double maxi = 0.0;
-  double moyenne;
   double somme = 0.0;
+  double moyenne;
 
   int ligne_mini = 0;
   int ligne_maxi = 0;
@@ -35,7 +35,7 @@ void main()
     //printf("%s", chaine);
 
     double nombre;
-    nombre = atof(chaine);
+    nombre = atof(chaine); //alpha to float
     //printf("%f", nombre);
 
     if (nombre > maxi) { 

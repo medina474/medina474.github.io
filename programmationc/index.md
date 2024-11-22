@@ -7,7 +7,6 @@ title: Perfectionnement en langage C
 
 - [Histoire du langage C](histoire)
 
-
 ## Caractéristiques
 
 - Langage de programmation procédural ;
@@ -38,6 +37,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 
 ## Concepts
 
+- [Anatomie d'un programme](anatomie)
 - [La compilation](compilation)
 - [Les variables](variables)
 
