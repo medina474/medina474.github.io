@@ -16,12 +16,7 @@ title: Informatique spécialisée
 
 ```mermaid
 graph LR;
-  A((Source C .c)) --> B[Prétraitement]
-  B --> C[Compilation]
-  C --> D[Assemblage]
-  D --> E((Code Objet .o))
-  E --> F[Édition des liens]
-  F --> G((Exécutable .exe))
+  A(Grafana) --> B(Loki)
 ```
 
 
