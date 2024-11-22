@@ -2,9 +2,9 @@
 title: Grafana
 ---
 
-### Grafana
-
 Grafana est un outil open source de **visualisation** et de **surveillance de données** principalement utilisé pour analyser et afficher des métriques de performance provenant de diverses sources. Il permet de créer des **tableaux de bord interactifs** et personnalisables pour surveiller des systèmes, des applications et des infrastructures. Grafana supporte de nombreux types de sources de données.
+
+### Installer Grafana
 
 ```sh
 wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
@@ -24,8 +24,16 @@ GF_USERS_DEFAULT_LANGUAGE=fr-FR
 GF_AUTH_ANONYMOUS_ORG_NAME=IUT
 ```
 
+```sh
+sudo systemctl enable grafana-server
+```
+
 Redemarrer le service Grafana
 
-```sh
+```shell
 sudo systemctl restart grafana-server
 ```
+
+Accéder à Grafana depuis votre navigateur
+
+http://100.68.98.xx:3000/
