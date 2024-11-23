@@ -93,3 +93,4 @@ void main()
   printf("maximum: %f ligne %d \n", maxi, ligne_maxi);
   printf("moyenne %f sur %d valeurs\n", somme / ligne, ligne);
 }
+```
