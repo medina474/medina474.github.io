@@ -1,22 +1,20 @@
 ---
-title: Travaux dirigés 5
+title: Travaux dirigés 4
 ---
 
-> Énoncé : Lire un fichier texte contenant des valeurs mixtes, effectuer des transformations.
+> Énoncé : Lire un fichier texte contenant des valeurs numériques en colonne et effectuer une analyse.
 {: .definition }
 
-a. Ouvrir le fichier [prix-des-carburants](prix-des-carburants) en mode lecture.
+a. Créer un programme en C
 
-b. Lire le fichier caractère par caractère.
+b. Ouvrir le fichier [notes.tsv](notes.tsv) en mode lecture.
 
-c. Les colonnes sont séparées par des virgules. 
+c. Lire la totalité du fichier, les colonnes sont séparées par le caractère tabulation (chercher le code ascii).
 
-Lorsque la valeur de la colonne contient un virgule, il ne faut pas la confondre avec un séparateur de colonne. Les colonnes sont alors entourées d'apostrophes.
+d. Pour chaque ligne calculer la moyenne des colonnes : anglais, litterature, mathemathiques, sciences et arts.
 
-Dans ce cas lorsque la valeur de la colonne contient une apostrophe, l'apostrophe est doublée.
+e. Définir une structure permettant de stocker toutes les valeurs en mode « machine ». N'oubliez pas la colonne moyenne.
 
-d. Convertir les nombres qui ont des virgules en nombres décimaux
+f. Enregistrer les données en mode binaire dans un deuxième fichier (notes.bin)
 
-e. Convertir les dates au format date unix
-
-f. Enregistrer ces données au format binaire.
+g. Les notes sont des nombres décimaux et non pas des nombres réels. Utilisez une méthode intelligente pour stocker ces nombres.
