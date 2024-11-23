@@ -1,5 +1,5 @@
 ---
-title: Travaux dirigés 4
+title: Travaux dirigés 5
 ---
 
 > Énoncé : Lire un fichier texte contenant des valeurs numériques en colonne et effectuer une analyse.
