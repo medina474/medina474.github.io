@@ -2,7 +2,7 @@
 title: Travaux dirigés 3
 ---
 
-> Énoncé : Lire un fichier texte contenant des valeurs numériques et effctuer une analyse.
+> Énoncé : Lire un fichier texte contenant des valeurs numériques et effectuer une analyse.
 {: .definition }
 
 a. Ouvrir le fichier [observations.csv](observations.csv) en mode lecture
