@@ -11,18 +11,18 @@ b. Lire le fichier caractère par caractère.
 
 Utiliser la fonction ***fgetc***
 
-c. Les colonnes sont séparées par des virgules. 
+c. Suivre les règles de formattage du document
 
-Lorsque la valeur de la colonne contient une virgule, il ne faut pas la confondre avec un séparateur de colonne. Les colonnes sont alors entourées d'apostrophes.
-
-Lorsque la valeur de la colonne contient une apostrophe, l'apostrophe est doublée.
+c1 Les colonnes sont séparées par des virgules. 
 
 ```
 ville,automate,mise à jour
 Saint Die des Vosges,Oui,13/08/2024
 ```
 
-Les colonnes ville, automate et mise à jour sont séparée par des virgules.
+Les colonnes _ville_, _automate_ et _mise à jour_ sont séparée par des virgules.
+
+c2 Lorsque la valeur de la colonne contient une virgule, il ne faut pas la confondre avec un séparateur de colonne. Les colonnes sont alors entourées d'apostrophes.
 
 ```
 prix SP95,prix SP98
@@ -30,6 +30,8 @@ prix SP95,prix SP98
 ```
 
 Les colonnes contiennent des nombres à virgule. Il ne faut pas les découper. Les colonnes sont entourées d'apostrophes ' pour insiquer qu'il ne faut pas tenir compte des virgules à l'intérieur.
+
+c3 Lorsque la valeur de la colonne contient une apostrophe, l'apostrophe est doublée.
 
 ```
 '116,rue d''Alsace'
