@@ -9,6 +9,8 @@ a. Ouvrir le fichier [prix-des-carburants](prix-des-carburants) en mode lecture.
 
 b. Lire le fichier caractère par caractère.
 
+Utiliser la fonction ***fgetc***
+
 c. Les colonnes sont séparées par des virgules. 
 
 Lorsque la valeur de la colonne contient un virgule, il ne faut pas la confondre avec un séparateur de colonne. Les colonnes sont alors entourées d'apostrophes.
