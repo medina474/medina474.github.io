@@ -1,5 +1,5 @@
 ---
-title: Travaux dirigés 5
+title: Travaux dirigés 6
 ---
 
 > Énoncé : Lire un fichier texte contenant des valeurs mixtes, effectuer des transformations.
