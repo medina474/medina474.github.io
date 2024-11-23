@@ -67,7 +67,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Travaux dirigés](td)
 - [Travaux dirigés 1](TD/td1)
 - [Travaux dirigés 2](TD/td2)
-- [Travaux dirigés 3](TD/td3)
-- [Travaux dirigés 4](TD/td4)
+- [Travaux dirigés 3](TD/td3) : lecture d'un fichier texte
+- [Travaux dirigés 4](TD/td4) : Lecture d'un fichier tsv, écriture binaire
 - [Travaux dirigés 5](TD/td5)
 - [Travaux dirigés 6](TD/td6)
