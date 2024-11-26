@@ -38,7 +38,7 @@ L'allocation dynamique de mémoire revient donc à réserver un bloc mémoire de
 
 fragmentation = 1 - plus grand block / mémoire totale 
 
-```C
+```c
 float getFragmentation() {
   return 100 - getLargestAvailableBlock() * 100.0 / getTotalAvailableMemory();
 }

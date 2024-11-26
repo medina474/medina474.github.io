@@ -5,7 +5,7 @@ title: Les pointeurs
 Les pointeurs avec une fonction.
 Solution plus efficace : on passe en paramètre deux pointeurs.
 
-```C
+```c
 void carre(int *A, int *Res)
 {
   *Res = (*A) * (*A); // équivalent à : *A**A ou * A * * A

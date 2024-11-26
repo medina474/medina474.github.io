@@ -10,14 +10,14 @@ Les tableaux étant aussi des pointeurs, les chaînes de caractères sont des po
 
 Une chaîne de caractères est déclarée comme un tableau de type char, où chaque élément représente un caractère, et la dernière position du tableau contient le caractère nul (\0).
 
-```C
+```c
 char nom[10] = "Alice"; // Déclare un tableau de 10 caractères
 ```
 #### Accès aux caractères
 
 Les caractères individuels d'une chaîne peuvent être accédés via leur index, comme pour tout tableau :
 
-```C
+```c
 printf("%c", nom[0]);  // Affiche 'A'
 ```
 
@@ -32,7 +32,7 @@ La bibliothèque standard de C (<string.h>) fournit plusieurs fonctions pour man
 
 > NE JAMAIS faire d'opération sur les chaines de caractère = + ==. Il faut utiliser les fonctions prévues pour la manipulation des chaînes.
 
-```C
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -53,7 +53,7 @@ En résumé, bien que les chaînes de caractères en C soient simples, elles né
 
 La fonction ***scanf*** est prévue pour faire de la saisie de valeurs formatée. C’est à dire que l’on précise dans quel format doivent être saisies les variables.
 
-```C
+```c
 # include < stdio .h >
 int main (int argc , char *argv[])
 {
@@ -71,7 +71,7 @@ Pour que la fonction scanf puisse s’occuper de la saisie des chaînes de carac
 
 Une chaîne de caractères étant définie comme un pointeur, on ne met pas le & devant la variable à saisir.
 
-```C
+```c
 # include < stdio .h >
 int main (int argc , char *argv[])
 {
@@ -110,7 +110,7 @@ On peut faire suivre le symbole % d’une liste de caractères entre crochets à
 
 Ainsi, scanf lit alors jusqu’à ce qu’elle tombe sur un caractère interdit. Ce caractère est principalement le retour chariot.
 
-```C
+```c
 # include < stdio .h >
 
 int main (int argc , char *argv[])
@@ -123,7 +123,7 @@ int main (int argc , char *argv[])
 
 On peut aussi ajouter une plage de caractères autorisés.
 
-```C
+```c
 char formule [];
 scanf (" %[[0123456789/* -+=() ]ˆ\n]",formule ) ; // pour saisir des formules
 
@@ -159,7 +159,7 @@ size t strlen(const char *str);
 Cette fonction va nous permettre de récupérer la taille de n’importe quelle chaîne de caractères sans compter le ’\0’ final.
 La fonction retourne un size t (entier long non signé) et prend en paramètre une chaîne de caractères.
 
-```C
+```c
 char chaine[] = "Combien de pièces à fabriquer ?";
 int longueur ;
 longueur = strlen (chaine) ;
@@ -173,7 +173,7 @@ char *strcpy(char *dest, const char *src);
 Cette fonction copie une chaîne dans une autre chaîne et renvoie un pointeur sur cette dernière. Elle copie tous les caractères, y compris le ’\0’.
 Le problème est qu’elle ne fait aucune vérification sur les longueurs des chaînes source et destination.
 
-```C
+```c
 char chaineSrc [20] , chaineDest [20];
 scanf (" %[ˆ\ n]",chaineSrc ) ;
 chaineDest = strcpy ( chaineDest , chaineSrc ) ;
@@ -191,7 +191,7 @@ Elle renvoie un entier qui sera :
 - négatif si chaine1 est inférieure à chaine2 ;
 - nul si les chaînes sont identiques.
 
-```C
+```c
 char chaine1 [] = " Bonjour ";
 char chaine2 [] = " Bonsoir ";
 if ( strcmp ( chaine1 , chaine2 ) == 0)
@@ -212,7 +212,7 @@ Cette fonction sert à concaténer deux chaînes, c’est à dire simplement col
 
 Pour éviter les problèmes, il faut s’assurer que la chaîne destination soit suffisamment grande (taille de dest + taille de src).
 
-```C
+```c
 char dest [50] = "bon ";
 const char *src = " jour ";
 
@@ -235,7 +235,7 @@ Ces fonctions renvoient l’adresse de l’information recherchée en cas de suc
 - long atol(const char *s); : conversion d’une chaîne de caractères en entier long ;
 - double atof(const char *s); : conversion d’une chaîne de caractère en double.
 
-```C
+```c
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -256,7 +256,7 @@ int sprintf(char *str, const char *format, ...);
 
 Cette fonction crée une chaîne de caractères qui sera stockée dans la variable str. La constitution de cette chaîne reprend le fonctionnement de printf, c’est à dire une chaîne formatée avec insertion des valeurs numériques.
 
-```C
+```c
 int main (int argc , char *argv[])
 {
   char chaine[20];

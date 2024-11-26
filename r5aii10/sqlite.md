@@ -96,7 +96,7 @@ lors de l'éxécution de cette requête dans une boucle. La préparation ***sqli
 
 La solution est de passer par une requête paramétrée. La requête est préparée UNE seule fois, avant la boucle. Commme nous ne connaissons pas encore les valeurs à mettre à l'intérieur nous utilisons des paramètres symbolisés par un ?
 
-```C
+```c
 char sql2[200] = "INSERT INTO vehicule (immatriculation, marque, poids) VALUES (?, ?, ?)";
 sqlite3_prepare_v2(db, sql2, 200, &requete, NULL);
 
@@ -158,7 +158,7 @@ do
 
 Que se passe t il si dans la base de données une des valeurs est NULL ? Le programme plante. Il faut tester d'abord le type de la colonne retournée avec la fonction ***sqlite3_column_type***.
 
-```C
+```c
 char marque[20];
 if (sqlite3_column_type(requete, 0) != SQLITE_NULL)
 {

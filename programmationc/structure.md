@@ -10,7 +10,7 @@ Une structure est un **type de données personnalisé** qui peut contenir des va
 
 #### Définition de la structure
 
-```C
+```c
 struct Personne
 {
   char nom[25];
@@ -33,7 +33,7 @@ Les structures peuvent être manipulées champs par champs ou dans leur ensemble
 
 Pour accéder aux membres d'une structure, on utilise l'opérateur point ***.***.
 
-```C
+```c
 int main(void){
   CLIENT Un_Client; // déclaration de la variable Un_Client
   CLIENT NouveauClient; // déclaration de la variable NouveauClient
@@ -50,7 +50,7 @@ int main(void){
 
 On peut également manipuler les structures via des pointeurs. Avec un pointeur de structure, l'accès aux membres se fait via l'opérateur flèche ->. (à la place de *variable.)
 
-```C
+```c
 struct date
 {
   int jour;

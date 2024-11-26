@@ -6,7 +6,7 @@ title: Instructions de débranchement
 
 L'instruction break permet de quitter immédiatement une boucle (for, while, do-while) ou une structure switch. Dès que le programme rencontre un break, il sort du bloc de code en cours.
 
-```C
+```c
 for (int i = 0; i < 10; i++) {
     if (i == 5) {
         break;  // Sort de la boucle dès que i vaut 5
@@ -21,12 +21,12 @@ Le break permet ici de sortir du bloc switch après avoir exécuté le code corr
 
 L'instruction continue permet de sauter à l'itération suivante d'une boucle, sans terminer l'exécution du bloc de code courant.
 
-```C
+```c
 for (int i = 0; i < 10; i++) {
-    if (i == 5) {
-        continue;  // Saute l'itération lorsque i vaut 5
-    }
-    printf("%d\n", i);
+  if (i == 5) {
+    continue;  // Saute l'itération lorsque i vaut 5
+  }
+  printf("%d\n", i);
 }
 ```
 
@@ -42,7 +42,7 @@ Une étiquette se définie avec un nom suivi d'un caractère :. Normalement, une
 
 Pour les autres instructions, les choses sont contrôlée par le compilateur, mais ce qui n'est pas le cas avec goto. Effectivement, si l'étiquette de destination n'est pas placée dans le même bloc que l'instruction goto, alors vous pouvez désynchroniser la pile d'exécution et donc aboutir à un crash de l'application. C'est pour cette raison qu'il est très fortement conseillé de ne pas utiliser l'instruction goto au profit des autres instructions. 
 
-```C
+```c
 int a = 10;
 if (a > 5) {
   goto fin;  // Saute directement à l'étiquette "fin"

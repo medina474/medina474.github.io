@@ -29,7 +29,7 @@ Quand un fichier ne sert plus, on le ferme. Cela annule sa liaison avec le point
 int fclose(FILE *pointeurFichier);
 ```
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -45,13 +45,13 @@ void main(int argc, char *argv[])
 
 ### Lecture en mode caractère (fichiers ASCII)
 
-```C
+```c
 int fgetc(FILE *pointeurFichier);
 ```
 
 La fonction fgetc retourne le caractère lu sous la forme d'un entier (int). Si la valeur retournée est EOF, c'est que la fin de fichier a été atteinte ou qu'il y a eu une erreur.
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -70,14 +70,14 @@ void main(int argc, char *argv[])
 ### Écriture en mode caractère (fichiers ASCII)
 
 
-```C
+```c
 char *fgets(char *pointeurTampon, int nombre, FILE *pointeurFichier);
 ```
 
 La fonction fgets lit dans un fichier, à partir de la position courante, un certain nombre de caractères et les range à l'emplacement pointé par pointeur Tampon.
 La fonction s'arrête si un saut de ligne '\n' a été lu, si nombre − 1 caractères ont été lus, ou si la fin de fichier a été atteinte.
 
-```C
+```c
 # include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -92,13 +92,13 @@ void main(int argc, char *argv[])
 }
 ```
 
-```C
+```c
 char *fputs(char *pointeurTampon, FILE *pointeurFichier);
 ```
 
 La fonction fputs écrit une chaîne de caractères dans un fichier à partir de la position courante. La fonction retourne une valeur positive si pas d'erreur, et EOF s'il y a eu une erreur.
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -113,13 +113,13 @@ void main(int argc, char *argv[])
 }
 ```
 
-```C
+```c
 int fscanf(FILE *pointeurFichier, char *chaineFormatee);
 ```
 
 La fonction fscanf lit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement lues si pas d'erreur. La valeur de retour EOF signifie fin de fichier ou erreur.
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -141,7 +141,7 @@ int fprintf(FILE *pointeurFichier, char *chaineFormatee);
 
 La fonction fprintf écrit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement écrites si pas d'erreur. La valeur de retour EOF signifie erreur.
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -163,7 +163,7 @@ int fread(void *pointeurTampon, size t taille, size t nombre, FILE *pointeurFich
 
 La fonction fread lit un bloc de données de taille x nombre octets et le range à l'emplacement référencé par pointeurTampon. Elle retourne le nombre d'objets complètement lus. Si la valeur est inférieure à nombre, alors il y a une erreur.
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -185,7 +185,7 @@ La fonction fwrite écrit un bloc de données de taille x nombre octets rangé �
 
 Si la valeur est inférieure à nombre, alors il y a une erreur.
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])
@@ -216,7 +216,7 @@ fseek (fp ,0 ,0) ; /* on se place au début du fichier */
 ...
 fseek (fp , -3 , SEEK_END ) ; /* on se place 3 octets avant la fin du fichier */
 
-```C
+```c
 #include <stdio .h>
 
 void main(int argc, char *argv[])

@@ -10,7 +10,7 @@ A noter : Par économie de moyens, le langage C travaille avec des entiers en ut
 
 L'opérateur `!` inverse l'état d'une variable booléenne. Retourne la valeur 1 si la variable vaut 0 et 0 si elle vaut 1 (ou tout nombre différent de 0).
 
-```C
+```c
 a = !b;
 ```
 
@@ -28,7 +28,7 @@ L'opérateur `||` retourne 1 si une des deux conditions a la valeur 1 (ou tout n
 
 L'opérateur `||` retourne 0 seulement si les deux conditions ont la valeur 0.
 
-```C
+```c
 condition1 || condition2;
 ```
 
@@ -49,7 +49,7 @@ L'opérateur `&&` retourne 1 seulement si les deux conditions ont la valeur 1 (o
 
 L'opérateur `&&` retourne 0 si **une seule** des deux conditions possède la valeur 0 et quelque soit la valeur de l'autre condition.
 
-```C
+```c
 resultat = condition1 && condition2;
 ```
 
@@ -69,7 +69,7 @@ Si le résultat est irrémédiablement connu à une étape alors la suite n'est 
 
 Soit les 3 fonctions suivantes
 
-```C
+```c
 int FonctionV()
 {
   puts("Execution de V");
@@ -89,13 +89,13 @@ int FonctionA()
 }
 ```
 
-```C
+```c
 FonctionV() && FonctionA();
 ```
 
 `FonctionA` est appelée car la seule évaluation de `FonctionV` qui retourne vrai ne permet pas de conclure au résultat.
 
-```C
+```c
 FonctionF() && FonctionA();
 ```
 
@@ -103,14 +103,14 @@ Il n'est pas nécessaire d'appeler `FonctionA` car de toute façon avec `Fonctio
 
 Le court-circuit d'évaluation peut remplacer une syntaxe utilisant `if`
 
-```C
+```c
 if (FonctionB())
 {
   FonctionA();
 }
 ```
 
-```C
+```c
 FonctionB() && FonctionA();
 ```
 

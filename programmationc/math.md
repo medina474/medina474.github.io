@@ -6,7 +6,7 @@ title: Fonctions mathématiques
 
 3 déclinaisons de la fonction ***round*** en fonction du type de données utilisé pour le paramètre et la valeur de retour : double, float ou long double.
 
-```C
+```c
 double      round(double)fichie;
 float       roundf(float);
 long double roundl(long double);
@@ -18,7 +18,7 @@ Ces trois fonctions renvoient l'arrondi entier au plus proche de la valeur spéc
 
 3 déclinaisons de la fonction ***ceil*** en fonction du type de données utilisé pour le paramètre et la valeur de retour : double, float ou long double.
 
-```C
+```c
 double      ceil(double);
 float       ceilf(float);
 long double ceill(long double);
@@ -33,7 +33,7 @@ Ces trois fonctions retournent l'arrondi entier supérieur (en anglais ceil sign
 
 3 déclinaisons de la fonction ***floor*** en fonction du type de données utilisé pour le paramètre et la valeur de retour : double, float ou long double.
 
-```C
+```c
 double      floor(double);
 float       floorf(float);
 long double floorl(long double);

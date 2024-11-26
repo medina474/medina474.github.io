@@ -11,7 +11,7 @@ Une variable possède plusieurs caractéristiques ou propriétés.
 
 La **déclaration**, c'est l'endroit dans le code qui défini l'existence de la variable.
 
-```C
+```c
 int age = 19;
 ```
 
@@ -44,7 +44,7 @@ Sa **visibilité**, dans un langage évolué comme le C++, le C# ou Java, c'est 
 >Les variables doivent être déclarées **avant** d'être utilisées.
 {:.warning}
 
-```C
+```c
 #include <stdio.h>
 
 void main()
@@ -62,7 +62,7 @@ error: ‘age’ undeclared (first use in this function)
 
 Voici le code correct
 
-```C
+```c
 #include <stdio.h>
 
 void main()
@@ -79,7 +79,7 @@ Dans un programme il est possible de manipuler des valeurs sans pour autant les 
 >Attention, dans le cas des chaines de caractères, il ne faut pas confondre le nom de la variable avec sa valeur.
 {: .warning}
 
-```C
+```c
 char joueur[10] = "Alice";
 
 printf("%s\n", "joueur");

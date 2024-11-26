@@ -53,7 +53,7 @@ tar xvf bluez-X.XX.tar.xz
 
 b. corriger les 2 fichiers sources `tools/l2test.c` et `tools/rctest.c`. Ajouter dans les entêtes la ligne suivante
 
-```C
+```c
 #include <linux/sockios.h>
 ```
 

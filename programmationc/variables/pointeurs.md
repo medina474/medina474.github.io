@@ -7,7 +7,7 @@ title: Pointeurs
 Sur un sytème 32 bits la taille d'un pointeur est de 4 octets (32 bits), sur un système 64 bits la taille d'un pointeur de de 8 octets (64 bits).
 
 
-```C
+```c
 int score = 65040073;
 int *pointeur = &score;
 ```
@@ -150,7 +150,7 @@ L'opérateur `&` sur une variable existante permet de d'assigner au pointeur l'a
 
 Le format %p de `printf` permet d'afficher l'adresse mémoire en hexadécimal d'un pointeur.
 
-```C
+```c
 printf("%p\n", pointeur);
 ```
 
@@ -158,7 +158,7 @@ printf("%p\n", pointeur);
 
 Pour modifier la valeur d'une variable données en passant par le pointeur s'effectue en utilisant l'opérateur d"indirection `*`;
 
-```C
+```c
 *pointeur = 66000000;
 printf("%d\n", score);
 ```
@@ -189,7 +189,7 @@ La déclaration d’un pointeur n’engendre pas de réservation mémoire. Si on
 
 ### malloc
 
-```C
+```c
 void *malloc(size t taille);
 ```
 
@@ -201,7 +201,7 @@ Elle renvoie un pointeur de type void (permettant de gérer les adresses de donn
 
 Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si taille vaut 0, elle renvoie un pointeur nul : NULL.
 
-```C
+```c
 int *p;
 
 p = (int *) malloc(10 * sizeof(int)); 
@@ -216,7 +216,7 @@ if ( p== NULL) // test création du pointeur
 
 ### calloc
 
-```C
+```c
 void *calloc(size t nombre, size t tailleType);
 ```
 
@@ -228,7 +228,7 @@ Elle renvoie un pointeur de type void (permettant de gérer les adresses de donn
 
 Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si taille vaut 0, elle renvoie un pointeur nul : NULL.
 
-```C
+```c
 int *p;
 p = (int *) calloc(10 , sizeof(int) ); 
 // réservation pour 10 entiers
@@ -241,7 +241,7 @@ if ( p== NULL) // test création du pointeur
 
 ### realloc
 
-```C
+```c
 void *realloc(void *pointeurBase, size t newTaille);
 ```
 
@@ -255,7 +255,7 @@ Elle renvoie un pointeur de type void (permettant de gérer les adresses de donn
 
 Si l’allocation réussit, la fonction renvoie un pointeur sur le bloc nouvellement alloué. Si la place disponible est insuffisante ou si newTaille vaut 0, elle renvoie un pointeur nul : NULL.
 
-```C
+```c
 int *p;
 
 p = (int *) realloc( p , 20 * sizeof(int) );
@@ -274,7 +274,7 @@ if ( p== NULL) // test création du pointeur
 
 La fonction free
 
-```C
+```c
 void *free(void *pointeur);
 ```
 
@@ -283,7 +283,7 @@ Cette fonction permet de libérer l’espace mémoire alloué par les 3 fonction
 Il est important de libérer l’espace après utilisation, sinon celui-ci devient inutilisable pour la suite du programme ! ! 
 
 
-```C
+```c
 # include < stdio .h >
 
 int main (int argc, char *argv[])
@@ -347,7 +347,7 @@ pi = &T[0]; // pi pointe maintenant sur le premier élément du tableau T
 La déclaration de T[50] réserve en mémoire 50 entiers, mais nous avons en même temps un nouveau pointeur
 initialisé sur le début du tableau.
 
-```C
+```c
 int *pi, T[10], X;
 pi = T; // pi pointe sur le début du tableau soit le premier élément
 *T = 0; // c'est équivalent à T[0] = 0
@@ -359,13 +359,13 @@ Les tableaux en mémoire = Tableaux de pointeurs
 
 Exemple : tableau 1 dimension
 
-```C
+```c
 char Tab1D[5];
 ```
 
 Exemple : tableau 2 dimensions avec des chaines de caractères
 
-```C
+```c
 char Tab2D [5][7] = {"UN", "DEUX", "TROIS", "QUATRE", "CINQ"};
 ```
 
@@ -377,7 +377,7 @@ On déclare un tableau de pointeurs dans lequel chaque pointeur désigne l'adres
 Exemple : tableau 2 dimensions avec des chaines de caractères
 char *Tab2D [5] ; 
 
-```C
+```c
 char *Tab[] = { "UN" , "DEUX", "TROIS", "QUATRE", "CINQ"} ;
 Tab[0]  pointe sur "UN"
 Tab[1]  pointe sur "DEUX"
@@ -412,7 +412,7 @@ Y = carre(X);
 Les pointeurs avec une fonction.
 Exemple : Fonction qui prend un pointeur en paramètre d'entrée et retourne un pointeur.
 
-```C
+```c
 void carre(int *A)
 {
   (*A) = (*A) * (*A); // équivalent à : *A**A ou * A * * A

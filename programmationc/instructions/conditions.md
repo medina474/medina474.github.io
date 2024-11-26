@@ -8,7 +8,7 @@ title: Instructions conditionnelles
 
 L'instruction _if_ permet d'exécuter un bloc de code uniquement si une condition est vraie.
 
-```C
+```c
 int a = 10;
 
 if (a > 5) {
@@ -20,7 +20,7 @@ if (a > 5) {
 
 L'instruction _else_ permet de définir un bloc de code qui sera exécuté si la condition du if est fausse.
 
-```C
+```c
 int a = 3;
 
 if (a > 5) {
@@ -34,7 +34,7 @@ if (a > 5) {
 
 L'instruction _else if_ permet de tester une nouvelle condition si la première _if_ est fausse.
 
-```C
+```c
 int a = 8;
 
 if (a > 10) {
@@ -53,7 +53,7 @@ Voir les [opérateurs de comparaison](../operateurs/comparaison) et les [opérat
 
 L'instruction switch est une alternative aux multiples else if. Elle compare une variable avec différentes valeurs possibles et exécute le code correspondant.
 
-```C
+```c
 switch (variable) {
 case valeur1:
   // Code si variable == valeur1

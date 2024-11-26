@@ -20,7 +20,7 @@ La lecture ou l'écriture dans un fichier n'est pas directe, mais utilise une zo
 
 Une structure spécifique gère ce tampon et d'autre variables nécessaires à la gestion du processus.
 
-```C
+```c
 typdef struct
 {
   char *buffer; // pointeur vers le tampon
@@ -37,12 +37,12 @@ Avant qu'un programme puisse manipuler un fichier, il faut commencer par l'ouvri
 
 Le but est d'accéder aux données, de stocker les informations dans une structure FILE afin de les réutiliser plus tard pour une lecture ou une écriture.
 
-```C
+```c
 // Déclaration
 FILE * fopen(char *nom_fichier, char *mode_acces);
 ```
 
-```C
+```c
 #include <stdio.h>
 
 void main(void)
@@ -92,7 +92,7 @@ Attention il ne faut pas oublier de fermer un fichier après utilisation, car le
 int fclose( FILE *pointeur_fichier);
 ```
 
-```C
+```c
 #include <stdio.h>
 
 void main(void)
@@ -119,7 +119,7 @@ La fonction fgetc retourne le caractère lu sous la forme d'un int.
 
 Si la valeur retourné est EOF ( EOF = -1), c'est que la fin de fichier a été atteinte ou qu'il y a eu une erreur.
 
-```C
+```c
 int c;
 c = fgetc(fp);
 ```
@@ -133,7 +133,7 @@ int fputc(int caractere, FILE *pointeur_fichier);
 
 La fonction fputc transfère un caractère dans le fichier pointé par pointeur_fichier. La fonction retourne le caractère écrit si pas d'erreur, et EOF s'il y a une erreur.
 
-```C
+```c
 fputc('A', fp);
 ```
 
@@ -148,7 +148,7 @@ char *fgets(char *pointeur_tampon, int nombre, FILE *pointeur_fichier);
 
 La fonction fgets lit dans le fichier à partir de la position courante, nombre caractères et les range à l'emplacement pointé par pointeur_tampon. La fonction s'arrête si un saut de ligne '\n' a été lu ou si nombre-1 caractères ont été lu ou si c'est la fin de fichier.
 
-```C
+```c
 char stringbuf[81];
 fgets(stringbuf, 81 , fp);
 ```
@@ -173,7 +173,7 @@ char *fscanf(FILE *pointeur_fichier,char *chaine_formatee, variables,..,..);
 
 La fonction fscanf lit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement lues si pas d'erreur. La valeur EOF signifie fin de fichier ou erreur.
 
-```C long num;
+```c long num;
 char nom[30];
 char prenom[30];
 ...
@@ -201,7 +201,7 @@ int *fread(void *pointeur_Tampon,size-t taille,size_t nombre,FILE *point_fic);
 La fonction fread lit un bloc de données de taille x nombre octets et le range à l'emplacement référencé par pointeur_tampon. Elle retourne le nombre d'octets lus. Si la valeur est inférieur à
 nombre alors erreur.
 
-```C
+```c
 struct client k[5];
 ...
 fread(k, sizeof(struct client), 5, fp);
@@ -235,7 +235,7 @@ La fonction fseek permet de placer le pointeur de position sur un octet quelconq
 
 La fonction retourne 0 si pas d'erreur sinon un nombre non nul.
 
-```C
+```c
 fseek(fp,0,0); // on se place au début du fichier
 fseek(fp,0,SEEK_END); // on se place à la fin du fichier
 fseek(fp,-3,SEEK_END); // on se place 3 octets avant la fin du fichier
@@ -252,14 +252,14 @@ La fonction ftell permet de connaitre l'octet du fichier sur lequel pointe le po
 
 La fonction retourne dans un entier long la position courante dans le fichier à partir du début du fichier. Retourne -1 en cas d'erreur.
 
-```C
+```c
 long position ;
 position = ftell(fp);
 ```
 
 Exemple recherche de la taille d'un fichier (on considère le fichier ouvert)
 
-```C
+```c
 long taille;
 fseek(fp, 0, SEEK_END); // on se place en fin de fichier
 taille = ftell(fp); // lecture de la position dans le fichier

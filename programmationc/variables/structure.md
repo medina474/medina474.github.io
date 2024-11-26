@@ -7,7 +7,7 @@ title: Structure
 
 Exemple de variables indépendantes representant des conditions météorologiques.
 
-```C
+```c
 float temperature;
 float humidite;
 int pression;
@@ -17,7 +17,7 @@ int vent_vitesse;
 
 La structure rassemble les données dans un bloc logique
 
-```C
+```c
 struct blocmeteo
 {
   float temperature;
@@ -32,7 +32,7 @@ Les variables à l'intérieur de la structure sont appelées des **champs**.
 
 La déclaration de variables de type structure s'effectue comme les autes types (int, float, etc...) en utilisant la déclaration le nom de la structure y compris l'instruction struct.
 
-```C
+```c
 struct blocmeteo paris;
 struct blocmeteo strasbourg;
 struct blocmeteo marseille;
@@ -40,7 +40,7 @@ struct blocmeteo marseille;
 
 On accède aux propriétés avec l'opérateur `.`
 
-```C
+```c
 paris.temperature = 15.2;
 strabourg.humidite = 0.88;
 marseille.pression = 1040;
@@ -50,7 +50,7 @@ marseille.pression = 1040;
 
 Pour éviter d'écrire à chaque fois le mot clé struct lors de la déclaration d'une variable ou d'un paramètre de type structure, il est possible de définir un nouveau type à l'aide de la commande `typedef`. Veuillez noter que le nom du type vient tout à la fin de la définition, après la structure
 
-```C
+```c
 typedef blocmeteo struct
 {
   float temperature;
@@ -63,7 +63,7 @@ typedef blocmeteo struct
 
 Le nom de la structure en elle même n'est plus utile, on peut l'ignorer.
 
-```C
+```c
 typedef struct
 {
   float temperature;
@@ -76,7 +76,7 @@ typedef struct
 
 La déclaration des variables se fait directement avec le type;
 
-```C
+```c
 meteo paris;
 meteo strasbourg;
 meteo marseille;

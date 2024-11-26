@@ -301,7 +301,7 @@ fgets(buffer, 100, stdin);
 
 Définir des constantes
 
-```C
+```c
 #define OPTION_GPS 0b000001
 #define OPTION_CAMERA 0b000010
 #define OPTION_AUTOMATIQUE 0b000100
@@ -310,7 +310,7 @@ Définir des constantes
 #define OPTION_ESP 0b100000
 ```
 
-```C
+```c
 #include <stdio.h>
 
 void affiche(int valeur) {
