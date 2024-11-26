@@ -89,14 +89,20 @@ dynamiques
 
 ### Gestion entrées/sorties numériques
 
-pinMode(Num_Port, Type) : sélection du type entrée ou sortie
+**pinMode(Num_Port, Type)**
+
+sélection du type entrée ou sortie
 - Num_Port : Numéro de la broche (de 0 à 19)
 - Type : INPUT, INPUT_PULLUP, OUTPUT
 
-digitalWrite(Num_Port, Valeur) : Ecriture sur une sortie
+**digitalWrite(Num_Port, Valeur)**
+
+Ecriture sur une sortie
 - Valeur : LOW, HIGH, 0, 1
 
-Variable = digitalRead(Num Port) : Lecture d'une entrée
+**variable = digitalRead(Num Port)**
+
+Lecture d'une entrée
 - Valeur : 0, 1
 
 ### Gestion entrées/sorties analogiques
@@ -130,11 +136,10 @@ Mesure la durée d'une impulsion en microseconde en détectant l'état de l'entr
 
 ### Port série asynchrone
 
-Les ports séries sont gérés par une bibliothèque intégrée ne nécessitant pas de déclaration. Les cartes de type Uno ne disposant que d'un port
-série Nomport est toujours Serial, les cartes plus évoluées de type Mega utilisent Serial, Serial1, Serial2, Serial3 pour définir l'un de leurs 4 ports
-série.
+Les ports séries sont gérés par une bibliothèque intégrée ne nécessitant pas de déclaration. Les cartes de type Uno ne disposant que d'un port série Nomport est toujours Serial, les cartes plus évoluées de type Mega utilisent Serial, Serial1, Serial2, Serial3 pour définir l'un de leurs 4 ports série.
 
 Serial.begin(Vitesse ,[Config]) : Initialisation
+
 Vitesse : 300, 9600, 57600, 115200 bauds
 Config : configuration du format de transmission (nombre de bit, parité, bit de stop) : SERIAL_BPS par défaut SERIAL_8N1
 B : nombre de bits (5,6,7,8) , P : parité (N=sans, E paire, O impaire)
