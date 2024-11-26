@@ -1,3 +1,7 @@
+---
+title: Asima
+---
+
 Asima|Controllino Maxi|Sens|Adresse
 ---  |---  |---    |---
 S0   | A0  |In     |*E124.0*
