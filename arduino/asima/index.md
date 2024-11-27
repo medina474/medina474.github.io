@@ -4,20 +4,20 @@ title: Asima
 
 Asima|Controllino Maxi|Sens|Adresse
 ---  |---  |---    |---
-S0   | A0  |In     |*E124.0*
-S1   | A1  |In     |*E124.1*
-S2   | A2  |In     |*E124.2*
-S3   | A3  |In     |*E124.3*
-S4   | A4  |In     |*E124.4*
-S5   | A5  |In     |*E124.5*
-S6   | A6  |In     |*E124.6*
-S7   | A7  |In     |*E124.7*
+S0   | A0  |In     |E124.0
+S1   | A1  |In     |E124.1
+S2   | A2  |In     |E124.2
+S3   | A3  |In     |E124.3
+S4   | A4  |In     |E124.4
+S5   | A5  |In     |E124.5
+S6   | A6  |In     |E124.6
+S7   | A7  |In     |E124.7
 U1   | A8  |In A   |
 U2   | A9  |In A   |
-S8   | IN0 |Inter  |
-S9   | IN1 |Interr |
-S10  |     |       |
-S11  |     |       |
+S8   | IN0 |Inter  |E125.0
+S9   | IN1 |Inter  |E125.1
+S10  |  X  |       |
+S11  |  X  |       |
 H1   |     |       |
 H2   |     |       |
 H3   |     |       |

@@ -29,7 +29,7 @@ prix SP95,prix SP98
 '1,499','1,509'
 ```
 
-Les colonnes contiennent des nombres à virgule. Il ne faut pas les découper. Les colonnes sont entourées d'apostrophes ' pour insiquer qu'il ne faut pas tenir compte des virgules à l'intérieur.
+Les colonnes contiennent des nombres à virgule. Il ne faut pas les découper. Les colonnes sont entourées d'apostrophes ' pour indiquer qu'il ne faut pas tenir compte des virgules à l'intérieur.
 
 c3 Lorsque la valeur de la colonne contient une apostrophe, l'apostrophe est doublée.
 
@@ -44,4 +44,14 @@ d. Convertir les nombres qui ont des virgules en nombres décimaux
 
 e. Convertir les dates au format date unix
 
-f. Enregistrer ces données au format binaire.
+f. Enregistrer ces données dans un fichier carburant.bin au format binaire.
+
+### Partie 2
+
+a. Ouvrir le fichier **carburant.bin**
+
+b. Positionner vous au 100e enregistrement, lire 8 enregistrements, calculer la moyenne du SP98
+
+c. Positionner vous au 200e, lire 8 enregistrements calculer la moyenne du SP98
+
+d. Demander à l'utilisateur le n° d'enregistrement souhaité, poistionnez vous dans le fichier, lire 8 enregistrements, calculer la moyenne du SP98.
