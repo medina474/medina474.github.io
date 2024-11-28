@@ -47,7 +47,7 @@ if (a > 10) {
 
 ```
 
-Voir les [opérateurs de comparaison](../operateurs/comparaison) et les [opérateurs logiques](../operateurs/logique).
+Voir les [opérateurs de comparaison](../opérateurs/comparaison) et les [opérateurs logiques](../opérateurs/logique).
 
 ## switch 
 
