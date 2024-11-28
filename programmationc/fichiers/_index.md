@@ -117,7 +117,6 @@ void main(int argc, char *argv[])
 int fscanf(FILE *pointeurFichier, char *chaineFormatee);
 ```
 
-La fonction fscanf lit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement lues si pas d'erreur. La valeur de retour EOF signifie fin de fichier ou erreur.
 
 ```c
 #include <stdio .h>
@@ -138,8 +137,6 @@ void main(int argc, char *argv[])
 ```
 
 int fprintf(FILE *pointeurFichier, char *chaineFormatee);
-
-La fonction fprintf écrit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement écrites si pas d'erreur. La valeur de retour EOF signifie erreur.
 
 ```c
 #include <stdio .h>

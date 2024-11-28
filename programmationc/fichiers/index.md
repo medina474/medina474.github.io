@@ -173,7 +173,8 @@ char *fscanf(FILE *pointeur_fichier,char *chaine_formatee, variables,..,..);
 
 La fonction fscanf lit des données dans un fichier en les formatant. Elle retourne le nombre de données correctement lues si pas d'erreur. La valeur EOF signifie fin de fichier ou erreur.
 
-```c long num;
+```c 
+long num;
 char nom[30];
 char prenom[30];
 ...

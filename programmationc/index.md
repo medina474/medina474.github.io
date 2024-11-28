@@ -62,6 +62,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Les fichiers](fichiers)
 - [Lecture et écriture en bloc](fichiers/bloc)
 - [Les fonctions mathématiques](math)
+- [Les chaines de caractères](string)
 
 ## Travaux dirigés
 

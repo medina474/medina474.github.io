@@ -2,7 +2,7 @@
 title: Les fichiers blocs
 ---
 
-#### Lecture :
+### Lecture :
 
 ```c
 // Déclaration
@@ -18,7 +18,7 @@ struct client k[5];
 fread(k, sizeof(struct client), 5, fp);
 ```
 
-#### Ecriture :
+### Ecriture :
 
 ```c
 // Déclaration
@@ -52,7 +52,7 @@ fseek(fp,0,SEEK_END); // on se place à la fin du fichier
 fseek(fp,-3,SEEK_END); // on se place 3 octets avant la fin du fichier
 ```
 
-#### Lecture de la position du pointeur dans un fichier
+### Lecture de la position du pointeur dans un fichier
 
 ```c
 // Déclaration
