@@ -27,8 +27,7 @@ int main() {          // Début de la fonction principale
 Les directives de préprocesseur commencent par le symbole # et sont traitées avant la compilation. Elles servent principalement à inclure des bibliothèques ou définir des constantes.
 
 Inclure la bibliothèque d'entrées/sorties standard (stdio : standard input output)
-Fonctions
-- Déclarations de variables
+
 ```c
 #include <stdio.h>
 ```
@@ -77,24 +76,24 @@ Les commentaires en bloc peuvent s’étendre sur plusieurs lignes. Ils sont dé
 Auteur: Emmanuel Medina */
 ```
 
-### Bibliothèques
+## Bibliothèques
 
-#### stdio
+### stdio
 
 La bibliothèque standard d'entrée/sortie ***stdio.h***, est essentielle pour interagir avec les flux d'entrée et de sortie. Elle fournit des fonctions pour lire et écrire des données, ainsi que pour manipuler les fichiers.
 
-#### stdlib
+### stdlib
 
 La bibliothèque standard ***stdlib.h*** (standard library) fournit des fonctions essentielles pour la gestion de la mémoire, le contrôle des processus, le tri des données, les fonctions mathématiques simples et les conversions de texte en nombre. 
 
-#### string
+### string
 
 La bibliothèque ***string.h*** fournit des fonctions pour manipuler les chaînes de caractères et les blocs mémoire.
 
-#### ctype
+### ctype
 
 La bibliothèque ***ctype.h*** fournit des fonctions pour tester et manipuler des caractères.
 
-#### cmath
+### math
 
-La bibliothèque ***cmath.h*** , permet de définir les principales fonctions usuelles mathématiques.
+La bibliothèque ***math.h*** , permet de définir les principales fonctions usuelles mathématiques.
