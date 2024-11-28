@@ -60,6 +60,7 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Les chaines de caractères](string)
 - [Les structures](variables/structure)
 - [Les fichiers](fichiers)
+- [Lecture et écriture en bloc](fichiers/bloc)
 - [Les fonctions mathématiques](math)
 
 ## Travaux dirigés
