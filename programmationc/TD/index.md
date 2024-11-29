@@ -1,6 +1,6 @@
 ---
 title: Travaux dirigés
-----
+---
 
 
 #### Sortie formatée
