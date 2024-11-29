@@ -1,5 +1,5 @@
 ---
-title: Perfectionnement en langage C
+title: Informatique Industrielle
 ---
 
 > Le langage C reste aujourd'hui très utilisé, notamment pour le développement du noyau des systèmes d'exploitation, des logiciels embarqués et des applications nécessitant des performances élevées. Sa simplicité, sa proximité avec le matériel et sa portabilité sont les principales raisons de son succès durable.
@@ -62,11 +62,10 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 - [Les fichiers](fichiers)
 - [Lecture et écriture en bloc](fichiers/bloc)
 - [Les fonctions mathématiques](math)
-- [Les chaines de caractères](string)
 
 ## Travaux dirigés
 
-- [Travaux dirigés](td)
+- [Installation de l'environnement de développement](td)
 - [Travaux dirigés 1](TD/td1)
 - [Travaux dirigés 2](TD/td2) 
 - [Travaux dirigés 3](TD/td3) : lecture d'un fichier texte

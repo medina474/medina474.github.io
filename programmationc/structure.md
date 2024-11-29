@@ -111,6 +111,7 @@ printf("Ville: %s\n", personne1.adresse.ville);
 
 Pour simplifier l’utilisation d’une structure, on peut utiliser le mot-clé ***typedef***. Cela permet d’éviter de répéter le mot-clé struct chaque fois qu’on utilise la structure.
 
+```c
 typedef struct {
     char nom[50];
     int age;
@@ -119,5 +120,5 @@ typedef struct {
 
 typedef struct client CLIENT; // création d'un alias CLIENT sur struct client
 
-
 Personne personne3; // Pas besoin d'écrire "struct Personne"
+```c

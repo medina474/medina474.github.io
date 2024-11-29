@@ -1,8 +1,5 @@
 {
   "[c]": {
     "files.encoding": "utf8"
-  },
-  "files.associations": {
-    "limits.h": "c"
   }
 }
