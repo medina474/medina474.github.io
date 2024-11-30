@@ -21,7 +21,7 @@ Lancer VSCode
 
 Ajouter l'extension C/C++ de Microsoft
 
-### Exercice 1 : Premier programme
+### Exercice A : Premier programme
 
 Créer un dossier TP dans D:\
 
@@ -31,7 +31,7 @@ La fonction puts en C est utilisée pour afficher une chaîne de caractères (_s
 
 Une particularité de puts est qu'après avoir affiché la chaîne, elle ajoute automatiquement un caractère de nouvelle ligne (\n). Cela signifie que le curseur passe à la ligne suivante après l'affichage du texte.
 
-Créer un fichier main.c
+Créer un fichier td0a.c
 
 ```c
 #include <stdio.h>
@@ -55,7 +55,7 @@ tasks.json
     {
       "type": "cppbuild",
       "label": "Compilation",
-      "command": "D:/w64devkit/bin/gcc.exe",
+      "command": "gcc.exe",
       "args": [
         "-fdiagnostics-color=always",
         "-g",

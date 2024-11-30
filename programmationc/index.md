@@ -65,7 +65,8 @@ Sa syntaxe de base a inspiré de nombreux langages plus récents dont C++, Java 
 
 ## Travaux dirigés
 
-- [Installation de l'environnement de développement](td)
+- [Installation de l'environnement de développement](TD/td0)
+- [Afficher des informations à l'écran](TD/td0/affichage)
 - [Travaux dirigés 1](TD/td1)
 - [Travaux dirigés 2](TD/td2) 
 - [Travaux dirigés 3](TD/td3) : lecture d'un fichier texte
