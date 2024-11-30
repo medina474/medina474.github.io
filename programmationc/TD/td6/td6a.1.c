@@ -115,9 +115,9 @@ void AfficherStructure(PrixCarburant prix)
 
 int main() {
 
-  FILE *fp = fopen("prix-des-carburants.csv", "r");
+  FILE *fp = fopen("prix-des--carburants.csv", "r");
   if (fp == NULL) {
-    perror("Error");
+    perror("");
     return -1; // Code de retour choisi arbitrairement
                // Par convention les nombres négatifs
                // signalent des erreurs
@@ -160,8 +160,6 @@ int main() {
       buffer[ncaractere] = caractere;
       ncaractere++;
     } 
-
-    //putchar(caractere); // Ecrire à l'écran le caractère
   }
 
 

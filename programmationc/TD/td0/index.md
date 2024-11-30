@@ -2,8 +2,8 @@
 title: Installation de l'environnement de développement
 ---
 
-> Cette partie a déja été faite par le service informatique. Elle est présente uniquement pour ceux qui veulent installer l'environnement de développement sur leur PC
-: {.warning}
+> Cette partie a déja été faite par le service informatique. Elle est présente uniquement pour ceux qui veulent installer l'environnement de développement sur leur PC.
+{:.warning}
 
 Télécharger W64DevKit pour Windows
 
