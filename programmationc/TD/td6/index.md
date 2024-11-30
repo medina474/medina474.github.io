@@ -5,6 +5,8 @@ title: Travaux dirigés 6
 > Énoncé : Lire un fichier texte contenant des valeurs mixtes, effectuer des transformations.
 {: .definition }
 
+### Première partie
+
 a. Ouvrir le fichier [prix-des-carburants](prix-des-carburants.csv) en mode lecture.
 
 b. Lire le fichier caractère par caractère.

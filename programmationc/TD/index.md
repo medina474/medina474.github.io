@@ -2,6 +2,12 @@
 title: Travaux dirigés
 ---
 
+> Lancer VSCode uniquement depuis l'icône sur le BUREAU.
+{:.danger}
+
+> NE jamais travailler sur Espace Personnel. Uniquement sur le disque D:
+{:.danger}
+
 ### Retour de la fonction main
 
 La fonction main en C retourne généralement une valeur entière, et ce retour a une signification particulière. Le retour de la fonction main est utilisé pour indiquer à l'environnement d'exécution du programme (comme le système d'exploitation) si le programme s'est terminé correctement ou s'il a rencontré une erreur. 
