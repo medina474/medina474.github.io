@@ -38,7 +38,7 @@ Créer un fichier td0a.c
 ```c
 #include <stdio.h>
 
-void main() {
+int main() {
   puts("Bonjour Jérôme");
 }
 ```

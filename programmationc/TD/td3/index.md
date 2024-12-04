@@ -39,7 +39,7 @@ Répeter l'opération tant qu'il y a des lignes
 #include <stdio.h>
 #include <stdlib.h>
 
-void main() 
+int main() 
 {
   FILE *fp;
   fp = fopen("observations.csv", "r");

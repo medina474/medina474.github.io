@@ -45,7 +45,7 @@ FILE * fopen(char *nom_fichier, char *mode_acces);
 ```c
 #include <stdio.h>
 
-void main(void)
+int main(void)
 {
   FILE *fp;
   fp = fopen("nomdufichier.dat","r"); // Ouverture du fichier en mode lecture
@@ -95,7 +95,7 @@ int fclose( FILE *pointeur_fichier);
 ```c
 #include <stdio.h>
 
-void main(void)
+int main(void)
 {
   FILE *fp;
   ...

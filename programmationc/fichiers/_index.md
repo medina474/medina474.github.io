@@ -32,7 +32,7 @@ int fclose(FILE *pointeurFichier);
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   fp = fopen ("donnes.dat", "r");
@@ -54,7 +54,7 @@ La fonction fgetc retourne le caractère lu sous la forme d'un entier (int). Si 
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   int c;
@@ -80,7 +80,7 @@ La fonction s'arrête si un saut de ligne '\n' a été lu, si nombre − 1 carac
 ```c
 # include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   char stringbuffer [81];
@@ -101,7 +101,7 @@ La fonction fputs écrit une chaîne de caractères dans un fichier à partir de
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   char *stringbuffer = " Coucou ";
@@ -121,7 +121,7 @@ int fscanf(FILE *pointeurFichier, char *chaineFormatee);
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   long numero ;
@@ -141,7 +141,7 @@ int fprintf(FILE *pointeurFichier, char *chaineFormatee);
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   long numero = 1253;
@@ -163,7 +163,7 @@ La fonction fread lit un bloc de données de taille x nombre octets et le range 
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   struct client k[5];
@@ -185,7 +185,7 @@ Si la valeur est inférieure à nombre, alors il y a une erreur.
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   struct client k[5];
@@ -216,7 +216,7 @@ fseek (fp , -3 , SEEK_END ) ; /* on se place 3 octets avant la fin du fichier */
 ```c
 #include <stdio .h>
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
   FILE *fp;
   long position ;

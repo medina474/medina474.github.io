@@ -72,7 +72,7 @@ void affiche(int valeur) {
   printf("ESP %d\n", (valeur >> 5 & 1));
 }
 
-void main() {
+int main() {
 
   int vehicule1 = OPTION_CAMERA | OPTION_ABS;
 
@@ -110,7 +110,7 @@ void main() {
 Un tableau = un pointeur
 
 ```c
-void main() {
+int main() {
   
   int tableau[] = {25, 50, 75, 100};
 

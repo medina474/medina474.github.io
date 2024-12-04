@@ -11,7 +11,7 @@ void carre(int *A, int *Res)
   *Res = (*A) * (*A); // équivalent à : *A**A ou * A * * A
 }
 
-void main(void)
+int main(void)
 {
   int *X,*Y;
   X = (int*)malloc(1*sizeof(int));

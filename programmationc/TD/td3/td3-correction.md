@@ -1,7 +1,7 @@
 ```c
 #include <stdio.h>
 
-void main() 
+int main() 
 {
   FILE *fp;
   fp = fopen("observations.csv", "r");
@@ -55,7 +55,7 @@ if (nombre < mini) mini = nombre;
 #include <stdio.h>
 #include <stdlib.h>
 
-void main() 
+int main() 
 {
   FILE *fp;
   fp = fopen("observations.csv", "r");

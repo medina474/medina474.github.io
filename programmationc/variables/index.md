@@ -47,7 +47,7 @@ Sa **visibilité**, dans un langage évolué comme le C++, le C# ou Java, c'est 
 ```c
 #include <stdio.h>
 
-void main()
+int main()
 {
   printf("%d", age);
   int age = 10;
@@ -65,7 +65,7 @@ Voici le code correct
 ```c
 #include <stdio.h>
 
-void main()
+int main()
 {
   int age = 10;
   printf("%d", age);
