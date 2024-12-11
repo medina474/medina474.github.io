@@ -144,3 +144,21 @@ Régler le séparateur décimal sur le point à la place de la virgule.
 setlocale(LC_ALL, "");  // Activer le support des caractères Unicode
   setlocale(LC_NUMERIC, "C");
 ```
+Ajouter les compteurs suivants :
+- OUT_PUMP_1 (pompe 1)
+- OUT_PUMP_2 (pompe 2)
+- OUT_PUMP_3 (pompe 3)
+- OUT_PUMP_4 (pompe 4)
+- IN_SENSOR_MIN (capteur niveau mini)
+- IN_SENSOR_LOW  (capteur niveau bas)
+- IN_SENSOR_HIGH  (capteur niveau haut)
+- IN_SENSOR_MAX  (capteur niveau max)
+
+Ajouter les gauges suivantes :
+
+- IN_FLOW_DIF (différence entre entrée et sortie)
+- IN_FLOW_1 (débit pompe 1)
+- IN_FLOW_2 (débit pompe 2)
+- IN_FLOW_3 (débit pompe 3)
+- IN_FLOW_4 (débit pompe 4)
+- IN_TANK_LEVEL (niveau dans la cuve)
