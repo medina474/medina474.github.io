@@ -79,3 +79,43 @@ Librarie d'affichage semi graphique
 ```shell
 sudo apt-get install libncurses-dev
 ```
+
+### Dans le programme Pompe
+
+Avant la fonction main, déclarer les variables
+
+```c
+struct MHD_Daemon *server;
+
+prom_counter_t *pm_pompe;
+prom_gauge_t *pm_debit;
+```
+
+Initialisation
+
+```c
+void InitPrometheus() 
+{
+  int result = pcr_init(0,"geii_");
+
+  std::array<const char*, 1> labels = { "numero" };
+  pm_pompe = prom_counter_new("pompe_on", "Mise en marche de la pompe"
+                       , labels.size(), labels.data());
+  pcr_register_metric(pm_pompe);
+  
+  pm_debit = prom_gauge_new("debit", "Débit en l/s"
+                       , labels.size(), labels.data());
+  pcr_register_metric(pm_debit);
+
+  promhttp_set_active_collector_registry(NULL);
+ 
+  // Serveur web
+  server = promhttp_start_daemon(MHD_USE_SELECT_INTERNALLY
+      , 8099, NULL, NULL);
+  if (server == NULL)
+  {
+    printf("Impossible de démarrer le serveur HTTP\n");
+    exit(1);
+  }
+}
+```
