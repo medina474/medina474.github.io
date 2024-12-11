@@ -119,3 +119,21 @@ void InitPrometheus()
   }
 }
 ```
+
+Dans la boucle, mettre à jour les valeurs 
+
+```C
+void ProcessPrometheus()
+{
+  // raising = 1  => front montant sur la sortie
+  if (_digital[OUT_PUMP_1].raising) {
+    std::array<const char*, 1> labels1 = { "1" };
+    prom_counter_inc(pm_pompe, labels1.data());
+  }
+    
+  std::array<const char*, 1> labels1 = { "sortie" };
+  std::array<const char*, 1> labels2 = { "entree" };
+  prom_gauge_set(pm_debit, _digital[IN_FLOW_OUT].dvalue, labels1.data());
+  prom_gauge_set(pm_debit, _digital[IN_FLOW_IN].dvalue, labels2.data());
+}
+```
