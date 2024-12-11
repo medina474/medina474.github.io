@@ -122,7 +122,7 @@ void InitPrometheus()
 
 Dans la boucle, mettre à jour les valeurs 
 
-```C
+```c
 void ProcessPrometheus()
 {
   // raising = 1  => front montant sur la sortie
@@ -136,4 +136,11 @@ void ProcessPrometheus()
   prom_gauge_set(pm_debit, _digital[IN_FLOW_OUT].dvalue, labels1.data());
   prom_gauge_set(pm_debit, _digital[IN_FLOW_IN].dvalue, labels2.data());
 }
+```
+
+Régler le séparateur décimal sur le point à la place de la virgule.
+
+```c
+setlocale(LC_ALL, "");  // Activer le support des caractères Unicode
+  setlocale(LC_NUMERIC, "C");
 ```
