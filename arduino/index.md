@@ -44,9 +44,13 @@ title: Informatique
 
 ## Fonctions utiles
 
+### Définir le sens d'un port
+
+pinMode(CONTROLLINO_R0, OUTPUT);
+
 ### Lire une entrée
 
-```C
+```c
 s0 = digitalRead(CONTROLLINO_A0);
 s1 = digitalRead(CONTROLLINO_A1);
 s2 = digitalRead(CONTROLLINO_A2);
@@ -55,7 +59,7 @@ s3 = digitalRead(CONTROLLINO_A3);
 
 ### Détecter un front montant
 
-```C
+```c
 s4 = digitalRead(CONTROLLINO_A4);
 s4_fm = (s4 > s4_precedent);  
 s4_precedent = s4;
@@ -63,13 +67,13 @@ s4_precedent = s4;
 
 ### Actionner une sortie
 
-```C
+```c
 digitalWrite(CONTROLLINO_R1, 1);
 ```
 
 ### Temporisation
 
-```C
+```c
 unsigned long temps_ecoule = millis() - tempo_start;
 
 if (temps_ecoule > duree) {

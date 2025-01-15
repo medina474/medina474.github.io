@@ -1,9 +1,0 @@
-[ v3_req ]
-basicConstraints = CA:FALSE
-keyUsage = nonRepudiation, digitalSignature, keyEncipherment
-subjectAltName = @alt_names
-
-[ alt_names ]
-DNS.1 = www.raspberry.home
-IP.1 = 192.168.1.199
-IP.2 = 192.168.0.1
