@@ -41,3 +41,39 @@ title: Informatique
 - M47 : Distributeur automatique de boissons chaudes
 - M48 : Malaxeur
 - M49 : Commande séquentielle
+
+## Fonctions utiles
+
+### Lire une entrée
+
+```C
+s0 = digitalRead(CONTROLLINO_A0);
+s1 = digitalRead(CONTROLLINO_A1);
+s2 = digitalRead(CONTROLLINO_A2);
+s3 = digitalRead(CONTROLLINO_A3);
+```
+
+### Détecter un front montant
+
+```C
+s4 = digitalRead(CONTROLLINO_A4);
+s4_fm = (s4 > s4_precedent);  
+s4_precedent = s4;
+```
+
+### Actionner une sortie
+
+```C
+digitalWrite(CONTROLLINO_R1, 1);
+```
+
+### Temporisation
+
+```C
+unsigned long temps_ecoule = millis() - tempo_start;
+
+if (temps_ecoule > duree) {
+  /* */
+  tempo_start = millis();
+}
+```
