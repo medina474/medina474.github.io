@@ -46,7 +46,9 @@ title: Informatique
 
 ### Définir le sens d'un port
 
+```c
 pinMode(CONTROLLINO_R0, OUTPUT);
+```
 
 ### Lire une entrée
 
