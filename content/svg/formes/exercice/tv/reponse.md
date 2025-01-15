@@ -1,0 +1,88 @@
+---
+title: Réponse
+---
+
+
+Le milieu de la forme se trouve à 115 / 2 = 57.5px
+
+Origine en 0, 0 -> M0,0\
+Lettre en minuscule toutes les coordonnées sont relatives au point précédent\
+Largeur totale -> h115 (ligne horizontale)\
+Hauteur d"un coté -> v62 (ligne verticale)
+
+partie centrale incurvée -> c\
+vecteur de contrôle vertical qui descend de **3px** ->0 3\
+point central qui est plus bas de **5px** -> -57.5 5\
+le vecteur issu du point central est horizontal est fait **20px** -> (-57.5 + 20) 5 -> -37.5 5\
+
+courbe symétrique -> s
+il n'est pas nécessaire de définir le vecteur issu du point central\
+vecteur de contrôle vertical qui descend de **3px** pour l'extremtité gauche -> s-57.5 -2. On descend de 3px du point mais comme nous sommes déja descendu de 5 il faut remonter de 2. La lettre minuscule indique un déplacement relatif par rapport au point précédent.\
+Extremité gauche -> -57.5 -5 On remonte de 5px\
+Retour à l'origine et fermer la forme-> z
+
+Déplacement à l'origine de la deuxième forme -> M4,4 -> 4px de marge\
+Cette fois si il faut se déplacer dans le sens trigonométrique\
+Descendre de 54px (62 - 4 - 4) -> v54\
+Aller à l'autre extremité -> 155 - 4 - 4 -> h107\
+Remonter -> V4 ou v-54
+Revenir à l'origine et fermer la forme -> z
+
+
+```svg
+<path d="M0,0
+    h115
+    v62
+    c0 3 -37.5 5 -57.5 5
+    s-57.5 -2 -57.5 -5
+    z
+    M4,4 v54 h107 V4 z" />
+```
+
+Le cercle au centre de rayon 2.5
+
+```svg
+<circle cx="57.5" cy="62" r="2.5" fill="white" />
+```
+
+La balise image
+
+```svg
+<image href="panda.webp" height="90" clip-path="url(#ecran)" />
+```
+
+```svg
+<defs>
+<clipPath id="ecran">
+<rect x="4" y="4" width="107" height="54.5" />
+</clipPath>
+</defs>
+```
+
+Le <a href="../tv.svg" download>fichier</a>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 82">
+<defs>
+<clipPath id="ecran">
+<rect x="4" y="4" width="107" height="54.5" />
+</clipPath>
+</defs>
+<g id="pied">
+  <path d="M99.401,76.806l-18.189-3.69 -21.333-4.483c-0.099-0.368-0.166-0.778-0.197-1.22c-0.854,0.003-1.71,0.006-2.57,0.006
+    s-1.716-0.003-2.573-0.006c-0.028,0.442-0.099,0.852-0.197,1.221l-21.236,4.462 -18.284,3.709c-0.93,0.179-1.533,1.039-1.343,1.92
+    c0.188,0.883,1.096,1.452,2.028,1.272l40.321-7.015c0.432-0.013,0.88-0.02,1.342-0.02c0.414,0,0.814,0.007,1.203,0.017
+    l40.343,7.019c0.93,0.179,1.838-0.391,2.027-1.272C100.934,77.845,100.333,76.986,99.401,76.806z"/>
+  <path d="M18.519,74.021c0,0,31.385-5.191,31.475-5.683c0.208-0.084,0.075-0.533-0.118-0.519l-31.787,4.184
+    c-0.588,0.113-0.969,0.656-0.85,1.214C17.357,73.773,17.932,74.133,18.519,74.021z"/>
+  <path d="M96.986,73.216c0.12-0.558-0.26-1.101-0.85-1.214l-31.787-4.184c-0.193-0.014-0.326,0.435-0.118,0.519
+    c0.088,0.492,31.475,5.683,31.475,5.683C96.292,74.133,96.867,73.773,96.986,73.216z"/>
+</g>
+  <image href="../panda.webp" height="90" clip-path="url(#ecran)" />
+  <path d="M0,0
+    h115
+    v62
+    c0 3 -37.5 5 -57.5 5
+    s-57.5 -2 -57.5 -5z
+    M4,4 v54 h107 V4z" />
+  <circle cx="57.5" cy="62" r="2.5" fill="white" />
+</svg>

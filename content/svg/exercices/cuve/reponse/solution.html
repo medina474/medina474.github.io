@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <style>
+     
+      use[href="#robinet"] {
+        transform-origin: 28px 28px;
+        transition: 1s transform;
+      }
+
+      .feu {
+        transition: fill-opacity 1s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+      <defs>
+        <symbol id="robinet" viewBox="-28 -28 56 56">
+          <circle r="12" />
+          <line y2="-24" y1="24" stroke-width="8" stroke="black" stroke-linecap="round"/>
+        </symbol>
+
+        <symbol id="cuve">
+          <g transform="translate(2 21)">
+          <rect width="200" style="height: calc(calc(var(--niveau) * var(--hauteur)) * 1px); 
+          y: calc(calc(var(--hauteur) * 1px) * calc(1 - var(--niveau)));" x="1" fill-opacity="0.6" />
+          <ellipse rx="100" ry="20" cx="100" style="cy: calc(calc(var(--hauteur) * 1px) * calc(1 - var(--niveau)));" class="surface" />
+          <ellipse rx="100" ry="20" cx="100" fill="none" stroke="black" stroke-width="2" />
+          <ellipse rx="100" ry="20" cx="100" filter="brightness(75%)" style="cy: calc(var(--hauteur) * 1px)" stroke="black" stroke-width="2"/>
+          <g style="transform: scaleY(calc(var(--hauteur) / 100))" vector-effect="non-scaling-stroke">
+            <line x1="0" y1="0" x2="0" y2="100px" stroke="black" stroke-width="2"/>
+            <line x1="200"  y1="0" x2="200"  y2="100px" stroke="black"  stroke-width="2"/>
+          </g>
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 700 800">
+      <g id="feu" transform="translate(440 25)">
+        <rect width="50" height="107.5" stroke-width="2" stroke="black" fill="white" rx="5" ry="5"/>
+        <circle id="feu-rouge" cx="25" cy="27.5" r="20" fill="red" stroke="black" stroke-width="0.5" fill-opacity="1" class="feu"/>
+        <circle id="feu-vert" cx="25" cy="80" r="20" fill="green" stroke="black" stroke-width="0.5" class="feu"/>
+      </g>
+
+      <use href="#cuve" transform="translate(40 50)" class="cuve" data-nom="rouge" fill="red" style='--niveau:1;--hauteur:150;' />
+      <use href="#cuve" transform="translate(40 280)" class="cuve" data-nom="vert" fill="green" style='--niveau:1;--hauteur:150;' />
+      <use href="#cuve" transform="translate(40 520)" class="cuve" data-nom="bleu" fill="blue" style='--niveau:1;--hauteur:150;' />
+      <use href="#cuve" transform="translate(498 200)" class="cuve" data-nom="destination" fill="white" style='--niveau:0;--hauteur:450' />
+
+      <polyline points="240 180 400 180 400 500 500 500" stroke="black" stroke-width="4" fill="none" />
+      <polyline points="240 400 400 400 400 500 500 500" stroke="black" stroke-width="4" fill="none" />
+      <polyline points="240 600 400 600 400 500 500 500" stroke="black" stroke-width="4" fill="none" />
+
+      <g transform="translate(300 152)">
+        <use href="#robinet" data-nom="rouge" width="56" height="56" />
+      </g>
+      <g transform="translate(300 372)">
+        <use href="#robinet" data-nom="vert" width="56" height="56" />
+      </g>
+      <g transform="translate(300 572)">
+        <use href="#robinet" data-nom="bleu" width="56" height="56" />
+      </g>
+    </svg>
+    <script>
+      const etats = [
+        { nom: "rouge", robinet: false, niveau: 1 },
+        { nom: "vert", robinet: false, niveau: 1 },
+        { nom: "bleu", robinet: false, niveau: 1 },
+      ];
+
+      const destination = { rouge: 0, vert: 0, bleu: 0 };
+
+      var timer;
+
+      document.querySelectorAll("use[href='#robinet']").forEach((robinet) =>
+        robinet.addEventListener("click", function (event) {
+          let cuve = etats.find(
+            (elt) => elt.nom == event.currentTarget.dataset["nom"]
+          );
+          cuve.robinet = !cuve.robinet;
+          event.currentTarget.style.transform = cuve.robinet ? "rotate(90deg)" : null;
+
+         if (etats.some((elt) => elt.robinet)) 
+          timer = setInterval(remplir, 50) 
+        else
+          clearInterval(timer);
+        })
+      );
+
+      function remplir() {
+        etats
+          .filter((cuve) => cuve.robinet == true && cuve.niveau > 0)
+          .forEach((cuve) => {
+            cuve.niveau -= 0.005;
+            destination[cuve.nom] += 0.005;            
+            document.querySelector(`.cuve[data-nom='${cuve.nom}']`).style.setProperty('--niveau', cuve.niveau);
+        });
+
+        destination.niveau = (destination.rouge + destination.vert + destination.bleu) / 3;
+        document.querySelector(`.cuve[data-nom='destination']`).style.setProperty('--niveau', destination.niveau);
+        
+        destination.total = Math.max(destination.rouge, destination.vert, destination.bleu);
+        destination.couleur = `rgb( ${(destination.rouge / destination.total) * 255} ${(destination.vert / destination.total) * 255} ${(destination.bleu / destination.total) * 255})`;
+        document.querySelector(`.cuve[data-nom='destination']`).setAttribute("fill", destination.couleur);
+
+        document.getElementById("feu-rouge").style.fillOpacity = etats.some((cuve) => cuve.hauteur == 0) ? 1: 0;
+        document.getElementById("feu-vert").style.fillOpacity = etats.some((cuve) => cuve.robinet) ? 1 : 0;
+      }
+    </script>
+    
+  </body>
+</html>

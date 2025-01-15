@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<title>SVG</title>
+
+</head>
+<body>
+	<h1>Mon dessin</h1>
+	<svg width="300" height="300">
+	<defs>
+	<style>
+    .soleil {
+        fill: yellow;
+        stroke: yellow;
+		color: yellow;
+    }
+	
+	.vert {
+        fill: #008800;
+        stroke: #008800;
+		color: #008800;
+    }
+	
+	.rose {
+        fill: pink;
+        stroke: pink;
+		color: pink;
+    }
+	
+	@keyframes rotation {
+		from {transform:rotate(0)}
+		to {transform:rotate(45deg)}
+	}
+	
+	.rayons {
+		
+		 transform-origin: 150px 150px;
+		 stroke: currentColor;
+	}
+
+    </style>
+
+	<symbol id="ligne">
+	<line  x1="150" x2="150" y1="150" y2="110"
+      stroke-linecap="round" stroke-width="12" 
+	  transform="translate(0,-70)"
+	  />
+	  </symbol>
+	  
+	<symbol id="sun">
+
+	<circle cx="150" cy="150" r="60" />
+	<g class="rayons">
+	
+	<animateTransform attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 0 0"
+        to="45 0 0"
+        dur="20s"
+        repeatCount="indefinite"/>
+
+		<g>
+	  <line x1="150" x2="150" y1="150" y2="110"
+		  stroke-linecap="round" stroke-width="12" 
+		  transform="translate(0,-70)"
+		  stroke="currentColor"
+		  />
+		</g>
+	  <g transform="rotate(90, 150, 150)">
+	  <line x1="150" x2="150" y1="150" y2="110"
+      stroke-linecap="round" stroke-width="12" 
+	  transform="translate(0,-70)"
+	  />
+	  </g>
+	  <use href="#ligne" transform="rotate(135, 150, 150)"/>
+	  <use href="#ligne" transform="rotate(180, 150, 150)"/>
+	  <use href="#ligne" transform="rotate(270, 150, 150)"/>
+	  <use href="#ligne" transform="rotate(45, 150, 150)"/>
+	  <use href="#ligne" transform="rotate(135, 150, 150)"/>
+	  <use href="#ligne" transform="rotate(225, 150, 150)"/>
+	  <use href="#ligne" transform="rotate(315, 150, 150)"/>
+	  </g>
+</symbol>
+	  
+	</defs>
+	
+	  <use href="#sun" class="soleil"/>
+	  <use href="#sun" class="vert" transform="scale(0.5) translate(200, 0)" />
+  <use href="#sun" class="rose" transform="scale(0.3) translate(100 200)"/>
+  </svg>
+
+  </body>
+</html>

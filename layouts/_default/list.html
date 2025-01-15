@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <ul>
+    {{ range sort .Pages ".Params.order" }}
+      {{ $order := default 99 .Params.order }}  <!-- Parcours toutes les pages du dossier -->
+      <li>
+        <a href="{{ .Permalink }}">{{ $order }} {{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

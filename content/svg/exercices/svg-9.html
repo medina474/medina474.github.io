@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <title>SVG Image</title>
+</head>
+
+<body>
+
+  <svg height="800" width="800">
+
+
+
+    <image transform="matrix(0 1 1 0 30 40)"
+      xlink:href="lion.jfif" x="0" y="0"
+      height="342" width="273.5"  >
+
+      <animateTransform attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 150 150"
+        to="360 300 300"
+        dur="5s"
+        begin="click"
+        fill="freeze"
+        id="circ-anim"
+        />
+        <animateTransform
+        attributeName="x"
+        from="50"
+        to="425"
+        dur="5s"
+        begin="circ-anim.end + 1s"
+        fill="freeze"
+        id="rect-anim" />
+      </image>
+  </svg>
+
+</html>
