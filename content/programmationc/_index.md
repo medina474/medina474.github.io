@@ -1,3 +1,7 @@
+---
+title: Informatique Industrielle 1
+---
+
 - [math](math)
 
 Opérateurs de conversion de type
