@@ -1,6 +1,5 @@
 ---
 date: '2024-12-21T15:26:42+01:00'
-draft: true
 title: Emmanuel Medina
 ---
 
