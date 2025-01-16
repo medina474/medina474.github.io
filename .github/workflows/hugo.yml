@@ -40,6 +40,8 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
       - name: Install Dart Sass
         run: sudo snap install dart-sass
+      - name: Install Tailwind css
+        run: wget -O /usr/sbin/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.0-beta.1/tailwindcss-linux-x64
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -59,7 +61,9 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Build with tailwindcss    
+        run: tailwindcss --input assets/css/styles.css --output public/css/styles.css    
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
