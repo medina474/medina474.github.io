@@ -41,7 +41,9 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
       - name: Install Tailwind css
-        run: wget -O /usr/sbin/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.0-beta.1/tailwindcss-linux-x64
+        run: mkdir -p $HOME/.local/bin \
+          && wget -O $HOME/.local/bin/tailwindcss https://github.com/tailwindlabs/tailwindcss/releases/download/v4.0.0-beta.1/tailwindcss-linux-x64 \
+          && echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Checkout
         uses: actions/checkout@v4
         with:
