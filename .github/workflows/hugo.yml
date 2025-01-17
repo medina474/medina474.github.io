@@ -59,7 +59,8 @@ jobs:
           TZ: Europe/Paris
         run: |
           hugo \
-          -debug
+          --printPathWarnings
+          --logLevel debug
       - name: Check generated files
         run: ls -R public
       - name: Build with tailwindcss    
