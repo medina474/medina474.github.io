@@ -2,6 +2,9 @@ baseURL = 'https://medina474.github.io/'
 languageCode = 'fr-fr'
 title = 'Emmanuel Medina'
 enableRobotsTXT = true
+relativeURLs = false
+canonifyURLs = true
+uglyURLs = false
 [params]
   author = 'Emmanuel Medina'
   description = "Cours"

@@ -72,6 +72,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Check generated files
+        run: ls -R public
+
 
   # Deployment job
   deploy:
