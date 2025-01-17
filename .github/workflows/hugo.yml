@@ -66,15 +66,14 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Check generated files
+        run: ls -R public
       - name: Build with tailwindcss    
         run: tailwindcss --input assets/css/styles.css --output public/css/styles.css    
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-      - name: Check generated files
-        run: ls -R public
-
 
   # Deployment job
   deploy:
