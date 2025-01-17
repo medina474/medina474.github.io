@@ -1,8 +1,5 @@
 
 
-### LP SARII
-
-[Informatique](arduino)
 
 
 ## Anciens cours
