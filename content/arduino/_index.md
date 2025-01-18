@@ -8,14 +8,6 @@ title: Informatique
 
 ### Maquettes Asima
 
-- M1 : Fonctions logiques de base
-- M2 : Composants fonctionnels numériques
-- M3 : Moteur MARCHE/ARRÊT
-- M4 : Contacteur inverseur
-- M5 : Montage étoile-triangle
-- M6 : Commutation étoile-triangle à inversion de pôles
-- M8 : Montage de Dahlander
-- M9 : Moteur avec 2 enroulements
 - M10 :Démarreur de moteur asynchrone à rotor bobiné
 - M11 : Bande transporteuse
 - M12 : Compensation du courant réactif
