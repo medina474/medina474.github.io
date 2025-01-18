@@ -71,9 +71,6 @@ let a = "";
 
 ## Plugins
 
-```javascript
-```
-
 
 ```javascript
 navigator.maxTouchPoints =;
