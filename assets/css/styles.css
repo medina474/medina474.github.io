@@ -35,7 +35,7 @@
   }
 
   a {
-    @apply text-blue-900 underline
+    @apply text-blue-900 hover:underline
   }
 
   div, p, ul, ol, pre:not(:last-child) {
@@ -63,7 +63,7 @@
   }
   
   tr {
-
+    @apply odd:bg-slate-100;
   }
   
   th {
@@ -119,7 +119,75 @@
     background-color: #eef6fc;
   }
 
-  /* Background */ .bg { background-color: #ffffff; }
+  blockquote {
+    color: #666666;
+    margin: 0;
+    padding: 0.3em 0.3em 0.3em 1em;
+    border-left: .5em #ababab solid;
+    background-color: #f7f7f7;
+  }
+  
+  blockquote.primary {
+    color: hsl(171, 100%, 29%);
+    border-color: hsl(171, 100%, 41%);
+    background-color: hsl(171, 100%, 96%);
+  }
+  
+  blockquote.devoir {
+    color: hsl(288, 100%, 29%);
+    border-color: hsl(288, 100%, 41%);
+    background-color: hsl(288, 100%, 96%);
+  }
+  
+  blockquote.objectif {
+    color: #2160c4;
+    border-color: #3273dc;
+    background-color: #eef3fc;
+  }
+  
+  blockquote.info {
+    color: #1d72aa;
+    border-color: #3298dc;
+    background-color: #eef6fc;
+  }
+  
+  blockquote.prerequis {
+    color: #1d72aa;
+    border-color: #3298dc;
+    background-color: #eef6fc;
+  }
+  
+  blockquote.definition {
+    color: #257942;
+    border-color: #48c774;
+    background-color: #effaf3;
+  }
+  
+  blockquote.warning {
+    color: #947600;
+    border-color: #ffdd57;
+    background-color: #fffbeb;
+  }
+  
+  blockquote.warning p::before {
+    content: '⚠️';
+    font-size: 1.5em;
+    margin-right: 0.25em;
+  }
+  
+  blockquote.danger {
+    color: #cc0f35;
+    border-color: #f14668;
+    background-color: #feecf0;
+  }
+  
+  blockquote.danger p::before {
+    content: '🛑';
+    font-size: 1.5em;
+    margin-right: 0.25em;
+  }
+
+/* Background */ .bg { background-color: #ffffff; }
 /* PreWrapper */ .chroma { background-color: #ffffff; }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err {  }

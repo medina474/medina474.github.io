@@ -38,7 +38,7 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
-      - name: Install Tailwind css
+      - name: Install Tailwind CLI
         run: |
           mkdir -p $HOME/.local/bin \
           && echo "$HOME/.local/bin" >> "$GITHUB_PATH" \
@@ -59,10 +59,9 @@ jobs:
           TZ: Europe/Paris
         run: |
           hugo \
-          --printPathWarnings \
-          --logLevel debug
-      - name: Check generated files
-        run: ls -R public
+          --gc \
+          --minify \
+          --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Build with tailwindcss    
         run: tailwindcss --input assets/css/styles.css --output public/css/styles.css    
       - name: Upload artifact
