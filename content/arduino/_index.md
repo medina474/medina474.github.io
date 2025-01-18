@@ -23,7 +23,7 @@ title: Informatique
 - [M14 : Rampe d’éclairage](asima/m14)
 - M15 : Système de remplissage de réservoirs
 - [M16 : Système de remplissage de cuves](asima/m16)
-- M17 : Broyeur à charbon
+- 
 - M18 : Estampilleuse
 - M19 : Commande de ventilateur
 - M20 : Feu de chantier
