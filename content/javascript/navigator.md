@@ -52,7 +52,6 @@ navigator.onLine =;
 navigator.plugins= ;
 ```
 
-
 ## Langues
 
 ```javascript
@@ -80,16 +79,13 @@ let a = "";
 navigator.maxTouchPoints =;
 ```
 
-
 ```javascript
 navigator.hardwareConcurrency =;
 ```
 
-
 ```javascript
 navigator.webdriver =;
 ```
-
 
 ```javascript
 navigator.pointerEnabled =;
@@ -98,7 +94,6 @@ navigator.pointerEnabled =;
 ```javascript
 navigator.connectionSpeed=;
 ```
-
 
 <script type="application/javascript">
 (function() {
