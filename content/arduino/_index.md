@@ -14,7 +14,6 @@ title: Informatique
 - M4 : Contacteur inverseur
 - M5 : Montage étoile-triangle
 - M6 : Commutation étoile-triangle à inversion de pôles
-- [M7 : Commande de table alternante](asima/m7)
 - M8 : Montage de Dahlander
 - M9 : Moteur avec 2 enroulements
 - M10 :Démarreur de moteur asynchrone à rotor bobiné
