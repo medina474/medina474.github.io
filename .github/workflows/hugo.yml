@@ -59,7 +59,7 @@ jobs:
           TZ: Europe/Paris
         run: |
           hugo \
-          --printPathWarnings
+          --printPathWarnings \
           --logLevel debug
       - name: Check generated files
         run: ls -R public
