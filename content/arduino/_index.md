@@ -16,7 +16,7 @@ title: Informatique
 - M15 : Système de remplissage de réservoirs
 - [M16 : Système de remplissage de cuves](asima/m16)
 - M18 : Estampilleuse
-- M19 : Commande de ventilateur
+- [M19 : Commande de ventilateur](asima/m19)
 - M20 : Feu de chantier
 - M21 : Feux de passage pour piétons
 - M22 : Convoyeur collecteur
