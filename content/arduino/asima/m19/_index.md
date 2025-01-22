@@ -5,20 +5,20 @@ title = "M19 : Commande de ventilateur"
 Code|Nom|Description des contacts|Adresse|Controllino
 |---|---|---|---|---|
 |**Boutons-poussoirs**|||
-S0|Arrêt Rupteur | E124.0|*A0*
-S1|Protection du moteur Q1 Rupteur | E124.1|*A1*
-S2|Protection du moteur Q2 Rupteur | E124.2|*A2*
-S3|Protection du moteur Q3 Rupteur | E124.3|*A3*
-S4|Protection du moteur Q4 Rupteur | E124.4|*A4*
-S5|Marche Contacteur | E124.5|*A5*
-Res|Reset Contacteur | E125.0|*IN0*
+S0 | Arrêt Rupteur           | E124.0|*A0*
+S1 | Protection du moteur Q1 | Rupteur (NF) | E124.1|*A1*
+S2 | Protection du moteur Q2 | Rupteur (NF) | E124.2|*A2*
+S3 | Protection du moteur Q3 | Rupteur (NF) | E124.3|*A3*
+S4 | Protection du moteur Q4 | Rupteur (NF) | E124.4|*A4*
+S5 | Marche         | Contacteur (NO) | E124.5|*A5*
+Res| Reset | Contacteur (NO) | E125.0|*IN0*
 |**Capteurs**|||
-B1 Capteur entrée Contacteur | E124.6|*A6*
-B2 Capteur sortie Contacteur | E124.7|*A7*
+B1 Capteur entrée | Contacteur (NO) | E124.6|*A6*
+B2 Capteur sortie | Contacteur (NO) | E124.7|*A7*
 |**Sorties**|||
-RD| Feu « Rouge » | A124.0|*R0*
-YE| Feu « Jaune » | A124.1|*R1*
-GN| Feu « Vert » | A124.2|*R2*
+RD| Feu « Rouge » | A124.0 |*R0*
+YE| Feu « Jaune » | A124.1 |*R1*
+GN| Feu « Vert » | A124.2  |*R2*
 |**Voyants lumineux**|||
 H1| Voyant lumineux M1| A125.0|
 H2| Voyant lumineux M2| A125.1|
