@@ -1,4 +1,5 @@
 @import "tailwindcss";
 @import "./base-styles.css";
+@import "./table.css";
 @import "./blockquote.css";
 @import "./chroma.css";

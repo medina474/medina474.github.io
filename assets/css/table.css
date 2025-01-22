@@ -1,0 +1,21 @@
+table {
+  @apply mb-1
+}
+
+tr {
+  @apply odd:bg-slate-100;
+}
+
+th {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: .5em .75em;
+  vertical-align: top;
+}
+
+td {  
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: .5em .75em;
+  vertical-align: top;
+}

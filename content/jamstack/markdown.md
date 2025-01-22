@@ -7,7 +7,7 @@ title: Markdown
 Pour déclarer un bloc de code il faut entourer les lignes par une clôture de code (`code fence`) représentée  des triples accents ` ``` `.
 
 ~~~
-```jsc
+```js
 let div = document.getElementById("menu");
 ```
 ~~~
@@ -67,23 +67,39 @@ test.. test... test..... test?..... test!....
 ## Emphasis
 
 ```
-**This is bold text**
+Mettre du texte en **gras**.
 ```
 
-**This is bold text**
+Mettre du texte en **gras**.
 
 ```
-__This is bold text__
+Mettre du texte en __gras__.
 ```
 
-__This is bold text__
+Mettre du texte en __gras__.
 
 
-*This is italic text*
+```
+Mettre du texte en __gras__.
+```
 
-_This is italic text_
+```
+Mettre du texte en *italique*.
+```
 
-~~Strikethrough~~
+Mettre du texte en *italique*.
+
+```
+Mettre du texte en _italique_.
+```
+
+Mettre du texte en _italique_.
+
+```
+Barrer du ~~texte~~.
+```
+
+Barrer du ~~texte~~.
 
 
 ## Blockquotes
@@ -94,7 +110,7 @@ _This is italic text_
 > > > ...or with spaces between arrows.
 
 
-## Lists
+## Listes
 
 Unordered
 
@@ -140,7 +156,7 @@ Block code "fences"
 Sample text here...
 ```
 
-Syntax highlighting
+### Coloration syntaxique
 
 ``` js
 var foo = function (bar) {
@@ -150,7 +166,7 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
-## Tables
+## Tableaux
 
 | Option | Description |
 | ------ | ----------- |
@@ -162,12 +178,12 @@ Right aligned columns
 
 | Option | Description |
 | ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| data   | 100.99 |
+| engine | 5.73 |
+| ext    | 61.42 |
 
 
-## Links
+## Liens
 
 [link text](http://dev.nodeca.com)
 
@@ -211,7 +227,7 @@ The killer feature of `markdown-it` is very effective support of
 
 ==Marked text==
 
-
+>
 ### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
 
 Footnote 1 link[^first].
