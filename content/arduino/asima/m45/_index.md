@@ -7,20 +7,14 @@ Code|Nom|Description des contacts|Adresse|Controllino
 |**Boutons-poussoirs**|||
 S0|Installation arrêt|Rupteur|E124.0|*A0*
 S1|Installation marche|Contacteur|E124.1|*A1*
-S3|Pompe 1 – test|Contacteur|E124.3|*A3*
-S4|Pompe 2 – test|Contacteur|E124.4|*A4*
+S2|Protection du moteur Q1|Contacteur|E124.3|*A3*
+S3|Protection du moteur Q2|Contacteur|E124.3|*A3*
+S4|Protection du moteur Q3|Contacteur|E124.4|*A4*
 S5|Reset|Contacteur|E124.5|*A5*
-S6|Q1 – Pompe 1|Rupteur|E124.6|*A6*
-S7|Q2 – Pompe 2|Rupteur|E124.7|*A7*
 |**Capteurs**|||
-B1|Pompes arrêt|Rupteur|E125.0|*IN0*
-B2|Pompe 1 marche|Rupteur|E125.1|IN1
-B3|Trop-plein|Rupteur|E125.2
-B4|Pompes arrêt|Rupteur|E125.3
-B5|Pompe 2 marche|Rupteur|E124.2
-|**Entrées analogiques**|||
-U1|Niveau d’eau|PEW130|A8
-U2|Niveau d’enclenchement|PEW132|A9
+B1|Pompes arrêt|Rupteur|E124.6|*A6*
+B2|Pompe 1 marche|Rupteur|E124.7|*A7*
+B3|Trop-plein|Rupteur|E125.0|*IN0*
 |**Sorties**|||
 Y1|Vanne d’alimentation|A124.0|*R0*
 PM1|Pompe 1|A124.1|*R1*

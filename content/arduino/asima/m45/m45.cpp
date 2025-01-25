@@ -52,7 +52,8 @@ void loop() {
     etape_marche = ETAPE_POMPES_ARRET;
   }
 
-  if (etape == ETAPE_POMPES_ARRET && !b2) {
+  if (etape = ETAPE_MARCHE && 
+      etape_marche == ETAPE_POMPES_ARRET && !b2) {
     etape_marche = ETAPE_POMPE1_MARCHE;
   }
 
