@@ -12,8 +12,8 @@ S4   | A4  |In     |E124.4
 S5   | A5  |In     |E124.5
 S6   | A6  |In     |E124.6
 S7   | A7  |In     |E124.7
-U1   | A8  |In A   |
-U2   | A9  |In A   |
+U1   | A8  |In A   |PEW130
+U2   | A9  |In A   |PEW132
 S8   | IN0 |Inter  |E125.0
 S9   | IN1 |Inter  |E125.1
 S10  |  X  |       |
