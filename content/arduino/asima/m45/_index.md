@@ -22,13 +22,13 @@ B5|Pompe 2 marche|Rupteur|E124.2
 U1|Niveau d’eau|PEW130|A8
 U2|Niveau d’enclenchement|PEW132|A9
 |**Sorties**|||
-Sh|Avertisseur|sonore|A124.0|R0
+Sh|Avertisseur sonore|A124.0|R0
 M1|Pompe 1|A124.1|R1
 M2|Pompe 2|A124.3|R3
-|**Voyant|lumineux**|||
-H1|Voyant|lumineux Validation|A124.2|R2
-H3|Voyant|lumineux Pompe|1|A124.4|R4
-H4|Voyant|lumineux Pompe|2|A124.5|R5
+|**Voyant lumineux**|||
+H1|Voyant lumineux Validation|A124.2|R2
+H3|Voyant lumineux Pompe 1|A124.4|R4
+H4|Voyant lumineux Pompe 2|A124.5|R5
 
 Pour des raisons de sécurité, un tout-à-l’égout est équipé de trois pompes. Suivant la quantité alimentée, il y a une pompe ou bien deux pompes qui fonctionnent. Afin d’équilibrer l’usure des pompes, la durée d’enclenchement doit être à peu près la même grâce à une séquence d’enclenchement appropriée. Si l’une des deux pompes tombe en panne, c’est la troisième pompe qui assume la fonction de la pompe défectueuse.
 
