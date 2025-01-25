@@ -22,7 +22,7 @@ GN| Feu « Vert » | A124.2  |*R2*
 |**Voyants lumineux**|||
 H1| Voyant lumineux M1| A125.0|
 H2| Voyant lumineux M2| A125.1|
-H3| Voyant lumineux M3| A125.2|
+H3| Voyant lumineux M3| A125.2|*D0*
 H4| Voyant lumineux M4| A125.3|
 
 Il s’agit d’assurer l’aération d’un parking souterrain à l’aide de quatre ventilateurs. Pour que le parking

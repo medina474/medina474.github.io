@@ -23,5 +23,5 @@ SH|Avertisseur sonore||A124.5|*R5*
 |**Voyants lumineux**|||
 H1|Pompe 1||A125.0|
 H2|Pompe 2||A125.1|
-H3|Pompe 3||A125.2|
-H4|Pompe 4||A125.3|
+H3|Pompe 3||A125.2|*D0*
+H4|Pompe 4||A125.3|*D1*
