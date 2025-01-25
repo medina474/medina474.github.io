@@ -29,7 +29,7 @@ PM3|Pompe 3|A124.3|*R3*
 Sh|Avertisseur sonore|A124.5|*R5*
 |**Voyant lumineux**|||
 H1|Voyant lumineux Validation|A125.0|*NON CABLÉ*
-H3|Voyant lumineux Pompe 1|A125.1|*NON CABLÉ*
+H2|Voyant lumineux Pompe 1|A125.1|*NON CABLÉ*
 H3|Voyant lumineux Pompe 2|A125.2|*D0*
 H4|Voyant lumineux Pompe 3|A125.3|*D1*
 

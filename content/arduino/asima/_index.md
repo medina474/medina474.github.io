@@ -2,27 +2,33 @@
 title: Asima
 ---
 
+Asima|Sens|Adresse|Controllino
+---  |---    |---
+S0   |In        |E124.0|*A0*
+S1   |In        |E124.1|*A1*
+S2   |In        |E124.2|*A2*
+S3   |In        |E124.3|*A3*
+S4   |In        |E124.4|*A4*
+S5   |In        |E124.5|*A5*
+S6   |In        |E124.6|*A6*
+S7   |In        |E124.7|*A7*
+U1   |IN Analog |PEW130|*A8*
+U2   |In Analog |PEW132|*A9*
+S8   |Inter     |E125.0|*IN0*
+S9   |Inter     |E125.1|*IN1*
+
 Asima|C Maxi|Sens|Adresse|Controllino
 ---  |---  |---    |---
-S0   |   |In     |E124.0|*A0*
-S1   | A1  |In     |E124.1|*A1*
-S2   | A2  |In     |E124.2
-S3   | A3  |In     |E124.3
-S4   | A4  |In     |E124.4
-S5   | A5  |In     |E124.5
-S6   | A6  |In     |E124.6
-S7   | A7  |In     |E124.7
-U1   | A8  |In A   |PEW130
-U2   | A9  |In A   |PEW132
-S8   |  |Inter  |E125.0|*IN0*
-S9   | IN1 |Inter  |E125.1
-S10  |  X  |       |
+S10  |    |       |
 S11  |  X  |       |
 H1   |     |       |
 H2   |     |       |
 H3   |     |       |
 H4   |     |       |
-E0   | R0  | Out   |A124.0
+
+Asima|C Maxi|Sens|Adresse|Controllino
+---  |---  |---    |---
+E0   | R0  | Out   |A124.0|
 E1   | R1  | Out   |A124.1
 E2   | R2  | Out   |A124.2
 E3   | R3  | Out   |A124.3
