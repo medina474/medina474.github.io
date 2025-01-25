@@ -7,9 +7,9 @@ Code|Nom|Description des contacts|Adresse|Controllino
 |**Boutons-poussoirs**|||
 S0|Installation arrêt|Rupteur|E124.0|*A0*
 S1|Installation marche|Contacteur|E124.1|*A1*
-S2|Protection du moteur Q1|Contacteur|E124.3|*A3*
-S3|Protection du moteur Q2|Contacteur|E124.3|*A3*
-S4|Protection du moteur Q3|Contacteur|E124.4|*A4*
+S2|Protection du moteur Q1|Rupteur|E124.3|*A3*
+S3|Protection du moteur Q2|Rupteur|E124.3|*A3*
+S4|Protection du moteur Q3|Rupteur|E124.4|*A4*
 S5|Reset|Contacteur|E124.5|*A5*
 |**Capteurs**|||
 B1|Pompes arrêt|Rupteur|E124.6|*A6*
