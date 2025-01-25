@@ -15,7 +15,7 @@ S5|Reset              |Contacteur|E124.5|*A5*
 S6|Q1 – Pompe 1       |Rupteur   |E124.6|*A6*
 S7|Q2 – Pompe 2       |Rupteur   |E124.7|*A7*
 |**Capteurs**|||
-B1|Pompes arrêt       |Rupteur|E125.0|
+B1|Pompes arrêt       |Rupteur|E125.0|*IN0*
 B2|Pompe 1 marche     |Rupteur|E125.1|
 B3|Trop-plein         |Rupteur|E125.2|
 B4|Pompes arrêt       |Rupteur|E125.3|

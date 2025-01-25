@@ -2,10 +2,10 @@
 title: Asima
 ---
 
-Asima|Controllino Maxi|Sens|Adresse
+Asima|C Maxi|Sens|Adresse|Controllino
 ---  |---  |---    |---
-S0   | A0  |In     |E124.0
-S1   | A1  |In     |E124.1
+S0   |   |In     |E124.0|*A0*
+S1   | A1  |In     |E124.1|*A1*
 S2   | A2  |In     |E124.2
 S3   | A3  |In     |E124.3
 S4   | A4  |In     |E124.4
@@ -14,7 +14,7 @@ S6   | A6  |In     |E124.6
 S7   | A7  |In     |E124.7
 U1   | A8  |In A   |PEW130
 U2   | A9  |In A   |PEW132
-S8   | IN0 |Inter  |E125.0
+S8   |  |Inter  |E125.0|*IN0*
 S9   | IN1 |Inter  |E125.1
 S10  |  X  |       |
 S11  |  X  |       |
