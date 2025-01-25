@@ -38,9 +38,9 @@ E14  | D2  |       |
 E15  | D3  |       |
 E16  | D4  |       |
 E17  | D5  |       |
-| D6  |       |
-| D7  |       |
-| D8  |       |
-| D9  |       |
-| D10 |       |
-| D11 |       |
+| D6  |NON CABLE       |
+| D7  |NON CABLE       |
+| D8  |NON CABLE       |
+| D9  |NON CABLE       |
+| D10 |NON CABLE       |
+| D11 |NON CABLE       |
